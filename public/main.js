@@ -1,5 +1,5 @@
 /**
- * calzavara.ch - Main Script
+ * www.nigredo.ch - Main Script
  * Handles Navigation, Animations, Lightbox Gallery, and Spam Protection.
  */
 

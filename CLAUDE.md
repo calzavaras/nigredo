@@ -21,7 +21,7 @@ npx esbuild public/main.js --minify --outfile=public/main.min.js
 
 ### Static site (Astro v5)
 - Output: fully static (`output: 'static'`, `build.format: 'directory'`)
-- Production URL: `https://calzavara.ch`
+- Production URL: `https://www.nigredo.ch`
 - Language: German (Swiss), `lang="de-CH"`, `og:locale="de_CH"`
 - No trailing slashes (`trailingSlash: 'never'`)
 
@@ -35,7 +35,7 @@ npx esbuild public/main.js --minify --outfile=public/main.min.js
 The contact modal UI is in `Layout.astro`. Form submissions POST to `public/send-mail.php` (PHP, runs server-side on the host). Spam protection layers: honeypot field, CSRF double-submit cookie, IP-based + session-based rate limiting (60s cooldown).
 
 ### CSS
-Single file: `src/styles/global.css` ("Calzavara Design System v9.9"). Dark theme (`--bg-body: #050505`). Brand gradient: yellow `#FFC700` → pink `#FF4D80` → purple `#A64DFF` → cyan `#00D2FF`. Key variables: `--container-width: 1100px`, `--header-height: 80px`.
+Single file: `src/styles/global.css` ("Nigredo Design System v9.9"). Dark theme (`--bg-body: #050505`). Brand gradient: yellow `#FFC700` → pink `#FF4D80` → purple `#A64DFF` → cyan `#00D2FF`. Key variables: `--container-width: 1100px`, `--header-height: 80px`.
 
 ### Sitemap
 `/404` is filtered out from the sitemap. `impressum` and `datenschutz` are included with low priority (0.3, `changefreq: yearly`) and are marked `noindex` via meta robots tag. Priority and `lastmod` for all pages are set manually in `astro.config.mjs`.

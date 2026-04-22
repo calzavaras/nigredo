@@ -1,6 +1,6 @@
 {
-  "name": "calzavara-astro",
-  "version": "1.1.0",
+  "name": "nigredo-astro",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

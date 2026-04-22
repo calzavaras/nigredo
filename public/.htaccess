@@ -1,4 +1,4 @@
-# calzavara.ch - Apache Konfiguration
+# www.nigredo.ch - Apache Konfiguration
 # Saubere URLs ohne .html Endung
 
 Options -MultiViews -Indexes
@@ -8,9 +8,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# www entfernen (calzavara.ch statt www.calzavara.ch)
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+# Kanonische Domain erzwingen
+RewriteCond %{HTTP_HOST} !^www\.nigredo\.ch$ [NC]
+RewriteRule ^ https://www.nigredo.ch%{REQUEST_URI} [L,R=301]
 
 # Explizite Regel: /referenzen und /referenzen/ → referenzen.html
 # Muss VOR dem Trailing-Slash-Check stehen, da sonst Apache das Verzeichnis referenzen/ findet

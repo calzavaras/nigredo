@@ -1,14 +1,14 @@
-# Calzavara – Vollständiger Webseiteninhalt
+# Nigredo – Vollständiger Webseiteninhalt
 
-> Diese Datei enthält den vollständigen Textinhalt aller Seiten von calzavara.ch in maschinenlesbarem Format. Erstellt für KI-Systeme, die nicht die gesamte Website crawlen möchten.
+> Diese Datei enthält den vollständigen Textinhalt aller Seiten von www.nigredo.ch in maschinenlesbarem Format. Erstellt für KI-Systeme, die nicht die gesamte Website crawlen möchten.
 
-Website: https://calzavara.ch
+Website: https://www.nigredo.ch
 Letzte Aktualisierung: 2026-03-21
-Kurzversion: https://calzavara.ch/llms.txt
+Kurzversion: https://www.nigredo.ch/llms.txt
 
 ---
 
-# Startseite (https://calzavara.ch/)
+# Startseite (https://www.nigredo.ch/)
 
 ## KI-gestützt. Persönlich betreut.
 
@@ -29,7 +29,7 @@ Fixpreise statt Stundenzählen. Du weisst vorher, was es kostet und wann es fert
 
 ---
 
-# Lösungen (https://calzavara.ch/loesungen)
+# Lösungen (https://www.nigredo.ch/loesungen)
 
 ## Was ich für dich liefere
 
@@ -51,24 +51,24 @@ Wiederkehrende Aufgaben, die Zeit fressen? Ich baue kleine Tools und einfache Au
 
 ## Häufig gestellte Fragen
 
-**Was kostet eine digitale Lösung bei Calzavara?**
-Calzavara arbeitet ausschliesslich mit Fixpreisen – keine Stundenzähler, keine bösen Überraschungen. Vor jedem Projekt gibt es ein unverbindliches Gespräch und ein klares Angebot.
+**Was kostet eine digitale Lösung bei Nigredo?**
+Nigredo arbeitet ausschliesslich mit Fixpreisen – keine Stundenzähler, keine bösen Überraschungen. Vor jedem Projekt gibt es ein unverbindliches Gespräch und ein klares Angebot.
 
-**Für wen sind die Lösungen von Calzavara geeignet?**
+**Für wen sind die Lösungen von Nigredo geeignet?**
 Für Schweizer KMU, Selbständige und Unternehmen, die massgeschneiderte digitale Lösungen ohne Agentur-Overhead suchen. Ob Einzelprojekt oder laufende Zusammenarbeit – alles ist möglich.
 
-**Kann Calzavara auch kleinere Aufgaben übernehmen?**
+**Kann Nigredo auch kleinere Aufgaben übernehmen?**
 Ja, von einem einzelnen Logo oder Text bis zur kompletten Webanwendung. Es gibt keine Mindestauftragsgrösse.
 
-**Wie schnell werden Projekte bei Calzavara umgesetzt?**
+**Wie schnell werden Projekte bei Nigredo umgesetzt?**
 Je nach Projektgrösse in Tagen bis wenigen Wochen. Kurze Wege, direkte Kommunikation und keine Bürokratie sorgen für schnelle Resultate.
 
-**Setzt Calzavara KI-Tools ein?**
+**Setzt Nigredo KI-Tools ein?**
 Ja, KI-Tools werden gezielt eingesetzt – für Texte, Bilder, Code und Automatisierungen. Die Qualitätskontrolle und persönliche Betreuung liegen immer bei Marco Calzavara.
 
 ---
 
-# Referenzen – Übersicht (https://calzavara.ch/referenzen)
+# Referenzen – Übersicht (https://www.nigredo.ch/referenzen)
 
 ## Projekte aus der Praxis
 
@@ -78,7 +78,7 @@ Keine aufgeblähten Case-Studies, kein Buzzword-Bingo. Echte Projekte, die heute
 
 ---
 
-# KI Voice Agent für IV-Stellen (https://calzavara.ch/referenzen/ki-voice-agent)
+# KI Voice Agent für IV-Stellen (https://www.nigredo.ch/referenzen/ki-voice-agent)
 
 Kategorie: KI
 Projektabschluss: Februar 2026
@@ -99,7 +99,7 @@ Highlights: Echtzeit-Sprachverarbeitung, Google Gemini 2.5 Flash, DE / FR / IT /
 
 ---
 
-# Dashboard für Kantonsverwaltung (https://calzavara.ch/referenzen/dashboard-kantonsverwaltung)
+# Dashboard für Kantonsverwaltung (https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung)
 
 Kategorie: Tool
 Projektabschluss: Juni 2025
@@ -119,7 +119,7 @@ Highlights: 100% lokal, Drag & Drop, Anonymisierung, PDF-Export
 
 ---
 
-# Über mich (https://calzavara.ch/ueber-uns)
+# Über mich (https://www.nigredo.ch/ueber-uns)
 
 ## Wer ich bin
 
@@ -139,7 +139,7 @@ Ich steh auf gute Ideen, saubere Ergebnisse und Probleme, die nach einer clevere
 
 ---
 
-# Kontakt (https://calzavara.ch/kontakt)
+# Kontakt (https://www.nigredo.ch/kontakt)
 
 ## Projektstart
 
@@ -154,10 +154,10 @@ Adresse: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 
 ---
 
-# Impressum (https://calzavara.ch/impressum)
+# Impressum (https://www.nigredo.ch/impressum)
 
 ## Kontaktadresse
-Calzavara
+Nigredo
 Marco Calzavara
 Wildeggstrasse 37
 9000 St. Gallen
@@ -167,9 +167,9 @@ Verantwortliche Person: Marco Calzavara
 
 ---
 
-# Datenschutz (https://calzavara.ch/datenschutz)
+# Datenschutz (https://www.nigredo.ch/datenschutz)
 
-Verantwortlich: Calzavara, Marco Calzavara, Wildeggstrasse 37, 9000 St. Gallen, Schweiz.
+Verantwortlich: Nigredo, Marco Calzavara, Wildeggstrasse 37, 9000 St. Gallen, Schweiz.
 Hosting bei Hosttech in der Schweiz. SSL-Verschlüsselung aktiv.
 Kontaktdaten werden zur Bearbeitung von Anfragen gespeichert und nicht weitergegeben.
 Rechte auf Auskunft, Berichtigung und Löschung gemäss Schweizer DSG.

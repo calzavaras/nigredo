@@ -21,7 +21,7 @@ if (empty($csrfPost) || empty($csrfCookie) || !hash_equals($csrfCookie, $csrfPos
 // IP-based rate limiting (file-based, hashed IP — no raw IP stored)
 $ip       = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $ipHash   = hash('sha256', $ip);
-$rlFile   = sys_get_temp_dir() . '/calzavara_rl_' . $ipHash;
+$rlFile   = sys_get_temp_dir() . '/nigredo_rl_' . $ipHash;
 $now      = time();
 $cooldown = 60;
 
@@ -83,7 +83,7 @@ $msgSubject = !empty($subject) ? $subject : 'Anfrage via Website';
 $body  = "Name:    {$name}\n";
 $body .= "E-Mail:  {$email}\n";
 $body .= "\nNachricht:\n{$message}\n";
-$body .= "\n---\nGesendet via calzavara.ch Kontaktformular";
+$body .= "\n---\nGesendet via www.nigredo.ch Kontaktformular";
 
 // Strip newlines from header fields to prevent header injection
 $emailSafe = preg_replace('/[\r\n\t]/', '', $email);
@@ -92,7 +92,7 @@ $nameSafe  = preg_replace('/[\r\n\t]/', '', $name);
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit\r\n";
-$headers .= "From: Calzavara Website <noreply@calzavara.ch>\r\n";
+$headers .= "From: Nigredo Website <noreply@nigredo.ch>\r\n";
 $headers .= "Reply-To: =?UTF-8?B?" . base64_encode($nameSafe) . "?= <{$emailSafe}>\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 

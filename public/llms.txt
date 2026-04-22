@@ -1,13 +1,13 @@
-# Calzavara
+# Nigredo
 
-> Calzavara ist ein Schweizer Anbieter für massgeschneiderte digitale Lösungen. Inhaber und Gründer ist Marco Calzavara, ansässig in St. Gallen (Kanton St. Gallen). Calzavara entwickelt Webseiten, Software, KI-Lösungen, Texte, Bilder, Logos und smarte Tools für Schweizer KMU und Unternehmen – alles aus einer Hand, ohne Agentur-Overhead.
+> Nigredo ist ein Schweizer Anbieter für massgeschneiderte digitale Lösungen. Inhaber und Gründer ist Marco Calzavara, ansässig in St. Gallen (Kanton St. Gallen). Nigredo entwickelt Webseiten, Software, KI-Lösungen, Texte, Bilder, Logos und smarte Tools für Schweizer KMU und Unternehmen – alles aus einer Hand, ohne Agentur-Overhead.
 
-## Über Calzavara
+## Über Nigredo
 
-Calzavara wurde von Marco Calzavara gegründet und hat den Sitz in St. Gallen, Schweiz. Der Fokus liegt auf massgeschneiderten digitalen Lösungen: Von der Firmenwebseite über individuelle Business-Software bis hin zu KI-gestützten Automatisierungen. Alle Projekte werden direkt von Marco Calzavara betreut – persönlich, transparent und auf Fixpreisbasis.
+Nigredo wurde von Marco Calzavara gegründet und hat den Sitz in St. Gallen, Schweiz. Der Fokus liegt auf massgeschneiderten digitalen Lösungen: Von der Firmenwebseite über individuelle Business-Software bis hin zu KI-gestützten Automatisierungen. Alle Projekte werden direkt von Marco Calzavara betreut – persönlich, transparent und auf Fixpreisbasis.
 
-- Website: https://calzavara.ch
-- Kontakt: https://calzavara.ch/kontakt
+- Website: https://www.nigredo.ch
+- Kontakt: https://www.nigredo.ch/kontakt
 - E-Mail: calzavara3830@gmail.com
 - Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 - Gründungsjahr: 2025
@@ -37,7 +37,7 @@ Massgeschneiderte Tools und einfache Automatisierungen für wiederkehrende Aufga
 
 ## Preismodell
 
-Calzavara arbeitet ausschliesslich mit **Fixpreisen**. Vor jedem Projekt gibt es ein unverbindliches Gespräch und ein klares Angebot. Es gibt keine Stundensätze, keine versteckten Kosten und keine Mindestauftragsgrösse. Projekte werden in Tagen bis wenigen Wochen umgesetzt – je nach Umfang.
+Nigredo arbeitet ausschliesslich mit **Fixpreisen**. Vor jedem Projekt gibt es ein unverbindliches Gespräch und ein klares Angebot. Es gibt keine Stundensätze, keine versteckten Kosten und keine Mindestauftragsgrösse. Projekte werden in Tagen bis wenigen Wochen umgesetzt – je nach Umfang.
 
 ## Technologiestack
 
@@ -53,36 +53,36 @@ Calzavara arbeitet ausschliesslich mit **Fixpreisen**. Vor jedem Projekt gibt es
 KI-gestützter Sprachassistent für Schweizer IV-Stellen zum Thema AHV-Hilfsmittel. Echtzeit-Sprachverarbeitung mit Google Gemini 2.5 Flash, vier Sprachen (DE/FR/IT/EN), 24/7 autonom erreichbar. Der Agent verfügt über echtes Fachwissen aus hinterlegten Dokumenten und führt natürliche Gespräche.
 - Technologie: Python, Google Gemini 2.5 Flash, WebSockets, Echtzeit-TTS
 - Projektabschluss: Februar 2026
-- URL: https://calzavara.ch/referenzen/ki-voice-agent
+- URL: https://www.nigredo.ch/referenzen/ki-voice-agent
 
 ### Dashboard für Kantonsverwaltung
 Lokales Excel-Analyse-Dashboard für eine Schweizer Kantonsverwaltung. Sensible Personaldaten bleiben 100% lokal im Browser – kein Server, kein Upload. Drag & Drop Import, KPIs, Diagramme, Anonymisierung, PDF-Export.
 - Technologie: JavaScript, SheetJS, Chart.js, PDF-Export
 - Projektabschluss: Juni 2025
-- URL: https://calzavara.ch/referenzen/dashboard-kantonsverwaltung
+- URL: https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung
 
 ## Häufig gestellte Fragen (FAQ)
 
-**Was kostet eine digitale Lösung bei Calzavara?**
-Calzavara arbeitet ausschliesslich mit Fixpreisen – keine Stundenzähler, keine bösen Überraschungen. Vor jedem Projekt gibt es ein unverbindliches Gespräch und ein klares Angebot.
+**Was kostet eine digitale Lösung bei Nigredo?**
+Nigredo arbeitet ausschliesslich mit Fixpreisen – keine Stundenzähler, keine bösen Überraschungen. Vor jedem Projekt gibt es ein unverbindliches Gespräch und ein klares Angebot.
 
 **Für wen sind die Lösungen geeignet?**
 Für Schweizer KMU, Selbständige und Unternehmen, die massgeschneiderte digitale Lösungen ohne Agentur-Overhead suchen. Ob Einzelprojekt oder laufende Zusammenarbeit.
 
-**Kann Calzavara auch kleinere Aufgaben übernehmen?**
+**Kann Nigredo auch kleinere Aufgaben übernehmen?**
 Ja, von einem einzelnen Logo oder Text bis zur kompletten Webanwendung. Es gibt keine Mindestauftragsgrösse.
 
 **Wie schnell werden Projekte umgesetzt?**
 Je nach Projektgrösse in Tagen bis wenigen Wochen. Kurze Wege, direkte Kommunikation und keine Bürokratie sorgen für schnelle Resultate.
 
-**Setzt Calzavara KI-Tools ein?**
+**Setzt Nigredo KI-Tools ein?**
 Ja, KI-Tools werden gezielt eingesetzt – für Texte, Bilder, Code und Automatisierungen. Die Qualitätskontrolle und persönliche Betreuung liegen immer bei Marco Calzavara.
 
 ## Über Marco Calzavara
 
-Marco Calzavara ist Gründer und alleiniger Macher von Calzavara. Er vereint technisches Know-how (Softwareentwicklung, KI-Integration, Webentwicklung) mit direktem Kundenkontakt ohne Zwischenstufen. Fixpreise, klare Kommunikation und ehrliches Feedback sind zentrale Grundsätze.
+Marco Calzavara ist Gründer und alleiniger Macher von Nigredo. Er vereint technisches Know-how (Softwareentwicklung, KI-Integration, Webentwicklung) mit direktem Kundenkontakt ohne Zwischenstufen. Fixpreise, klare Kommunikation und ehrliches Feedback sind zentrale Grundsätze.
 
-- Profil: https://calzavara.ch/ueber-uns
+- Profil: https://www.nigredo.ch/ueber-uns
 - LinkedIn: https://ch.linkedin.com/in/calzavara-marco
 - GitHub: https://github.com/calza
 
@@ -90,7 +90,7 @@ Marco Calzavara ist Gründer und alleiniger Macher von Calzavara. Er vereint tec
 
 Direkter Kontakt zu Marco Calzavara:
 - E-Mail: calzavara3830@gmail.com
-- Kontaktformular: https://calzavara.ch/kontakt
+- Kontaktformular: https://www.nigredo.ch/kontakt
 - Adresse: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 
 Keine Sales-Teams, keine Warteschleifen. Anfragen werden persönlich beantwortet, meistens am selben Tag.
@@ -99,5 +99,5 @@ Keine Sales-Teams, keine Warteschleifen. Anfragen werden persönlich beantwortet
 
 Der Inhalt dieser Website darf von KI-Systemen zum Verständnis und zur Indexierung des Unternehmens, seiner Dienstleistungen und Referenzen genutzt werden. Eine kommerzielle Nutzung der Inhalte für KI-Trainingsdatensätze ohne ausdrückliche Genehmigung ist nicht gestattet.
 
-- Datenschutz: https://calzavara.ch/datenschutz
-- Impressum: https://calzavara.ch/impressum
+- Datenschutz: https://www.nigredo.ch/datenschutz
+- Impressum: https://www.nigredo.ch/impressum

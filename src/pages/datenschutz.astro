@@ -7,21 +7,21 @@ const schema = JSON.stringify({
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "@id": "https://calzavara.ch/datenschutz#breadcrumb",
+      "@id": "https://www.nigredo.ch/datenschutz#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://calzavara.ch/" },
-        { "@type": "ListItem", "position": 2, "name": "Datenschutz", "item": "https://calzavara.ch/datenschutz" }
+        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.nigredo.ch/" },
+        { "@type": "ListItem", "position": 2, "name": "Datenschutz", "item": "https://www.nigredo.ch/datenschutz" }
       ]
     },
     {
       "@type": "WebPage",
-      "@id": "https://calzavara.ch/datenschutz#webpage",
-      "name": "Datenschutz | Calzavara",
-      "description": "Datenschutzerklärung von Calzavara – transparente Information über Datenerhebung und -nutzung.",
-      "url": "https://calzavara.ch/datenschutz",
-      "isPartOf": { "@id": "https://calzavara.ch/#website" },
-      "breadcrumb": { "@id": "https://calzavara.ch/datenschutz#breadcrumb" },
-      "publisher": { "@type": "Organization", "name": "Calzavara", "url": "https://calzavara.ch" },
+      "@id": "https://www.nigredo.ch/datenschutz#webpage",
+      "name": "Datenschutz | Nigredo",
+      "description": "Datenschutzerklärung von Nigredo – transparente Information über Datenerhebung und -nutzung.",
+      "url": "https://www.nigredo.ch/datenschutz",
+      "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
+      "breadcrumb": { "@id": "https://www.nigredo.ch/datenschutz#breadcrumb" },
+      "publisher": { "@type": "Organization", "name": "Nigredo", "url": "https://www.nigredo.ch" },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
       "dateModified": "2026-03-21"
@@ -31,125 +31,123 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Datenschutz | Calzavara"
-  description="Datenschutzerklärung von Calzavara. Transparente Information über die Erhebung und Nutzung deiner Daten."
-  keywords="Datenschutz Calzavara, Schweizer Hosting, Datensicherheit, Privatsphäre, DSG konform"
-  canonical="https://calzavara.ch/datenschutz"
+  title="Datenschutz | Nigredo"
+  description="Datenschutzerklärung von Nigredo. Transparente Information über die Erhebung und Nutzung deiner Daten."
+  keywords="Datenschutz Nigredo, Schweizer Hosting, Datensicherheit, Privatsphäre, DSG konform"
+  canonical="https://www.nigredo.ch/datenschutz"
   robots="noindex, follow"
   schema={schema}
 >
   <section class="section pt-sub">
-    <div class="hero-glow" style="top: -200px; background: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, rgba(166, 77, 255, 0.06) 50%, transparent 70%); opacity: 0.7;"></div>
-    <div class="container">
+    <div class="hero-glow"></div>
+    <div class="container container--narrow">
 
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
         { label: 'Datenschutz' }
       ]} />
 
-      <div class="fade-up" style="text-align: left; max-width: 850px; margin-bottom: 64px;">
-        <span class="badge" style="color: #00D2FF; border-color: rgba(0, 210, 255, 0.3);">DATENSCHUTZ</span>
-        <h1 style="margin-top: 15px;">
-          Deine Daten.<br>
-          <span class="gradient-text">Nichts versteckt.</span>
-        </h1>
-        <p>Kurz und klar: was gesammelt wird, warum und wer dafür verantwortlich ist.</p>
-      </div>
+      <div class="fade-up legal-container">
+        <span class="badge badge--cyan">DATENSCHUTZ</span>
+        <h1>Datenschutz</h1>
+        <p class="hero-lead">Kurz und klar: was gesammelt wird, warum und wer dafür verantwortlich ist.</p>
 
-      <div class="legal-sections">
-
-        <div class="legal-item">
-          <span class="legal-num">01</span>
-          <div class="legal-content">
-            <h2 class="legal-title">Verantwortliche Stelle</h2>
-            <p>Verantwortlich für die Datenverarbeitung auf dieser Website:</p>
-            <div class="legal-address">
-              <strong>Calzavara</strong><br>
-              Marco Calzavara<br>
-              Wildeggstrasse 37<br>
-              9000 St. Gallen, Schweiz
-            </div>
-            <div class="legal-contact">
-              <span>Kontakt:</span>
+        <div class="mt-80 legal-text-block">
+          <div class="legal-item">
+            <span class="legal-num">01</span>
+            <div>
+              <h3>Verantwortliche Stelle</h3>
+              <p>Verantwortlich für die Datenverarbeitung auf dieser Website:</p>
+              <div class="legal-address">
+                <strong>Nigredo</strong><br>
+                Marco Calzavara<br>
+                Wildeggstrasse 37<br>
+                9000 St. Gallen, Schweiz
+              </div>
               <span class="reveal-mail btn btn-ghost legal-btn" role="button" tabindex="0">Nachricht schreiben →</span>
             </div>
           </div>
-        </div>
 
-        <div class="legal-item">
-          <span class="legal-num">02</span>
-          <div class="legal-content">
-            <h2 class="legal-title">Hosting</h2>
-            <p>Diese Website wird bei <strong>Hosttech</strong> in der Schweiz gehostet. Der Hosting-Provider speichert automatisch Server-Logs (IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit). Diese Daten werden ausschliesslich zu technischen Zwecken erhoben und unterliegen dem schweizerischen Datenschutzgesetz (DSG).</p>
+          <div class="legal-item mt-80">
+            <span class="legal-num">02</span>
+            <div>
+              <h3>Hosting</h3>
+              <p>Diese Website wird bei <strong>Hosttech</strong> in der Schweiz gehostet. Der Hosting-Provider speichert automatisch Server-Logs (IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit). Diese Daten werden ausschliesslich zu technischen Zwecken erhoben und unterliegen dem schweizerischen Datenschutzgesetz (DSG).</p>
+            </div>
+          </div>
+
+          <div class="legal-item mt-80">
+            <span class="legal-num">03</span>
+            <div>
+              <h3>Analyse-Tools & Cookies</h3>
+              <p>Diese Website nutzt <strong>Umami Analytics</strong>, ein datenschutzfreundliches, cookiefreies Analyse-Tool. Umami erfasst anonymisierte Nutzungsdaten (z.B. besuchte Seiten, Verweildauer) ohne persönlich identifizierbare Informationen zu speichern. Es werden keine Cookies gesetzt und keine Daten an Dritte weitergegeben. Die Verarbeitung erfolgt in Übereinstimmung mit dem Schweizer Datenschutzgesetz (DSG).</p>
+            </div>
+          </div>
+
+          <div class="legal-item mt-80">
+            <span class="legal-num">04</span>
+            <div>
+              <h3>Kontaktaufnahme</h3>
+              <p>Wenn du mich per E-Mail kontaktierst, werden deine Angaben (E-Mail-Adresse, Name, Nachricht) gespeichert, um deine Anfrage zu bearbeiten. Diese Daten werden nicht ohne deine Einwilligung weitergegeben.</p>
+            </div>
+          </div>
+
+          <div class="legal-item mt-80">
+            <span class="legal-num">05</span>
+            <div>
+              <h3>Deine Rechte</h3>
+              <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten. Kontaktiere mich dafür einfach per E-Mail.</p>
+            </div>
+          </div>
+
+          <div class="legal-item mt-80">
+            <span class="legal-num">06</span>
+            <div>
+              <h3>SSL-Verschlüsselung</h3>
+              <p>Diese Website nutzt SSL-Verschlüsselung für die sichere Übertragung von Daten. Verschlüsselte Seiten erkennst du am «https://» in der Adresszeile und am Schloss-Symbol im Browser.</p>
+            </div>
           </div>
         </div>
-
-        <div class="legal-item">
-          <span class="legal-num">03</span>
-          <div class="legal-content">
-            <h2 class="legal-title">Analyse-Tools & Cookies</h2>
-            <p>Diese Website nutzt <strong>Umami Analytics</strong>, ein datenschutzfreundliches, cookiefreies Analyse-Tool. Umami erfasst anonymisierte Nutzungsdaten (z.B. besuchte Seiten, Verweildauer) ohne persönlich identifizierbare Informationen zu speichern. Es werden keine Cookies gesetzt und keine Daten an Dritte weitergegeben. Die Verarbeitung erfolgt in Übereinstimmung mit dem Schweizer Datenschutzgesetz (DSG).</p>
-          </div>
-        </div>
-
-        <div class="legal-item">
-          <span class="legal-num">04</span>
-          <div class="legal-content">
-            <h2 class="legal-title">Kontaktaufnahme</h2>
-            <p>Wenn du mich per E-Mail kontaktierst, werden deine Angaben (E-Mail-Adresse, Name, Nachricht) gespeichert, um deine Anfrage zu bearbeiten. Diese Daten werden nicht ohne deine Einwilligung weitergegeben.</p>
-          </div>
-        </div>
-
-        <div class="legal-item">
-          <span class="legal-num">05</span>
-          <div class="legal-content">
-            <h2 class="legal-title">Deine Rechte</h2>
-            <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten. Kontaktiere mich dafür einfach per E-Mail.</p>
-          </div>
-        </div>
-
-        <div class="legal-item">
-          <span class="legal-num">06</span>
-          <div class="legal-content">
-            <h2 class="legal-title">SSL-Verschlüsselung</h2>
-            <p>Diese Website nutzt SSL-Verschlüsselung für die sichere Übertragung von Daten. Verschlüsselte Seiten erkennst du am «https://» in der Adresszeile und am Schloss-Symbol im Browser.</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  .legal-num {
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    padding-top: 5px;
-    min-width: 22px;
-    flex-shrink: 0;
-    background: linear-gradient(135deg, #00D2FF, #A64DFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .legal-container {
+    max-width: 100%;
   }
-
-  .legal-address {
-    font-size: 0.92rem;
+  .legal-text-block p {
     color: var(--text-muted);
-    line-height: 1.9;
-    margin: 14px 0 18px;
+    max-width: var(--reading-width);
+    margin-bottom: 24px;
   }
-
-  .legal-address strong { color: rgba(255,255,255,0.75); font-weight: 600; }
-
-  .legal-contact {
+  .legal-item {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    font-size: 0.88rem;
-    color: var(--text-muted);
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .legal-num {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--quaternary-accent);
+    padding-top: 6px;
+    flex-shrink: 0;
+  }
+  .legal-address {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .legal-btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  @media (max-width: 600px) {
+    .legal-item {
+      flex-direction: column;
+      gap: 12px;
+    }
   }
 </style>

@@ -7,29 +7,29 @@ const schema = JSON.stringify({
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "@id": "https://calzavara.ch/referenzen#breadcrumb",
+      "@id": "https://www.nigredo.ch/referenzen#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://calzavara.ch/" },
-        { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://calzavara.ch/referenzen" }
+        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.nigredo.ch/" },
+        { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://www.nigredo.ch/referenzen" }
       ]
     },
     {
       "@type": "CollectionPage",
-      "@id": "https://calzavara.ch/referenzen#webpage",
-      "url": "https://calzavara.ch/referenzen",
-      "name": "Referenzprojekte – KI & Software für Schweizer KMU | Calzavara",
-      "description": "Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Kantonsverwaltung. Massgeschneiderte digitale Lösungen von Calzavara, St. Gallen.",
+      "@id": "https://www.nigredo.ch/referenzen#webpage",
+      "url": "https://www.nigredo.ch/referenzen",
+      "name": "Referenzprojekte – KI & Software für Schweizer KMU | Nigredo",
+      "description": "Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Kantonsverwaltung. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
       "dateModified": "2026-03-21",
-      "isPartOf": { "@id": "https://calzavara.ch/#website" },
-      "breadcrumb": { "@id": "https://calzavara.ch/referenzen#breadcrumb" },
+      "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
+      "breadcrumb": { "@id": "https://www.nigredo.ch/referenzen#breadcrumb" },
       "isAccessibleForFree": true,
       "mainEntity": {
         "@type": "ItemList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "url": "https://calzavara.ch/referenzen/ki-voice-agent", "name": "KI Voice Agent für IV-Stellen" },
-          { "@type": "ListItem", "position": 2, "url": "https://calzavara.ch/referenzen/dashboard-kantonsverwaltung", "name": "Dashboard für Kantonsverwaltung" }
+          { "@type": "ListItem", "position": 1, "url": "https://www.nigredo.ch/referenzen/ki-voice-agent", "name": "KI Voice Agent für IV-Stellen" },
+          { "@type": "ListItem", "position": 2, "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung", "name": "Dashboard für Kantonsverwaltung" }
         ]
       }
     }
@@ -38,19 +38,19 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Referenzprojekte – KI & Software für Schweizer KMU | Calzavara"
-  description="Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Kantonsverwaltung. Massgeschneiderte digitale Lösungen von Calzavara, St. Gallen."
-  keywords="Referenzen Calzavara, KI Voice Agent Schweiz, Excel Dashboard Kantonsverwaltung, digitale Lösungen Schweiz, Softwareentwicklung Referenzen, KI-Projekte St. Gallen, Website Referenzen KMU"
-  canonical="https://calzavara.ch/referenzen"
-  ogTitle="Gebaut. Nicht gepitcht. | Calzavara"
+  title="Referenzprojekte – KI & Software für Schweizer KMU | Nigredo"
+  description="Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Kantonsverwaltung. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen."
+  keywords="Referenzen Nigredo, KI Voice Agent Schweiz, Excel Dashboard Kantonsverwaltung, digitale Lösungen Schweiz, Softwareentwicklung Referenzen, KI-Projekte St. Gallen, Website Referenzen KMU"
+  canonical="https://www.nigredo.ch/referenzen"
+  ogTitle="Gebaut. Nicht gepitcht. | Nigredo"
   ogDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten. KI Voice Agent, Excel-Dashboard und mehr."
-  ogImageAlt="Calzavara Referenzen – Echte Projekte, keine Demos"
-  twitterTitle="Gebaut. Nicht gepitcht. | Calzavara"
+  ogImageAlt="Nigredo Referenzen – Echte Projekte, keine Demos"
+  twitterTitle="Gebaut. Nicht gepitcht. | Nigredo"
   twitterDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten."
   schema={schema}
 >
   <section class="section pt-sub">
-    <div class="hero-glow" style="top: -200px; background: radial-gradient(circle, rgba(255,77,128,0.12) 0%, rgba(166,77,255,0.08) 40%, transparent 70%); opacity: 0.6;"></div>
+    <div class="hero-glow"></div>
     <div class="container">
 
       <Breadcrumb items={[
@@ -58,15 +58,15 @@ const schema = JSON.stringify({
         { label: 'Referenzen' }
       ]} />
 
-      <div class="fade-up" style="text-align: left; max-width: 850px; margin-bottom: 64px;">
+      <div class="fade-up refs-intro">
         <span class="badge badge--purple">GEBAUT. NICHT GEPITCHT.</span>
 
-        <h1 style="margin-top: 15px;">
+        <h1 id="referenzen-title">
           Echte Aufgaben.<br>
           <span class="gradient-text">Echte Ergebnisse.</span>
         </h1>
-        <p>
-          Jedes Projekt hier hatte einen echten Auftraggeber und ein echtes Problem. Kein Showpiece, kein Vorführprojekt. Einfach Arbeit, die gemacht werden musste.
+        <p class="hero-lead">
+          Jedes Projekt hier hatte einen konkreten Auftrag, einen echten Kontext und ein Problem, das gelöst werden musste. Keine Showpieces, keine Vorführprojekte. Sondern Arbeit, die Substanz braucht und im Alltag bestehen muss.
         </p>
       </div>
 
@@ -82,12 +82,14 @@ const schema = JSON.stringify({
         </button>
       </div>
 
-      <div class="refs-cta fade-up">
-        <span class="cta-label">Der nächste Schritt</span>
-        <h2>Nächstes Projekt?<br><span class="gradient-text">Erzähl mir davon.</span></h2>
-        <div class="hero-cta-group" style="justify-content: center;">
-          <a href="/kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
-          <a href="/ueber-uns" class="btn btn-ghost">Über mich</a>
+      <div class="section">
+        <div class="section-cta fade-up">
+          <span class="cta-label">Der nächste Schritt</span>
+          <h2>Nächstes Projekt?<br><span class="gradient-text">Erzähl mir davon.</span></h2>
+          <div class="hero-cta-group" style="justify-content: center;">
+            <a href="/kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
+            <a href="/ueber-uns" class="btn btn-ghost">Über mich</a>
+          </div>
         </div>
       </div>
 
@@ -100,8 +102,13 @@ const schema = JSON.stringify({
   .refs-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    margin-bottom: 96px;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .refs-intro {
+    max-width: 920px;
+    margin-bottom: 64px;
   }
 
   /* Card */
@@ -110,7 +117,7 @@ const schema = JSON.stringify({
     flex-direction: column;
     border-radius: var(--radius-xl);
     border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.015);
+    background: rgba(10, 10, 12, 0.75);
     background-clip: padding-box;
     overflow: hidden;
     text-decoration: none;
@@ -120,34 +127,16 @@ const schema = JSON.stringify({
                 border-color 0.4s ease,
                 box-shadow 0.4s ease;
   }
-  .ref-main-card::before {
-    content: "";
-    position: absolute; inset: 0; border-radius: inherit; padding: 1px;
-    background: conic-gradient(from var(--border-angle), #FFC700, #FF4D80, #A64DFF, #00D2FF, #FFC700);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor; mask-composite: exclude;
-    opacity: 0; transition: opacity 0.4s ease;
-    pointer-events: none; z-index: 2;
-  }
+
   @media (hover: hover) {
     .ref-main-card:hover {
       transform: translateY(-5px);
-      border-color: transparent;
+      border-color: rgba(255, 255, 255, 0.2);
       box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    }
-    .ref-main-card:hover::before {
-      opacity: 1;
-      animation: borderRotate 4s linear infinite;
     }
     .ref-main-card:hover .ref-main-card-img img {
       transform: scale(1.04);
     }
-    .ref-main-card:hover .ref-main-link {
-      gap: 8px;
-    }
-    .ref-main-card:hover .ref-main-link--ki { color: #A64DFF; }
-    .ref-main-card:hover .ref-main-link:not(.ref-main-link--ki) { color: #00D2FF; }
   }
 
   /* Image Area */
@@ -159,16 +148,10 @@ const schema = JSON.stringify({
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
   .ref-main-card-img--purple {
-    background:
-      radial-gradient(ellipse at 25% 35%, rgba(166,77,255,0.65) 0%, transparent 55%),
-      radial-gradient(ellipse at 75% 65%, rgba(255,77,128,0.35) 0%, transparent 50%),
-      #0c0814;
+    background: radial-gradient(ellipse at 25% 35%, rgba(166,77,255,0.45) 0%, transparent 55%), #0c0814;
   }
   .ref-main-card-img--cyan {
-    background:
-      radial-gradient(ellipse at 25% 35%, rgba(0,210,255,0.55) 0%, transparent 55%),
-      radial-gradient(ellipse at 75% 65%, rgba(166,77,255,0.28) 0%, transparent 50%),
-      #030d14;
+    background: radial-gradient(ellipse at 25% 35%, rgba(0,210,255,0.35) 0%, transparent 55%), #030d14;
   }
   .ref-main-card-img img {
     width: 100%; height: 100%;
@@ -184,7 +167,7 @@ const schema = JSON.stringify({
 
   /* Card Body */
   .ref-main-card-body {
-    padding: 28px 30px 30px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -194,66 +177,69 @@ const schema = JSON.stringify({
     align-items: flex-start;
     justify-content: space-between;
     gap: 12px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
   .ref-main-card-year {
-    font-size: 0.72rem;
-    font-weight: 400;
-    color: rgba(255,255,255,0.25);
-    letter-spacing: 0.04em;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
     white-space: nowrap;
-    flex-shrink: 0;
-    padding-top: 3px;
+    padding-top: 4px;
   }
   .ref-main-card-title {
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-size: 1.35rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1.25;
-    margin: 0 0 14px;
+    margin: 0;
     color: #fff;
   }
+  .ref-main-card-sub {
+    font-size: 0.85rem;
+    color: var(--secondary-accent);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
   .ref-main-card-desc {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-muted);
-    line-height: 1.68;
+    line-height: 1.6;
     margin: 0;
-    max-width: none;
     flex: 1;
   }
 
   /* Footer */
   .ref-main-card-footer {
     margin-top: 24px;
-    padding-top: 18px;
+    padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
   .ref-main-link {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    font-size: 0.8rem;
+    gap: 8px;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: rgba(255,255,255,0.35);
-    white-space: nowrap;
-    transition: gap 0.25s ease, color 0.25s ease;
+    color: var(--text-secondary);
+    transition: color 0.3s ease, gap 0.3s ease;
+  }
+  .ref-main-card:hover .ref-main-link {
+    color: #fff;
+    gap: 12px;
   }
 
-  /* Navigation Pfeile */
+  /* Navigation */
   .refs-nav {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin: 32px 0 80px;
+    margin-bottom: 80px;
   }
   .refs-nav-btn {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.1);
     background: transparent;
-    color: rgba(255,255,255,0.5);
+    color: #fff;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -261,51 +247,22 @@ const schema = JSON.stringify({
     transition: all 0.3s ease;
   }
   .refs-nav-btn:hover:not(:disabled) {
-    border-color: rgba(166,77,255,0.5);
-    color: #fff;
-    background: rgba(166,77,255,0.08);
+    border-color: #fff;
+    background: rgba(255,255,255,0.05);
   }
   .refs-nav-btn:disabled {
     opacity: 0.2;
     cursor: default;
   }
   .refs-nav-count {
-    font-size: 0.72rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.25);
-    letter-spacing: 0.1em;
-    min-width: 40px;
-    text-align: center;
-  }
-
-  /* CTA — konsistent mit Startseite und Lösungen */
-  .refs-cta {
-    text-align: center;
-    padding-top: 64px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  .refs-cta h2 { margin-bottom: 16px; }
-  .refs-cta p {
-    color: var(--text-muted);
-    line-height: 1.65;
-    margin-bottom: 36px;
-    max-width: none;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
   }
 
   /* Responsive */
-  @media (max-width: 768px) {
-    .refs-grid { grid-template-columns: 1fr; gap: 20px; }
-    .ref-main-card-body { padding: 22px 22px 24px; }
-    .refs-nav { margin: 24px 0 60px; }
-    .refs-cta { padding-top: 48px; }
-    .hero-cta-group { flex-direction: column; align-items: center; }
-    .hero-cta-group .btn { width: 100%; justify-content: center; }
-  }
-
-  @media (max-width: 480px) {
-    .cta-label { font-size: 0.6rem; }
+  @media (max-width: 860px) {
+    .refs-grid { grid-template-columns: 1fr; gap: 24px; }
+    .refs-intro { margin-bottom: 48px; }
   }
 </style>
 
@@ -314,14 +271,15 @@ const schema = JSON.stringify({
     {
       href: '/referenzen/ki-voice-agent',
       imgSrc: '/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-sprachassistent.svg',
-      imgAlt: 'KI Voice Agent für IV-Stellen – AHV Hilfsmittel Sprachassistent von Calzavara',
+      imgAlt: 'KI Voice Agent für IV-Stellen – AHV Hilfsmittel Sprachassistent von Nigredo',
       imgCls: 'ref-main-card-img--purple',
       badge: { text: 'KI-Agent', cls: 'accent-purple' },
       linkCls: 'ref-main-link--ki',
       year: 'Feb 2026',
-      title: 'KI Voice Agent für IV-Stellen',
-      desc: 'Kein Mensch kann rund um die Uhr ans Telefon, eine KI schon. Vier Sprachen, null Wartezeit und ein Wissensstand, der nicht vom letzten Urlaub des Sachbearbeiters abhängt.',
-      ariaLabel: 'KI Voice Agent für IV-Stellen – Details ansehen'
+      title: 'KI Agent für IV-Stellen',
+      sub: 'Sprachassistent für AHV-Hilfsmittel',
+      desc: 'Dieser Agent ist aktuell noch nicht im Einsatz. Er zeigt als Prototyp, wie Anfragen künftig schneller, klarer und mehrsprachig beantwortet werden können. Vier Sprachen, keine Wartezeiten und ein System, das Wissen zuverlässig verfügbar macht.',
+      ariaLabel: 'KI Agent für IV-Stellen – Details ansehen'
     },
     {
       href: '/referenzen/dashboard-kantonsverwaltung',
@@ -332,7 +290,8 @@ const schema = JSON.stringify({
       linkCls: '',
       year: 'Jun 2025',
       title: 'Dashboard für Kantonsverwaltung',
-      desc: 'Sensible Daten, die bleiben wo sie hingehören: auf dem eigenen Rechner. Ein Klick bis zum fertigen Bericht, kein Cloud-Upload, kein IT-Ticket, kein Nerv.',
+      sub: 'Excel KPI-Auswertung im Browser, ohne Cloud',
+      desc: 'Sensible Daten bleiben dort, wo sie hingehören. Auf dem eigenen Rechner. Berichte entstehen mit einem Klick, ganz ohne Cloud-Upload, ohne IT-Ticket und ohne unnötige Umwege.',
       ariaLabel: 'Dashboard für Kantonsverwaltung – Details ansehen'
     }
     // Weitere Referenzen hier einfach anhängen
@@ -361,6 +320,7 @@ const schema = JSON.stringify({
             <h2 class="ref-main-card-title">${ref.title}</h2>
             <span class="ref-main-card-year">${ref.year}</span>
           </div>
+          ${ref.sub ? `<p class="ref-main-card-sub">${ref.sub}</p>` : ''}
           <p class="ref-main-card-desc">${ref.desc}</p>
           <div class="ref-main-card-footer">
             <span class="ref-main-link ${ref.linkCls}">Details ${ARROW_SVG}</span>

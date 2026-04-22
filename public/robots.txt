@@ -1,5 +1,5 @@
 # ======================================================================
-# calzavara.ch - robots.txt
+# www.nigredo.ch - robots.txt
 # ======================================================================
 
 
@@ -10,8 +10,8 @@ Disallow: /.htpasswd
 Disallow: /.htaccess
 Disallow: /.claude/
 
-Sitemap: https://calzavara.ch/sitemap-index.xml
-LLMs: https://calzavara.ch/llms.txt
+Sitemap: https://www.nigredo.ch/sitemap-index.xml
+LLMs: https://www.nigredo.ch/llms.txt
 
 # Suchmaschinen-Crawler
 User-agent: Googlebot

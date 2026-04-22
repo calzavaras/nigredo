@@ -7,23 +7,23 @@ const schema = JSON.stringify({
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "@id": "https://calzavara.ch/kontakt#breadcrumb",
+      "@id": "https://www.nigredo.ch/kontakt#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://calzavara.ch/" },
-        { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://calzavara.ch/kontakt" }
+        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.nigredo.ch/" },
+        { "@type": "ListItem", "position": 2, "name": "Kontakt", "item": "https://www.nigredo.ch/kontakt" }
       ]
     },
     {
       "@type": "ContactPage",
-      "@id": "https://calzavara.ch/kontakt#webpage",
-      "name": "Kontakt & Projektanfrage | Calzavara St. Gallen",
-      "url": "https://calzavara.ch/kontakt",
-      "description": "Direkter Kontakt zu Marco Calzavara, Calzavara St. Gallen. Projektanfragen für Software, Webseiten, Texte, Bilder und KI-Lösungen.",
+      "@id": "https://www.nigredo.ch/kontakt#webpage",
+      "name": "Kontakt & Projektanfrage | Nigredo St. Gallen",
+      "url": "https://www.nigredo.ch/kontakt",
+      "description": "Direkter Kontakt zu Marco Calzavara, Nigredo St. Gallen. Projektanfragen für Software, Webseiten, Texte, Bilder und KI-Lösungen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
       "dateModified": "2026-03-19",
-      "isPartOf": { "@id": "https://calzavara.ch/#website" },
-      "breadcrumb": { "@id": "https://calzavara.ch/kontakt#breadcrumb" },
+      "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
+      "breadcrumb": { "@id": "https://www.nigredo.ch/kontakt#breadcrumb" },
       "isAccessibleForFree": true,
       "speakable": {
         "@type": "SpeakableSpecification",
@@ -31,10 +31,10 @@ const schema = JSON.stringify({
       },
       "mainEntity": {
         "@type": "Organization",
-        "@id": "https://calzavara.ch/#organization",
-        "name": "Calzavara",
+        "@id": "https://www.nigredo.ch/#organization",
+        "name": "Nigredo",
         "email": "calzavara3830@gmail.com",
-        "url": "https://calzavara.ch",
+        "url": "https://www.nigredo.ch",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Wildeggstrasse 37",
@@ -57,19 +57,19 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Kontakt & Projektanfrage | Calzavara St. Gallen"
+  title="Kontakt & Projektanfrage | Nigredo St. Gallen"
   description="Keine KI, kein Assistent, kein Ticketsystem. Direkt Marco Calzavara schreiben – er liest, er denkt, er antwortet. Meistens noch am selben Tag."
-  keywords="Kontakt Calzavara, Website anfragen Schweiz, Webseite erstellen lassen Anfrage, Marco Calzavara, Freelancer St. Gallen, Projektanfrage digitale Lösungen KMU"
-  canonical="https://calzavara.ch/kontakt"
+  keywords="Kontakt Nigredo, Website anfragen Schweiz, Webseite erstellen lassen Anfrage, Marco Calzavara, Freelancer St. Gallen, Projektanfrage digitale Lösungen KMU"
+  canonical="https://www.nigredo.ch/kontakt"
   ogTitle="Gute Arbeit braucht kein Business-Theater."
   ogDescription="Keine KI, kein Assistent. Nur Marco. Schreib, was dich beschäftigt – er antwortet persönlich, meistens noch am selben Tag."
-  ogImageAlt="Calzavara Kontakt - Direkter Draht zu Marco Calzavara"
+  ogImageAlt="Nigredo Kontakt - Direkter Draht zu Marco Calzavara"
   twitterTitle="Gute Arbeit braucht kein Business-Theater."
   twitterDescription="Keine KI, kein Assistent. Nur Marco. Er liest jede Nachricht selbst."
   schema={schema}
 >
   <section class="section pt-sub">
-    <div class="hero-glow" style="background: radial-gradient(circle, rgba(0, 210, 255, 0.12) 0%, transparent 70%);"></div>
+    <div class="hero-glow"></div>
     <div class="container">
 
       <Breadcrumb items={[
@@ -81,12 +81,12 @@ const schema = JSON.stringify({
 
         <div class="fade-up">
           <span class="badge badge--cyan">DIREKT. KEIN UMWEG.</span>
-          <h1 class="kontakt-headline">
+          <h1>
             Gute Arbeit<br>
             braucht kein<br>
             <span class="gradient-text">Business-Theater.</span>
           </h1>
-          <p class="kontakt-lead">
+          <p class="hero-lead">
             Kein Briefing-Marathon, kein Kick-off, das als E-Mail ausgereicht hätte. Schreib, was du im Kopf hast. Den Rest bringe ich mit.
           </p>
           <p class="kontakt-sub">
@@ -97,8 +97,8 @@ const schema = JSON.stringify({
         <div class="contact-card fade-up delay-100">
           <div class="contact-top-stripe"></div>
 
-          <div class="contact-icon-wrapper">
-            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+          <div class="card-icon">
+            <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
               <defs>
                 <linearGradient id="mailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stop-color="#FFC700"/>
@@ -111,10 +111,10 @@ const schema = JSON.stringify({
             </svg>
           </div>
 
-          <h2 class="contact-title">Schreib mir.</h2>
+          <h3>Schreib mir.</h3>
           <p class="contact-text">Keine KI, kein Assistent, kein Ticketsystem, das vergisst zu atmen. Nur ich. Ich lese, denke, antworte. Meistens noch am selben Tag.</p>
 
-          <button id="mailBtn" class="btn btn-primary contact-btn">Jetzt schreiben</button>
+          <button id="mailBtn" class="btn btn-primary">Jetzt schreiben</button>
         </div>
 
       </div>
@@ -131,10 +131,9 @@ const schema = JSON.stringify({
     align-items: center;
   }
 
-  .kontakt-headline {
-    margin-top: 15px;
-    margin-bottom: 24px;
-    line-height: 1.08;
+  .kontakt-sub {
+    margin-top: 24px;
+    color: var(--text-muted);
   }
 
   /* Top gradient accent stripe */
@@ -146,11 +145,13 @@ const schema = JSON.stringify({
     border-radius: 2px 2px 0 0;
   }
 
-  @media (max-width: 768px) {
-    .kontakt-grid { grid-template-columns: 1fr; gap: 40px; }
+  .contact-text {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    line-height: 1.6;
   }
 
-  @media (max-width: 480px) {
-    .kontakt-grid { gap: 28px; }
+  @media (max-width: 860px) {
+    .kontakt-grid { grid-template-columns: 1fr; gap: 40px; }
   }
 </style>
