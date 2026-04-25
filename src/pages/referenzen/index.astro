@@ -18,7 +18,7 @@ const schema = JSON.stringify({
       "@id": "https://www.nigredo.ch/referenzen#webpage",
       "url": "https://www.nigredo.ch/referenzen",
       "name": "Referenzprojekte – KI & Software für Schweizer KMU | Nigredo",
-      "description": "Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Kantonsverwaltung. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen.",
+      "description": "Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Verwaltung. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
       "dateModified": "2026-03-21",
@@ -29,7 +29,7 @@ const schema = JSON.stringify({
         "@type": "ItemList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "url": "https://www.nigredo.ch/referenzen/ki-voice-agent", "name": "KI Voice Agent für IV-Stellen" },
-          { "@type": "ListItem", "position": 2, "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung", "name": "Dashboard für Kantonsverwaltung" }
+          { "@type": "ListItem", "position": 2, "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung", "name": "Dashboard für Verwaltung" }
         ]
       }
     }
@@ -39,34 +39,34 @@ const schema = JSON.stringify({
 
 <Layout
   title="Referenzprojekte – KI & Software für Schweizer KMU | Nigredo"
-  description="Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Kantonsverwaltung. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen."
-  keywords="Referenzen Nigredo, KI Voice Agent Schweiz, Excel Dashboard Kantonsverwaltung, digitale Lösungen Schweiz, Softwareentwicklung Referenzen, KI-Projekte St. Gallen, Website Referenzen KMU"
+  description="Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Verwaltung. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen."
+  keywords="Referenzen Nigredo, KI Voice Agent Schweiz, Excel Dashboard Verwaltung, digitale Lösungen Schweiz, Softwareentwicklung Referenzen, KI-Projekte St. Gallen, Website Referenzen KMU"
   canonical="https://www.nigredo.ch/referenzen"
-  ogTitle="Gebaut. Nicht gepitcht. | Nigredo"
+  ogTitle="Gebaut. Nicht versprochen. | Nigredo"
   ogDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten. KI Voice Agent, Excel-Dashboard und mehr."
   ogImageAlt="Nigredo Referenzen – Echte Projekte, keine Demos"
-  twitterTitle="Gebaut. Nicht gepitcht. | Nigredo"
+  twitterTitle="Gebaut. Nicht versprochen. | Nigredo"
   twitterDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten."
   schema={schema}
 >
-  <section class="section pt-sub">
+  <section class="section pt-sub refs-hero" aria-labelledby="referenzen-title">
     <div class="hero-glow"></div>
-    <div class="container">
+    <div class="container refs-hero__container">
 
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
         { label: 'Referenzen' }
       ]} />
 
-      <div class="fade-up refs-intro">
-        <span class="badge badge--purple">GEBAUT. NICHT GEPITCHT.</span>
+      <div class="fade-up home-hero__inner refs-intro">
+        <span class="badge badge--purple">GEBAUT. NICHT VERSPROCHEN.</span>
 
-        <h1 id="referenzen-title">
+        <h1 id="referenzen-title" class="home-hero__title refs-hero__title">
           Echte Aufgaben.<br>
           <span class="gradient-text">Echte Ergebnisse.</span>
         </h1>
-        <p class="hero-lead">
-          Jedes Projekt hier hatte einen konkreten Auftrag, einen echten Kontext und ein Problem, das gelöst werden musste. Keine Showpieces, keine Vorführprojekte. Sondern Arbeit, die Substanz braucht und im Alltag bestehen muss.
+        <p class="hero-lead refs-hero__lead">
+          Hier stehen keine Demos und keine hübschen Attrappen. Hier stehen Projekte mit Auftrag, Kontext und Reibung. Dinge, die nicht nur gut aussehen mussten, sondern im Alltag funktionieren.
         </p>
       </div>
 
@@ -82,10 +82,10 @@ const schema = JSON.stringify({
         </button>
       </div>
 
-      <div class="section">
-        <div class="section-cta fade-up">
+      <div class="section refs-final-section">
+        <div class="section-cta refs-final-cta fade-up">
           <span class="cta-label">Der nächste Schritt</span>
-          <h2>Nächstes Projekt?<br><span class="gradient-text">Erzähl mir davon.</span></h2>
+          <h2>Dein Projekt soll hier stehen?<br><span>Erzähl mir davon.</span></h2>
           <div class="hero-cta-group" style="justify-content: center;">
             <a href="/kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
             <a href="/ueber-uns" class="btn btn-ghost">Über mich</a>
@@ -98,6 +98,45 @@ const schema = JSON.stringify({
 </Layout>
 
 <style is:global>
+  .refs-hero {
+    min-height: min(570px, 64vh);
+    display: flex;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 48px;
+  }
+
+  .refs-hero__container {
+    position: relative;
+    width: 100%;
+  }
+
+  .refs-hero .home-hero__inner {
+    width: 100%;
+  }
+
+  .refs-hero .breadcrumb {
+    margin-bottom: 28px;
+  }
+
+  .refs-hero .badge {
+    margin-bottom: 1rem;
+  }
+
+  .refs-hero__title {
+    max-width: 940px;
+    font-size: clamp(2.9rem, 5.35vw, 4.85rem);
+    line-height: var(--hero-title-line-height);
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .refs-hero__lead {
+    max-width: 620px;
+    font-size: clamp(1.03rem, 1.15vw, 1.2rem);
+    line-height: 1.65;
+  }
+
   /* Main Grid */
   .refs-grid {
     display: grid;
@@ -107,7 +146,7 @@ const schema = JSON.stringify({
   }
 
   .refs-intro {
-    max-width: 920px;
+    max-width: 940px;
     margin-bottom: 64px;
   }
 
@@ -259,10 +298,102 @@ const schema = JSON.stringify({
     color: rgba(255,255,255,0.4);
   }
 
+  .refs-final-section {
+    padding-top: 52px;
+    padding-bottom: 118px;
+  }
+
+  .refs-final-cta {
+    max-width: 660px;
+  }
+
+  .refs-final-cta .cta-label {
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+  .refs-final-cta h2 {
+    color: #f5f5f7;
+    font-size: clamp(2.25rem, 4.5vw, 3.7rem);
+    line-height: 1.04;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+
+  .refs-final-cta h2 span {
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .refs-final-cta .hero-cta-group {
+    margin-top: 34px;
+  }
+
+  .refs-final-cta .btn-ghost {
+    background-image:
+      linear-gradient(#050505, #050505),
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  }
+
+  .refs-final-cta .btn-ghost:hover {
+    animation: none;
+    transform: translateY(-2px);
+    background-image:
+      linear-gradient(#0a0a0c, #0a0a0c),
+      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
+  }
+
+  .refs-final-cta .btn-primary:hover {
+    box-shadow:
+      inset 0 2px 4px rgba(255, 255, 255, 1),
+      0 10px 26px rgba(255, 255, 255, 0.14);
+  }
+
   /* Responsive */
   @media (max-width: 860px) {
-    .refs-grid { grid-template-columns: 1fr; gap: 24px; }
-    .refs-intro { margin-bottom: 48px; }
+    .refs-hero {
+      min-height: auto;
+      padding-top: 132px;
+      padding-bottom: 42px;
+    }
+
+    .refs-hero__title {
+      font-size: clamp(2.55rem, 10vw, 3.8rem);
+      line-height: var(--hero-title-line-height-mobile);
+    }
+
+    .refs-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .refs-intro {
+      margin-bottom: 52px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .refs-hero__lead {
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .refs-hero__title {
+      font-size: clamp(2.35rem, 13vw, 3.25rem);
+      line-height: var(--hero-title-line-height-mobile);
+    }
+
+    .refs-intro {
+      margin-bottom: 42px;
+    }
+
+    .refs-final-section {
+      padding-top: 40px;
+      padding-bottom: 88px;
+    }
+
+    .refs-final-cta h2 {
+      font-size: clamp(1.8rem, 11vw, 2.5rem);
+    }
   }
 </style>
 
@@ -278,21 +409,21 @@ const schema = JSON.stringify({
       year: 'Feb 2026',
       title: 'KI Agent für IV-Stellen',
       sub: 'Sprachassistent für AHV-Hilfsmittel',
-      desc: 'Dieser Agent ist aktuell noch nicht im Einsatz. Er zeigt als Prototyp, wie Anfragen künftig schneller, klarer und mehrsprachig beantwortet werden können. Vier Sprachen, keine Wartezeiten und ein System, das Wissen zuverlässig verfügbar macht.',
+      desc: 'Ein Prototyp für Anfragen, die nicht warten sollten. Vier Sprachen, sofortige Antworten und Fachwissen, das zuverlässig verfügbar bleibt. Noch nicht im Einsatz, aber nah genug am Alltag gebaut, um zu zeigen, was möglich ist.',
       ariaLabel: 'KI Agent für IV-Stellen – Details ansehen'
     },
     {
       href: '/referenzen/dashboard-kantonsverwaltung',
       imgSrc: '/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.svg',
-      imgAlt: 'Dashboard für Kantonsverwaltung – Excel KPI-Auswertung im Browser ohne Cloud',
+      imgAlt: 'Dashboard für Verwaltung – Excel KPI-Auswertung im Browser ohne Cloud',
       imgCls: 'ref-main-card-img--cyan',
       badge: { text: 'App', cls: 'accent-cyan' },
       linkCls: '',
       year: 'Jun 2025',
-      title: 'Dashboard für Kantonsverwaltung',
+      title: 'Dashboard für Verwaltung',
       sub: 'Excel KPI-Auswertung im Browser, ohne Cloud',
-      desc: 'Sensible Daten bleiben dort, wo sie hingehören. Auf dem eigenen Rechner. Berichte entstehen mit einem Klick, ganz ohne Cloud-Upload, ohne IT-Ticket und ohne unnötige Umwege.',
-      ariaLabel: 'Dashboard für Kantonsverwaltung – Details ansehen'
+      desc: 'Sensible Daten bleiben dort, wo sie hingehören: auf dem eigenen Rechner. Aus Excel wird mit einem Klick ein klarer Bericht. Ohne Cloud, ohne IT-Ticket, ohne den üblichen Umweg durch drei Abteilungen.',
+      ariaLabel: 'Dashboard für Verwaltung – Details ansehen'
     }
     // Weitere Referenzen hier einfach anhängen
   ];

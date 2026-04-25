@@ -79,9 +79,9 @@ const schema = JSON.stringify({
   twitterDescription="24/7 autonom, vier Sprachen, echtes Fachwissen zu AHV-Hilfsmitteln. KI-Sprachassistent von Nigredo."
   schema={schema}
 >
-  <section class="section pt-sub">
+  <section class="section pt-sub case-page case-page--ki" aria-labelledby="ki-voice-agent-title">
     <div class="hero-glow"></div>
-    <div class="container">
+    <div class="container case-page__container">
 
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
@@ -98,9 +98,9 @@ const schema = JSON.stringify({
       <div class="case-hero fade-up">
         <div class="case-hero-content">
           <span class="tech-badge accent-purple case-hero-badge">KI-Agent</span>
-          <h1>KI Voice Agent <span class="gradient-text">für IV-Stellen</span></h1>
-          <p class="hero-lead">
-            Niemand wartet gerne in der Leitung. Dieser Agent schon gar nicht, weil er nie wartet. Antwortet sofort, spricht vier Sprachen und kennt die AHV-Hilfsmittel besser als mancher Sachbearbeiter nach dem Urlaub.
+          <h1 id="ki-voice-agent-title" class="home-hero__title case-hero-title">KI Voice Agent <span class="gradient-text">für IV-Stellen</span></h1>
+          <p class="hero-lead case-hero-lead">
+            Niemand wartet gerne in der Leitung. Dieser Agent auch nicht. Er antwortet sofort, spricht vier Sprachen und hat das Fachwissen zu AHV-Hilfsmitteln griffbereit. Ohne Kaffeepause, Rückfrage oder Warteschleife.
           </p>
         </div>
 
@@ -138,8 +138,8 @@ const schema = JSON.stringify({
           <span>Wartezeit</span>
         </div>
         <div class="case-stat">
-          <strong class="stat-purple-cyan">3</strong>
-          <span>Wissensdokumente</span>
+          <strong class="stat-purple-cyan">AHV</strong>
+          <span>Fachwissen</span>
         </div>
       </div>
 
@@ -157,7 +157,7 @@ const schema = JSON.stringify({
               </div>
               <div class="case-feature-text">
                 <h3>Echtzeit-Gespräch</h3>
-                <p>Keine Menüs, kein «Drücken Sie 1». Natürliche Unterhaltung mit echter Antwort, basierend auf Google Gemini 2.5 Flash mit nativem Audio.</p>
+                <p>Keine Menüs, kein «Drücken Sie 1». Der Agent führt ein natürliches Gespräch, versteht das Anliegen und antwortet in Echtzeit über Google Gemini 2.5 Flash mit nativem Audio.</p>
               </div>
             </div>
           </div>
@@ -168,18 +168,18 @@ const schema = JSON.stringify({
               </div>
               <div class="case-feature-text">
                 <h3>Tiefes Fachwissen</h3>
-                <p>Drei Wissensdokumente zu AHV-Hilfsmitteln, Hörgeräten und dem Kreisschreiben KSHA. Fundierte Auskunft statt Standardfloskeln.</p>
+                <p>Fachwissen zu AHV-Hilfsmitteln, Hörgeräten und dem Kreisschreiben KSHA. Damit entstehen Antworten mit Substanz statt freundliche Sätze ohne Inhalt.</p>
               </div>
             </div>
           </div>
           <div class="case-feature">
             <div class="case-feature-body">
-              <div class="case-feature-icon case-feature-icon--cyan">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-3" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#A64DFF"/></linearGradient></defs><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <div class="case-feature-icon case-feature-icon--purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-3" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#A64DFF"/><stop offset="1" stop-color="#FF4D80"/></linearGradient></defs><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Vier Sprachen, null Geduldsproben</h3>
-                <p>Deutsch, Französisch, Italienisch, Englisch. Der Agent reagiert geduldig und verständnisvoll, auch wenn das Anliegen kompliziert ist.</p>
+                <p>Deutsch, Französisch, Italienisch und Englisch. Der Agent bleibt geduldig, auch wenn das Anliegen nicht in einen Standardsatz passt.</p>
               </div>
             </div>
           </div>
@@ -190,7 +190,7 @@ const schema = JSON.stringify({
               </div>
               <div class="case-feature-text">
                 <h3>Immer da</h3>
-                <p>Feiertag, Nachtschicht, Personalengpass. Dem Agent ist das egal. Er ist einfach da.</p>
+                <p>Feiertag, Nachtschicht, Personalengpass. Der Agent nimmt es nicht persönlich. Er ist einfach erreichbar.</p>
               </div>
             </div>
           </div>
@@ -206,11 +206,10 @@ const schema = JSON.stringify({
       </div>
 
       <!-- CTA -->
-      <div class="section pt-hero fade-up">
-        <div class="section-cta">
+      <div class="section case-final-section fade-up">
+        <div class="section-cta case-final-cta">
           <span class="cta-label">Der nächste Schritt</span>
-          <h2>Genug von<br><span class="gradient-text">Warteschleifen?</span></h2>
-          <p class="case-cta-desc">Dann kennen wir uns vielleicht schon ein bisschen. Schreib mir, was dich beschäftigt. Kein Konzept nötig, kein Verkaufsgespräch.</p>
+          <h2>Noch zu viele<br><span>Warteschleifen?</span></h2>
           <div class="hero-cta-group" style="justify-content: center;">
             <a href="/kontakt" class="btn btn-primary">Gespräch starten</a>
             <a href="/referenzen" class="btn btn-ghost">Alle Projekte</a>
@@ -224,13 +223,83 @@ const schema = JSON.stringify({
 
 <style is:global>
   /* Case Specific overrides */
+  .case-page--ki {
+    --case-accent: #a64dff;
+    --case-accent-2: #ff4d80;
+    --case-accent-soft: rgba(166, 77, 255, 0.14);
+    --case-accent-glow: rgba(166, 77, 255, 0.26);
+  }
+
+  .case-page {
+    padding-top: 150px;
+    padding-bottom: 48px;
+  }
+
+  .case-page__container {
+    position: relative;
+    width: 100%;
+  }
+
+  .case-page .breadcrumb {
+    margin-bottom: 28px;
+  }
+
+  .case-page .case-back {
+    margin-bottom: 44px;
+  }
+
+  .case-page .case-back:hover {
+    color: var(--case-accent);
+  }
+
+  .case-page .case-hero {
+    margin-bottom: 72px;
+  }
+
+  .case-page .case-hero-badge {
+    margin-bottom: 1rem;
+  }
+
+  .case-page .case-hero-title {
+    max-width: 940px;
+    font-size: clamp(2.9rem, 5.35vw, 4.85rem);
+    line-height: var(--hero-title-line-height);
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .case-page--ki .gradient-text {
+    background: linear-gradient(to right, #a64dff, #ff4d80, #a64dff);
+    background-size: 200% auto;
+    animation: gradientPan 24s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .case-page .case-hero-lead {
+    max-width: 620px;
+    font-size: clamp(1.03rem, 1.15vw, 1.2rem);
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+  }
+
   .case-hero-float { width: 54%; }
 
   .stat-purple-cyan {
-    background: linear-gradient(135deg, #A64DFF 0%, #00D2FF 100%);
+    background: linear-gradient(135deg, var(--case-accent) 0%, var(--case-accent-2) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .case-page--ki .case-hero-canvas--purple {
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(166, 77, 255, 0.26) 0%, rgba(255, 255, 255, 0.02) 100%),
+      #0a0a0c;
+    border-color: rgba(166, 77, 255, 0.16);
   }
 
   .case-feature-body {
@@ -259,11 +328,22 @@ const schema = JSON.stringify({
   }
   .case-feature-icon--purple { background: rgba(166,77,255,0.08); border: 1px solid rgba(166,77,255,0.2); color: #A64DFF; }
   .case-feature-icon--cyan { background: rgba(0,210,255,0.08); border: 1px solid rgba(0,210,255,0.2); color: #00D2FF; }
+  .case-page--ki .case-feature {
+    background-image:
+      linear-gradient(#0a0a0c, #0a0a0c),
+      conic-gradient(from var(--border-angle, 0turn), rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 24%, rgba(166, 77, 255, 0.2) 42%, rgba(255, 77, 128, 0.26) 58%, rgba(255, 255, 255, 0.05) 78%, rgba(255, 255, 255, 0.05) 100%);
+  }
+  .case-page--ki .case-feature:hover {
+    box-shadow: 0 10px 30px rgba(166, 77, 255, 0.12);
+    background-image:
+      linear-gradient(#0a0a0c, #0a0a0c),
+      conic-gradient(from var(--border-angle, 0turn), rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 22%, rgba(166, 77, 255, 0.52) 42%, rgba(255, 77, 128, 0.48) 58%, rgba(255, 255, 255, 0.08) 80%, rgba(255, 255, 255, 0.08) 100%);
+  }
   .case-feature-icon svg {
     filter:
       brightness(1.12)
       saturate(1.18)
-      drop-shadow(0 0 8px rgba(166, 77, 255, 0.26));
+      drop-shadow(0 0 8px var(--case-accent-glow));
     transition: filter 0.45s ease;
   }
   .case-feature:hover .case-feature-icon {
@@ -272,29 +352,105 @@ const schema = JSON.stringify({
     background: rgba(255, 255, 255, 0.04);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 0 22px rgba(166, 77, 255, 0.24),
-      0 0 48px rgba(0, 210, 255, 0.12);
+      0 0 22px var(--case-accent-glow),
+      0 0 48px var(--case-accent-soft);
   }
   .case-feature:hover .case-feature-icon svg {
     filter:
       brightness(1.18)
       saturate(1.35)
-      drop-shadow(0 0 12px rgba(166, 77, 255, 0.46))
-      drop-shadow(0 0 24px rgba(0, 210, 255, 0.2));
+      drop-shadow(0 0 12px var(--case-accent-glow))
+      drop-shadow(0 0 24px var(--case-accent-soft));
   }
   
   .case-feature-text h3 { font-size: 1rem; margin-bottom: 6px; }
   .case-feature-text p { font-size: 0.875rem; line-height: 1.65; margin: 0; color: var(--text-muted); }
 
-  .case-cta-desc {
-    color: var(--text-muted);
-    line-height: 1.7;
-    margin: 0 auto 36px;
-    max-width: 52ch;
+  .case-final-section {
+    padding-top: 52px;
+    padding-bottom: 118px;
+  }
+
+  .case-final-cta {
+    max-width: 660px;
+  }
+
+  .case-final-cta .cta-label {
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+  .case-final-cta h2 {
+    color: #f5f5f7;
+    font-size: clamp(2.25rem, 4.5vw, 3.7rem);
+    line-height: 1.04;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+
+  .case-final-cta h2 span {
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .case-final-cta .hero-cta-group {
+    margin-top: 34px;
+  }
+
+  .case-final-cta .btn-ghost {
+    background-image:
+      linear-gradient(#050505, #050505),
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  }
+
+  .case-final-cta .btn-ghost:hover {
+    animation: none;
+    transform: translateY(-2px);
+    background-image:
+      linear-gradient(#0a0a0c, #0a0a0c),
+      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
+  }
+
+  .case-final-cta .btn-primary:hover {
+    box-shadow:
+      inset 0 2px 4px rgba(255, 255, 255, 1),
+      0 10px 26px rgba(255, 255, 255, 0.14);
   }
 
   @media (max-width: 768px) {
     .case-feature-body { flex-direction: column; gap: 16px; }
+  }
+
+  @media (max-width: 860px) {
+    .case-page {
+      padding-top: 132px;
+      padding-bottom: 42px;
+    }
+
+    .case-page .case-hero-title {
+      font-size: clamp(2.55rem, 10vw, 3.8rem);
+      line-height: var(--hero-title-line-height-mobile);
+    }
+  }
+
+  @media (max-width: 520px) {
+    .case-page .case-hero-title {
+      font-size: clamp(2.35rem, 13vw, 3.25rem);
+      line-height: var(--hero-title-line-height-mobile);
+    }
+
+    .case-page .case-hero-lead {
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .case-final-section {
+      padding-top: 40px;
+      padding-bottom: 88px;
+    }
+
+    .case-final-cta h2 {
+      font-size: clamp(1.8rem, 11vw, 2.5rem);
+    }
   }
 </style>
 
@@ -307,16 +463,16 @@ const schema = JSON.stringify({
       imgCls: 'case-more-card-img--purple',
       badge: { text: 'KI-Agent', cls: 'accent-purple' },
       title: 'KI Voice Agent für IV-Stellen',
-      desc: '24/7, vier Sprachen, kein Warten.'
+      desc: 'Beantwortet Anfragen zu AHV-Hilfsmitteln sofort, mehrsprachig und ohne Warteschleife.'
     },
     {
       href: '/referenzen/dashboard-kantonsverwaltung',
       imgSrc: '/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.svg',
-      imgAlt: 'Dashboard für Kantonsverwaltung – Excel KPI-Auswertung im Browser von Nigredo',
+      imgAlt: 'Dashboard für Verwaltung – Excel KPI-Auswertung im Browser von Nigredo',
       imgCls: 'case-more-card-img--cyan',
       badge: { text: 'App', cls: 'accent-cyan' },
-      title: 'Dashboard für Kantonsverwaltung',
-      desc: 'Lokal, anonym, ein Klick bis zum PDF.'
+      title: 'Dashboard für Verwaltung',
+      desc: 'Wertet Excel-Daten lokal aus, anonymisiert sensible Angaben und erstellt klare Berichte.'
     }
   ];
 
@@ -343,6 +499,7 @@ const schema = JSON.stringify({
         <div class="case-more-card-body">
           <span class="tech-badge ${r.badge.cls}">${r.badge.text}</span>
           <p class="case-more-card-title">${r.title}</p>
+          <p class="case-more-card-desc">${r.desc}</p>
           <span class="case-more-card-arrow">Details ansehen ${ARROW}</span>
         </div>
       </a>`).join('');

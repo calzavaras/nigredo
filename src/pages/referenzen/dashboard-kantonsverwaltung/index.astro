@@ -11,13 +11,13 @@ const schema = JSON.stringify({
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.nigredo.ch/" },
         { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://www.nigredo.ch/referenzen" },
-        { "@type": "ListItem", "position": 3, "name": "Dashboard für Kantonsverwaltung", "item": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung" }
+        { "@type": "ListItem", "position": 3, "name": "Dashboard für Verwaltung", "item": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung" }
       ]
     },
     {
       "@type": "SoftwareApplication",
       "@id": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung#software",
-      "name": "Dashboard für Kantonsverwaltung",
+      "name": "Dashboard für Verwaltung",
       "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung",
       "description": "Lokales Excel-Analyse-Dashboard für eine Schweizer Kantonsverwaltung. Drag & Drop Import, KPIs, Diagramme, Anonymisierung und PDF-Export. 100% lokal – keine Daten verlassen den Rechner.",
       "applicationCategory": "BusinessApplication",
@@ -37,7 +37,7 @@ const schema = JSON.stringify({
         {
           "@type": "ImageObject",
           "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.png",
-          "caption": "Dashboard für Kantonsverwaltung – KPI-Übersicht mit Diagrammen und Auswertungen"
+          "caption": "Dashboard für Verwaltung – KPI-Übersicht mit Diagrammen und Auswertungen"
         }
       ],
       "creator": { "@id": "https://www.nigredo.ch/#organization" }
@@ -45,7 +45,7 @@ const schema = JSON.stringify({
     {
       "@type": "WebPage",
       "@id": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung#webpage",
-      "name": "Dashboard für Kantonsverwaltung | Nigredo Referenzen",
+      "name": "Dashboard für Verwaltung | Nigredo Referenzen",
       "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
@@ -64,23 +64,23 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Dashboard für Kantonsverwaltung | Nigredo Referenzen"
+  title="Dashboard für Verwaltung | Nigredo Referenzen"
   description="Lokales Excel-Analyse-Dashboard für eine Schweizer Kantonsverwaltung: Drag & Drop Import, KPIs, Diagramme, Anonymisierung, PDF-Export. Sensible Personaldaten bleiben 100% lokal im Browser. Von Nigredo, St. Gallen."
-  keywords="Excel Dashboard Browser, lokale Datenanalyse, Personaldaten Analyse Tool, Anonymisierung Excel, KPI Dashboard Kantonsverwaltung, datenschutzkonformes Dashboard Schweiz, Offline Excel Auswertung"
+  keywords="Excel Dashboard Browser, lokale Datenanalyse, Personaldaten Analyse Tool, Anonymisierung Excel, KPI Dashboard Verwaltung, datenschutzkonformes Dashboard Schweiz, Offline Excel Auswertung"
   canonical="https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung"
-  ogTitle="Dashboard für Kantonsverwaltung"
+  ogTitle="Dashboard für Verwaltung"
   ogDescription="Excel-Analyse ohne Cloud: KPIs, Diagramme, Anonymisierung und PDF-Export – alles lokal im Browser. Massgeschneidert von Nigredo."
   ogImage="https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.png"
-  ogImageAlt="Lokales Excel-Dashboard für Kantonsverwaltung – KPI-Auswertung ohne Cloud von Nigredo"
+  ogImageAlt="Lokales Excel-Dashboard für Verwaltung – KPI-Auswertung ohne Cloud von Nigredo"
   ogImageWidth="1534"
   ogImageHeight="860"
-  twitterTitle="Dashboard für Kantonsverwaltung"
+  twitterTitle="Dashboard für Verwaltung"
   twitterDescription="Excel-Analyse ohne Cloud: KPIs, Diagramme, Anonymisierung – alles lokal im Browser."
   schema={schema}
 >
-  <section class="section pt-sub">
+  <section class="section pt-sub case-page case-page--app" aria-labelledby="dashboard-kantonsverwaltung-title">
     <div class="hero-glow"></div>
-    <div class="container">
+    <div class="container case-page__container">
 
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
@@ -97,9 +97,9 @@ const schema = JSON.stringify({
       <div class="case-hero fade-up">
         <div class="case-hero-content">
           <span class="tech-badge accent-cyan case-hero-badge">App</span>
-          <h1>Excel-Dashboard<br><span class="gradient-text">für Kantone</span></h1>
-          <p class="hero-lead">
-            Excel rein, Auswertung raus. Kein Server, keine Cloud, keine IT-Abteilung, die zuerst nicken muss. Sensible Personaldaten bleiben da, wo sie hingehören: auf dem eigenen Rechner.
+          <h1 id="dashboard-kantonsverwaltung-title" class="home-hero__title case-hero-title">Excel-Dashboard<br><span class="gradient-text">für Verwaltung</span></h1>
+          <p class="hero-lead case-hero-lead">
+            Excel rein, Auswertung raus. Ohne Server, ohne Cloud, ohne Umweg über fremde Systeme. Sensible Personaldaten bleiben dort, wo sie hingehören: auf dem eigenen Rechner.
           </p>
         </div>
 
@@ -114,7 +114,7 @@ const schema = JSON.stringify({
             >
               <img
                 src="/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.png"
-                alt="Dashboard Kantonsverwaltung – Allgemeine Auswertungen"
+                alt="Dashboard Verwaltung – Allgemeine Auswertungen"
                 width="1534" height="860"
               >
             </button>
@@ -152,33 +152,33 @@ const schema = JSON.stringify({
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--cyan">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-1)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-1" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#A64DFF"/></linearGradient></defs><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-1)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-1" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#2FE8B4"/></linearGradient></defs><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Drag & Drop Import</h3>
-                <p>Datei reinziehen, fertig. Keine Installation, kein Upload, keine Genehmigung von oben. Die Verarbeitung passiert still und leise direkt im Browser.</p>
-              </div>
-            </div>
-          </div>
-          <div class="case-feature">
-            <div class="case-feature-body">
-              <div class="case-feature-icon case-feature-icon--purple">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-2)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-2" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#A64DFF"/><stop offset="1" stop-color="#FF4D80"/></linearGradient></defs><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-              </div>
-              <div class="case-feature-text">
-                <h3>Anonymisierung auf Knopfdruck</h3>
-                <p>KPIs and Diagramme gehen in die Präsentation, die Echtnamen bleiben im Büro. Datenschutz als Feature, nicht als Afterthought.</p>
+                <p>Datei reinziehen, fertig. Keine Installation, kein Upload, kein Warten auf ein neues System. Die Verarbeitung läuft direkt im Browser, ruhig und lokal.</p>
               </div>
             </div>
           </div>
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--cyan">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-3" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#A64DFF"/></linearGradient></defs><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><polyline points="9 15 12 18 15 15"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-2)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-2" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#2FE8B4"/></linearGradient></defs><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Anonymisierung auf Knopfdruck</h3>
+                <p>KPIs und Diagramme gehen in die Präsentation, Echtnamen bleiben im Büro. Datenschutz ist hier kein Zusatz, sondern Teil der Lösung.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--cyan">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-3" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="1" stop-color="#2FE8B4"/></linearGradient></defs><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><polyline points="9 15 12 18 15 15"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>PDF-Export</h3>
-                <p>Ein Klick, ein druckfertiger Report. Diagramme, Kennzahlen, aufgeräumtes Layout and das Gefühl, alles im Griff zu haben.</p>
+                <p>Ein Klick, ein druckfertiger Bericht. Diagramme, Kennzahlen und ein aufgeräumtes Layout, das nach Arbeit aussieht statt nach Excel-Kampf.</p>
               </div>
             </div>
           </div>
@@ -194,11 +194,10 @@ const schema = JSON.stringify({
       </div>
 
       <!-- CTA -->
-      <div class="section pt-hero fade-up">
-        <div class="section-cta">
+      <div class="section case-final-section fade-up">
+        <div class="section-cta case-final-cta">
           <span class="cta-label">Der nächste Schritt</span>
-          <h2>Etwas, das einfach<br><span class="gradient-text">auf deinem Rechner läuft?</span></h2>
-          <p class="case-cta-desc">Kein Server, keine Abhängigkeiten, keine überraschenden Rechnungen am Monatsende. Erzähl mir, was du brauchst.</p>
+          <h2>Soll es lokal<br><span>bleiben?</span></h2>
           <div class="hero-cta-group" style="justify-content: center;">
             <a href="/kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
             <a href="/referenzen" class="btn btn-ghost">Alle Projekte</a>
@@ -212,11 +211,81 @@ const schema = JSON.stringify({
 
 <style is:global>
   /* Case Specific overrides */
+  .case-page--app {
+    --case-accent: #00d2ff;
+    --case-accent-2: #2fe8b4;
+    --case-accent-soft: rgba(47, 232, 180, 0.14);
+    --case-accent-glow: rgba(0, 210, 255, 0.26);
+  }
+
+  .case-page {
+    padding-top: 150px;
+    padding-bottom: 48px;
+  }
+
+  .case-page__container {
+    position: relative;
+    width: 100%;
+  }
+
+  .case-page .breadcrumb {
+    margin-bottom: 28px;
+  }
+
+  .case-page .case-back {
+    margin-bottom: 44px;
+  }
+
+  .case-page .case-back:hover {
+    color: var(--case-accent);
+  }
+
+  .case-page .case-hero {
+    margin-bottom: 72px;
+  }
+
+  .case-page .case-hero-badge {
+    margin-bottom: 1rem;
+  }
+
+  .case-page .case-hero-title {
+    max-width: 940px;
+    font-size: clamp(2.9rem, 5.35vw, 4.85rem);
+    line-height: var(--hero-title-line-height);
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+  .case-page--app .gradient-text {
+    background: linear-gradient(to right, #00d2ff, #2fe8b4, #00d2ff);
+    background-size: 200% auto;
+    animation: gradientPan 24s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .case-page .case-hero-lead {
+    max-width: 620px;
+    font-size: clamp(1.03rem, 1.15vw, 1.2rem);
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+  }
+
   .stat-cyan-purple {
-    background: linear-gradient(135deg, #00D2FF 0%, #A64DFF 100%);
+    background: linear-gradient(135deg, var(--case-accent) 0%, var(--case-accent-2) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  .case-page--app .case-hero-canvas--cyan {
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(0, 210, 255, 0.24) 0%, rgba(47, 232, 180, 0.07) 48%, rgba(255, 255, 255, 0.02) 100%),
+      #0a0a0c;
+    border-color: rgba(0, 210, 255, 0.16);
   }
 
   .case-feature-body {
@@ -245,11 +314,22 @@ const schema = JSON.stringify({
   }
   .case-feature-icon--cyan { background: rgba(0,210,255,0.08); border: 1px solid rgba(0,210,255,0.2); color: #00D2FF; }
   .case-feature-icon--purple { background: rgba(166,77,255,0.08); border: 1px solid rgba(166,77,255,0.2); color: #A64DFF; }
+  .case-page--app .case-feature {
+    background-image:
+      linear-gradient(#0a0a0c, #0a0a0c),
+      conic-gradient(from var(--border-angle, 0turn), rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 24%, rgba(0, 210, 255, 0.2) 42%, rgba(47, 232, 180, 0.26) 58%, rgba(255, 255, 255, 0.05) 78%, rgba(255, 255, 255, 0.05) 100%);
+  }
+  .case-page--app .case-feature:hover {
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.12);
+    background-image:
+      linear-gradient(#0a0a0c, #0a0a0c),
+      conic-gradient(from var(--border-angle, 0turn), rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 22%, rgba(0, 210, 255, 0.5) 42%, rgba(47, 232, 180, 0.48) 58%, rgba(255, 255, 255, 0.08) 80%, rgba(255, 255, 255, 0.08) 100%);
+  }
   .case-feature-icon svg {
     filter:
       brightness(1.12)
       saturate(1.18)
-      drop-shadow(0 0 8px rgba(166, 77, 255, 0.26));
+      drop-shadow(0 0 8px var(--case-accent-glow));
     transition: filter 0.45s ease;
   }
   .case-feature:hover .case-feature-icon {
@@ -258,29 +338,105 @@ const schema = JSON.stringify({
     background: rgba(255, 255, 255, 0.04);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 0 22px rgba(166, 77, 255, 0.24),
-      0 0 48px rgba(0, 210, 255, 0.12);
+      0 0 22px var(--case-accent-glow),
+      0 0 48px var(--case-accent-soft);
   }
   .case-feature:hover .case-feature-icon svg {
     filter:
       brightness(1.18)
       saturate(1.35)
-      drop-shadow(0 0 12px rgba(166, 77, 255, 0.46))
-      drop-shadow(0 0 24px rgba(0, 210, 255, 0.2));
+      drop-shadow(0 0 12px var(--case-accent-glow))
+      drop-shadow(0 0 24px var(--case-accent-soft));
   }
   
   .case-feature-text h3 { font-size: 1rem; margin-bottom: 6px; }
   .case-feature-text p { font-size: 0.875rem; line-height: 1.65; margin: 0; color: var(--text-muted); }
 
-  .case-cta-desc {
-    color: var(--text-muted);
-    line-height: 1.7;
-    margin: 0 auto 36px;
-    max-width: 52ch;
+  .case-final-section {
+    padding-top: 52px;
+    padding-bottom: 118px;
+  }
+
+  .case-final-cta {
+    max-width: 660px;
+  }
+
+  .case-final-cta .cta-label {
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+  .case-final-cta h2 {
+    color: #f5f5f7;
+    font-size: clamp(2.25rem, 4.5vw, 3.7rem);
+    line-height: 1.04;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+
+  .case-final-cta h2 span {
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .case-final-cta .hero-cta-group {
+    margin-top: 34px;
+  }
+
+  .case-final-cta .btn-ghost {
+    background-image:
+      linear-gradient(#050505, #050505),
+      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+  }
+
+  .case-final-cta .btn-ghost:hover {
+    animation: none;
+    transform: translateY(-2px);
+    background-image:
+      linear-gradient(#0a0a0c, #0a0a0c),
+      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
+  }
+
+  .case-final-cta .btn-primary:hover {
+    box-shadow:
+      inset 0 2px 4px rgba(255, 255, 255, 1),
+      0 10px 26px rgba(255, 255, 255, 0.14);
   }
 
   @media (max-width: 768px) {
     .case-feature-body { flex-direction: column; gap: 16px; }
+  }
+
+  @media (max-width: 860px) {
+    .case-page {
+      padding-top: 132px;
+      padding-bottom: 42px;
+    }
+
+    .case-page .case-hero-title {
+      font-size: clamp(2.55rem, 10vw, 3.8rem);
+      line-height: var(--hero-title-line-height-mobile);
+    }
+  }
+
+  @media (max-width: 520px) {
+    .case-page .case-hero-title {
+      font-size: clamp(2.35rem, 13vw, 3.25rem);
+      line-height: var(--hero-title-line-height-mobile);
+    }
+
+    .case-page .case-hero-lead {
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+
+    .case-final-section {
+      padding-top: 40px;
+      padding-bottom: 88px;
+    }
+
+    .case-final-cta h2 {
+      font-size: clamp(1.8rem, 11vw, 2.5rem);
+    }
   }
 </style>
 
@@ -293,16 +449,16 @@ const schema = JSON.stringify({
       imgCls: 'case-more-card-img--purple',
       badge: { text: 'KI-Agent', cls: 'accent-purple' },
       title: 'KI Voice Agent für IV-Stellen',
-      desc: '24/7, vier Sprachen, kein Warten.'
+      desc: 'Beantwortet Anfragen zu AHV-Hilfsmitteln sofort, mehrsprachig und ohne Warteschleife.'
     },
     {
       href: '/referenzen/dashboard-kantonsverwaltung',
       imgSrc: '/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.svg',
-      imgAlt: 'Dashboard für Kantonsverwaltung – Excel KPI-Auswertung im Browser von Nigredo',
+      imgAlt: 'Dashboard für Verwaltung – Excel KPI-Auswertung im Browser von Nigredo',
       imgCls: 'case-more-card-img--cyan',
       badge: { text: 'App', cls: 'accent-cyan' },
-      title: 'Dashboard für Kantonsverwaltung',
-      desc: 'Lokal, anonym, ein Klick bis zum PDF.'
+      title: 'Dashboard für Verwaltung',
+      desc: 'Wertet Excel-Daten lokal aus, anonymisiert sensible Angaben und erstellt klare Berichte.'
     }
   ];
 
@@ -329,6 +485,7 @@ const schema = JSON.stringify({
         <div class="case-more-card-body">
           <span class="tech-badge ${r.badge.cls}">${r.badge.text}</span>
           <p class="case-more-card-title">${r.title}</p>
+          <p class="case-more-card-desc">${r.desc}</p>
           <span class="case-more-card-arrow">Details ansehen ${ARROW}</span>
         </div>
       </a>`).join('');
