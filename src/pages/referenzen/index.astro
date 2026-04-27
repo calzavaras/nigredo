@@ -17,8 +17,8 @@ const schema = JSON.stringify({
       "@type": "CollectionPage",
       "@id": "https://www.nigredo.ch/referenzen#webpage",
       "url": "https://www.nigredo.ch/referenzen",
-      "name": "Referenzprojekte – KI & Software für Schweizer KMU | Nigredo",
-      "description": "Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Verwaltung. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen.",
+      "name": "Referenzprojekte – KI, Websites & Software für Schweizer KMU | Nigredo",
+      "description": "Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Verwaltung und die Website von Therapie Ost. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
       "dateModified": "2026-03-21",
@@ -29,7 +29,8 @@ const schema = JSON.stringify({
         "@type": "ItemList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "url": "https://www.nigredo.ch/referenzen/ki-voice-agent", "name": "KI Voice Agent für IV-Stellen" },
-          { "@type": "ListItem", "position": 2, "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung", "name": "Dashboard für Verwaltung" }
+          { "@type": "ListItem", "position": 2, "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung", "name": "Dashboard für Verwaltung" },
+          { "@type": "ListItem", "position": 3, "url": "https://www.nigredo.ch/referenzen/therapie-ost", "name": "Website für Therapie Ost" }
         ]
       }
     }
@@ -38,9 +39,9 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Referenzprojekte – KI & Software für Schweizer KMU | Nigredo"
-  description="Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Verwaltung. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen."
-  keywords="Referenzen Nigredo, KI Voice Agent Schweiz, Excel Dashboard Verwaltung, digitale Lösungen Schweiz, Softwareentwicklung Referenzen, KI-Projekte St. Gallen, Website Referenzen KMU"
+  title="Referenzprojekte – KI, Websites & Software für Schweizer KMU | Nigredo"
+  description="Echte Projekte: KI Voice Agent für IV-Stellen, lokales Excel-Dashboard für Verwaltung und die Website von Therapie Ost. Massgeschneiderte digitale Lösungen von Nigredo, St. Gallen."
+  keywords="Referenzen Nigredo, KI Voice Agent Schweiz, Excel Dashboard Verwaltung, Praxis Website Referenz, digitale Lösungen Schweiz, Softwareentwicklung Referenzen, KI-Projekte St. Gallen, Website Referenzen KMU"
   canonical="https://www.nigredo.ch/referenzen"
   ogTitle="Gebaut. Nicht versprochen. | Nigredo"
   ogDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten. KI Voice Agent, Excel-Dashboard und mehr."
@@ -80,6 +81,10 @@ const schema = JSON.stringify({
         <button class="refs-nav-btn" id="refs-next" aria-label="Nächste Projekte">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
         </button>
+      </div>
+
+      <div class="refs-actions">
+        <a href="#refs-grid" class="refs-more-link" id="refs-more">Weitere Referenzen ansehen</a>
       </div>
 
       <div class="section refs-final-section">
@@ -194,6 +199,9 @@ const schema = JSON.stringify({
   .ref-main-card-img--cyan {
     background: radial-gradient(ellipse at 25% 35%, rgba(0,210,255,0.35) 0%, transparent 55%), #030d14;
   }
+  .ref-main-card-img--coral {
+    background: radial-gradient(ellipse at 25% 35%, rgba(255,92,168,0.36) 0%, transparent 55%), #140812;
+  }
   .ref-main-card-img img {
     width: 100%; height: 100%;
     object-fit: cover; object-position: top center;
@@ -272,7 +280,7 @@ const schema = JSON.stringify({
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 22px;
   }
   .refs-nav-btn {
     width: 44px;
@@ -298,6 +306,29 @@ const schema = JSON.stringify({
   .refs-nav-count {
     font-size: 0.85rem;
     color: rgba(255,255,255,0.4);
+  }
+
+  .refs-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+
+  .refs-more-link {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.46);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    padding-bottom: 4px;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .refs-more-link:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.46);
   }
 
   .refs-final-section {
@@ -396,6 +427,10 @@ const schema = JSON.stringify({
     .refs-final-cta h2 {
       font-size: clamp(1.8rem, 11vw, 2.5rem);
     }
+
+    .refs-actions {
+      justify-content: flex-start;
+    }
   }
 </style>
 
@@ -426,6 +461,19 @@ const schema = JSON.stringify({
       sub: 'Excel KPI-Auswertung im Browser, ohne Cloud',
       desc: 'Sensible Daten bleiben dort, wo sie hingehören: auf dem eigenen Rechner. Aus Excel wird mit einem Klick ein klarer Bericht. Ohne Cloud, ohne IT-Ticket, ohne den üblichen Umweg durch drei Abteilungen.',
       ariaLabel: 'Dashboard für Verwaltung – Details ansehen'
+    },
+    {
+      href: '/referenzen/therapie-ost',
+      imgSrc: '/referenzen/therapie-ost/therapie-ost-website-illustration.svg',
+      imgAlt: 'Website für Therapie Ost – dunkle illustrativ nachgebaute Startseite',
+      imgCls: 'ref-main-card-img--coral',
+      badge: { text: 'Website', cls: 'accent-coral' },
+      linkCls: '',
+      year: 'Apr 2026',
+      title: 'Website für Therapie Ost',
+      sub: 'Praxisauftritt mit Vertrauen, Struktur und Online-Buchung',
+      desc: 'Ein ruhiger Webauftritt für eine Praxis in St. Gallen: klare Positionierung, echte Bilder, mobile Sauberkeit und ein direkter Weg zur Terminbuchung. Nicht laut, aber wirksam.',
+      ariaLabel: 'Website für Therapie Ost – Details ansehen'
     }
     // Weitere Referenzen hier einfach anhängen
   ];
@@ -462,30 +510,35 @@ const schema = JSON.stringify({
       </a>`;
   }
 
-  const PER_PAGE = 2;
+  const INITIAL_VISIBLE = 2;
   const shuffled = shuffle(REFS);
-  const totalPages = Math.ceil(shuffled.length / PER_PAGE);
-  let page = 0;
+  let visibleCount = Math.min(INITIAL_VISIBLE, shuffled.length);
 
   const grid    = document.getElementById('refs-grid');
   const nav     = document.getElementById('refs-nav');
   const prevBtn = document.getElementById('refs-prev');
   const nextBtn = document.getElementById('refs-next');
   const counter = document.getElementById('refs-nav-count');
+  const moreBtn = document.getElementById('refs-more');
 
-  // Nav nur zeigen wenn mehr als 1 Seite
-  nav.style.display = totalPages > 1 ? 'flex' : 'none';
+  nav.style.display = 'none';
 
   function render() {
-    const visible = shuffled.slice(page * PER_PAGE, (page + 1) * PER_PAGE);
+    const visible = shuffled.slice(0, visibleCount);
     grid.innerHTML = visible.map(cardHTML).join('');
-    prevBtn.disabled = page === 0;
-    nextBtn.disabled = page >= totalPages - 1;
-    if (totalPages > 1) counter.textContent = `${page + 1} / ${totalPages}`;
+    if (moreBtn) {
+      moreBtn.style.display = visibleCount < shuffled.length ? 'inline-flex' : 'none';
+    }
   }
 
-  prevBtn.addEventListener('click', () => { if (page > 0) { page--; render(); } });
-  nextBtn.addEventListener('click', () => { if (page < totalPages - 1) { page++; render(); } });
+  prevBtn?.addEventListener('click', () => {});
+  nextBtn?.addEventListener('click', () => {});
+  moreBtn?.addEventListener('click', (event) => {
+    event.preventDefault();
+    visibleCount = Math.min(visibleCount + INITIAL_VISIBLE, shuffled.length);
+    render();
+    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 
   render();
 </script>

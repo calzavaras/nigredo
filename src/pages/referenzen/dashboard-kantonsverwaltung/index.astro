@@ -191,6 +191,7 @@ const schema = JSON.stringify({
       <div class="fade-up case-more-section">
         <span class="case-more-label">Weitere Projekte</span>
         <div id="case-more-grid" class="case-more-grid"></div>
+        <a href="/referenzen" class="case-more-all-link">Alle Referenzen ansehen</a>
       </div>
 
       <!-- CTA -->
@@ -468,6 +469,15 @@ const schema = JSON.stringify({
       badge: { text: 'App', cls: 'accent-cyan' },
       title: 'Dashboard für Verwaltung',
       desc: 'Wertet Excel-Daten lokal aus, anonymisiert sensible Angaben und erstellt klare Berichte.'
+    },
+    {
+      href: '/referenzen/therapie-ost',
+      imgSrc: '/referenzen/therapie-ost/therapie-ost-website-illustration.svg',
+      imgAlt: 'Website für Therapie Ost – dunkle illustrativ nachgebaute Startseite',
+      imgCls: 'case-more-card-img--coral',
+      badge: { text: 'Website', cls: 'accent-coral' },
+      title: 'Website für Therapie Ost',
+      desc: 'Bringt Vertrauen, Klarheit und direkte Online-Terminbuchung in einen ruhigen Praxisauftritt.'
     }
   ];
 
@@ -483,7 +493,7 @@ const schema = JSON.stringify({
   }
 
   const current = window.location.pathname.replace(/\/$/, '');
-  const others = shuffle(REFS_ALL.filter(r => r.href !== current)).slice(0, 4);
+  const others = shuffle(REFS_ALL.filter(r => r.href !== current)).slice(0, 3);
   const grid = document.getElementById('case-more-grid');
   if (grid && others.length > 0) {
     grid.innerHTML = others.map(r => `

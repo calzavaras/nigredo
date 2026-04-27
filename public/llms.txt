@@ -61,6 +61,13 @@ Lokales Excel-Analyse-Dashboard für eine Schweizer Kantonsverwaltung. Sensible 
 - Projektabschluss: Juni 2025
 - URL: https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung
 
+### Website für Therapie Ost
+Ruhige, vertrauenswürdige Praxis-Website für Therapie Ost in St. Gallen. Klare Positionierung, starke Bildsprache, sauber strukturierte Inhalte und direkter Weg zur Online-Terminbuchung.
+- Technologie: Astro, responsive Frontend-Entwicklung, Content-Struktur, Online-Buchungsintegration
+- Projektabschluss: April 2026
+- URL: https://www.nigredo.ch/referenzen/therapie-ost
+- Live: https://www.therapie-ost.ch
+
 ## Häufig gestellte Fragen (FAQ)
 
 **Was kostet eine digitale Lösung bei Nigredo?**

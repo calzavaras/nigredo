@@ -119,6 +119,28 @@ Highlights: 100% lokal, Drag & Drop, Anonymisierung, PDF-Export
 
 ---
 
+# Website für Therapie Ost (https://www.nigredo.ch/referenzen/therapie-ost)
+
+Kategorie: Website
+Projektabschluss: April 2026
+Technologie: Astro, responsive Frontend-Entwicklung, Content-Struktur, Online-Buchungsintegration
+Live: https://www.therapie-ost.ch
+
+## Website für Therapie Ost
+
+Für Therapie Ost entstand eine Website, die Vertrauen aufbaut, ohne nach Baukasten auszusehen. Die Inhalte sind klar gegliedert, die Bildsprache ist ruhig und die wichtigsten Handlungen sind sofort greifbar. Wer auf die Seite kommt, versteht schnell, worum es geht, für wen das Angebot gedacht ist und wie man direkt einen Termin buchen kann.
+
+Highlights: ruhiger Praxisauftritt, mobile Optimierung, direkte Online-Terminbuchung, klare Positionierung
+
+### Die Lösung
+
+- **Vertrauen auf den ersten Blick**: Echte Praxisbilder, eine ruhige Farbwelt und eine klare Headline schaffen sofort Orientierung. Kein Gesundheitskitsch, sondern ein Auftritt, der professionell und menschlich wirkt.
+- **Saubere Führung auf allen Geräten**: Leistungen, Team, Preise und Kontakt sind klar aufgebaut. Die Navigation bleibt leicht verständlich und die Inhalte funktionieren auch mobil ohne Reibung.
+- **Kurzer Weg zur Handlung**: Online-Terminbuchung und Call-to-Actions sind sichtbar integriert. Die Seite informiert nicht nur, sie bringt Interessierte direkt zum nächsten Schritt.
+- **Klare inhaltliche Positionierung**: Beschwerden, Nutzen und Rahmenbedingungen werden konkret benannt. Dadurch wird schnell verständlich, was Therapie Ost anbietet und warum die Praxis relevant ist.
+
+---
+
 # Über mich (https://www.nigredo.ch/ueber-uns)
 
 ## Wer ich bin

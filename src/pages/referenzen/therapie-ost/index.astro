@@ -1,0 +1,400 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const liveUrl = 'https://www.therapie-ost.ch';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.nigredo.ch/referenzen/therapie-ost#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.nigredo.ch/" },
+        { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://www.nigredo.ch/referenzen" },
+        { "@type": "ListItem", "position": 3, "name": "Website für Therapie Ost", "item": "https://www.nigredo.ch/referenzen/therapie-ost" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.nigredo.ch/referenzen/therapie-ost#website-project",
+      "name": "Therapie Ost",
+      "url": liveUrl,
+      "description": "Website für Therapie Ost in St. Gallen mit klarer Positionierung, ruhiger Bildsprache, mobiler Optimierung und direkter Online-Terminbuchung.",
+      "inLanguage": "de-CH",
+      "dateCreated": "2026-04-01",
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
+      "image": "https://www.nigredo.ch/referenzen/therapie-ost/therapie-ost-website-screenshot.png"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.nigredo.ch/referenzen/therapie-ost#webpage",
+      "name": "Website für Therapie Ost | Nigredo Referenzen",
+      "url": "https://www.nigredo.ch/referenzen/therapie-ost",
+      "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
+      "inLanguage": "de-CH",
+      "datePublished": "2026-04-27",
+      "dateModified": "2026-04-27",
+      "about": { "@id": "https://www.nigredo.ch/referenzen/therapie-ost#website-project" },
+      "breadcrumb": { "@id": "https://www.nigredo.ch/referenzen/therapie-ost#breadcrumb" },
+      "isAccessibleForFree": true,
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".case-hero-lead", ".case-feature-body h3"]
+      }
+    }
+  ]
+});
+---
+
+<Layout
+  title="Website für Therapie Ost | Nigredo Referenzen"
+  description="Ruhige, vertrauenswürdige Website für Therapie Ost in St. Gallen: klare Positionierung, mobile Optimierung, starke Bildsprache und direkte Online-Terminbuchung."
+  keywords="Website Referenz Schweiz, Therapie Ost Website, Praxis Website St. Gallen, Webdesign Gesundheitsbereich, Terminbuchung Website, Nigredo Referenzen"
+  canonical="https://www.nigredo.ch/referenzen/therapie-ost"
+  ogTitle="Website für Therapie Ost"
+  ogDescription="Eine ruhige, klare Website für Therapie Ost mit starker Bildsprache und direkter Online-Terminbuchung."
+  ogImage="https://www.nigredo.ch/referenzen/therapie-ost/therapie-ost-website-screenshot.png"
+  ogImageAlt="Screenshot der Therapie-Ost-Website mit Hero-Bereich und Praxisbild"
+  ogImageWidth="1360"
+  ogImageHeight="823"
+  twitterTitle="Website für Therapie Ost"
+  twitterDescription="Klare Praxis-Website mit Vertrauen, Struktur und direkter Online-Terminbuchung."
+  schema={schema}
+>
+  <section class="section pt-sub case-page case-page--website" aria-labelledby="therapie-ost-title">
+    <div class="hero-glow"></div>
+    <div class="container case-page__container">
+      <Breadcrumb items={[
+        { label: 'Start', href: '/' },
+        { label: 'Referenzen', href: '/referenzen' },
+        { label: 'Therapie Ost' }
+      ]} />
+
+      <a href="/referenzen" class="case-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Alle Referenzen
+      </a>
+
+      <div class="case-hero fade-up">
+        <div class="case-hero-content">
+          <span class="tech-badge accent-coral case-hero-badge">Website</span>
+          <h1 id="therapie-ost-title" class="home-hero__title case-hero-title">Website für <span class="gradient-text">Therapie Ost</span></h1>
+          <p class="hero-lead case-hero-lead">
+            Eine Praxiswebsite muss nicht laut sein, um zu wirken. Für Therapie Ost entstand ein Auftritt, der Vertrauen aufbaut, Leistungen klar erklärt und den Weg zur Terminbuchung bewusst kurz hält.
+          </p>
+          <div class="hero-cta-group case-hero-actions">
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">Website besuchen</a>
+            <a href="/kontakt" class="btn btn-ghost">Ähnliche Website anfragen</a>
+          </div>
+        </div>
+
+        <div class="case-hero-visual">
+          <div class="case-hero-canvas case-hero-canvas--coral">
+            <button
+              type="button"
+              class="case-hero-float case-hero-float--wide lightbox-trigger"
+              data-gallery='["/referenzen/therapie-ost/therapie-ost-website-screenshot.png"]'
+              data-gallery-index="0"
+              aria-label="Website-Vorschau vergrössern"
+            >
+              <img
+                src="/referenzen/therapie-ost/therapie-ost-website-screenshot.png"
+                alt="Screenshot der Therapie-Ost-Website mit Hero-Bereich und Praxisbild"
+                width="1360" height="823"
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-stats fade-up delay-100" style="--stats-cols: 4;">
+        <div class="case-stat">
+          <strong class="stat-coral-sunset">Website</strong>
+          <span>Neue Kategorie</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-coral-sunset">Mobil</strong>
+          <span>Sauber optimiert</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-coral-sunset">Direkt</strong>
+          <span>Online buchbar</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-coral-sunset">Live</strong>
+          <span>Unter therapie-ost.ch</span>
+        </div>
+      </div>
+
+      <div class="case-section fade-up delay-100">
+        <div class="case-section-hd">
+          <span class="case-eyebrow">Was wurde gebaut</span>
+          <h2 class="case-section-title">Die Lösung</h2>
+        </div>
+        <div class="case-features">
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-1" x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#FF5CA8"/><stop offset="1" stop-color="#D77BFF"/></linearGradient></defs><path d="M12 4.5c3.8 0 6.8 3.2 8.2 7.5-1.4 4.3-4.4 7.5-8.2 7.5S5.2 16.3 3.8 12C5.2 7.7 8.2 4.5 12 4.5z"/><path d="M12 9.1a2.9 2.9 0 1 1 0 5.8 2.9 2.9 0 0 1 0-5.8z"/><path d="M18.5 4.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8.8-1.7z"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Vertrauen auf den ersten Blick</h3>
+                <p>Ruhige Farbwelt, echte Praxisbilder und eine klare Headline statt Gesundheitsfloskeln. Die Seite wirkt menschlich und professionell, ohne steril oder austauschbar zu werden.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-2" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#FF5CA8"/><stop offset="1" stop-color="#D77BFF"/></linearGradient></defs><path d="M5 7h6"/><path d="M5 12h10"/><path d="M5 17h7"/><path d="M16.5 6.5l2 2 2-2"/><path d="M18.5 8.5v7"/><path d="M16.5 17.5l2-2 2 2"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Saubere Führung auf Desktop und Mobile</h3>
+                <p>Leistungen, Team, Preise und Kontakt sind klar gegliedert. Die Navigation bleibt leicht verständlich, die Inhalte atmen und die Terminbuchung ist auf jedem Gerät direkt erreichbar.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-3" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#FF5CA8"/><stop offset="1" stop-color="#D77BFF"/></linearGradient></defs><path d="M5 12h11"/><path d="M12 6l6 6-6 6"/><path d="M5 7.5h4"/><path d="M5 16.5h4"/><path d="M18.5 4.5l.7 1.5 1.5.7-1.5.7-.7 1.5-.7-1.5-1.5-.7 1.5-.7.7-1.5z"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Kurzer Weg zur Buchung</h3>
+                <p>Die Website erklärt nicht nur das Angebot, sie bringt Interessierte direkt zur Handlung. Call-to-Actions und Online-Terminbuchung sind sichtbar platziert, ohne aggressiv zu wirken.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-4" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#FF5CA8"/><stop offset="1" stop-color="#D77BFF"/></linearGradient></defs><path d="M6 18l7.8-7.8 2.7 2.7L8.7 20H6v-2z"/><path d="M15.7 8.3l1.2-1.2a1.9 1.9 0 0 1 2.7 2.7l-1.2 1.2"/><path d="M5 6.5h7"/><path d="M5 10h5"/><path d="M5 13.5h3"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Inhalt mit klarer Positionierung</h3>
+                <p>Die Texte benennen Beschwerden, Nutzen und Rahmenbedingungen konkret. Dadurch versteht man schnell, für wen die Praxis da ist und warum das Angebot relevant ist.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="case-date fade-up">Abgeschlossen: April 2026</span>
+
+      <div class="fade-up case-more-section">
+        <span class="case-more-label">Weitere Projekte</span>
+        <div id="case-more-grid" class="case-more-grid"></div>
+        <a href="/referenzen" class="case-more-all-link">Alle Referenzen ansehen</a>
+      </div>
+
+      <div class="section case-final-section fade-up">
+        <div class="section-cta case-final-cta">
+          <span class="cta-label">Der nächste Schritt</span>
+          <h2>Braucht deine Website<br><span>mehr Wirkung?</span></h2>
+          <div class="hero-cta-group" style="justify-content: center;">
+            <a href="/kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
+            <a href="/referenzen" class="btn btn-ghost">Alle Projekte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  .case-page--website {
+    --case-accent: #ff5ca8;
+    --case-accent-2: #d77bff;
+    --case-accent-soft: rgba(255, 92, 168, 0.16);
+    --case-accent-glow: rgba(215, 123, 255, 0.22);
+  }
+
+  .case-page--website .gradient-text {
+    background: linear-gradient(to right, #ff5ca8, #d77bff, #ff5ca8);
+    background-size: 200% auto;
+    animation: gradientPan 24s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .case-page--website .case-hero-canvas--coral {
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(255, 92, 168, 0.22) 0%, rgba(215, 123, 255, 0.08) 48%, rgba(255, 255, 255, 0.02) 100%),
+      #0a0a0c;
+    border-color: rgba(255, 92, 168, 0.18);
+  }
+
+  .case-page--website .case-feature:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 28px 60px rgba(0, 0, 0, 0.32),
+      0 0 28px rgba(255, 92, 168, 0.08);
+  }
+
+  .case-feature-body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .case-feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease,
+      background 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .case-feature-icon--coral {
+    background: rgba(255, 92, 168, 0.08);
+    border: 1px solid rgba(255, 92, 168, 0.2);
+    color: #ff5ca8;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.045),
+      0 0 14px rgba(255, 92, 168, 0.14);
+  }
+
+  .case-feature-icon svg {
+    filter:
+      brightness(1.14)
+      saturate(1.18)
+      drop-shadow(0 0 8px rgba(215, 123, 255, 0.18));
+    transition: filter 0.45s ease;
+  }
+
+  .case-feature:hover .case-feature-icon {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.05),
+      0 0 22px var(--case-accent-glow),
+      0 0 48px var(--case-accent-soft);
+  }
+
+  .case-feature:hover .case-feature-icon svg {
+    filter:
+      brightness(1.2)
+      saturate(1.32)
+      drop-shadow(0 0 12px rgba(255, 92, 168, 0.2))
+      drop-shadow(0 0 22px rgba(215, 123, 255, 0.16));
+  }
+
+  .case-feature-text h3 {
+    font-size: clamp(1.23rem, 2.2vw, 1.48rem);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+
+  .case-feature-text p {
+    font-size: 0.95rem;
+    line-height: 1.62;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .stat-coral-sunset {
+    background: linear-gradient(135deg, var(--case-accent) 0%, var(--case-accent-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .case-hero-actions {
+    margin-top: 32px;
+  }
+
+  .case-hero-float--wide {
+    width: 82%;
+  }
+
+  @media (max-width: 860px) {
+    .case-hero-float--wide {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .case-feature-body {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+  }
+</style>
+
+<script>
+  const REFS_ALL = [
+    {
+      href: '/referenzen/ki-voice-agent',
+      imgSrc: '/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-sprachassistent.svg',
+      imgAlt: 'KI Voice Agent für IV-Stellen – AHV Hilfsmittel Sprachassistent von Nigredo',
+      imgCls: 'case-more-card-img--purple',
+      badge: { text: 'KI-Agent', cls: 'accent-purple' },
+      title: 'KI Voice Agent für IV-Stellen',
+      desc: 'Beantwortet Anfragen zu AHV-Hilfsmitteln sofort, mehrsprachig und ohne Warteschleife.'
+    },
+    {
+      href: '/referenzen/dashboard-kantonsverwaltung',
+      imgSrc: '/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.svg',
+      imgAlt: 'Dashboard für Verwaltung – Excel KPI-Auswertung im Browser von Nigredo',
+      imgCls: 'case-more-card-img--cyan',
+      badge: { text: 'App', cls: 'accent-cyan' },
+      title: 'Dashboard für Verwaltung',
+      desc: 'Wertet Excel-Daten lokal aus, anonymisiert sensible Angaben und erstellt klare Berichte.'
+    },
+    {
+      href: '/referenzen/therapie-ost',
+      imgSrc: '/referenzen/therapie-ost/therapie-ost-website-illustration.svg',
+      imgAlt: 'Website für Therapie Ost – dunkle illustrativ nachgebaute Startseite',
+      imgCls: 'case-more-card-img--coral',
+      badge: { text: 'Website', cls: 'accent-coral' },
+      title: 'Website für Therapie Ost',
+      desc: 'Bringt Vertrauen, Klarheit und direkte Online-Terminbuchung in einen ruhigen Praxisauftritt.'
+    }
+  ];
+
+  const ARROW = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  const current = window.location.pathname.replace(/\/$/, '');
+  const others = shuffle(REFS_ALL.filter(r => r.href !== current)).slice(0, 3);
+  const grid = document.getElementById('case-more-grid');
+  if (grid && others.length > 0) {
+    grid.innerHTML = others.map(r => `
+      <a href="${r.href}" class="case-more-card">
+        <div class="case-more-card-img ${r.imgCls}">
+          <img src="${r.imgSrc}" alt="${r.imgAlt}" loading="lazy" width="800" height="450">
+        </div>
+        <div class="case-more-card-body">
+          <span class="tech-badge ${r.badge.cls}">${r.badge.text}</span>
+          <p class="case-more-card-title">${r.title}</p>
+          <p class="case-more-card-desc">${r.desc}</p>
+          <span class="case-more-card-arrow">Details ansehen ${ARROW}</span>
+        </div>
+      </a>`).join('');
+  }
+</script>
