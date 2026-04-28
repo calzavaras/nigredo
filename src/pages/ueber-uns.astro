@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
+const leadershipSinceYear = 2011;
+const leadershipYears = new Date().getFullYear() - leadershipSinceYear;
+
 const schema = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
@@ -64,7 +67,7 @@ const schema = JSON.stringify({
 
 <Layout
   title="Über mich | Marco Calzavara | Nigredo"
-  description="Marco Calzavara – Macher, Ideengeber und Gründer aus St. Gallen. 15 Jahre Führung, mehrere Firmen, Verwaltungsexpertise, KI und ein starkes IT-Netzwerk."
+  description={`Marco Calzavara – Macher, Ideengeber und Gründer aus St. Gallen. ${leadershipYears} Jahre Führung, mehrere Firmen, Verwaltungsexpertise, KI und ein starkes IT-Netzwerk.`}
   keywords="Marco Calzavara, Nigredo Gründer, Website Freelancer St. Gallen, Webdesign Schweiz, KI-Lösungen Schweiz, persönliche Betreuung, Softwareentwicklung KMU"
   canonical="https://www.nigredo.ch/ueber-uns"
   ogTitle="Ein Mensch. 1001 Ideen."
@@ -121,31 +124,42 @@ const schema = JSON.stringify({
         <div class="au-content-column fade-up delay-150">
           <div class="au-statement">
             <blockquote class="hero-lead about-statement__quote">
-              «Gute Ideen dürfen am Anfang ruhig etwas spinnen. Entscheidend ist, wer sie danach auf den Boden bringt.»
+              Ich habe selten nur eine Idee. Aber meistens ziemlich schnell einen Anfang.
             </blockquote>
           </div>
           
           <div class="au-bio">
             <p class="au-bio-intro">
-              Ich bin ein Macher mit Ideenüberschuss: kreativ, neugierig, manchmal unkonventionell und allergisch auf «Das haben wir schon immer so gemacht». Beim Kanton führe ich ein Expertenteam; mit Nigredo und HappyPath bringe ich Ideen, KI, Gestaltung und starke Informatikfachleute zusammen. Mein Ding: Möglichkeiten erkennen, Menschen verbinden und daraus schnell etwas machen, das funktioniert und Freude macht.
+              Ich bin ein Macher mit Ideenüberschuss: kreativ, neugierig, manchmal unkonventionell und ziemlich allergisch auf «Das haben wir schon immer so gemacht». Mich interessieren Möglichkeiten, bevor sie fertig sortiert sind. Und noch mehr interessiert mich, was daraus werden kann.
             </p>
 
-            <details class="au-bio-more">
-              <summary>
-                <span>Mehr erfahren</span>
-              </summary>
-              <div class="au-bio-more__content">
-                <p>
-                  Hauptberuflich arbeite ich in der kantonalen Verwaltung, führe ein Expertenteam und bin für Abteilungsentwicklung zuständig. Das hat mich geprägt: klar denken, Menschen mitnehmen, Komplexität sortieren und Dinge so bauen, dass sie im Alltag funktionieren.
-                </p>
-                <p>
-                  Daneben entstehen Unternehmen, Projekte und digitale Lösungen. Mehrere Firmen gegründet, einige verkauft, viel umgesetzt und noch mehr verstanden. Mit einem Kollegen führe ich ausserdem die Software-Unternehmung HappyPath GmbH.
-                </p>
-                <p>
-                  Ich muss nicht alles allein können. Ich muss erkennen, was möglich ist, die richtigen Menschen verbinden und dafür sorgen, dass es passiert. Wenn ich etwas anpacke, bleibt es nicht monatelang in schönen Konzepten liegen. Kein grosses Theater. Gute Arbeit.
-                </p>
+            <div class="au-bio-more" data-bio-more>
+              <button
+                type="button"
+                class="au-bio-more__toggle"
+                aria-expanded="false"
+                aria-controls="au-bio-more-content"
+                data-bio-more-toggle
+              >
+                Mehr erfahren
+              </button>
+              <div id="au-bio-more-content" class="au-bio-more__panel" hidden data-bio-more-panel>
+                <div class="au-bio-more__content">
+                  <p>
+                    Hauptberuflich arbeite ich seit 2009 bei der IV Stelle und bin seit 2011 in der Führung. Heute leite ich ein Expertenteam und bin für Abteilungsentwicklung zuständig. Das hat mich geprägt: klar denken, Menschen mitnehmen, Komplexität ordnen und Lösungen so bauen, dass sie im Alltag wirklich funktionieren.
+                  </p>
+                  <p>
+                    Daneben entstehen Unternehmen, Projekte und digitale Lösungen. Ich habe mehrere Firmen gegründet, einige verkauft, viel umgesetzt und dabei noch mehr gelernt. Mit Nigredo verbinde ich Ideen, KI, Gestaltung und starke Informatikfachleute. Mit einem Kollegen führe ich ausserdem die HappyPath GmbH, eine schweizweite Software Lösung für Sozialversicherungen.
+                  </p>
+                  <p>
+                    Ich muss nicht alles allein können. Aber ich muss erkennen, was möglich ist, die richtigen Menschen zusammenbringen und dafür sorgen, dass etwas passiert. Wenn ich etwas anpacke, bleibt es nicht monatelang in schönen Konzepten liegen. Kein grosses Theater. Lieber gute Arbeit, die man zeigen kann.
+                  </p>
+                  <button type="button" class="au-bio-more__toggle au-bio-more__toggle--close" data-bio-more-close>
+                    Weniger anzeigen
+                  </button>
+                </div>
               </div>
-            </details>
+            </div>
           </div>
         </div>
       </div>
@@ -154,8 +168,8 @@ const schema = JSON.stringify({
       <div class="au-stats-grid mt-80 fade-up delay-200">
         <div class="au-stat-card">
           <div class="au-stat-inner">
-            <span class="au-stat-value">15</span>
-            <span class="au-stat-desc">Jahre Fachwissen, Führung und Praxis</span>
+            <span class="au-stat-value">{leadershipYears}</span>
+            <span class="au-stat-desc">Jahre Führung seit {leadershipSinceYear}</span>
           </div>
         </div>
         <div class="au-stat-card">
@@ -216,6 +230,45 @@ const schema = JSON.stringify({
     </div>
   </section>
 </Layout>
+
+<script>
+  const bioMore = document.querySelector('[data-bio-more]');
+  const bioMoreToggle = bioMore?.querySelector('[data-bio-more-toggle]');
+  const bioMoreClose = bioMore?.querySelector('[data-bio-more-close]');
+  const bioMorePanel = bioMore?.querySelector('[data-bio-more-panel]');
+
+  if (bioMoreToggle instanceof HTMLButtonElement && bioMorePanel instanceof HTMLElement) {
+    let closeTimer: number | undefined;
+
+    const setBioMoreOpen = (shouldOpen: boolean) => {
+      window.clearTimeout(closeTimer);
+      bioMoreToggle.setAttribute('aria-expanded', String(shouldOpen));
+
+      if (shouldOpen) {
+        bioMorePanel.hidden = false;
+        bioMoreToggle.hidden = true;
+        window.requestAnimationFrame(() => {
+          bioMorePanel.classList.add('is-open');
+        });
+        return;
+      }
+
+      bioMorePanel.classList.remove('is-open');
+      bioMoreToggle.hidden = false;
+      closeTimer = window.setTimeout(() => {
+        if (bioMoreToggle.getAttribute('aria-expanded') !== 'true') {
+          bioMorePanel.hidden = true;
+        }
+      }, 480);
+    };
+
+    bioMoreToggle.addEventListener('click', () => setBioMoreOpen(true));
+
+    if (bioMoreClose instanceof HTMLButtonElement) {
+      bioMoreClose.addEventListener('click', () => setBioMoreOpen(false));
+    }
+  }
+</script>
 
 <style>
   .about-hero {
@@ -376,7 +429,7 @@ const schema = JSON.stringify({
 
   .au-bio-intro {
     color: rgba(245, 245, 247, 0.76);
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 
   .au-bio strong {
@@ -386,67 +439,68 @@ const schema = JSON.stringify({
 
   .au-bio-more {
     max-width: 760px;
-    margin-top: 18px;
-    padding-top: 2px;
+    margin-top: 0;
   }
 
-  .au-bio-more summary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 40px;
+  .au-bio-more__toggle {
+    appearance: none;
+    display: inline-block;
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: rgba(255, 255, 255, 0.72);
     font-size: 0.92rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.25;
     cursor: pointer;
-    list-style: none;
-    transition: color 0.25s ease, transform 0.25s ease;
+    transition:
+      color 0.24s ease,
+      transform 0.24s ease;
   }
 
-  .au-bio-more summary::-webkit-details-marker {
+  .au-bio-more__toggle[hidden] {
+    display: none !important;
+  }
+
+  .au-bio-more__toggle:hover,
+  .au-bio-more__toggle:focus-visible {
+    color: #fff;
+  }
+
+  .au-bio-more__toggle:focus-visible {
+    outline: 2px solid rgba(255, 77, 128, 0.5);
+    outline-offset: 5px;
+  }
+
+  .au-bio-more__panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .au-bio-more__panel.is-open {
+    grid-template-rows: 1fr;
+  }
+
+  .au-bio-more__panel[hidden] {
     display: none;
   }
 
-  .au-bio-more summary::after {
-    content: "+";
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    color: #050505;
-    background: linear-gradient(135deg, #FF4D80 0%, #A64DFF 100%);
-    font-size: 1rem;
-    font-weight: 800;
-    line-height: 1;
-    transition: transform 0.25s ease;
-  }
-
-  .au-bio-more summary:hover {
-    color: #fff;
-    transform: translateY(-1px);
-  }
-
-  .au-bio-more[open] summary::after {
-    content: "−";
-    transform: rotate(180deg);
-  }
-
   .au-bio-more__content {
-    margin-top: 16px;
-    padding: 22px 24px 4px;
-    border-left: 1px solid rgba(255, 77, 128, 0.34);
-    background:
-      linear-gradient(90deg, rgba(255, 77, 128, 0.045), rgba(166, 77, 255, 0.018) 48%, transparent);
+    overflow: hidden;
+    min-height: 0;
   }
 
   .au-bio-more__content p {
-    font-size: clamp(0.96rem, 1.05vw, 1.02rem);
-    line-height: 1.66;
-    color: rgba(255, 255, 255, 0.58);
-    margin-bottom: 18px;
+    max-width: 760px;
+    font-size: clamp(1.03rem, 1.15vw, 1.2rem);
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+
+  .au-bio-more__toggle--close {
+    margin-top: 2px;
   }
 
   /* Stats Grid */
@@ -679,10 +733,6 @@ const schema = JSON.stringify({
       padding: 24px;
       font-size: 1.02rem;
       line-height: 1.6;
-    }
-
-    .au-bio-more__content {
-      padding: 20px 0 2px 18px;
     }
 
     .au-stat-value {
