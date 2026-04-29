@@ -116,6 +116,7 @@ const siteNavSchema = JSON.stringify({
   {ogImage && <meta property="og:image:alt" content={ogImageAlt}>}
   {ogImage && <meta property="og:image:width" content={ogImageWidth}>}
   {ogImage && <meta property="og:image:height" content={ogImageHeight}>}
+  {ogImage && <meta property="og:image:type" content="image/webp">}
 
   <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'}>
   <meta name="twitter:title" content={twitterTitle || ogTitle || title}>
@@ -134,12 +135,12 @@ const siteNavSchema = JSON.stringify({
   <link rel="alternate" hreflang="de-CH" href={canonical}>
   <link rel="alternate" hreflang="x-default" href={canonical}>
 
-  <!-- Google Fonts: Inter & Plus Jakarta Sans (non-render-blocking) -->
+  <!-- Google Fonts: Inter (non-render-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
   <script defer src="https://cloud.umami.is/script.js" data-website-id="84118d46-7fdb-4f47-be37-3914e0dad55f"></script>
 
@@ -148,6 +149,8 @@ const siteNavSchema = JSON.stringify({
   {schema && <script type="application/ld+json" set:html={schema} />}
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
 
   <Header />
 

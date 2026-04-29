@@ -10,15 +10,7 @@ const schema = JSON.stringify({
       "name": "Nigredo",
       "url": "https://www.nigredo.ch",
       "inLanguage": "de-CH",
-      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://www.nigredo.ch/referenzen?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" }
     },
     {
       "@type": ["LocalBusiness", "ProfessionalService", "Organization"],
@@ -211,27 +203,11 @@ const schema = JSON.stringify({
     max-width: 620px;
     font-size: clamp(1.03rem, 1.15vw, 1.2rem);
     line-height: 1.65;
-  }
-
-  .home-hero .btn-ghost,
-  .home-final-cta .btn-ghost {
-    background-image:
-      linear-gradient(#050505, #050505),
-      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  }
-
-  .home-hero .btn-ghost:hover,
-  .home-final-cta .btn-ghost:hover {
-    animation: none;
-    transform: translateY(-2px);
-    background-image:
-      linear-gradient(#0a0a0c, #0a0a0c),
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
+    color: rgba(245, 245, 247, 0.68);
   }
 
   .home-values {
-    padding-top: 4px;
+    padding-top: 8px;
     padding-bottom: 86px;
   }
 
@@ -361,7 +337,7 @@ const schema = JSON.stringify({
     .home-hero {
       min-height: auto;
       padding-top: 96px;
-      padding-bottom: 42px;
+      padding-bottom: 46px;
     }
 
     .home-hero__title {
@@ -371,14 +347,24 @@ const schema = JSON.stringify({
   }
 
   @media (max-width: 520px) {
+    .home-hero {
+      padding-top: 92px;
+      padding-bottom: 40px;
+    }
+
     .home-hero__title {
       font-size: clamp(2.35rem, 13vw, 3.25rem);
       line-height: var(--hero-title-line-height-mobile);
+      margin-bottom: 20px;
     }
 
     .home-hero .hero-lead {
       font-size: 1.02rem;
       line-height: 1.6;
+    }
+
+    .home-values {
+      padding-top: 14px;
     }
 
     .home-values {
@@ -395,10 +381,4 @@ const schema = JSON.stringify({
     }
   }
 
-  /* Utility Breakpoint Helpers */
-  .hidden-mobile { display: inline; }
-  @media (max-width: 640px) { .hidden-mobile { display: none; } }
-  
-  .hidden-tablet { display: inline; }
-  @media (max-width: 1024px) { .hidden-tablet { display: none; } }
 </style>

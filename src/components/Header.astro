@@ -30,7 +30,7 @@ function isActive(href: string): boolean {
             {link.label}
           </a>
         ))}
-        <a href="/kontakt" class="mobile-cta" class:list={[{ active: isActive('/kontakt') }]}>Kontakt</a>
+        <a href="/kontakt" class:list={['mobile-cta', { active: isActive('/kontakt') }]}>Kontakt</a>
       </div>
       <div class="header-actions">
         <a href="/kontakt" class="btn btn-primary header-cta">Kontakt</a>

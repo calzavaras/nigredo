@@ -1,39 +1,22 @@
 ---
 import { references } from '../data/references';
 
-const referencesJson = JSON.stringify(references);
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
+const others = references.filter(r => r.href !== currentPath).slice(0, 2);
 ---
 
-<div id="case-more-grid" class="case-more-grid"></div>
-
-<script define:vars={{ referencesJson }}>
-  const REFS_ALL = JSON.parse(referencesJson);
-  const ARROW = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-
-  function shuffle(arr) {
-    const a = [...arr];
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  }
-
-  const current = window.location.pathname.replace(/\/$/, '');
-  const others = shuffle(REFS_ALL.filter(r => r.href !== current)).slice(0, 3);
-  const grid = document.getElementById('case-more-grid');
-  if (grid && others.length > 0) {
-    grid.innerHTML = others.map(r => `
-      <a href="${r.href}" class="case-more-card">
-        <div class="case-more-card-img ${r.moreImgCls}">
-          <img src="${r.imgSrc}" alt="${r.imgAlt}" loading="lazy" decoding="async" width="800" height="450">
-        </div>
-        <div class="case-more-card-body">
-          <span class="tech-badge ${r.badge.cls}">${r.badge.text}</span>
-          <p class="case-more-card-title">${r.moreTitle}</p>
-          <p class="case-more-card-desc">${r.moreDesc}</p>
-          <span class="case-more-card-arrow">Details ansehen ${ARROW}</span>
-        </div>
-      </a>`).join('');
-  }
-</script>
+<div class="case-more-grid">
+  {others.map(r => (
+    <a href={r.href} class="case-more-card" aria-label={r.ariaLabel}>
+      <div class={`case-more-card-img ${r.moreImgCls}`}>
+        <img src={r.imgSrc} alt={r.imgAlt} loading="lazy" decoding="async" width="800" height="450">
+      </div>
+      <div class="case-more-card-body">
+        <span class={`tech-badge ${r.badge.cls}`}>{r.badge.text}</span>
+        <p class="case-more-card-title">{r.moreTitle}</p>
+        <p class="case-more-card-desc">{r.moreDesc}</p>
+        <span class="case-more-card-arrow">Details ansehen <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+  ))}
+</div>

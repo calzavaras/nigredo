@@ -214,50 +214,11 @@ const schema = JSON.stringify({
 </Layout>
 
 <style is:global>
-  /* Case Specific overrides */
   .case-page--app {
     --case-accent: #00d2ff;
     --case-accent-2: #2fe8b4;
     --case-accent-soft: rgba(47, 232, 180, 0.14);
     --case-accent-glow: rgba(0, 210, 255, 0.26);
-  }
-
-  .case-page {
-    padding-top: 150px;
-    padding-bottom: 48px;
-  }
-
-  .case-page__container {
-    position: relative;
-    width: 100%;
-  }
-
-  .case-page .breadcrumb {
-    margin-bottom: 28px;
-  }
-
-  .case-page .case-back {
-    margin-bottom: 34px;
-  }
-
-  .case-page .case-back:hover {
-    color: var(--case-accent);
-  }
-
-  .case-page .case-hero {
-    margin-bottom: 72px;
-  }
-
-  .case-page .case-hero-badge {
-    margin-bottom: 1rem;
-  }
-
-  .case-page .case-hero-title {
-    max-width: 940px;
-    font-size: clamp(2.9rem, 5.35vw, 4.85rem);
-    line-height: var(--hero-title-line-height);
-    letter-spacing: -0.02em;
-    margin-bottom: 24px;
   }
 
   .case-page--app .gradient-text {
@@ -268,14 +229,6 @@ const schema = JSON.stringify({
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-  }
-
-  .case-page .case-hero-lead {
-    max-width: 620px;
-    font-size: clamp(1.03rem, 1.15vw, 1.2rem);
-    line-height: 1.65;
-    color: var(--text-secondary);
-    margin-bottom: 0;
   }
 
   .stat-cyan-purple {
@@ -292,163 +245,11 @@ const schema = JSON.stringify({
     border-color: rgba(0, 210, 255, 0.16);
   }
 
-  .case-feature-body {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 22px;
-  }
-  .case-feature-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 2px;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.045),
-      0 0 14px rgba(166, 77, 255, 0.14);
-    transition:
-      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 0.35s ease,
-      background 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-  .case-feature-icon--cyan { background: rgba(0,210,255,0.08); border: 1px solid rgba(0,210,255,0.2); color: #00D2FF; }
-  .case-feature-icon--purple { background: rgba(166,77,255,0.08); border: 1px solid rgba(166,77,255,0.2); color: #A64DFF; }
-  .case-page--app .case-feature {
-    border-color: rgba(255, 255, 255, 0.08);
-  }
   .case-page--app .case-feature:hover {
     border-color: rgba(255, 255, 255, 0.16);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.05),
       0 28px 60px rgba(0, 0, 0, 0.32),
       0 0 28px rgba(0, 210, 255, 0.08);
-  }
-  .case-feature-icon svg {
-    filter:
-      brightness(1.12)
-      saturate(1.18)
-      drop-shadow(0 0 8px var(--case-accent-glow));
-    transition: filter 0.45s ease;
-  }
-  .case-feature:hover .case-feature-icon {
-    transform: translateY(-1px);
-    border-color: rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.04);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 0 22px var(--case-accent-glow),
-      0 0 48px var(--case-accent-soft);
-  }
-  .case-feature:hover .case-feature-icon svg {
-    filter:
-      brightness(1.18)
-      saturate(1.35)
-      drop-shadow(0 0 12px var(--case-accent-glow))
-      drop-shadow(0 0 24px var(--case-accent-soft));
-  }
-  
-  .case-feature-text h3 {
-    font-size: clamp(1.23rem, 2.2vw, 1.48rem);
-    line-height: 1.18;
-    letter-spacing: -0.02em;
-    margin-bottom: 14px;
-  }
-  .case-feature-text p {
-    font-size: 0.95rem;
-    line-height: 1.62;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.55);
-  }
-
-  .case-final-section {
-    padding-top: 52px;
-    padding-bottom: 118px;
-  }
-
-  .case-final-cta {
-    max-width: 660px;
-  }
-
-  .case-final-cta .cta-label {
-    color: rgba(255, 255, 255, 0.42);
-  }
-
-  .case-final-cta h2 {
-    color: #f5f5f7;
-    font-size: clamp(2.25rem, 4.5vw, 3.7rem);
-    line-height: 1.04;
-    letter-spacing: 0;
-    margin-bottom: 0;
-  }
-
-  .case-final-cta h2 span {
-    color: rgba(255, 255, 255, 0.62);
-  }
-
-  .case-final-cta .hero-cta-group {
-    margin-top: 34px;
-  }
-
-  .case-final-cta .btn-ghost {
-    background-image:
-      linear-gradient(#050505, #050505),
-      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  }
-
-  .case-final-cta .btn-ghost:hover {
-    animation: none;
-    transform: translateY(-2px);
-    background-image:
-      linear-gradient(#0a0a0c, #0a0a0c),
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
-  }
-
-  .case-final-cta .btn-primary:hover {
-    box-shadow:
-      inset 0 2px 4px rgba(255, 255, 255, 1),
-      0 10px 26px rgba(255, 255, 255, 0.14);
-  }
-
-  @media (max-width: 768px) {
-    .case-feature-body { flex-direction: column; gap: 16px; }
-  }
-
-  @media (max-width: 860px) {
-    .case-page {
-      padding-top: 132px;
-      padding-bottom: 42px;
-    }
-
-    .case-page .case-hero-title {
-      font-size: clamp(2.55rem, 10vw, 3.8rem);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-  }
-
-  @media (max-width: 520px) {
-    .case-page .case-hero-title {
-      font-size: clamp(2.35rem, 13vw, 3.25rem);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-
-    .case-page .case-hero-lead {
-      font-size: 1.02rem;
-      line-height: 1.6;
-    }
-
-    .case-final-section {
-      padding-top: 40px;
-      padding-bottom: 88px;
-    }
-
-    .case-final-cta h2 {
-      font-size: clamp(1.8rem, 11vw, 2.5rem);
-    }
   }
 </style>

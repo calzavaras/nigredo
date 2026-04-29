@@ -104,14 +104,21 @@ const schema = JSON.stringify({
           <div class="au-photo-container">
             <div class="au-photo-aura"></div>
             <div class="au-photo-circle-wrap">
-              <img
-                src="/assets/marco-calzavara-gruender-nigredo-st-gallen.webp"
-                alt="Marco Calzavara, Gründer und Entwickler bei Nigredo, St. Gallen"
-                class="au-photo-circle lightbox-trigger"
-                width="768"
-                height="1024"
-                loading="lazy"
+              <button
+                type="button"
+                class="au-photo-lightbox-btn lightbox-trigger"
+                data-src="/assets/marco-calzavara-gruender-nigredo-st-gallen.webp"
+                aria-label="Profilfoto vergrössern"
               >
+                <img
+                  src="/assets/marco-calzavara-gruender-nigredo-st-gallen.webp"
+                  alt="Marco Calzavara, Gründer und Entwickler bei Nigredo, St. Gallen"
+                  class="au-photo-circle"
+                  width="768"
+                  height="1024"
+                  loading="lazy"
+                >
+              </button>
             </div>
           </div>
           <div class="au-profile-info">
@@ -366,17 +373,27 @@ const schema = JSON.stringify({
       0 18px 45px rgba(0, 0, 0, 0.28);
   }
 
+  .au-photo-lightbox-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: zoom-in;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   .au-photo-circle {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center 35%;
     display: block;
-    cursor: zoom-in;
     transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
   }
 
-  .au-photo-circle:hover { transform: scale(1.055); }
+  .au-photo-lightbox-btn:hover .au-photo-circle { transform: scale(1.055); }
 
   .au-name {
     font-size: clamp(1.28rem, 2vw, 1.5rem);
@@ -421,14 +438,14 @@ const schema = JSON.stringify({
   .au-bio p {
     max-width: 760px;
     font-size: clamp(1.03rem, 1.15vw, 1.2rem);
-    line-height: 1.65;
+    line-height: 1.68;
     color: var(--text-secondary);
     margin-bottom: 20px;
   }
 
   .au-bio-intro {
-    color: rgba(245, 245, 247, 0.76);
-    margin-bottom: 20px;
+    color: rgba(245, 245, 247, 0.78);
+    margin-bottom: 24px;
   }
 
   .au-bio strong {
@@ -493,7 +510,7 @@ const schema = JSON.stringify({
   .au-bio-more__content p {
     max-width: 760px;
     font-size: clamp(1.03rem, 1.15vw, 1.2rem);
-    line-height: 1.65;
+    line-height: 1.68;
     color: var(--text-secondary);
     margin-bottom: 20px;
   }
@@ -660,21 +677,6 @@ const schema = JSON.stringify({
     margin-top: 34px;
   }
 
-  .about-final-cta .btn-ghost {
-    background-image:
-      linear-gradient(#050505, #050505),
-      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  }
-
-  .about-final-cta .btn-ghost:hover {
-    animation: none;
-    transform: translateY(-2px);
-    background-image:
-      linear-gradient(#0a0a0c, #0a0a0c),
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
-  }
-
   .about-final-cta .btn-primary:hover {
     box-shadow:
       inset 0 2px 4px rgba(255, 255, 255, 1),
@@ -695,8 +697,8 @@ const schema = JSON.stringify({
 
   @media (max-width: 860px) {
     .about-hero {
-      padding-top: 132px;
-      padding-bottom: 42px;
+      padding-top: 136px;
+      padding-bottom: 44px;
     }
 
     .about-hero__title {
@@ -718,20 +720,40 @@ const schema = JSON.stringify({
   }
 
   @media (max-width: 600px) {
+    .about-hero :global(.breadcrumb) {
+      margin-bottom: 22px;
+    }
+
     .about-hero__title {
       font-size: clamp(2.35rem, 13vw, 3.25rem);
       line-height: var(--hero-title-line-height-mobile);
     }
 
+    .au-main-grid {
+      gap: 36px;
+      margin-top: 44px;
+    }
+
     .au-photo-container {
       width: 204px;
       height: 204px;
+      margin-bottom: 22px;
     }
 
     .au-statement .about-statement__quote {
       padding: 24px;
       font-size: 1.02rem;
       line-height: 1.6;
+    }
+
+    .au-bio p,
+    .au-bio-more__content p {
+      font-size: 1rem;
+      line-height: 1.62;
+    }
+
+    .au-bio-intro {
+      margin-bottom: 22px;
     }
 
     .au-stat-value {

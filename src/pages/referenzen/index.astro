@@ -2,7 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import { references } from '../../data/references';
-
 const referencesJson = JSON.stringify(references);
 
 const schema = JSON.stringify({
@@ -75,18 +74,17 @@ const schema = JSON.stringify({
 
       <div id="refs-grid" class="refs-grid" aria-live="polite"></div>
 
-      <div class="refs-nav" id="refs-nav">
-        <button class="refs-nav-btn" id="refs-prev" aria-label="Vorherige Projekte">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      <div class="refs-controls" aria-label="Referenzen Navigation">
+        <button
+          id="refs-load-more"
+          class="refs-load-more"
+          type="button"
+          hidden
+        >
+          Weitere Projekte
         </button>
-        <span class="refs-nav-count" id="refs-nav-count"></span>
-        <button class="refs-nav-btn" id="refs-next" aria-label="Nächste Projekte">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
 
-      <div class="refs-actions">
-        <a href="#refs-grid" class="refs-more-link" id="refs-more">Weitere Referenzen ansehen</a>
+        <nav id="refs-pagination" class="refs-pagination" aria-label="Seiten blättern" hidden></nav>
       </div>
 
       <div class="section refs-final-section">
@@ -102,6 +100,149 @@ const schema = JSON.stringify({
 
     </div>
   </section>
+
+  <script type="application/json" id="refs-data" set:html={referencesJson}></script>
+  <script is:inline>
+    (() => {
+      const dataEl = document.getElementById('refs-data');
+      const gridEl = document.getElementById('refs-grid');
+      const loadMoreEl = document.getElementById('refs-load-more');
+      const paginationEl = document.getElementById('refs-pagination');
+
+      if (!dataEl || !gridEl || !loadMoreEl || !paginationEl) return;
+
+      const references = JSON.parse(dataEl.textContent || '[]');
+      const PAGE_SIZE = 8;
+      const STEP_SIZE = 2;
+      let currentPage = 0;
+      let visibleCount = Math.min(STEP_SIZE, PAGE_SIZE);
+
+      function shuffleItems(items) {
+        const shuffled = [...items];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+      }
+
+      const shuffledReferences = shuffleItems(references);
+
+      function getPageItems(pageIndex) {
+        const start = pageIndex * PAGE_SIZE;
+        return shuffledReferences.slice(start, start + PAGE_SIZE);
+      }
+
+      function renderCards() {
+        const pageItems = getPageItems(currentPage);
+        const itemsToShow = pageItems.slice(0, visibleCount);
+
+        gridEl.innerHTML = itemsToShow.map((ref) => `
+          <a href="${ref.href}" class="ref-main-card" aria-label="${ref.ariaLabel}">
+            <div class="ref-main-card-img ${ref.listImgCls}">
+              <img src="${ref.imgSrc}" alt="${ref.imgAlt}" width="800" height="450" loading="lazy" decoding="async">
+              <span class="tech-badge ${ref.badge.cls} ref-main-badge">${ref.badge.text}</span>
+            </div>
+            <div class="ref-main-card-body">
+              <div class="ref-main-card-header">
+                <h2 class="ref-main-card-title">${ref.listTitle}</h2>
+                <span class="ref-main-card-year">${ref.year}</span>
+              </div>
+              ${ref.sub ? `<p class="ref-main-card-sub">${ref.sub}</p>` : ''}
+              <p class="ref-main-card-desc">${ref.listDesc}</p>
+              <div class="ref-main-card-footer">
+                <span class="ref-main-link ${ref.linkCls || ''}">Details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              </div>
+            </div>
+          </a>
+        `).join('');
+
+        const canLoadMore = visibleCount < pageItems.length;
+        loadMoreEl.hidden = !canLoadMore;
+      }
+
+      function renderPagination() {
+        const totalPages = Math.ceil(shuffledReferences.length / PAGE_SIZE);
+        const pageItems = getPageItems(currentPage);
+
+        if (totalPages <= 1 || visibleCount < pageItems.length) {
+          paginationEl.hidden = true;
+          paginationEl.innerHTML = '';
+          return;
+        }
+
+        paginationEl.hidden = false;
+        const pageButtons = Array.from({ length: totalPages }, (_, index) => `
+          <button
+            type="button"
+            class="refs-page-btn${index === currentPage ? ' is-active' : ''}"
+            data-page="${index}"
+            aria-current="${index === currentPage ? 'page' : 'false'}"
+            aria-label="Seite ${index + 1}"
+          >
+            ${index + 1}
+          </button>
+        `).join('');
+
+        paginationEl.innerHTML = `
+          <button
+            type="button"
+            class="refs-page-arrow"
+            data-direction="prev"
+            aria-label="Vorherige Seite"
+            ${currentPage === 0 ? 'disabled' : ''}
+          >
+            <span aria-hidden="true">&larr;</span>
+          </button>
+          <div class="refs-page-list">${pageButtons}</div>
+          <button
+            type="button"
+            class="refs-page-arrow"
+            data-direction="next"
+            aria-label="Nächste Seite"
+            ${currentPage === totalPages - 1 ? 'disabled' : ''}
+          >
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        `;
+      }
+
+      function updateView() {
+        const pageItems = getPageItems(currentPage);
+        visibleCount = Math.min(Math.max(visibleCount, STEP_SIZE), pageItems.length);
+        renderCards();
+        renderPagination();
+      }
+
+      loadMoreEl.addEventListener('click', () => {
+        const pageItems = getPageItems(currentPage);
+        visibleCount = Math.min(visibleCount + STEP_SIZE, pageItems.length);
+        updateView();
+      });
+
+      paginationEl.addEventListener('click', (event) => {
+        const target = event.target instanceof Element ? event.target.closest('button') : null;
+        if (!(target instanceof HTMLButtonElement) || target.disabled) return;
+
+        const pageIndex = target.dataset.page;
+        const direction = target.dataset.direction;
+
+        if (pageIndex !== undefined) {
+          currentPage = Number(pageIndex);
+        } else if (direction === 'prev') {
+          currentPage = Math.max(currentPage - 1, 0);
+        } else if (direction === 'next') {
+          currentPage = Math.min(currentPage + 1, Math.ceil(shuffledReferences.length / PAGE_SIZE) - 1);
+        }
+
+        visibleCount = Math.min(STEP_SIZE, getPageItems(currentPage).length);
+        updateView();
+        gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      updateView();
+    })();
+  </script>
 </Layout>
 
 <style is:global>
@@ -142,19 +283,109 @@ const schema = JSON.stringify({
     max-width: 620px;
     font-size: clamp(1.03rem, 1.15vw, 1.2rem);
     line-height: 1.65;
+    color: rgba(245, 245, 247, 0.68);
   }
 
   /* Main Grid */
   .refs-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-bottom: 64px;
+    gap: 28px;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
   }
 
   .refs-intro {
     max-width: 940px;
     margin-bottom: 64px;
+  }
+
+  .refs-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 36px;
+    margin-bottom: 64px;
+  }
+
+  .refs-load-more {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+    padding: 0 0 4px;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .refs-load-more:hover {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.38);
+    color: #fff;
+  }
+
+  .refs-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .refs-page-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .refs-page-btn,
+  .refs-page-arrow {
+    appearance: none;
+    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.03);
+    color: rgba(245,245,247,0.86);
+    min-width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  }
+
+  .refs-page-btn:hover,
+  .refs-page-arrow:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.22);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .refs-page-btn.is-active {
+    background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.08));
+    border-color: rgba(255,255,255,0.28);
+    color: #fff;
+  }
+
+  .refs-page-arrow:disabled {
+    opacity: 0.36;
+    cursor: not-allowed;
+    transform: none;
   }
 
   /* Card */
@@ -190,7 +421,7 @@ const schema = JSON.stringify({
   /* Image Area */
   .ref-main-card-img {
     position: relative;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 8.5;
     overflow: hidden;
     flex-shrink: 0;
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -218,7 +449,7 @@ const schema = JSON.stringify({
 
   /* Card Body */
   .ref-main-card-body {
-    padding: 40px 32px;
+    padding: 34px 28px 30px;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -228,7 +459,7 @@ const schema = JSON.stringify({
     align-items: flex-start;
     justify-content: space-between;
     gap: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .ref-main-card-year {
     font-size: 0.75rem;
@@ -237,29 +468,30 @@ const schema = JSON.stringify({
     padding-top: 4px;
   }
   .ref-main-card-title {
-    font-size: 1.35rem;
+    font-size: 1.28rem;
     font-weight: 700;
     margin: 0;
     color: #fff;
+    line-height: 1.14;
   }
   .ref-main-card-sub {
     font-size: 0.85rem;
     color: var(--secondary-accent);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     font-weight: 500;
   }
   .ref-main-card-desc {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.58;
     margin: 0;
     flex: 1;
   }
 
   /* Footer */
   .ref-main-card-footer {
-    margin-top: 24px;
-    padding-top: 20px;
+    margin-top: 22px;
+    padding-top: 18px;
     border-top: 1px solid rgba(255,255,255,0.06);
   }
   .ref-main-link {
@@ -274,63 +506,6 @@ const schema = JSON.stringify({
   .ref-main-card:hover .ref-main-link {
     color: #fff;
     gap: 12px;
-  }
-
-  /* Navigation */
-  .refs-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 22px;
-  }
-  .refs-nav-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-  .refs-nav-btn:hover:not(:disabled) {
-    border-color: #fff;
-    background: rgba(255,255,255,0.05);
-  }
-  .refs-nav-btn:disabled {
-    opacity: 0.2;
-    cursor: default;
-  }
-  .refs-nav-count {
-    font-size: 0.85rem;
-    color: rgba(255,255,255,0.4);
-  }
-
-  .refs-actions {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
-  }
-
-  .refs-more-link {
-    display: inline-flex;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.46);
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-    padding-bottom: 4px;
-    transition: color 0.25s ease, border-color 0.25s ease;
-  }
-
-  .refs-more-link:hover {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.46);
   }
 
   .refs-final-section {
@@ -362,21 +537,6 @@ const schema = JSON.stringify({
     margin-top: 34px;
   }
 
-  .refs-final-cta .btn-ghost {
-    background-image:
-      linear-gradient(#050505, #050505),
-      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  }
-
-  .refs-final-cta .btn-ghost:hover {
-    animation: none;
-    transform: translateY(-2px);
-    background-image:
-      linear-gradient(#0a0a0c, #0a0a0c),
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
-  }
-
   .refs-final-cta .btn-primary:hover {
     box-shadow:
       inset 0 2px 4px rgba(255, 255, 255, 1),
@@ -387,8 +547,8 @@ const schema = JSON.stringify({
   @media (max-width: 860px) {
     .refs-hero {
       min-height: auto;
-      padding-top: 132px;
-      padding-bottom: 42px;
+      padding-top: 136px;
+      padding-bottom: 44px;
     }
 
     .refs-hero__title {
@@ -399,14 +559,27 @@ const schema = JSON.stringify({
     .refs-grid {
       grid-template-columns: 1fr;
       gap: 24px;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .refs-intro {
       margin-bottom: 52px;
     }
+
+    .refs-controls {
+      margin-top: 30px;
+      margin-bottom: 56px;
+      gap: 18px;
+    }
   }
 
   @media (max-width: 520px) {
+    .refs-hero .breadcrumb {
+      margin-bottom: 22px;
+    }
+
     .refs-hero__lead {
       font-size: 1.02rem;
       line-height: 1.6;
@@ -415,10 +588,51 @@ const schema = JSON.stringify({
     .refs-hero__title {
       font-size: clamp(2.35rem, 13vw, 3.25rem);
       line-height: var(--hero-title-line-height-mobile);
+      margin-bottom: 20px;
     }
 
     .refs-intro {
-      margin-bottom: 42px;
+      margin-bottom: 38px;
+    }
+
+    .refs-controls {
+      margin-top: 24px;
+      margin-bottom: 44px;
+      gap: 14px;
+    }
+
+    .refs-load-more {
+      max-width: 100%;
+      min-height: 0;
+      padding: 0 0 4px;
+    }
+
+    .refs-pagination {
+      gap: 10px;
+    }
+
+    .refs-page-list {
+      gap: 8px;
+    }
+
+    .refs-page-btn,
+    .refs-page-arrow {
+      min-width: 42px;
+      height: 42px;
+      font-size: 0.9rem;
+    }
+
+    .ref-main-card-body {
+      padding: 30px 22px 26px;
+    }
+
+    .ref-main-card-img {
+      aspect-ratio: 16 / 9;
+    }
+
+    .ref-main-card-title {
+      font-size: 1.22rem;
+      line-height: 1.18;
     }
 
     .refs-final-section {
@@ -429,77 +643,5 @@ const schema = JSON.stringify({
     .refs-final-cta h2 {
       font-size: clamp(1.8rem, 11vw, 2.5rem);
     }
-
-    .refs-actions {
-      justify-content: flex-start;
-    }
   }
 </style>
-
-<script define:vars={{ referencesJson }}>
-  const REFS = JSON.parse(referencesJson);
-
-  const ARROW_SVG = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-
-  function shuffle(arr) {
-    const a = [...arr];
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-    }
-    return a;
-  }
-
-  function cardHTML(ref) {
-    return `
-      <a href="${ref.href}" class="ref-main-card" aria-label="${ref.ariaLabel}">
-        <div class="ref-main-card-img ${ref.listImgCls}">
-          <img src="${ref.imgSrc}" alt="${ref.imgAlt}" width="800" height="450" loading="lazy" decoding="async">
-          <span class="tech-badge ${ref.badge.cls} ref-main-badge">${ref.badge.text}</span>
-        </div>
-        <div class="ref-main-card-body">
-          <div class="ref-main-card-header">
-            <h2 class="ref-main-card-title">${ref.listTitle}</h2>
-            <span class="ref-main-card-year">${ref.year}</span>
-          </div>
-          ${ref.sub ? `<p class="ref-main-card-sub">${ref.sub}</p>` : ''}
-          <p class="ref-main-card-desc">${ref.listDesc}</p>
-          <div class="ref-main-card-footer">
-            <span class="ref-main-link ${ref.linkCls}">Details ${ARROW_SVG}</span>
-          </div>
-        </div>
-      </a>`;
-  }
-
-  const INITIAL_VISIBLE = 2;
-  const shuffled = shuffle(REFS);
-  let visibleCount = Math.min(INITIAL_VISIBLE, shuffled.length);
-
-  const grid    = document.getElementById('refs-grid');
-  const nav     = document.getElementById('refs-nav');
-  const prevBtn = document.getElementById('refs-prev');
-  const nextBtn = document.getElementById('refs-next');
-  const counter = document.getElementById('refs-nav-count');
-  const moreBtn = document.getElementById('refs-more');
-
-  nav.style.display = 'none';
-
-  function render() {
-    const visible = shuffled.slice(0, visibleCount);
-    grid.innerHTML = visible.map(cardHTML).join('');
-    if (moreBtn) {
-      moreBtn.style.display = visibleCount < shuffled.length ? 'inline-flex' : 'none';
-    }
-  }
-
-  prevBtn?.addEventListener('click', () => {});
-  nextBtn?.addEventListener('click', () => {});
-  moreBtn?.addEventListener('click', (event) => {
-    event.preventDefault();
-    visibleCount = Math.min(visibleCount + INITIAL_VISIBLE, shuffled.length);
-    render();
-    grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-
-  render();
-</script>

@@ -170,7 +170,7 @@ $headers .= "Content-Transfer-Encoding: 8bit\r\n";
 $headers .= "From: Nigredo Website <noreply@nigredo.ch>\r\n";
 $headers .= "Reply-To: =?UTF-8?B?" . base64_encode($nameSafe) . "?= <{$emailSafe}>\r\n";
 $headers .= "X-Contact-Phone: " . preg_replace('/[\r\n\t]/', '', $phone) . "\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+$headers .= "X-Mailer: Nigredo Contact\r\n";
 
 $encodedSubject = '=?UTF-8?B?' . base64_encode($msgSubject) . '?=';
 

@@ -45,7 +45,7 @@ export default defineConfig({
         }
         return item;
       },
-      filter: (page) => !page.includes('/404'),
+      filter: (page) => !page.includes('/404') && !page.includes('/impressum') && !page.includes('/datenschutz'),
     }),
   ],
   trailingSlash: 'never',

@@ -363,6 +363,9 @@ function initLightbox() {
         <div class="lightbox-counter" id="lightbox-counter"></div>
       </div>
     `;
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-modal', 'true');
+    lightbox.setAttribute('aria-label', 'Bildvorschau');
     document.body.appendChild(lightbox);
   }
 
@@ -372,6 +375,8 @@ function initLightbox() {
   nextBtn = modal.querySelector('.lightbox-next');
   closeBtn = modal.querySelector('.lightbox-close');
   counter = document.getElementById('lightbox-counter');
+
+  let _lastTrigger = null;
 
   function updateImage() {
     if (currentGallery.length === 0 || currentIndex < 0 || currentIndex >= currentGallery.length) return;
@@ -394,10 +399,13 @@ function initLightbox() {
 
   function closeLightbox() {
     modal.classList.remove('active');
+    const returnFocus = _lastTrigger;
+    _lastTrigger = null;
     setTimeout(() => {
       modal.style.display = 'none';
       currentGallery = [];
       currentIndex = 0;
+      if (returnFocus) returnFocus.focus();
     }, TIMING.CLOSE_OVERLAY_DELAY);
   }
 
@@ -444,7 +452,10 @@ function initLightbox() {
       currentIndex = parseInt(trigger.dataset.galleryIndex, 10) || 0;
       modal.style.display = 'flex';
       updateImage();
-      setTimeout(() => modal.classList.add('active'), TIMING.LIGHTBOX_OPEN_DELAY);
+      setTimeout(() => {
+        modal.classList.add('active');
+        closeBtn.focus();
+      }, TIMING.LIGHTBOX_OPEN_DELAY);
     }
   }
 
@@ -452,6 +463,7 @@ function initLightbox() {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
+      _lastTrigger = trigger;
       openLightbox(trigger);
     });
   });
