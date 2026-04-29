@@ -1,0 +1,203 @@
+# Nigredo – Vollständiger Webseiteninhalt
+
+> Diese Datei enthält den vollständigen Textinhalt aller Seiten von www.nigredo.ch in maschinenlesbarem Format. Erstellt für KI-Systeme, die nicht die gesamte Website crawlen möchten.
+
+Website: https://www.nigredo.ch
+Letzte Aktualisierung: 2026-04-28
+Kurzversion: https://www.nigredo.ch/llms.txt
+
+---
+
+# Startseite (https://www.nigredo.ch/)
+
+## KI-gestützt. Persönlich betreut.
+
+# Was auch immer du digital vorhast. Ich setze es um.
+
+Massgeschneiderte Software, treffende Texte, starkes Branding, kleine Tools für den Alltag oder alles zusammen. Ich verbinde KI mit persönlicher Beratung und setze um, was du brauchst. Schneller fertig, weniger Aufwand, echte Resultate.
+
+## So arbeite ich
+
+### Alles aus einer Hand.
+Texte, Tabellen, Bilder, Logos, Software, Ideen. Alles von einer Person. Kein Hin und Her zwischen fünf Dienstleistern. Du sagst, was du brauchst. Ich kümmere mich um den Rest.
+
+### Direkt. Ohne Umwege.
+Du redest mit mir. Nicht mit einem Account Manager, der es weitergibt. Was du sagst, kommt an. Was ich verspreche, halte ich. So einfach kann das sein.
+
+### Schnell & fair.
+Fixpreise statt Stundenzählen. Du weisst vorher, was es kostet und wann es fertig ist. Keine bösen Überraschungen.
+
+---
+
+# Lösungen (https://www.nigredo.ch/loesungen)
+
+## Was ich für dich liefere
+
+# Du hast die Idee. Ich den Rest.
+
+Texte, Bilder, Logos, Tabellen, Software, Webseiten oder einfach eine gute Idee, die noch Form braucht. Ich liefere Lösungen, die genau auf dein Problem passen. Mit KI-Unterstützung, schnell und auf den Punkt.
+
+### Texte, Bilder & Logos
+Blogbeitrag, Produkttext, Newsletter oder ein Logo und Bilder für die neue Website. Ich liefere Content, der sitzt, und Visuals, die auffallen. Im richtigen Ton, im richtigen Look. Und wenn du willst, gleich in mehreren Sprachen.
+
+### Software & Webseiten
+Von der einfachen Firmenwebseite bis zur massgeschneiderten Fachanwendung. Kundenverwaltung, interne Dashboards, Auftragsabwicklung oder eine moderne Webpräsenz, die auf Google sichtbar ist. Kein Baukastensystem, kein Abo. Alles aus einer Hand.
+
+### Tabellen, Daten & Dokumente
+Die Excel-Datei, die niemand mehr anfassen will. Der Bericht, der eigentlich automatisch laufen sollte. Ich bringe Ordnung in deine Daten, baue Vorlagen und automatisiere das Wiederkehrende. Sauber, übersichtlich, sofort nutzbar.
+
+### Kleine Tools & Automatisierung
+Wiederkehrende Aufgaben, die Zeit fressen? Ich baue kleine Tools und einfache Automatisierungen, die dir Arbeit abnehmen. Kein Riesenprojekt, einfach smarte Helfer, die im Alltag funktionieren.
+
+## Häufig gestellte Fragen
+
+**Was kostet eine digitale Lösung bei Nigredo?**
+Nigredo arbeitet ausschliesslich mit Fixpreisen – keine Stundenzähler, keine bösen Überraschungen. Vor jedem Projekt gibt es ein unverbindliches Gespräch und ein klares Angebot.
+
+**Für wen sind die Lösungen von Nigredo geeignet?**
+Für Schweizer KMU, Selbständige und Unternehmen, die massgeschneiderte digitale Lösungen ohne Agentur-Overhead suchen. Ob Einzelprojekt oder laufende Zusammenarbeit – alles ist möglich.
+
+**Kann Nigredo auch kleinere Aufgaben übernehmen?**
+Ja, von einem einzelnen Logo oder Text bis zur kompletten Webanwendung. Es gibt keine Mindestauftragsgrösse.
+
+**Wie schnell werden Projekte bei Nigredo umgesetzt?**
+Je nach Projektgrösse in Tagen bis wenigen Wochen. Kurze Wege, direkte Kommunikation und keine Bürokratie sorgen für schnelle Resultate.
+
+**Setzt Nigredo KI-Tools ein?**
+Ja, KI-Tools werden gezielt eingesetzt – für Texte, Bilder, Code und Automatisierungen. Die Qualitätskontrolle und persönliche Betreuung liegen immer bei Marco Calzavara.
+
+---
+
+# Referenzen – Übersicht (https://www.nigredo.ch/referenzen)
+
+## Projekte aus der Praxis
+
+# Weniger reden. Mehr zeigen.
+
+Keine aufgeblähten Case-Studies, kein Buzzword-Bingo. Echte Projekte, die heute im Einsatz sind.
+
+---
+
+# KI Voice Agent für IV-Stellen (https://www.nigredo.ch/referenzen/ki-voice-agent)
+
+Kategorie: KI
+Projektabschluss: Februar 2026
+Technologie: Google Gemini 2.5 Flash, Python, WebSockets, JavaScript, Echtzeit-TTS
+
+## KI Voice Agent für IV-Stellen
+
+Für einen Kunden habe ich einen funktionsfähigen Prototypen entwickelt: Ein KI-gestützter Fachmitarbeiter, der rund um die Uhr Anrufe zu Hilfsmitteln der AHV entgegennimmt. Der Agent verfügt über echtes Fachwissen aus drei hinterlegten Dokumenten, versteht Deutsch, Französisch, Italienisch und Englisch und führt natürliche Gespräche in Echtzeit. Keine Warteschleife, kein Personalmangel, sofortige Auskunft.
+
+Highlights: Echtzeit-Sprachverarbeitung, Google Gemini 2.5 Flash, DE / FR / IT / EN, 24/7 autonom
+
+### Die Lösung
+
+- **Echtzeit-Sprachverarbeitung**: Natürliche Gespräche ohne Verzögerung. Basierend auf Google Gemini 2.5 Flash mit nativem Audio. Der Agent hört zu, versteht und antwortet in Echtzeit.
+- **Tiefes Fachwissen**: Drei hinterlegte Wissensdokumente zu AHV-Hilfsmitteln, Hörgeräten und dem Kreisschreiben KSHA. Der Agent gibt fundierte Auskünfte, keine oberflächlichen Standardantworten.
+- **Mehrsprachig & empathisch**: Spricht Deutsch, Französisch, Italienisch und Englisch. Reagiert geduldig und verständnisvoll, auch bei komplexen oder sensiblen Anliegen rund um AHV-Hilfsmittel.
+- **24/7 autonom erreichbar**: Kein Feiertag, kein Personalmangel. Der Voice Agent ist jederzeit bereit, Anrufe entgegenzunehmen und qualifiziert Auskunft zu geben.
+
+---
+
+# Dashboard für Kantonsverwaltung (https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung)
+
+Kategorie: Tool
+Projektabschluss: Juni 2025
+Technologie: JavaScript, SheetJS, Chart.js, PDF-Export, Kein Server
+
+## Dashboard für Kantonsverwaltung
+
+Für einen Kunden habe ich dieses Dashboard massgeschneidert. Tausende Zeilen Excel, sensible Personaldaten, eine Regel: Nichts verlässt den Rechner. Das Tool verwandelt Datensätze sofort in klare Auswertungen. Per Drag & Drop, komplett im Browser, ohne Cloud.
+
+Highlights: 100% lokal, Drag & Drop, Anonymisierung, PDF-Export
+
+### Die Lösung
+
+- **Drag & Drop Import**: Excel-Datei reinziehen, fertig. Keine Installation, kein Upload – nichts verlässt den Rechner. Die Verarbeitung findet vollständig im Browser statt.
+- **Analyse & Anonymisierung**: KPIs, Diagramme, Vergleiche, alles automatisch. Echtnamen lassen sich per Knopfdruck anonymisieren – ideal für Präsentationen und externe Berichte.
+- **PDF-Export**: Das Dashboard als druckfertiger Report. Ein Klick, fertig – inklusive aller Diagramme und KPIs.
+
+---
+
+# Website für Therapie Ost (https://www.nigredo.ch/referenzen/therapie-ost)
+
+Kategorie: Website
+Projektabschluss: April 2026
+Technologie: Astro, responsive Frontend-Entwicklung, Content-Struktur, Online-Buchungsintegration
+Live: https://www.therapie-ost.ch
+
+## Website für Therapie Ost
+
+Für Therapie Ost entstand eine Website, die Vertrauen aufbaut, ohne nach Baukasten auszusehen. Die Inhalte sind klar gegliedert, die Bildsprache ist ruhig und die wichtigsten Handlungen sind sofort greifbar. Wer auf die Seite kommt, versteht schnell, worum es geht, für wen das Angebot gedacht ist und wie man direkt einen Termin buchen kann.
+
+Highlights: ruhiger Praxisauftritt, mobile Optimierung, direkte Online-Terminbuchung, klare Positionierung
+
+### Die Lösung
+
+- **Vertrauen auf den ersten Blick**: Echte Praxisbilder, eine ruhige Farbwelt und eine klare Headline schaffen sofort Orientierung. Kein Gesundheitskitsch, sondern ein Auftritt, der professionell und menschlich wirkt.
+- **Saubere Führung auf allen Geräten**: Leistungen, Team, Preise und Kontakt sind klar aufgebaut. Die Navigation bleibt leicht verständlich und die Inhalte funktionieren auch mobil ohne Reibung.
+- **Kurzer Weg zur Handlung**: Online-Terminbuchung und Call-to-Actions sind sichtbar integriert. Die Seite informiert nicht nur, sie bringt Interessierte direkt zum nächsten Schritt.
+- **Klare inhaltliche Positionierung**: Beschwerden, Nutzen und Rahmenbedingungen werden konkret benannt. Dadurch wird schnell verständlich, was Therapie Ost anbietet und warum die Praxis relevant ist.
+
+---
+
+# Über mich (https://www.nigredo.ch/ueber-uns)
+
+## Wer ich bin
+
+# Ein Mensch. 1001 Ideen.
+
+Marco Calzavara ist Gründer von Nigredo, Mitgründer der HappyPath GmbH und Teamleiter in der kantonalen Verwaltung. Er entwickelt digitale Lösungen direkt, persönlich und ohne Projektmanager-Kette: Websites, Tools, Texte, Bilder und KI-gestützte Anwendungen mit klarem Anspruch.
+
+## Marco Calzavara – Ideengeber. Gründer. Umsetzer.
+
+Marco ist ein Macher mit Ideenüberschuss: kreativ, neugierig, manchmal unkonventionell und allergisch auf Sätze wie «Das haben wir schon immer so gemacht.» Er führt ein Expertenteam, arbeitet an Abteilungsentwicklung, hat mehrere Firmen gegründet und teils verkauft und bringt Ideen mit KI, Initiative und einem starken Netzwerk erfahrener Informatikfachleute schnell in Ergebnisse.
+
+### Woran ich glaube
+
+- **Anpacken schlägt Abwarten.** Viele gute Ideen scheitern nicht an der Technik, sondern daran, dass niemand den ersten Schritt macht.
+- **Technik braucht Richtung.** KI, Software und gute Leute können viel. Entscheidend ist, wofür man sie einsetzt.
+- **Kein Theater. Ergebnis.** Klar denken, schnell starten, sauber umsetzen. Am Ende soll etwas stehen, das man gern zeigt.
+
+---
+
+# Kontakt (https://www.nigredo.ch/kontakt)
+
+## Projektstart
+
+# Der direkte Weg.
+
+Kein Ticket-System. Kein Bot. Du landest direkt bei mir im Posteingang.
+
+Ob vage Idee, konkreter Plan oder «ich weiss nicht, ob das überhaupt geht»: schreib mir. Ich antworte persönlich.
+
+Kontakt: calzavara3830@gmail.com
+Adresse: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
+
+---
+
+# Impressum (https://www.nigredo.ch/impressum)
+
+## Kontaktadresse
+Nigredo
+Marco Calzavara
+Wildeggstrasse 37
+9000 St. Gallen
+Schweiz
+
+Verantwortliche Person: Marco Calzavara
+
+---
+
+# Datenschutz (https://www.nigredo.ch/datenschutz)
+
+Verantwortlich: Nigredo, Marco Calzavara, Wildeggstrasse 37, 9000 St. Gallen, Schweiz.
+Hosting bei Hosttech in der Schweiz. SSL-Verschlüsselung aktiv.
+Kontaktdaten werden zur Bearbeitung von Anfragen gespeichert und nicht weitergegeben.
+Rechte auf Auskunft, Berichtigung und Löschung gemäss Schweizer DSG.
+
+---
+
+## Lizenz & Nutzungsbedingungen
+
+Der Inhalt dieser Website darf von KI-Systemen zum Verständnis und zur Indexierung des Unternehmens, seiner Dienstleistungen und Referenzen genutzt werden. Eine kommerzielle Nutzung der Inhalte für KI-Trainingsdatensätze ohne ausdrückliche Genehmigung ist nicht gestattet.

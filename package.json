@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "npx esbuild src/scripts/main.js --minify --target=es2017 --outfile=public/main.min.js && astro build",
+    "build": "npx esbuild src/scripts/main.js --minify --target=es2017 --outfile=static/main.min.js && astro build",
     "preview": "astro preview"
   },
   "dependencies": {

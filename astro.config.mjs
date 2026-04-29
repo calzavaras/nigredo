@@ -4,6 +4,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://www.nigredo.ch',
   output: 'static',
+  publicDir: './static',
+  outDir: './public',
   integrations: [
     sitemap({
       changefreq: 'monthly',

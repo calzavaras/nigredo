@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <linearGradient id="g" x1="-12" y1="12" x2="36" y2="12" gradientUnits="userSpaceOnUse">
+      <animate attributeName="x1" values="-12;-36;-12" dur="20s" calcMode="ease" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="36;12;36" dur="20s" calcMode="ease" repeatCount="indefinite"/>
+      <stop offset="0%" stop-color="#FFC700"/>
+      <stop offset="100%" stop-color="#FF4D80"/>
+    </linearGradient>
+    <filter id="f" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#A64DFF" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <g stroke="url(#g)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" filter="url(#f)">
+    <path d="M6 3h12l4 6-10 12L2 9z"/>
+    <path d="M11 3 8 9l4 12 4-12-3-6"/>
+    <path d="M2 9h20"/>
+  </g>
+</svg>

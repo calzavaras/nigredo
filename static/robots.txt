@@ -1,0 +1,107 @@
+# ======================================================================
+# www.nigredo.ch - robots.txt
+# ======================================================================
+
+
+User-agent: *
+Allow: /
+Disallow: /.htpasswd
+Disallow: /.htaccess
+Disallow: /.claude/
+
+Sitemap: https://www.nigredo.ch/sitemap-index.xml
+LLMs: https://www.nigredo.ch/llms.txt
+
+# Suchmaschinen-Crawler
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: Seekr
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# KI-Crawler erlauben (Sichtbarkeit in KI-Suchen)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Social-Media-Crawler (für OG-Previews)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: PinterestBot
+Allow: /
+
+# Aggressive Scraping-Bots blockieren
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /

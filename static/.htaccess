@@ -1,0 +1,52 @@
+# www.nigredo.ch - Apache Konfiguration
+# Saubere URLs ohne .html Endung
+
+Options -MultiViews -Indexes
+RewriteEngine On
+
+# HTTPS erzwingen
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Kanonische Domain erzwingen
+RewriteCond %{HTTP_HOST} !^www\.nigredo\.ch$ [NC]
+RewriteRule ^ https://www.nigredo.ch%{REQUEST_URI} [L,R=301]
+
+# Kanonische URLs ohne Trailing Slash
+RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+# Astro Directory-Build: /pfad -> /pfad/index.html
+# Dadurch bleiben saubere URLs ohne Slash möglich, obwohl der Build Verzeichnisse erzeugt.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.+)$ /$1/index.html [L]
+
+# 404 Fehlerseite
+ErrorDocument 404 /404.html
+
+# Sicherheitsheader
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cloud.umami.is; frame-ancestors 'none'"
+</IfModule>
+
+# GZIP Kompression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml text/plain
+</IfModule>
+
+# Browser Caching für statische Assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
