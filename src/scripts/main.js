@@ -44,6 +44,8 @@ const _modalBackground = [];
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initScrollAnimations();
+  initCardSpotlight();
+  initReferencesPage();
   if (document.querySelector('.gradient-icon')) initGradientIcons();
   if (document.querySelector('#mailBtn, .reveal-mail')) initSpamProtection();
   if (document.getElementById('contact-modal')) initContactModal();
@@ -99,6 +101,189 @@ function initScrollAnimations() {
   } else {
     document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
   }
+}
+
+function initCardSpotlight() {
+  const cards = Array.from(document.querySelectorAll('.card, .contact-card, .case-feature'));
+  if (cards.length === 0) return;
+
+  cards.forEach((card) => {
+    const randomAngle = `${Math.floor(Math.random() * 360)}deg`;
+    card.style.setProperty('--start-angle', randomAngle);
+  });
+
+  const supportsInteractiveSpotlight =
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!supportsInteractiveSpotlight) return;
+
+  let rafPending = false;
+  document.addEventListener('pointermove', (e) => {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(() => {
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        if (
+          rect.bottom < 0 ||
+          rect.right < 0 ||
+          rect.top > window.innerHeight ||
+          rect.left > window.innerWidth
+        ) {
+          return;
+        }
+        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      });
+      rafPending = false;
+    });
+  }, { passive: true });
+}
+
+function initReferencesPage() {
+  const gridEl = document.getElementById('refs-grid');
+  const loadMoreEl = document.getElementById('refs-load-more');
+  const paginationEl = document.getElementById('refs-pagination');
+
+  if (!gridEl || !loadMoreEl || !paginationEl) return;
+
+  let references;
+  try {
+    references = JSON.parse(gridEl.dataset.references || '[]');
+  } catch (err) {
+    console.error('References data parse error:', err);
+    return;
+  }
+
+  const PAGE_SIZE = 8;
+  const STEP_SIZE = 2;
+  let currentPage = 0;
+  let visibleCount = Math.min(STEP_SIZE, PAGE_SIZE);
+
+  function shuffleItems(items) {
+    const shuffled = [...items];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }
+
+  const shuffledReferences = shuffleItems(references);
+
+  function getPageItems(pageIndex) {
+    const start = pageIndex * PAGE_SIZE;
+    return shuffledReferences.slice(start, start + PAGE_SIZE);
+  }
+
+  function renderCards() {
+    const pageItems = getPageItems(currentPage);
+    const itemsToShow = pageItems.slice(0, visibleCount);
+
+    gridEl.innerHTML = itemsToShow.map((ref) => `
+      <a href="${ref.href}" class="ref-main-card" aria-label="${ref.ariaLabel}">
+        <div class="ref-main-card-img ${ref.listImgCls}">
+          <img src="${ref.imgSrc}" alt="${ref.imgAlt}" width="800" height="450" loading="lazy" decoding="async">
+          <span class="tech-badge ${ref.badge.cls} ref-main-badge">${ref.badge.text}</span>
+        </div>
+        <div class="ref-main-card-body">
+          <div class="ref-main-card-header">
+            <h2 class="ref-main-card-title">${ref.listTitle}</h2>
+            <span class="ref-main-card-year">${ref.year}</span>
+          </div>
+          ${ref.sub ? `<p class="ref-main-card-sub">${ref.sub}</p>` : ''}
+          <p class="ref-main-card-desc">${ref.listDesc}</p>
+          <div class="ref-main-card-footer">
+            <span class="ref-main-link ${ref.linkCls || ''}">Details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </div>
+      </a>
+    `).join('');
+
+    loadMoreEl.hidden = visibleCount >= pageItems.length;
+  }
+
+  function renderPagination() {
+    const totalPages = Math.ceil(shuffledReferences.length / PAGE_SIZE);
+    const pageItems = getPageItems(currentPage);
+
+    if (totalPages <= 1 || visibleCount < pageItems.length) {
+      paginationEl.hidden = true;
+      paginationEl.innerHTML = '';
+      return;
+    }
+
+    paginationEl.hidden = false;
+    const pageButtons = Array.from({ length: totalPages }, (_, index) => `
+      <button
+        type="button"
+        class="refs-page-btn${index === currentPage ? ' is-active' : ''}"
+        data-page="${index}"
+        aria-current="${index === currentPage ? 'page' : 'false'}"
+        aria-label="Seite ${index + 1}"
+      >
+        ${index + 1}
+      </button>
+    `).join('');
+
+    paginationEl.innerHTML = `
+      <button
+        type="button"
+        class="refs-page-arrow"
+        data-direction="prev"
+        aria-label="Vorherige Seite"
+        ${currentPage === 0 ? 'disabled' : ''}
+      >
+        <span aria-hidden="true">&larr;</span>
+      </button>
+      <div class="refs-page-list">${pageButtons}</div>
+      <button
+        type="button"
+        class="refs-page-arrow"
+        data-direction="next"
+        aria-label="Nächste Seite"
+        ${currentPage === totalPages - 1 ? 'disabled' : ''}
+      >
+        <span aria-hidden="true">&rarr;</span>
+      </button>
+    `;
+  }
+
+  function updateView() {
+    const pageItems = getPageItems(currentPage);
+    visibleCount = Math.min(Math.max(visibleCount, STEP_SIZE), pageItems.length);
+    renderCards();
+    renderPagination();
+  }
+
+  loadMoreEl.addEventListener('click', () => {
+    const pageItems = getPageItems(currentPage);
+    visibleCount = Math.min(visibleCount + STEP_SIZE, pageItems.length);
+    updateView();
+  });
+
+  paginationEl.addEventListener('click', (event) => {
+    const target = event.target instanceof Element ? event.target.closest('button') : null;
+    if (!(target instanceof HTMLButtonElement) || target.disabled) return;
+
+    const pageIndex = target.dataset.page;
+    const direction = target.dataset.direction;
+
+    if (pageIndex !== undefined) {
+      currentPage = Number(pageIndex);
+    } else if (direction === 'prev') {
+      currentPage = Math.max(currentPage - 1, 0);
+    } else if (direction === 'next') {
+      currentPage = Math.min(currentPage + 1, Math.ceil(shuffledReferences.length / PAGE_SIZE) - 1);
+    }
+
+    visibleCount = Math.min(STEP_SIZE, getPageItems(currentPage).length);
+    updateView();
+    gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  updateView();
 }
 
 function initSpamProtection() {
@@ -187,14 +372,10 @@ function closeContactModal() {
 function getCsrfToken() {
   const existing = document.cookie.match(/(?:^|;\s*)_csrf=([^;]+)/)?.[1];
   if (existing) return existing;
-  let token;
-  if (window.crypto && window.crypto.getRandomValues) {
-    const arr = new Uint8Array(16);
-    window.crypto.getRandomValues(arr);
-    token = Array.from(arr, x => x.toString(16).padStart(2, '0')).join('');
-  } else {
-    token = Math.random().toString(36).slice(2) + Date.now().toString(36);
-  }
+  if (!window.crypto?.getRandomValues) return null;
+  const arr = new Uint8Array(16);
+  window.crypto.getRandomValues(arr);
+  const token = Array.from(arr, x => x.toString(16).padStart(2, '0')).join('');
   const expires = new Date(Date.now() + 3600000).toUTCString();
   document.cookie = `_csrf=${token}; path=/; SameSite=Strict; Secure; Expires=${expires}`;
   return token;
@@ -272,8 +453,14 @@ function initContactModal() {
     submitBtn.dataset.loading = 'true';
 
     try {
+      const csrf = getCsrfToken();
+      if (!csrf) {
+        showError('Browser nicht unterstützt.');
+        return;
+      }
+
       const formData = new FormData(form);
-      formData.set('_csrf', getCsrfToken());
+      formData.set('_csrf', csrf);
       const res = await fetch('/send-mail.php', { method: 'POST', body: formData });
       const data = await res.json();
 

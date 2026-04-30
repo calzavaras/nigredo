@@ -24,10 +24,14 @@ $ipHash   = hash('sha256', $ip);
 $rlFile   = sys_get_temp_dir() . '/nigredo_rl_' . $ipHash;
 $now      = time();
 $cooldown = 60;
+$rlHandle = fopen($rlFile, 'c+');
 
-if (file_exists($rlFile)) {
-    $lastTime = (int) file_get_contents($rlFile);
+if ($rlHandle && flock($rlHandle, LOCK_EX)) {
+    rewind($rlHandle);
+    $lastTime = (int) stream_get_contents($rlHandle);
     if ($now - $lastTime < $cooldown) {
+        flock($rlHandle, LOCK_UN);
+        fclose($rlHandle);
         http_response_code(429);
         echo json_encode(['success' => false, 'message' => 'Bitte warte kurz vor dem nächsten Versuch.']);
         exit;
@@ -35,11 +39,25 @@ if (file_exists($rlFile)) {
 }
 
 // Session-based rate limiting as additional layer
+ini_set('session.use_strict_mode', '1');
+session_set_cookie_params([
+    'httponly' => true,
+    'secure' => (
+        (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
+        (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https')
+    ),
+    'samesite' => 'Strict',
+    'path' => '/',
+]);
 session_start();
 if (!isset($_SESSION['last_contact'])) {
     $_SESSION['last_contact'] = 0;
 }
 if ($now - $_SESSION['last_contact'] < $cooldown) {
+    if ($rlHandle) {
+        flock($rlHandle, LOCK_UN);
+        fclose($rlHandle);
+    }
     http_response_code(429);
     echo json_encode(['success' => false, 'message' => 'Bitte warte kurz vor dem nächsten Versuch.']);
     exit;
@@ -60,18 +78,30 @@ $message = strip_tags(trim($_POST['message'] ?? ''));
 
 // Validate required fields
 if (empty($name) || empty($email) || empty($message)) {
+    if ($rlHandle) {
+        flock($rlHandle, LOCK_UN);
+        fclose($rlHandle);
+    }
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'Bitte alle Pflichtfelder ausfüllen.']);
     exit;
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if ($rlHandle) {
+        flock($rlHandle, LOCK_UN);
+        fclose($rlHandle);
+    }
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'Ungültige E-Mail-Adresse.']);
     exit;
 }
 
 if (!empty($phone) && !preg_match('/^[0-9+() .-]{7,32}$/', $phone)) {
+    if ($rlHandle) {
+        flock($rlHandle, LOCK_UN);
+        fclose($rlHandle);
+    }
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'Ungültige Telefonnummer.']);
     exit;
@@ -79,6 +109,10 @@ if (!empty($phone) && !preg_match('/^[0-9+() .-]{7,32}$/', $phone)) {
 
 // Length limits
 if (strlen($name) > 120 || strlen($phone) > 32 || strlen($message) > 6000 || strlen($subject) > 250) {
+    if ($rlHandle) {
+        flock($rlHandle, LOCK_UN);
+        fclose($rlHandle);
+    }
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'Eingaben zu lang.']);
     exit;
@@ -169,19 +203,29 @@ $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 $headers .= "Content-Transfer-Encoding: 8bit\r\n";
 $headers .= "From: Nigredo Website <noreply@nigredo.ch>\r\n";
 $headers .= "Reply-To: =?UTF-8?B?" . base64_encode($nameSafe) . "?= <{$emailSafe}>\r\n";
-$headers .= "X-Contact-Phone: " . preg_replace('/[\r\n\t]/', '', $phone) . "\r\n";
 $headers .= "X-Mailer: Nigredo Contact\r\n";
 
 $encodedSubject = '=?UTF-8?B?' . base64_encode($msgSubject) . '?=';
 
 if (mail($emailTo, $encodedSubject, $body, $headers)) {
     $_SESSION['last_contact'] = $now;
-    file_put_contents($rlFile, $now);
+    if ($rlHandle) {
+        ftruncate($rlHandle, 0);
+        rewind($rlHandle);
+        fwrite($rlHandle, (string) $now);
+        fflush($rlHandle);
+        flock($rlHandle, LOCK_UN);
+        fclose($rlHandle);
+    }
     echo json_encode([
         'success' => true,
         'message' => 'Deine Nachricht ist angekommen! Ich melde mich persönlich.',
     ]);
 } else {
+    if ($rlHandle) {
+        flock($rlHandle, LOCK_UN);
+        fclose($rlHandle);
+    }
     http_response_code(500);
     echo json_encode([
         'success' => false,

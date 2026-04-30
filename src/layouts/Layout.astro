@@ -139,10 +139,10 @@ const siteNavSchema = JSON.stringify({
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="84118d46-7fdb-4f47-be37-3914e0dad55f"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="78dc26c9-7537-4816-a7e1-9acc31bf1402"></script>
 
   <!-- Globales Navigations-Schema (SiteNavigationElement) für Google Sitelinks -->
   <script type="application/ld+json" set:html={siteNavSchema} />
@@ -163,45 +163,5 @@ const siteNavSchema = JSON.stringify({
   <script src={`/main.min.js?v=${jsVersion}`} defer></script>
 
   <ContactModal />
-
-  <script is:inline>
-    document.addEventListener('DOMContentLoaded', function() {
-      var cards = Array.from(document.querySelectorAll('.card, .contact-card, .case-feature'));
-      if (cards.length === 0) return;
-
-      cards.forEach(function(card) {
-        var randomAngle = Math.floor(Math.random() * 360) + 'deg';
-        card.style.setProperty('--start-angle', randomAngle);
-      });
-
-      var supportsInteractiveSpotlight =
-        window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
-        !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      if (!supportsInteractiveSpotlight) return;
-
-      var _rafPending = false;
-      document.addEventListener('pointermove', function(e) {
-        if (_rafPending) return;
-        _rafPending = true;
-        requestAnimationFrame(function() {
-          cards.forEach(function(card) {
-            var rect = card.getBoundingClientRect();
-            if (
-              rect.bottom < 0 ||
-              rect.right < 0 ||
-              rect.top > window.innerHeight ||
-              rect.left > window.innerWidth
-            ) {
-              return;
-            }
-            card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
-            card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
-          });
-          _rafPending = false;
-        });
-      }, { passive: true });
-    });
-  </script>
 </body>
 </html>

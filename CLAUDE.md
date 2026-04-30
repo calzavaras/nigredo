@@ -17,6 +17,14 @@ No linting or test commands are configured.
 npx esbuild src/scripts/main.js --minify --target=es2017 --outfile=static/main.min.js
 ```
 
+## Versioning policy
+
+- Version numbers are never increased automatically by a plain commit or push.
+- Small internal fixes, content tweaks, copy changes, metadata updates, and low-risk technical adjustments do not require a version bump by default.
+- Medium changes with visible behavior changes, meaningful bug fixes, or deploy-relevant technical adjustments should receive a patch bump (`1.3.7` → `1.3.8`).
+- Larger feature work, structural frontend changes, new user-facing capabilities, or broader architectural changes should receive a minor bump (`1.3.7` → `1.4.0`).
+- Before creating a release commit or tag, explicitly decide whether the change is `no bump`, `patch`, or `minor` and update `package.json` only when that decision is intentional.
+
 ## Architecture
 
 ### Static site (Astro v5)
