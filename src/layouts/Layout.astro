@@ -32,10 +32,10 @@ const {
   ogTitle,
   ogDescription,
   ogType = 'website',
-  ogImage = 'https://www.nigredo.ch/assets/marco-calzavara-og.webp',
-  ogImageAlt = 'Marco Calzavara - Nigredo',
-  ogImageWidth = '1024',
-  ogImageHeight = '1024',
+  ogImage = 'https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.webp',
+  ogImageAlt = 'Marco Calzavara, Gründer von Nigredo in St. Gallen',
+  ogImageWidth = '1254',
+  ogImageHeight = '1254',
   ogImageType,
   twitterTitle,
   twitterDescription,
@@ -130,8 +130,21 @@ const siteIdentitySchema = JSON.stringify({
       "@type": "Person",
       "@id": "https://www.nigredo.ch/#person",
       "name": "Marco Calzavara",
+      "givenName": "Marco",
+      "familyName": "Calzavara",
       "jobTitle": "Full-Stack Developer & Gründer",
-      "worksFor": { "@id": "https://www.nigredo.ch/#organization" }
+      "url": "https://www.nigredo.ch/ueber-uns",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.webp",
+        "width": 1254,
+        "height": 1254
+      },
+      "worksFor": { "@id": "https://www.nigredo.ch/#organization" },
+      "sameAs": [
+        "https://ch.linkedin.com/in/calzavara-marco",
+        "https://github.com/calza"
+      ]
     },
     {
       "@type": "SiteNavigationElement",

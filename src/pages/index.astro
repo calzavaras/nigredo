@@ -12,7 +12,11 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "description": "Websites, KI-Lösungen und digitale Tools zum Fixpreis. Nigredo entwickelt aus St. Gallen für Schweizer KMU.",
-      "inLanguage": "de-CH"
+      "inLanguage": "de-CH",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".hero-lead"]
+      }
     }
   ]
 });

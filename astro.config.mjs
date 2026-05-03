@@ -35,7 +35,11 @@ export default defineConfig({
           item.lastmod = new Date('2026-04-28');
         }
         // Sekundärseiten
-        else if (item.url === 'https://www.nigredo.ch/ueber-uns' || item.url === 'https://www.nigredo.ch/kontakt') {
+        else if (item.url === 'https://www.nigredo.ch/ueber-uns') {
+          item.priority = 0.8;
+          item.lastmod = new Date('2026-05-03');
+        }
+        else if (item.url === 'https://www.nigredo.ch/kontakt') {
           item.priority = 0.8;
           item.lastmod = new Date('2026-04-28');
         }

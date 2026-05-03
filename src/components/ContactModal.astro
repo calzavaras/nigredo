@@ -32,27 +32,27 @@
         <div class="cmodal-row">
           <div class="cmodal-field">
             <label class="cmodal-label" for="cmodal-name">Name <span class="cmodal-required">*</span></label>
-            <input class="cmodal-input" type="text" id="cmodal-name" name="name" placeholder="Dein Name" required autocomplete="name">
+            <input class="cmodal-input" type="text" id="cmodal-name" name="name" placeholder="Dein Name" required autocomplete="name" maxlength="120">
           </div>
           <div class="cmodal-field">
             <label class="cmodal-label" for="cmodal-email">E-Mail <span class="cmodal-required">*</span></label>
-            <input class="cmodal-input" type="email" id="cmodal-email" name="email" placeholder="deine@email.ch" required autocomplete="email">
+            <input class="cmodal-input" type="email" id="cmodal-email" name="email" placeholder="deine@email.ch" required autocomplete="email" maxlength="254">
           </div>
         </div>
 
         <div class="cmodal-field">
           <label class="cmodal-label" for="cmodal-phone">Telefon</label>
-          <input class="cmodal-input" type="tel" id="cmodal-phone" name="phone" placeholder="+41 79 000 00 00" autocomplete="tel" inputmode="tel">
+          <input class="cmodal-input" type="tel" id="cmodal-phone" name="phone" placeholder="+41 79 000 00 00" autocomplete="tel" inputmode="tel" maxlength="32">
         </div>
 
         <div class="cmodal-field">
           <label class="cmodal-label" for="cmodal-subject">Betreff</label>
-          <input class="cmodal-input" type="text" id="cmodal-subject" name="subject" placeholder="Worum geht es?">
+          <input class="cmodal-input" type="text" id="cmodal-subject" name="subject" placeholder="Worum geht es?" maxlength="250">
         </div>
 
         <div class="cmodal-field">
           <label class="cmodal-label" for="cmodal-message">Nachricht <span class="cmodal-required">*</span></label>
-          <textarea class="cmodal-input cmodal-textarea" id="cmodal-message" name="message" placeholder="Erzähl mir von deinem Projekt oder deiner Idee…" required rows="5"></textarea>
+          <textarea class="cmodal-input cmodal-textarea" id="cmodal-message" name="message" placeholder="Erzähl mir von deinem Projekt oder deiner Idee…" required rows="5" maxlength="6000"></textarea>
         </div>
 
         <button type="submit" id="cmodal-submit" class="btn btn-primary cmodal-submit-btn">

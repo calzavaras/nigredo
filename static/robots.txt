@@ -11,6 +11,22 @@ Disallow: /.claude/
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 LLMs: https://www.nigredo.ch/llms.txt
 
+# KI-Crawling explizit erlauben
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
 # Aggressive Scraping-Bots blockieren
 User-agent: CCBot
 Disallow: /

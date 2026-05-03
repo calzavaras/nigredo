@@ -1,3 +1,13 @@
+# About
+
+Website: https://www.nigredo.ch
+Organization: Nigredo | Marco Calzavara
+Location: St. Gallen, Schweiz
+Last-Updated: 2026-05-03
+Full-Version: https://www.nigredo.ch/llms-full.txt
+
+---
+
 # Nigredo
 
 > Nigredo ist ein Schweizer Anbieter für massgeschneiderte digitale Lösungen. Inhaber und Gründer ist Marco Calzavara, ansässig in St. Gallen (Kanton St. Gallen). Nigredo entwickelt Webseiten, Software, KI-Lösungen, Texte, Bilder, Logos und smarte Tools für Schweizer KMU und Unternehmen – alles aus einer Hand, ohne Agentur-Overhead.

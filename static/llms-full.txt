@@ -3,7 +3,7 @@
 > Diese Datei enthält den vollständigen Textinhalt aller Seiten von www.nigredo.ch in maschinenlesbarem Format. Erstellt für KI-Systeme, die nicht die gesamte Website crawlen möchten.
 
 Website: https://www.nigredo.ch
-Letzte Aktualisierung: 2026-04-28
+Letzte Aktualisierung: 2026-05-03
 Kurzversion: https://www.nigredo.ch/llms.txt
 
 ---

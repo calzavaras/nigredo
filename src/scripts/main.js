@@ -154,6 +154,15 @@ function initCardSpotlight() {
   });
 }
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 function initReferencesPage() {
   const gridEl = document.getElementById('refs-grid');
   const loadMoreEl = document.getElementById('refs-load-more');
@@ -195,18 +204,18 @@ function initReferencesPage() {
     const itemsToShow = pageItems.slice(0, visibleCount);
 
     gridEl.innerHTML = itemsToShow.map((ref) => `
-      <a href="${ref.href}" class="ref-main-card" aria-label="${ref.ariaLabel}">
+      <a href="${escapeHtml(ref.href)}" class="ref-main-card" aria-label="${escapeHtml(ref.ariaLabel)}">
         <div class="ref-main-card-img ${ref.listImgCls}">
-          <img src="${ref.imgSrc}" alt="${ref.imgAlt}" width="800" height="450" loading="lazy" decoding="async">
-          <span class="tech-badge ${ref.badge.cls} ref-main-badge">${ref.badge.text}</span>
+          <img src="${escapeHtml(ref.imgSrc)}" alt="${escapeHtml(ref.imgAlt)}" width="800" height="450" loading="lazy" decoding="async">
+          <span class="tech-badge ${ref.badge.cls} ref-main-badge">${escapeHtml(ref.badge.text)}</span>
         </div>
         <div class="ref-main-card-body">
           <div class="ref-main-card-header">
-            <h2 class="ref-main-card-title">${ref.listTitle}</h2>
-            <span class="ref-main-card-year">${ref.year}</span>
+            <h2 class="ref-main-card-title">${escapeHtml(ref.listTitle)}</h2>
+            <span class="ref-main-card-year">${escapeHtml(ref.year)}</span>
           </div>
-          ${ref.sub ? `<p class="ref-main-card-sub">${ref.sub}</p>` : ''}
-          <p class="ref-main-card-desc">${ref.listDesc}</p>
+          ${ref.sub ? `<p class="ref-main-card-sub">${escapeHtml(ref.sub)}</p>` : ''}
+          <p class="ref-main-card-desc">${escapeHtml(ref.listDesc)}</p>
           <div class="ref-main-card-footer">
             <span class="ref-main-link ${ref.linkCls || ''}">Details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
@@ -568,7 +577,7 @@ function initLightbox() {
       <button class="lightbox-nav lightbox-prev" aria-label="Vorheriges Bild">&lsaquo;</button>
       <button class="lightbox-nav lightbox-next" aria-label="Nächstes Bild">&rsaquo;</button>
       <div class="lightbox-image-container">
-        <img class="lightbox-content" id="lightbox-img" src="" alt="Grossansicht">
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Bild in Grossansicht">
         <div class="lightbox-counter" id="lightbox-counter"></div>
       </div>
     `;
@@ -592,6 +601,9 @@ function initLightbox() {
     modalImg.style.opacity = 0;
     setTimeout(() => {
       modalImg.src = currentGallery[currentIndex];
+      modalImg.alt = currentGallery.length > 1
+        ? `Bild ${currentIndex + 1} von ${currentGallery.length} in Grossansicht`
+        : 'Bild in Grossansicht';
       modalImg.style.opacity = 1;
     }, TIMING.LIGHTBOX_FADE);
     if (currentGallery.length > 1) {
