@@ -189,9 +189,8 @@ const schema = JSON.stringify({
   }
 
   .faq-card {
-    min-height: 100%;
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto auto;
     gap: 24px;
     padding: clamp(24px, 3vw, 30px);
     border-radius: 26px;
@@ -272,6 +271,7 @@ const schema = JSON.stringify({
   }
 
   .faq-card__link {
+    margin-top: 2px;
     width: fit-content;
     min-height: 44px;
     display: inline-flex;

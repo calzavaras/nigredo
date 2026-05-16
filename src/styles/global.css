@@ -45,9 +45,9 @@ html::-webkit-scrollbar {
   --hero-offset-top-mobile: clamp(136px, 24vw, 154px);
   --hero-offset-top-breadcrumb-mobile: calc(var(--hero-offset-top-mobile) - 38px);
   --hero-offset-bottom: clamp(50px, 6vw, 72px);
-  --hero-title-size: clamp(3.2rem, 6vw, 5.6rem);
-  --hero-title-size-tablet: clamp(2.8rem, 9.6vw, 4.2rem);
-  --hero-title-size-mobile: clamp(2.5rem, 13vw, 3.55rem);
+  --hero-title-size: clamp(3.05rem, 5.7vw, 5.25rem);
+  --hero-title-size-tablet: clamp(2.68rem, 9vw, 3.95rem);
+  --hero-title-size-mobile: clamp(2.38rem, 12.4vw, 3.35rem);
   --lead-size: clamp(1.03rem, 1.12vw, 1.18rem);
   --lead-size-mobile: 1rem;
 }
