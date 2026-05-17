@@ -75,21 +75,21 @@ const schema = JSON.stringify({
       <h2 id="values-title" class="visually-hidden">So arbeite ich</h2>
       <div class="grid-3">
 
-        <article class="card value-card fade-up" style="--icon-gradient: linear-gradient(135deg, #00f0ff 0%, #2563ff 34%, #ff3dbd 100%); --icon-shadow: rgba(37, 99, 255, 0.4);">
+        <article class="card value-card fade-up" style="--icon-gradient: linear-gradient(180deg, color-mix(in srgb, var(--home-b) 94%, white 14%) 0%, color-mix(in srgb, var(--home-b) 72%, black 18%) 100%); --icon-shadow: color-mix(in srgb, var(--home-b) 30%, transparent);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-verstaendnis.svg'); mask-image: url('/assets/icons/icon-verstaendnis.svg');"></div></div>
           <span class="cta-label">VERSTÄNDNIS</span>
           <h3>Erst verstehen. Dann veredeln.</h3>
           <p>Ich denke mich in dein Vorhaben ein, erkenne, worauf es wirklich ankommt, und entwickle daraus eine Lösung mit klarer Richtung, Tiefe und Substanz.</p>
         </article>
 
-        <article class="card value-card fade-up delay-100" style="--icon-gradient: linear-gradient(135deg, #00e7ff 0%, #5b57ff 40%, #ff3dbd 100%); --icon-shadow: rgba(91, 87, 255, 0.4);">
+        <article class="card value-card fade-up delay-100" style="--icon-gradient: linear-gradient(180deg, color-mix(in srgb, var(--home-b) 90%, white 10%) 0%, color-mix(in srgb, var(--home-b) 68%, black 20%) 100%); --icon-shadow: color-mix(in srgb, var(--home-b) 26%, transparent);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-anspruch.svg'); mask-image: url('/assets/icons/icon-anspruch.svg');"></div></div>
           <span class="cta-label">ANSPRUCH</span>
           <h3>Gut genug ist nicht das Ziel.</h3>
           <p>Ich arbeite nicht für halbe Ergebnisse. Ich arbeite, bis Form, Funktion und Wirkung zusammenpassen und etwas entsteht, das langfristig trägt.</p>
         </article>
 
-        <article class="card value-card fade-up delay-200" style="--icon-gradient: linear-gradient(135deg, #2563ff 0%, #b21fff 46%, #ff3dbd 100%); --icon-shadow: rgba(178, 31, 255, 0.38);">
+        <article class="card value-card fade-up delay-200" style="--icon-gradient: linear-gradient(180deg, color-mix(in srgb, var(--home-b) 86%, white 8%) 0%, color-mix(in srgb, var(--home-b) 64%, black 22%) 100%); --icon-shadow: color-mix(in srgb, var(--home-b) 22%, transparent);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-zusammenarbeit.svg'); mask-image: url('/assets/icons/icon-zusammenarbeit.svg');"></div></div>
           <span class="cta-label">ZUSAMMENARBEIT</span>
           <h3>Klar im Denken. Direkt im Tun.</h3>
@@ -117,6 +117,15 @@ const schema = JSON.stringify({
 <style>
   /* Page specific overrides if any */
 
+  .home-hero,
+  .home-values,
+  .home-final-section {
+    --home-a: #6c45ff;
+    --home-b: #ff4f8a;
+    --home-c: #ffb21f;
+    animation: homeCycle 90s ease-in-out infinite;
+  }
+
   .home-hero {
     min-height: auto;
     display: flex;
@@ -126,15 +135,11 @@ const schema = JSON.stringify({
   }
 
   .home-hero .badge {
-    margin-bottom: 1.15rem;
-    color: #e6fbff;
-    border-color: rgba(47, 123, 255, 0.42);
-    background:
-      linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(47, 123, 255, 0.22), rgba(255, 61, 189, 0.16));
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.03),
-      0 0 0 1px rgba(47, 123, 255, 0.18),
-      0 0 36px rgba(47, 123, 255, 0.16);
+    margin-bottom: 0.95rem;
+    color: rgba(255, 248, 235, 0.94);
+    border-color: color-mix(in srgb, var(--home-b) 44%, rgba(255, 255, 255, 0.22));
+    background: transparent;
+    box-shadow: none;
   }
 
   .home-hero__inner {
@@ -150,14 +155,26 @@ const schema = JSON.stringify({
   }
 
   .home-hero .gradient-text {
-    background: linear-gradient(90deg, #00e8ff 0%, #2f7bff 42%, #ff42c8 78%, #00e8ff 100%);
-    background-size: 260% auto;
-    animation: gradientPan 46s linear infinite;
+    background: linear-gradient(
+      90deg,
+      var(--home-a) 0%,
+      color-mix(in srgb, var(--home-a) 82%, var(--home-b)) 16%,
+      color-mix(in srgb, var(--home-a) 52%, var(--home-b)) 34%,
+      color-mix(in srgb, var(--home-a) 20%, var(--home-b)) 50%,
+      color-mix(in srgb, var(--home-b) 88%, var(--home-c)) 70%,
+      color-mix(in srgb, var(--home-b) 46%, var(--home-c)) 86%,
+      var(--home-c) 100%
+    );
+    background-size: 100% auto;
+
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter: drop-shadow(0 0 18px rgba(47, 123, 255, 0.24));
+    filter:
+      drop-shadow(0 0 14px color-mix(in srgb, var(--home-a) 20%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--home-b) 18%, transparent))
+      drop-shadow(0 0 22px color-mix(in srgb, var(--home-c) 14%, transparent));
   }
 
 
@@ -189,11 +206,33 @@ const schema = JSON.stringify({
     padding-bottom: clamp(82px, 8vw, 108px);
   }
 
+  .home-values .value-card:hover {
+    box-shadow:
+      0 15px 40px rgba(0, 0, 0, 0.4),
+      inset 0 0 44px color-mix(in srgb, var(--home-b) 10%, transparent);
+  }
+
+  .home-values .value-card::before {
+    background: conic-gradient(
+      from calc(var(--border-angle, 0turn) + var(--start-angle, 0deg)),
+      transparent 0%,
+      color-mix(in srgb, var(--home-a) 20%, transparent) 10%,
+      var(--home-a) 18%,
+      color-mix(in srgb, var(--home-a) 26%, var(--home-b)) 28%,
+      var(--home-b) 44%,
+      color-mix(in srgb, var(--home-b) 24%, var(--home-c)) 62%,
+      var(--home-c) 74%,
+      color-mix(in srgb, var(--home-c) 18%, transparent) 82%,
+      transparent 100%
+    );
+    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--home-b) 50%, transparent));
+  }
+
   .home-hero .hero-glow {
     background:
-      radial-gradient(circle at 16% 42%, rgba(0, 232, 255, 0.11) 0%, transparent 40%),
-      radial-gradient(circle at 48% 44%, rgba(47, 123, 255, 0.13) 0%, transparent 36%),
-      radial-gradient(circle at 82% 28%, rgba(255, 66, 200, 0.11) 0%, transparent 30%);
+      radial-gradient(circle at 16% 42%, color-mix(in srgb, var(--home-a) 18%, transparent) 0%, transparent 34%),
+      radial-gradient(circle at 50% 44%, color-mix(in srgb, var(--home-b) 18%, transparent) 0%, transparent 32%),
+      radial-gradient(circle at 82% 28%, color-mix(in srgb, var(--home-c) 16%, transparent) 0%, transparent 28%);
   }
 
   .card p {
@@ -204,7 +243,7 @@ const schema = JSON.stringify({
 
   .home-final-section {
     padding-top: 52px;
-    padding-bottom: 92px;
+    padding-bottom: 84px;
   }
 
   .home-final-cta {
@@ -271,7 +310,7 @@ const schema = JSON.stringify({
 
     .home-values {
       padding-top: 16px;
-      padding-bottom: 78px;
+      padding-bottom: 72px;
     }
 
     .home-final-section {

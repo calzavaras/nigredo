@@ -6,6 +6,7 @@ const navLinks = [
   { href: '/digitale-loesungen/', label: 'Lösungen' },
   { href: '/referenzen/', label: 'Referenzen' },
   { href: '/marco-calzavara/', label: 'Über mich' },
+  { href: '/kontakt/', label: 'Kontakt', mobileOnly: true },
 ];
 
 function isActive(href: string): boolean {
@@ -28,7 +29,10 @@ function isActive(href: string): boolean {
         {navLinks.map(link => (
           <a
             href={link.href}
-            class:list={[{ active: isActive(link.href) }]}
+            class:list={[
+              { active: isActive(link.href) },
+              { 'nav-link--mobile-only': link.mobileOnly },
+            ]}
             aria-current={isActive(link.href) ? 'page' : undefined}
           >
             {link.label}

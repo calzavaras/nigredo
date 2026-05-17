@@ -110,10 +110,17 @@ const schema = JSON.stringify({
 
 <style>
   .faq-overview {
+    --faq-a: #ff7c20;
+    --faq-b: #ff2e55;
+    --faq-c: #cc20cc;
+    animation: faqCycle 90s ease-in-out infinite;
+  }
+
+  .faq-overview {
     position: relative;
     min-height: auto;
     padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(92px, 10vw, 132px);
+    padding-bottom: clamp(84px, 8vw, 112px);
     overflow: hidden;
   }
 
@@ -132,30 +139,39 @@ const schema = JSON.stringify({
   }
 
   .faq-overview__intro .badge {
-    min-height: 28px;
-    margin-bottom: 1rem;
-    padding: 4px 11px;
-    font-size: 0.58rem;
+    min-height: 26px;
+    margin-bottom: 0.9rem;
+    padding: 4px 10px;
+    font-size: 0.54rem;
     letter-spacing: 0.14em;
-    color: #ffd7f4;
-    border-color: rgba(255, 61, 189, 0.4);
-    background:
-      linear-gradient(135deg, rgba(255, 61, 189, 0.18), rgba(214, 51, 255, 0.18), rgba(123, 97, 255, 0.1));
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.03),
-      0 0 0 1px rgba(255, 61, 189, 0.16),
-      0 0 28px rgba(255, 61, 189, 0.1);
+    color: rgba(255, 236, 224, 0.94);
+    border-color: color-mix(in srgb, var(--faq-b) 34%, rgba(255, 255, 255, 0.22));
+    background: transparent;
+    box-shadow: none;
   }
 
   .faq-overview__intro .gradient-text {
-    background: linear-gradient(90deg, #ff3dbd 0%, #d633ff 34%, #7b61ff 70%, #ff3dbd 100%);
-    background-size: 260% auto;
-    animation: gradientPan 46s linear infinite;
+    background: linear-gradient(
+      90deg,
+      var(--faq-a) 0%,
+      color-mix(in srgb, var(--faq-a) 84%, var(--faq-b)) 14%,
+      color-mix(in srgb, var(--faq-a) 62%, var(--faq-b)) 28%,
+      color-mix(in srgb, var(--faq-a) 34%, var(--faq-b)) 42%,
+      color-mix(in srgb, var(--faq-a) 12%, var(--faq-b)) 54%,
+      color-mix(in srgb, var(--faq-b) 78%, var(--faq-c)) 66%,
+      color-mix(in srgb, var(--faq-b) 54%, var(--faq-c)) 78%,
+      color-mix(in srgb, var(--faq-b) 28%, var(--faq-c)) 90%,
+      var(--faq-c) 100%
+    );
+    background-size: 100% auto;
+
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter: drop-shadow(0 0 16px rgba(255, 61, 189, 0.18));
+    filter:
+      drop-shadow(0 0 12px color-mix(in srgb, var(--faq-a) 22%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--faq-c) 14%, transparent));
   }
 
   .faq-overview__intro h1 {
@@ -168,9 +184,9 @@ const schema = JSON.stringify({
 
   .faq-overview .hero-glow {
     background:
-      radial-gradient(circle at 18% 40%, rgba(255, 61, 189, 0.14) 0%, transparent 42%),
-      radial-gradient(circle at 56% 34%, rgba(214, 51, 255, 0.12) 0%, transparent 36%),
-      radial-gradient(circle at 84% 44%, rgba(123, 97, 255, 0.1) 0%, transparent 32%);
+      radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--faq-a) 18%, transparent) 0%, transparent 36%),
+      radial-gradient(circle at 56% 34%, color-mix(in srgb, var(--faq-b) 17%, transparent) 0%, transparent 32%),
+      radial-gradient(circle at 84% 44%, color-mix(in srgb, var(--faq-c) 16%, transparent) 0%, transparent 28%);
   }
 
   .faq-overview__intro p {
@@ -222,7 +238,7 @@ const schema = JSON.stringify({
   }
 
   .faq-card:focus-visible {
-    outline: 2px solid rgba(255, 61, 189, 0.34);
+    outline: 2px solid color-mix(in srgb, var(--faq-b) 34%, rgba(255, 255, 255, 0.12));
     outline-offset: 4px;
   }
 
@@ -234,7 +250,7 @@ const schema = JSON.stringify({
   }
 
   .faq-card__number {
-    color: rgba(255, 61, 189, 0.98);
+    color: color-mix(in srgb, var(--faq-b) 88%, white 10%);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.16em;
@@ -296,14 +312,17 @@ const schema = JSON.stringify({
     transform: translateY(-2px);
     background-image:
       linear-gradient(#0a0a0c, #0a0a0c),
-      linear-gradient(rgba(255, 79, 181, 0.36), rgba(214, 51, 255, 0.3));
+      linear-gradient(
+        color-mix(in srgb, var(--faq-b) 28%, transparent),
+        color-mix(in srgb, var(--faq-b) 18%, transparent)
+      );
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
   }
 
   @media (max-width: 980px) {
     .faq-overview {
       padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 86px;
+      padding-bottom: 72px;
     }
 
     .faq-overview__intro h1 {
@@ -358,7 +377,9 @@ const schema = JSON.stringify({
     }
 
     .faq-card__link {
-      width: 100%;
+      width: auto;
+      min-width: 148px;
+      align-self: center;
     }
   }
 </style>

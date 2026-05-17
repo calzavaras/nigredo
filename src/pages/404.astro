@@ -42,6 +42,7 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .not-found-page {
+    --nf-accent: #ff4d80;
     min-height: min(620px, 68vh);
     display: flex;
     align-items: center;
@@ -54,7 +55,15 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .not-found-page .badge {
-    margin-bottom: 1.15rem;
+    margin-bottom: 0.95rem;
+    color: rgba(255, 229, 236, 0.94);
+    border-color: color-mix(in srgb, var(--nf-accent) 34%, rgba(255, 255, 255, 0.22));
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .not-found-page .hero-glow {
+    background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--nf-accent) 18%, transparent) 0%, transparent 34%);
   }
 
   .not-found-page__title {
@@ -94,7 +103,7 @@ import Layout from '../layouts/Layout.astro';
 
   .not-found-page__links a:hover {
     color: #ffffff;
-    text-decoration-color: rgba(255, 77, 128, 0.65);
+    text-decoration-color: color-mix(in srgb, var(--nf-accent) 64%, transparent);
   }
 
   .not-found-page .btn-primary:hover {
@@ -107,7 +116,7 @@ import Layout from '../layouts/Layout.astro';
     .not-found-page {
       min-height: auto;
       padding-top: var(--hero-offset-top-mobile);
-      padding-bottom: 88px;
+      padding-bottom: 72px;
     }
 
     .not-found-page__title {

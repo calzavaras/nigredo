@@ -126,9 +126,13 @@ const schema = JSON.stringify({
 
 <style>
   .faq-article {
+    --faq-a: #ff7c20;
+    --faq-b: #ff2e55;
+    --faq-c: #cc20cc;
+    animation: faqCycle 90s ease-in-out infinite;
     position: relative;
     padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(82px, 10vw, 128px);
+    padding-bottom: clamp(84px, 8vw, 112px);
     overflow: hidden;
   }
 
@@ -145,18 +149,29 @@ const schema = JSON.stringify({
   }
 
   .faq-article__header .badge {
-    min-height: 28px;
-    margin-bottom: 1rem;
-    padding: 4px 11px;
-    font-size: 0.58rem;
+    min-height: 26px;
+    margin-bottom: 0.9rem;
+    padding: 4px 10px;
+    font-size: 0.54rem;
     letter-spacing: 0.14em;
+    color: rgba(255, 236, 224, 0.94);
+    border-color: color-mix(in srgb, var(--faq-b) 34%, rgba(255, 255, 255, 0.22));
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .faq-article .hero-glow {
+    background:
+      radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--faq-a) 16%, transparent) 0%, transparent 36%),
+      radial-gradient(circle at 56% 34%, color-mix(in srgb, var(--faq-b) 14%, transparent) 0%, transparent 32%),
+      radial-gradient(circle at 84% 44%, color-mix(in srgb, var(--faq-c) 13%, transparent) 0%, transparent 28%);
   }
 
   .faq-article__header h1 {
     max-width: 920px;
     margin: 0 0 clamp(24px, 3vw, 32px);
     color: #f5f5f7;
-    font-size: clamp(3.35rem, 6.1vw, 5.35rem);
+    font-size: clamp(2.95rem, 5.2vw, 4.55rem);
     line-height: 0.99;
     letter-spacing: 0;
   }
@@ -229,17 +244,18 @@ const schema = JSON.stringify({
   @media (max-width: 860px) {
     .faq-article {
       padding-top: var(--hero-offset-top-breadcrumb-mobile);
+      padding-bottom: 72px;
     }
 
     .faq-article__header h1 {
-      font-size: clamp(2.75rem, 9.6vw, 4.05rem);
+      font-size: clamp(2.5rem, 8vw, 3.5rem);
       line-height: var(--hero-title-line-height-mobile);
     }
   }
 
   @media (max-width: 520px) {
     .faq-article__header h1 {
-      font-size: clamp(2.45rem, 12.8vw, 3.2rem);
+      font-size: clamp(2.2rem, 10.8vw, 2.95rem);
     }
 
     .faq-article__header p {

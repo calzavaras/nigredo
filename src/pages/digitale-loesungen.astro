@@ -113,8 +113,8 @@ const schema = JSON.stringify({
         <span class="badge badge--cyan">WOMIT ES AUFHÖRT</span>
 
         <h1 id="loesungen-title" class="home-hero__title solutions-hero__title">
-          Wenn es fertig ist, <br class="hidden-mobile">
-          <span class="gradient-text">fühlt es sich richtig an.</span>
+          <span class="solutions-hero__line">Wenn es fertig ist,</span>
+          <span class="gradient-text solutions-hero__line">fühlt es sich richtig an.</span>
         </h1>
         <p class="hero-lead solutions-hero__lead">
           Fertig heisst hier nicht einfach abgeschlossen. Es heisst: kein Detail, das stört, kein Satz, der danebenliegt, kein Klick, der ins Leere führt. Wenn es fertig ist, fühlt es sich richtig an. Erst dann ist ein Projekt wirklich fertig.
@@ -133,7 +133,7 @@ const schema = JSON.stringify({
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <defs>
                         <linearGradient id="acc-grad-1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                          <stop stop-color="#00F4FF"/><stop offset="1" stop-color="#2B6FFF"/>
+                          <stop style="stop-color: color-mix(in srgb, var(--solutions-b) 92%, white 12%)"/><stop offset="0.5" style="stop-color: var(--solutions-b)"/><stop offset="1" style="stop-color: color-mix(in srgb, var(--solutions-b) 72%, black 18%)"/>
                         </linearGradient>
                       </defs>
                       <rect x="3" y="4" width="18" height="15" rx="2.4" stroke="url(#acc-grad-1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -166,7 +166,7 @@ const schema = JSON.stringify({
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <defs>
                         <linearGradient id="acc-grad-2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                          <stop stop-color="#3FFFD8"/><stop offset="1" stop-color="#0098FF"/>
+                          <stop style="stop-color: color-mix(in srgb, var(--solutions-b) 92%, white 12%)"/><stop offset="0.5" style="stop-color: var(--solutions-b)"/><stop offset="1" style="stop-color: color-mix(in srgb, var(--solutions-b) 72%, black 18%)"/>
                         </linearGradient>
                       </defs>
                       <circle cx="12" cy="12" r="2" stroke="url(#acc-grad-2)" stroke-width="1.8"/>
@@ -199,7 +199,7 @@ const schema = JSON.stringify({
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <defs>
                         <linearGradient id="acc-grad-3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                          <stop stop-color="#00F4FF"/><stop offset="1" stop-color="#0098FF"/>
+                          <stop style="stop-color: color-mix(in srgb, var(--solutions-b) 92%, white 12%)"/><stop offset="0.5" style="stop-color: var(--solutions-b)"/><stop offset="1" style="stop-color: color-mix(in srgb, var(--solutions-b) 72%, black 18%)"/>
                         </linearGradient>
                       </defs>
                       <path d="M4 6.4C4 5.1 5.1 4 6.4 4H17.6C18.9 4 20 5.1 20 6.4V17.6C20 18.9 18.9 20 17.6 20H6.4C5.1 20 4 18.9 4 17.6V6.4Z" stroke="url(#acc-grad-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -243,6 +243,15 @@ const schema = JSON.stringify({
 </Layout>
 
 <style>
+  .solutions-hero,
+  .solutions-accordion-wrap,
+  .solutions-final-section {
+    --solutions-a: #00f0b4;
+    --solutions-b: #00a8ff;
+    --solutions-c: #5c32ff;
+    animation: solutionsCycle 90s ease-in-out infinite;
+  }
+
   .solutions-hero {
     min-height: min(620px, 68vh);
     display: flex;
@@ -269,15 +278,11 @@ const schema = JSON.stringify({
   }
 
   .solutions-hero .badge {
-    margin-bottom: 1.15rem;
-    color: #dcffff;
-    border-color: rgba(0, 240, 255, 0.42);
-    background:
-      linear-gradient(135deg, rgba(63, 255, 216, 0.16), rgba(0, 240, 255, 0.22), rgba(0, 152, 255, 0.14));
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.03),
-      0 0 0 1px rgba(0, 240, 255, 0.14),
-      0 0 28px rgba(0, 240, 255, 0.12);
+    margin-bottom: 0.95rem;
+    color: rgba(226, 255, 252, 0.94);
+    border-color: color-mix(in srgb, var(--solutions-b) 34%, rgba(255, 255, 255, 0.2));
+    background: transparent;
+    box-shadow: none;
   }
 
   .solutions-hero__title {
@@ -288,15 +293,32 @@ const schema = JSON.stringify({
     margin-bottom: clamp(24px, 3vw, 30px);
   }
 
+  .solutions-hero__line {
+    display: block;
+  }
+
   .solutions-hero .gradient-text {
-    background: linear-gradient(90deg, #3fffd8 0%, #00f0ff 34%, #0098ff 74%, #3fffd8 100%);
-    background-size: 260% auto;
-    animation: gradientPan 46s linear infinite;
+    background: linear-gradient(
+      90deg,
+      var(--solutions-a) 0%,
+      color-mix(in srgb, var(--solutions-a) 84%, var(--solutions-b)) 14%,
+      color-mix(in srgb, var(--solutions-a) 62%, var(--solutions-b)) 28%,
+      color-mix(in srgb, var(--solutions-a) 34%, var(--solutions-b)) 42%,
+      color-mix(in srgb, var(--solutions-a) 12%, var(--solutions-b)) 54%,
+      color-mix(in srgb, var(--solutions-b) 78%, var(--solutions-c)) 66%,
+      color-mix(in srgb, var(--solutions-b) 54%, var(--solutions-c)) 78%,
+      color-mix(in srgb, var(--solutions-b) 28%, var(--solutions-c)) 90%,
+      var(--solutions-c) 100%
+    );
+    background-size: 100% auto;
+
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter: drop-shadow(0 0 16px rgba(0, 240, 255, 0.18));
+    filter:
+      drop-shadow(0 0 12px color-mix(in srgb, var(--solutions-a) 22%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--solutions-c) 14%, transparent));
   }
 
   .solutions-hero__lead {
@@ -307,9 +329,9 @@ const schema = JSON.stringify({
 
   .solutions-hero .hero-glow {
     background:
-      radial-gradient(circle at 18% 38%, rgba(63, 255, 216, 0.11) 0%, transparent 42%),
-      radial-gradient(circle at 52% 44%, rgba(0, 240, 255, 0.12) 0%, transparent 36%),
-      radial-gradient(circle at 84% 28%, rgba(0, 152, 255, 0.11) 0%, transparent 30%);
+      radial-gradient(circle at 18% 38%, color-mix(in srgb, var(--solutions-a) 18%, transparent) 0%, transparent 36%),
+      radial-gradient(circle at 52% 44%, color-mix(in srgb, var(--solutions-b) 18%, transparent) 0%, transparent 32%),
+      radial-gradient(circle at 84% 28%, color-mix(in srgb, var(--solutions-c) 16%, transparent) 0%, transparent 28%);
   }
 
   .solutions-accordion-wrap {
@@ -374,7 +396,7 @@ const schema = JSON.stringify({
       rgba(255, 255, 255, 0.02);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.045),
-      0 0 16px rgba(0, 240, 255, 0.16);
+      0 0 16px color-mix(in srgb, var(--solutions-b) 14%, transparent);
     transition:
       transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
       border-color 0.35s ease,
@@ -385,9 +407,9 @@ const schema = JSON.stringify({
   .solutions-accordion :global(.acc-icon-title svg) {
     opacity: 0.9;
     filter:
-      brightness(1.16)
-      saturate(1.32)
-      drop-shadow(0 0 8px rgba(0, 240, 255, 0.24));
+      brightness(1.08)
+      saturate(1.06)
+      drop-shadow(0 0 6px color-mix(in srgb, var(--solutions-b) 18%, transparent));
     transition: opacity 0.45s ease, filter 0.45s ease;
   }
 
@@ -400,18 +422,18 @@ const schema = JSON.stringify({
       rgba(255, 255, 255, 0.035);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 0 24px rgba(0, 152, 255, 0.18),
-      0 0 48px rgba(0, 240, 255, 0.16);
+      0 0 22px color-mix(in srgb, var(--solutions-b) 18%, transparent),
+      0 0 40px color-mix(in srgb, var(--solutions-b) 12%, transparent);
   }
 
   .solutions-accordion__item:hover :global(.acc-icon-title svg),
   .solutions-accordion__item.active :global(.acc-icon-title svg) {
     opacity: 1;
     filter:
-      brightness(1.22)
-      saturate(1.45)
-      drop-shadow(0 0 12px rgba(0, 152, 255, 0.3))
-      drop-shadow(0 0 24px rgba(0, 240, 255, 0.24));
+      brightness(1.14)
+      saturate(1.12)
+      drop-shadow(0 0 10px color-mix(in srgb, var(--solutions-b) 22%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--solutions-b) 16%, transparent));
   }
 
   .solutions-accordion :global(.accordion-icon) {
@@ -436,10 +458,12 @@ const schema = JSON.stringify({
   }
 
   .solutions-accordion__item.active :global(.accordion-icon) {
-    color: #4dfff0;
-    border-color: rgba(0, 240, 255, 0.34);
-    background: rgba(0, 240, 255, 0.1);
-    box-shadow: 0 0 24px rgba(0, 240, 255, 0.18);
+    color: color-mix(in srgb, var(--solutions-b) 92%, white 6%);
+    border-color: color-mix(in srgb, var(--solutions-b) 30%, rgba(255, 255, 255, 0.14));
+    background: color-mix(in srgb, var(--solutions-b) 14%, transparent);
+    box-shadow:
+      0 0 18px color-mix(in srgb, var(--solutions-b) 16%, transparent),
+      0 0 28px color-mix(in srgb, var(--solutions-b) 10%, transparent);
   }
 
   .solutions-accordion :global(.accordion-content) {
@@ -587,6 +611,10 @@ const schema = JSON.stringify({
       padding: 0 0 22px 0;
       font-size: 0.98rem;
       line-height: 1.68;
+    }
+
+    .solutions-hero__title {
+      font-size: clamp(2.18rem, 10.4vw, 2.88rem);
     }
 
     .solutions-final-section {

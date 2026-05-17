@@ -17,31 +17,31 @@ export default defineConfig({
           item.lastmod = new Date('2026-05-16');
         }
         else if (url === 'https://www.nigredo.ch/digitale-loesungen/' || url === 'https://www.nigredo.ch/referenzen/') {
-          item.priority = 0.9;
+          item.priority = 0.95;
           item.lastmod = new Date('2026-05-16');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/ki-voice-agent/') {
-          item.priority = 0.8;
+          item.priority = 0.65;
           item.lastmod = new Date('2026-05-03');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/') {
-          item.priority = 0.8;
+          item.priority = 0.65;
           item.lastmod = new Date('2026-05-03');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/therapie-ost/') {
-          item.priority = 0.8;
+          item.priority = 0.65;
           item.lastmod = new Date('2026-05-03');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/thinktank/') {
-          item.priority = 0.8;
+          item.priority = 0.65;
           item.lastmod = new Date('2026-05-08');
         }
         else if (url === 'https://www.nigredo.ch/marco-calzavara/') {
-          item.priority = 0.8;
+          item.priority = 0.92;
           item.lastmod = new Date('2026-05-16');
         }
         else if (url === 'https://www.nigredo.ch/kontakt/') {
-          item.priority = 0.8;
+          item.priority = 0.88;
           item.lastmod = new Date('2026-05-16');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {

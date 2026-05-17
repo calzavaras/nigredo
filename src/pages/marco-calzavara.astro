@@ -254,6 +254,10 @@ const schema = JSON.stringify({
 
 <style>
   .about-hero {
+    --about-a: #ffb830;
+    --about-b: #ff5030;
+    --about-c: #e0246a;
+    animation: aboutCycle 90s ease-in-out infinite;
     padding-top: var(--hero-offset-top-breadcrumb);
     padding-bottom: var(--hero-offset-bottom);
   }
@@ -268,7 +272,11 @@ const schema = JSON.stringify({
   }
 
   .about-hero .badge {
-    margin-bottom: 1.15rem;
+    margin-bottom: 0.95rem;
+    color: rgba(255, 241, 232, 0.94);
+    border-color: color-mix(in srgb, var(--about-b) 38%, rgba(255, 255, 255, 0.22));
+    background: transparent;
+    box-shadow: none;
   }
 
   .about-hero__intro {
@@ -285,21 +293,32 @@ const schema = JSON.stringify({
   }
 
   .about-hero .gradient-text {
-    background: linear-gradient(to right, #ff4d80, #a64dff, #ff4d80);
-    background-size: 200% auto;
-    animation: gradientPan 24s linear infinite;
+    background: linear-gradient(
+      90deg,
+      var(--about-a) 0%,
+      color-mix(in srgb, var(--about-a) 84%, var(--about-b)) 14%,
+      color-mix(in srgb, var(--about-a) 58%, var(--about-b)) 28%,
+      color-mix(in srgb, var(--about-a) 24%, var(--about-b)) 44%,
+      color-mix(in srgb, var(--about-b) 90%, var(--about-c)) 64%,
+      color-mix(in srgb, var(--about-b) 62%, var(--about-c)) 80%,
+      var(--about-c) 100%
+    );
+    background-size: 100% auto;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter: drop-shadow(0 0 16px rgba(255, 77, 128, 0.18));
+    filter:
+      drop-shadow(0 0 10px color-mix(in srgb, var(--about-a) 16%, transparent))
+      drop-shadow(0 0 14px color-mix(in srgb, var(--about-b) 14%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--about-c) 10%, transparent));
   }
 
   .about-hero .hero-glow {
     background:
-      radial-gradient(circle at 18% 40%, rgba(255, 77, 128, 0.15) 0%, transparent 44%),
-      radial-gradient(circle at 58% 44%, rgba(200, 100, 255, 0.11) 0%, transparent 40%),
-      radial-gradient(circle at 84% 28%, rgba(166, 77, 255, 0.13) 0%, transparent 34%);
+      radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--about-a) 18%, transparent) 0%, transparent 36%),
+      radial-gradient(circle at 58% 44%, color-mix(in srgb, var(--about-b) 17%, transparent) 0%, transparent 32%),
+      radial-gradient(circle at 84% 28%, color-mix(in srgb, var(--about-c) 16%, transparent) 0%, transparent 28%);
   }
 
   /* Main Layout Grid */
@@ -335,7 +354,11 @@ const schema = JSON.stringify({
   .au-photo-aura {
     position: absolute;
     inset: -12px;
-    background: linear-gradient(135deg, #FF4D80, #A64DFF);
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--about-b) 78%, white 10%) 0%,
+      color-mix(in srgb, var(--about-b) 58%, black 14%) 100%
+    );
     border-radius: 50%;
     filter: blur(18px);
     opacity: 0.16;
@@ -464,7 +487,7 @@ const schema = JSON.stringify({
   }
 
   .au-bio-more__toggle:focus-visible {
-    outline: 2px solid rgba(255, 77, 128, 0.5);
+    outline: 2px solid color-mix(in srgb, var(--about-a) 44%, transparent);
     outline-offset: 5px;
   }
 
@@ -545,7 +568,11 @@ const schema = JSON.stringify({
     line-height: 1;
     margin-bottom: 10px;
     display: block;
-    background: linear-gradient(135deg, #FF4D80, #A64DFF);
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--about-b) 88%, white 10%) 0%,
+      color-mix(in srgb, var(--about-b) 64%, black 16%) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -594,7 +621,11 @@ const schema = JSON.stringify({
   .au-principle-number {
     font-size: 0.75rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #FF4D80 0%, #A64DFF 100%);
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--about-b) 90%, white 8%) 0%,
+      color-mix(in srgb, var(--about-b) 68%, black 16%) 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -609,14 +640,13 @@ const schema = JSON.stringify({
     line-height: 1.18;
     letter-spacing: -0.01em;
     margin-bottom: 14px;
+    color: rgba(245, 245, 247, 0.96);
   }
 
   .au-principle-card h3 span {
-    background: linear-gradient(135deg, #FF4D80 0%, #A64DFF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    background: none;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.72);
     font-style: normal;
   }
 

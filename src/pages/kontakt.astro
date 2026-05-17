@@ -82,9 +82,9 @@ const schema = JSON.stringify({
             <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
               <defs>
                 <linearGradient id="mailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#7DFF72"/>
-                  <stop offset="45%" stop-color="#00E7B7"/>
-                  <stop offset="100%" stop-color="#00B8FF"/>
+                  <stop offset="0%" style="stop-color: color-mix(in srgb, var(--contact-b) 88%, white 14%)"/>
+                  <stop offset="50%" style="stop-color: var(--contact-b)"/>
+                  <stop offset="100%" style="stop-color: color-mix(in srgb, var(--contact-b) 72%, black 18%)"/>
                 </linearGradient>
               </defs>
               <rect x="4" y="10" width="40" height="28" rx="4" stroke="url(#mailGrad)" stroke-width="2" fill="none"/>
@@ -107,8 +107,15 @@ const schema = JSON.stringify({
 
 <style>
   .contact-hero {
+    --contact-a: #ffd020;
+    --contact-b: #ff6020;
+    --contact-c: #ff2060;
+    animation: contactCycle 90s ease-in-out infinite;
+  }
+
+  .contact-hero {
     padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(92px, 9vw, 128px);
+    padding-bottom: clamp(84px, 8vw, 112px);
   }
 
   .contact-hero :global(.breadcrumb) {
@@ -116,15 +123,11 @@ const schema = JSON.stringify({
   }
 
   .contact-hero .badge {
-    margin-bottom: 1.15rem;
-    color: #ebffef;
-    border-color: rgba(125, 255, 114, 0.42);
-    background:
-      linear-gradient(135deg, rgba(125, 255, 114, 0.2), rgba(0, 255, 183, 0.2), rgba(0, 184, 255, 0.14));
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.03),
-      0 0 0 1px rgba(125, 255, 114, 0.18),
-      0 0 32px rgba(0, 255, 183, 0.14);
+    margin-bottom: 0.95rem;
+    color: rgba(255, 239, 222, 0.94);
+    border-color: color-mix(in srgb, var(--contact-b) 36%, rgba(255, 255, 255, 0.22));
+    background: transparent;
+    box-shadow: none;
   }
 
   .kontakt-grid {
@@ -147,14 +150,27 @@ const schema = JSON.stringify({
   }
 
   .contact-hero .gradient-text {
-    background: linear-gradient(90deg, #7dff72 0%, #00ffb7 36%, #00b8ff 76%, #7dff72 100%);
-    background-size: 260% auto;
-    animation: gradientPan 46s linear infinite;
+    background: linear-gradient(
+      90deg,
+      var(--contact-a) 0%,
+      color-mix(in srgb, var(--contact-a) 84%, var(--contact-b)) 14%,
+      color-mix(in srgb, var(--contact-a) 62%, var(--contact-b)) 28%,
+      color-mix(in srgb, var(--contact-a) 34%, var(--contact-b)) 42%,
+      color-mix(in srgb, var(--contact-a) 12%, var(--contact-b)) 54%,
+      color-mix(in srgb, var(--contact-b) 78%, var(--contact-c)) 66%,
+      color-mix(in srgb, var(--contact-b) 54%, var(--contact-c)) 78%,
+      color-mix(in srgb, var(--contact-b) 28%, var(--contact-c)) 90%,
+      var(--contact-c) 100%
+    );
+    background-size: 100% auto;
+
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter: drop-shadow(0 0 18px rgba(0, 231, 183, 0.22));
+    filter:
+      drop-shadow(0 0 12px color-mix(in srgb, var(--contact-a) 20%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--contact-c) 16%, transparent));
   }
 
   .contact-hero__lead {
@@ -165,9 +181,9 @@ const schema = JSON.stringify({
 
   .contact-hero .hero-glow {
     background:
-      radial-gradient(circle at 18% 38%, rgba(125, 255, 114, 0.11) 0%, transparent 34%),
-      radial-gradient(circle at 54% 44%, rgba(0, 255, 183, 0.12) 0%, transparent 32%),
-      radial-gradient(circle at 84% 28%, rgba(0, 184, 255, 0.1) 0%, transparent 28%);
+      radial-gradient(circle at 18% 38%, color-mix(in srgb, var(--contact-a) 18%, transparent) 0%, transparent 30%),
+      radial-gradient(circle at 54% 44%, color-mix(in srgb, var(--contact-b) 18%, transparent) 0%, transparent 28%),
+      radial-gradient(circle at 84% 28%, color-mix(in srgb, var(--contact-c) 16%, transparent) 0%, transparent 24%);
   }
 
   .kontakt-sub {
@@ -212,7 +228,12 @@ const schema = JSON.stringify({
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 2px;
-    background: linear-gradient(90deg, #7DFF72, #00FFB7, #00B8FF);
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--contact-b) 84%, white 10%) 0%,
+      var(--contact-b) 54%,
+      color-mix(in srgb, var(--contact-b) 72%, black 18%) 100%
+    );
     border-radius: 2px 2px 0 0;
   }
 
@@ -248,7 +269,8 @@ const schema = JSON.stringify({
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.045),
-      0 0 16px rgba(0, 255, 183, 0.16);
+      0 0 14px color-mix(in srgb, var(--contact-b) 14%, transparent),
+      0 0 20px color-mix(in srgb, var(--contact-b) 10%, transparent);
     transition:
       transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
       border-color 0.35s ease,
@@ -260,9 +282,10 @@ const schema = JSON.stringify({
     width: 30px;
     height: 30px;
     filter:
-      brightness(1.16)
-      saturate(1.3)
-      drop-shadow(0 0 8px rgba(0, 255, 183, 0.24));
+      brightness(1.08)
+      saturate(1.08)
+      drop-shadow(0 0 6px color-mix(in srgb, var(--contact-b) 18%, transparent))
+      drop-shadow(0 0 12px color-mix(in srgb, var(--contact-b) 12%, transparent));
     transition: filter 0.45s ease;
   }
 
@@ -274,22 +297,22 @@ const schema = JSON.stringify({
       rgba(255, 255, 255, 0.035);
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 0 24px rgba(0, 255, 183, 0.18),
-      0 0 48px rgba(0, 184, 255, 0.14);
+      0 0 22px color-mix(in srgb, var(--contact-b) 18%, transparent),
+      0 0 36px color-mix(in srgb, var(--contact-b) 12%, transparent);
   }
 
   .contact-card:hover .card-icon svg {
     filter:
-      brightness(1.22)
-      saturate(1.42)
-      drop-shadow(0 0 12px rgba(0, 255, 183, 0.3))
-      drop-shadow(0 0 24px rgba(0, 184, 255, 0.22));
+      brightness(1.14)
+      saturate(1.12)
+      drop-shadow(0 0 10px color-mix(in srgb, var(--contact-b) 22%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--contact-b) 14%, transparent));
   }
 
   @media (max-width: 860px) {
     .contact-hero {
       padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 82px;
+      padding-bottom: 72px;
     }
 
     .kontakt-grid {
@@ -307,7 +330,7 @@ const schema = JSON.stringify({
   @media (max-width: 520px) {
     .contact-hero {
       padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 68px;
+      padding-bottom: 72px;
     }
 
     .contact-hero__title {

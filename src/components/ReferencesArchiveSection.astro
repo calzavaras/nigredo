@@ -128,6 +128,13 @@ if (pageNumber > 1) {
 
 <style is:global>
   .refs-hero {
+    --refs-a: #00d4c8;
+    --refs-b: #7c38ff;
+    --refs-c: #ff5030;
+    animation: refsCycle 90s ease-in-out infinite;
+  }
+
+  .refs-hero {
     min-height: min(620px, 68vh);
     display: flex;
     align-items: center;
@@ -149,15 +156,11 @@ if (pageNumber > 1) {
   }
 
   .refs-hero .badge {
-    margin-bottom: 1.15rem;
-    color: #fff0b3;
-    border-color: rgba(255, 184, 0, 0.42);
-    background:
-      linear-gradient(135deg, rgba(255, 200, 0, 0.18), rgba(255, 126, 38, 0.18), rgba(255, 68, 171, 0.12));
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.03),
-      0 0 0 1px rgba(255, 184, 0, 0.16),
-      0 0 32px rgba(255, 145, 0, 0.14);
+    margin-bottom: 0.95rem;
+    color: rgba(219, 253, 249, 0.94);
+    border-color: color-mix(in srgb, var(--refs-b) 34%, rgba(255, 255, 255, 0.22));
+    background: transparent;
+    box-shadow: none;
   }
 
   .refs-hero__title {
@@ -169,14 +172,27 @@ if (pageNumber > 1) {
   }
 
   .refs-hero .gradient-text {
-    background: linear-gradient(90deg, #ffd400 0%, #ff8a1f 38%, #ff44ab 76%, #ffd400 100%);
-    background-size: 260% auto;
-    animation: gradientPan 46s linear infinite;
+    background: linear-gradient(
+      90deg,
+      var(--refs-a) 0%,
+      color-mix(in srgb, var(--refs-a) 84%, var(--refs-b)) 14%,
+      color-mix(in srgb, var(--refs-a) 62%, var(--refs-b)) 28%,
+      color-mix(in srgb, var(--refs-a) 34%, var(--refs-b)) 42%,
+      color-mix(in srgb, var(--refs-a) 12%, var(--refs-b)) 54%,
+      color-mix(in srgb, var(--refs-b) 78%, var(--refs-c)) 66%,
+      color-mix(in srgb, var(--refs-b) 54%, var(--refs-c)) 78%,
+      color-mix(in srgb, var(--refs-b) 28%, var(--refs-c)) 90%,
+      var(--refs-c) 100%
+    );
+    background-size: 100% auto;
+
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter: drop-shadow(0 0 16px rgba(255, 145, 0, 0.2));
+    filter:
+      drop-shadow(0 0 12px color-mix(in srgb, var(--refs-a) 22%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--refs-c) 14%, transparent));
   }
 
   .refs-hero__lead {
@@ -187,9 +203,9 @@ if (pageNumber > 1) {
 
   .refs-hero .hero-glow {
     background:
-      radial-gradient(circle at 20% 36%, rgba(255, 212, 0, 0.12) 0%, transparent 40%),
-      radial-gradient(circle at 56% 46%, rgba(255, 138, 31, 0.12) 0%, transparent 34%),
-      radial-gradient(circle at 84% 30%, rgba(255, 68, 171, 0.1) 0%, transparent 28%);
+      radial-gradient(circle at 20% 36%, color-mix(in srgb, var(--refs-a) 18%, transparent) 0%, transparent 34%),
+      radial-gradient(circle at 56% 46%, color-mix(in srgb, var(--refs-b) 17%, transparent) 0%, transparent 30%),
+      radial-gradient(circle at 84% 30%, color-mix(in srgb, var(--refs-c) 16%, transparent) 0%, transparent 24%);
   }
 
   .refs-page-kicker {
@@ -429,8 +445,8 @@ if (pageNumber > 1) {
   }
 
   .refs-page-link.is-current {
-    background: rgba(255, 138, 31, 0.18);
-    border-color: rgba(255, 138, 31, 0.42);
+    background: color-mix(in srgb, var(--refs-b) 16%, transparent);
+    border-color: color-mix(in srgb, var(--refs-b) 34%, rgba(255, 255, 255, 0.18));
     color: #fff;
   }
 
@@ -445,7 +461,7 @@ if (pageNumber > 1) {
 
   .refs-final-section {
     padding-top: clamp(48px, 6vw, 72px);
-    padding-bottom: clamp(92px, 9vw, 128px);
+    padding-bottom: clamp(72px, 7vw, 96px);
   }
 
   .refs-final-cta {
@@ -542,7 +558,7 @@ if (pageNumber > 1) {
 
     .refs-final-section {
       padding-top: 40px;
-      padding-bottom: 92px;
+      padding-bottom: 72px;
     }
 
     .refs-final-cta h2 {

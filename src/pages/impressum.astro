@@ -65,8 +65,8 @@ const schema = JSON.stringify({
             <span class="cta-label">KONTAKT</span>
             <h2>Direkter Draht</h2>
             <p class="legal-p">
-              E-Mail: <a class="legal-link" href="/kontakt/">Kontaktformular</a><br>
-              Web: www.nigredo.ch
+              <span>E-Mail</span>: <a class="legal-link" href="/kontakt/">Kontaktformular</a><br>
+              <span>Web</span>: www.nigredo.ch
             </p>
           </div>
       </div>
@@ -95,6 +95,7 @@ const schema = JSON.stringify({
 
 <style>
   .legal-page {
+    --legal-accent: #a64dff;
     padding-top: var(--hero-offset-top-breadcrumb);
     padding-bottom: clamp(92px, 9vw, 120px);
   }
@@ -112,7 +113,11 @@ const schema = JSON.stringify({
   }
 
   .legal-hero .badge {
-    margin-bottom: 1.15rem;
+    margin-bottom: 0.95rem;
+    color: rgba(238, 225, 255, 0.94);
+    border-color: color-mix(in srgb, var(--legal-accent) 34%, rgba(255, 255, 255, 0.22));
+    background: transparent;
+    box-shadow: none;
   }
 
   .legal-hero__title {
@@ -127,6 +132,10 @@ const schema = JSON.stringify({
     max-width: 620px;
     font-size: var(--lead-size);
     line-height: 1.65;
+  }
+
+  .legal-page .hero-glow {
+    background: radial-gradient(circle at 42% 34%, color-mix(in srgb, var(--legal-accent) 16%, transparent) 0%, transparent 34%);
   }
 
   .legal-card-grid {
@@ -180,13 +189,13 @@ const schema = JSON.stringify({
   .legal-link {
     color: #ffffff;
     text-decoration: underline;
-    text-decoration-color: rgba(0, 210, 255, 0.45);
+    text-decoration-color: color-mix(in srgb, var(--legal-accent) 42%, transparent);
     text-underline-offset: 4px;
     transition: color 0.25s ease, text-decoration-color 0.25s ease;
   }
 
   .legal-link:hover {
-    color: var(--quaternary-accent);
+    color: color-mix(in srgb, var(--legal-accent) 82%, white 10%);
     text-decoration-color: currentColor;
   }
 
@@ -226,7 +235,7 @@ const schema = JSON.stringify({
   @media (max-width: 860px) {
     .legal-page {
       padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 88px;
+      padding-bottom: 72px;
     }
 
     .legal-card-grid {
