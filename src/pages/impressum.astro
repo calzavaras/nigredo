@@ -36,7 +36,7 @@ const schema = JSON.stringify({
   canonical="https://www.nigredo.ch/impressum/"
   schema={schema}
 >
-  <section class="section pt-sub legal-page legal-page--impressum" aria-labelledby="impressum-title">
+  <section class="section pt-sub legal-page legal-page--impressum" aria-labelledby="impressum-title" style="--legal-accent: #a64dff;">
     <div class="hero-glow"></div>
     <div class="container legal-page__container">
 
@@ -65,8 +65,8 @@ const schema = JSON.stringify({
             <span class="cta-label">KONTAKT</span>
             <h2>Direkter Draht</h2>
             <p class="legal-p">
-              <span>E-Mail</span>: <a class="legal-link" href="/kontakt/">Kontaktformular</a><br>
-              <span>Web</span>: www.nigredo.ch
+              E-Mail: <a class="legal-link" href="/kontakt/">Kontaktformular</a><br>
+              Web: <a class="legal-link" href="https://www.nigredo.ch/">www.nigredo.ch</a>
             </p>
           </div>
       </div>
@@ -92,183 +92,3 @@ const schema = JSON.stringify({
     </div>
   </section>
 </Layout>
-
-<style>
-  .legal-page {
-    --legal-accent: #a64dff;
-    padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(92px, 9vw, 120px);
-  }
-
-  .legal-page__container {
-    max-width: 960px;
-  }
-
-  .legal-page :global(.breadcrumb) {
-    margin-bottom: 28px;
-  }
-
-  .legal-hero {
-    max-width: 760px;
-  }
-
-  .legal-hero .badge {
-    margin-bottom: 0.95rem;
-    color: rgba(238, 225, 255, 0.94);
-    border-color: color-mix(in srgb, var(--legal-accent) 34%, rgba(255, 255, 255, 0.22));
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .legal-hero__title {
-    max-width: 940px;
-    font-size: var(--hero-title-size);
-    line-height: var(--hero-title-line-height);
-    letter-spacing: -0.02em;
-    margin-bottom: 0;
-  }
-
-  .legal-hero__lead {
-    max-width: 620px;
-    font-size: var(--lead-size);
-    line-height: 1.65;
-  }
-
-  .legal-page .hero-glow {
-    background: radial-gradient(circle at 42% 34%, color-mix(in srgb, var(--legal-accent) 16%, transparent) 0%, transparent 34%);
-  }
-
-  .legal-card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    margin-top: clamp(62px, 7vw, 80px);
-    align-items: stretch;
-  }
-
-  .legal-card {
-    padding: 32px 28px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.018)),
-      #0a0a0c;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.035),
-      0 18px 45px rgba(0, 0, 0, 0.22);
-  }
-
-  .legal-card::before {
-    display: none;
-  }
-
-  .legal-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.16);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.022)),
-      #0b0b0d;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 28px 60px rgba(0, 0, 0, 0.32);
-  }
-
-  .legal-card h2 {
-    font-size: clamp(1.25rem, 2vw, 1.48rem);
-    line-height: 1.18;
-    letter-spacing: -0.02em;
-    margin-bottom: 18px;
-  }
-
-  .legal-p {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.56);
-    line-height: 1.7;
-    margin: 0;
-  }
-
-  .legal-link {
-    color: #ffffff;
-    text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, var(--legal-accent) 42%, transparent);
-    text-underline-offset: 4px;
-    transition: color 0.25s ease, text-decoration-color 0.25s ease;
-  }
-
-  .legal-link:hover {
-    color: color-mix(in srgb, var(--legal-accent) 82%, white 10%);
-    text-decoration-color: currentColor;
-  }
-
-  .legal-text-block {
-    max-width: 880px;
-    margin-top: 96px;
-  }
-
-  .legal-section {
-    padding: 34px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-  }
-
-  .legal-section:first-child {
-    padding-top: 0;
-    border-top: 0;
-  }
-
-  .legal-text-block p {
-    color: rgba(255, 255, 255, 0.56);
-    max-width: var(--reading-width);
-    margin-bottom: 18px;
-    line-height: 1.72;
-  }
-
-  .legal-text-block p:last-child {
-    margin-bottom: 0;
-  }
-
-  .legal-text-block h2 {
-    font-size: clamp(1.32rem, 2vw, 1.64rem);
-    line-height: 1.18;
-    letter-spacing: -0.02em;
-    margin-bottom: 18px;
-  }
-
-  @media (max-width: 860px) {
-    .legal-page {
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 72px;
-    }
-
-    .legal-card-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin-top: 56px;
-    }
-
-    .legal-card {
-      min-height: auto;
-    }
-
-    .legal-hero__title {
-      font-size: var(--hero-title-size-tablet);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-  }
-
-  @media (max-width: 520px) {
-    .legal-page {
-      padding-bottom: 72px;
-    }
-
-    .legal-hero__title {
-      font-size: var(--hero-title-size-mobile);
-    }
-
-    .legal-card {
-      padding: 34px 26px;
-    }
-
-    .legal-text-block {
-      margin-top: 72px;
-    }
-  }
-</style>
