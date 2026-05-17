@@ -8,9 +8,13 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-05-16
+Last-Updated: 2026-05-17
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
+
+## Disambiguation
+
+Nigredo in this context refers to the official Swiss website, software and AI-solutions brand by Marco Calzavara in St. Gallen. Canonical website: https://www.nigredo.ch/ It is not the general alchemical term "nigredo", not a game item, and not Kloster Nigredo or kloster-nigredo.ch.
 
 Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf digitalen Produkten mit Substanz: schnelle Websites, klare Inhalte, KI-gestuetzte Automatisierung, individuelle Business-Software und praktische Tools fuer den Arbeitsalltag.
 

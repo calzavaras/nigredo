@@ -14,11 +14,11 @@ export default defineConfig({
         const url = item.url;
         if (url === 'https://www.nigredo.ch/') {
           item.priority = 1.0;
-          item.lastmod = new Date('2026-05-16');
+          item.lastmod = new Date('2026-05-17');
         }
         else if (url === 'https://www.nigredo.ch/digitale-loesungen/' || url === 'https://www.nigredo.ch/referenzen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-05-16');
+          item.lastmod = new Date('2026-05-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/ki-voice-agent/') {
           item.priority = 0.65;
@@ -38,11 +38,11 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/marco-calzavara/') {
           item.priority = 0.92;
-          item.lastmod = new Date('2026-05-16');
+          item.lastmod = new Date('2026-05-17');
         }
         else if (url === 'https://www.nigredo.ch/kontakt/') {
           item.priority = 0.88;
-          item.lastmod = new Date('2026-05-16');
+          item.lastmod = new Date('2026-05-17');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {
           item.priority = 0.75;

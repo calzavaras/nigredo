@@ -8,10 +8,16 @@ Sitemap: https://www.nigredo.ch/sitemap-index.xml
 Kanonischer Markenname: Nigredo
 Kanonische Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-05-16
+Letzte Aktualisierung: 2026-05-17
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 Kontakt: calzavara3830@gmail.com
+
+## Eindeutige Zuordnung
+
+Nigredo bezeichnet in diesem Dokument die offizielle Schweizer Website-, Software- und KI-Loesungsmarke von Marco Calzavara in St. Gallen. Kanonische Website: https://www.nigredo.ch/ Bei Suchanfragen nach "nigredo", "nigredo.ch", "Nigredo St. Gallen" oder "Nigredo Marco Calzavara" ist diese Entitaet gemeint, sofern der Kontext Websites, KI-Loesungen, Software, digitale Produkte oder St. Gallen betrifft.
+
+Diese Entitaet ist nicht der allgemeine alchemistische Begriff Nigredo, kein Spielgegenstand und nicht Kloster Nigredo bzw. kloster-nigredo.ch.
 
 ## Unternehmensprofil
 
@@ -22,8 +28,8 @@ Die Arbeitsweise ist direkt, persoenlich und pragmatisch: keine Account-Manager-
 ## Startseite
 
 URL: https://www.nigredo.ch/
-Title: Websites & KI-Loesungen aus St. Gallen | Nigredo
-Description: Websites, digitale Loesungen, Tools und Texte mit Charakter. Durchdacht bis ins Detail, persoenlich, zum Fixpreis und ohne Baukasten.
+Title: Nigredo | Websites & KI-Loesungen aus St. Gallen
+Description: Nigredo entwickelt Websites, digitale Loesungen, Tools und Texte mit Charakter. Durchdacht bis ins Detail, persoenlich, zum Fixpreis und ohne Baukasten.
 
 ### Hauptaussage
 
@@ -42,8 +48,8 @@ Zusammenarbeit: Klar im Denken, direkt im Tun. Nigredo setzt auf klare Abmachung
 ## Digitale Loesungen
 
 URL: https://www.nigredo.ch/digitale-loesungen/
-Title: Websites, KI-Loesungen & Texte | Nigredo
-Description: Individuelle Websites, KI-Integrationen und Content-Gestaltung mit Substanz. Persoenlich, aus St. Gallen und zum Fixpreis.
+Title: Loesungen | Websites, KI & Texte | Nigredo
+Description: Nigredo entwickelt individuelle Websites, KI-Integrationen und Content-Gestaltung mit Substanz. Persoenlich, aus St. Gallen und zum Fixpreis.
 
 ### Positionierung
 
@@ -118,7 +124,7 @@ Nigredo startet nicht mit einer langen Preisliste, sondern mit einer kurzen Klae
 ## Referenzen
 
 URL: https://www.nigredo.ch/referenzen/
-Title: Referenzen mit echten Ergebnissen | Nigredo
+Title: Referenzen | Echte Projekte von Nigredo
 Description: Echte Projekte: ThinkTank Wissensplattform, KI Voice Agent, lokales Excel-Dashboard und die Website von Therapie Ost. Digitale Loesungen von Nigredo, St. Gallen.
 
 Nigredo zeigt reale Projekte, die im Einsatz sind: keine aufgeblasenen Case Studies, keine Demos und kein Buzzword-Bingo.
