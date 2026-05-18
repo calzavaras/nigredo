@@ -47,6 +47,7 @@ const _modalBackground = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
+  initFaqAnchorNavigation();
   initScrollAnimations();
   if (document.querySelector('[data-refs-grid]')) initReferencesReveal();
   if (document.querySelector('#mailBtn, .reveal-mail, .open-contact')) initSpamProtection();
@@ -62,6 +63,62 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.hero-glow').forEach(el => el.classList.add('animated'));
   }, TIMING.HERO_GLOW_DELAY);
 });
+
+function initFaqAnchorNavigation() {
+  const faqNavLinks = Array.from(document.querySelectorAll('.faq-article__nav a[href^="#"]'));
+  if (faqNavLinks.length === 0) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function getAnchorOffset() {
+    const floatingHeader = document.querySelector('.floating-header');
+    const headerHeight = floatingHeader ? floatingHeader.getBoundingClientRect().height : 0;
+    return Math.ceil(headerHeight + 24);
+  }
+
+  function scrollToHash(hash, updateHistory = false) {
+    if (!hash || hash === '#') return;
+
+    const target = document.querySelector(hash);
+    if (!(target instanceof HTMLElement)) return;
+
+    const top = Math.max(
+      0,
+      Math.round(target.getBoundingClientRect().top + window.scrollY - getAnchorOffset())
+    );
+
+    if (updateHistory) {
+      if (window.location.hash === hash) {
+        history.replaceState(null, '', hash);
+      } else {
+        history.pushState(null, '', hash);
+      }
+    }
+
+    window.scrollTo({
+      top,
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    });
+  }
+
+  faqNavLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+      if (!href || href === '#') return;
+      event.preventDefault();
+      scrollToHash(href, true);
+    });
+  });
+
+  window.addEventListener('hashchange', () => {
+    if (!document.querySelector('.faq-article')) return;
+    requestAnimationFrame(() => scrollToHash(window.location.hash, false));
+  });
+
+  if (window.location.hash) {
+    requestAnimationFrame(() => scrollToHash(window.location.hash, false));
+  }
+}
 
 function initReferencesReveal() {
   const grid = document.querySelector('[data-refs-grid]');

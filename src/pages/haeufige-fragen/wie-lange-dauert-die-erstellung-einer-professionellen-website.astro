@@ -2,9 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
-const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/';
-const question = 'Was kostet eine professionelle Website?';
-const answer = 'Eine professionelle Website hat keinen seriösen Einheitspreis. Für KMU und Selbständige in der Schweiz beginnt eine sauber umgesetzte Website meist im unteren vierstelligen Bereich. Der genaue Preis hängt vor allem von Ziel, Umfang, Inhalt, Gestaltung und technischen Anforderungen ab.';
+const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/';
+const question = 'Wie lange dauert die Erstellung einer professionellen Website?';
+const answer = 'Die Erstellung einer professionellen Website dauert je nach Umfang, Inhalt und Abstimmung unterschiedlich lang. Eine schlanke Website kann in wenigen Wochen realistisch umgesetzt werden, während ein umfangreicherer Auftritt mit Textarbeit, Suchmaschinenoptimierung und mehreren Freigaben entsprechend mehr Zeit braucht.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -36,14 +36,14 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Was kostet eine professionelle Website? | Nigredo",
-      "description": "Was eine professionelle Website in der Schweiz kostet, wovon der Preis abhängt und wie sich Website-Kosten für KMU und Selbständige seriös einschätzen lassen.",
+      "name": "Wie lange dauert die Erstellung einer professionellen Website? | Nigredo",
+      "description": "Wie lange eine professionelle Website realistisch dauert, welche Projektphasen Zeit brauchen und wodurch sich ein Launch beschleunigen oder verzögern kann.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "mainEntity": { "@id": `${pageUrl}#faq` },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
-      "datePublished": "2026-05-16",
+      "datePublished": "2026-05-18",
       "dateModified": "2026-05-18",
       "isAccessibleForFree": true
     }
@@ -52,13 +52,13 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Was kostet eine professionelle Website? | Nigredo"
-  description="Was eine professionelle Website in der Schweiz kostet, wovon der Preis abhängt und wie sich Website-Kosten für KMU und Selbständige seriös einschätzen lassen."
+  title="Wie lange dauert die Erstellung einer professionellen Website? | Nigredo"
+  description="Wie lange eine professionelle Website realistisch dauert, welche Projektphasen Zeit brauchen und wodurch sich ein Launch beschleunigen oder verzögern kann."
   canonical={pageUrl}
-  ogTitle="Was kostet eine professionelle Website? | Nigredo"
-  ogDescription="Eine klare Antwort darauf, wovon Website-Kosten für KMU und Selbständige in der Schweiz abhängen."
-  twitterTitle="Was kostet eine professionelle Website? | Nigredo"
-  twitterDescription="Was eine professionelle Website kostet und wovon der Preis wirklich abhängt."
+  ogTitle="Wie lange dauert die Erstellung einer professionellen Website? | Nigredo"
+  ogDescription="Realistische Zeitrahmen, typische Projektphasen und die wichtigsten Verzögerungsfaktoren bei professionellen Websites."
+  twitterTitle="Wie lange dauert die Erstellung einer professionellen Website? | Nigredo"
+  twitterDescription="Wie lange eine professionelle Website dauert und wovon der Zeitrahmen abhängt."
   schema={schema}
 >
   <article class="section faq-article" aria-labelledby="article-title">
@@ -71,83 +71,83 @@ const schema = JSON.stringify({
       ]} />
 
       <header class="faq-article__header fade-up">
-        <span class="badge badge--purple">Website-Kosten</span>
+        <span class="badge badge--purple">Projektablauf</span>
         <h1 id="article-title">{question}</h1>
         <p>
-          Eine professionelle Website hat keinen seriösen Einheitspreis. Für KMU und Selbständige in der Schweiz beginnt eine sauber umgesetzte Website meist im unteren vierstelligen Bereich. Ob es dabei bleibt, hängt von Ziel, Umfang, Inhalt, Gestaltung und Technik ab.
+          Die Dauer hängt nicht nur von der Seitenzahl ab. Entscheidend sind vor allem Klarheit im Ziel, verfügbare Inhalte, Abstimmungswege und technische Anforderungen. Eine schlanke Website kann deutlich schneller online gehen als ein Auftritt mit viel Textarbeit, mehreren Freigaben und zusätzlichen Funktionen.
         </p>
       </header>
 
       <nav class="faq-article__nav fade-up delay-100" aria-label="Inhaltsübersicht">
-        <a href="#einheitspreis">Warum es keinen Einheitspreis gibt</a>
-        <a href="#kostentreiber">Welche Faktoren den Preis beeinflussen</a>
-        <a href="#enthalten">Was enthalten sein sollte</a>
-        <a href="#schnellloesung">Wann eine günstige Lösung reicht</a>
-        <a href="#einschaetzung">Wie Nigredo Kosten einschätzt</a>
+        <a href="#abhaengigkeit">Wovon die Dauer abhängt</a>
+        <a href="#ablauf">Typischer Projektablauf</a>
+        <a href="#verzoegerung">Was Projekte verzögert</a>
+        <a href="#schneller">Wann es schneller geht</a>
+        <a href="#einschaetzung">Wie Nigredo den Zeitrahmen einschätzt</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
         <p class="lead-answer">
-          Als Orientierung gilt: Eine schlanke Website mit wenigen klaren Seiten kostet weniger als ein Auftritt mit Konzept, neuen Texten, Suchmaschinenoptimierung und besonderen Funktionen. Je klarer Ziel und Umfang sind, desto genauer lässt sich der Preis seriös einschätzen.
+          Als grobe Orientierung gilt: Je klarer Ziele, Inhalte und Zuständigkeiten sind, desto schneller lässt sich eine Website umsetzen. Nicht die Technik allein kostet Zeit, sondern oft die inhaltliche Abstimmung davor.
         </p>
 
-        <h2 id="einheitspreis">Warum es keinen seriösen Einheitspreis gibt</h2>
+        <h2 id="abhaengigkeit">Wovon die Dauer einer Website wirklich abhängt</h2>
         <p>
-          Die Seitenzahl allein sagt wenig aus. Eine einfache Präsenz braucht weniger Konzeption, Inhalt und Technik als eine Website für ein KMU mit mehreren Leistungsseiten, klarer Positionierung, Textarbeit oder individueller Gestaltung.
+          Eine professionelle Website dauert unterschiedlich lang, weil nicht jedes Projekt dieselbe Ausgangslage hat. Gibt es bereits gute Texte, Bilder und eine klare Struktur, verkürzt das den Weg deutlich. Müssen Positionierung, Inhalt und Seitenaufbau zuerst gemeinsam entwickelt werden, braucht das entsprechend mehr Zeit.
         </p>
         <p>
-          Ein fixer Preis ohne Blick auf Ziel, Inhalt und Aufgabe klingt bequem, ist aber oft ungenau. Entweder werden unnötige Leistungen mitverkauft oder wichtige Arbeit fehlt und muss später aufwändig nachgeholt werden.
-        </p>
-
-        <h2 id="kostentreiber">Welche Faktoren den Preis beeinflussen</h2>
-        <p>
-          Entscheidend sind vor allem Umfang, Inhaltsarbeit, Designanspruch, technische Anforderungen und Sichtbarkeit. Müssen Texte neu entwickelt werden? Gibt es bereits gutes Bildmaterial? Soll die Website nur informieren oder aktiv Anfragen führen? Braucht es Formulare, Schnittstellen oder spezielle Funktionen?
-        </p>
-        <p>
-          Auch Suchmaschinenoptimierung ist kein Zusatzknopf am Ende. Gute Titel, klare Seitenstruktur, sauber formulierte Inhalte und schnelle Ladezeiten gehören zur Umsetzung selbst. Genau das beeinflusst den Aufwand und damit auch den Preis.
+          Auch technische Anforderungen spielen hinein. Ein einfacher Auftritt mit wenigen Seiten ist schneller umgesetzt als eine Website mit komplexen Formularen, speziellen Integrationen oder mehreren Entscheidungsschlaufen im Unternehmen.
         </p>
 
-        <h2 id="enthalten">Was bei einer professionellen Website enthalten sein sollte</h2>
+        <h2 id="ablauf">Wie ein typischer Projektablauf aussieht</h2>
         <p>
-          Eine professionelle Website sollte auf Smartphone, Tablet und Desktop sauber funktionieren, schnell laden und eine klare Führung haben. Besucher müssen rasch verstehen, worum es geht, für wen das Angebot geeignet ist und was der nächste sinnvolle Schritt ist.
+          Meist beginnt ein Website-Projekt mit der Klärung von Ziel, Umfang und Prioritäten. Danach folgen Struktur, Inhalt, Gestaltung und Umsetzung. Zum Schluss kommen Feinschliff, Prüfung auf verschiedenen Geräten und der Launch.
         </p>
         <p>
-          Wichtig ist zudem, dass die Website nicht nur gut aussieht, sondern inhaltlich trägt. Verständliche Texte, eine nachvollziehbare Struktur und eine saubere technische Basis sind oft wertvoller als oberflächliche Effekte.
-        </p>
-
-        <h2 id="schnellloesung">Wann eine günstige Lösung reicht und wann nicht</h2>
-        <p>
-          Eine günstige Lösung kann sinnvoll sein, wenn nur eine sehr einfache Präsenz gebraucht wird und keine besonderen Anforderungen bestehen. Für ein kleines Projekt oder eine bewusst reduzierte Website muss nicht automatisch ein grosser Aufbau entstehen.
-        </p>
-        <p>
-          Wenn die Website aber Vertrauen tragen, in Google gefunden werden oder echte Anfragen bringen soll, reicht eine reine Schnelllösung oft nicht. Dann lohnt sich eine saubere Grundlage, weil spätere Korrekturen meist teurer sind als eine klare Umsetzung von Anfang an.
+          Diese Phasen müssen nicht kompliziert sein, aber sie brauchen klare Entscheidungen. Wer früh weiss, was die Website leisten soll, spart oft mehr Zeit als jemand, der erst während der Umsetzung grundlegende Fragen klärt.
         </p>
 
-        <h2 id="einschaetzung">Wie Nigredo die Kosten einschätzt</h2>
+        <h2 id="verzoegerung">Was Projekte am häufigsten verzögert</h2>
         <p>
-          Nigredo startet nicht mit einer langen Preisliste, sondern mit einer kurzen Klärung: Was soll die Website leisten? Welche Inhalte gibt es schon? Was muss neu entstehen? Welche Funktionen sind wirklich nötig? Daraus ergibt sich ein konkreter Umfang und damit eine saubere Kosteneinschätzung.
+          Die grössten Verzögerungen entstehen selten im Code. Häufig bremsen fehlende Inhalte, unklare Freigaben, lange Rückmeldeschlaufen oder nachträgliche Richtungswechsel. Wenn Texte, Bilder oder Zuständigkeiten erst spät geklärt werden, verschiebt sich der Zeitplan schnell.
         </p>
         <p>
-          Wer vor allem wissen will, wann ein Projekt realistisch online gehen kann, findet die Antwort bei <a href="/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/">der Frage zur Projektdauer</a>. Wer klären will, wie viel später selbst gepflegt werden kann, findet die passende Einordnung bei <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">der Frage zur Website-Pflege</a>.
+          Auch zu viele gleichzeitige Wünsche können ein Projekt strecken. Deshalb ist es oft sinnvoller, zuerst die klare Kernversion online zu bringen und zusätzliche Ausbaustufen später sauber nachzuziehen.
+        </p>
+
+        <h2 id="schneller">Wann eine Website schneller online sein kann</h2>
+        <p>
+          Schneller geht es, wenn Ziel, Inhalte und Entscheidungswege früh stehen. Wer weiss, welche Seiten wirklich nötig sind, vorhandenes Material geordnet bereitstellt und Feedback gebündelt gibt, schafft eine deutlich bessere Taktung im Projekt.
+        </p>
+        <p>
+          Das heisst nicht, dass Qualität geopfert werden muss. Im Gegenteil: Ein fokussierter Umfang macht die Umsetzung oft nicht nur schneller, sondern auch klarer und wirksamer.
+        </p>
+
+        <h2 id="einschaetzung">Wie Nigredo den Zeitrahmen realistisch einschätzt</h2>
+        <p>
+          Nigredo schaut zuerst auf Aufgabe, Umfang und Abhängigkeiten. Welche Inhalte sind vorhanden? Wer entscheidet mit? Gibt es feste Termine oder saisonale Gründe für einen Launch? Daraus entsteht ein realistischer Zeitrahmen statt eines schönen, aber unbrauchbaren Wunschdatums.
+        </p>
+        <p>
+          Wer zuerst die Kosten einordnen will, findet die passende Antwort bei <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">der Frage zu den Website-Kosten</a>. Wer wissen will, wie viel später selbst gepflegt werden kann, findet die Einordnung bei <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">der Frage zur Website-Pflege</a>.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
           <h2 id="related-faqs-title">Verwandte Fragen</h2>
           <div class="related-faqs__grid">
-            <a href="/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/">
-              <strong>Wie lange dauert die Erstellung einer professionellen Website?</strong>
-              <span>Realistische Zeitrahmen, Projektphasen und typische Verzögerungen.</span>
+            <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">
+              <strong>Was kostet eine professionelle Website?</strong>
+              <span>Welche Faktoren den Preis beeinflussen und wie sich Kosten seriös einschätzen lassen.</span>
             </a>
             <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">
               <strong>Kann ich meine professionelle Website später selbst bearbeiten und pflegen?</strong>
-              <span>Wann ein CMS sinnvoll ist und wie viel Eigenständigkeit realistisch bleibt.</span>
+              <span>Wann ein CMS sinnvoll ist und wie viel Eigenständigkeit nach dem Launch bleibt.</span>
             </a>
           </div>
         </section>
 
         <div class="article-links">
           <a href="/haeufige-fragen/">Zurück zu den häufigen Fragen</a>
-          <a href="/kontakt/">Kosten für meine Website einschätzen lassen</a>
+          <a href="/kontakt/">Projekt und Zeitrahmen besprechen</a>
         </div>
       </div>
     </div>

@@ -46,11 +46,19 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {
           item.priority = 0.75;
-          item.lastmod = new Date('2026-05-16');
+          item.lastmod = new Date('2026-05-18');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/') {
           item.priority = 0.7;
-          item.lastmod = new Date('2026-05-16');
+          item.lastmod = new Date('2026-05-18');
+        }
+        else if (url === 'https://www.nigredo.ch/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/') {
+          item.priority = 0.7;
+          item.lastmod = new Date('2026-05-18');
+        }
+        else if (url === 'https://www.nigredo.ch/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/') {
+          item.priority = 0.7;
+          item.lastmod = new Date('2026-05-18');
         }
         else if (url === 'https://www.nigredo.ch/impressum/' || url === 'https://www.nigredo.ch/datenschutz/') {
           item.priority = 0.3;

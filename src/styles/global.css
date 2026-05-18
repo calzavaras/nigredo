@@ -718,6 +718,10 @@ a:focus:not(:focus-visible),
   transform: translateY(0);
 }
 
+.faq-article__content h2[id] {
+  scroll-margin-top: calc(var(--header-safe-top) + 110px);
+}
+
 .delay-100 {
   transition-delay: 100ms;
 }

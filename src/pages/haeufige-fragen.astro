@@ -9,8 +9,22 @@ const faqEntries = [
     id: 'faq-cost',
     category: 'Website-Kosten',
     question: 'Was kostet eine professionelle Website?',
-    answer: 'Eine professionelle Website kostet je nach Umfang, Inhalt, Designanspruch und technischer Umsetzung unterschiedlich viel. Für KMU und Selbständige in der Schweiz beginnt eine seriös umgesetzte Website meist im unteren vierstelligen Bereich; umfangreichere Auftritte mit Konzept, Text, SEO und Funktionen liegen entsprechend höher.',
+    answer: 'Eine professionelle Website hat keinen seriösen Einheitspreis. Für KMU und Selbständige in der Schweiz beginnt eine sauber umgesetzte Website meist im unteren vierstelligen Bereich. Entscheidend sind Umfang, Inhalt, Gestaltung, Technik und das Ziel der Website.',
     href: '/haeufige-fragen/was-kostet-eine-professionelle-website/'
+  },
+  {
+    id: 'faq-timeline',
+    category: 'Projektablauf',
+    question: 'Wie lange dauert die Erstellung einer professionellen Website?',
+    answer: 'Eine schlanke professionelle Website kann in wenigen Wochen online sein. Mehr Zeit braucht es, wenn Texte, Struktur, Bildmaterial, SEO oder Freigaben zuerst erarbeitet werden müssen. Der wichtigste Beschleuniger ist ein klarer Umfang.',
+    href: '/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/'
+  },
+  {
+    id: 'faq-maintenance',
+    category: 'Pflege & CMS',
+    question: 'Kann ich meine professionelle Website später selbst bearbeiten und pflegen?',
+    answer: 'Ja, viele Inhalte lassen sich später selbst pflegen, wenn die Website entsprechend geplant wird. Ob ein CMS sinnvoll ist, hängt davon ab, wie oft Inhalte geändert werden und wer intern damit arbeitet. Nicht jede Website braucht dafür ein grosses System.',
+    href: '/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/'
   }
 ];
 
@@ -26,6 +40,23 @@ const schema = JSON.stringify({
       ]
     },
     {
+      "@type": ["CollectionPage", "WebPage"],
+      "@id": `${pageUrl}#webpage`,
+      "url": pageUrl,
+      "name": "Häufige Fragen zu professionellen Websites | Nigredo",
+      "description": "Klare Antworten auf häufige Fragen zu Kosten, Dauer und späterer Pflege professioneller Websites für KMU und Selbständige in der Schweiz.",
+      "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
+      "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
+      "mainEntity": { "@id": `${pageUrl}#faq` },
+      "hasPart": { "@id": `${pageUrl}#faqs` },
+      "about": { "@id": "https://www.nigredo.ch/#organization" },
+      "inLanguage": "de-CH",
+      "datePublished": "2026-05-16",
+      "dateModified": "2026-05-18",
+      "isAccessibleForFree": true,
+      "significantLink": faqEntries.map((entry) => `https://www.nigredo.ch${entry.href}`)
+    },
+    {
       "@type": "FAQPage",
       "@id": `${pageUrl}#faq`,
       "mainEntity": faqEntries.map((entry) => ({
@@ -38,31 +69,30 @@ const schema = JSON.stringify({
       }))
     },
     {
-      "@type": "WebPage",
-      "@id": `${pageUrl}#webpage`,
-      "url": pageUrl,
-      "name": "Häufige Fragen | Nigredo",
-      "description": "Kurze Antworten auf wichtige Fragen zu professionellen Websites, Kosten und sinnvoller Umsetzung.",
-      "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
-      "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
-      "mainEntity": { "@id": `${pageUrl}#faq` },
-      "inLanguage": "de-CH",
-      "datePublished": "2026-05-16",
-      "dateModified": "2026-05-16",
-      "isAccessibleForFree": true
+      "@type": "ItemList",
+      "@id": `${pageUrl}#faqs`,
+      "name": "Häufige Fragen zu professionellen Websites",
+      "numberOfItems": faqEntries.length,
+      "itemListElement": faqEntries.map((entry, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "url": `https://www.nigredo.ch${entry.href}`,
+        "name": entry.question,
+        "description": entry.answer
+      }))
     }
   ]
 });
 ---
 
 <Layout
-  title="Häufige Fragen | Nigredo"
-  description="Kurze Antworten auf wichtige Fragen zu professionellen Websites, Kosten und sinnvoller Umsetzung. Klar, direkt und ohne Verkaufsnebel."
+  title="Häufige Fragen zu professionellen Websites | Nigredo"
+  description="Klare Antworten auf häufige Fragen zu Kosten, Dauer und späterer Pflege professioneller Websites für KMU und Selbständige in der Schweiz."
   canonical={pageUrl}
-  ogTitle="Häufige Fragen | Nigredo"
-  ogDescription="Kurze Antworten auf wichtige Fragen zu professionellen Websites, Kosten und sinnvoller Umsetzung."
-  twitterTitle="Häufige Fragen | Nigredo"
-  twitterDescription="Kurze Antworten auf wichtige Fragen zu professionellen Websites und Kosten."
+  ogTitle="Häufige Fragen zu professionellen Websites | Nigredo"
+  ogDescription="Antworten zu Kosten, Dauer und Pflege professioneller Websites. Prägnant, verständlich und hilfreich für KMU und Selbständige."
+  twitterTitle="Häufige Fragen zu professionellen Websites | Nigredo"
+  twitterDescription="Antworten zu Kosten, Dauer und Pflege professioneller Websites."
   schema={schema}
 >
   <section class="section faq-overview" aria-labelledby="faq-title">
@@ -77,7 +107,7 @@ const schema = JSON.stringify({
         <span class="badge badge--yellow">FAQ</span>
         <h1 id="faq-title">Häufige <span class="gradient-text">Fragen.</span></h1>
         <p>
-          Kurze Antworten auf Fragen, die vor einer professionellen Website wirklich zählen. Die Übersicht bleibt bewusst knapp; ausführlichere Erklärungen stehen dort, wo sie sinnvoll sind.
+          Drei Fragen tauchen vor einer professionellen Website fast immer auf: Was kostet sie, wie lange dauert sie und wie selbständig lässt sie sich später pflegen? Genau darauf geben diese Antworten eine klare Orientierung.
         </p>
       </div>
 
@@ -104,6 +134,7 @@ const schema = JSON.stringify({
           </a>
         ))}
       </div>
+
     </div>
   </section>
 </Layout>
@@ -164,7 +195,6 @@ const schema = JSON.stringify({
       var(--faq-c) 100%
     );
     background-size: 100% auto;
-
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -280,10 +310,6 @@ const schema = JSON.stringify({
     color: rgba(255, 255, 255, 0.62);
     font-size: 0.99rem;
     line-height: 1.72;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .faq-card__link {
@@ -373,7 +399,6 @@ const schema = JSON.stringify({
     .faq-card__body p {
       font-size: 0.98rem;
       line-height: 1.68;
-      -webkit-line-clamp: 5;
     }
 
     .faq-card__link {
