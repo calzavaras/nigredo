@@ -9,6 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const PUBLIC_DIR = join(ROOT, 'public');
 const STATIC_DIR = join(ROOT, 'static');
+const HTACCESS_PATH = join(STATIC_DIR, '.htaccess');
 
 const errors = [];
 const warnings = [];
@@ -288,6 +289,18 @@ async function validateSitemap() {
   }
 }
 
+async function validateServerConfig() {
+  const htaccess = await readFile(HTACCESS_PATH, 'utf8');
+
+  if (!/AddDefaultCharset\s+UTF-8/i.test(htaccess)) {
+    addError('static/.htaccess: missing AddDefaultCharset UTF-8');
+  }
+
+  if (!/HTTP_HOST\}\s+!\^www\\\.nigredo\\\.ch\$/i.test(htaccess) || !/https:\/\/www\.nigredo\.ch%\{REQUEST_URI\}.*R=301/i.test(htaccess)) {
+    addError('static/.htaccess: missing canonical www 301 redirect');
+  }
+}
+
 async function main() {
   for await (const file of walk(PUBLIC_DIR)) {
     if (!file.endsWith('.html')) continue;
@@ -297,6 +310,7 @@ async function main() {
   }
 
   await validateSitemap();
+  await validateServerConfig();
 
   for (const file of ['llms.txt', 'llms-full.txt']) {
     const fullPath = join(STATIC_DIR, file);

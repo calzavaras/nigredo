@@ -6,7 +6,7 @@ const navLinks = [
   { href: '/digitale-loesungen/', label: 'Lösungen' },
   { href: '/referenzen/', label: 'Referenzen' },
   { href: '/marco-calzavara/', label: 'Über mich' },
-  { href: '/kontakt/', label: 'Kontakt', mobileOnly: true },
+  { href: '/kontakt/', label: 'Kontakt', mobileOnly: true, isContact: true },
 ];
 
 function isActive(href: string): boolean {
@@ -32,6 +32,7 @@ function isActive(href: string): boolean {
             class:list={[
               { active: isActive(link.href) },
               { 'nav-link--mobile-only': link.mobileOnly },
+              { 'nav-link--contact': link.isContact },
             ]}
             aria-current={isActive(link.href) ? 'page' : undefined}
           >
@@ -40,7 +41,7 @@ function isActive(href: string): boolean {
         ))}
       </div>
       <div class="header-actions">
-        <a href="/kontakt/" class="btn btn-primary header-cta">Kontakt</a>
+        <a href="/kontakt/" class="btn btn-primary header-cta" aria-label="Kontakt aufnehmen">Anfragen</a>
         <button class="menu-toggle" aria-label="Menü öffnen" aria-controls="primary-navigation" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>

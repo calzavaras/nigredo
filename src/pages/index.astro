@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -8,7 +9,7 @@ const schema = JSON.stringify({
       "@type": ["WebPage", "HomePage"],
       "@id": "https://www.nigredo.ch/#webpage",
       "url": "https://www.nigredo.ch/",
-      "name": "Websites & Digitale Lösungen | Marco Calzavara – St. Gallen",
+      "name": "Nigredo | Websites, KI-Lösungen und digitale Tools aus St. Gallen",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "mainEntity": { "@id": "https://www.nigredo.ch/#organization" },
@@ -21,9 +22,9 @@ const schema = JSON.stringify({
         "https://www.nigredo.ch/kontakt/",
         "https://www.nigredo.ch/haeufige-fragen/"
       ],
-      "description": "Offizielle Startseite von Nigredo. Websites, KI-Lösungen und digitale Produkte zum Fixpreis von Marco Calzavara aus St. Gallen.",
+      "description": "Nigredo entwickelt Websites, KI-Lösungen, digitale Tools und Texte für Selbstständige, KMU und Organisationen, die online klar verstanden werden möchten.",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-05-17",
+      "dateModified": "2026-05-18",
       "inLanguage": "de-CH"
     },
     {
@@ -38,30 +39,36 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Nigredo | Websites & KI-Lösungen aus St. Gallen"
-  description="Nigredo entwickelt Websites, digitale Lösungen, Tools und Texte mit Charakter. Durchdacht bis ins Detail, persönlich, zum Fixpreis und ohne Baukasten."
+  title="Nigredo | Websites, KI-Lösungen & digitale Tools aus St. Gallen"
+  description="Nigredo entwickelt Websites, KI-Lösungen, digitale Tools und Texte für Selbstständige, KMU und Organisationen, die online klar verstanden werden möchten."
   canonical="https://www.nigredo.ch/"
-  ogTitle="Websites & Digitale Lösungen, die wirklich zu dir passen."
-  ogDescription="Kein Baukasten, keine Kompromisse. Nigredo entwickelt digitale Produkte mit Substanz. Persönlich. Fixpreis. Aus St. Gallen."
-  ogImageAlt="Nigredo - Exklusive Websites & Digitale Lösungen"
-  twitterTitle="Websites & Digitale Lösungen | Nigredo"
-  twitterDescription="Was gut gemacht ist, braucht keine Erklärung. Websites und KI-Lösungen aus St. Gallen."
+  ogTitle="Ich arbeite weiter, wo andere aufhören."
+  ogDescription="Websites, KI-Lösungen, digitale Tools und Texte für Selbstständige, KMU und Organisationen, die online klar verstanden werden möchten."
+  ogImageAlt="Nigredo - Websites, KI-Lösungen und digitale Tools aus St. Gallen"
+  twitterTitle="Nigredo | Websites, KI-Lösungen & digitale Tools"
+  twitterDescription="Persönlich aus St. Gallen. Durchdacht bis ins Detail und umgesetzt mit klarer Strategie, sauberer Technik und ohne Baukasten."
   schema={schema}
 >
   <section class="section pt-hero home-hero" aria-labelledby="hero-title">
     <div class="hero-glow"></div>
     <div class="container home-hero__inner fade-up">
+      <div class="home-breadcrumb-spacer" aria-hidden="true">
+        <Breadcrumb items={[
+          { label: 'Start', href: '/' },
+          { label: 'Start' }
+        ]} />
+      </div>
 
       <span class="badge badge--yellow">DIGITALE PRODUKTE. IM MASSANZUG.</span>
 
       <h1 id="hero-title" class="home-hero__title">
-        Ich arbeite dort weiter, <br class="hidden-mobile">
+        Ich arbeite weiter,<br>
         <span class="gradient-text">wo andere aufhören.</span>
       </h1>
 
       <p class="hero-lead">
-        Websites, digitale Lösungen, Tools und Texte mit Charakter. <br class="hidden-tablet">
-        Durchdacht bis ins Detail und gemacht, um langfristig zu bleiben.
+        Websites, KI Lösungen, digitale Tools und Texte für Selbstständige, KMU und Organisationen, die online klar verstanden werden möchten. <br class="hidden-tablet">
+        Durchdacht bis ins Detail, persönlich aus St. Gallen und umgesetzt mit klarer Strategie, sauberer Technik und einem Ergebnis, das nicht nach Baukasten aussieht.
       </p>
 
       <div class="hero-cta-group">
@@ -76,25 +83,28 @@ const schema = JSON.stringify({
       <h2 id="values-title" class="visually-hidden">So arbeite ich</h2>
       <div class="grid-3">
 
-        <article class="card value-card fade-up" style="--icon-gradient: linear-gradient(180deg, color-mix(in srgb, var(--home-b) 94%, white 14%) 0%, color-mix(in srgb, var(--home-b) 72%, black 18%) 100%); --icon-shadow: color-mix(in srgb, var(--home-b) 30%, transparent);">
+        <article class="card value-card fade-up" style="--icon-gradient: linear-gradient(180deg, #8d7cff 0%, #8d7cff 100%); --icon-shadow: rgba(141, 124, 255, 0.34);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-verstaendnis.svg'); mask-image: url('/assets/icons/icon-verstaendnis.svg');"></div></div>
           <span class="cta-label">VERSTÄNDNIS</span>
           <h3>Erst verstehen. Dann veredeln.</h3>
-          <p>Ich denke mich in dein Vorhaben ein, erkenne, worauf es wirklich ankommt, und entwickle daraus eine Lösung mit klarer Richtung, Tiefe und Substanz.</p>
+          <p>Ich denke mich in dein Vorhaben ein, erkenne, worauf es wirklich ankommt, und entwickle daraus eine Website, KI Lösung oder digitale Anwendung mit klarer Richtung, Substanz und Wirkung.</p>
+          <p>Nicht einfach schön. Nicht einfach technisch. Sondern passend zu dir, deinem Angebot und den Menschen, die du erreichen möchtest.</p>
         </article>
 
-        <article class="card value-card fade-up delay-100" style="--icon-gradient: linear-gradient(180deg, color-mix(in srgb, var(--home-b) 90%, white 10%) 0%, color-mix(in srgb, var(--home-b) 68%, black 20%) 100%); --icon-shadow: color-mix(in srgb, var(--home-b) 26%, transparent);">
+        <article class="card value-card fade-up delay-100" style="--icon-gradient: linear-gradient(180deg, #8d7cff 0%, #8d7cff 100%); --icon-shadow: rgba(141, 124, 255, 0.34);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-anspruch.svg'); mask-image: url('/assets/icons/icon-anspruch.svg');"></div></div>
           <span class="cta-label">ANSPRUCH</span>
           <h3>Gut genug ist nicht das Ziel.</h3>
-          <p>Ich arbeite nicht für halbe Ergebnisse. Ich arbeite, bis Form, Funktion und Wirkung zusammenpassen und etwas entsteht, das langfristig trägt.</p>
+          <p>Ich arbeite nicht für halbe Ergebnisse. Ich arbeite, bis Inhalt, Form, Funktion und Wirkung zusammenpassen.</p>
+          <p>Damit etwas entsteht, das professionell aussieht, sauber funktioniert, schnell lädt, gefunden wird und langfristig trägt.</p>
         </article>
 
-        <article class="card value-card fade-up delay-200" style="--icon-gradient: linear-gradient(180deg, color-mix(in srgb, var(--home-b) 86%, white 8%) 0%, color-mix(in srgb, var(--home-b) 64%, black 22%) 100%); --icon-shadow: color-mix(in srgb, var(--home-b) 22%, transparent);">
+        <article class="card value-card fade-up delay-200" style="--icon-gradient: linear-gradient(180deg, #8d7cff 0%, #8d7cff 100%); --icon-shadow: rgba(141, 124, 255, 0.34);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-zusammenarbeit.svg'); mask-image: url('/assets/icons/icon-zusammenarbeit.svg');"></div></div>
           <span class="cta-label">ZUSAMMENARBEIT</span>
           <h3>Klar im Denken. Direkt im Tun.</h3>
-          <p>Keine Umwege, kein leeres Theater. Ich schätze klare Abmachungen, ehrlichen Austausch und eine Zusammenarbeit, die unkompliziert ist und trotzdem Tiefe hat.</p>
+          <p>Keine Umwege, kein leeres Theater. Ich schätze klare Abmachungen, ehrlichen Austausch, transparente Fixpreise und eine Zusammenarbeit, die unkompliziert bleibt.</p>
+          <p>Du bekommst keine anonyme Agenturmaschine, sondern einen persönlichen Partner, der mitdenkt, nachfragt und Verantwortung für das Ergebnis übernimmt.</p>
         </article>
 
       </div>
@@ -121,9 +131,9 @@ const schema = JSON.stringify({
   .home-hero,
   .home-values,
   .home-final-section {
-    --home-a: #6c45ff;
-    --home-b: #ff4f8a;
-    --home-c: #ffb21f;
+    --home-a: #6f42ff;
+    --home-b: #ff3f98;
+    --home-c: #ffae1a;
     animation: homeCycle 90s ease-in-out infinite;
   }
 
@@ -131,8 +141,14 @@ const schema = JSON.stringify({
     min-height: auto;
     display: flex;
     align-items: center;
-    padding-top: var(--hero-offset-top);
+    padding-top: var(--hero-offset-top-breadcrumb);
     padding-bottom: var(--hero-offset-bottom);
+  }
+
+  .home-breadcrumb-spacer {
+    visibility: hidden;
+    pointer-events: none;
+    margin-bottom: -4px;
   }
 
   .home-hero .badge {
@@ -159,11 +175,11 @@ const schema = JSON.stringify({
     background: linear-gradient(
       90deg,
       var(--home-a) 0%,
-      color-mix(in srgb, var(--home-a) 82%, var(--home-b)) 16%,
-      color-mix(in srgb, var(--home-a) 52%, var(--home-b)) 34%,
-      color-mix(in srgb, var(--home-a) 20%, var(--home-b)) 50%,
-      color-mix(in srgb, var(--home-b) 88%, var(--home-c)) 70%,
-      color-mix(in srgb, var(--home-b) 46%, var(--home-c)) 86%,
+      color-mix(in srgb, var(--home-a) 88%, var(--home-b)) 14%,
+      color-mix(in srgb, var(--home-a) 60%, var(--home-b)) 32%,
+      color-mix(in srgb, var(--home-a) 24%, var(--home-b)) 48%,
+      color-mix(in srgb, var(--home-b) 92%, var(--home-c)) 68%,
+      color-mix(in srgb, var(--home-b) 52%, var(--home-c)) 84%,
       var(--home-c) 100%
     );
     background-size: 100% auto;
@@ -173,9 +189,9 @@ const schema = JSON.stringify({
     -webkit-text-fill-color: transparent;
     color: transparent;
     filter:
-      drop-shadow(0 0 14px color-mix(in srgb, var(--home-a) 20%, transparent))
-      drop-shadow(0 0 18px color-mix(in srgb, var(--home-b) 18%, transparent))
-      drop-shadow(0 0 22px color-mix(in srgb, var(--home-c) 14%, transparent));
+      drop-shadow(0 0 18px color-mix(in srgb, var(--home-a) 30%, transparent))
+      drop-shadow(0 0 24px color-mix(in srgb, var(--home-b) 24%, transparent))
+      drop-shadow(0 0 30px color-mix(in srgb, var(--home-c) 18%, transparent));
   }
 
 
@@ -280,7 +296,7 @@ const schema = JSON.stringify({
   @media (max-width: 860px) {
     .home-hero {
       min-height: auto;
-      padding-top: var(--hero-offset-top-mobile);
+      padding-top: var(--hero-offset-top-breadcrumb-mobile);
       padding-bottom: 50px;
     }
 
@@ -300,13 +316,16 @@ const schema = JSON.stringify({
     }
 
     .home-hero__title {
-      font-size: var(--hero-title-size-mobile);
+      font-size: clamp(2.12rem, 10vw, 2.55rem);
       line-height: var(--hero-title-line-height-mobile);
+      max-width: 100%;
+      overflow-wrap: normal;
     }
 
     .home-hero .hero-lead {
       font-size: var(--lead-size-mobile);
       line-height: 1.6;
+      overflow-wrap: break-word;
     }
 
     .home-values {

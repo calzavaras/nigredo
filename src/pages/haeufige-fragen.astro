@@ -107,7 +107,7 @@ const schema = JSON.stringify({
         <span class="badge badge--yellow">FAQ</span>
         <h1 id="faq-title">Häufige <span class="gradient-text">Fragen.</span></h1>
         <p>
-          Drei Fragen tauchen vor einer professionellen Website fast immer auf: Was kostet sie, wie lange dauert sie und wie selbständig lässt sie sich später pflegen? Genau darauf geben diese Antworten eine klare Orientierung.
+          Hier finden Sie klare Antworten auf häufige Fragen rund um professionelle Websites, von Aufwand und Ablauf bis zur späteren Pflege und Weiterentwicklung.
         </p>
       </div>
 
@@ -141,9 +141,9 @@ const schema = JSON.stringify({
 
 <style>
   .faq-overview {
-    --faq-a: #ff7c20;
-    --faq-b: #ff2e55;
-    --faq-c: #cc20cc;
+    --faq-a: #695cff;
+    --faq-b: #a05eff;
+    --faq-c: #ff83cf;
     animation: faqCycle 90s ease-in-out infinite;
   }
 
@@ -175,22 +175,22 @@ const schema = JSON.stringify({
     padding: 4px 10px;
     font-size: 0.54rem;
     letter-spacing: 0.14em;
-    color: rgba(255, 236, 224, 0.94);
-    border-color: color-mix(in srgb, var(--faq-b) 34%, rgba(255, 255, 255, 0.22));
-    background: transparent;
-    box-shadow: none;
+    color: rgba(246, 240, 255, 0.96);
+    border-color: color-mix(in srgb, var(--faq-b) 36%, rgba(255, 255, 255, 0.22));
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--faq-a) 14%, rgba(255, 255, 255, 0.03)), color-mix(in srgb, var(--faq-c) 10%, rgba(255, 255, 255, 0.015)));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      0 0 18px color-mix(in srgb, var(--faq-b) 14%, transparent);
   }
 
   .faq-overview__intro .gradient-text {
     background: linear-gradient(
       90deg,
       var(--faq-a) 0%,
-      color-mix(in srgb, var(--faq-a) 84%, var(--faq-b)) 14%,
-      color-mix(in srgb, var(--faq-a) 62%, var(--faq-b)) 28%,
-      color-mix(in srgb, var(--faq-a) 34%, var(--faq-b)) 42%,
-      color-mix(in srgb, var(--faq-a) 12%, var(--faq-b)) 54%,
-      color-mix(in srgb, var(--faq-b) 78%, var(--faq-c)) 66%,
-      color-mix(in srgb, var(--faq-b) 54%, var(--faq-c)) 78%,
+      color-mix(in srgb, var(--faq-a) 78%, var(--faq-b)) 18%,
+      color-mix(in srgb, var(--faq-a) 34%, var(--faq-b)) 46%,
+      color-mix(in srgb, var(--faq-b) 74%, var(--faq-c)) 72%,
       color-mix(in srgb, var(--faq-b) 28%, var(--faq-c)) 90%,
       var(--faq-c) 100%
     );
@@ -200,8 +200,8 @@ const schema = JSON.stringify({
     -webkit-text-fill-color: transparent;
     color: transparent;
     filter:
-      drop-shadow(0 0 12px color-mix(in srgb, var(--faq-a) 22%, transparent))
-      drop-shadow(0 0 18px color-mix(in srgb, var(--faq-c) 14%, transparent));
+      drop-shadow(0 0 12px color-mix(in srgb, var(--faq-a) 24%, transparent))
+      drop-shadow(0 0 18px color-mix(in srgb, var(--faq-c) 16%, transparent));
   }
 
   .faq-overview__intro h1 {
@@ -280,7 +280,7 @@ const schema = JSON.stringify({
   }
 
   .faq-card__number {
-    color: color-mix(in srgb, var(--faq-b) 88%, white 10%);
+    color: rgba(255, 255, 255, 0.78);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.16em;

@@ -1070,6 +1070,21 @@ nav {
     display: block;
   }
 
+  .nav-links a.nav-link--contact {
+    margin-top: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .nav-links a.nav-link--contact:hover,
+  .nav-links a.nav-link--contact.active {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
   .header-cta {
     display: none;
   }
@@ -1725,8 +1740,8 @@ nav {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 1.05fr) minmax(280px, 1.1fr) minmax(220px, 0.85fr);
-  column-gap: clamp(40px, 6vw, 88px);
+  grid-template-columns: minmax(240px, 1.05fr) minmax(170px, 0.72fr) minmax(150px, 0.62fr) minmax(180px, 0.7fr);
+  column-gap: clamp(28px, 4.5vw, 72px);
   row-gap: 24px;
   margin-bottom: clamp(32px, 4vw, 48px);
   align-items: start;
@@ -1747,7 +1762,7 @@ nav {
   justify-self: center;
 }
 
-.footer-col:nth-child(3) {
+.footer-col:nth-child(4) {
   align-items: flex-start;
   text-align: left;
   justify-self: end;
@@ -1857,27 +1872,31 @@ nav {
   }
 
   .footer-col:nth-child(2),
-  .footer-col:nth-child(3) {
+  .footer-col:nth-child(3),
+  .footer-col:nth-child(4) {
     align-items: flex-start;
     text-align: left;
     justify-self: stretch;
   }
 
   .footer-col:nth-child(2) .footer-label,
-  .footer-col:nth-child(3) .footer-label {
+  .footer-col:nth-child(3) .footer-label,
+  .footer-col:nth-child(4) .footer-label {
     margin-bottom: 8px;
   }
 
   .footer-stack,
   .footer-menu,
   .footer-col:nth-child(2) .footer-menu,
-  .footer-col:nth-child(3) .footer-menu {
+  .footer-col:nth-child(3) .footer-menu,
+  .footer-col:nth-child(4) .footer-menu {
     align-items: flex-start;
   }
 
   .footer-menu,
   .footer-col:nth-child(2) .footer-menu,
-  .footer-col:nth-child(3) .footer-menu {
+  .footer-col:nth-child(3) .footer-menu,
+  .footer-col:nth-child(4) .footer-menu {
     gap: 8px;
   }
 
@@ -1888,7 +1907,8 @@ nav {
   }
 
   .footer-col:nth-child(2) .footer-menu a:hover,
-  .footer-col:nth-child(3) .footer-menu a:hover {
+  .footer-col:nth-child(3) .footer-menu a:hover,
+  .footer-col:nth-child(4) .footer-menu a:hover {
     transform: translateX(4px);
   }
 }
