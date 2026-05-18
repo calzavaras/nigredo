@@ -19,14 +19,28 @@ const schema = JSON.stringify({
       ]
     },
     {
-      "@type": "WebSite",
+      "@type": ["WebSite", "CreativeWork"],
       "@id": `${pageUrl}#website-project`,
       "name": "Therapie Ost",
       "url": liveUrl,
       "description": "Website für Therapie Ost in St. Gallen mit klarer Positionierung, ruhiger Bildsprache, mobiler Optimierung und direkter Online-Terminbuchung.",
       "inLanguage": "de-CH",
       "dateCreated": "2026-04-01",
+      "creator": { "@id": "https://www.nigredo.ch/#person" },
+      "author": { "@id": "https://www.nigredo.ch/#person" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
+      "maintainer": { "@id": "https://www.nigredo.ch/#organization" },
+      "isPartOf": { "@id": "https://www.nigredo.ch/referenzen/#webpage" },
+      "about": {
+        "@type": "LocalBusiness",
+        "name": "Therapie Ost",
+        "url": liveUrl,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "St. Gallen",
+          "addressCountry": "CH"
+        }
+      },
       "image": "https://www.nigredo.ch/referenzen/therapie-ost/therapie-ost-website-screenshot-og.jpg"
     },
     {

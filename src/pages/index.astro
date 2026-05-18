@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -52,12 +51,8 @@ const schema = JSON.stringify({
   <section class="section pt-hero home-hero" aria-labelledby="hero-title">
     <div class="hero-glow"></div>
     <div class="container home-hero__inner fade-up">
-      <div class="home-breadcrumb-spacer" aria-hidden="true">
-        <Breadcrumb items={[
-          { label: 'Start', href: '/' },
-          { label: 'Start' }
-        ]} />
-      </div>
+      <!-- Höhen-Spacer: identisch mit Breadcrumb-Höhe anderer Seiten (kein nav/BreadcrumbList im DOM) -->
+      <div class="home-breadcrumb-spacer" aria-hidden="true" role="presentation"></div>
 
       <span class="badge badge--yellow">DIGITALE PRODUKTE. IM MASSANZUG.</span>
 
@@ -83,7 +78,7 @@ const schema = JSON.stringify({
       <h2 id="values-title" class="visually-hidden">So arbeite ich</h2>
       <div class="grid-3">
 
-        <article class="card value-card fade-up" style="--icon-gradient: linear-gradient(180deg, #8d7cff 0%, #8d7cff 100%); --icon-shadow: rgba(141, 124, 255, 0.34);">
+        <article class="card value-card fade-up" style="--icon-gradient: linear-gradient(180deg, #2f7bff 0%, #00a8ff 100%); --icon-shadow: rgba(47, 123, 255, 0.36);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-verstaendnis.svg'); mask-image: url('/assets/icons/icon-verstaendnis.svg');"></div></div>
           <span class="cta-label">VERSTÄNDNIS</span>
           <h3>Erst verstehen. Dann veredeln.</h3>
@@ -91,7 +86,7 @@ const schema = JSON.stringify({
           <p>Nicht einfach schön. Nicht einfach technisch. Sondern passend zu dir, deinem Angebot und den Menschen, die du erreichen möchtest.</p>
         </article>
 
-        <article class="card value-card fade-up delay-100" style="--icon-gradient: linear-gradient(180deg, #8d7cff 0%, #8d7cff 100%); --icon-shadow: rgba(141, 124, 255, 0.34);">
+        <article class="card value-card fade-up delay-100" style="--icon-gradient: linear-gradient(180deg, #2f7bff 0%, #00a8ff 100%); --icon-shadow: rgba(47, 123, 255, 0.36);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-anspruch.svg'); mask-image: url('/assets/icons/icon-anspruch.svg');"></div></div>
           <span class="cta-label">ANSPRUCH</span>
           <h3>Gut genug ist nicht das Ziel.</h3>
@@ -99,7 +94,7 @@ const schema = JSON.stringify({
           <p>Damit etwas entsteht, das professionell aussieht, sauber funktioniert, schnell lädt, gefunden wird und langfristig trägt.</p>
         </article>
 
-        <article class="card value-card fade-up delay-200" style="--icon-gradient: linear-gradient(180deg, #8d7cff 0%, #8d7cff 100%); --icon-shadow: rgba(141, 124, 255, 0.34);">
+        <article class="card value-card fade-up delay-200" style="--icon-gradient: linear-gradient(180deg, #2f7bff 0%, #00a8ff 100%); --icon-shadow: rgba(47, 123, 255, 0.36);">
           <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-zusammenarbeit.svg'); mask-image: url('/assets/icons/icon-zusammenarbeit.svg');"></div></div>
           <span class="cta-label">ZUSAMMENARBEIT</span>
           <h3>Klar im Denken. Direkt im Tun.</h3>
@@ -146,9 +141,10 @@ const schema = JSON.stringify({
   }
 
   .home-breadcrumb-spacer {
-    visibility: hidden;
+    /* Reines CSS-Spacer: entspricht der Höhe einer Breadcrumb-Zeile (≈16px) + 26px (= 30px margin-bottom - 4px Offset) */
+    height: 16px;
+    margin-bottom: 26px;
     pointer-events: none;
-    margin-bottom: -4px;
   }
 
   .home-hero .badge {
@@ -157,6 +153,7 @@ const schema = JSON.stringify({
     border-color: color-mix(in srgb, var(--home-b) 44%, rgba(255, 255, 255, 0.22));
     background: transparent;
     box-shadow: none;
+    transform: translateY(-6px);
   }
 
   .home-hero__inner {
@@ -188,10 +185,6 @@ const schema = JSON.stringify({
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter:
-      drop-shadow(0 0 18px color-mix(in srgb, var(--home-a) 30%, transparent))
-      drop-shadow(0 0 24px color-mix(in srgb, var(--home-b) 24%, transparent))
-      drop-shadow(0 0 30px color-mix(in srgb, var(--home-c) 18%, transparent));
   }
 
 

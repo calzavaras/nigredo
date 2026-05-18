@@ -550,25 +550,11 @@ a:focus:not(:focus-visible),
 }
 
 .hero-glow {
-  position: absolute;
-  top: -150px;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background:
-    radial-gradient(circle at 20% 40%, rgba(0, 210, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 60%, rgba(166, 77, 255, 0.07) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(255, 77, 128, 0.04) 0%, transparent 60%);
-  z-index: -1;
-  pointer-events: none;
-  filter: blur(124px);
-  opacity: 0;
-  transition: opacity 2.4s ease;
-  transform: translateZ(0);
+  display: none;
 }
 
 .hero-glow.animated {
-  opacity: 0.28;
+  opacity: 0;
 }
 
 .badge {
@@ -3662,5 +3648,38 @@ nav {
   .menu-toggle,
   .menu-toggle span {
     transition: none;
+  }
+
+  /* Cycle-Animationen (Farbschema-Wechsel) pausieren */
+  .home-hero,
+  .home-values,
+  .home-final-section,
+  .solutions-hero,
+  .solutions-accordion-wrap,
+  .solutions-final-section,
+  .about-hero,
+  .faq-hero,
+  .refs-hero,
+  .contact-hero,
+  [class*="Cycle"] {
+    animation: none !important;
+  }
+
+  /* Rotierende Rahmenanimation (borderRotate) deaktivieren */
+  .card::before,
+  .contact-card::before,
+  .case-feature::before,
+  .btn::before {
+    animation: none !important;
+  }
+
+  /* Hero-Glow-Animation stoppen */
+  .hero-glow {
+    opacity: 0.4;
+  }
+
+  /* Accordion-Slide: sofortige Anzeige statt Slidedown */
+  .accordion-content {
+    transition: none !important;
   }
 }

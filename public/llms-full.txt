@@ -8,7 +8,7 @@ Sitemap: https://www.nigredo.ch/sitemap-index.xml
 Kanonischer Markenname: Nigredo
 Kanonische Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-05-17
+Letzte Aktualisierung: 2026-05-18
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 Kontakt: calzavara3830@gmail.com

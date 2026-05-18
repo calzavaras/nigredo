@@ -156,7 +156,13 @@ const siteIdentitySchema = JSON.stringify({
       "areaServed": [
         { "@type": "Country", "name": "Schweiz" },
         { "@type": "AdministrativeArea", "name": "St. Gallen" },
-        { "@type": "AdministrativeArea", "name": "Ostschweiz" }
+        { "@type": "AdministrativeArea", "name": "Ostschweiz" },
+        { "@type": "AdministrativeArea", "name": "Kanton Thurgau" },
+        { "@type": "AdministrativeArea", "name": "Kanton Appenzell Ausserrhoden" },
+        { "@type": "AdministrativeArea", "name": "Kanton Appenzell Innerrhoden" },
+        { "@type": "AdministrativeArea", "name": "Kanton Zürich" },
+        { "@type": "AdministrativeArea", "name": "Kanton Schaffhausen" },
+        { "@type": "AdministrativeArea", "name": "Kanton Glarus" }
       ],
       "address": {
         "@type": "PostalAddress",
@@ -171,13 +177,22 @@ const siteIdentitySchema = JSON.stringify({
         "latitude": "47.4245",
         "longitude": "9.3767"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "calzavara3830@gmail.com",
-        "areaServed": "CH",
-        "availableLanguage": ["German", "English"]
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "calzavara3830@gmail.com",
+          "areaServed": "CH",
+          "availableLanguage": ["German", "English"]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "calzavara3830@gmail.com",
+          "areaServed": "CH",
+          "availableLanguage": ["German", "English"]
+        }
+      ],
       "priceRange": "$$",
       "makesOffer": [
         { "@type": "Offer", "itemOffered": { "@id": "https://www.nigredo.ch/digitale-loesungen/#website" } },
@@ -213,6 +228,7 @@ const siteIdentitySchema = JSON.stringify({
       "givenName": "Marco",
       "familyName": "Calzavara",
       "jobTitle": "Gründer & Full-Stack Developer",
+      "description": "Marco Calzavara ist Gründer von Nigredo und entwickelt seit über 15 Jahren digitale Produkte. Als Full-Stack Developer und strategischer Denker setzt er Websites, KI-Lösungen und digitale Tools für KMU, Selbstständige und Organisationen in St. Gallen und der ganzen Schweiz um.",
       "url": "https://www.nigredo.ch/marco-calzavara/",
       "mainEntityOfPage": "https://www.nigredo.ch/marco-calzavara/",
       "image": {
@@ -232,13 +248,24 @@ const siteIdentitySchema = JSON.stringify({
       "@type": "ItemList",
       "@id": "https://www.nigredo.ch/#main-navigation",
       "name": "Hauptnavigation",
+      "description": "Primäre Desktop-Navigation von nigredo.ch",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Start", "url": "https://www.nigredo.ch/" },
         { "@type": "ListItem", "position": 2, "name": "Lösungen", "url": "https://www.nigredo.ch/digitale-loesungen/" },
         { "@type": "ListItem", "position": 3, "name": "Referenzen", "url": "https://www.nigredo.ch/referenzen/" },
-        { "@type": "ListItem", "position": 4, "name": "Über mich", "url": "https://www.nigredo.ch/marco-calzavara/" },
-        { "@type": "ListItem", "position": 5, "name": "Kontakt", "url": "https://www.nigredo.ch/kontakt/" },
-        { "@type": "ListItem", "position": 6, "name": "Häufige Fragen", "url": "https://www.nigredo.ch/haeufige-fragen/" }
+        { "@type": "ListItem", "position": 4, "name": "Über mich", "url": "https://www.nigredo.ch/marco-calzavara/" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.nigredo.ch/#footer-navigation",
+      "name": "Footer-Navigation",
+      "description": "Ergänzende Seitenlinks im Footer von nigredo.ch",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Kontakt", "url": "https://www.nigredo.ch/kontakt/" },
+        { "@type": "ListItem", "position": 2, "name": "Häufige Fragen", "url": "https://www.nigredo.ch/haeufige-fragen/" },
+        { "@type": "ListItem", "position": 3, "name": "Impressum", "url": "https://www.nigredo.ch/impressum/" },
+        { "@type": "ListItem", "position": 4, "name": "Datenschutz", "url": "https://www.nigredo.ch/datenschutz/" }
       ]
     },
     {

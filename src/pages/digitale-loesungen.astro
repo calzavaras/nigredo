@@ -50,7 +50,15 @@ const schema = JSON.stringify({
             "description": "Klare Websites für Selbständige, KMU, Vereine und Privatpersonen. Kein Baukastensystem, kein Ballast. Ein Auftritt, der sitzt.",
             "serviceType": "Webentwicklung",
             "provider": { "@id": "https://www.nigredo.ch/#organization" },
-            "areaServed": { "@type": "Country", "name": "Switzerland" },
+            "brand": { "@id": "https://www.nigredo.ch/#brand" },
+            "areaServed": [
+              { "@type": "Country", "name": "Schweiz" },
+              { "@type": "AdministrativeArea", "name": "Kanton St. Gallen" },
+              { "@type": "AdministrativeArea", "name": "Kanton Thurgau" },
+              { "@type": "AdministrativeArea", "name": "Kanton Appenzell Ausserrhoden" },
+              { "@type": "AdministrativeArea", "name": "Kanton Appenzell Innerrhoden" },
+              { "@type": "AdministrativeArea", "name": "Kanton Zürich" }
+            ],
             "offers": {
               "@type": "Offer",
               "priceCurrency": "CHF",
@@ -68,7 +76,15 @@ const schema = JSON.stringify({
             "description": "KI-Lösungen mit klarem Zweck, verständlicher Rolle und echtem Nutzen im Alltag. Keine Spielerei, kein Buzzword. Werkzeuge, die entlasten und verlässlich funktionieren.",
             "serviceType": "KI-Lösungen",
             "provider": { "@id": "https://www.nigredo.ch/#organization" },
-            "areaServed": { "@type": "Country", "name": "Switzerland" }
+            "brand": { "@id": "https://www.nigredo.ch/#brand" },
+            "areaServed": [
+              { "@type": "Country", "name": "Schweiz" },
+              { "@type": "AdministrativeArea", "name": "Kanton St. Gallen" },
+              { "@type": "AdministrativeArea", "name": "Kanton Thurgau" },
+              { "@type": "AdministrativeArea", "name": "Kanton Appenzell Ausserrhoden" },
+              { "@type": "AdministrativeArea", "name": "Kanton Appenzell Innerrhoden" },
+              { "@type": "AdministrativeArea", "name": "Kanton Zürich" }
+            ]
           }
         },
         {
@@ -81,7 +97,15 @@ const schema = JSON.stringify({
             "description": "Der richtige Text, die klare Struktur, das starke Bild. Alles, was Form braucht – präzise, passend und ohne Umwege.",
             "serviceType": "Content-Erstellung",
             "provider": { "@id": "https://www.nigredo.ch/#organization" },
-            "areaServed": { "@type": "Country", "name": "Switzerland" }
+            "brand": { "@id": "https://www.nigredo.ch/#brand" },
+            "areaServed": [
+              { "@type": "Country", "name": "Schweiz" },
+              { "@type": "AdministrativeArea", "name": "Kanton St. Gallen" },
+              { "@type": "AdministrativeArea", "name": "Kanton Thurgau" },
+              { "@type": "AdministrativeArea", "name": "Kanton Appenzell Ausserrhoden" },
+              { "@type": "AdministrativeArea", "name": "Kanton Appenzell Innerrhoden" },
+              { "@type": "AdministrativeArea", "name": "Kanton Zürich" }
+            ]
           }
         }
       ]
@@ -317,9 +341,6 @@ const schema = JSON.stringify({
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter:
-      drop-shadow(0 0 12px color-mix(in srgb, var(--solutions-a) 22%, transparent))
-      drop-shadow(0 0 18px color-mix(in srgb, var(--solutions-c) 14%, transparent));
   }
 
   .solutions-hero__lead {
