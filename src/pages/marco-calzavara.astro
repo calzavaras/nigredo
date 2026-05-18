@@ -29,11 +29,39 @@ const schema = JSON.stringify({
       "dateModified": "2026-05-17",
       "isAccessibleForFree": true,
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
+      "about": { "@id": "https://www.nigredo.ch/#person" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "@id": `${pageUrl}#primaryimage`,
+        "url": "https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.jpg",
+        "contentUrl": "https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.jpg",
+        "width": 768,
+        "height": 1024
+      },
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", ".pc-name", ".belief-title"]
       },
       "mainEntity": { "@id": "https://www.nigredo.ch/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.nigredo.ch/#person",
+      "name": "Marco Calzavara",
+      "givenName": "Marco",
+      "familyName": "Calzavara",
+      "jobTitle": "Gründer & Full-Stack Developer",
+      "description": "Marco Calzavara ist Gründer von Nigredo und entwickelt seit über 15 Jahren digitale Produkte. Als Full-Stack Developer und strategischer Denker setzt er Websites, KI-Lösungen und digitale Tools für KMU, Selbstständige und Organisationen in St. Gallen und der ganzen Schweiz um.",
+      "url": pageUrl,
+      "mainEntityOfPage": { "@id": `${pageUrl}#webpage` },
+      "worksFor": { "@id": "https://www.nigredo.ch/#organization" },
+      "image": {
+        "@id": `${pageUrl}#primaryimage`
+      },
+      "sameAs": [
+        "https://ch.linkedin.com/in/calzavara-marco",
+        "https://github.com/calza"
+      ]
     }
   ]
 });

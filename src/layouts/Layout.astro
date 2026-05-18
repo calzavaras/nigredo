@@ -43,6 +43,7 @@ function getMainScriptVersion(): string {
 }
 
 const jsVersion = getMainScriptVersion();
+const faviconVersion = '20260518';
 
 const {
   title,
@@ -52,10 +53,10 @@ const {
   ogTitle,
   ogDescription,
   ogType = 'website',
-  ogImage = 'https://www.nigredo.ch/referenzen/therapie-ost/therapie-ost-website-screenshot-og.jpg',
-  ogImageAlt = 'Nigredo - Websites, KI-Lösungen und Software aus St. Gallen',
-  ogImageWidth = '1360',
-  ogImageHeight = '823',
+  ogImage = 'https://www.nigredo.ch/android-chrome-512x512.png',
+  ogImageAlt = 'Nigredo Icon',
+  ogImageWidth = '512',
+  ogImageHeight = '512',
   ogImageType,
   twitterTitle,
   twitterDescription,
@@ -130,16 +131,19 @@ const siteIdentitySchema = JSON.stringify({
       "logo": {
         "@type": "ImageObject",
         "@id": "https://www.nigredo.ch/#logo",
-        "url": "https://www.nigredo.ch/assets/nigredo-logo.png",
-        "contentUrl": "https://www.nigredo.ch/assets/nigredo-logo.png",
-        "width": 831,
-        "height": 265,
-        "caption": "Nigredo Logo"
+        "url": "https://www.nigredo.ch/android-chrome-512x512.png",
+        "contentUrl": "https://www.nigredo.ch/android-chrome-512x512.png",
+        "width": 512,
+        "height": 512,
+        "caption": "Nigredo Icon"
       },
       "image": { "@id": "https://www.nigredo.ch/#logo" },
       "description": "Websites, KI-Lösungen und Softwareentwicklung aus St. Gallen. Marco Calzavara entwickelt digitale Produkte mit Substanz – persönlich, zum Fixpreis, ohne Baukasten.",
       "slogan": "Digitale Produkte im Massanzug.",
-      "founder": { "@id": "https://www.nigredo.ch/#person" },
+      "founder": {
+        "@type": "Person",
+        "name": "Marco Calzavara"
+      },
       "foundingDate": "2025",
       "foundingLocation": {
         "@type": "Place",
@@ -228,21 +232,7 @@ const siteIdentitySchema = JSON.stringify({
       "givenName": "Marco",
       "familyName": "Calzavara",
       "jobTitle": "Gründer & Full-Stack Developer",
-      "description": "Marco Calzavara ist Gründer von Nigredo und entwickelt seit über 15 Jahren digitale Produkte. Als Full-Stack Developer und strategischer Denker setzt er Websites, KI-Lösungen und digitale Tools für KMU, Selbstständige und Organisationen in St. Gallen und der ganzen Schweiz um.",
-      "url": "https://www.nigredo.ch/marco-calzavara/",
-      "mainEntityOfPage": "https://www.nigredo.ch/marco-calzavara/",
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.webp",
-        "contentUrl": "https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.webp",
-        "width": 1254,
-        "height": 1254
-      },
-      "worksFor": { "@id": "https://www.nigredo.ch/#organization" },
-      "sameAs": [
-        "https://ch.linkedin.com/in/calzavara-marco",
-        "https://github.com/calza"
-      ]
+      "worksFor": { "@id": "https://www.nigredo.ch/#organization" }
     },
     {
       "@type": "ItemList",
@@ -338,14 +328,14 @@ const siteIdentitySchema = JSON.stringify({
   <meta name="color-scheme" content="dark">
   <meta name="application-name" content="Nigredo">
   <meta name="apple-mobile-web-app-title" content="Nigredo">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" href={`/favicon.ico?v=${faviconVersion}`} sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href={`/favicon-16x16.png?v=${faviconVersion}`}>
+  <link rel="icon" type="image/png" sizes="32x32" href={`/favicon-32x32.png?v=${faviconVersion}`}>
+  <link rel="icon" type="image/png" sizes="48x48" href={`/favicon-48x48.png?v=${faviconVersion}`}>
+  <link rel="apple-touch-icon" sizes="180x180" href={`/apple-touch-icon.png?v=${faviconVersion}`}>
+  <link rel="manifest" href={`/site.webmanifest?v=${faviconVersion}`}>
   <meta name="msapplication-TileColor" content="#050505">
-  <meta name="msapplication-TileImage" content="/mstile-150x150.png">
+  <meta name="msapplication-TileImage" content={`/mstile-150x150.png?v=${faviconVersion}`}>
 
   <title>{title}</title>
   <meta name="description" content={description}>
