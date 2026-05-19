@@ -177,6 +177,10 @@ a:focus:not(:focus-visible),
   nav a {
     min-height: 44px;
   }
+
+  .site-footer .footer-menu a {
+    min-height: 0;
+  }
 }
 
 /* Layout & Utils */
