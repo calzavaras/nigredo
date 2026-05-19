@@ -14,15 +14,15 @@ export default defineConfig({
         const url = item.url;
         if (url === 'https://www.nigredo.ch/') {
           item.priority = 1.0;
-          item.lastmod = new Date('2026-05-18');
+          item.lastmod = new Date('2026-05-19');
         }
         else if (url === 'https://www.nigredo.ch/digitale-loesungen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-05-18');
+          item.lastmod = new Date('2026-05-19');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-05-18');
+          item.lastmod = new Date('2026-05-19');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/ki-voice-agent/') {
           item.priority = 0.65;
@@ -41,27 +41,27 @@ export default defineConfig({
           item.lastmod = new Date('2026-05-08');
         }
         else if (url === 'https://www.nigredo.ch/marco-calzavara/') {
-          item.priority = 0.92;
-          item.lastmod = new Date('2026-05-18');
+          item.priority = 0.95;
+          item.lastmod = new Date('2026-05-19');
         }
         else if (url === 'https://www.nigredo.ch/kontakt/') {
-          item.priority = 0.88;
-          item.lastmod = new Date('2026-05-18');
+          item.priority = 0.93;
+          item.lastmod = new Date('2026-05-19');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {
-          item.priority = 0.75;
-          item.lastmod = new Date('2026-05-18');
+          item.priority = 0.62;
+          item.lastmod = new Date('2026-05-19');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/') {
-          item.priority = 0.7;
+          item.priority = 0.55;
           item.lastmod = new Date('2026-05-18');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/') {
-          item.priority = 0.7;
+          item.priority = 0.55;
           item.lastmod = new Date('2026-05-18');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/') {
-          item.priority = 0.7;
+          item.priority = 0.55;
           item.lastmod = new Date('2026-05-18');
         }
         else if (url === 'https://www.nigredo.ch/impressum/' || url === 'https://www.nigredo.ch/datenschutz/') {

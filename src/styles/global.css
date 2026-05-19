@@ -1726,9 +1726,9 @@ nav {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 1.05fr) minmax(170px, 0.72fr) minmax(150px, 0.62fr) minmax(180px, 0.7fr);
-  column-gap: clamp(28px, 4.5vw, 72px);
-  row-gap: 24px;
+  grid-template-columns: minmax(240px, 1.45fr) repeat(4, minmax(140px, 1fr));
+  column-gap: clamp(20px, 2.8vw, 40px);
+  row-gap: clamp(24px, 3vw, 32px);
   margin-bottom: clamp(32px, 4vw, 48px);
   align-items: start;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -1740,18 +1740,8 @@ nav {
   min-width: 0;
   display: flex;
   flex-direction: column;
-}
-
-.footer-col:nth-child(2) {
   align-items: flex-start;
-  text-align: left;
-  justify-self: center;
-}
-
-.footer-col:nth-child(4) {
-  align-items: flex-start;
-  text-align: left;
-  justify-self: end;
+  justify-self: stretch;
 }
 
 .footer-stack {
@@ -1799,7 +1789,7 @@ nav {
 .footer-menu {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   align-items: flex-start;
 }
 
@@ -1837,7 +1827,18 @@ nav {
   gap: 16px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(20px, 4vw, 32px);
+  }
+
+  .footer-col:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
   .site-footer .container {
     max-width: var(--container-width);
   }
@@ -1853,36 +1854,20 @@ nav {
     text-align: center;
   }
 
-  .footer-col {
-    flex-direction: column;
+  .footer-col:first-child {
+    grid-column: auto;
   }
 
-  .footer-col:nth-child(2),
-  .footer-col:nth-child(3),
-  .footer-col:nth-child(4) {
-    align-items: flex-start;
-    text-align: left;
-    justify-self: stretch;
-  }
-
-  .footer-col:nth-child(2) .footer-label,
-  .footer-col:nth-child(3) .footer-label,
-  .footer-col:nth-child(4) .footer-label {
+  .footer-label {
     margin-bottom: 8px;
   }
 
   .footer-stack,
-  .footer-menu,
-  .footer-col:nth-child(2) .footer-menu,
-  .footer-col:nth-child(3) .footer-menu,
-  .footer-col:nth-child(4) .footer-menu {
+  .footer-menu {
     align-items: flex-start;
   }
 
-  .footer-menu,
-  .footer-col:nth-child(2) .footer-menu,
-  .footer-col:nth-child(3) .footer-menu,
-  .footer-col:nth-child(4) .footer-menu {
+  .footer-menu {
     gap: 8px;
   }
 
@@ -1892,9 +1877,7 @@ nav {
     padding: 0;
   }
 
-  .footer-col:nth-child(2) .footer-menu a:hover,
-  .footer-col:nth-child(3) .footer-menu a:hover,
-  .footer-col:nth-child(4) .footer-menu a:hover {
+  .footer-menu a:hover {
     transform: translateX(4px);
   }
 }
