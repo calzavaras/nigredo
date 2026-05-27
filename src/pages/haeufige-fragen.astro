@@ -25,6 +25,13 @@ const faqEntries = [
     question: 'Kann ich meine professionelle Website später selbst bearbeiten und pflegen?',
     answer: 'Ja, viele Inhalte lassen sich später selbst pflegen, wenn die Website entsprechend geplant wird. Ob ein CMS sinnvoll ist, hängt davon ab, wie oft Inhalte geändert werden und wer intern damit arbeitet. Nicht jede Website braucht dafür ein grosses System.',
     href: '/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/'
+  },
+  {
+    id: 'faq-custom-or-builder',
+    category: 'Baukasten oder individuell',
+    question: 'Brauche ich eine individuelle Website oder reicht ein Baukasten?',
+    answer: 'Ein Baukasten kann für eine sehr einfache Präsenz reichen. Eine individuelle Website lohnt sich, wenn Inhalt, Vertrauen, Gestaltung, Suchmaschinenoptimierung, technische Qualität oder spätere Erweiterungen wichtig sind.',
+    href: '/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/'
   }
 ];
 
@@ -44,7 +51,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
       "name": "Häufige Fragen zu professionellen Websites | Nigredo",
-      "description": "Klare Antworten auf häufige Fragen zu Kosten, Dauer und späterer Pflege professioneller Websites für KMU und Selbständige in der Schweiz.",
+      "description": "Klare Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites für KMU und Selbständige in der Schweiz.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "mainEntity": { "@id": `${pageUrl}#faq` },
@@ -52,7 +59,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-16",
-      "dateModified": "2026-05-18",
+      "dateModified": "2026-05-27",
       "isAccessibleForFree": true,
       "significantLink": faqEntries.map((entry) => `https://www.nigredo.ch${entry.href}`)
     },
@@ -87,12 +94,12 @@ const schema = JSON.stringify({
 
 <Layout
   title="Häufige Fragen zu professionellen Websites | Nigredo"
-  description="Klare Antworten auf häufige Fragen zu Kosten, Dauer und späterer Pflege professioneller Websites für KMU und Selbständige in der Schweiz."
+  description="Klare Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites für KMU und Selbständige in der Schweiz."
   canonical={pageUrl}
   ogTitle="Häufige Fragen zu professionellen Websites | Nigredo"
-  ogDescription="Antworten zu Kosten, Dauer und Pflege professioneller Websites. Prägnant, verständlich und hilfreich für KMU und Selbständige."
+  ogDescription="Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites. Prägnant, verständlich und hilfreich für KMU und Selbständige."
   twitterTitle="Häufige Fragen zu professionellen Websites | Nigredo"
-  twitterDescription="Antworten zu Kosten, Dauer und Pflege professioneller Websites."
+  twitterDescription="Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites."
   schema={schema}
 >
   <section class="section faq-overview" aria-labelledby="faq-title">
@@ -107,7 +114,7 @@ const schema = JSON.stringify({
         <span class="badge badge--yellow">FAQ</span>
         <h1 id="faq-title">Häufige <span class="gradient-text">Fragen.</span></h1>
         <p>
-          Hier finden Sie klare Antworten auf häufige Fragen rund um professionelle Websites, von Aufwand und Ablauf bis zur späteren Pflege und Weiterentwicklung.
+          Hier finden Sie klare Antworten auf häufige Fragen rund um professionelle Websites, von Aufwand und Ablauf bis zur passenden Umsetzungsform, späteren Pflege und Weiterentwicklung.
         </p>
       </div>
 

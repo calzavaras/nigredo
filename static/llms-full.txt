@@ -8,7 +8,7 @@ Sitemap: https://www.nigredo.ch/sitemap-index.xml
 Kanonischer Markenname: Nigredo
 Kanonische Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-05-18
+Letzte Aktualisierung: 2026-05-27
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 Kontakt: calzavara3830@gmail.com
@@ -76,12 +76,16 @@ Nigredo arbeitet mit Fixpreisen. Vor jedem Projekt gibt es eine kurze Klaerung u
 ## Haeufige Fragen
 
 URL: https://www.nigredo.ch/haeufige-fragen/
-Title: Haeufige Fragen | Nigredo
-Description: Kurze Antworten auf wichtige Fragen zu professionellen Websites, Kosten und sinnvoller Umsetzung. Klar, direkt und ohne Verkaufsnebel.
+Title: Haeufige Fragen zu professionellen Websites | Nigredo
+Description: Klare Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites fuer KMU und Selbstaendige in der Schweiz.
 
 ### Was kostet eine professionelle Website?
 
 Eine professionelle Website kostet je nach Umfang, Inhalt, Designanspruch und technischer Umsetzung unterschiedlich viel. Fuer KMU und Selbstaendige in der Schweiz beginnt eine serioes umgesetzte Website meist im unteren vierstelligen Bereich; umfangreichere Auftritte mit Konzept, Text, SEO und Funktionen liegen entsprechend hoeher.
+
+### Brauche ich eine individuelle Website oder reicht ein Baukasten?
+
+Ein Baukasten kann reichen, wenn nur eine sehr einfache Praesenz ohne besondere Anforderungen gebraucht wird. Eine individuelle Website lohnt sich, wenn Inhalt, Vertrauen, Gestaltung, Suchmaschinenoptimierung, technische Qualitaet oder spaetere Erweiterungen wichtig sind.
 
 ## Was kostet eine professionelle Website?
 
@@ -120,6 +124,44 @@ Wenn die Website aber Vertrauen tragen, in Google gefunden werden oder echte Anf
 ### Wie Nigredo die Kosten einschaetzt
 
 Nigredo startet nicht mit einer langen Preisliste, sondern mit einer kurzen Klaerung: Was soll die Website leisten? Welche Inhalte gibt es bereits? Was muss neu entstehen? Welche Funktionen sind wirklich noetig? Daraus entsteht ein konkreter Umfang und ein transparentes Angebot. Ziel ist kein moeglichst grosses Projekt, sondern eine Website, die zur Aufgabe passt.
+
+## Brauche ich eine individuelle Website oder reicht ein Baukasten?
+
+URL: https://www.nigredo.ch/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/
+Title: Individuelle Website oder Baukasten? | Nigredo
+Description: Wann ein Website-Baukasten reicht, wann eine individuelle Website sinnvoll ist und worauf KMU und Selbstaendige bei der Entscheidung achten sollten.
+
+Ein Website-Baukasten kann fuer sehr einfache Auftritte reichen. Wenn eine Website aber Vertrauen schaffen, klar positionieren, gefunden werden und langfristig mitwachsen soll, ist eine individuelle Loesung meist die bessere Grundlage.
+
+Als Orientierung gilt: Wenn nur eine einfache Online-Visitenkarte gebraucht wird, kann ein Baukasten ausreichen. Sobald die Website eine klare Aufgabe hat, Anfragen bringen, Vertrauen tragen oder technisch sauber erweiterbar bleiben soll, lohnt sich eine individuelle Umsetzung.
+
+### Wann ein Baukasten reichen kann
+
+Ein Baukasten kann sinnvoll sein, wenn ein sehr kleiner Auftritt gebraucht wird, Inhalte selten wechseln und keine besonderen Anforderungen bestehen. Fuer eine einfache Praesenz, eine Uebergangsloesung oder ein bewusst kleines Projekt muss nicht automatisch eine grosse individuelle Umsetzung entstehen.
+
+Wichtig ist dabei eine ehrliche Erwartung. Ein Baukasten ersetzt nicht automatisch Konzept, Text, Struktur, Bildauswahl oder Suchmaschinenlogik. Er stellt vor allem ein Werkzeug bereit. Ob daraus eine klare Website wird, haengt weiterhin von Inhalt und Entscheidungen ab.
+
+### Wo Baukastensysteme an Grenzen kommen
+
+Grenzen entstehen oft dort, wo die Website mehr leisten soll als nur vorhanden zu sein. Wenn ein Angebot sauber erklaert, Vertrauen aufgebaut, eine besondere Zielgruppe angesprochen oder ein klarer Weg zur Anfrage gefuehrt werden soll, stossen Standardvorlagen schnell an ihre Grenzen.
+
+Auch technische Themen spielen hinein: Ladezeit, saubere Struktur, individuelle Gestaltung, Suchmaschinenoptimierung, Datenschutz, Formulare oder spaetere Erweiterungen sind nicht immer so flexibel, wie es am Anfang wirkt. Was schnell startet, kann spaeter schwerfaellig werden.
+
+### Was eine individuelle Website besser leisten kann
+
+Eine individuelle Website beginnt nicht bei einer Vorlage, sondern bei der Aufgabe. Worum geht es? Wer soll angesprochen werden? Welche Fragen muessen Besucher schnell beantwortet bekommen? Welche Handlung soll naheliegen? Daraus entsteht eine Struktur, die zum Angebot passt.
+
+Der Vorteil liegt nicht nur im Aussehen. Eine individuelle Website kann schlank, schnell und gezielt aufgebaut werden, ohne unnoetigen Ballast. Sie kann Inhalte, Gestaltung, technische Basis und spaetere Entwicklung besser aufeinander abstimmen.
+
+### Warum Inhalt und Struktur wichtiger sind als das Werkzeug
+
+Das Werkzeug ist selten der eigentliche Engpass. Viele Websites wirken schwach, weil unklar bleibt, was angeboten wird, fuer wen es gedacht ist und warum jemand Vertrauen haben sollte. Eine gute Website braucht deshalb zuerst Klarheit in Inhalt und Fuehrung.
+
+Genau dort entsteht der Unterschied zwischen einer Seite, die nur existiert, und einem Auftritt, der funktioniert. Texte, Reihenfolge, Kontaktwege, mobile Darstellung und Suchmaschinenverstaendlichkeit muessen zusammenpassen.
+
+### Wie Nigredo die passende Loesung einschaetzt
+
+Nigredo entscheidet nicht pauschal gegen Baukaesten, sondern schaut auf die Aufgabe. Wenn eine sehr einfache Loesung reicht, soll sie nicht unnoetig aufgeblasen werden. Wenn aber Substanz, Vertrauen, SEO, spezielle Inhalte oder technische Qualitaet wichtig sind, braucht es eine sauber geplante Grundlage.
 
 ## Referenzen
 
