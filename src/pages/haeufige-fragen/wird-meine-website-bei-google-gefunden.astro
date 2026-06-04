@@ -2,9 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
-const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/';
-const question = 'Wie lange dauert die Erstellung einer professionellen Website?';
-const answer = 'Die Erstellung einer professionellen Website dauert je nach Umfang, Inhalt und Abstimmung unterschiedlich lang. Eine schlanke Website kann in wenigen Wochen realistisch umgesetzt werden, während ein umfangreicherer Auftritt mit Textarbeit, Suchmaschinenoptimierung und mehreren Freigaben entsprechend mehr Zeit braucht.';
+const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/wird-meine-website-bei-google-gefunden/';
+const question = 'Wird meine Website bei Google gefunden?';
+const answer = 'Eine Website ist nicht automatisch gut auffindbar, nur weil sie online ist. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehört deshalb in die Umsetzung und ist kein Zusatz am Ende.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -36,14 +36,14 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Wie lange dauert die Erstellung einer professionellen Website? | Nigredo",
-      "description": "Wie lange eine professionelle Website realistisch dauert, welche Projektphasen Zeit brauchen und wodurch sich ein Launch beschleunigen oder verzögern kann.",
+      "name": "Wird meine Website bei Google gefunden? | Nigredo",
+      "description": "Warum eine Website nicht automatisch bei Google erscheint, wovon die Auffindbarkeit abhängt und wie KMU und Selbständige in der Schweiz sichtbar werden.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "mainEntity": { "@id": `${pageUrl}#faq` },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
-      "datePublished": "2026-05-18",
+      "datePublished": "2026-06-04",
       "dateModified": "2026-06-04",
       "isAccessibleForFree": true
     }
@@ -52,13 +52,13 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Wie lange dauert die Erstellung einer professionellen Website? | Nigredo"
-  description="Wie lange eine professionelle Website realistisch dauert, welche Projektphasen Zeit brauchen und wodurch sich ein Launch beschleunigen oder verzögern kann."
+  title="Wird meine Website bei Google gefunden? | Nigredo"
+  description="Warum eine Website nicht automatisch bei Google erscheint, wovon die Auffindbarkeit abhängt und wie KMU und Selbständige in der Schweiz sichtbar werden."
   canonical={pageUrl}
-  ogTitle="Wie lange dauert die Erstellung einer professionellen Website? | Nigredo"
-  ogDescription="Realistische Zeitrahmen, typische Projektphasen und die wichtigsten Verzögerungsfaktoren bei professionellen Websites."
-  twitterTitle="Wie lange dauert die Erstellung einer professionellen Website? | Nigredo"
-  twitterDescription="Wie lange eine professionelle Website dauert und wovon der Zeitrahmen abhängt."
+  ogTitle="Wird meine Website bei Google gefunden? | Nigredo"
+  ogDescription="Wovon es abhängt, ob eine Website bei Google gefunden wird, und was KMU und Selbständige in der Schweiz dafür brauchen."
+  twitterTitle="Wird meine Website bei Google gefunden? | Nigredo"
+  twitterDescription="Warum eine Website nicht von allein sichtbar ist und was wirklich zählt."
   schema={schema}
 >
   <article class="section faq-article" aria-labelledby="article-title">
@@ -71,64 +71,64 @@ const schema = JSON.stringify({
       ]} />
 
       <header class="faq-article__header fade-up">
-        <span class="badge badge--purple">Projektablauf</span>
+        <span class="badge badge--purple">Sichtbarkeit & SEO</span>
         <h1 id="article-title">{question}</h1>
         <p>
-          Die Dauer hängt nicht nur von der Seitenzahl ab. Entscheidend sind vor allem Klarheit im Ziel, verfügbare Inhalte, Abstimmungswege und technische Anforderungen. Eine schlanke Website kann deutlich schneller online gehen als ein Auftritt mit viel Textarbeit, mehreren Freigaben und zusätzlichen Funktionen.
+          Eine Website erscheint nicht von allein weit oben bei Google. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehört deshalb von Anfang an zur Umsetzung.
         </p>
       </header>
 
       <nav class="faq-article__nav fade-up delay-100" aria-label="Inhaltsübersicht">
-        <a href="#abhaengigkeit">Wovon die Dauer abhängt</a>
-        <a href="#ablauf">Typischer Projektablauf</a>
-        <a href="#verzoegerung">Was Projekte verzögert</a>
-        <a href="#schneller">Wann es schneller geht</a>
-        <a href="#einschaetzung">Wie Nigredo den Zeitrahmen einschätzt</a>
+        <a href="#nicht-automatisch">Warum online nicht gleich gefunden bedeutet</a>
+        <a href="#faktoren">Wovon die Auffindbarkeit abhängt</a>
+        <a href="#inhalt">Warum Inhalt der wichtigste Hebel ist</a>
+        <a href="#dauer">Wie lange Sichtbarkeit braucht</a>
+        <a href="#nigredo">Wie Nigredo Sichtbarkeit angeht</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
         <p class="lead-answer">
-          Als grobe Orientierung gilt: Je klarer Ziele, Inhalte und Zuständigkeiten sind, desto schneller lässt sich eine Website umsetzen. Nicht die Technik allein kostet Zeit, sondern oft die inhaltliche Abstimmung davor.
+          Als Orientierung gilt: Eine Website wird dann gefunden, wenn sie technisch fehlerfrei erreichbar ist, klar strukturierte Inhalte hat und genau die Fragen beantwortet, die Menschen tatsächlich in die Suche eingeben. Ohne diese Grundlage bleibt selbst eine schöne Website unsichtbar.
         </p>
 
-        <h2 id="abhaengigkeit">Wovon die Dauer einer Website wirklich abhängt</h2>
+        <h2 id="nicht-automatisch">Warum „online" nicht „gefunden" bedeutet</h2>
         <p>
-          Eine professionelle Website dauert unterschiedlich lang, weil nicht jedes Projekt dieselbe Ausgangslage hat. Gibt es bereits gute Texte, Bilder und eine klare Struktur, verkürzt das den Weg deutlich. Müssen Positionierung, Inhalt und Seitenaufbau zuerst gemeinsam entwickelt werden, braucht das entsprechend mehr Zeit.
+          Viele gehen davon aus, dass eine Website nach dem Start automatisch bei Google auftaucht. Tatsächlich muss Google die Seiten erst finden, verstehen und einordnen können. Fehlt eine saubere technische Basis oder ist der Inhalt unklar, bleibt die Website in den Ergebnissen weit hinten.
         </p>
         <p>
-          Auch technische Anforderungen spielen hinein. Ein einfacher Auftritt mit wenigen Seiten ist schneller umgesetzt als eine Website mit komplexen Formularen, speziellen Integrationen oder mehreren Entscheidungsschlaufen im Unternehmen.
-        </p>
-
-        <h2 id="ablauf">Wie ein typischer Projektablauf aussieht</h2>
-        <p>
-          Meist beginnt ein Website-Projekt mit der Klärung von Ziel, Umfang und Prioritäten. Danach folgen Struktur, Inhalt, Gestaltung und Umsetzung. Zum Schluss kommen Feinschliff, Prüfung auf verschiedenen Geräten und der Launch.
-        </p>
-        <p>
-          Diese Phasen müssen nicht kompliziert sein, aber sie brauchen klare Entscheidungen. Wer früh weiss, was die Website leisten soll, spart oft mehr Zeit als jemand, der erst während der Umsetzung grundlegende Fragen klärt.
+          Gerade bei häufig gesuchten Begriffen gibt es zudem Wettbewerb. Sichtbar wird, wer die Suchabsicht besser trifft als andere, nicht wer einfach nur vorhanden ist.
         </p>
 
-        <h2 id="verzoegerung">Was Projekte am häufigsten verzögert</h2>
+        <h2 id="faktoren">Wovon die Auffindbarkeit abhängt</h2>
         <p>
-          Die grössten Verzögerungen entstehen selten im Code. Häufig bremsen fehlende Inhalte, unklare Freigaben, lange Rückmeldeschlaufen oder nachträgliche Richtungswechsel. Wenn Texte, Bilder oder Zuständigkeiten erst spät geklärt werden, verschiebt sich der Zeitplan schnell.
+          Entscheidend sind vor allem technische Qualität, Inhalt und Relevanz. Lädt die Website schnell? Funktioniert sie auf dem Smartphone? Sind Titel, Seitenstruktur und Überschriften klar? Beantwortet der Inhalt die Frage hinter der Suche?
         </p>
         <p>
-          Auch zu viele gleichzeitige Wünsche können ein Projekt strecken. Deshalb ist es oft sinnvoller, zuerst die klare Kernversion online zu bringen und zusätzliche Ausbaustufen später sauber nachzuziehen.
-        </p>
-
-        <h2 id="schneller">Wann eine Website schneller online sein kann</h2>
-        <p>
-          Schneller geht es, wenn Ziel, Inhalte und Entscheidungswege früh stehen. Wer weiss, welche Seiten wirklich nötig sind, vorhandenes Material geordnet bereitstellt und Feedback gebündelt gibt, schafft eine deutlich bessere Taktung im Projekt.
-        </p>
-        <p>
-          Das heisst nicht, dass Qualität geopfert werden muss. Im Gegenteil: Ein fokussierter Umfang macht die Umsetzung oft nicht nur schneller, sondern auch klarer und wirksamer.
+          Auch Vertrauen spielt eine Rolle. Eine nachvollziehbare Struktur, verständliche Texte und eine seriöse Darstellung helfen sowohl Besuchern als auch Suchmaschinen, die Website richtig einzuordnen.
         </p>
 
-        <h2 id="einschaetzung">Wie Nigredo den Zeitrahmen realistisch einschätzt</h2>
+        <h2 id="inhalt">Warum Inhalt der wichtigste Hebel ist</h2>
         <p>
-          Nigredo schaut zuerst auf Aufgabe, Umfang und Abhängigkeiten. Welche Inhalte sind vorhanden? Wer entscheidet mit? Gibt es feste Termine oder saisonale Gründe für einen Launch? Daraus entsteht ein realistischer Zeitrahmen statt eines schönen, aber unbrauchbaren Wunschdatums.
+          Suchmaschinen belohnen Inhalte, die eine konkrete Frage gut beantworten. Wer die Begriffe seiner Zielgruppe aufgreift und klar formuliert, wird eher gefunden als jemand, der nur allgemein über sein Angebot schreibt.
         </p>
         <p>
-          Wer zuerst die Kosten einordnen will, findet die passende Antwort bei <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">der Frage zu den Website-Kosten</a>. Wer noch zwischen Vorlage und individueller Umsetzung abwägt, findet die Einordnung bei <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">der Frage zu Baukasten oder individueller Website</a>.
+          Deshalb beginnt gute Sichtbarkeit nicht mit Tricks, sondern mit der Frage: Wonach suchen die passenden Kunden wirklich, und beantwortet die Website das verständlich?
+        </p>
+
+        <h2 id="dauer">Wie lange Sichtbarkeit braucht</h2>
+        <p>
+          Suchmaschinenoptimierung ist kein Schalter, der sofort wirkt. Technische Grundlagen greifen schnell, aber gute Platzierungen für umkämpfte Begriffe entstehen über Wochen und Monate. Wer geduldig an Inhalt und Qualität arbeitet, baut Sichtbarkeit auf, die bleibt.
+        </p>
+        <p>
+          Schnelle Ergebnisse versprechen oft nur unseriöse Angebote. Nachhaltige Sichtbarkeit ist das Ergebnis einer sauberen Basis und kontinuierlicher Pflege.
+        </p>
+
+        <h2 id="nigredo">Wie Nigredo Sichtbarkeit angeht</h2>
+        <p>
+          Nigredo behandelt Suchmaschinenoptimierung nicht als nachträgliches Extra, sondern als Teil der Umsetzung: schnelle Ladezeiten, klare Seitenstruktur, sinnvolle Titel und Inhalte, die echte Fragen beantworten. So entsteht eine Website, die gefunden werden kann, statt nur vorhanden zu sein.
+        </p>
+        <p>
+          Wer wissen will, ob dafür eine individuelle Lösung nötig ist, findet die Einordnung bei <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">der Frage zu Baukasten oder individueller Website</a>. Wie sich der Aufwand auf den Preis auswirkt, steht bei <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">der Frage zu den Website-Kosten</a>.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -136,26 +136,26 @@ const schema = JSON.stringify({
           <div class="related-faqs__grid">
             <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">
               <strong>Was kostet eine professionelle Website?</strong>
-              <span>Welche Faktoren den Preis beeinflussen und wie sich Kosten seriös einschätzen lassen.</span>
-            </a>
-            <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">
-              <strong>Kann ich meine professionelle Website später selbst bearbeiten und pflegen?</strong>
-              <span>Wann ein CMS sinnvoll ist und wie viel Eigenständigkeit nach dem Launch bleibt.</span>
+              <span>Wovon der Preis abhängt und warum es keinen seriösen Einheitspreis gibt.</span>
             </a>
             <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">
               <strong>Brauche ich eine individuelle Website oder reicht ein Baukasten?</strong>
               <span>Wann eine Vorlage genügt und wann eine massgeschneiderte Lösung sinnvoller ist.</span>
             </a>
-            <a href="/haeufige-fragen/wird-meine-website-bei-google-gefunden/">
-              <strong>Wird meine Website bei Google gefunden?</strong>
-              <span>Warum eine Website nicht automatisch sichtbar ist und wovon die Auffindbarkeit abhängt.</span>
+            <a href="/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/">
+              <strong>Wie lange dauert die Erstellung einer professionellen Website?</strong>
+              <span>Realistische Zeitrahmen, Projektphasen und typische Verzögerungen.</span>
+            </a>
+            <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">
+              <strong>Kann ich meine professionelle Website später selbst bearbeiten und pflegen?</strong>
+              <span>Wann ein CMS sinnvoll ist und wie viel Eigenständigkeit nach dem Launch bleibt.</span>
             </a>
           </div>
         </section>
 
         <div class="article-links">
           <a href="/haeufige-fragen/">Zurück zu den häufigen Fragen</a>
-          <a href="/kontakt/">Projekt und Zeitrahmen besprechen</a>
+          <a href="/kontakt/">Sichtbarkeit meiner Website besprechen</a>
         </div>
       </div>
     </div>

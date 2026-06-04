@@ -8,7 +8,7 @@ Sitemap: https://www.nigredo.ch/sitemap-index.xml
 Kanonischer Markenname: Nigredo
 Kanonische Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-05-27
+Letzte Aktualisierung: 2026-06-04
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 Kontakt: calzavara3830@gmail.com
@@ -77,7 +77,7 @@ Nigredo arbeitet mit Fixpreisen. Vor jedem Projekt gibt es eine kurze Klaerung u
 
 URL: https://www.nigredo.ch/haeufige-fragen/
 Title: Haeufige Fragen zu professionellen Websites | Nigredo
-Description: Klare Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites fuer KMU und Selbstaendige in der Schweiz.
+Description: Klare Antworten zu Kosten, Dauer, Auffindbarkeit bei Google, Baukasten-Alternativen und Pflege professioneller Websites fuer KMU und Selbstaendige in der Schweiz.
 
 ### Was kostet eine professionelle Website?
 
@@ -86,6 +86,10 @@ Eine professionelle Website kostet je nach Umfang, Inhalt, Designanspruch und te
 ### Brauche ich eine individuelle Website oder reicht ein Baukasten?
 
 Ein Baukasten kann reichen, wenn nur eine sehr einfache Praesenz ohne besondere Anforderungen gebraucht wird. Eine individuelle Website lohnt sich, wenn Inhalt, Vertrauen, Gestaltung, Suchmaschinenoptimierung, technische Qualitaet oder spaetere Erweiterungen wichtig sind.
+
+### Wird meine Website bei Google gefunden?
+
+Eine Website ist nicht automatisch gut auffindbar, nur weil sie online ist. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehoert deshalb in die Umsetzung und ist kein Zusatz am Ende.
 
 ## Was kostet eine professionelle Website?
 
@@ -162,6 +166,36 @@ Genau dort entsteht der Unterschied zwischen einer Seite, die nur existiert, und
 ### Wie Nigredo die passende Loesung einschaetzt
 
 Nigredo entscheidet nicht pauschal gegen Baukaesten, sondern schaut auf die Aufgabe. Wenn eine sehr einfache Loesung reicht, soll sie nicht unnoetig aufgeblasen werden. Wenn aber Substanz, Vertrauen, SEO, spezielle Inhalte oder technische Qualitaet wichtig sind, braucht es eine sauber geplante Grundlage.
+
+## Wird meine Website bei Google gefunden?
+
+URL: https://www.nigredo.ch/haeufige-fragen/wird-meine-website-bei-google-gefunden/
+Title: Wird meine Website bei Google gefunden? | Nigredo
+Description: Warum eine Website nicht automatisch bei Google erscheint, wovon die Auffindbarkeit abhaengt und wie KMU und Selbstaendige in der Schweiz sichtbar werden.
+
+Eine Website erscheint nicht von allein weit oben bei Google. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehoert deshalb von Anfang an zur Umsetzung.
+
+Als Orientierung gilt: Eine Website wird dann gefunden, wenn sie technisch fehlerfrei erreichbar ist, klar strukturierte Inhalte hat und genau die Fragen beantwortet, die Menschen tatsaechlich in die Suche eingeben. Ohne diese Grundlage bleibt selbst eine schoene Website unsichtbar.
+
+### Warum online nicht gleich gefunden bedeutet
+
+Viele gehen davon aus, dass eine Website nach dem Start automatisch bei Google auftaucht. Tatsaechlich muss Google die Seiten erst finden, verstehen und einordnen koennen. Fehlt eine saubere technische Basis oder ist der Inhalt unklar, bleibt die Website in den Ergebnissen weit hinten. Gerade bei haeufig gesuchten Begriffen gibt es zudem Wettbewerb. Sichtbar wird, wer die Suchabsicht besser trifft als andere, nicht wer einfach nur vorhanden ist.
+
+### Wovon die Auffindbarkeit abhaengt
+
+Entscheidend sind vor allem technische Qualitaet, Inhalt und Relevanz. Laedt die Website schnell? Funktioniert sie auf dem Smartphone? Sind Titel, Seitenstruktur und Ueberschriften klar? Beantwortet der Inhalt die Frage hinter der Suche? Auch Vertrauen spielt eine Rolle. Eine nachvollziehbare Struktur, verstaendliche Texte und eine serioese Darstellung helfen sowohl Besuchern als auch Suchmaschinen, die Website richtig einzuordnen.
+
+### Warum Inhalt der wichtigste Hebel ist
+
+Suchmaschinen belohnen Inhalte, die eine konkrete Frage gut beantworten. Wer die Begriffe seiner Zielgruppe aufgreift und klar formuliert, wird eher gefunden als jemand, der nur allgemein ueber sein Angebot schreibt. Gute Sichtbarkeit beginnt deshalb nicht mit Tricks, sondern mit der Frage: Wonach suchen die passenden Kunden wirklich, und beantwortet die Website das verstaendlich?
+
+### Wie lange Sichtbarkeit braucht
+
+Suchmaschinenoptimierung ist kein Schalter, der sofort wirkt. Technische Grundlagen greifen schnell, aber gute Platzierungen fuer umkaempfte Begriffe entstehen ueber Wochen und Monate. Wer geduldig an Inhalt und Qualitaet arbeitet, baut Sichtbarkeit auf, die bleibt. Schnelle Ergebnisse versprechen oft nur unserioese Angebote.
+
+### Wie Nigredo Sichtbarkeit angeht
+
+Nigredo behandelt Suchmaschinenoptimierung nicht als nachtraegliches Extra, sondern als Teil der Umsetzung: schnelle Ladezeiten, klare Seitenstruktur, sinnvolle Titel und Inhalte, die echte Fragen beantworten. So entsteht eine Website, die gefunden werden kann, statt nur vorhanden zu sein.
 
 ## Referenzen
 
