@@ -1,8 +1,7 @@
 import { readdir, readFile } from 'fs/promises';
 import { existsSync } from 'fs';
-import { join } from 'path';
+import { basename, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 import sharp from 'sharp';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -10,10 +9,12 @@ const ROOT = join(__dirname, '..');
 const PUBLIC_DIR = join(ROOT, 'public');
 const STATIC_DIR = join(ROOT, 'static');
 const HTACCESS_PATH = join(STATIC_DIR, '.htaccess');
+const SITE_ORIGIN = 'https://www.nigredo.ch';
 
 const errors = [];
 const warnings = [];
 const noindexCanonicals = [];
+const schemaDateModifiedByUrl = new Map();
 
 async function* walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -55,6 +56,33 @@ function getLocalPublicPath(url) {
   }
 }
 
+function validateSiteUrl(value, relativePath, label, { allowAssets = false } = {}) {
+  if (!value) {
+    addError(`${relativePath}: missing ${label}`);
+    return;
+  }
+
+  let parsed;
+  try {
+    parsed = new URL(value);
+  } catch {
+    addError(`${relativePath}: invalid ${label} URL -> ${value}`);
+    return;
+  }
+
+  if (parsed.origin !== SITE_ORIGIN) {
+    addError(`${relativePath}: ${label} must use ${SITE_ORIGIN} -> ${value}`);
+  }
+
+  if (parsed.search || parsed.hash) {
+    addError(`${relativePath}: ${label} must not include query or fragment -> ${value}`);
+  }
+
+  if (!allowAssets && parsed.pathname !== '/' && !parsed.pathname.endsWith('/')) {
+    addError(`${relativePath}: ${label} must end with a trailing slash -> ${value}`);
+  }
+}
+
 function findSchemaNodesByType(node, type, results = []) {
   if (!node || typeof node !== 'object') return results;
 
@@ -72,6 +100,22 @@ function findSchemaNodesByType(node, type, results = []) {
   }
 
   return results;
+}
+
+function collectPageDateModified(parsed) {
+  const candidates = [
+    ...findSchemaNodesByType(parsed, 'WebPage'),
+    ...findSchemaNodesByType(parsed, 'CollectionPage'),
+    ...findSchemaNodesByType(parsed, 'ContactPage'),
+    ...findSchemaNodesByType(parsed, 'AboutPage'),
+    ...findSchemaNodesByType(parsed, 'FAQPage'),
+  ];
+
+  for (const page of candidates) {
+    if (typeof page.url === 'string' && typeof page.dateModified === 'string') {
+      schemaDateModifiedByUrl.set(page.url, page.dateModified);
+    }
+  }
 }
 
 function validateJsonLd(html, relativePath) {
@@ -97,6 +141,8 @@ function validateJsonLd(html, relativePath) {
         }
       }
     }
+
+    collectPageDateModified(parsed);
   }
 
   if (jsonLdCount === 0) {
@@ -175,8 +221,8 @@ async function validateHtml(html, relativePath) {
   const canonical = html.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/i)?.[1];
   if (!canonical) {
     addError(`${relativePath}: missing canonical link`);
-  } else if (canonical !== 'https://www.nigredo.ch/' && !canonical.endsWith('/')) {
-    addError(`${relativePath}: canonical must end with a trailing slash (${canonical})`);
+  } else {
+    validateSiteUrl(canonical, relativePath, 'canonical');
   }
 
   const robots = html.match(/<meta[^>]+name="robots"[^>]+content="([^"]+)"/i)?.[1] ?? '';
@@ -190,6 +236,14 @@ async function validateHtml(html, relativePath) {
     addError(`${relativePath}: missing hreflang alternates`);
   } else if (canonical && (hreflangDe !== canonical || hreflangDefault !== canonical)) {
     addError(`${relativePath}: hreflang URLs must match canonical`);
+  } else {
+    validateSiteUrl(hreflangDe, relativePath, 'hreflang de-CH');
+    validateSiteUrl(hreflangDefault, relativePath, 'hreflang x-default');
+  }
+
+  for (const rel of ['prev', 'next']) {
+    const url = html.match(new RegExp(`<link[^>]+rel="${rel}"[^>]+href="([^"]+)"`, 'i'))?.[1];
+    if (url) validateSiteUrl(url, relativePath, `rel=${rel}`);
   }
 
   const ogTitle = html.match(/<meta[^>]+property="og:title"[^>]+content="([^"]*)"/i)?.[1] ?? '';
@@ -200,6 +254,8 @@ async function validateHtml(html, relativePath) {
   if (!ogTitle || !ogDescription) {
     addError(`${relativePath}: missing Open Graph title or description`);
   }
+  const ogUrl = html.match(/<meta[^>]+property="og:url"[^>]+content="([^"]+)"/i)?.[1] ?? '';
+  validateSiteUrl(ogUrl, relativePath, 'Open Graph URL');
   if (!twitterCard || !twitterTitle || !twitterDescription) {
     addError(`${relativePath}: missing Twitter card metadata`);
   }
@@ -269,6 +325,26 @@ function validateTrailingSlashes(text, relativePath) {
 async function validateSitemap() {
   const sitemap = await readFile(join(PUBLIC_DIR, 'sitemap-0.xml'), 'utf8');
 
+  for (const match of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
+    const block = match[1];
+    const loc = block.match(/<loc>([^<]+)<\/loc>/)?.[1];
+    if (loc) {
+      validateSiteUrl(loc, 'public/sitemap-0.xml', 'sitemap loc');
+    } else {
+      addError('public/sitemap-0.xml: sitemap entry is missing loc');
+    }
+
+    if (!/<lastmod>[^<]+<\/lastmod>/.test(block)) {
+      addError(`public/sitemap-0.xml: sitemap entry is missing lastmod -> ${loc ?? 'unknown URL'}`);
+    } else if (loc && schemaDateModifiedByUrl.has(loc)) {
+      const sitemapLastmod = block.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1]?.slice(0, 10);
+      const schemaDateModified = schemaDateModifiedByUrl.get(loc);
+      if (sitemapLastmod !== schemaDateModified) {
+        addError(`public/sitemap-0.xml: lastmod ${sitemapLastmod} does not match JSON-LD dateModified ${schemaDateModified} -> ${loc}`);
+      }
+    }
+  }
+
   for (const url of [
     'https://www.nigredo.ch/impressum/',
     'https://www.nigredo.ch/datenschutz/',
@@ -299,13 +375,28 @@ async function validateServerConfig() {
   if (!/HTTP_HOST\}\s+!\^www\\\.nigredo\\\.ch\$/i.test(htaccess) || !/https:\/\/www\.nigredo\.ch%\{REQUEST_URI\}.*R=301/i.test(htaccess)) {
     addError('static/.htaccess: missing canonical www 301 redirect');
   }
+
+  if (
+    !/RewriteCond\s+%\{THE_REQUEST\}\s+\\s\/\+index\\\.html\[\\s\?\]\s+\[NC\][\s\S]*RewriteRule\s+\^index\\\.html\$\s+\/\s+\[L,R=301\]/i.test(htaccess) ||
+    !/RewriteCond\s+%\{THE_REQUEST\}\s+\\s\/\+\(\.\+\)\/index\\\.html\[\\s\?\]\s+\[NC\][\s\S]*RewriteRule\s+\^\(\.\+\)\/index\\\.html\$\s+\/\$1\/\s+\[L,R=301\]/i.test(htaccess)
+  ) {
+    addError('static/.htaccess: missing safe canonical index.html redirects');
+  }
+
+  if (!/<Files\s+"send-mail\.php">[\s\S]*Header\s+set\s+X-Robots-Tag\s+"noindex,\s*nofollow,\s*noarchive"[\s\S]*<\/Files>/i.test(htaccess)) {
+    addError('static/.htaccess: missing X-Robots-Tag for send-mail.php');
+  }
 }
 
 async function main() {
   for await (const file of walk(PUBLIC_DIR)) {
+    const relativePath = file.replace(`${ROOT}/`, '');
+    if (/\s/.test(basename(file))) {
+      addError(`${relativePath}: deploy artifact filename must not contain whitespace`);
+    }
+
     if (!file.endsWith('.html')) continue;
     const html = await readFile(file, 'utf8');
-    const relativePath = file.replace(`${ROOT}/`, '');
     await validateHtml(html, relativePath);
   }
 
@@ -316,6 +407,9 @@ async function main() {
     const fullPath = join(STATIC_DIR, file);
     const text = await readFile(fullPath, 'utf8');
     validateTrailingSlashes(text, `static/${file}`);
+    if (!text.includes('https://www.nigredo.ch/')) {
+      addError(`static/${file}: missing canonical URL https://www.nigredo.ch/`);
+    }
   }
 
   if (warnings.length > 0) {

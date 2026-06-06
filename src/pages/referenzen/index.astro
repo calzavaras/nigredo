@@ -7,6 +7,7 @@ const pageNumber = 1;
 const pageCount = getReferencePageCount();
 const pageItems = getReferencePage(pageNumber);
 const pageUrl = 'https://www.nigredo.ch/referenzen/';
+const nextUrl = pageCount > 1 ? 'https://www.nigredo.ch/referenzen/seite/2/' : undefined;
 
 const schema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -24,16 +25,24 @@ const schema = JSON.stringify({
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
       name: 'Referenzen mit echten Ergebnissen | Nigredo',
-      description: 'Echte Projekte: ThinkTank Wissensplattform, KI Voice Agent, lokales Excel-Dashboard und die Website von Therapie Ost. Digitale Lösungen von Nigredo, St. Gallen.',
+      description: 'Echte Projekte: Mentra, ThinkTank, KI Voice Agent, Excel-Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen.',
       inLanguage: 'de-CH',
       datePublished: '2025-06-01',
-      dateModified: '2026-05-18',
+      dateModified: '2026-06-06',
       isPartOf: { '@id': 'https://www.nigredo.ch/#website' },
       publisher: { '@id': 'https://www.nigredo.ch/#organization' },
       breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
       isAccessibleForFree: true,
       about: { '@id': 'https://www.nigredo.ch/#organization' },
       mentions: [
+        {
+          '@type': 'SoftwareApplication',
+          '@id': 'https://www.nigredo.ch/referenzen/mentra/#project',
+          name: 'Mentra Video-Wissenssystem',
+          url: 'https://www.nigredo.ch/referenzen/mentra/',
+          applicationCategory: 'BusinessApplication',
+          creator: { '@id': 'https://www.nigredo.ch/#person' },
+        },
         {
           '@type': 'SoftwareApplication',
           '@id': 'https://www.nigredo.ch/referenzen/ki-voice-agent/#project',
@@ -82,14 +91,15 @@ const schema = JSON.stringify({
 
 <Layout
   title="Referenzen | Echte Projekte von Nigredo"
-  description="Echte Projekte: ThinkTank Wissensplattform, KI Voice Agent, lokales Excel-Dashboard und die Website von Therapie Ost. Digitale Lösungen von Nigredo, St. Gallen."
+  description="Echte Projekte: Mentra, ThinkTank, KI Voice Agent, Excel-Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen."
   canonical={pageUrl}
   ogTitle="Gebaut. Nicht versprochen. | Nigredo"
-  ogDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten. KI Voice Agent, Excel-Dashboard und mehr."
+  ogDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten. Mentra, KI Voice Agent, Excel-Dashboard und mehr."
   ogImageAlt="Nigredo Referenzen – Echte Projekte, keine Demos"
   twitterTitle="Gebaut. Nicht versprochen. | Nigredo"
   twitterDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten."
   schema={schema}
+  nextUrl={nextUrl}
 >
   <ReferencesArchiveSection pageNumber={pageNumber} pageCount={pageCount} pageItems={pageItems} />
 </Layout>

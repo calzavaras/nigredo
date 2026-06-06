@@ -39,7 +39,7 @@ if (pageNumber > 1) {
         <span class="gradient-text">Echte Ergebnisse.</span>
       </h1>
       <p class="hero-lead refs-hero__lead">
-        Hier stehen keine Demos und keine hübschen Attrappen. Hier stehen Projekte mit Auftrag, Kontext und Reibung. Dinge, die nicht nur gut aussehen mussten, sondern im Alltag funktionieren.
+        Keine Demos, keine schönen Attrappen. Echte Aufträge mit Kontext, Termindruck und Reibung. Jedes Projekt hier löst ein konkretes Problem eines konkreten Menschen. Gut möglich, dass du dein eigenes wiedererkennst.
       </p>
       {pageCount > 1 && (
         <p class="refs-page-kicker">Seite {pageNumber} von {pageCount}</p>
@@ -55,7 +55,7 @@ if (pageNumber > 1) {
       {pageItems.map((reference, index) => (
         <a
           href={reference.href}
-          class={`ref-main-card${index >= REFERENCES_INITIAL_VISIBLE ? ' is-hidden-ref' : ''}`}
+          class={`ref-main-card${reference.linkCls === 'ref-main-link--ki' ? ' ref-main-card--ki' : ''}${reference.badge.cls === 'accent-cyan' ? ' ref-main-card--app' : ''}${index >= REFERENCES_INITIAL_VISIBLE ? ' is-hidden-ref' : ''}`}
           aria-label={reference.ariaLabel}
           hidden={index >= REFERENCES_INITIAL_VISIBLE}
         >
@@ -335,6 +335,14 @@ if (pageNumber > 1) {
     color: var(--secondary-accent);
     margin-bottom: 16px;
     font-weight: 500;
+  }
+
+  .ref-main-card--ki .ref-main-card-sub {
+    color: #c69aff;
+  }
+
+  .ref-main-card--app .ref-main-card-sub {
+    color: #62e6db;
   }
 
   .ref-main-card-desc {

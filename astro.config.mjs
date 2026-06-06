@@ -22,7 +22,15 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/referenzen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-05-19');
+          item.lastmod = new Date('2026-06-06');
+        }
+        else if (url === 'https://www.nigredo.ch/referenzen/mentra/') {
+          item.priority = 0.65;
+          item.lastmod = new Date('2026-06-06');
+        }
+        else if (url === 'https://www.nigredo.ch/referenzen/seite/2/') {
+          item.priority = 0.45;
+          item.lastmod = new Date('2026-06-06');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/ki-voice-agent/') {
           item.priority = 0.65;

@@ -28,6 +28,8 @@ interface Props {
   preloadImageType?: string;
   preloadImageSrcset?: string;
   preloadImageSizes?: string;
+  prevUrl?: string;
+  nextUrl?: string;
 }
 
 const layoutDir = dirname(fileURLToPath(import.meta.url));
@@ -65,6 +67,8 @@ const {
   preloadImageType,
   preloadImageSrcset,
   preloadImageSizes,
+  prevUrl,
+  nextUrl,
 } = Astro.props;
 
 function inferImageType(image: string | undefined): string | undefined {
@@ -81,6 +85,10 @@ const resolvedOgImageType = ogImageType ?? inferImageType(ogImage);
 const canonicalUrl = canonical === 'https://www.nigredo.ch'
   ? 'https://www.nigredo.ch/'
   : (canonical.endsWith('/') ? canonical : `${canonical}/`);
+const ogImageRatio = Number(ogImageWidth) / Number(ogImageHeight);
+const twitterCard = ogImage && Number(ogImageWidth) >= 600 && Number(ogImageHeight) >= 315 && ogImageRatio >= 1.4
+  ? 'summary_large_image'
+  : 'summary';
 
 // Globales Entitäts- und Navigationsschema für konsistente Seitengraphen.
 const siteIdentitySchema = JSON.stringify({
@@ -365,6 +373,8 @@ const siteIdentitySchema = JSON.stringify({
   <meta name="publisher" content="Nigredo">
   <meta name="robots" content={robots}>
   <link rel="canonical" href={canonicalUrl}>
+  {prevUrl && <link rel="prev" href={prevUrl}>}
+  {nextUrl && <link rel="next" href={nextUrl}>}
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt – Nigredo für KI-Bots">
   <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs-full.txt – Vollständige Inhalte für KI-Systeme">
 
@@ -387,7 +397,7 @@ const siteIdentitySchema = JSON.stringify({
   {ogImage && <meta property="og:image:height" content={ogImageHeight}>}
   {ogImage && resolvedOgImageType && <meta property="og:image:type" content={resolvedOgImageType}>}
 
-  <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'}>
+  <meta name="twitter:card" content={twitterCard}>
   <meta name="twitter:title" content={twitterTitle || ogTitle || title}>
   <meta name="twitter:description" content={twitterDescription || ogDescription || description}>
   {ogImage && <meta name="twitter:image" content={ogImage}>}

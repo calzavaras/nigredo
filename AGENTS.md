@@ -50,5 +50,5 @@ Single file: `src/styles/global.css` ("Nigredo Design System v9.9"). Dark theme 
 `/404` is filtered out from the sitemap. `impressum` and `datenschutz` are included with low priority (0.3, `changefreq: yearly`) and are indexable. Priority and `lastmod` for all pages are set manually in `astro.config.mjs`.
 
 ### Pages
-- `/referenzen/*` — individual case study pages, each using `Breadcrumb.astro`
+- `/referenzen/*` — individual case study pages, each using `Breadcrumb.astro`. **Before creating a new reference/case-study page, follow `docs/neue-referenz-erstellen.md` (the step-by-step playbook).**
 - `/llms.txt`, `/llms-full.txt` — static files sourced from `static/` and emitted to `public/` for LLM crawlers

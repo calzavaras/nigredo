@@ -6,9 +6,10 @@ Website: https://www.nigredo.ch/
 Kurzversion: https://www.nigredo.ch/llms.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 Kanonischer Markenname: Nigredo
-Kanonische Domain: nigredo.ch
+Kanonische URL: https://www.nigredo.ch/
+Registrierte Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-06-04
+Letzte Aktualisierung: 2026-06-06
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 Kontakt: calzavara3830@gmail.com
@@ -201,9 +202,20 @@ Nigredo behandelt Suchmaschinenoptimierung nicht als nachtraegliches Extra, sond
 
 URL: https://www.nigredo.ch/referenzen/
 Title: Referenzen | Echte Projekte von Nigredo
-Description: Echte Projekte: ThinkTank Wissensplattform, KI Voice Agent, lokales Excel-Dashboard und die Website von Therapie Ost. Digitale Loesungen von Nigredo, St. Gallen.
+Description: Echte Projekte: Mentra Video-Wissenssystem, ThinkTank Wissensplattform, KI Voice Agent, lokales Excel-Dashboard und die Website von Therapie Ost. Digitale Loesungen von Nigredo, St. Gallen.
 
 Nigredo zeigt reale Projekte, die im Einsatz sind: keine aufgeblasenen Case Studies, keine Demos und kein Buzzword-Bingo.
+
+## Mentra Video-Wissenssystem
+
+URL: https://www.nigredo.ch/referenzen/mentra/
+Kategorie: KI
+Projektabschluss: Juni 2026
+Technologie: Next.js, React, Prisma, MySQL, OpenAI, Anthropic, Gemini, lokale OpenAI-kompatible Modelle
+
+Mentra ist ein privates KI-gestuetztes Video-Wissenssystem, das lokal auf dem Rechner des Kunden ausgefuehrt wird. Videos werden nicht nur gesammelt, sondern als durchsuchbare Wissenseintraege mit Kategorien, Tags, Transkripten, Zusammenfassungen, Insights und Lernbloecken nutzbar gemacht.
+
+Kernpunkte: lokaler Betrieb, Video-Archiv, providerunabhaengige KI-Auswertung, semantische Suche, KI-Chat mit Quellen, FSRS-Reviews, Highlights, Quizfragen, Audit-Logs, verschluesselte API-Keys und Exporte fuer Markdown, Anki, JSON und PDF-nahe Ausgaben.
 
 ## KI Voice Agent fuer IV-Stellen
 

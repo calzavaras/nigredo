@@ -23,6 +23,13 @@ const pageCount = getReferencePageCount();
 const rawHref = getReferencePageHref(pageNumber);
 const pageHref = rawHref.endsWith('/') ? rawHref : `${rawHref}/`;
 const pageUrl = `https://www.nigredo.ch${pageHref}`;
+const referenceArchiveModified = '2026-06-06';
+const rawPrevHref = getReferencePageHref(pageNumber - 1);
+const prevHref = rawPrevHref.endsWith('/') ? rawPrevHref : `${rawPrevHref}/`;
+const rawNextHref = pageNumber < pageCount ? getReferencePageHref(pageNumber + 1) : undefined;
+const nextHref = rawNextHref ? (rawNextHref.endsWith('/') ? rawNextHref : `${rawNextHref}/`) : undefined;
+const prevUrl = `https://www.nigredo.ch${prevHref}`;
+const nextUrl = nextHref ? `https://www.nigredo.ch${nextHref}` : undefined;
 
 const schema = JSON.stringify({
   '@context': 'https://schema.org',
@@ -44,7 +51,7 @@ const schema = JSON.stringify({
       description: 'Weitere Referenzprojekte von Nigredo. KI, Websites, Wissensplattformen und Software für Schweizer KMU und Verwaltungen.',
       inLanguage: 'de-CH',
       datePublished: '2025-06-01',
-      dateModified: '2026-05-03',
+      dateModified: referenceArchiveModified,
       isPartOf: { '@id': 'https://www.nigredo.ch/#website' },
       breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
       isAccessibleForFree: true,
@@ -72,6 +79,8 @@ const schema = JSON.stringify({
   twitterTitle={`Referenzen – Seite ${pageNumber} | Nigredo`}
   twitterDescription="Weitere Referenzen von Nigredo."
   schema={schema}
+  prevUrl={prevUrl}
+  nextUrl={nextUrl}
 >
   <ReferencesArchiveSection pageNumber={pageNumber} pageCount={pageCount} pageItems={pageItems} />
 </Layout>

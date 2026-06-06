@@ -7,7 +7,7 @@ const others = references.filter(r => r.href !== currentPath).slice(0, 3);
 
 <div class="case-more-grid">
   {others.map(r => (
-    <a href={r.href} class="case-more-card" aria-label={r.ariaLabel}>
+    <a href={r.href} class={`case-more-card${r.linkCls === 'ref-main-link--ki' ? ' case-more-card--ki' : ''}`} aria-label={r.ariaLabel}>
       <div class={`case-more-card-img ${r.moreImgCls}`}>
         <img src={r.imgSrc} alt={r.imgAlt} loading="lazy" decoding="async" width="800" height="450">
       </div>

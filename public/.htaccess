@@ -18,6 +18,13 @@ RewriteCond %{HTTPS} !=on
 RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
 RewriteRule ^ https://www.nigredo.ch%{REQUEST_URI} [L,R=301]
 
+# Direkt aufgerufene Index-Dateien auf die kanonische Directory-URL führen.
+# THE_REQUEST verhindert Redirect-Loops mit dem internen Astro-Rewrite auf index.html.
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [L,R=301]
+RewriteCond %{THE_REQUEST} \s/+(.+)/index\.html[\s?] [NC]
+RewriteRule ^(.+)/index\.html$ /$1/ [L,R=301]
+
 # Entfernte SEO-Landingpages dauerhaft auf die beste kanonische Zielseite führen
 RewriteRule ^faq-webdesign/?$ /haeufige-fragen/ [L,R=301]
 RewriteRule ^lokale-seo/?$ /digitale-loesungen/ [L,R=301]
@@ -46,7 +53,10 @@ ErrorDocument 404 /404.html
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
     Header always set Cross-Origin-Opener-Policy "same-origin"
     Header always set Cross-Origin-Resource-Policy "same-origin"
-    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' https://cloud.umami.is 'sha256-Ft/OmIFnaUFO5WaFjyZCZMoHeYcf8JWMbtbae+IF4jI=' 'sha256-4oXEtvDVUGje1DzYKf+NPJrMZeQ2NVW5trg2DdLl6QY=' 'sha256-pNpHBnOF5uPR2QMg1lyDZhNdaxyj6oir9np1EQN2s48=' 'sha256-5h6SW16YLILu/1MJR0sHmSwFQqErUeJQajgyC+4DYZQ=' 'sha256-PRZ7adV2qH/22aPXrFfjRNIMoBsuFahAnwGJEwSRoCo=' 'sha256-59hltD/Y+dv1u1JNghQy0Pqp1nSVofL8lJIi2RZPudE=' 'sha256-mdIXanX9+uPxbYyVFGBcFcRA9KH1uMtF4RFhWNdPwNA=' 'sha256-lZzEw40xw+UypJDiSG6lbCDWy5/RnJt32haFU+Uae2Q=' 'sha256-UEY6z0gN2K20QH7OkrdykQODY0gAJa5ghY9MF1yrKgM=' 'sha256-QUrMqAREyGy8RrckhQsFnvWl2Qh+Eih4paCiM0sZJng=' 'sha256-1KQxB7+EU5mJdzKNg7yy0KMR8ypRn812t7RsovXtysA=' 'sha256-ry9hEBP2v1T8oXNx8jGz6RpAaDDS3sO3zQkDPMMXF8Q=' 'sha256-VoTScYJV9IrzwchFmsdgHJWJcYVQBNvu6AwCEaxMayQ=' 'sha256-wXkPUIwmXg2Vodrv4DfgqfIHRHA4MPzWtXfUny3s/YY=' 'sha256-HWhMmAf+9MPgnUzeLeNfAk72SHbWiiQwARpw/Qm9oek=' 'sha256-LqB6R7RYeehwBbha6WmosczhjVaqwDWqUf60V4IHAxs=' 'sha256-aG8eJ6dZS4EEp7P4il1weJL8WmsdZ3nhH9yFe0AuA10=' 'sha256-giTlpJ4/YXGxgksVaX2mf5hEUDDEBzDmJlbSYI2E054=' 'sha256-ee7Ek+QrX7LWMLXELZKrd3elZSxJRiM3TdNuQrR6cxw='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloud.umami.is; frame-ancestors 'none'"
+    Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' https://cloud.umami.is 'sha256-Ft/OmIFnaUFO5WaFjyZCZMoHeYcf8JWMbtbae+IF4jI=' 'sha256-4oXEtvDVUGje1DzYKf+NPJrMZeQ2NVW5trg2DdLl6QY=' 'sha256-rBSmqzQAeFm9n6NcWJfXd7vnHeZ5le0bkNgHM2m1Mek=' 'sha256-5h6SW16YLILu/1MJR0sHmSwFQqErUeJQajgyC+4DYZQ=' 'sha256-PRZ7adV2qH/22aPXrFfjRNIMoBsuFahAnwGJEwSRoCo=' 'sha256-59hltD/Y+dv1u1JNghQy0Pqp1nSVofL8lJIi2RZPudE=' 'sha256-mdIXanX9+uPxbYyVFGBcFcRA9KH1uMtF4RFhWNdPwNA=' 'sha256-lZzEw40xw+UypJDiSG6lbCDWy5/RnJt32haFU+Uae2Q=' 'sha256-UEY6z0gN2K20QH7OkrdykQODY0gAJa5ghY9MF1yrKgM=' 'sha256-QUrMqAREyGy8RrckhQsFnvWl2Qh+Eih4paCiM0sZJng=' 'sha256-1KQxB7+EU5mJdzKNg7yy0KMR8ypRn812t7RsovXtysA=' 'sha256-xrNbkGvbDPA8lO8EmS6TcHCCBaKpvv88flSLiHNrj6g=' 'sha256-VoTScYJV9IrzwchFmsdgHJWJcYVQBNvu6AwCEaxMayQ=' 'sha256-wXkPUIwmXg2Vodrv4DfgqfIHRHA4MPzWtXfUny3s/YY=' 'sha256-HWhMmAf+9MPgnUzeLeNfAk72SHbWiiQwARpw/Qm9oek=' 'sha256-f/raIo9CrH1hG/yzsCcM/4EDMe/zr816RzGMDtursnU=' 'sha256-aG8eJ6dZS4EEp7P4il1weJL8WmsdZ3nhH9yFe0AuA10=' 'sha256-iil2bbWLKK9OCxgD1K8ppoBKyUb7gR2oMpv+gWiE5Xs=' 'sha256-k/pBl2LV8zgKcghCjzEOSesW06/KhpfkhuCDLuayn94=' 'sha256-9fgntxoHOpDPu/YeK70YpydPDKS5FIgFDVAvcM99J3M=' 'sha256-ee7Ek+QrX7LWMLXELZKrd3elZSxJRiM3TdNuQrR6cxw='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloud.umami.is; frame-ancestors 'none'"
+    <Files "send-mail.php">
+        Header set X-Robots-Tag "noindex, nofollow, noarchive"
+    </Files>
     Header append Vary "Accept-Encoding"
     <FilesMatch "\.(?:avif|css|gif|ico|jpe?g|js|mjs|png|svg|webp|woff2?|ttf)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
