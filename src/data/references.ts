@@ -1,4 +1,3 @@
-export const REFERENCES_INITIAL_VISIBLE = 2;
 export const REFERENCES_PER_PAGE = 4;
 
 const referenceEntries = [
@@ -86,6 +85,23 @@ const referenceEntries = [
     listDesc: 'Eine Praxis muss nicht laut sein, um zu überzeugen. Dieser ruhige Auftritt für einen Standort in St. Gallen schafft Vertrauen mit echten Bildern, erklärt die Leistungen verständlich und führt in wenigen Schritten zur Terminbuchung. Leise, aber wirksam.',
     moreDesc: 'Bringt Vertrauen, Klarheit und direkte Online-Terminbuchung in einen ruhigen Praxisauftritt.',
     ariaLabel: 'Website für Therapie Ost - Details ansehen',
+  },
+  {
+    href: '/referenzen/plan-h/',
+    imgSrc: '/referenzen/plan-h/plan-h-hypnosetherapie-website-illustration.svg',
+    imgAlt: 'Website für Plan H Hypnosetherapie - farbig skizzierte Startseite mit coral-farbigem Website-Akzent und türkisfarbener Hero-Grafik',
+    listImgCls: 'ref-main-card-img--coral',
+    moreImgCls: 'case-more-card-img--coral',
+    badge: { text: 'Website', cls: 'accent-coral' },
+    linkCls: '',
+    year: 'Jun 2026',
+    sortDate: '2026-06-30',
+    listTitle: 'Website für Plan H',
+    moreTitle: 'Website für Plan H',
+    sub: 'Praxiswebsite mit Local SEO, WhatsApp-Kontakt und sortierbaren Stimmen',
+    listDesc: 'Ein ruhiger Auftritt reicht nicht, wenn niemand ihn findet oder nutzt. Plan H verbindet verständliche Hypnosetherapie-Inhalte mit lokaler Google-Ausrichtung, sauberem Schema, direktem WhatsApp-Chat und einer Stimmen-Seite, die Vertrauen gezielt auffindbar macht.',
+    moreDesc: 'Verbindet ruhige Positionierung mit Local SEO, WhatsApp-Kontakt und strukturierten Vertrauenselementen.',
+    ariaLabel: 'Website für Plan H Hypnosetherapie - Details ansehen',
   },
 ] as const;
 

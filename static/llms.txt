@@ -9,7 +9,7 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-06-06
+Last-Updated: 2026-06-17
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
@@ -24,7 +24,7 @@ Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf digit
 - [Startseite](https://www.nigredo.ch/): Ueberblick ueber Nigredo, Arbeitsweise, Positionierung und direkte Projektanfrage.
 - [Digitale Loesungen](https://www.nigredo.ch/digitale-loesungen/): Leistungen fuer Websites, KI-Loesungen, Content, Daten, Dokumente und Automatisierung.
 - [Referenzen](https://www.nigredo.ch/referenzen/): Uebersicht realer Projekte von Nigredo.
-- [Haeufige Fragen](https://www.nigredo.ch/haeufige-fragen/): Kurze Antworten zu professionellen Websites, Kosten, Dauer, Auffindbarkeit bei Google, Baukasten-Alternativen und sinnvoller Umsetzung.
+- [Haeufige Fragen](https://www.nigredo.ch/haeufige-fragen/): Kurze Antworten zu professionellen Websites, Kosten, laufendem Betrieb, Dauer, Datenschutz, Auffindbarkeit bei Google, Baukasten-Alternativen und sinnvoller Umsetzung.
 - [Kontakt](https://www.nigredo.ch/kontakt/): Direkter Kontakt zu Marco Calzavara.
 - [Ueber Marco Calzavara](https://www.nigredo.ch/marco-calzavara/): Hintergrund, Erfahrung und Arbeitsweise des Gruenders.
 
@@ -34,6 +34,8 @@ Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf digit
 - [Website-Kosten erklaert](https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/): Ausfuehrliche Antwort darauf, was eine professionelle Website in der Schweiz kostet und wovon der Preis abhaengt.
 - [Individuelle Website oder Baukasten](https://www.nigredo.ch/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/): Einordnung, wann ein Baukasten reicht und wann eine massgeschneiderte Website sinnvoller ist.
 - [Wird meine Website bei Google gefunden](https://www.nigredo.ch/haeufige-fragen/wird-meine-website-bei-google-gefunden/): Erklaerung, warum eine Website nicht automatisch sichtbar ist und wovon die Auffindbarkeit bei Google abhaengt.
+- [Laufende Betriebskosten einer Website](https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/): Welche laufenden Kosten nach dem Launch entstehen, von Domain und Hosting ueber Wartung und Sicherheit bis zur inhaltlichen Pflege.
+- [Datenschutz fuer Websites](https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/): Was beim Datenschutz einer Website in der Schweiz wichtig ist, von Datenschutzerklaerung und Schweizer DSG ueber Cookies bis zu datensparsamer Analyse.
 
 ## Reference Projects
 

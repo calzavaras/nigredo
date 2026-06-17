@@ -2582,6 +2582,7 @@ nav {
   align-items: center;
   gap: clamp(44px, 6vw, 80px);
   margin-bottom: 72px;
+  min-width: 0;
 }
 
 @media (max-width: 1024px) {
@@ -2595,6 +2596,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
 }
 
 .case-hero-badge {
@@ -2609,11 +2611,13 @@ nav {
 
 .case-hero-visual {
   position: relative;
+  min-width: 0;
 }
 
 .case-hero-canvas {
   position: relative;
   width: 100%;
+  max-width: 100%;
   aspect-ratio: 4/3;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -2630,6 +2634,7 @@ nav {
   padding: 0;
   cursor: pointer;
   transition: transform 0.3s ease;
+  max-width: 100%;
 }
 
 .case-hero-float--wide {
@@ -2642,6 +2647,7 @@ nav {
 
 .case-hero-float picture {
   display: block;
+  max-width: 100%;
 }
 
 .case-hero-canvas--purple {
@@ -2668,12 +2674,29 @@ nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   margin-bottom: 72px;
   justify-items: center;
+  min-width: 0;
 }
 
 @media (max-width: 768px) {
   .case-stats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 28px 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .case-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .case-stat strong {
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+  }
+}
+
+@media (max-width: 680px) {
+  .case-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -2684,14 +2707,18 @@ nav {
   justify-content: center;
   text-align: center;
   width: 100%;
+  min-width: 0;
 }
 
 .case-stat strong {
+  display: inline-block;
   font-size: clamp(1.8rem, 4.5vw, 2.5rem);
-  line-height: 1;
+  line-height: 1.16;
   color: #fff;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  padding-bottom: 0.04em;
   font-weight: 700;
+  max-width: 100%;
 }
 
 .case-stat span {
@@ -3543,14 +3570,42 @@ nav {
 
 @media (max-width: 520px) {
   .case-page .case-hero-title {
-    font-size: var(--hero-title-size-mobile);
+    font-size: clamp(2.45rem, 10.5vw, 3rem);
     line-height: var(--hero-title-line-height-mobile);
     letter-spacing: 0;
+    max-width: 100%;
   }
 
   .case-page .case-hero-lead {
     font-size: var(--lead-size-mobile);
     line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .case-hero {
+    gap: 32px;
+    margin-bottom: 58px;
+  }
+
+  .case-hero-canvas {
+    border-radius: 18px;
+  }
+
+  .case-stats {
+    gap: 26px 12px;
+    padding: 34px 0;
+    margin-bottom: 58px;
+  }
+
+  .case-stat strong {
+    font-size: clamp(1.28rem, 7.2vw, 1.78rem);
+    line-height: 1.14;
+    overflow-wrap: anywhere;
+  }
+
+  .case-stat span {
+    font-size: 0.82rem;
+    max-width: 13ch;
   }
 
   .case-final-section {

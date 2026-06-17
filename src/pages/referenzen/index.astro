@@ -25,10 +25,10 @@ const schema = JSON.stringify({
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
       name: 'Referenzen mit echten Ergebnissen | Nigredo',
-      description: 'Echte Projekte: Mentra, ThinkTank, KI Voice Agent, Excel-Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen.',
+      description: 'Echte Projekte: Plan H, Mentra, ThinkTank, KI Voice Agent, Excel-Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen.',
       inLanguage: 'de-CH',
       datePublished: '2025-06-01',
-      dateModified: '2026-06-06',
+      dateModified: '2026-06-17',
       isPartOf: { '@id': 'https://www.nigredo.ch/#website' },
       publisher: { '@id': 'https://www.nigredo.ch/#organization' },
       breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
@@ -67,6 +67,13 @@ const schema = JSON.stringify({
           creator: { '@id': 'https://www.nigredo.ch/#person' },
         },
         {
+          '@type': ['WebSite', 'CreativeWork'],
+          '@id': 'https://www.nigredo.ch/referenzen/plan-h/#website-project',
+          name: 'Website für Plan H Hypnosetherapie',
+          url: 'https://www.nigredo.ch/referenzen/plan-h/',
+          creator: { '@id': 'https://www.nigredo.ch/#person' },
+        },
+        {
           '@type': 'SoftwareApplication',
           '@id': 'https://www.nigredo.ch/referenzen/thinktank/#project',
           name: 'ThinkTank Wissensplattform',
@@ -91,7 +98,7 @@ const schema = JSON.stringify({
 
 <Layout
   title="Referenzen | Echte Projekte von Nigredo"
-  description="Echte Projekte: Mentra, ThinkTank, KI Voice Agent, Excel-Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen."
+  description="Echte Projekte: Plan H, Mentra, ThinkTank, KI Voice Agent, Excel-Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen."
   canonical={pageUrl}
   ogTitle="Gebaut. Nicht versprochen. | Nigredo"
   ogDescription="Keine Demos, keine Konzeptpapiere. Projekte, die raus sind und arbeiten. Mentra, KI Voice Agent, Excel-Dashboard und mehr."

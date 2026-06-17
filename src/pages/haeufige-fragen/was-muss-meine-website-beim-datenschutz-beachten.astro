@@ -2,9 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
-const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/';
-const question = 'Brauche ich eine individuelle Website oder reicht ein Baukasten?';
-const answer = 'Als Orientierung gilt: Wenn nur eine einfache Online-Visitenkarte gebraucht wird, kann ein Baukasten ausreichen. Sobald die Website eine klare Aufgabe hat, Anfragen bringen, Vertrauen tragen oder technisch sauber erweiterbar bleiben soll, lohnt sich eine individuelle Umsetzung.';
+const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/';
+const question = 'Was muss meine Website beim Datenschutz beachten?';
+const answer = 'Eine Website in der Schweiz muss transparent machen, welche Daten sie bearbeitet. Dazu gehören in der Regel eine verständliche Datenschutzerklärung, klare Angaben zum Anbieter und ein bewusster Umgang mit Cookies, Tracking und externen Diensten. Massgeblich ist das Schweizer Datenschutzgesetz, bei Besuchern aus der EU zusätzlich die DSGVO.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -29,6 +29,22 @@ const schema = JSON.stringify({
             "@type": "Answer",
             "text": answer
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Braucht jede Website eine Datenschutzerklärung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sobald eine Website Personendaten bearbeitet, also etwa über ein Kontaktformular, Server-Logs oder Analyse-Werkzeuge, gehört eine verständliche Datenschutzerklärung dazu. In der Praxis trifft das auf nahezu jede Website zu, weshalb eine Datenschutzerklärung Standard sein sollte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Brauche ich für meine Website ein Cookie-Banner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ein Cookie-Banner ist kein Selbstzweck. Nötig wird eine Einwilligung vor allem dann, wenn nicht zwingend erforderliche Cookies oder Tracking-Dienste eingesetzt werden. Wer auf datensparsame Technik und schonende Analyse setzt, kann den Bedarf für Banner oft deutlich reduzieren."
+          }
         }
       ]
     },
@@ -36,15 +52,15 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Individuelle Website oder Baukasten? | Nigredo",
-      "description": "Wann ein Website-Baukasten reicht, wann eine individuelle Website sinnvoll ist und worauf KMU und Selbständige bei der Entscheidung achten sollten.",
+      "name": "Was muss meine Website beim Datenschutz beachten? | Nigredo",
+      "description": "Was beim Datenschutz einer Website in der Schweiz wichtig ist: Datenschutzerklärung, Schweizer DSG, Cookies und datensparsame Analyse, klar erklärt für KMU.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "mainEntity": { "@id": `${pageUrl}#faq` },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
-      "datePublished": "2026-05-27",
-      "dateModified": "2026-06-04",
+      "datePublished": "2026-06-17",
+      "dateModified": "2026-06-17",
       "isAccessibleForFree": true
     }
   ]
@@ -52,13 +68,13 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Individuelle Website oder Baukasten? | Nigredo"
-  description="Wann ein Website-Baukasten reicht, wann eine individuelle Website sinnvoll ist und worauf KMU und Selbständige bei der Entscheidung achten sollten."
+  title="Was muss meine Website beim Datenschutz beachten? | Nigredo"
+  description="Was beim Datenschutz einer Website in der Schweiz wichtig ist: Datenschutzerklärung, Schweizer DSG, Cookies und datensparsame Analyse, klar erklärt für KMU."
   canonical={pageUrl}
-  ogTitle="Individuelle Website oder Baukasten? | Nigredo"
-  ogDescription="Eine klare Einordnung, wann ein Baukasten genügt und wann eine individuell entwickelte Website die bessere Grundlage ist."
-  twitterTitle="Individuelle Website oder Baukasten? | Nigredo"
-  twitterDescription="Wann ein Baukasten reicht und wann eine individuelle Website sinnvoll ist."
+  ogTitle="Was muss meine Website beim Datenschutz beachten? | Nigredo"
+  ogDescription="Datenschutzerklärung, Schweizer DSG, Cookies und schonende Analyse: Was beim Datenschutz einer Website wirklich zählt und wie man es schlank löst."
+  twitterTitle="Was muss meine Website beim Datenschutz beachten? | Nigredo"
+  twitterDescription="Datenschutz für Websites in der Schweiz, verständlich erklärt: DSG, Cookies, Tracking und datensparsame Analyse."
   schema={schema}
 >
   <article class="section faq-article" aria-labelledby="article-title">
@@ -71,91 +87,91 @@ const schema = JSON.stringify({
       ]} />
 
       <header class="faq-article__header fade-up">
-        <span class="badge badge--purple">Baukasten oder individuell</span>
+        <span class="badge badge--pink">Datenschutz & Recht</span>
         <h1 id="article-title">{question}</h1>
         <p>
-          Ein Website-Baukasten kann für sehr einfache Auftritte reichen. Wenn eine Website aber Vertrauen schaffen, klar positionieren, gefunden werden und langfristig mitwachsen soll, ist eine individuelle Lösung meist die bessere Grundlage.
+          Datenschutz wirkt schnell kompliziert, lässt sich aber gut handhaben, wenn man ihn von Anfang an mitdenkt. Im Kern geht es darum, transparent zu sein, sparsam mit Daten umzugehen und Besuchern verständlich zu erklären, was mit ihren Daten passiert.
         </p>
       </header>
 
       <nav class="faq-article__nav fade-up delay-100" aria-label="Inhaltsübersicht">
-        <a href="#baukasten">Wann ein Baukasten reichen kann</a>
-        <a href="#grenzen">Wo Baukastensysteme an Grenzen kommen</a>
-        <a href="#individuell">Was eine individuelle Website leistet</a>
-        <a href="#inhalt">Warum Inhalt wichtiger ist als das Werkzeug</a>
-        <a href="#einschaetzung">Wie Nigredo die passende Lösung einschätzt</a>
+        <a href="#grundlagen">Worum es beim Datenschutz geht</a>
+        <a href="#datenschutzerklaerung">Datenschutzerklärung und Anbieterangaben</a>
+        <a href="#cookies">Cookies, Tracking und externe Dienste</a>
+        <a href="#analyse">Datensparsame Website-Analyse</a>
+        <a href="#nigredo">Wie Nigredo Datenschutz mitdenkt</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
         <p class="lead-answer">
-          Als Orientierung gilt: Wenn nur eine einfache Online-Visitenkarte gebraucht wird, kann ein Baukasten ausreichen. Sobald die Website eine klare Aufgabe hat, Anfragen bringen, Vertrauen tragen oder technisch sauber erweiterbar bleiben soll, lohnt sich eine individuelle Umsetzung.
+          Als Orientierung gilt: Eine Website muss nachvollziehbar machen, welche Daten sie warum bearbeitet. In der Schweiz ist dafür das revidierte Datenschutzgesetz massgeblich, bei Besuchern aus der EU zusätzlich die DSGVO. Wer datensparsam baut, hat es deutlich einfacher, weil weniger Datenflüsse auch weniger erklärt und abgesichert werden müssen.
         </p>
 
-        <h2 id="baukasten">Wann ein Baukasten reichen kann</h2>
+        <h2 id="grundlagen">Worum es beim Datenschutz wirklich geht</h2>
         <p>
-          Ein Baukasten kann sinnvoll sein, wenn ein sehr kleiner Auftritt gebraucht wird, Inhalte selten wechseln und keine besonderen Anforderungen bestehen. Für eine einfache Präsenz, eine Übergangslösung oder ein bewusst kleines Projekt muss nicht automatisch eine grosse individuelle Umsetzung entstehen.
+          Datenschutz bedeutet, sorgfältig mit den Personendaten der Besucher umzugehen. Personendaten sind nicht nur Name und E-Mail aus einem Formular, sondern zum Beispiel auch IP-Adressen in Server-Logs oder Informationen, die Analyse- und Tracking-Werkzeuge sammeln. Sobald solche Daten bearbeitet werden, greifen die Datenschutzregeln.
         </p>
         <p>
-          Wichtig ist dabei eine ehrliche Erwartung. Ein Baukasten ersetzt nicht automatisch Konzept, Text, Struktur, Bildauswahl oder Suchmaschinenlogik. Er stellt vor allem ein Werkzeug bereit. Ob daraus eine klare Website wird, hängt weiterhin von Inhalt und Entscheidungen ab.
-        </p>
-
-        <h2 id="grenzen">Wo Baukastensysteme an Grenzen kommen</h2>
-        <p>
-          Grenzen entstehen oft dort, wo die Website mehr leisten soll als nur vorhanden zu sein. Wenn ein Angebot sauber erklärt, Vertrauen aufgebaut, eine besondere Zielgruppe angesprochen oder ein klarer Weg zur Anfrage geführt werden soll, stossen Standardvorlagen schnell an ihre Grenzen.
-        </p>
-        <p>
-          Auch technische Themen spielen hinein: Ladezeit, saubere Struktur, individuelle Gestaltung, Suchmaschinenoptimierung, Datenschutz, Formulare oder spätere Erweiterungen sind nicht immer so flexibel, wie es am Anfang wirkt. Was schnell startet, kann später schwerfällig werden.
+          Massgeblich ist in der Schweiz das Datenschutzgesetz. Richtet sich eine Website auch an Personen in der EU, kommt die DSGVO dazu. Beide verlangen vor allem Transparenz, einen klaren Zweck und Sparsamkeit. Wer von vornherein nur das erhebt, was wirklich nötig ist, erfüllt den grössten Teil der Anforderungen fast automatisch.
         </p>
 
-        <h2 id="individuell">Was eine individuelle Website besser leisten kann</h2>
+        <h2 id="datenschutzerklaerung">Datenschutzerklärung und Anbieterangaben</h2>
         <p>
-          Eine individuelle Website beginnt nicht bei einer Vorlage, sondern bei der Aufgabe. Worum geht es? Wer soll angesprochen werden? Welche Fragen müssen Besucher schnell beantwortet bekommen? Welche Handlung soll naheliegen? Daraus entsteht eine Struktur, die zum Angebot passt.
+          Eine verständliche Datenschutzerklärung gehört auf praktisch jede Website. Sie erklärt, welche Daten zu welchem Zweck bearbeitet werden, wer dafür verantwortlich ist und welche Rechte Besucher haben. Wichtig ist, dass sie zur tatsächlichen Website passt und nicht ungeprüft aus einer Vorlage übernommen wird, die ganz andere Dienste beschreibt.
         </p>
         <p>
-          Der Vorteil liegt nicht nur im Aussehen. Eine individuelle Website kann schlank, schnell und gezielt aufgebaut werden, ohne unnötigen Ballast. Sie kann Inhalte, Gestaltung, technische Basis und spätere Entwicklung besser aufeinander abstimmen.
-        </p>
-
-        <h2 id="inhalt">Warum Inhalt und Struktur wichtiger sind als das Werkzeug</h2>
-        <p>
-          Das Werkzeug ist selten der eigentliche Engpass. Viele Websites wirken schwach, weil unklar bleibt, was angeboten wird, für wen es gedacht ist und warum jemand Vertrauen haben sollte. Eine gute Website braucht deshalb zuerst Klarheit in Inhalt und Führung.
-        </p>
-        <p>
-          Genau dort entsteht der Unterschied zwischen einer Seite, die nur existiert, und einem Auftritt, der funktioniert. Texte, Reihenfolge, Kontaktwege, mobile Darstellung und Suchmaschinenverständlichkeit müssen zusammenpassen.
+          Dazu kommen klare Angaben zum Anbieter, damit erkennbar ist, wer hinter der Website steht. Diese Informationen schaffen nicht nur Rechtssicherheit, sondern auch Vertrauen. Besucher sehen auf einen Blick, mit wem sie es zu tun haben und wie sie Kontakt aufnehmen können.
         </p>
 
-        <h2 id="einschaetzung">Wie Nigredo die passende Lösung einschätzt</h2>
+        <h2 id="cookies">Cookies, Tracking und externe Dienste</h2>
         <p>
-          Nigredo entscheidet nicht pauschal gegen Baukästen, sondern schaut auf die Aufgabe. Wenn eine sehr einfache Lösung reicht, soll sie nicht unnötig aufgeblasen werden. Wenn aber Substanz, Vertrauen, SEO, spezielle Inhalte oder technische Qualität wichtig sind, braucht es eine sauber geplante Grundlage.
+          Heikel wird es meist nicht bei der Website selbst, sondern bei dem, was sie zusätzlich einbindet: externe Schriftarten, Karten, Videos, Werbe- oder Analyse-Dienste. Solche Einbindungen können Daten an Dritte übertragen, oft schon beim blossen Aufruf der Seite. Für nicht zwingend nötige Cookies oder Tracking-Dienste braucht es in der Regel eine bewusste Einwilligung.
         </p>
         <p>
-          Wer zuerst wissen will, wie sich diese Entscheidung auf das Budget auswirkt, findet die passende Einordnung bei <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">der Frage zu den Website-Kosten</a>. Wer wissen will, wie viel später selbst gepflegt werden kann, findet die Antwort bei <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">der Frage zur Website-Pflege</a>.
+          Genau hier lohnt sich Zurückhaltung. Jeder externe Dienst, der eingespart oder datenschonend eingebunden wird, reduziert den Aufwand für Einwilligungen und Banner. Eine Website, die mit wenigen, bewusst gewählten externen Diensten auskommt, ist nicht nur einfacher abzusichern, sondern lädt meist auch schneller.
+        </p>
+
+        <h2 id="analyse">Datensparsame Website-Analyse</h2>
+        <p>
+          Auch ohne umfangreiches Tracking lässt sich verstehen, wie eine Website genutzt wird. Datensparsame Analyse-Werkzeuge kommen ohne aufdringliches Profiling aus und verzichten darauf, Besucher über Seiten hinweg zu verfolgen. So bleiben aussagekräftige Erkenntnisse möglich, ohne dass mehr Daten gesammelt werden als nötig.
+        </p>
+        <p>
+          Dieser Ansatz ist nicht nur datenschutzfreundlich, sondern oft auch praktischer. Weniger Datenflüsse bedeuten weniger Einwilligungen, schlankere Technik und einen klareren Überblick. Wer Sichtbarkeit und Wirkung der Website messen will, muss dafür nicht zwingend die Privatsphäre der Besucher belasten.
+        </p>
+
+        <h2 id="nigredo">Wie Nigredo Datenschutz mitdenkt</h2>
+        <p>
+          Nigredo plant Datenschutz nicht als nachträgliche Pflichtübung, sondern als Teil einer sauberen Umsetzung. Websites werden so gebaut, dass möglichst wenige Daten anfallen, externe Dienste bewusst und sparsam eingesetzt werden und die Analyse datenschonend bleibt. Das reduziert Aufwand und schafft gleichzeitig Vertrauen.
+        </p>
+        <p>
+          Wichtig ist dabei die Ehrlichkeit: Nigredo ersetzt keine Rechtsberatung, sorgt aber für eine technisch saubere und datensparsame Grundlage, auf der sich Datenschutz gut umsetzen lässt. Wie eine datenschonende Analyse mit der Sichtbarkeit zusammenhängt, zeigt <a href="/haeufige-fragen/wird-meine-website-bei-google-gefunden/">die Frage zur Auffindbarkeit bei Google</a>.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
           <h2 id="related-faqs-title">Verwandte Fragen</h2>
           <div class="related-faqs__grid">
-            <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">
-              <strong>Was kostet eine professionelle Website?</strong>
-              <span>Welche Faktoren den Preis beeinflussen und wie sich Kosten seriös einschätzen lassen.</span>
+            <a href="/haeufige-fragen/wird-meine-website-bei-google-gefunden/">
+              <strong>Wird meine Website bei Google gefunden?</strong>
+              <span>Warum eine Website nicht automatisch sichtbar ist und wovon die Auffindbarkeit abhängt.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
               <strong>Was kostet der laufende Betrieb einer Website?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
-            <a href="/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/">
-              <strong>Was muss meine Website beim Datenschutz beachten?</strong>
-              <span>Was das Schweizer Datenschutzgesetz für deine Website bedeutet, von Cookies bis Analyse.</span>
+            <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">
+              <strong>Brauche ich eine individuelle Website oder reicht ein Baukasten?</strong>
+              <span>Wann eine Vorlage genügt und wann eine massgeschneiderte Lösung sinnvoller ist.</span>
             </a>
-            <a href="/haeufige-fragen/wird-meine-website-bei-google-gefunden/">
-              <strong>Wird meine Website bei Google gefunden?</strong>
-              <span>Warum eine Website nicht automatisch sichtbar ist und wovon die Auffindbarkeit abhängt.</span>
+            <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">
+              <strong>Kann ich meine professionelle Website später selbst bearbeiten und pflegen?</strong>
+              <span>Wann ein CMS sinnvoll ist und wie viel Eigenständigkeit realistisch bleibt.</span>
             </a>
           </div>
         </section>
 
         <div class="article-links">
           <a href="/haeufige-fragen/">Zurück zu den häufigen Fragen</a>
-          <a href="/kontakt/">Passende Website-Lösung klären</a>
+          <a href="/kontakt/">Datenschutz für meine Website besprechen</a>
         </div>
       </div>
     </div>
@@ -164,9 +180,9 @@ const schema = JSON.stringify({
 
 <style>
   .faq-article {
-    --faq-a: #ff7c20;
-    --faq-b: #ff2e55;
-    --faq-c: #cc20cc;
+    --faq-a: #6c5cff;
+    --faq-b: #3a86ff;
+    --faq-c: #00c2a8;
     animation: faqCycle 90s ease-in-out infinite;
     position: relative;
     padding-top: var(--hero-offset-top-breadcrumb);
@@ -192,7 +208,7 @@ const schema = JSON.stringify({
     padding: 4px 10px;
     font-size: 0.54rem;
     letter-spacing: 0.14em;
-    color: rgba(255, 236, 224, 0.94);
+    color: rgba(226, 232, 255, 0.94);
     border-color: color-mix(in srgb, var(--faq-b) 34%, rgba(255, 255, 255, 0.22));
     background: transparent;
     box-shadow: none;

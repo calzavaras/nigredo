@@ -9,7 +9,7 @@ Kanonischer Markenname: Nigredo
 Kanonische URL: https://www.nigredo.ch/
 Registrierte Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-06-06
+Letzte Aktualisierung: 2026-06-17
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 Kontakt: calzavara3830@gmail.com
@@ -91,6 +91,14 @@ Ein Baukasten kann reichen, wenn nur eine sehr einfache Praesenz ohne besondere 
 ### Wird meine Website bei Google gefunden?
 
 Eine Website ist nicht automatisch gut auffindbar, nur weil sie online ist. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehoert deshalb in die Umsetzung und ist kein Zusatz am Ende.
+
+### Was kostet der laufende Betrieb einer Website?
+
+Der laufende Betrieb kostet meist deutlich weniger als die Erstellung. Grundlegend fallen Domain und Hosting an, oft nur wenige Franken pro Monat. Wartung, Updates und inhaltliche Pflege kommen je nach Technik dazu. Eine schlank gebaute Website verursacht im Betrieb sehr tiefe Fixkosten.
+
+### Was muss meine Website beim Datenschutz beachten?
+
+Eine Website muss transparent machen, welche Daten sie bearbeitet. Dazu gehoeren meist eine verstaendliche Datenschutzerklaerung, klare Anbieterangaben und ein bewusster Umgang mit Cookies, Tracking und externen Diensten. Massgeblich ist das Schweizer Datenschutzgesetz, bei Besuchern aus der EU zusaetzlich die DSGVO.
 
 ## Was kostet eine professionelle Website?
 
@@ -197,6 +205,66 @@ Suchmaschinenoptimierung ist kein Schalter, der sofort wirkt. Technische Grundla
 ### Wie Nigredo Sichtbarkeit angeht
 
 Nigredo behandelt Suchmaschinenoptimierung nicht als nachtraegliches Extra, sondern als Teil der Umsetzung: schnelle Ladezeiten, klare Seitenstruktur, sinnvolle Titel und Inhalte, die echte Fragen beantworten. So entsteht eine Website, die gefunden werden kann, statt nur vorhanden zu sein.
+
+## Was kostet der laufende Betrieb einer Website?
+
+URL: https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/
+Title: Was kostet der laufende Betrieb einer Website? | Nigredo
+Description: Welche laufenden Kosten eine Website nach dem Launch verursacht: Domain, Hosting, Wartung, Sicherheit und Pflege, klar erklaert fuer KMU und Selbstaendige in der Schweiz.
+
+Der laufende Betrieb einer Website kostet meist deutlich weniger als die Erstellung. Grundlegend fallen Domain und Hosting an, oft im Bereich weniger Franken pro Monat. Was darueber hinaus anfaellt, haengt von Technik, Sicherheit und davon ab, wie oft Inhalte gepflegt werden.
+
+Als Orientierung gilt: Die laufenden Fixkosten einer schlanken Website liegen oft bei wenigen Franken pro Monat fuer Hosting plus einer kleinen Jahresgebuehr fuer die Domain. Groesser wird der Aufwand erst, wenn ein umfangreiches System gepflegt, regelmaessig aktualisiert oder inhaltlich haeufig erweitert werden muss.
+
+### Woraus sich die Betriebskosten zusammensetzen
+
+Der laufende Betrieb besteht aus technischen Fixkosten und optionalem Aufwand fuer Pflege und Wartung. Fix sind vor allem Domain und Hosting. Optional sind regelmaessige Updates, Sicherheits- und Backup-Massnahmen sowie inhaltliche Anpassungen, wenn sich am Angebot etwas aendert. Wie hoch der Betrieb ausfaellt, entscheidet sich oft schon beim Bauen: Eine schlanke Website mit wenig beweglichen Teilen verursacht kaum Aufwand, ein grosses System mit vielen Erweiterungen muss laufend gepflegt werden.
+
+### Hosting und Domain
+
+Die Domain ist die Adresse der Website, etwa eine .ch-Adresse, und kostet in der Schweiz meist rund zehn bis zwanzig Franken pro Jahr. Das Hosting ist der Speicherplatz, auf dem die Website laeuft; fuer eine klassische KMU-Website reichen oft guenstige Pakete im Bereich weniger Franken pro Monat. Entscheidend ist nicht der billigste Tarif, sondern eine zuverlaessige, schnelle und gut erreichbare Grundlage. Wer eine statisch gebaute Website betreibt, kommt technisch mit sehr wenig aus und hat entsprechend tiefe laufende Kosten.
+
+### Wartung, Updates und Sicherheit
+
+Wartung bedeutet, eine Website sicher und funktionsfaehig zu halten. Bei Systemen mit vielen Bausteinen gehoeren regelmaessige Updates, Backups und Sicherheitspruefungen dazu; wird das vernachlaessigt, steigt das Risiko fuer Ausfaelle oder Sicherheitsprobleme. Nicht jede Website braucht aber einen festen Wartungsvertrag. Je schlanker und stabiler die technische Basis ist, desto weniger muss laufend nachgezogen werden. Sinnvoll ist Wartung vor allem dort, wo viel Technik im Spiel ist, sensible Daten verarbeitet werden oder Inhalte staendig wechseln.
+
+### Inhaltliche Pflege
+
+Neben der Technik gibt es die inhaltliche Seite: neue Texte, aktualisierte Angebote, frische Bilder oder zusaetzliche Seiten. Dieser Aufwand faellt nicht regelmaessig an, sondern dann, wenn sich etwas aendert. Ob man das selbst uebernimmt oder begleiten laesst, haengt davon ab, wie die Website aufgebaut ist und wer intern damit arbeitet. Wer Inhalte selbst pflegen moechte, sollte das bereits bei der Planung beruecksichtigen.
+
+### Wie Nigredo den Betrieb schlank haelt
+
+Nigredo baut Websites bewusst technisch schlank, damit der laufende Betrieb guenstig und unkompliziert bleibt. Statt grosser Systeme mit vielen Abhaengigkeiten entstehen schnelle, stabile Websites, die wenig Wartung brauchen und auf einfachem Hosting laufen. Vor dem Projekt wird klar besprochen, welche laufenden Kosten realistisch entstehen und wo Aufwand wirklich noetig ist.
+
+## Was muss meine Website beim Datenschutz beachten?
+
+URL: https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/
+Title: Was muss meine Website beim Datenschutz beachten? | Nigredo
+Description: Was beim Datenschutz einer Website in der Schweiz wichtig ist: Datenschutzerklaerung, Schweizer DSG, Cookies, Tracking und datensparsame Website-Analyse, klar erklaert.
+
+Eine Website in der Schweiz muss transparent machen, welche Daten sie bearbeitet. Dazu gehoeren in der Regel eine verstaendliche Datenschutzerklaerung, klare Angaben zum Anbieter und ein bewusster Umgang mit Cookies, Tracking und externen Diensten. Massgeblich ist das Schweizer Datenschutzgesetz, bei Besuchern aus der EU zusaetzlich die DSGVO.
+
+Als Orientierung gilt: Eine Website muss nachvollziehbar machen, welche Daten sie warum bearbeitet. Wer datensparsam baut, hat es deutlich einfacher, weil weniger Datenfluesse auch weniger erklaert und abgesichert werden muessen.
+
+### Worum es beim Datenschutz wirklich geht
+
+Datenschutz bedeutet, sorgfaeltig mit den Personendaten der Besucher umzugehen. Personendaten sind nicht nur Name und E-Mail aus einem Formular, sondern zum Beispiel auch IP-Adressen in Server-Logs oder Informationen, die Analyse- und Tracking-Werkzeuge sammeln. Massgeblich ist in der Schweiz das Datenschutzgesetz; richtet sich eine Website auch an Personen in der EU, kommt die DSGVO dazu. Beide verlangen vor allem Transparenz, einen klaren Zweck und Sparsamkeit.
+
+### Datenschutzerklaerung und Anbieterangaben
+
+Eine verstaendliche Datenschutzerklaerung gehoert auf praktisch jede Website. Sie erklaert, welche Daten zu welchem Zweck bearbeitet werden, wer dafuer verantwortlich ist und welche Rechte Besucher haben. Wichtig ist, dass sie zur tatsaechlichen Website passt und nicht ungeprueft aus einer Vorlage uebernommen wird. Dazu kommen klare Angaben zum Anbieter, die Rechtssicherheit und Vertrauen schaffen.
+
+### Cookies, Tracking und externe Dienste
+
+Heikel wird es meist nicht bei der Website selbst, sondern bei dem, was sie zusaetzlich einbindet: externe Schriftarten, Karten, Videos, Werbe- oder Analyse-Dienste. Solche Einbindungen koennen Daten an Dritte uebertragen, oft schon beim blossen Aufruf der Seite. Fuer nicht zwingend noetige Cookies oder Tracking-Dienste braucht es in der Regel eine bewusste Einwilligung. Jeder externe Dienst, der eingespart oder datenschonend eingebunden wird, reduziert den Aufwand fuer Einwilligungen und Banner.
+
+### Datensparsame Website-Analyse
+
+Auch ohne umfangreiches Tracking laesst sich verstehen, wie eine Website genutzt wird. Datensparsame Analyse-Werkzeuge kommen ohne aufdringliches Profiling aus und verzichten darauf, Besucher ueber Seiten hinweg zu verfolgen. So bleiben aussagekraeftige Erkenntnisse moeglich, ohne dass mehr Daten gesammelt werden als noetig. Weniger Datenfluesse bedeuten zudem weniger Einwilligungen und schlankere Technik.
+
+### Wie Nigredo Datenschutz mitdenkt
+
+Nigredo plant Datenschutz nicht als nachtraegliche Pflichtuebung, sondern als Teil einer sauberen Umsetzung. Websites werden so gebaut, dass moeglichst wenige Daten anfallen, externe Dienste bewusst und sparsam eingesetzt werden und die Analyse datenschonend bleibt. Nigredo ersetzt keine Rechtsberatung, sorgt aber fuer eine technisch saubere und datensparsame Grundlage, auf der sich Datenschutz gut umsetzen laesst.
 
 ## Referenzen
 

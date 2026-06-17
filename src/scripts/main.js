@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initFaqAnchorNavigation();
   initScrollAnimations();
-  if (document.querySelector('[data-refs-grid]')) initReferencesReveal();
   if (document.querySelector('#mailBtn, .reveal-mail, .open-contact')) initSpamProtection();
   if (document.getElementById('contact-modal')) initContactModal();
   if (document.querySelector('.accordion-header')) initAccordions();
@@ -118,27 +117,6 @@ function initFaqAnchorNavigation() {
   if (window.location.hash) {
     requestAnimationFrame(() => scrollToHash(window.location.hash, false));
   }
-}
-
-function initReferencesReveal() {
-  const grid = document.querySelector('[data-refs-grid]');
-  const button = document.querySelector('[data-refs-more]');
-  if (!grid || !button) return;
-
-  const batchSize = Number(grid.getAttribute('data-reveal-batch')) || 2;
-  const hiddenCards = () => Array.from(grid.querySelectorAll('.ref-main-card[hidden]'));
-
-  button.addEventListener('click', (event) => {
-    event.preventDefault();
-    hiddenCards().slice(0, batchSize).forEach((card) => {
-      card.hidden = false;
-      card.classList.remove('is-hidden-ref');
-    });
-
-    if (hiddenCards().length === 0) {
-      button.hidden = true;
-    }
-  });
 }
 
 function runWhenIdle(callback, timeout = TIMING.IDLE_TIMEOUT, fallbackDelay = TIMING.IDLE_FALLBACK_DELAY) {

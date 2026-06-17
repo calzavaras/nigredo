@@ -22,7 +22,7 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/referenzen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-06-06');
+          item.lastmod = new Date('2026-06-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/mentra/') {
           item.priority = 0.65;
@@ -30,7 +30,7 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/referenzen/seite/2/') {
           item.priority = 0.45;
-          item.lastmod = new Date('2026-06-06');
+          item.lastmod = new Date('2026-06-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/ki-voice-agent/') {
           item.priority = 0.65;
@@ -43,6 +43,10 @@ export default defineConfig({
         else if (url === 'https://www.nigredo.ch/referenzen/therapie-ost/') {
           item.priority = 0.65;
           item.lastmod = new Date('2026-05-18');
+        }
+        else if (url === 'https://www.nigredo.ch/referenzen/plan-h/') {
+          item.priority = 0.65;
+          item.lastmod = new Date('2026-06-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/thinktank/') {
           item.priority = 0.65;
@@ -58,7 +62,7 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {
           item.priority = 0.62;
-          item.lastmod = new Date('2026-06-04');
+          item.lastmod = new Date('2026-06-17');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/') {
           item.priority = 0.55;
@@ -79,6 +83,14 @@ export default defineConfig({
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/wird-meine-website-bei-google-gefunden/') {
           item.priority = 0.55;
           item.lastmod = new Date('2026-06-04');
+        }
+        else if (url === 'https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/') {
+          item.priority = 0.55;
+          item.lastmod = new Date('2026-06-17');
+        }
+        else if (url === 'https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/') {
+          item.priority = 0.55;
+          item.lastmod = new Date('2026-06-17');
         }
         else if (url === 'https://www.nigredo.ch/impressum/' || url === 'https://www.nigredo.ch/datenschutz/') {
           item.priority = 0.3;

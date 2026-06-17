@@ -39,6 +39,20 @@ const faqEntries = [
     question: 'Wird meine Website bei Google gefunden?',
     answer: 'Eine Website ist nicht automatisch gut auffindbar, nur weil sie online ist. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehört deshalb in die Umsetzung und ist kein Zusatz am Ende.',
     href: '/haeufige-fragen/wird-meine-website-bei-google-gefunden/'
+  },
+  {
+    id: 'faq-running-costs',
+    category: 'Betrieb & Unterhalt',
+    question: 'Was kostet der laufende Betrieb einer Website?',
+    answer: 'Der laufende Betrieb kostet meist deutlich weniger als die Erstellung. Grundlegend fallen Domain und Hosting an, oft nur wenige Franken pro Monat. Wartung, Updates und inhaltliche Pflege kommen je nach Technik dazu. Eine schlank gebaute Website verursacht im Betrieb sehr tiefe Fixkosten.',
+    href: '/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/'
+  },
+  {
+    id: 'faq-privacy',
+    category: 'Datenschutz & Recht',
+    question: 'Was muss meine Website beim Datenschutz beachten?',
+    answer: 'Eine Website muss transparent machen, welche Daten sie bearbeitet. Dazu gehören meist eine verständliche Datenschutzerklärung, klare Anbieterangaben und ein bewusster Umgang mit Cookies, Tracking und externen Diensten. Massgeblich ist das Schweizer Datenschutzgesetz, bei EU-Besuchern zusätzlich die DSGVO.',
+    href: '/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/'
   }
 ];
 
@@ -66,7 +80,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-16",
-      "dateModified": "2026-06-04",
+      "dateModified": "2026-06-17",
       "isAccessibleForFree": true,
       "significantLink": faqEntries.map((entry) => `https://www.nigredo.ch${entry.href}`)
     },
@@ -121,7 +135,7 @@ const schema = JSON.stringify({
         <span class="badge badge--yellow">FAQ</span>
         <h1 id="faq-title">Häufige <span class="gradient-text">Fragen.</span></h1>
         <p>
-          Hier finden Sie klare Antworten auf häufige Fragen rund um professionelle Websites, von Aufwand und Ablauf bis zur passenden Umsetzungsform, späteren Pflege und Weiterentwicklung.
+          Hier findest du klare Antworten auf häufige Fragen rund um professionelle Websites, von Aufwand und Ablauf bis zur passenden Umsetzungsform, späteren Pflege und Weiterentwicklung.
         </p>
       </div>
 
