@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.lightbox-trigger')) setTimeout(initLightbox, TIMING.LIGHTBOX_INIT_DELAY);
   runWhenIdle(() => {
     initCardSpotlight();
+    initMagneticButtons();
     if (document.querySelector('.gradient-icon')) initGradientIcons();
     initAnalytics();
   }, TIMING.IDLE_TIMEOUT);
@@ -691,4 +692,50 @@ function initAnalytics() {
     script.dataset.websiteId = websiteId;
     document.head.appendChild(script);
   }, TIMING.ANALYTICS_TIMEOUT, TIMING.ANALYTICS_FALLBACK_DELAY);
+}
+
+function initMagneticButtons() {
+  const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  
+  if (!supportsHover || prefersReducedMotion) return;
+
+  const STRENGTH_X = 0.2;
+  const STRENGTH_Y = 0.3;
+  const buttons = document.querySelectorAll('.btn-primary, .btn-ghost');
+
+  buttons.forEach(btn => {
+    let rafId = null;
+    let targetX = 0;
+    let targetY = 0;
+
+    const apply = () => {
+      rafId = null;
+      btn.style.transform = `translate(${targetX}px, ${targetY}px) scale(1.02)`;
+    };
+
+    btn.addEventListener('mouseenter', () => {
+      // Snappy follow while tracking the cursor (override the CSS spring).
+      btn.style.transition = 'transform 0.15s ease-out';
+      btn.style.willChange = 'transform';
+    });
+
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      targetX = (e.clientX - rect.left - rect.width / 2) * STRENGTH_X;
+      targetY = (e.clientY - rect.top - rect.height / 2) * STRENGTH_Y;
+      if (rafId === null) rafId = requestAnimationFrame(apply);
+    }, { passive: true });
+
+    btn.addEventListener('mouseleave', () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+      // Hand styling back to CSS so the spring transition eases it home.
+      btn.style.transition = '';
+      btn.style.transform = '';
+      btn.style.willChange = '';
+    });
+  });
 }
