@@ -1,0 +1,351 @@
+{
+  "communities": {
+    "0": [
+      "scripts_validate_site",
+      "scripts_validate_site_adderror",
+      "scripts_validate_site_addwarning",
+      "scripts_validate_site_collectpagedatemodified",
+      "scripts_validate_site_dirname",
+      "scripts_validate_site_errors",
+      "scripts_validate_site_findschemanodesbytype",
+      "scripts_validate_site_getlocalpublicpath",
+      "scripts_validate_site_htaccess_path",
+      "scripts_validate_site_main",
+      "scripts_validate_site_noindexcanonicals",
+      "scripts_validate_site_public_dir",
+      "scripts_validate_site_root",
+      "scripts_validate_site_schemadatemodifiedbyurl",
+      "scripts_validate_site_static_dir",
+      "scripts_validate_site_striptags",
+      "scripts_validate_site_validatehtml",
+      "scripts_validate_site_validatejsonld",
+      "scripts_validate_site_validateopengraphimage",
+      "scripts_validate_site_validateserverconfig",
+      "scripts_validate_site_validatesitemap",
+      "scripts_validate_site_validatesiteurl",
+      "scripts_validate_site_validatetrailingslashes",
+      "scripts_validate_site_walk",
+      "scripts_validate_site_warnings"
+    ],
+    "1": [
+      "src_scripts_main",
+      "src_scripts_main_closecontactmodal",
+      "src_scripts_main_getcsrftoken",
+      "src_scripts_main_getfocusableelements",
+      "src_scripts_main_initaccordions",
+      "src_scripts_main_initanalytics",
+      "src_scripts_main_initcardspotlight",
+      "src_scripts_main_initcontactmodal",
+      "src_scripts_main_initfaqanchornavigation",
+      "src_scripts_main_initgradienticons",
+      "src_scripts_main_initlightbox",
+      "src_scripts_main_initmagneticbuttons",
+      "src_scripts_main_initnavigation",
+      "src_scripts_main_initscrollanimations",
+      "src_scripts_main_initspamprotection",
+      "src_scripts_main_lockscroll",
+      "src_scripts_main_modalbackground",
+      "src_scripts_main_opencontactmodal",
+      "src_scripts_main_runwhenidle",
+      "src_scripts_main_setmodalbackgrounddisabled",
+      "src_scripts_main_timing",
+      "src_scripts_main_unlockscroll"
+    ],
+    "2": [
+      "static_main_min",
+      "static_main_min_closecontactmodal",
+      "static_main_min_getcsrftoken",
+      "static_main_min_getfocusableelements",
+      "static_main_min_initaccordions",
+      "static_main_min_initanalytics",
+      "static_main_min_initcardspotlight",
+      "static_main_min_initcontactmodal",
+      "static_main_min_initfaqanchornavigation",
+      "static_main_min_initgradienticons",
+      "static_main_min_initlightbox",
+      "static_main_min_initmagneticbuttons",
+      "static_main_min_initnavigation",
+      "static_main_min_initscrollanimations",
+      "static_main_min_initspamprotection",
+      "static_main_min_lockscroll",
+      "static_main_min_modalbackground",
+      "static_main_min_opencontactmodal",
+      "static_main_min_runwhenidle",
+      "static_main_min_setmodalbackgrounddisabled",
+      "static_main_min_timing",
+      "static_main_min_unlockscroll"
+    ],
+    "3": [
+      "astro",
+      "astrojs_sitemap",
+      "esbuild",
+      "package",
+      "package_dependencies",
+      "package_dependencies_astro",
+      "package_dependencies_astrojs_sitemap",
+      "package_devdependencies",
+      "package_devdependencies_esbuild",
+      "package_devdependencies_sharp",
+      "package_name",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_build_assets",
+      "package_scripts_clean_public",
+      "package_scripts_dev",
+      "package_scripts_preview",
+      "package_scripts_validate_site",
+      "package_type",
+      "package_version",
+      "sharp"
+    ],
+    "4": [
+      "src_components_referencesarchivesection",
+      "src_data_references",
+      "src_data_references_getreferencepage",
+      "src_data_references_getreferencepagecount",
+      "src_data_references_getreferencepagehref",
+      "src_data_references_referenceentries",
+      "src_data_references_referenceentry",
+      "src_data_references_references",
+      "src_pages_referenzen_index",
+      "src_pages_referenzen_index_pagecount",
+      "src_pages_referenzen_index_pageitems",
+      "src_pages_referenzen_index_schema",
+      "src_pages_referenzen_seite_page",
+      "src_pages_referenzen_seite_page_getstaticpaths",
+      "src_pages_referenzen_seite_page_pagecount",
+      "src_pages_referenzen_seite_page_rawhref",
+      "src_pages_referenzen_seite_page_rawprevhref",
+      "src_pages_referenzen_seite_page_schema"
+    ],
+    "5": [
+      "node_crypto",
+      "node_fs",
+      "node_path",
+      "node_url",
+      "src_components_contactmodal",
+      "src_components_footer",
+      "src_layouts_layout",
+      "src_layouts_layout_getmainscriptversion",
+      "src_pages_404",
+      "src_pages_index",
+      "src_pages_index_schema",
+      "users_calza_nigredo_website_nigredo_src_styles_global_css"
+    ],
+    "6": [
+      "src_components_casemorereferences",
+      "src_components_casemorereferences_others",
+      "src_pages_referenzen_dashboard_kantonsverwaltung_index",
+      "src_pages_referenzen_ki_voice_agent_index",
+      "src_pages_referenzen_ki_voice_agent_index_schema",
+      "src_pages_referenzen_plan_h_index",
+      "src_pages_referenzen_plan_h_index_schema",
+      "src_pages_referenzen_therapie_ost_index",
+      "src_pages_referenzen_therapie_ost_index_schema",
+      "src_pages_referenzen_thinktank_index",
+      "src_pages_referenzen_thinktank_index_schema",
+      "users_calza_nigredo_website_nigredo_src_data_references"
+    ],
+    "7": [
+      "scripts_update_csp",
+      "scripts_update_csp_dirname",
+      "scripts_update_csp_extractinlinescripts",
+      "scripts_update_csp_htaccess_out",
+      "scripts_update_csp_htaccess_src",
+      "scripts_update_csp_main",
+      "scripts_update_csp_public_dir",
+      "scripts_update_csp_root",
+      "scripts_update_csp_sha256b64",
+      "scripts_update_csp_walkhtml"
+    ],
+    "8": [
+      "src_components_breadcrumb",
+      "src_pages_haeufige_fragen",
+      "src_pages_haeufige_fragen_brauche_ich_eine_individuelle_website_oder_reicht_ein_baukasten",
+      "src_pages_haeufige_fragen_brauche_ich_eine_individuelle_website_oder_reicht_ein_baukasten_schema",
+      "src_pages_haeufige_fragen_was_kostet_der_laufende_betrieb_einer_website",
+      "src_pages_haeufige_fragen_was_kostet_der_laufende_betrieb_einer_website_schema",
+      "src_pages_haeufige_fragen_was_kostet_eine_professionelle_website",
+      "src_pages_haeufige_fragen_was_kostet_eine_professionelle_website_schema",
+      "src_pages_marco_calzavara",
+      "src_pages_marco_calzavara_schema"
+    ],
+    "9": [
+      "scripts_indexnow",
+      "scripts_indexnow_body",
+      "scripts_indexnow_dirname",
+      "scripts_indexnow_sitemap_path",
+      "scripts_indexnow_urls"
+    ],
+    "10": [
+      "ref_astro_tsconfigs_strict",
+      "tsconfig",
+      "tsconfig_extends"
+    ],
+    "11": [
+      "scripts_clean_public",
+      "scripts_clean_public_dirname",
+      "scripts_clean_public_publicdir"
+    ],
+    "12": [
+      "src_components_header",
+      "src_components_header_isactive",
+      "src_components_header_navlinks"
+    ],
+    "13": [
+      "static_send_mail",
+      "static_send_mail_closeratelimithandle",
+      "static_send_mail_respond"
+    ],
+    "14": [
+      "astro_config",
+      "astro_config_serialize"
+    ],
+    "15": [
+      "src_pages_datenschutz",
+      "src_pages_datenschutz_schema"
+    ],
+    "16": [
+      "src_pages_digitale_loesungen",
+      "src_pages_digitale_loesungen_schema"
+    ],
+    "17": [
+      "src_pages_haeufige_fragen_kann_ich_meine_professionelle_website_selbst_bearbeiten_und_pflegen",
+      "src_pages_haeufige_fragen_kann_ich_meine_professionelle_website_selbst_bearbeiten_und_pflegen_schema"
+    ],
+    "18": [
+      "src_pages_haeufige_fragen_was_muss_meine_website_beim_datenschutz_beachten",
+      "src_pages_haeufige_fragen_was_muss_meine_website_beim_datenschutz_beachten_schema"
+    ],
+    "19": [
+      "src_pages_haeufige_fragen_wie_lange_dauert_die_erstellung_einer_professionellen_website",
+      "src_pages_haeufige_fragen_wie_lange_dauert_die_erstellung_einer_professionellen_website_schema"
+    ],
+    "20": [
+      "src_pages_haeufige_fragen_wird_meine_website_bei_google_gefunden",
+      "src_pages_haeufige_fragen_wird_meine_website_bei_google_gefunden_schema"
+    ],
+    "21": [
+      "src_pages_impressum",
+      "src_pages_impressum_schema"
+    ],
+    "22": [
+      "src_pages_kontakt",
+      "src_pages_kontakt_schema"
+    ],
+    "23": [
+      "src_pages_referenzen_mentra_index",
+      "src_pages_referenzen_mentra_index_schema"
+    ],
+    "24": [
+      "src_components_jsonld"
+    ]
+  },
+  "cohesion": {
+    "0": 0.15666666666666668,
+    "1": 0.12987012987012986,
+    "2": 0.13852813852813853,
+    "3": 0.09523809523809523,
+    "4": 0.1830065359477124,
+    "5": 0.16666666666666666,
+    "6": 0.16666666666666666,
+    "7": 0.26666666666666666,
+    "8": 0.2,
+    "9": 0.4,
+    "10": 0.6666666666666666,
+    "11": 0.6666666666666666,
+    "12": 0.6666666666666666,
+    "13": 0.6666666666666666,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0
+  },
+  "gods": [
+    {
+      "id": "scripts_validate_site_adderror",
+      "label": "addError()",
+      "degree": 9
+    },
+    {
+      "id": "scripts_validate_site_validatehtml",
+      "label": "validateHtml()",
+      "degree": 8
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 7
+    },
+    {
+      "id": "scripts_validate_site_main",
+      "label": "main()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_validate_site_validatejsonld",
+      "label": "validateJsonLd()",
+      "degree": 5
+    },
+    {
+      "id": "scripts_update_csp_main",
+      "label": "main()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_validate_site_validatesiteurl",
+      "label": "validateSiteUrl()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_validate_site_validateopengraphimage",
+      "label": "validateOpenGraphImage()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_validate_site_validatesitemap",
+      "label": "validateSitemap()",
+      "degree": 4
+    },
+    {
+      "id": "src_data_references_getreferencepagecount",
+      "label": "getReferencePageCount()",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "getStaticPaths()",
+      "target": "getReferencePageCount()",
+      "source_files": [
+        "src/pages/referenzen/seite/[page].astro",
+        "src/data/references.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "getStaticPaths()",
+      "target": "getReferencePage()",
+      "source_files": [
+        "src/pages/referenzen/seite/[page].astro",
+        "src/data/references.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
