@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="404 | Nigredo"
-  description="Diese Seite gibt es nicht. Aber alles andere schon. Zurück zu Nigredo."
+  description="Diese Seite wurde nicht gefunden. Entdecke die Projekte und Lösungen von Nigredo oder nimm direkt Kontakt auf."
   canonical="https://www.nigredo.ch/"
   robots="noindex, follow"
 >
@@ -12,7 +12,6 @@ import Layout from '../layouts/Layout.astro';
     <div class="hero-glow"></div>
     <div class="container not-found-page__inner fade-up">
 
-      <span class="badge badge--pink">404</span>
 
       <h1 id="not-found-title" class="home-hero__title not-found-page__title">
         Hier baut<br>
@@ -20,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
       </h1>
 
       <p class="hero-lead not-found-page__lead">
-        Diese Seite existiert nicht. Aber alles andere schon. Vielleicht findest du hier, was du suchst.
+        Diese Seite ist nicht mehr hier oder hat nie existiert. Über die folgenden Wege findest du schnell zurück.
       </p>
 
       <div class="hero-cta-group">
@@ -42,12 +41,12 @@ import Layout from '../layouts/Layout.astro';
 
 <style>
   .not-found-page {
-    --nf-accent: #ff4d80;
+    --nf-accent: var(--brand-pink);
     min-height: min(620px, 68vh);
     display: flex;
     align-items: center;
     padding-top: var(--hero-offset-top);
-    padding-bottom: clamp(92px, 9vw, 128px);
+    padding-bottom: var(--section-py-lg);
   }
 
   .not-found-page__inner {
@@ -91,7 +90,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .not-found-page__links a {
-    color: rgba(255, 255, 255, 0.72);
+    color: var(--text-body);
     font-size: 0.95rem;
     font-weight: 600;
     line-height: 1.4;

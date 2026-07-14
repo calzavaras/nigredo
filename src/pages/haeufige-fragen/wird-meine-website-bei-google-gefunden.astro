@@ -4,7 +4,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/wird-meine-website-bei-google-gefunden/';
 const question = 'Wird meine Website bei Google gefunden?';
-const answer = 'Eine Website ist nicht automatisch gut auffindbar, nur weil sie online ist. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehört deshalb in die Umsetzung und ist kein Zusatz am Ende.';
+const answer = 'Google kann eine Website finden, wenn sie technisch erreichbar, verständlich gegliedert und inhaltlich relevant ist. Gute Platzierungen brauchen zusätzlich passende Suchanfragen, überzeugende Inhalte und Zeit. Eine seriöse Umsetzung schafft die Grundlage, garantiert aber keine feste Position.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -37,14 +37,14 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
       "name": "Wird meine Website bei Google gefunden? | Nigredo",
-      "description": "Warum eine Website nicht automatisch bei Google erscheint, wovon die Auffindbarkeit abhängt und wie KMU und Selbständige in der Schweiz sichtbar werden.",
+      "description": "Was Google braucht, um eine Website zu finden und einzuordnen, wie gute Platzierungen entstehen und welche Grundlagen Nigredo dafür schafft.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "mainEntity": { "@id": `${pageUrl}#faq` },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-06-04",
-      "dateModified": "2026-06-04",
+      "dateModified": "2026-07-14",
       "isAccessibleForFree": true
     }
   ]
@@ -53,10 +53,10 @@ const schema = JSON.stringify({
 
 <Layout
   title="Wird meine Website bei Google gefunden? | Nigredo"
-  description="Warum eine Website nicht automatisch bei Google erscheint, wovon die Auffindbarkeit abhängt und wie KMU und Selbständige in der Schweiz sichtbar werden."
+  description="Was Google braucht, um eine Website zu finden und einzuordnen, wie gute Platzierungen entstehen und welche Grundlagen Nigredo dafür schafft."
   canonical={pageUrl}
   ogTitle="Wird meine Website bei Google gefunden? | Nigredo"
-  ogDescription="Wovon es abhängt, ob eine Website bei Google gefunden wird, und was KMU und Selbständige in der Schweiz dafür brauchen."
+  ogDescription="Wovon es abhängt, ob eine Website bei Google gefunden wird, und was KMU und Selbstständige in der Schweiz dafür brauchen."
   twitterTitle="Wird meine Website bei Google gefunden? | Nigredo"
   twitterDescription="Warum eine Website nicht von allein sichtbar ist und was wirklich zählt."
   schema={schema}
@@ -71,64 +71,42 @@ const schema = JSON.stringify({
       ]} />
 
       <header class="faq-article__header fade-up">
-        <span class="badge badge--purple">Sichtbarkeit & SEO</span>
         <h1 id="article-title">{question}</h1>
-        <p>
-          Eine Website erscheint nicht von allein weit oben bei Google. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehört deshalb von Anfang an zur Umsetzung.
-        </p>
+        <p>{answer}</p>
       </header>
 
       <nav class="faq-article__nav fade-up delay-100" aria-label="Inhaltsübersicht">
-        <a href="#nicht-automatisch">Warum online nicht gleich gefunden bedeutet</a>
-        <a href="#faktoren">Wovon die Auffindbarkeit abhängt</a>
-        <a href="#inhalt">Warum Inhalt der wichtigste Hebel ist</a>
-        <a href="#dauer">Wie lange Sichtbarkeit braucht</a>
-        <a href="#nigredo">Wie Nigredo Sichtbarkeit angeht</a>
+        <a href="#nicht-automatisch">Gefunden werden und gut platziert sein</a>
+        <a href="#faktoren">Was Google einordnen muss</a>
+        <a href="#inhalt">Warum Suchabsicht wichtiger ist als Wortmenge</a>
+        <a href="#dauer">Wann Ergebnisse sichtbar werden</a>
+        <a href="#nigredo">Wie Nigredo Sichtbarkeit vorbereitet</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
-        <p class="lead-answer">
-          Als Orientierung gilt: Eine Website wird dann gefunden, wenn sie technisch fehlerfrei erreichbar ist, klar strukturierte Inhalte hat und genau die Fragen beantwortet, die Menschen tatsächlich in die Suche eingeben. Ohne diese Grundlage bleibt selbst eine schöne Website unsichtbar.
+        <h2 id="nicht-automatisch">Gefunden werden und gut platziert sein</h2>
+        <p>
+          Zuerst muss Google eine Seite aufrufen und in den Suchindex aufnehmen können. Danach wird bewertet, für welche Suchanfragen der Inhalt relevant ist. Eine indexierte Website ist deshalb nicht automatisch auf den vorderen Plätzen sichtbar.
         </p>
 
-        <h2 id="nicht-automatisch">Warum „online" nicht „gefunden" bedeutet</h2>
+        <h2 id="faktoren">Was Google einordnen muss</h2>
         <p>
-          Viele gehen davon aus, dass eine Website nach dem Start automatisch bei Google auftaucht. Tatsächlich muss Google die Seiten erst finden, verstehen und einordnen können. Fehlt eine saubere technische Basis oder ist der Inhalt unklar, bleibt die Website in den Ergebnissen weit hinten.
-        </p>
-        <p>
-          Gerade bei häufig gesuchten Begriffen gibt es zudem Wettbewerb. Sichtbar wird, wer die Suchabsicht besser trifft als andere, nicht wer einfach nur vorhanden ist.
+          Aussagekräftige Seitentitel, eindeutige Überschriften, schnelle Ladezeiten und eine verständliche Struktur helfen bei der Einordnung. Ebenso wichtig ist, dass jede Seite ein konkretes Thema behandelt und die dazugehörigen Fragen vollständig beantwortet.
         </p>
 
-        <h2 id="faktoren">Wovon die Auffindbarkeit abhängt</h2>
+        <h2 id="inhalt">Warum Suchabsicht wichtiger ist als Wortmenge</h2>
         <p>
-          Entscheidend sind vor allem technische Qualität, Inhalt und Relevanz. Lädt die Website schnell? Funktioniert sie auf dem Smartphone? Sind Titel, Seitenstruktur und Überschriften klar? Beantwortet der Inhalt die Frage hinter der Suche?
-        </p>
-        <p>
-          Auch Vertrauen spielt eine Rolle. Eine nachvollziehbare Struktur, verständliche Texte und eine seriöse Darstellung helfen sowohl Besuchern als auch Suchmaschinen, die Website richtig einzuordnen.
+          Gute Inhalte verwenden die Sprache der Zielgruppe und lösen ein konkretes Informationsbedürfnis. Entscheidend ist nicht, einen Begriff möglichst oft zu wiederholen, sondern die beste verständliche Antwort auf eine reale Suche zu geben.
         </p>
 
-        <h2 id="inhalt">Warum Inhalt der wichtigste Hebel ist</h2>
+        <h2 id="dauer">Wann Ergebnisse sichtbar werden</h2>
         <p>
-          Suchmaschinen belohnen Inhalte, die eine konkrete Frage gut beantworten. Wer die Begriffe seiner Zielgruppe aufgreift und klar formuliert, wird eher gefunden als jemand, der nur allgemein über sein Angebot schreibt.
-        </p>
-        <p>
-          Deshalb beginnt gute Sichtbarkeit nicht mit Tricks, sondern mit der Frage: Wonach suchen die passenden Kunden wirklich, und beantwortet die Website das verständlich?
+          Technische Verbesserungen können rasch erfasst werden. Neue Platzierungen entwickeln sich meist über Wochen oder Monate, besonders bei umkämpften Suchbegriffen. Verlässliche Sichtbarkeit entsteht durch Qualität, Relevanz und kontinuierliche Weiterentwicklung.
         </p>
 
-        <h2 id="dauer">Wie lange Sichtbarkeit braucht</h2>
+        <h2 id="nigredo">Wie Nigredo Sichtbarkeit vorbereitet</h2>
         <p>
-          Suchmaschinenoptimierung ist kein Schalter, der sofort wirkt. Technische Grundlagen greifen schnell, aber gute Platzierungen für umkämpfte Begriffe entstehen über Wochen und Monate. Wer geduldig an Inhalt und Qualität arbeitet, baut Sichtbarkeit auf, die bleibt.
-        </p>
-        <p>
-          Schnelle Ergebnisse versprechen oft nur unseriöse Angebote. Nachhaltige Sichtbarkeit ist das Ergebnis einer sauberen Basis und kontinuierlicher Pflege.
-        </p>
-
-        <h2 id="nigredo">Wie Nigredo Sichtbarkeit angeht</h2>
-        <p>
-          Nigredo behandelt Suchmaschinenoptimierung nicht als nachträgliches Extra, sondern als Teil der Umsetzung: schnelle Ladezeiten, klare Seitenstruktur, sinnvolle Titel und Inhalte, die echte Fragen beantworten. So entsteht eine Website, die gefunden werden kann, statt nur vorhanden zu sein.
-        </p>
-        <p>
-          Wer wissen will, ob dafür eine individuelle Lösung nötig ist, findet die Einordnung bei <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">der Frage zu Baukasten oder individueller Website</a>. Wie sich der Aufwand auf den Preis auswirkt, steht bei <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">der Frage zu den Website-Kosten</a>.
+          Nigredo verbindet technische Suchmaschinenoptimierung mit präziser Inhaltsarbeit. Jede Seite erhält eine eindeutige Funktion, passende Metadaten und eine Struktur, die Menschen wie Suchmaschinen gut verstehen können.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -147,7 +125,7 @@ const schema = JSON.stringify({
               <span>Was das Schweizer Datenschutzgesetz für deine Website bedeutet, von Cookies bis Analyse.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Was kostet der laufende Betrieb einer Website?</strong>
+              <strong>Welche laufenden Kosten hat eine Website?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
           </div>
@@ -155,7 +133,7 @@ const schema = JSON.stringify({
 
         <div class="article-links">
           <a href="/haeufige-fragen/">Zurück zu den häufigen Fragen</a>
-          <a href="/kontakt/">Sichtbarkeit meiner Website besprechen</a>
+          <a href="/kontakt/">Sichtbarkeit meiner Website klären</a>
         </div>
       </div>
     </div>
@@ -164,246 +142,8 @@ const schema = JSON.stringify({
 
 <style>
   .faq-article {
-    --faq-a: #ff7c20;
-    --faq-b: #ff2e55;
-    --faq-c: #cc20cc;
-    animation: faqCycle 90s ease-in-out infinite;
-    position: relative;
-    padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(84px, 8vw, 112px);
-    overflow: hidden;
-  }
-
-  .faq-article__container {
-    position: relative;
-  }
-
-  .faq-article :global(.breadcrumb) {
-    margin-bottom: 28px;
-  }
-
-  .faq-article__header {
-    max-width: 880px;
-  }
-
-  .faq-article__header .badge {
-    min-height: 26px;
-    margin-bottom: 0.9rem;
-    padding: 4px 10px;
-    font-size: 0.54rem;
-    letter-spacing: 0.14em;
-    color: rgba(255, 236, 224, 0.94);
-    border-color: color-mix(in srgb, var(--faq-b) 34%, rgba(255, 255, 255, 0.22));
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .faq-article .hero-glow {
-    background:
-      radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--faq-a) 16%, transparent) 0%, transparent 36%),
-      radial-gradient(circle at 56% 34%, color-mix(in srgb, var(--faq-b) 14%, transparent) 0%, transparent 32%),
-      radial-gradient(circle at 84% 44%, color-mix(in srgb, var(--faq-c) 13%, transparent) 0%, transparent 28%);
-  }
-
-  .faq-article__header h1 {
-    max-width: 920px;
-    margin: 0 0 clamp(24px, 3vw, 32px);
-    color: #f5f5f7;
-    font-size: clamp(2.95rem, 5.2vw, 4.55rem);
-    line-height: 0.99;
-    letter-spacing: 0;
-  }
-
-  .faq-article__header p {
-    max-width: 720px;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.68);
-    font-size: var(--lead-size);
-    line-height: 1.65;
-  }
-
-  .faq-article__nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    max-width: 760px;
-    margin-top: 30px;
-  }
-
-  .faq-article__nav a,
-  .related-faqs__grid a,
-  .article-links a {
-    text-decoration: none;
-  }
-
-  .faq-article__nav a {
-    min-height: 40px;
-    display: inline-flex;
-    align-items: center;
-    padding: 0 14px;
-    border-radius: 999px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.92rem;
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    background: rgba(255, 255, 255, 0.03);
-    transition: border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
-  }
-
-  .faq-article__nav a:hover {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.24);
-    transform: translateY(-2px);
-  }
-
-  .faq-article__content {
-    max-width: 760px;
-    margin-top: clamp(46px, 6vw, 72px);
-  }
-
-  .faq-article__content p {
-    margin: 0 0 1.25rem;
-    color: rgba(255, 255, 255, 0.68);
-    font-size: 1.04rem;
-    line-height: 1.78;
-  }
-
-  .faq-article__content .lead-answer {
-    color: rgba(255, 255, 255, 0.82);
-    font-size: clamp(1.12rem, 2vw, 1.28rem);
-    line-height: 1.72;
-    padding-bottom: clamp(22px, 4vw, 34px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .faq-article__content h2 {
-    margin: clamp(42px, 6vw, 62px) 0 1rem;
-    color: rgba(255, 255, 255, 0.95);
-    font-size: clamp(1.46rem, 2.8vw, 2rem);
-    line-height: 1.16;
-    letter-spacing: 0;
-  }
-
-  .faq-article__content a {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.18em;
-  }
-
-  .related-faqs {
-    margin-top: clamp(42px, 6vw, 62px);
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .related-faqs__grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .related-faqs__grid a {
-    display: grid;
-    gap: 10px;
-    padding: 20px;
-    border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .related-faqs__grid a:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.18);
-  }
-
-  .related-faqs__grid strong {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .related-faqs__grid span {
-    color: rgba(255, 255, 255, 0.62);
-    font-size: 0.96rem;
-    line-height: 1.6;
-  }
-
-  .article-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: clamp(42px, 6vw, 62px);
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .article-links a {
-    min-height: 48px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 18px;
-    border-radius: 999px;
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.13);
-    background: rgba(255, 255, 255, 0.035);
-    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-
-  .article-links a:hover {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.28);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 860px) {
-    .faq-article {
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 72px;
-    }
-
-    .faq-article__header h1 {
-      font-size: clamp(2.5rem, 8vw, 3.5rem);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-
-    .related-faqs__grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .faq-article__header h1 {
-      font-size: clamp(2.2rem, 10.8vw, 2.95rem);
-    }
-
-    .faq-article__header p {
-      font-size: var(--lead-size-mobile);
-      line-height: 1.6;
-    }
-
-    .faq-article__nav {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .faq-article__nav a {
-      justify-content: center;
-      text-align: center;
-    }
-
-    .faq-article__content {
-      margin-top: 48px;
-    }
-
-    .faq-article__content p {
-      font-size: 1rem;
-      line-height: 1.72;
-    }
-
-    .article-links {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
+    --faq-a: var(--brand-sun);
+    --faq-b: var(--brand-coral);
+    --faq-c: var(--brand-pink);
   }
 </style>

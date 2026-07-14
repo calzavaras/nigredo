@@ -10,9 +10,9 @@
           <svg class="cmodal-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
             <defs>
               <linearGradient id="cmodal-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#ffb064"/>
-                <stop offset="50%" stop-color="#ff6020"/>
-                <stop offset="100%" stop-color="#cf4413"/>
+                <stop offset="0%" stop-color="var(--brand-sun)"/>
+                <stop offset="52%" stop-color="var(--brand-coral)"/>
+                <stop offset="100%" stop-color="var(--brand-pink)"/>
               </linearGradient>
             </defs>
             <rect x="3" y="7" width="26" height="18" rx="3" stroke="url(#cmodal-grad)" stroke-width="1.8" fill="none"/>
@@ -20,8 +20,8 @@
           </svg>
         </div>
         <div>
-          <h2 id="cmodal-title" class="cmodal-title">Schreib mir.</h2>
-          <p class="cmodal-subtitle">Landet direkt bei mir. Antwort meist noch heute.</p>
+          <h2 id="cmodal-title" class="cmodal-title">Erzähl mir von deinem Vorhaben.</h2>
+          <p class="cmodal-subtitle">Deine Nachricht landet direkt bei mir. In der Regel antworte ich innerhalb von zwei Arbeitstagen.</p>
         </div>
       </div>
       <div class="cmodal-header-divider"></div>
@@ -52,7 +52,7 @@
 
         <div class="cmodal-field">
           <label class="cmodal-label" for="cmodal-message">Nachricht <span class="cmodal-required">*</span></label>
-          <textarea class="cmodal-input cmodal-textarea" id="cmodal-message" name="message" placeholder="Erzähl mir von deinem Projekt oder deiner Idee…" required rows="5" maxlength="6000"></textarea>
+          <textarea class="cmodal-input cmodal-textarea" id="cmodal-message" name="message" placeholder="Was möchtest du entwickeln oder verbessern?" required rows="5" maxlength="6000"></textarea>
         </div>
 
         <button type="submit" id="cmodal-submit" class="btn btn-primary cmodal-submit-btn">
@@ -70,8 +70,8 @@
             <path class="cmodal-check-mark" d="M20 32l9 9 16-16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
         </div>
-        <h3 class="cmodal-success-title">Nachricht gesendet.</h3>
-        <p class="cmodal-success-text">Deine Anfrage ist angekommen. Ich melde mich persönlich, meistens noch am selben Tag.</p>
+        <h3 class="cmodal-success-title">Vielen Dank für deine Nachricht.</h3>
+        <p class="cmodal-success-text">Deine Anfrage ist angekommen. Ich melde mich persönlich innerhalb von zwei Arbeitstagen.</p>
         <button class="cmodal-success-close" type="button">Schliessen</button>
       </div>
     </div>

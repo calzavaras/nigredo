@@ -4,7 +4,7 @@ import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/';
 const question = 'Brauche ich eine individuelle Website oder reicht ein Baukasten?';
-const answer = 'Als Orientierung gilt: Wenn nur eine einfache Online-Visitenkarte gebraucht wird, kann ein Baukasten ausreichen. Sobald die Website eine klare Aufgabe hat, Anfragen bringen, Vertrauen tragen oder technisch sauber erweiterbar bleiben soll, lohnt sich eine individuelle Umsetzung.';
+const answer = 'Ein Baukasten reicht für eine einfache Präsenz mit wenigen Anforderungen. Eine individuelle Website ist sinnvoll, wenn Inhalt, Gestaltung, Funktionen und spätere Erweiterungen genau zur Aufgabe passen sollen. Entscheidend ist nicht das Werkzeug, sondern was der Auftritt leisten muss.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -37,14 +37,14 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
       "name": "Individuelle Website oder Baukasten? | Nigredo",
-      "description": "Wann ein Website-Baukasten reicht, wann eine individuelle Website sinnvoll ist und worauf KMU und Selbständige bei der Entscheidung achten sollten.",
+      "description": "Wann ein Website-Baukasten genügt, wann eine individuelle Lösung sinnvoll ist und welche Entscheidung zu Aufgabe, Marke und Wachstum passt.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "mainEntity": { "@id": `${pageUrl}#faq` },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-27",
-      "dateModified": "2026-06-04",
+      "dateModified": "2026-07-14",
       "isAccessibleForFree": true
     }
   ]
@@ -53,7 +53,7 @@ const schema = JSON.stringify({
 
 <Layout
   title="Individuelle Website oder Baukasten? | Nigredo"
-  description="Wann ein Website-Baukasten reicht, wann eine individuelle Website sinnvoll ist und worauf KMU und Selbständige bei der Entscheidung achten sollten."
+  description="Wann ein Website-Baukasten genügt, wann eine individuelle Lösung sinnvoll ist und welche Entscheidung zu Aufgabe, Marke und Wachstum passt."
   canonical={pageUrl}
   ogTitle="Individuelle Website oder Baukasten? | Nigredo"
   ogDescription="Eine klare Einordnung, wann ein Baukasten genügt und wann eine individuell entwickelte Website die bessere Grundlage ist."
@@ -71,64 +71,42 @@ const schema = JSON.stringify({
       ]} />
 
       <header class="faq-article__header fade-up">
-        <span class="badge badge--purple">Baukasten oder individuell</span>
         <h1 id="article-title">{question}</h1>
-        <p>
-          Ein Website-Baukasten kann für sehr einfache Auftritte reichen. Wenn eine Website aber Vertrauen schaffen, klar positionieren, gefunden werden und langfristig mitwachsen soll, ist eine individuelle Lösung meist die bessere Grundlage.
-        </p>
+        <p>{answer}</p>
       </header>
 
       <nav class="faq-article__nav fade-up delay-100" aria-label="Inhaltsübersicht">
-        <a href="#baukasten">Wann ein Baukasten reichen kann</a>
-        <a href="#grenzen">Wo Baukastensysteme an Grenzen kommen</a>
-        <a href="#individuell">Was eine individuelle Website leistet</a>
-        <a href="#inhalt">Warum Inhalt wichtiger ist als das Werkzeug</a>
-        <a href="#einschaetzung">Wie Nigredo die passende Lösung einschätzt</a>
+        <a href="#baukasten">Wann ein Baukasten genügt</a>
+        <a href="#grenzen">Wo die Grenzen liegen</a>
+        <a href="#individuell">Was eine individuelle Lösung verändert</a>
+        <a href="#inhalt">Warum der Inhalt entscheidet</a>
+        <a href="#einschaetzung">Wie Nigredo entscheidet</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
-        <p class="lead-answer">
-          Als Orientierung gilt: Wenn nur eine einfache Online-Visitenkarte gebraucht wird, kann ein Baukasten ausreichen. Sobald die Website eine klare Aufgabe hat, Anfragen bringen, Vertrauen tragen oder technisch sauber erweiterbar bleiben soll, lohnt sich eine individuelle Umsetzung.
+        <h2 id="baukasten">Wann ein Baukasten genügt</h2>
+        <p>
+          Für eine kleine Informationsseite, eine Übergangslösung oder ein Vorhaben mit knappem Umfang kann ein Baukasten zweckmässig sein. Voraussetzung ist, dass die vorhandenen Vorlagen zur Aufgabe passen und keine besonderen Funktionen nötig sind.
         </p>
 
-        <h2 id="baukasten">Wann ein Baukasten reichen kann</h2>
+        <h2 id="grenzen">Wo die Grenzen liegen</h2>
         <p>
-          Ein Baukasten kann sinnvoll sein, wenn ein sehr kleiner Auftritt gebraucht wird, Inhalte selten wechseln und keine besonderen Anforderungen bestehen. Für eine einfache Präsenz, eine Übergangslösung oder ein bewusst kleines Projekt muss nicht automatisch eine grosse individuelle Umsetzung entstehen.
-        </p>
-        <p>
-          Wichtig ist dabei eine ehrliche Erwartung. Ein Baukasten ersetzt nicht automatisch Konzept, Text, Struktur, Bildauswahl oder Suchmaschinenlogik. Er stellt vor allem ein Werkzeug bereit. Ob daraus eine klare Website wird, hängt weiterhin von Inhalt und Entscheidungen ab.
+          Standardvorlagen werden unflexibel, wenn Inhalte eine eigene Dramaturgie brauchen, Gestaltung eindeutig zur Marke passen soll oder technische Anforderungen wachsen. Auch Ladezeit, Datenschutz und Erweiterbarkeit hängen stark vom gewählten System ab.
         </p>
 
-        <h2 id="grenzen">Wo Baukastensysteme an Grenzen kommen</h2>
+        <h2 id="individuell">Was eine individuelle Lösung verändert</h2>
         <p>
-          Grenzen entstehen oft dort, wo die Website mehr leisten soll als nur vorhanden zu sein. Wenn ein Angebot sauber erklärt, Vertrauen aufgebaut, eine besondere Zielgruppe angesprochen oder ein klarer Weg zur Anfrage geführt werden soll, stossen Standardvorlagen schnell an ihre Grenzen.
-        </p>
-        <p>
-          Auch technische Themen spielen hinein: Ladezeit, saubere Struktur, individuelle Gestaltung, Suchmaschinenoptimierung, Datenschutz, Formulare oder spätere Erweiterungen sind nicht immer so flexibel, wie es am Anfang wirkt. Was schnell startet, kann später schwerfällig werden.
+          Eine individuelle Website beginnt bei Zielgruppe, Angebot und gewünschter Handlung. Struktur, Texte, Gestaltung und Technik werden darauf abgestimmt. Das schafft einen Auftritt, der eigenständig wirkt und nicht gegen die Grenzen einer Vorlage arbeitet.
         </p>
 
-        <h2 id="individuell">Was eine individuelle Website besser leisten kann</h2>
+        <h2 id="inhalt">Warum der Inhalt entscheidet</h2>
         <p>
-          Eine individuelle Website beginnt nicht bei einer Vorlage, sondern bei der Aufgabe. Worum geht es? Wer soll angesprochen werden? Welche Fragen müssen Besucher schnell beantwortet bekommen? Welche Handlung soll naheliegen? Daraus entsteht eine Struktur, die zum Angebot passt.
-        </p>
-        <p>
-          Der Vorteil liegt nicht nur im Aussehen. Eine individuelle Website kann schlank, schnell und gezielt aufgebaut werden, ohne unnötigen Ballast. Sie kann Inhalte, Gestaltung, technische Basis und spätere Entwicklung besser aufeinander abstimmen.
+          Auch die beste technische Plattform ersetzt keine eindeutige Aussage. Besucher müssen rasch verstehen, was angeboten wird, für wen es gedacht ist und wie der nächste Schritt aussieht. Erst daraus entsteht eine überzeugende Website.
         </p>
 
-        <h2 id="inhalt">Warum Inhalt und Struktur wichtiger sind als das Werkzeug</h2>
+        <h2 id="einschaetzung">Wie Nigredo entscheidet</h2>
         <p>
-          Das Werkzeug ist selten der eigentliche Engpass. Viele Websites wirken schwach, weil unklar bleibt, was angeboten wird, für wen es gedacht ist und warum jemand Vertrauen haben sollte. Eine gute Website braucht deshalb zuerst Klarheit in Inhalt und Führung.
-        </p>
-        <p>
-          Genau dort entsteht der Unterschied zwischen einer Seite, die nur existiert, und einem Auftritt, der funktioniert. Texte, Reihenfolge, Kontaktwege, mobile Darstellung und Suchmaschinenverständlichkeit müssen zusammenpassen.
-        </p>
-
-        <h2 id="einschaetzung">Wie Nigredo die passende Lösung einschätzt</h2>
-        <p>
-          Nigredo entscheidet nicht pauschal gegen Baukästen, sondern schaut auf die Aufgabe. Wenn eine sehr einfache Lösung reicht, soll sie nicht unnötig aufgeblasen werden. Wenn aber Substanz, Vertrauen, SEO, spezielle Inhalte oder technische Qualität wichtig sind, braucht es eine sauber geplante Grundlage.
-        </p>
-        <p>
-          Wer zuerst wissen will, wie sich diese Entscheidung auf das Budget auswirkt, findet die passende Einordnung bei <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">der Frage zu den Website-Kosten</a>. Wer wissen will, wie viel später selbst gepflegt werden kann, findet die Antwort bei <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">der Frage zur Website-Pflege</a>.
+          Nigredo empfiehlt keine grössere Lösung als nötig. Wenn ein Baukasten die Aufgabe erfüllt, darf die Lösung klein bleiben. Wenn Profil, Qualität oder Wachstum mehr Freiheit verlangen, wird eine individuelle Grundlage entwickelt.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -139,7 +117,7 @@ const schema = JSON.stringify({
               <span>Welche Faktoren den Preis beeinflussen und wie sich Kosten seriös einschätzen lassen.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Was kostet der laufende Betrieb einer Website?</strong>
+              <strong>Welche laufenden Kosten hat eine Website?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
             <a href="/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/">
@@ -155,7 +133,7 @@ const schema = JSON.stringify({
 
         <div class="article-links">
           <a href="/haeufige-fragen/">Zurück zu den häufigen Fragen</a>
-          <a href="/kontakt/">Passende Website-Lösung klären</a>
+          <a href="/kontakt/">Passende Lösung für mein Vorhaben klären</a>
         </div>
       </div>
     </div>
@@ -164,246 +142,8 @@ const schema = JSON.stringify({
 
 <style>
   .faq-article {
-    --faq-a: #ff7c20;
-    --faq-b: #ff2e55;
-    --faq-c: #cc20cc;
-    animation: faqCycle 90s ease-in-out infinite;
-    position: relative;
-    padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(84px, 8vw, 112px);
-    overflow: hidden;
-  }
-
-  .faq-article__container {
-    position: relative;
-  }
-
-  .faq-article :global(.breadcrumb) {
-    margin-bottom: 28px;
-  }
-
-  .faq-article__header {
-    max-width: 880px;
-  }
-
-  .faq-article__header .badge {
-    min-height: 26px;
-    margin-bottom: 0.9rem;
-    padding: 4px 10px;
-    font-size: 0.54rem;
-    letter-spacing: 0.14em;
-    color: rgba(255, 236, 224, 0.94);
-    border-color: color-mix(in srgb, var(--faq-b) 34%, rgba(255, 255, 255, 0.22));
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .faq-article .hero-glow {
-    background:
-      radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--faq-a) 16%, transparent) 0%, transparent 36%),
-      radial-gradient(circle at 56% 34%, color-mix(in srgb, var(--faq-b) 14%, transparent) 0%, transparent 32%),
-      radial-gradient(circle at 84% 44%, color-mix(in srgb, var(--faq-c) 13%, transparent) 0%, transparent 28%);
-  }
-
-  .faq-article__header h1 {
-    max-width: 920px;
-    margin: 0 0 clamp(24px, 3vw, 32px);
-    color: #f5f5f7;
-    font-size: clamp(2.95rem, 5.2vw, 4.55rem);
-    line-height: 0.99;
-    letter-spacing: 0;
-  }
-
-  .faq-article__header p {
-    max-width: 720px;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.68);
-    font-size: var(--lead-size);
-    line-height: 1.65;
-  }
-
-  .faq-article__nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    max-width: 760px;
-    margin-top: 30px;
-  }
-
-  .faq-article__nav a,
-  .related-faqs__grid a,
-  .article-links a {
-    text-decoration: none;
-  }
-
-  .faq-article__nav a {
-    min-height: 40px;
-    display: inline-flex;
-    align-items: center;
-    padding: 0 14px;
-    border-radius: 999px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.92rem;
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    background: rgba(255, 255, 255, 0.03);
-    transition: border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
-  }
-
-  .faq-article__nav a:hover {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.24);
-    transform: translateY(-2px);
-  }
-
-  .faq-article__content {
-    max-width: 760px;
-    margin-top: clamp(46px, 6vw, 72px);
-  }
-
-  .faq-article__content p {
-    margin: 0 0 1.25rem;
-    color: rgba(255, 255, 255, 0.68);
-    font-size: 1.04rem;
-    line-height: 1.78;
-  }
-
-  .faq-article__content .lead-answer {
-    color: rgba(255, 255, 255, 0.82);
-    font-size: clamp(1.12rem, 2vw, 1.28rem);
-    line-height: 1.72;
-    padding-bottom: clamp(22px, 4vw, 34px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .faq-article__content h2 {
-    margin: clamp(42px, 6vw, 62px) 0 1rem;
-    color: rgba(255, 255, 255, 0.95);
-    font-size: clamp(1.46rem, 2.8vw, 2rem);
-    line-height: 1.16;
-    letter-spacing: 0;
-  }
-
-  .faq-article__content a {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.18em;
-  }
-
-  .related-faqs {
-    margin-top: clamp(42px, 6vw, 62px);
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .related-faqs__grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .related-faqs__grid a {
-    display: grid;
-    gap: 10px;
-    padding: 20px;
-    border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .related-faqs__grid a:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.18);
-  }
-
-  .related-faqs__grid strong {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .related-faqs__grid span {
-    color: rgba(255, 255, 255, 0.62);
-    font-size: 0.96rem;
-    line-height: 1.6;
-  }
-
-  .article-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: clamp(42px, 6vw, 62px);
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .article-links a {
-    min-height: 48px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 18px;
-    border-radius: 999px;
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.13);
-    background: rgba(255, 255, 255, 0.035);
-    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-
-  .article-links a:hover {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.28);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 860px) {
-    .faq-article {
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 72px;
-    }
-
-    .faq-article__header h1 {
-      font-size: clamp(2.5rem, 8vw, 3.5rem);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-
-    .related-faqs__grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .faq-article__header h1 {
-      font-size: clamp(2.2rem, 10.8vw, 2.95rem);
-    }
-
-    .faq-article__header p {
-      font-size: var(--lead-size-mobile);
-      line-height: 1.6;
-    }
-
-    .faq-article__nav {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .faq-article__nav a {
-      justify-content: center;
-      text-align: center;
-    }
-
-    .faq-article__content {
-      margin-top: 48px;
-    }
-
-    .faq-article__content p {
-      font-size: 1rem;
-      line-height: 1.72;
-    }
-
-    .article-links {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
+    --faq-a: var(--brand-sun);
+    --faq-b: var(--brand-coral);
+    --faq-c: var(--brand-pink);
   }
 </style>

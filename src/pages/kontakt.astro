@@ -19,18 +19,14 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#webpage`,
       "name": "Kontakt und Projektanfrage | Nigredo St. Gallen",
       "url": pageUrl,
-      "description": "Direkter Kontakt zu Marco Calzavara, Nigredo St. Gallen. Projektanfragen für Software, Webseiten, Texte, Bilder und KI-Lösungen.",
+      "description": "Direkter Kontakt zu Marco Calzavara für Websites, digitale Werkzeuge und KI-Lösungen. Persönliche Ersteinschätzung innerhalb von zwei Arbeitstagen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-05-19",
+      "dateModified": "2026-07-14",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".contact-text"]
-      },
       "mainEntity": { "@id": "https://www.nigredo.ch/#organization" }
     }
   ]
@@ -39,13 +35,13 @@ const schema = JSON.stringify({
 
 <Layout
   title="Kontakt und Projektanfrage | Nigredo St. Gallen"
-  description="Direkter Kontakt zu Marco Calzavara. Ich sortiere mit dir, was sinnvoll ist und welcher nächste Schritt wirklich weiterbringt."
+  description="Direkter Kontakt zu Marco Calzavara. Persönliche Ersteinschätzung für dein digitales Projekt innerhalb von zwei Arbeitstagen."
   canonical={pageUrl}
-  ogTitle="Erzähl mir kurz, was du vorhast."
-  ogDescription="Direkter Kontakt zu Marco Calzavara. Keine Umwege, kein Ticketsystem, kein Agenturtheater."
-  ogImageAlt="Nigredo Kontakt - Direkter Draht zu Marco Calzavara"
-  twitterTitle="Erzähl mir kurz, was du vorhast."
-  twitterDescription="Direkter Kontakt zu Marco Calzavara. Persönlich, klar und ohne Umwege."
+  ogTitle="Lass uns klären, was dein Projekt braucht."
+  ogDescription="Beschreibe dein Vorhaben in wenigen Sätzen und erhalte eine persönliche, klare Ersteinschätzung von Marco Calzavara."
+  ogImageAlt="Nigredo Kontakt: direkter Austausch mit Marco Calzavara"
+  twitterTitle="Lass uns klären, was dein Projekt braucht | Nigredo"
+  twitterDescription="Direkter Kontakt und eine persönliche Ersteinschätzung innerhalb von zwei Arbeitstagen."
   schema={schema}
 >
   <section class="section pt-sub contact-hero" aria-labelledby="kontakt-title">
@@ -60,19 +56,15 @@ const schema = JSON.stringify({
       <div class="kontakt-grid">
 
         <div class="fade-up contact-hero__content">
-          <span class="badge badge--purple">PROJEKTANFRAGE</span>
           <h1 id="kontakt-title" class="contact-hero__title">
-            Erzähl mir kurz,<br>
-            <span class="gradient-text">was du vorhast.</span>
+            Lass uns klären,<br>
+            <span class="gradient-text">was dein Projekt braucht.</span>
           </h1>
           <p class="hero-lead contact-hero__lead">
-            Ob erste Idee, konkreter Auftrag oder offene Frage: Schreib mir, wo du gerade stehst. Ich sortiere mit dir, was sinnvoll ist, was es braucht und welcher nächste Schritt wirklich weiterbringt.
+            Schreib mir, worum es geht, wo du heute stehst und was sich verändern soll. Ich prüfe dein Vorhaben persönlich und antworte mit einer ehrlichen ersten Einschätzung.
           </p>
           <p class="kontakt-sub">
-            Wenn es passt, wird daraus ein klares Vorgehen: mit transparentem Fixpreis, gutem Tempo und einem Ergebnis, das zu dir, deinem Projekt und deinem Anspruch passt.
-          </p>
-          <p class="kontakt-sub">
-            Für Kontakt und Projektanfrage reicht ein kurzer Einstieg. Erzähl mir kurz, was du vorhast, ob es um eine Website, lokale Sichtbarkeit, ein CMS, Inhalte oder eine KI-Lösung geht. Ich melde mich mit einer klaren Einschätzung zurück, damit du schnell siehst, was sinnvoll ist und was nicht.
+            Wenn es fachlich und menschlich passt, erhältst du einen transparenten Vorschlag mit Umfang, Prioritäten, Fixpreis und realistischem Zeitrahmen.
           </p>
         </div>
 
@@ -93,11 +85,12 @@ const schema = JSON.stringify({
             </svg>
           </div>
 
-          <span class="cta-label">Direkter Kontakt</span>
-          <h2>Persönlich statt Prozess.</h2>
-          <p class="contact-text">Deine Anfrage landet ohne Umweg bei mir. Ich lese sie selbst und melde mich mit einer ehrlichen Einschätzung zurück. Kein Formularlabyrinth, kein Verkaufsritual. Einfach ein sinnvoller nächster Schritt.</p>
+          <span class="cta-label">Persönlich beantwortet</span>
+          <h2>Direkt bei mir.</h2>
+          <p class="contact-text">Deine Nachricht erreicht die Person, die dein Projekt später konzipiert und umsetzt. Das hält Entscheidungswege kurz und die Verantwortung eindeutig.</p>
 
-          <button id="mailBtn" class="btn btn-primary">Jetzt schreiben</button>
+          <button id="mailBtn" class="btn btn-primary">Projekt beschreiben</button>
+          <p class="contact-response">Antwort in der Regel innerhalb von zwei Arbeitstagen.</p>
         </div>
 
       </div>
@@ -108,15 +101,15 @@ const schema = JSON.stringify({
 
 <style>
   .contact-hero {
-    --contact-a: #ffd020;
-    --contact-b: #ff6020;
-    --contact-c: #ff2060;
-    animation: contactCycle 90s ease-in-out infinite;
+    --contact-a: var(--brand-sun);
+    --contact-b: var(--brand-coral);
+    --contact-c: var(--brand-pink);
+    animation: none;
   }
 
   .contact-hero {
     padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(84px, 8vw, 112px);
+    padding-bottom: var(--section-py-md);
   }
 
   .contact-hero :global(.breadcrumb) {
@@ -151,18 +144,7 @@ const schema = JSON.stringify({
   }
 
   .contact-hero .gradient-text {
-    background: linear-gradient(
-      90deg,
-      var(--contact-a) 0%,
-      color-mix(in srgb, var(--contact-a) 84%, var(--contact-b)) 14%,
-      color-mix(in srgb, var(--contact-a) 62%, var(--contact-b)) 28%,
-      color-mix(in srgb, var(--contact-a) 34%, var(--contact-b)) 42%,
-      color-mix(in srgb, var(--contact-a) 12%, var(--contact-b)) 54%,
-      color-mix(in srgb, var(--contact-b) 78%, var(--contact-c)) 66%,
-      color-mix(in srgb, var(--contact-b) 54%, var(--contact-c)) 78%,
-      color-mix(in srgb, var(--contact-b) 28%, var(--contact-c)) 90%,
-      var(--contact-c) 100%
-    );
+    background: var(--brand-gradient-warm);
     background-size: 100% auto;
 
     background-clip: text;
@@ -187,8 +169,8 @@ const schema = JSON.stringify({
   .kontakt-sub {
     max-width: 610px;
     margin: 22px 0 0;
-    color: rgba(255, 255, 255, 0.48);
-    font-size: clamp(0.98rem, 1.08vw, 1.05rem);
+    color: var(--text-faint);
+    font-size: clamp(1rem, 1.08vw, 1.05rem);
     line-height: 1.65;
   }
 
@@ -200,9 +182,7 @@ const schema = JSON.stringify({
       linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.018)),
       #0a0a0c;
     isolation: isolate;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.035),
-      0 18px 45px rgba(0, 0, 0, 0.22);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
   }
 
   .contact-panel::before,
@@ -211,14 +191,12 @@ const schema = JSON.stringify({
   }
 
   .contact-panel:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     border-color: rgba(255, 255, 255, 0.16);
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.022)),
       #0b0b0d;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 28px 60px rgba(0, 0, 0, 0.32);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   /* Top gradient accent stripe */
@@ -237,7 +215,7 @@ const schema = JSON.stringify({
 
   .contact-panel .cta-label {
     margin-bottom: 12px;
-    color: rgba(255, 255, 255, 0.42);
+    color: var(--text-faint);
   }
 
   .contact-panel h2 {
@@ -248,10 +226,17 @@ const schema = JSON.stringify({
   }
 
   .contact-text {
-    color: rgba(255, 255, 255, 0.56);
+    color: var(--text-soft);
     margin-bottom: 32px;
-    font-size: 0.98rem;
+    font-size: 1rem;
     line-height: 1.68;
+  }
+
+  .contact-response {
+    margin: 16px 0 0;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.82rem;
+    line-height: 1.5;
   }
 
   .contact-card .card-icon {
@@ -343,8 +328,8 @@ const schema = JSON.stringify({
     }
 
     .kontakt-sub {
-      font-size: 0.96rem;
-      line-height: 1.62;
+      font-size: 1rem;
+      line-height: 1.65;
       margin-top: 18px;
     }
 

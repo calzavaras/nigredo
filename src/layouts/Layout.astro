@@ -100,7 +100,7 @@ const siteIdentitySchema = JSON.stringify({
       "name": "Nigredo",
       "alternateName": ["Nigredo.ch", "nigredo.ch", "www.nigredo.ch", "Nigredo Schweiz", "Nigredo St. Gallen", "Nigredo Webdesign", "Nigredo KI-Lösungen", "Nigredo Marco Calzavara", "Marco Calzavara Nigredo"],
       "url": "https://www.nigredo.ch/",
-      "description": "Offizielle Website von Nigredo, der Schweizer Marke von Marco Calzavara für Websites, KI-Lösungen und digitale Produkte aus St. Gallen.",
+      "description": "Offizielle Website von Nigredo, der Schweizer Marke von Marco Calzavara für Websites, KI-Lösungen und digitale Werkzeuge aus St. Gallen.",
       "inLanguage": "de-CH",
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
@@ -150,7 +150,7 @@ const siteIdentitySchema = JSON.stringify({
         "caption": "Nigredo Icon"
       },
       "image": { "@id": "https://www.nigredo.ch/#logo" },
-      "description": "Websites, KI-Lösungen und Softwareentwicklung aus St. Gallen. Marco Calzavara entwickelt digitale Produkte mit Substanz – persönlich, zum Fixpreis, ohne Baukasten.",
+      "description": "Websites, KI-Lösungen und digitale Werkzeuge aus St. Gallen. Marco Calzavara konzipiert persönlich, arbeitet zum Fixpreis und setzt präzise um.",
       "slogan": "Digitale Produkte im Massanzug.",
       "founder": {
         "@type": "Person",
@@ -278,12 +278,12 @@ const siteIdentitySchema = JSON.stringify({
       "name": "Footer-Navigation",
       "description": "Ergänzende Seitenlinks im Footer von nigredo.ch",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Start", "url": "https://www.nigredo.ch/" },
+        { "@type": "ListItem", "position": 1, "name": "Referenzen", "url": "https://www.nigredo.ch/referenzen/" },
         { "@type": "ListItem", "position": 2, "name": "Lösungen", "url": "https://www.nigredo.ch/digitale-loesungen/" },
-        { "@type": "ListItem", "position": 3, "name": "Referenzen", "url": "https://www.nigredo.ch/referenzen/" },
-        { "@type": "ListItem", "position": 4, "name": "Über mich", "url": "https://www.nigredo.ch/marco-calzavara/" },
+        { "@type": "ListItem", "position": 3, "name": "Über mich", "url": "https://www.nigredo.ch/marco-calzavara/" },
+        { "@type": "ListItem", "position": 4, "name": "Häufige Fragen", "url": "https://www.nigredo.ch/haeufige-fragen/" },
         { "@type": "ListItem", "position": 5, "name": "Kontakt", "url": "https://www.nigredo.ch/kontakt/" },
-        { "@type": "ListItem", "position": 6, "name": "Häufige Fragen", "url": "https://www.nigredo.ch/haeufige-fragen/" },
+        { "@type": "ListItem", "position": 6, "name": "LinkedIn", "url": "https://ch.linkedin.com/in/calzavara-marco" },
         { "@type": "ListItem", "position": 7, "name": "Impressum", "url": "https://www.nigredo.ch/impressum/" },
         { "@type": "ListItem", "position": 8, "name": "Datenschutz", "url": "https://www.nigredo.ch/datenschutz/" }
       ]
@@ -293,31 +293,31 @@ const siteIdentitySchema = JSON.stringify({
       "@id": "https://www.nigredo.ch/#nav",
       "position": 1,
       "name": "Startseite",
-      "description": "Offizielle Startseite von Nigredo, Websites, KI-Lösungen und Software von Marco Calzavara aus St. Gallen",
+      "description": "Offizielle Startseite von Nigredo mit Websites, KI-Lösungen und digitalen Werkzeugen von Marco Calzavara aus St. Gallen",
       "url": "https://www.nigredo.ch/"
     },
     {
       "@type": "SiteNavigationElement",
-      "@id": "https://www.nigredo.ch/digitale-loesungen/#nav",
+      "@id": "https://www.nigredo.ch/referenzen/#nav",
       "position": 2,
-      "name": "Lösungen",
-      "description": "Texte, Bilder, Logos, Software, Webseiten – KI-Lösungen aus einer Hand",
-      "url": "https://www.nigredo.ch/digitale-loesungen/"
+      "name": "Referenzen",
+      "description": "Websites, KI-Anwendungen und digitale Werkzeuge für konkrete Anforderungen",
+      "url": "https://www.nigredo.ch/referenzen/"
     },
     {
       "@type": "SiteNavigationElement",
-      "@id": "https://www.nigredo.ch/referenzen/#nav",
+      "@id": "https://www.nigredo.ch/digitale-loesungen/#nav",
       "position": 3,
-      "name": "Referenzen",
-      "description": "Echte Projekte: KI Voice Agent, Wissensdatenbanken, Design-Tools, Dashboards",
-      "url": "https://www.nigredo.ch/referenzen/"
+      "name": "Lösungen",
+      "description": "Websites, KI-Lösungen und digitale Werkzeuge aus einer Hand",
+      "url": "https://www.nigredo.ch/digitale-loesungen/"
     },
     {
       "@type": "SiteNavigationElement",
       "@id": "https://www.nigredo.ch/marco-calzavara/#nav",
       "position": 4,
       "name": "Über mich",
-      "description": "Marco Calzavara – Gründer und Macher von Nigredo, St. Gallen",
+      "description": "Marco Calzavara, Gründer und direkter Ansprechpartner von Nigredo in St. Gallen",
       "url": "https://www.nigredo.ch/marco-calzavara/"
     },
     {
@@ -325,7 +325,7 @@ const siteIdentitySchema = JSON.stringify({
       "@id": "https://www.nigredo.ch/kontakt/#nav",
       "position": 5,
       "name": "Kontakt",
-      "description": "Direkter Kontakt zu Marco Calzavara – Projektanfragen und Ideen",
+      "description": "Direkter Kontakt zu Marco Calzavara für Projektanfragen und Ideen",
       "url": "https://www.nigredo.ch/kontakt/"
     },
     {
@@ -375,14 +375,8 @@ const siteIdentitySchema = JSON.stringify({
   <link rel="canonical" href={canonicalUrl}>
   {prevUrl && <link rel="prev" href={prevUrl}>}
   {nextUrl && <link rel="next" href={nextUrl}>}
-  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt – Nigredo für KI-Bots">
-  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs-full.txt – Vollständige Inhalte für KI-Systeme">
-
-  <!-- Lokales SEO: St. Gallen, Schweiz -->
-  <meta name="geo.region" content="CH-SG">
-  <meta name="geo.placename" content="St. Gallen, Schweiz">
-  <meta name="geo.position" content="47.4245;9.3767">
-  <meta name="ICBM" content="47.4245, 9.3767">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt: Nigredo für KI-Bots">
+  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLMs-full.txt: vollständige Inhalte für KI-Systeme">
 
   <meta property="og:title" content={ogTitle || title}>
   <meta property="og:description" content={ogDescription || description}>

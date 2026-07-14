@@ -51,14 +51,10 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-04-27",
-      "dateModified": "2026-05-18",
+      "dateModified": "2026-07-14",
       "about": { "@id": `${pageUrl}#website-project` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
-      "isAccessibleForFree": true,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".case-hero-lead", ".case-feature-body h3"]
-      }
+      "isAccessibleForFree": true
     }
   ]
 });
@@ -99,7 +95,7 @@ const schema = JSON.stringify({
           <span class="tech-badge accent-coral case-hero-badge">Website</span>
           <h1 id="therapie-ost-title" class="home-hero__title case-hero-title">Website für <span class="gradient-text">Therapie Ost</span></h1>
           <p class="hero-lead case-hero-lead">
-            Eine Praxiswebsite muss nicht laut sein, um zu wirken. Für Therapie Ost in St. Gallen entstand ein ruhiger, klar geführter Auftritt, der Vertrauen schafft, Leistungen verständlich erklärt und den Weg zur Terminbuchung angenehm kurz hält.
+            Für Therapie Ost in St. Gallen entstand ein ruhiger, klar geführter Praxisauftritt. Er schafft Vertrauen, erklärt die Leistungen verständlich und führt Interessierte ohne Umwege zur Terminbuchung.
           </p>
           <div class="hero-cta-group">
             <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">Website besuchen</a>
@@ -137,7 +133,7 @@ const schema = JSON.stringify({
       <div class="case-stats fade-up delay-100" style="--stats-cols: 5;">
         <div class="case-stat">
           <strong class="stat-website">Website</strong>
-          <span>Neue Kategorie</span>
+          <span>individuell</span>
         </div>
         <div class="case-stat">
           <strong class="stat-website">Mobile</strong>
@@ -159,25 +155,25 @@ const schema = JSON.stringify({
 
       <div class="case-section fade-up delay-100">
         <div class="case-section-hd">
-          <span class="case-eyebrow">Was wurde gebaut</span>
+          <span class="case-eyebrow">Ergebnis im Detail</span>
           <h2 class="case-section-title">Praxiswebsite für Therapie Ost in St. Gallen</h2>
         </div>
         <div class="case-features">
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--coral">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-1" x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#FF2E63"/><stop offset="0.48" stop-color="#FF4D80"/><stop offset="1" stop-color="#A64DFF"/></linearGradient></defs><path d="M12 4.5c3.8 0 6.8 3.2 8.2 7.5-1.4 4.3-4.4 7.5-8.2 7.5S5.2 16.3 3.8 12C5.2 7.7 8.2 4.5 12 4.5z"/><path d="M12 9.1a2.9 2.9 0 1 1 0 5.8 2.9 2.9 0 0 1 0-5.8z"/><path d="M18.5 4.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8.8-1.7z"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-1" x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M12 4.5c3.8 0 6.8 3.2 8.2 7.5-1.4 4.3-4.4 7.5-8.2 7.5S5.2 16.3 3.8 12C5.2 7.7 8.2 4.5 12 4.5z"/><path d="M12 9.1a2.9 2.9 0 1 1 0 5.8 2.9 2.9 0 0 1 0-5.8z"/><path d="M18.5 4.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8.8-1.7z"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Vertrauen auf den ersten Blick</h3>
-                <p>Eine ruhige Farbwelt, echte Praxisbilder und eine klare Headline geben der Website sofort eine menschliche Note. Keine austauschbaren Gesundheitsfloskeln, kein steriler Praxislook. Stattdessen: ein Auftritt, der professionell wirkt und trotzdem nahbar bleibt.</p>
+                <p>Eine ruhige Farbwelt, echte Praxisbilder und eine klare Headline geben der Website eine menschliche Note. Der Auftritt wirkt professionell, nahbar und eindeutig mit der Praxis verbunden.</p>
               </div>
             </div>
           </div>
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--coral">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-2" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#FF2E63"/><stop offset="0.48" stop-color="#FF4D80"/><stop offset="1" stop-color="#A64DFF"/></linearGradient></defs><path d="M5 7h6"/><path d="M5 12h10"/><path d="M5 17h7"/><path d="M16.5 6.5l2 2 2-2"/><path d="M18.5 8.5v7"/><path d="M16.5 17.5l2-2 2 2"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-2" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M5 7h6"/><path d="M5 12h10"/><path d="M5 17h7"/><path d="M16.5 6.5l2 2 2-2"/><path d="M18.5 8.5v7"/><path d="M16.5 17.5l2-2 2 2"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Klare Führung auf Desktop und Mobile</h3>
@@ -188,19 +184,18 @@ const schema = JSON.stringify({
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--coral">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-3" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#FF2E63"/><stop offset="0.48" stop-color="#FF4D80"/><stop offset="1" stop-color="#A64DFF"/></linearGradient></defs><path d="M5 12h11"/><path d="M12 6l6 6-6 6"/><path d="M5 7.5h4"/><path d="M5 16.5h4"/><path d="M18.5 4.5l.7 1.5 1.5.7-1.5.7-.7 1.5-.7-1.5-1.5-.7 1.5-.7.7-1.5z"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-3" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M5 12h11"/><path d="M12 6l6 6-6 6"/><path d="M5 7.5h4"/><path d="M5 16.5h4"/><path d="M18.5 4.5l.7 1.5 1.5.7-1.5.7-.7 1.5-.7-1.5-1.5-.7 1.5-.7.7-1.5z"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Kurzer Weg zur Buchung</h3>
-                <p>Die Website führt Interessierte ohne Umwege zur nächsten Handlung. Die Online Terminbuchung ist direkt angebunden, gut auffindbar und bewusst unaufdringlich integriert.</p>
-                <p>Das Tool von Cituro wurde technisch sauber eingebunden und passend verlinkt.</p>
+                <p>Die Website führt Interessierte ohne Umwege zur nächsten Handlung. Die Online-Terminbuchung von Cituro ist direkt angebunden, gut auffindbar und bewusst unaufdringlich integriert.</p>
               </div>
             </div>
           </div>
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--coral">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-4" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#FF2E63"/><stop offset="0.48" stop-color="#FF4D80"/><stop offset="1" stop-color="#A64DFF"/></linearGradient></defs><path d="M6 18l7.8-7.8 2.7 2.7L8.7 20H6v-2z"/><path d="M15.7 8.3l1.2-1.2a1.9 1.9 0 0 1 2.7 2.7l-1.2 1.2"/><path d="M5 6.5h7"/><path d="M5 10h5"/><path d="M5 13.5h3"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-4" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M6 18l7.8-7.8 2.7 2.7L8.7 20H6v-2z"/><path d="M15.7 8.3l1.2-1.2a1.9 1.9 0 0 1 2.7 2.7l-1.2 1.2"/><path d="M5 6.5h7"/><path d="M5 10h5"/><path d="M5 13.5h3"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Inhalt mit klarer Positionierung</h3>
@@ -234,16 +229,16 @@ const schema = JSON.stringify({
 
 <style is:global>
   .case-page--website {
-    --case-accent: #ff2e63;
-    --case-accent-2: #ff2e63;
-    --case-accent-3: #ff2e63;
-    --case-accent-soft: rgba(255, 46, 99, 0.16);
-    --case-accent-glow: rgba(255, 46, 99, 0.22);
+    --case-accent: var(--brand-coral);
+    --case-accent-2: var(--brand-pink);
+    --case-accent-3: var(--brand-violet);
+    --case-accent-soft: color-mix(in srgb, var(--case-accent) 16%, transparent);
+    --case-accent-glow: color-mix(in srgb, var(--case-accent) 22%, transparent);
   }
 
   .case-page--website .gradient-text {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--case-accent) 92%, white 10%) 0%, color-mix(in srgb, var(--case-accent) 72%, black 16%) 100%);
-    background-size: 260% auto;
+    background: var(--case-gradient-website);
+    background-size: 100% auto;
 
     background-clip: text;
     -webkit-background-clip: text;
@@ -260,9 +255,7 @@ const schema = JSON.stringify({
 
   .case-page--website .case-feature:hover {
     border-color: rgba(255, 255, 255, 0.16);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 28px 60px rgba(0, 0, 0, 0.32),
+    box-shadow: var(--shadow-card-hover),
       0 0 28px rgba(255, 46, 99, 0.08);
   }
 

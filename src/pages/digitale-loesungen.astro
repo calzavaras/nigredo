@@ -18,26 +18,22 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Websites, KI-Lösungen & Texte – Fixpreis | Nigredo Schweiz",
-      "description": "Websites, die ihren Job kennen. KI, die nicht nervt. Texte und Bilder, denen Form fehlt. Alles aus einer Hand, Fixpreis, kein Baukastensystem. Marco Calzavara, St. Gallen.",
+      "name": "Websites, KI-Lösungen und digitale Werkzeuge | Nigredo Schweiz",
+      "description": "Nigredo entwickelt Websites, KI-Lösungen und digitale Werkzeuge für konkrete Anforderungen. Strategie, Inhalt, Gestaltung und Technik werden gemeinsam gedacht.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-05-19",
+      "dateModified": "2026-07-14",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".accordion-content p"]
-      },
       "mainEntity": { "@id": `${pageUrl}#services` }
     },
     {
       "@type": "ItemList",
       "@id": `${pageUrl}#services`,
       "name": "Leistungen",
-      "description": "Digitale Lösungen aus einer Hand – Websites, KI und Content",
+      "description": "Websites, KI-Lösungen und digitale Werkzeuge aus einer Hand",
       "numberOfItems": 3,
       "itemListElement": [
         {
@@ -46,8 +42,8 @@ const schema = JSON.stringify({
           "item": {
             "@type": "Service",
             "@id": `${pageUrl}#website`,
-            "name": "Websites, die passen",
-            "description": "Klare Websites für Selbständige, KMU, Vereine und Privatpersonen. Kein Baukastensystem, kein Ballast. Ein Auftritt, der sitzt.",
+            "name": "Websites mit klarer Aufgabe",
+            "description": "Individuelle Websites, die Orientierung geben, Vertrauen schaffen und Menschen gezielt zur nächsten Handlung führen.",
             "serviceType": "Webentwicklung",
             "provider": { "@id": "https://www.nigredo.ch/#organization" },
             "brand": { "@id": "https://www.nigredo.ch/#brand" },
@@ -73,7 +69,7 @@ const schema = JSON.stringify({
             "@type": "Service",
             "@id": `${pageUrl}#ki`,
             "name": "KI-Lösungen für KMU",
-            "description": "KI-Lösungen mit klarem Zweck, verständlicher Rolle und echtem Nutzen im Alltag. Keine Spielerei, kein Buzzword. Werkzeuge, die entlasten und verlässlich funktionieren.",
+            "description": "Digitale Werkzeuge und KI-Lösungen, die wiederkehrende Arbeit vereinfachen, Wissen nutzbar machen und im Alltag verlässlich funktionieren.",
             "serviceType": "KI-Lösungen",
             "provider": { "@id": "https://www.nigredo.ch/#organization" },
             "brand": { "@id": "https://www.nigredo.ch/#brand" },
@@ -93,8 +89,8 @@ const schema = JSON.stringify({
           "item": {
             "@type": "Service",
             "@id": `${pageUrl}#content`,
-            "name": "Texte, Bilder und Gestaltung",
-            "description": "Der richtige Text, die klare Struktur, das starke Bild. Alles, was Form braucht – präzise, passend und ohne Umwege.",
+            "name": "Inhalte, die Entscheidungen erleichtern",
+            "description": "Klare Texte, passende Bilder und eine präzise Struktur, die komplexe Angebote verständlich und glaubwürdig vermitteln.",
             "serviceType": "Content-Erstellung",
             "provider": { "@id": "https://www.nigredo.ch/#organization" },
             "brand": { "@id": "https://www.nigredo.ch/#brand" },
@@ -115,14 +111,14 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Lösungen | Websites, KI & Texte | Nigredo"
-  description="Nigredo entwickelt individuelle Websites, KI-Integrationen und Content-Gestaltung mit Substanz. Persönlich, aus St. Gallen und zum Fixpreis."
+  title="Lösungen | Websites, KI & digitale Werkzeuge | Nigredo"
+  description="Nigredo entwickelt Websites, KI-Lösungen und digitale Werkzeuge für konkrete Aufgaben. Persönlich, klar und zum Fixpreis."
   canonical={pageUrl}
-  ogTitle="Individuelle Lösungen für deine digitale Präsenz."
-  ogDescription="Websites, KI und Content mit Charakter. Marco Calzavara entwickelt Lösungen, die wirklich zu dir passen. Persönlich. Fixpreis. Ohne Baukasten."
-  ogImageAlt="Nigredo – Individuelle Websites, KI & Content-Lösungen"
-  twitterTitle="Websites, KI-Lösungen & Content-Gestaltung | Nigredo"
-  twitterDescription="Websites, die ihren Job kennen. KI, die nicht nervt. Alles, dem Form fehlt. Fixpreis."
+  ogTitle="Digitale Lösungen, die im Alltag bestehen."
+  ogDescription="Websites, KI-Lösungen und digitale Werkzeuge, bei denen Strategie, Inhalt, Gestaltung und Technik ineinandergreifen."
+  ogImageAlt="Nigredo: individuelle Websites, KI-Lösungen und digitale Werkzeuge"
+  twitterTitle="Digitale Lösungen, die im Alltag bestehen | Nigredo"
+  twitterDescription="Websites, KI-Lösungen und digitale Werkzeuge für konkrete Aufgaben. Persönlich, klar und zum Fixpreis."
   schema={schema}
 >
   <section class="section pt-sub solutions-hero" aria-labelledby="loesungen-title">
@@ -135,14 +131,13 @@ const schema = JSON.stringify({
       ]} />
 
       <div class="fade-up home-hero__inner solutions-hero__content">
-        <span class="badge badge--cyan">WOMIT ES AUFHÖRT</span>
 
         <h1 id="loesungen-title" class="home-hero__title solutions-hero__title">
-          <span class="solutions-hero__line">Wenn es fertig ist,</span>
-          <span class="gradient-text solutions-hero__line">fühlt es sich richtig an.</span>
+          <span class="solutions-hero__line">Digitale Lösungen,</span>
+          <span class="gradient-text solutions-hero__line">die im Alltag bestehen.</span>
         </h1>
         <p class="hero-lead solutions-hero__lead">
-          Fertig heisst hier nicht einfach abgeschlossen. Es heisst: kein Detail, das stört, kein Satz, der danebenliegt, kein Klick, der ins Leere führt. Wenn es fertig ist, fühlt es sich richtig an. Erst dann ist ein Projekt wirklich fertig.
+          Ich entwickle Websites, KI-Lösungen und digitale Werkzeuge für Anforderungen, die Standardlösungen nicht überzeugend abdecken. Strategie, Inhalt, Gestaltung und Technik werden gemeinsam gedacht, damit ein Produkt entsteht, das verständlich funktioniert und dauerhaft überzeugt.
         </p>
       </div>
 
@@ -150,9 +145,9 @@ const schema = JSON.stringify({
 
         <div class="accordion solutions-accordion" role="list">
 
-          <div class="accordion-item solutions-accordion__item" role="listitem">
+          <div class="accordion-item solutions-accordion__item active" role="listitem">
             <h3 class="accordion-h3">
-              <button id="acc-btn-1" class="accordion-header" aria-expanded="false" aria-controls="acc-1">
+              <button id="acc-btn-1" class="accordion-header" aria-expanded="true" aria-controls="acc-1">
                 <div class="accordion-title-wrapper">
                   <span class="acc-icon-title" aria-hidden="true">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,15 +165,14 @@ const schema = JSON.stringify({
                       <path d="M14.2 14.3L18.2 16.1L16.5 16.9L17.5 19L16.1 19.6L15.1 17.5L13.7 18.8L14.2 14.3Z" stroke="url(#acc-grad-1)" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </span>
-                  <span>Websites, die passen.</span>
+                  <span>Websites mit klarer Aufgabe.</span>
                 </div>
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
             </h3>
-            <div id="acc-1" class="accordion-content" role="region" aria-labelledby="acc-btn-1" aria-hidden="true">
+            <div id="acc-1" class="accordion-content" role="region" aria-labelledby="acc-btn-1" aria-hidden="false">
               <p>
-                Eine Website ist nicht einfach nur da. Sie zeigt, worum es geht, bevor du etwas erklären musst. Sie schafft Vertrauen, gibt Richtung und macht den nächsten Schritt leicht.<br><br>
-                Ich entwickle Websites für Selbständige, KMU, Vereine und Privatpersonen, die klar wirken, sauber funktionieren und in jedem Detail passen. Keine Vorlage, keine Kompromisse, kein Abo-Modell. Sondern ein Auftritt, der sitzt.
+                Eine gute Website vermittelt dein Angebot, schafft Vertrauen und führt selbstverständlich zum nächsten Schritt. Ich entwickle individuelle Auftritte für Selbstständige, KMU und Organisationen, von Struktur und Text bis zu Design, Technik, Performance und Suchmaschinenbasis.
               </p>
             </div>
           </div>
@@ -203,15 +197,14 @@ const schema = JSON.stringify({
                       <line x1="10.3" y1="11" x2="6" y2="8.7" stroke="url(#acc-grad-2)" stroke-width="1.2"/><line x1="10.3" y1="13" x2="6" y2="15.3" stroke="url(#acc-grad-2)" stroke-width="1.2"/><line x1="13.7" y1="11" x2="18" y2="8.7" stroke="url(#acc-grad-2)" stroke-width="1.2"/><line x1="13.7" y1="13" x2="18" y2="15.3" stroke="url(#acc-grad-2)" stroke-width="1.2"/><line x1="12" y1="10" x2="12" y2="4.5" stroke="url(#acc-grad-2)" stroke-width="1.2"/>
                     </svg>
                   </span>
-                  <span>KI, die nicht nervt.</span>
+                  <span>KI und Software, die Arbeit erleichtern.</span>
                 </div>
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
             </h3>
             <div id="acc-2" class="accordion-content" role="region" aria-labelledby="acc-btn-2" aria-hidden="true">
               <p>
-                Viele KI-Lösungen beeindrucken kurz und verschwinden dann im Alltag. Nicht, weil die Technik zu wenig kann, sondern weil die Aufgabe nie klar war.<br><br>
-                Ich entwickle KI-Lösungen, die nicht nur möglich, sondern sinnvoll sind. Mit einem klaren Zweck, einer verständlichen Rolle und einem echten Nutzen im Alltag. Keine Spielerei, kein Buzzword, kein zusätzlicher Lärm. Sondern Werkzeuge, die entlasten und verlässlich funktionieren.
+                Am Anfang steht nicht die Technologie, sondern dein Arbeitsablauf. Daraus entstehen Assistenten, Wissenssysteme, Dashboards und Automatisierungen mit verständlicher Bedienung, eindeutiger Funktion und einer verlässlichen technischen Grundlage.
               </p>
             </div>
           </div>
@@ -234,15 +227,14 @@ const schema = JSON.stringify({
                       <path d="M15.1 9.8H16.9V11.6" stroke="url(#acc-grad-3)" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </span>
-                  <span>Alles, was Form braucht.</span>
+                  <span>Inhalt, der Entscheidungen erleichtert.</span>
                 </div>
                 <span class="accordion-icon" aria-hidden="true">+</span>
               </button>
             </h3>
             <div id="acc-3" class="accordion-content" role="region" aria-labelledby="acc-btn-3" aria-hidden="true">
               <p>
-                Nicht immer braucht es ein neues System. Manchmal braucht es einfach den richtigen Text. Eine klare Struktur. Ein starkes Bild. Oder eine Darstellung, die aus Komplexität endlich Klarheit macht.<br><br>
-                Ich schaue hin, was fehlt, was stört und was klarer werden muss. Dann bringe ich es in Form. Präzise, passend und ohne Umwege.
+                Komplexe Angebote brauchen eine nachvollziehbare Struktur, präzise Sprache und Bilder mit Aussage. Ich ordne Inhalte, schärfe Botschaften und entwickle eine Darstellung, die Menschen schnell verstehen und sicher einordnen können.
               </p>
             </div>
           </div>
@@ -250,17 +242,38 @@ const schema = JSON.stringify({
         </div>
       </div>
 
+      <section class="solutions-process fade-up" aria-labelledby="solutions-process-title">
+        <div class="solutions-process__intro">
+          <p class="solutions-process__label">Zusammenarbeit</p>
+          <h2 id="solutions-process-title">Von der offenen Frage zum klaren Ergebnis.</h2>
+        </div>
+        <ol class="solutions-process__steps">
+          <li>
+            <span>01</span>
+            <div><strong>Verstehen</strong><p>Wir klären Ziel, Nutzer, Rahmenbedingungen und den Kern der Aufgabe.</p></div>
+          </li>
+          <li>
+            <span>02</span>
+            <div><strong>Entscheiden</strong><p>Du erhältst einen konkreten Vorschlag mit Umfang, Prioritäten, Fixpreis und Zeitrahmen.</p></div>
+          </li>
+          <li>
+            <span>03</span>
+            <div><strong>Umsetzen</strong><p>Ich gestalte, entwickle und verfeinere, bis Inhalt, Funktion und Wirkung zusammenpassen.</p></div>
+          </li>
+        </ol>
+      </section>
+
     </div>
   </section>
 
   <section class="section solutions-final-section" aria-labelledby="loesungen-cta-title">
     <div class="container">
       <div class="section-cta solutions-final-cta fade-up">
-        <span class="cta-label">BEREIT?</span>
-        <h2 id="loesungen-cta-title">Weniger planen.<br><span>Einfach anfangen.</span></h2>
+        <span class="cta-label">Nächster Schritt</span>
+        <h2 id="loesungen-cta-title">Erzähl mir, was<br><span>besser funktionieren soll.</span></h2>
         <div class="hero-cta-group" style="justify-content: center;">
-          <span class="reveal-mail btn btn-primary" role="button" tabindex="0" aria-label="Kontaktformular öffnen">Unverbindlich anfragen</span>
-          <a href="/referenzen/" class="btn btn-ghost">Referenzprojekte ansehen</a>
+          <span class="reveal-mail btn btn-primary" role="button" tabindex="0" aria-label="Kontaktformular öffnen">Projekt besprechen</span>
+          <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
         </div>
       </div>
     </div>
@@ -271,10 +284,11 @@ const schema = JSON.stringify({
   .solutions-hero,
   .solutions-accordion-wrap,
   .solutions-final-section {
-    --solutions-a: #00f0b4;
-    --solutions-b: #00a8ff;
-    --solutions-c: #5c32ff;
-    animation: solutionsCycle 90s ease-in-out infinite;
+    --solutions-a: var(--brand-cyan);
+    --solutions-b: var(--brand-blue);
+    --solutions-c: var(--brand-violet);
+    --page-accent: var(--solutions-b);
+    animation: none;
   }
 
   .solutions-hero {
@@ -323,18 +337,7 @@ const schema = JSON.stringify({
   }
 
   .solutions-hero .gradient-text {
-    background: linear-gradient(
-      90deg,
-      var(--solutions-a) 0%,
-      color-mix(in srgb, var(--solutions-a) 84%, var(--solutions-b)) 14%,
-      color-mix(in srgb, var(--solutions-a) 62%, var(--solutions-b)) 28%,
-      color-mix(in srgb, var(--solutions-a) 34%, var(--solutions-b)) 42%,
-      color-mix(in srgb, var(--solutions-a) 12%, var(--solutions-b)) 54%,
-      color-mix(in srgb, var(--solutions-b) 78%, var(--solutions-c)) 66%,
-      color-mix(in srgb, var(--solutions-b) 54%, var(--solutions-c)) 78%,
-      color-mix(in srgb, var(--solutions-b) 28%, var(--solutions-c)) 90%,
-      var(--solutions-c) 100%
-    );
+    background: var(--brand-gradient-cool);
     background-size: 100% auto;
 
     background-clip: text;
@@ -461,8 +464,8 @@ const schema = JSON.stringify({
   .solutions-accordion :global(.accordion-icon) {
     width: 40px;
     height: 40px;
-    border-radius: 999px;
-    color: rgba(255, 255, 255, 0.46);
+    border-radius: var(--radius-pill);
+    color: var(--text-faint);
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     transition:
@@ -495,14 +498,81 @@ const schema = JSON.stringify({
 
   .accordion-content p {
     padding: 0 28px 34px 70px;
-    color: rgba(255, 255, 255, 0.58);
+    max-width: 68ch;
+    color: var(--text-body);
     line-height: 1.72;
     margin: 0;
   }
 
+  .solutions-process {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(40px, 7vw, 88px);
+    margin-top: clamp(92px, 10vw, 132px);
+    padding: var(--section-py-sm) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .solutions-process__label {
+    margin: 0 0 14px;
+    color: color-mix(in srgb, var(--solutions-a) 82%, white 8%);
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .solutions-process__intro h2 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: var(--display-title);
+    line-height: 1.05;
+  }
+
+  .solutions-process__steps {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .solutions-process__steps li {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .solutions-process__steps li:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .solutions-process__steps li > span {
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .solutions-process__steps strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #fff;
+    font-size: 1.12rem;
+  }
+
+  .solutions-process__steps p {
+    max-width: 48ch;
+    margin: 0;
+    color: var(--text-soft);
+    line-height: 1.62;
+  }
+
   .solutions-final-section {
-    padding-top: clamp(48px, 6vw, 72px);
-    padding-bottom: clamp(72px, 7vw, 96px);
+    padding-top: var(--section-py-sm);
+    padding-bottom: var(--section-py-md);
   }
 
   .solutions-final-cta {
@@ -510,19 +580,19 @@ const schema = JSON.stringify({
   }
 
   .solutions-final-cta .cta-label {
-    color: rgba(255, 255, 255, 0.42);
+    color: var(--text-faint);
   }
 
   .solutions-final-cta h2 {
     color: #f5f5f7;
-    font-size: clamp(2.25rem, 4.5vw, 3.7rem);
+    font-size: var(--display-title);
     line-height: 1.04;
     letter-spacing: 0;
     margin-bottom: 0;
   }
 
   .solutions-final-cta h2 span {
-    color: rgba(255, 255, 255, 0.62);
+    color: var(--text-soft);
   }
 
   .solutions-final-cta .hero-cta-group {
@@ -573,6 +643,16 @@ const schema = JSON.stringify({
 
     .accordion-content p {
       padding: 0 24px 30px 0;
+    }
+
+    .solutions-process {
+      grid-template-columns: 1fr;
+      gap: 38px;
+      margin-top: 76px;
+    }
+
+    .solutions-process__intro h2 {
+      max-width: 16ch;
     }
   }
 
@@ -631,7 +711,7 @@ const schema = JSON.stringify({
 
     .accordion-content p {
       padding: 0 0 22px 0;
-      font-size: 0.98rem;
+      font-size: 1rem;
       line-height: 1.68;
     }
 
@@ -645,7 +725,7 @@ const schema = JSON.stringify({
     }
 
     .solutions-final-cta h2 {
-      font-size: clamp(1.8rem, 11vw, 2.5rem);
+      font-size: var(--display-title);
     }
   }
 

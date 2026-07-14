@@ -21,7 +21,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#software`,
       "name": "Dashboard für Verwaltung",
       "url": pageUrl,
-      "description": "Lokales Excel-Analyse-Dashboard für eine Schweizer Kantonsverwaltung. Drag & Drop Import, KPIs, Diagramme, Anonymisierung und PDF-Export. 100% lokal – keine Daten verlassen den Rechner.",
+      "description": "Lokales Excel-Analyse-Dashboard für eine Schweizer Kantonsverwaltung. Drag-and-Drop-Import, KPIs, Diagramme, Anonymisierung und PDF-Export. Sämtliche Daten bleiben auf dem Rechner.",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web Browser",
       "inLanguage": "de",
@@ -39,7 +39,7 @@ const schema = JSON.stringify({
         {
           "@type": "ImageObject",
           "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.png",
-          "caption": "Dashboard für Verwaltung – KPI-Übersicht mit Diagrammen und Auswertungen"
+          "caption": "Dashboard für Verwaltung mit KPI-Übersicht, Diagrammen und Auswertungen"
         }
       ],
       "creator": { "@id": "https://www.nigredo.ch/#organization" }
@@ -52,14 +52,10 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-05-03",
+      "dateModified": "2026-07-14",
       "about": { "@id": `${pageUrl}#software` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
-      "isAccessibleForFree": true,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".case-hero-lead", ".case-feature-body h3"]
-      }
+      "isAccessibleForFree": true
     }
   ]
 });
@@ -72,11 +68,11 @@ const schema = JSON.stringify({
   ogTitle="Dashboard für Verwaltung"
   ogDescription="Drag & Drop Excel-Import, KPIs, Diagramme, Anonymisierung, PDF-Export. Sensible Personaldaten 100% lokal im Browser. Keine Cloud, keine Kompromisse."
   ogImage="https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.png"
-  ogImageAlt="Lokales Excel-Dashboard für Verwaltung – KPI-Auswertung ohne Cloud von Nigredo"
+  ogImageAlt="Lokales Excel-Dashboard für Verwaltung mit KPI-Auswertung ohne Cloud"
   ogImageWidth="1860"
   ogImageHeight="946"
   twitterTitle="Dashboard für Verwaltung"
-  twitterDescription="Excel-Analyse ohne Cloud: KPIs, Diagramme, Anonymisierung – alles lokal im Browser."
+  twitterDescription="Excel-Analyse ohne Cloud mit KPIs, Diagrammen und Anonymisierung. Sämtliche Daten bleiben lokal im Browser."
   schema={schema}
   preloadImage="/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.avif"
   preloadImageType="image/avif"
@@ -102,7 +98,7 @@ const schema = JSON.stringify({
           <span class="tech-badge accent-cyan case-hero-badge">App</span>
           <h1 id="dashboard-kantonsverwaltung-title" class="home-hero__title case-hero-title">Excel Dashboard<br><span class="gradient-text">für Verwaltung</span></h1>
           <p class="hero-lead case-hero-lead">
-            Sensible Personaldaten in eine Cloud laden? Für eine Kantonsverwaltung keine Option. Genau darum verarbeitet dieses Tool die Zahlen anders. Excel rein, Auswertung raus, ganz ohne Server und ohne Cloud. Die Daten bleiben dort, wo sie hingehören, auf dem eigenen Rechner.
+            Dieses lokale Dashboard wertet sensible Personaldaten direkt im Browser aus. Excel-Dateien werden importiert, anonymisiert, visualisiert und als PDF ausgegeben, ohne Server, Cloud oder externe Datenübertragung.
           </p>
         </div>
 
@@ -122,7 +118,7 @@ const schema = JSON.stringify({
                 >
               <img
                 src="/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.webp"
-                alt="Excel-KPI-Dashboard im Browser für Kantonsverwaltung – lokal, ohne Cloud, von Nigredo entwickelt"
+                alt="Excel-KPI-Dashboard für eine Kantonsverwaltung, lokal im Browser und ohne Cloud"
                 width="1860" height="946"
                 loading="eager"
                 decoding="async"
@@ -142,7 +138,7 @@ const schema = JSON.stringify({
         </div>
         <div class="case-stat">
           <strong class="stat-tool">0</strong>
-          <span>Cloud Uploads</span>
+          <span>Cloud-Uploads</span>
         </div>
         <div class="case-stat">
           <strong class="stat-tool">1 Klick</strong>
@@ -150,32 +146,32 @@ const schema = JSON.stringify({
         </div>
         <div class="case-stat">
           <strong class="stat-tool">PDF</strong>
-          <span>Bericht Export</span>
+          <span>Berichtsexport</span>
         </div>
       </div>
 
       <!-- Lösung -->
       <div class="case-section fade-up delay-100">
         <div class="case-section-hd">
-          <span class="case-eyebrow">Was wurde gebaut</span>
-          <h2 class="case-section-title">Excel Auswertung, lokal für die Kantonsverwaltung</h2>
+          <span class="case-eyebrow">Ergebnis im Detail</span>
+          <h2 class="case-section-title">Lokale Excel-Auswertung für die Kantonsverwaltung</h2>
         </div>
         <div class="case-features">
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--cyan">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-1)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-1" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="0.52" stop-color="#A64DFF"/><stop offset="1" stop-color="#2F7BFF"/></linearGradient></defs><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-1)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-1" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-cyan)"/><stop offset="0.52" stop-color="var(--brand-violet)"/><stop offset="1" stop-color="var(--brand-blue)"/></linearGradient></defs><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
               </div>
               <div class="case-feature-text">
-                <h3>Drag & Drop Import</h3>
-                <p>Datei reinziehen, fertig. Keine Installation, kein Upload, kein Warten auf ein neues System. Die Verarbeitung läuft direkt im Browser, ruhig und lokal.</p>
+                <h3>Drag-and-Drop-Import</h3>
+                <p>Die Excel-Datei wird direkt in den Browser gezogen und ohne Installation verarbeitet. Kein Upload, kein externes System und kein Umweg über die Cloud.</p>
               </div>
             </div>
           </div>
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--cyan">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-2)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-2" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="0.52" stop-color="#A64DFF"/><stop offset="1" stop-color="#2F7BFF"/></linearGradient></defs><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-2)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-2" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-cyan)"/><stop offset="0.52" stop-color="var(--brand-violet)"/><stop offset="1" stop-color="var(--brand-blue)"/></linearGradient></defs><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Anonymisierung auf Knopfdruck</h3>
@@ -186,11 +182,11 @@ const schema = JSON.stringify({
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--cyan">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-3" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00D2FF"/><stop offset="0.52" stop-color="#A64DFF"/><stop offset="1" stop-color="#2F7BFF"/></linearGradient></defs><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><polyline points="9 15 12 18 15 15"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#dashboard-feature-grad-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="dashboard-feature-grad-3" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-cyan)"/><stop offset="0.52" stop-color="var(--brand-violet)"/><stop offset="1" stop-color="var(--brand-blue)"/></linearGradient></defs><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="12" x2="12" y2="18"/><polyline points="9 15 12 18 15 15"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Export als PDF</h3>
-                <p>Ein Klick, ein druckfertiger Bericht. Diagramme, Kennzahlen und ein aufgeräumtes Layout, das nach Ergebnis aussieht statt nach Kampf mit Excel.</p>
+                <p>Ein Klick erstellt einen druckfertigen Bericht mit Diagrammen, Kennzahlen und einem aufgeräumten Layout.</p>
               </div>
             </div>
           </div>
@@ -223,16 +219,16 @@ const schema = JSON.stringify({
 
 <style is:global>
   .case-page--app {
-    --case-accent: #00d2ff;
-    --case-accent-2: #00d2ff;
-    --case-accent-3: #00d2ff;
-    --case-accent-soft: rgba(0, 210, 255, 0.14);
-    --case-accent-glow: rgba(0, 210, 255, 0.24);
+    --case-accent: var(--brand-cyan);
+    --case-accent-2: var(--brand-blue);
+    --case-accent-3: var(--brand-violet);
+    --case-accent-soft: color-mix(in srgb, var(--case-accent) 14%, transparent);
+    --case-accent-glow: color-mix(in srgb, var(--case-accent) 24%, transparent);
   }
 
   .case-page--app .gradient-text {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--case-accent) 92%, white 10%) 0%, color-mix(in srgb, var(--case-accent) 72%, black 16%) 100%);
-    background-size: 260% auto;
+    background: var(--case-gradient-tool);
+    background-size: 100% auto;
 
     background-clip: text;
     -webkit-background-clip: text;
@@ -241,7 +237,7 @@ const schema = JSON.stringify({
   }
 
   .stat-tool {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--case-accent) 90%, white 10%) 0%, color-mix(in srgb, var(--case-accent) 68%, black 18%) 100%);
+    background: var(--case-gradient-tool);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -256,9 +252,7 @@ const schema = JSON.stringify({
 
   .case-page--app .case-feature:hover {
     border-color: rgba(255, 255, 255, 0.16);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 28px 60px rgba(0, 0, 0, 0.32),
+    box-shadow: var(--shadow-card-hover),
       0 0 28px rgba(0, 210, 255, 0.08);
   }
 </style>

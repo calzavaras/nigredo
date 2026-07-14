@@ -53,14 +53,10 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-02-28",
-      "dateModified": "2026-05-03",
+      "dateModified": "2026-07-14",
       "about": { "@id": `${pageUrl}#software` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
-      "isAccessibleForFree": true,
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".case-hero-lead", ".case-feature-body h3"]
-      }
+      "isAccessibleForFree": true
     }
   ]
 });
@@ -73,7 +69,7 @@ const schema = JSON.stringify({
   ogTitle="KI Voice Agent für IV-Stellen"
   ogDescription="Sprachassistent mit Google Gemini 2.5 Flash: 24/7 autonom, vier Sprachen (DE/FR/IT/EN), echtes Fachwissen zu AHV-Hilfsmitteln. Prototyp für Schweizer IV-Stellen."
   ogImage="https://www.nigredo.ch/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-sprachassistent-og.jpg"
-  ogImageAlt="KI Voice Agent für IV-Stellen – Sprachassistent mit Echtzeit-Transkript von Nigredo"
+  ogImageAlt="KI Voice Agent für IV-Stellen mit Echtzeit-Transkript von Nigredo"
   ogImageWidth="587"
   ogImageHeight="793"
   twitterTitle="KI Voice Agent für IV-Stellen"
@@ -100,10 +96,10 @@ const schema = JSON.stringify({
       <!-- Hero: Split Layout -->
       <div class="case-hero fade-up">
         <div class="case-hero-content">
-          <span class="tech-badge accent-purple case-hero-badge">KI Lösung</span>
-          <h1 id="ki-voice-agent-title" class="home-hero__title case-hero-title">KI Voice Agent <span class="gradient-text">für IV Stellen</span></h1>
+          <span class="tech-badge accent-purple case-hero-badge">KI-Lösung</span>
+          <h1 id="ki-voice-agent-title" class="home-hero__title case-hero-title">KI Voice Agent <span class="gradient-text">für IV-Stellen</span></h1>
           <p class="hero-lead case-hero-lead">
-            Niemand wartet gern in der Leitung, und niemand erklärt zum zehnten Mal gern dieselbe Frage. Genau dafür entstand dieser Prototyp für den Alltag der IV Stellen. Der Agent nimmt sofort ab, spricht vier Sprachen und hat das Fachwissen zu AHV Hilfsmitteln griffbereit, rund um die Uhr.
+            Dieser Prototyp beantwortet wiederkehrende Fachfragen ohne Warteschleife. Der Agent ist rund um die Uhr erreichbar, spricht vier Sprachen und greift gezielt auf hinterlegtes Wissen zu AHV-Hilfsmitteln zu.
           </p>
         </div>
 
@@ -152,14 +148,14 @@ const schema = JSON.stringify({
       <!-- Lösung -->
       <div class="case-section fade-up delay-100">
         <div class="case-section-hd">
-          <span class="case-eyebrow">Was wurde gebaut</span>
-          <h2 class="case-section-title">Sprachassistent mit KI für die IV Stellen</h2>
+          <span class="case-eyebrow">Ergebnis im Detail</span>
+          <h2 class="case-section-title">Sprachassistent mit KI für IV-Stellen</h2>
         </div>
         <div class="case-features">
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--purple">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-1)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-1" x1="3" y1="2" x2="21" y2="23" gradientUnits="userSpaceOnUse"><stop stop-color="#A64DFF"/><stop offset="0.52" stop-color="#FF4D80"/><stop offset="1" stop-color="#00D2FF"/></linearGradient></defs><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-1)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-1" x1="3" y1="2" x2="21" y2="23" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-violet)"/><stop offset="0.52" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-cyan)"/></linearGradient></defs><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Gespräch in Echtzeit</h3>
@@ -170,33 +166,33 @@ const schema = JSON.stringify({
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--purple">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-2)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-2" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#A64DFF"/><stop offset="0.52" stop-color="#FF4D80"/><stop offset="1" stop-color="#00D2FF"/></linearGradient></defs><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-2)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-2" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-violet)"/><stop offset="0.52" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-cyan)"/></linearGradient></defs><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
               </div>
               <div class="case-feature-text">
                 <h3>Tiefes Fachwissen</h3>
-                <p>Komplexe Fragen zu Hörgeräten bringen niemanden mehr ins Schwitzen. Der Agent ist fundiert bei AHV Hilfsmitteln und kennt das Kreisschreiben KSHA. So entstehen Antworten mit Substanz statt freundlicher Sätze ohne Inhalt.</p>
+                <p>Der Agent beantwortet komplexe Fragen zu AHV-Hilfsmitteln auf Basis des hinterlegten Fachwissens und des Kreisschreibens KSHA. So entstehen nachvollziehbare Antworten mit fachlicher Substanz.</p>
               </div>
             </div>
           </div>
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--purple">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-3" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#A64DFF"/><stop offset="0.52" stop-color="#FF4D80"/><stop offset="1" stop-color="#00D2FF"/></linearGradient></defs><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-3" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-violet)"/><stop offset="0.52" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-cyan)"/></linearGradient></defs><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </div>
               <div class="case-feature-text">
-                <h3>Vier Sprachen, null Geduldsproben</h3>
-                <p>Deutsch, Französisch, Italienisch oder Englisch. Jeder Anrufer wird in seiner Sprache verstanden, und der Agent bleibt dabei immer geduldig, auch wenn das Anliegen nicht in einen Standardsatz passt.</p>
+                <h3>Vier Sprachen, ein Gesprächsfluss</h3>
+                <p>Deutsch, Französisch, Italienisch und Englisch sind direkt verfügbar. Der Agent erkennt die Sprache, bleibt im Kontext und verarbeitet auch Anliegen, die nicht in einen Standardsatz passen.</p>
               </div>
             </div>
           </div>
           <div class="case-feature">
             <div class="case-feature-body">
               <div class="case-feature-icon case-feature-icon--purple">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-4)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-4" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#A64DFF"/><stop offset="0.52" stop-color="#FF4D80"/><stop offset="1" stop-color="#00D2FF"/></linearGradient></defs><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="url(#voice-feature-grad-4)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="voice-feature-grad-4" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-violet)"/><stop offset="0.52" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-cyan)"/></linearGradient></defs><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
               <div class="case-feature-text">
-                <h3>Immer da</h3>
-                <p>Feiertag, Nachtschicht, Personalengpass. Ein Agent wie dieser wäre immer erreichbar, ohne Pause und ohne Wartemusik.</p>
+                <h3>Verlässlich erreichbar</h3>
+                <p>Der Prototyp zeigt, wie wiederkehrende Auskünfte unabhängig von Öffnungszeiten verfügbar werden und Fachpersonen bei Standardfragen entlasten können.</p>
               </div>
             </div>
           </div>
@@ -229,16 +225,16 @@ const schema = JSON.stringify({
 
 <style is:global>
   .case-page--ki {
-    --case-accent: #a64dff;
-    --case-accent-2: #d63fff;
-    --case-accent-3: #7f5cff;
-    --case-accent-soft: rgba(166, 77, 255, 0.14);
-    --case-accent-glow: rgba(166, 77, 255, 0.26);
+    --case-accent: var(--brand-violet);
+    --case-accent-2: var(--brand-pink);
+    --case-accent-3: var(--brand-blue);
+    --case-accent-soft: color-mix(in srgb, var(--case-accent) 14%, transparent);
+    --case-accent-glow: color-mix(in srgb, var(--case-accent) 26%, transparent);
   }
 
   .case-page--ki .gradient-text {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--case-accent) 92%, white 12%) 0%, #d63fff 52%, #7f5cff 100%);
-    background-size: 260% auto;
+    background: var(--case-gradient-ki);
+    background-size: 100% auto;
 
     background-clip: text;
     -webkit-background-clip: text;
@@ -247,7 +243,7 @@ const schema = JSON.stringify({
   }
 
   .stat-ki {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--case-accent) 90%, white 12%) 0%, #d63fff 54%, #7f5cff 100%);
+    background: var(--case-gradient-ki);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -262,9 +258,7 @@ const schema = JSON.stringify({
 
   .case-page--ki .case-feature:hover {
     border-color: rgba(255, 255, 255, 0.16);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 28px 60px rgba(0, 0, 0, 0.32),
+    box-shadow: var(--shadow-card-hover),
       0 0 28px rgba(166, 77, 255, 0.08);
   }
 </style>

@@ -189,20 +189,36 @@ function initNavigation() {
 }
 
 function initScrollAnimations() {
+  const elements = Array.from(document.querySelectorAll('.fade-up'));
+  if (elements.length === 0) return;
+
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!prefersReducedMotion) {
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  } else {
-    document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('visible'));
+    return;
   }
+
+  document.documentElement.classList.add('js-reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -8% 0px',
+  });
+
+  const immediateRevealLine = window.innerHeight * 0.9;
+  elements.forEach((element) => {
+    if (element.getBoundingClientRect().top < immediateRevealLine) {
+      element.classList.add('visible');
+    } else {
+      observer.observe(element);
+    }
+  });
 }
 
 function initCardSpotlight() {
@@ -454,6 +470,18 @@ function initContactModal() {
 function initAccordions() {
   const accItems = document.querySelectorAll('.accordion-item');
   const accHeaders = document.querySelectorAll('.accordion-header');
+
+  accItems.forEach(item => {
+    if (!item.classList.contains('active')) return;
+    const content = item.querySelector('.accordion-content');
+    const header = item.querySelector('.accordion-header');
+    if (content) {
+      content.style.maxHeight = `${content.scrollHeight}px`;
+      content.setAttribute('aria-hidden', 'false');
+    }
+    if (header) header.setAttribute('aria-expanded', 'true');
+  });
+
   accHeaders.forEach(header => {
     header.addEventListener('click', () => {
       const item = header.closest('.accordion-item');
@@ -510,7 +538,7 @@ function initLightbox() {
       <button class="lightbox-nav lightbox-prev" aria-label="Vorheriges Bild">&lsaquo;</button>
       <button class="lightbox-nav lightbox-next" aria-label="Nächstes Bild">&rsaquo;</button>
       <div class="lightbox-image-container">
-        <img class="lightbox-content" id="lightbox-img" src="" alt="Bild in Grossansicht" decoding="async">
+        <img class="lightbox-content" id="lightbox-img" alt="Bild in Grossansicht" decoding="async">
         <div class="lightbox-counter" id="lightbox-counter"></div>
       </div>
     `;
@@ -662,15 +690,16 @@ function initLightbox() {
 }
 
 function initGradientIcons() {
-  const colors = ['#FFC700', '#FF4D80', '#A64DFF', '#00D2FF'];
+  const rootStyles = getComputedStyle(document.documentElement);
+  const fallbackColors = ['#FFDA72', '#FF749E', '#FF3DBB', '#8B4DFF', '#4165FF', '#24D6E7'];
+  const tokenNames = ['sun', 'coral', 'pink', 'violet', 'blue', 'cyan'];
+  const colors = tokenNames.map((name, index) =>
+    rootStyles.getPropertyValue(`--brand-${name}`).trim() || fallbackColors[index]
+  );
+  const adjacentPairs = colors.map((color, index) => [color, colors[(index + 1) % colors.length]]);
 
   function getRandomPair() {
-    const color1 = colors[Math.floor(Math.random() * colors.length)];
-    let color2 = colors[Math.floor(Math.random() * colors.length)];
-    while (color2 === color1) {
-      color2 = colors[Math.floor(Math.random() * colors.length)];
-    }
-    return [color1, color2];
+    return adjacentPairs[Math.floor(Math.random() * adjacentPairs.length)];
   }
 
   document.querySelectorAll('.gradient-icon').forEach((icon) => {

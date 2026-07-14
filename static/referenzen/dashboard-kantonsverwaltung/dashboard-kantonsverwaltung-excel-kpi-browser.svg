@@ -3,12 +3,12 @@
     <filter id="blur1"><feGaussianBlur stdDeviation="18"/></filter>
     <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="24" flood-color="rgba(0,0,0,0.55)"/></filter>
     <linearGradient id="barC" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#00D2FF"/>
+      <stop offset="0%" stop-color="#24D6E7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#24D6E7"/>
     </linearGradient>
     <linearGradient id="barC2" x1="0" y1="1" x2="0" y2="0">
-      <stop offset="0%" stop-color="#A64DFF" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#A64DFF"/>
+      <stop offset="0%" stop-color="#8B4DFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8B4DFF"/>
     </linearGradient>
   </defs>
 

@@ -3,8 +3,8 @@
     <filter id="blur1"><feGaussianBlur stdDeviation="18"/></filter>
     <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(0,0,0,0.6)"/></filter>
     <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#A64DFF"/>
-      <stop offset="100%" stop-color="#FF4D80"/>
+      <stop offset="0%" stop-color="#8B4DFF"/>
+      <stop offset="100%" stop-color="#FF3DBB"/>
     </linearGradient>
   </defs>
 

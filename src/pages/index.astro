@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { references } from '../data/references';
+
+const showcase = references.slice(0, 3);
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -8,7 +11,7 @@ const schema = JSON.stringify({
       "@type": ["WebPage", "HomePage"],
       "@id": "https://www.nigredo.ch/#webpage",
       "url": "https://www.nigredo.ch/",
-      "name": "Nigredo | Offizielle Website für Websites, KI-Lösungen und digitale Produkte",
+      "name": "Nigredo St. Gallen | Websites, KI und digitale Werkzeuge",
       "alternateName": ["Nigredo", "Nigredo.ch", "nigredo.ch", "Nigredo St. Gallen", "Nigredo Schweiz"],
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
@@ -22,9 +25,9 @@ const schema = JSON.stringify({
         "https://www.nigredo.ch/kontakt/",
         "https://www.nigredo.ch/haeufige-fragen/"
       ],
-      "description": "Offizielle Startseite von Nigredo: Websites, KI-Lösungen und digitale Produkte von Marco Calzavara aus St. Gallen.",
+      "description": "Nigredo entwickelt Websites, KI-Lösungen und digitale Werkzeuge für Selbstständige, KMU und Organisationen. Persönlich umgesetzt in St. Gallen.",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-05-19",
+      "dateModified": "2026-07-14",
       "inLanguage": "de-CH"
     },
     {
@@ -36,305 +39,274 @@ const schema = JSON.stringify({
     }
   ]
 });
+
+const services = [
+  {
+    number: '01',
+    label: 'Websites',
+    title: 'Digitale Auftritte mit Substanz.',
+    text: 'Individuell gestaltet, technisch sauber und so aufgebaut, dass Menschen und Suchmaschinen verstehen, worum es geht.',
+  },
+  {
+    number: '02',
+    label: 'KI-Lösungen',
+    title: 'Intelligenz mit klarem Zweck.',
+    text: 'Assistenten und Automatisierungen, die dein Wissen dorthin bringen, wo dir heute Zeit verloren geht.',
+  },
+  {
+    number: '03',
+    label: 'Tools & Apps',
+    title: 'Software, die zur Arbeit passt.',
+    text: 'Dashboards, Plattformen und Anwendungen, entwickelt für konkrete Aufgaben statt für möglichst viele Funktionen.',
+  },
+  {
+    number: '04',
+    label: 'Inhalt & Struktur',
+    title: 'Komplexes klar auf den Punkt gebracht.',
+    text: 'Inhalte, Informationsarchitektur und Texte, die Orientierung schaffen und eine starke Gestaltung erst möglich machen.',
+  },
+];
 ---
 
 <Layout
-  title="Nigredo | Offizielle Website für Websites, KI & digitale Produkte"
-  description="Offizielle Startseite von Nigredo: Websites, KI-Lösungen und digitale Produkte von Marco Calzavara aus St. Gallen."
+  title="Nigredo St. Gallen | Websites, KI & digitale Werkzeuge"
+  description="Nigredo entwickelt Websites, KI-Lösungen und digitale Werkzeuge für Selbstständige, KMU und Organisationen. Persönlich umgesetzt in St. Gallen."
   canonical="https://www.nigredo.ch/"
   ogTitle="Ich arbeite weiter, wo andere aufhören."
-  ogDescription="Websites, KI-Lösungen, digitale Tools und Texte für Selbstständige, KMU und Organisationen, die online klar verstanden werden möchten."
-  ogImageAlt="Nigredo - Websites, KI-Lösungen und digitale Tools aus St. Gallen"
-  twitterTitle="Nigredo | Websites, KI-Lösungen & digitale Tools"
-  twitterDescription="Persönlich aus St. Gallen. Durchdacht bis ins Detail und umgesetzt mit klarer Strategie, sauberer Technik und ohne Baukasten."
+  ogDescription="Websites, KI-Lösungen und digitale Werkzeuge, persönlich konzipiert und präzise umgesetzt von Marco Calzavara in St. Gallen."
+  ogImageAlt="Nigredo: Websites, KI-Lösungen und digitale Werkzeuge aus St. Gallen"
+  twitterTitle="Nigredo | Websites, KI-Lösungen und digitale Werkzeuge"
+  twitterDescription="Persönlich konzipiert in St. Gallen. Präzise umgesetzt für Selbstständige, KMU und Organisationen."
   schema={schema}
 >
-  <section class="section pt-hero home-hero" aria-labelledby="hero-title">
-    <div class="hero-glow"></div>
-    <div class="container home-hero__inner fade-up">
-      <!-- Höhen-Spacer: identisch mit Breadcrumb-Höhe anderer Seiten (kein nav/BreadcrumbList im DOM) -->
-      <div class="home-breadcrumb-spacer" aria-hidden="true" role="presentation"></div>
-
-      <span class="badge badge--yellow">DIGITALE PRODUKTE. IM MASSANZUG.</span>
-
-      <h1 id="hero-title" class="home-hero__title">
+  <section class="home-hero" aria-labelledby="hero-title">
+    <div class="container home-hero__inner">
+      <p class="home-hero__intro fade-up">Digitale Produkte aus St. Gallen</p>
+      <h1 id="hero-title" class="home-hero__title fade-up delay-100">
         Ich arbeite weiter,<br>
-        <span class="gradient-text">wo andere aufhören.</span>
+        <span class="home-gradient-text">wo andere aufhören.</span>
       </h1>
-
-      <p class="hero-lead">
-        Websites, KI Lösungen, digitale Tools und Texte für Selbstständige, KMU und Organisationen, die online klar verstanden werden möchten. <br class="hidden-tablet">
-        Durchdacht bis ins Detail, persönlich aus St. Gallen und umgesetzt mit klarer Strategie, sauberer Technik und einem Ergebnis, das nicht nach Baukasten aussieht.
+      <p class="home-hero__lead fade-up delay-200">
+        Mit Nigredo entwickle ich Websites, KI-Lösungen und digitale Werkzeuge, die Komplexität verständlich machen, Arbeit erleichtern und langfristig tragen. Persönlich konzipiert und präzise umgesetzt.
       </p>
-
-      <div class="hero-cta-group">
-        <button class="btn btn-primary open-contact" title="Projekt starten">Projekt starten</button>
-          <a href="/referenzen/" class="btn btn-ghost">Arbeiten ansehen</a>
+      <div class="home-actions fade-up delay-300">
+        <button class="btn btn-primary open-contact" title="Projekt anfragen">Projekt anfragen</button>
+        <a href="/referenzen/" class="section-link">Ausgewählte Arbeiten ansehen <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section pt-compact home-values" aria-labelledby="values-title">
+  <section class="section section--lg home-services" aria-labelledby="services-title">
     <div class="container">
-      <h2 id="values-title" class="visually-hidden">So arbeite ich</h2>
-      <div class="grid-3">
+      <div class="section-head fade-up">
+        <h2 id="services-title" class="section-head__title">Was ich entwickle.</h2>
+        <p class="section-head__lead">Vier Disziplinen, die einzeln überzeugen und gemeinsam starke digitale Produkte möglich machen.</p>
+      </div>
 
-        <article class="card value-card fade-up" style="--icon-gradient: linear-gradient(180deg, #2f7bff 0%, #00a8ff 100%); --icon-shadow: rgba(47, 123, 255, 0.36);">
-          <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-verstaendnis.svg'); mask-image: url('/assets/icons/icon-verstaendnis.svg');"></div></div>
-          <span class="cta-label">VERSTÄNDNIS</span>
-          <h3>Erst verstehen. Dann veredeln.</h3>
-          <p>Ich denke mich in dein Vorhaben ein, erkenne, worauf es wirklich ankommt, und entwickle daraus eine Website, KI Lösung oder digitale Anwendung mit klarer Richtung, Substanz und Wirkung.</p>
-          <p>Nicht einfach schön. Nicht einfach technisch. Sondern passend zu dir, deinem Angebot und den Menschen, die du erreichen möchtest.</p>
-        </article>
-
-        <article class="card value-card fade-up delay-100" style="--icon-gradient: linear-gradient(180deg, #2f7bff 0%, #00a8ff 100%); --icon-shadow: rgba(47, 123, 255, 0.36);">
-          <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-anspruch.svg'); mask-image: url('/assets/icons/icon-anspruch.svg');"></div></div>
-          <span class="cta-label">ANSPRUCH</span>
-          <h3>Gut genug ist nicht das Ziel.</h3>
-          <p>Ich arbeite nicht für halbe Ergebnisse. Ich arbeite, bis Inhalt, Form, Funktion und Wirkung zusammenpassen.</p>
-          <p>Damit etwas entsteht, das professionell aussieht, sauber funktioniert, schnell lädt, gefunden wird und langfristig trägt.</p>
-        </article>
-
-        <article class="card value-card fade-up delay-200" style="--icon-gradient: linear-gradient(180deg, #2f7bff 0%, #00a8ff 100%); --icon-shadow: rgba(47, 123, 255, 0.36);">
-          <div class="card-icon" aria-hidden="true"><div class="gradient-icon" style="-webkit-mask-image: url('/assets/icons/icon-zusammenarbeit.svg'); mask-image: url('/assets/icons/icon-zusammenarbeit.svg');"></div></div>
-          <span class="cta-label">ZUSAMMENARBEIT</span>
-          <h3>Klar im Denken. Direkt im Tun.</h3>
-          <p>Keine Umwege, kein leeres Theater. Ich schätze klare Abmachungen, ehrlichen Austausch, transparente Fixpreise und eine Zusammenarbeit, die unkompliziert bleibt.</p>
-          <p>Du bekommst keine anonyme Agenturmaschine, sondern einen persönlichen Partner, der mitdenkt, nachfragt und Verantwortung für das Ergebnis übernimmt.</p>
-        </article>
-
+      <div class="numbered-rows">
+        {services.map((service, index) => (
+          <a
+            href="/digitale-loesungen/"
+            class={`numbered-row fade-up${index > 0 ? ` delay-${index * 100}` : ''}`}
+          >
+            <span class="numbered-row__num" aria-hidden="true">{service.number}</span>
+            <div>
+              <span class="numbered-row__label">{service.label}</span>
+              <h3 class="numbered-row__title">{service.title}</h3>
+            </div>
+            <p class="numbered-row__text">{service.text}</p>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-  <section class="section home-final-section" aria-labelledby="cta-title">
+  <section class="section section--lg home-work" aria-labelledby="work-title">
     <div class="container">
-      <div class="section-cta home-final-cta fade-up">
-        <span class="cta-label">NÄCHSTER SCHRITT</span>
-        <h2 id="cta-title">Erzähl mir kurz,<br><span>was du vorhast.</span></h2>
-        <div class="hero-cta-group" style="justify-content: center;">
-          <span class="reveal-mail btn btn-primary" role="button" tabindex="0" aria-label="E-Mail-Adresse anzeigen">Gespräch starten</span>
-          <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
+      <div class="section-head section-head--split fade-up">
+        <div>
+          <h2 id="work-title" class="section-head__title">Ausgewählte Arbeiten.</h2>
+          <p class="section-head__lead">Drei Projekte, drei verschiedene Ausgangslagen. Was dahintersteckt, zeigen die Referenzen.</p>
         </div>
+        <a href="/referenzen/" class="section-link">Alle Referenzen <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="showcase-grid">
+        {showcase.map((reference, index) => (
+          <a
+            href={reference.href}
+            class={`showcase-card fade-up${index === 0 ? ' showcase-card--featured' : ''}${index > 0 ? ` delay-${index * 100}` : ''}`}
+            aria-label={reference.ariaLabel}
+          >
+            <div class={`showcase-card__media ${reference.listImgCls}`}>
+              <img src={reference.imgSrc} alt={reference.imgAlt} width="1200" height="675" loading="lazy" decoding="async">
+            </div>
+            <div class="showcase-card__body">
+              {index === 0 && <span class="showcase-card__badge badge">{reference.badge.text}</span>}
+              <div class="showcase-card__header">
+                <h3 class="showcase-card__title">{reference.listTitle}</h3>
+                <span class="showcase-card__year">{reference.year}</span>
+              </div>
+              <p class="showcase-card__sub">{reference.sub}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--lg home-about" aria-labelledby="about-title">
+    <div class="container about-strip fade-up">
+      <div class="about-strip__portrait">
+        <picture>
+          <source srcset="/assets/marco-calzavara-nigredo-st-gallen-500.avif 500w, /assets/marco-calzavara-nigredo-st-gallen-750.avif 750w" sizes="(max-width: 720px) 100vw, 360px" type="image/avif">
+          <source srcset="/assets/marco-calzavara-nigredo-st-gallen-500.webp 500w, /assets/marco-calzavara-nigredo-st-gallen-750.webp 750w" sizes="(max-width: 720px) 100vw, 360px" type="image/webp">
+          <img
+            src="/assets/marco-calzavara-nigredo-st-gallen.jpg"
+            alt="Marco Calzavara, Gründer von Nigredo in St. Gallen"
+            width="750"
+            height="750"
+            loading="lazy"
+            decoding="async"
+          >
+        </picture>
+      </div>
+      <div>
+        <h2 id="about-title" class="about-strip__title">Nigredo ist persönlich.</h2>
+        <p class="about-strip__text"><strong>Ich bin Marco Calzavara und begleite dein Projekt vom ersten Gedanken bis zum fertigen Produkt.</strong></p>
+        <p class="about-strip__text">Du sprichst immer mit der Person, die konzipiert, entscheidet und umsetzt. So bleiben Ideen erhalten, Wege angenehm kurz und die Verantwortung eindeutig.</p>
+        <p class="about-strip__text">Du erhältst einen transparenten Fixpreis, direkte Antworten und ein Ergebnis, für das ich persönlich einstehe.</p>
+        <a href="/marco-calzavara/" class="section-link">Mehr über mich <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta-section" aria-labelledby="cta-title">
+    <div class="container final-cta-content final-cta-content--centered fade-up">
+      <h2 id="cta-title">
+        Ein gutes Projekt beginnt<br>
+        <span>mit einem klaren Gespräch.</span>
+      </h2>
+      <p>Beschreibe mir dein Vorhaben in wenigen Sätzen. Ich höre zu, frage nach und sage dir offen, welcher nächste Schritt sinnvoll ist.</p>
+      <div class="hero-cta-group">
+        <button class="btn btn-primary open-contact" title="Gespräch starten">Gespräch starten</button>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  /* Page specific overrides if any */
+  .home-hero {
+    --home-divider: rgba(255, 255, 255, 0.08);
+    --home-divider-strong: rgba(255, 255, 255, 0.12);
+  }
 
-  .home-hero,
-  .home-values,
-  .home-final-section {
-    --home-a: #6f42ff;
-    --home-b: #ff3f98;
-    --home-c: #ffae1a;
-    animation: homeCycle 90s ease-in-out infinite;
+  .home-gradient-text {
+    display: inline-block;
+    color: #f5f5f7;
+    background: var(--hero-gradient-warm);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .home-hero {
-    min-height: auto;
+    min-height: min(860px, 92svh);
     display: flex;
     align-items: center;
-    padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: var(--hero-offset-bottom);
+    padding: clamp(168px, 18vh, 224px) 0 clamp(112px, 15vh, 176px);
+    position: relative;
   }
 
-  .home-breadcrumb-spacer {
-    /* Reines CSS-Spacer: entspricht der Höhe einer Breadcrumb-Zeile (≈16px) + 26px (= 30px margin-bottom - 4px Offset) */
-    height: 16px;
-    margin-bottom: 26px;
-    pointer-events: none;
-  }
-
-  .home-hero .badge {
-    margin-bottom: 0.95rem;
-    color: rgba(255, 248, 235, 0.94);
-    border-color: color-mix(in srgb, var(--home-b) 44%, rgba(255, 255, 255, 0.22));
-    background: transparent;
-    box-shadow: none;
-    transform: translateY(-6px);
+  .home-hero::after {
+    content: "";
+    position: absolute;
+    left: max(var(--container-gutter), calc((100vw - var(--shell-width)) / 2));
+    right: max(var(--container-gutter), calc((100vw - var(--shell-width)) / 2));
+    bottom: 0;
+    height: 1px;
+    background: var(--home-divider);
   }
 
   .home-hero__inner {
     width: 100%;
   }
 
+  .home-hero__intro {
+    margin: 0 0 clamp(26px, 4vw, 42px);
+    color: var(--text-soft);
+    font-size: 0.84rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
   .home-hero__title {
     max-width: 940px;
-    font-size: var(--hero-title-size);
-    line-height: var(--hero-title-line-height);
-    letter-spacing: -0.015em;
-    margin-bottom: clamp(24px, 3vw, 30px);
+    margin: 0;
+    font-size: clamp(3.4rem, 7vw, 5.9rem);
+    line-height: 1.01;
+    letter-spacing: -0.038em;
   }
 
-  .home-hero .gradient-text {
-    background: linear-gradient(
-      90deg,
-      var(--home-a) 0%,
-      color-mix(in srgb, var(--home-a) 88%, var(--home-b)) 14%,
-      color-mix(in srgb, var(--home-a) 60%, var(--home-b)) 32%,
-      color-mix(in srgb, var(--home-a) 24%, var(--home-b)) 48%,
-      color-mix(in srgb, var(--home-b) 92%, var(--home-c)) 68%,
-      color-mix(in srgb, var(--home-b) 52%, var(--home-c)) 84%,
-      var(--home-c) 100%
-    );
-    background-size: 100% auto;
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
-
-
-  .home-hero .hero-lead {
-    max-width: 620px;
-    font-size: var(--lead-size);
+  .home-hero__lead {
+    max-width: 670px;
+    margin: clamp(34px, 5vw, 54px) 0 0;
+    color: var(--text-body);
+    font-size: clamp(1.08rem, 1.7vw, 1.28rem);
     line-height: 1.65;
+    text-wrap: pretty;
   }
 
-  .home-hero .btn-ghost,
-  .home-final-cta .btn-ghost {
-    background-image:
-      linear-gradient(#050505, #050505),
-      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  }
-
-  .home-hero .btn-ghost:hover,
-  .home-final-cta .btn-ghost:hover {
-    animation: none;
-    transform: translateY(-2px);
-    background-image:
-      linear-gradient(#0a0a0c, #0a0a0c),
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
-  }
-
-  .home-values {
-    padding-top: clamp(18px, 3vw, 32px);
-    padding-bottom: clamp(82px, 8vw, 108px);
-  }
-
-  .home-values .value-card:hover {
-    box-shadow:
-      0 15px 40px rgba(0, 0, 0, 0.4),
-      inset 0 0 44px color-mix(in srgb, var(--home-b) 10%, transparent);
-  }
-
-  .home-values .value-card::before {
-    background: conic-gradient(
-      from calc(var(--border-angle, 0turn) + var(--start-angle, 0deg)),
-      transparent 0%,
-      color-mix(in srgb, var(--home-a) 20%, transparent) 10%,
-      var(--home-a) 18%,
-      color-mix(in srgb, var(--home-a) 26%, var(--home-b)) 28%,
-      var(--home-b) 44%,
-      color-mix(in srgb, var(--home-b) 24%, var(--home-c)) 62%,
-      var(--home-c) 74%,
-      color-mix(in srgb, var(--home-c) 18%, transparent) 82%,
-      transparent 100%
-    );
-    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--home-b) 50%, transparent));
-  }
-
-  .home-hero .hero-glow {
-    background:
-      radial-gradient(circle at 16% 42%, color-mix(in srgb, var(--home-a) 18%, transparent) 0%, transparent 34%),
-      radial-gradient(circle at 50% 44%, color-mix(in srgb, var(--home-b) 18%, transparent) 0%, transparent 32%),
-      radial-gradient(circle at 82% 28%, color-mix(in srgb, var(--home-c) 16%, transparent) 0%, transparent 28%);
-  }
-
-  .card p {
-    color: rgba(255, 255, 255, 0.55);
-    line-height: 1.7;
-    margin-bottom: 0;
-  }
-
-  .home-final-section {
-    padding-top: 52px;
-    padding-bottom: 84px;
-  }
-
-  .home-final-cta {
-    max-width: 660px;
-  }
-
-  .home-final-cta .cta-label {
-    color: rgba(255, 255, 255, 0.42);
-  }
-
-  .home-final-cta h2 {
-    color: #f5f5f7;
-    font-size: clamp(2.25rem, 4.5vw, 3.7rem);
-    line-height: 1.04;
-    letter-spacing: 0;
-    margin-bottom: 0;
-  }
-
-  .home-final-cta h2 span {
-    color: rgba(255, 255, 255, 0.62);
-  }
-
-  .home-final-cta .hero-cta-group {
-    margin-top: 34px;
-  }
-
-  .home-final-cta .btn-primary:hover {
-    box-shadow:
-      inset 0 2px 4px rgba(255, 255, 255, 1),
-      0 10px 26px rgba(255, 255, 255, 0.14);
+  .home-actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(22px, 4vw, 38px);
+    margin-top: clamp(34px, 5vw, 52px);
   }
 
   @media (max-width: 860px) {
     .home-hero {
       min-height: auto;
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 50px;
+      padding-top: 164px;
+      padding-bottom: 112px;
     }
 
-    .home-hero .badge {
-      margin-top: 10px;
-    }
-
-    .home-hero__title {
-      font-size: var(--hero-title-size-tablet);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-  }
-
-  @media (max-width: 520px) {
-    .home-hero .badge {
-      margin-top: 14px;
+    .home-hero::after {
+      left: var(--container-gutter);
+      right: var(--container-gutter);
     }
 
     .home-hero__title {
-      font-size: clamp(2.12rem, 10vw, 2.55rem);
-      line-height: var(--hero-title-line-height-mobile);
-      max-width: 100%;
-      overflow-wrap: normal;
-    }
-
-    .home-hero .hero-lead {
-      font-size: var(--lead-size-mobile);
-      line-height: 1.6;
-      overflow-wrap: break-word;
-    }
-
-    .home-values {
-      padding-top: 16px;
-      padding-bottom: 72px;
-    }
-
-    .home-final-section {
-      padding-top: 40px;
-      padding-bottom: 72px;
-    }
-
-    .home-final-cta h2 {
-      font-size: clamp(1.8rem, 11vw, 2.5rem);
+      font-size: clamp(3rem, 10vw, 4.9rem);
     }
   }
 
+  @media (max-width: 620px) {
+    .home-hero {
+      padding-top: 142px;
+      padding-bottom: 88px;
+    }
+
+    .home-hero__intro {
+      margin-bottom: 24px;
+    }
+
+    .home-hero__title {
+      font-size: clamp(2.65rem, 12vw, 3.55rem);
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+    }
+
+    .home-hero__lead {
+      margin-top: 30px;
+      font-size: 1.02rem;
+    }
+
+    .home-actions {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 34px;
+    }
+  }
 </style>

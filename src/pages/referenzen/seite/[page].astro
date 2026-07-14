@@ -23,7 +23,7 @@ const pageCount = getReferencePageCount();
 const rawHref = getReferencePageHref(pageNumber);
 const pageHref = rawHref.endsWith('/') ? rawHref : `${rawHref}/`;
 const pageUrl = `https://www.nigredo.ch${pageHref}`;
-const referenceArchiveModified = '2026-06-17';
+const referenceArchiveModified = '2026-07-14';
 const rawPrevHref = getReferencePageHref(pageNumber - 1);
 const prevHref = rawPrevHref.endsWith('/') ? rawPrevHref : `${rawPrevHref}/`;
 const rawNextHref = pageNumber < pageCount ? getReferencePageHref(pageNumber + 1) : undefined;
@@ -47,7 +47,7 @@ const schema = JSON.stringify({
       '@type': 'CollectionPage',
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
-      name: `Referenzprojekte – Seite ${pageNumber} | Nigredo`,
+      name: `Referenzprojekte, Seite ${pageNumber} | Nigredo`,
       description: 'Weitere Referenzprojekte von Nigredo. KI, Websites, Wissensplattformen und Software für Schweizer KMU und Verwaltungen.',
       inLanguage: 'de-CH',
       datePublished: '2025-06-01',
@@ -70,13 +70,13 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title={`Referenzprojekte – Seite ${pageNumber} | Nigredo`}
+  title={`Referenzprojekte, Seite ${pageNumber} | Nigredo`}
   description="Weitere Referenzprojekte von Nigredo. KI, Websites, Wissensplattformen und Software für Schweizer KMU und Verwaltungen."
   canonical={pageUrl}
-  ogTitle={`Referenzen – Seite ${pageNumber} | Nigredo`}
+  ogTitle={`Referenzen, Seite ${pageNumber} | Nigredo`}
   ogDescription="Weitere Referenzen von Nigredo."
-  ogImageAlt="Nigredo Referenzen – weitere Projekte"
-  twitterTitle={`Referenzen – Seite ${pageNumber} | Nigredo`}
+  ogImageAlt="Nigredo Referenzen mit weiteren Projekten"
+  twitterTitle={`Referenzen, Seite ${pageNumber} | Nigredo`}
   twitterDescription="Weitere Referenzen von Nigredo."
   schema={schema}
   prevUrl={prevUrl}

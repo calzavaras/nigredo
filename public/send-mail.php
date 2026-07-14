@@ -21,7 +21,7 @@ if (empty($csrfPost) || empty($csrfCookie) || !hash_equals($csrfCookie, $csrfPos
     respond(403, ['success' => false, 'message' => 'Ungültige Anfrage.']);
 }
 
-// IP-based rate limiting (file-based, hashed IP — no raw IP stored)
+// IP-based rate limiting (file-based, hashed IP; no raw IP stored)
 $ip       = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $ipHash   = hash('sha256', $ip);
 $rlFile   = sys_get_temp_dir() . '/nigredo_rl_' . $ipHash;
@@ -74,7 +74,7 @@ if ($now - $_SESSION['last_contact_attempt'] < $cooldown) {
 }
 $_SESSION['last_contact_attempt'] = $now;
 
-// Honeypot: bots fill hidden fields — silent exit, no feedback to bot
+// Honeypot: bots fill hidden fields; silent exit, no feedback to bot
 if (!empty($_POST['website'])) {
     closeRateLimitHandle($rlHandle);
     http_response_code(200);
@@ -233,11 +233,11 @@ $body = <<<HTML
               <td bgcolor="#050505" style="padding:0; background:#050505 !important; background-color:#050505 !important;">
                 <table role="presentation" class="nigredo-panel" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#0b0b0d" style="width:100%; background:#0b0b0d !important; background-color:#0b0b0d !important; border:1px solid #23232a;">
             <tr>
-              <td bgcolor="#ffc700" style="height:4px; background-color:#ffc700; background-image:linear-gradient(90deg,#FFC700 0%,#FF4D80 48%,#A64DFF 76%,#00D2FF 100%); line-height:4px; font-size:0;">&nbsp;</td>
+              <td bgcolor="#ff749e" style="height:4px; background-color:#ff749e; background-image:linear-gradient(90deg,#FF749E 0%,#FF3DBB 50%,#8B4DFF 100%); line-height:4px; font-size:0;">&nbsp;</td>
             </tr>
             <tr>
               <td bgcolor="#0b0b0d" style="padding:38px 32px 22px; background:#0b0b0d !important; background-color:#0b0b0d !important;">
-                <div style="font-size:11px; line-height:1.4; font-weight:700; letter-spacing:1.9px; text-transform:uppercase; color:#FFC700; margin-bottom:14px;">Neue Anfrage via Nigredo</div>
+                <div style="font-size:11px; line-height:1.4; font-weight:700; letter-spacing:1.9px; text-transform:uppercase; color:#FFDA72; margin-bottom:14px;">Neue Anfrage via Nigredo</div>
                 <div style="margin:0 0 14px; color:#ffffff; font-size:30px; line-height:1.14; font-weight:700;">{$subjectHtml}</div>
                 <div style="color:#b3b3bc; font-size:15px; line-height:1.65;">Diese Nachricht wurde über das Kontaktformular auf <span style="color:#ffffff;">www.nigredo.ch</span> gesendet.</div>
               </td>

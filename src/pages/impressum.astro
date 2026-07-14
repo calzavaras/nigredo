@@ -36,7 +36,7 @@ const schema = JSON.stringify({
   canonical="https://www.nigredo.ch/impressum/"
   schema={schema}
 >
-  <section class="section pt-sub legal-page legal-page--impressum" aria-labelledby="impressum-title" style="--legal-accent: #a64dff;">
+  <section class="section pt-sub legal-page legal-page--impressum" aria-labelledby="impressum-title" style="--legal-accent: var(--brand-violet);">
     <div class="hero-glow"></div>
     <div class="container legal-page__container">
 
@@ -46,13 +46,12 @@ const schema = JSON.stringify({
       ]} />
 
       <div class="fade-up legal-hero">
-        <span class="badge badge--purple">RECHTLICHES</span>
         <h1 id="impressum-title" class="legal-hero__title">Impressum</h1>
       </div>
 
       <div class="legal-card-grid fade-up delay-100">
           <div class="card legal-card">
-            <span class="cta-label">ADRESSE</span>
+            <span class="cta-label">Adresse</span>
             <h2>Sitz der Firma</h2>
             <p class="legal-p">
               <strong>Nigredo</strong><br>
@@ -62,7 +61,7 @@ const schema = JSON.stringify({
             </p>
           </div>
           <div class="card legal-card">
-            <span class="cta-label">KONTAKT</span>
+            <span class="cta-label">Kontakt</span>
             <h2>Direkter Draht</h2>
             <p class="legal-p">
               E-Mail: <a class="legal-link" href="/kontakt/">Kontaktformular</a><br>

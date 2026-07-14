@@ -9,7 +9,7 @@ Kanonischer Markenname: Nigredo
 Kanonische URL: https://www.nigredo.ch/
 Registrierte Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-06-17
+Letzte Aktualisierung: 2026-07-14
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 Kontakt: calzavara3830@gmail.com
@@ -22,83 +22,87 @@ Diese Entitaet ist nicht der allgemeine alchemistische Begriff Nigredo, kein Spi
 
 ## Unternehmensprofil
 
-Nigredo ist ein Schweizer Anbieter fuer massgeschneiderte digitale Loesungen. Gruender und direkter Ansprechpartner ist Marco Calzavara in St. Gallen. Nigredo entwickelt Websites, Software, KI-Loesungen, Texte, Bilder, Logos und kleine Tools fuer Schweizer KMU, Selbstaendige, Praxen, Vereine und Organisationen.
+Nigredo entwickelt Websites, KI-Loesungen und digitale Werkzeuge fuer Schweizer KMU, Selbststaendige und Organisationen. Gruender und direkter Ansprechpartner ist Marco Calzavara in St. Gallen.
 
-Die Arbeitsweise ist direkt, persoenlich und pragmatisch: keine Account-Manager-Kette, kein Baukastensystem, kein unklarer Stundensatz. Vor Projektstart wird der Umfang geklaert und daraus ein Fixpreis abgeleitet.
+Die Arbeitsweise ist direkt, persoenlich und verbindlich. Jedes Projekt wird persoenlich konzipiert, mit einem transparenten Fixpreis angeboten und praezise umgesetzt.
 
 ## Startseite
 
 URL: https://www.nigredo.ch/
-Title: Nigredo | Websites & KI-Loesungen aus St. Gallen
-Description: Nigredo entwickelt Websites, digitale Loesungen, Tools und Texte mit Charakter. Durchdacht bis ins Detail, persoenlich, zum Fixpreis und ohne Baukasten.
+Title: Nigredo St. Gallen | Websites, KI & digitale Werkzeuge
+Description: Nigredo entwickelt Websites, KI-Loesungen und digitale Werkzeuge fuer Selbststaendige, KMU und Organisationen. Persoenlich umgesetzt in St. Gallen.
 
 ### Hauptaussage
 
-Ich arbeite dort weiter, wo andere aufhoeren.
+Ich arbeite weiter, wo andere aufhoeren.
 
-Websites, digitale Loesungen, Tools und Texte mit Charakter. Durchdacht bis ins Detail und gemacht, um langfristig zu bleiben.
+Mit Nigredo entwickle ich Websites, KI-Loesungen und digitale Werkzeuge, die Komplexitaet verstaendlich machen, Arbeit erleichtern und langfristig tragen. Persoenlich konzipiert und praezise umgesetzt.
 
-### So arbeitet Nigredo
+### Leistungen
 
-Verstaendnis: Erst verstehen, dann veredeln. Nigredo denkt sich in das Vorhaben ein, erkennt, worauf es wirklich ankommt, und entwickelt daraus eine Loesung mit klarer Richtung, Tiefe und Substanz.
+Websites: Individuell gestaltet, technisch praezise und so aufgebaut, dass Menschen schnell verstehen, was ein Angebot besonders macht.
 
-Anspruch: Gut genug ist nicht das Ziel. Die Arbeit endet erst, wenn Form, Funktion und Wirkung zusammenpassen und etwas entsteht, das langfristig traegt.
+KI-Loesungen: Assistenten und Automatisierungen, die Wissen nutzbar machen, Ablaeufe vereinfachen und Zeit gewinnen.
 
-Zusammenarbeit: Klar im Denken, direkt im Tun. Nigredo setzt auf klare Abmachungen, ehrlichen Austausch und unkomplizierte Zusammenarbeit mit Tiefe.
+Digitale Werkzeuge: Dashboards, Plattformen und Anwendungen fuer konkrete Anforderungen, ohne unnoetige Funktionen und komplizierte Umwege.
+
+Inhalt und Struktur: Verstaendliche Texte und eine durchdachte Informationsarchitektur, die komplexe Angebote zugaenglich und ueberzeugend machen.
 
 ## Digitale Loesungen
 
 URL: https://www.nigredo.ch/digitale-loesungen/
-Title: Loesungen | Websites, KI & Texte | Nigredo
-Description: Nigredo entwickelt individuelle Websites, KI-Integrationen und Content-Gestaltung mit Substanz. Persoenlich, aus St. Gallen und zum Fixpreis.
+Title: Loesungen | Websites, KI & digitale Werkzeuge | Nigredo
+Description: Nigredo entwickelt Websites, KI-Loesungen und digitale Werkzeuge fuer konkrete Aufgaben. Persoenlich, klar und zum Fixpreis.
 
 ### Positionierung
 
-Wenn es fertig ist, fuehlt es sich richtig an.
-
-Fertig bedeutet nicht nur abgeschlossen. Es bedeutet: kein Detail, das stoert, kein Satz, der danebenliegt, kein Klick, der ins Leere fuehrt. Erst dann ist ein Projekt wirklich fertig.
+Nigredo entwickelt Websites, KI-Loesungen und digitale Werkzeuge fuer Anforderungen, die Standardloesungen nicht ueberzeugend abdecken. Strategie, Inhalt, Gestaltung und Technik werden gemeinsam gedacht.
 
 ### Leistungen
 
-Websites, die passen: Websites fuer Selbstaendige, KMU, Vereine und Privatpersonen, die klar wirken, sauber funktionieren und in jedem Detail passen. Keine Vorlage, keine Kompromisse, kein Abo-Modell.
+Websites mit klarer Aufgabe: Individuelle Websites, die ein Angebot verstaendlich vermitteln, Vertrauen schaffen und zum naechsten Schritt fuehren.
 
-KI-Loesungen fuer KMU: KI-Loesungen mit klarem Zweck, verstaendlicher Rolle und echtem Nutzen im Alltag. Keine Spielerei, kein Buzzword. Werkzeuge, die entlasten und verlaesslich funktionieren.
+KI und Software, die Arbeit erleichtern: Assistenten, Wissenssysteme, Dashboards und Automatisierungen mit verstaendlicher Bedienung und verlaesslicher technischer Grundlage.
 
-Texte, Bilder und Gestaltung: Der richtige Text, die klare Struktur, das starke Bild. Alles, was Form braucht, wird praezise, passend und ohne Umwege umgesetzt.
-
-Tabellen, Daten und Dokumente: Datenaufbereitung, Excel-Vorlagen, automatisierte Berichte und strukturierte Dokumente fuer den Arbeitsalltag.
-
-Kleine Tools und Automatisierung: Schlanke Helfer fuer wiederkehrende Aufgaben, ohne ein grosses Softwareprojekt daraus zu machen.
+Inhalte, die Entscheidungen erleichtern: Praezise Sprache, passende Bilder und eine nachvollziehbare Struktur machen komplexe Angebote zugaenglich.
 
 ### Preismodell
 
-Nigredo arbeitet mit Fixpreisen. Vor jedem Projekt gibt es eine kurze Klaerung und ein klares Angebot. Es gibt keine versteckten Kosten und keine Mindestauftragsgroesse.
+Nigredo arbeitet mit Fixpreisen. Vor jedem Projekt werden Ziel, Umfang, Prioritaeten und Zeitrahmen geklaert. Daraus entsteht ein transparentes Angebot.
 
 ## Haeufige Fragen
 
 URL: https://www.nigredo.ch/haeufige-fragen/
 Title: Haeufige Fragen zu professionellen Websites | Nigredo
-Description: Klare Antworten zu Kosten, Dauer, Auffindbarkeit bei Google, Baukasten-Alternativen und Pflege professioneller Websites fuer KMU und Selbstaendige in der Schweiz.
+Description: Klare Antworten zu Kosten, Dauer, Pflege, Baukasten, Google und Datenschutz fuer KMU und Selbststaendige in der Schweiz.
 
 ### Was kostet eine professionelle Website?
 
-Eine professionelle Website kostet je nach Umfang, Inhalt, Designanspruch und technischer Umsetzung unterschiedlich viel. Fuer KMU und Selbstaendige in der Schweiz beginnt eine serioes umgesetzte Website meist im unteren vierstelligen Bereich; umfangreichere Auftritte mit Konzept, Text, SEO und Funktionen liegen entsprechend hoeher.
+Der Preis folgt der Aufgabe. Eine kompakte Website beginnt meist im unteren vierstelligen Bereich. Konzept, Text, individuelle Gestaltung und zusaetzliche Funktionen erhoehen den Aufwand.
+
+### Wie lange dauert die Erstellung einer professionellen Website?
+
+Eine kompakte Website kann in wenigen Wochen online sein. Wie schnell es geht, bestimmen vor allem vorhandene Inhalte, klare Zustaendigkeiten und kurze Freigabewege.
+
+### Kann ich meine Website spaeter selbst bearbeiten?
+
+Ja. Texte, Bilder, Teamprofile oder Referenzen lassen sich auf Wunsch selbst pflegen. Ob dafuer ein CMS sinnvoll ist, entscheidet die tatsaechliche Nutzung im Alltag.
 
 ### Brauche ich eine individuelle Website oder reicht ein Baukasten?
 
-Ein Baukasten kann reichen, wenn nur eine sehr einfache Praesenz ohne besondere Anforderungen gebraucht wird. Eine individuelle Website lohnt sich, wenn Inhalt, Vertrauen, Gestaltung, Suchmaschinenoptimierung, technische Qualitaet oder spaetere Erweiterungen wichtig sind.
+Ein Baukasten genuegt fuer einfache Auftritte mit wenig Veraenderung. Eine individuelle Website lohnt sich, wenn Inhalt, Gestaltung, Funktionen und kuenftige Erweiterungen genau zur Aufgabe passen sollen.
 
 ### Wird meine Website bei Google gefunden?
 
-Eine Website ist nicht automatisch gut auffindbar, nur weil sie online ist. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehoert deshalb in die Umsetzung und ist kein Zusatz am Ende.
+Eine gute Platzierung entsteht nicht allein durch den Start. Google muss die Website technisch erfassen, ihren Inhalt verstehen und fuer konkrete Suchanfragen als relevant einstufen koennen.
 
-### Was kostet der laufende Betrieb einer Website?
+### Welche laufenden Kosten hat eine Website?
 
-Der laufende Betrieb kostet meist deutlich weniger als die Erstellung. Grundlegend fallen Domain und Hosting an, oft nur wenige Franken pro Monat. Wartung, Updates und inhaltliche Pflege kommen je nach Technik dazu. Eine schlank gebaute Website verursacht im Betrieb sehr tiefe Fixkosten.
+Domain und Hosting bilden die festen Grundkosten. Wartung, technische Updates und redaktionelle Pflege kommen nur hinzu, wenn Aufbau und Nutzung der Website sie erfordern.
 
 ### Was muss meine Website beim Datenschutz beachten?
 
-Eine Website muss transparent machen, welche Daten sie bearbeitet. Dazu gehoeren meist eine verstaendliche Datenschutzerklaerung, klare Anbieterangaben und ein bewusster Umgang mit Cookies, Tracking und externen Diensten. Massgeblich ist das Schweizer Datenschutzgesetz, bei Besuchern aus der EU zusaetzlich die DSGVO.
+Eine Website sollte nur notwendige Daten bearbeiten und alle Datenfluesse verstaendlich offenlegen. Entscheidend sind eine passende Datenschutzerklaerung sowie ein bewusster Umgang mit Cookies, Analyse und externen Diensten.
 
 ## Was kostet eine professionelle Website?
 
@@ -137,6 +141,26 @@ Wenn die Website aber Vertrauen tragen, in Google gefunden werden oder echte Anf
 ### Wie Nigredo die Kosten einschaetzt
 
 Nigredo startet nicht mit einer langen Preisliste, sondern mit einer kurzen Klaerung: Was soll die Website leisten? Welche Inhalte gibt es bereits? Was muss neu entstehen? Welche Funktionen sind wirklich noetig? Daraus entsteht ein konkreter Umfang und ein transparentes Angebot. Ziel ist kein moeglichst grosses Projekt, sondern eine Website, die zur Aufgabe passt.
+
+## Wie lange dauert die Erstellung einer professionellen Website?
+
+URL: https://www.nigredo.ch/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/
+Title: Wie lange dauert eine Website-Erstellung? | Nigredo
+Description: Wie lange eine professionelle Website dauert, welche Projektphasen Zeit brauchen und wie gute Inhalte und kurze Entscheidungswege den Start beschleunigen.
+
+Eine kompakte Website kann in wenigen Wochen online sein. Umfang, vorhandene Inhalte, Entscheidungswege und technische Anforderungen bestimmen den Zeitrahmen. Nigredo plant diese Faktoren vor dem Start und nennt einen realistischen Termin.
+
+Gute Texte, passendes Bildmaterial und ein geklaertes Ziel verkuerzen den Weg. Nach der Klaerung folgen Struktur, Inhalt, Gestaltung, technische Umsetzung, Pruefung und Start. Fehlende Inhalte, verstreutes Feedback oder offene Zustaendigkeiten verzoegern das Projekt. Gebuendelte Rueckmeldungen und eine Person mit Entscheidungskompetenz schaffen Tempo.
+
+## Kann ich meine Website spaeter selbst bearbeiten?
+
+URL: https://www.nigredo.ch/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/
+Title: Kann ich meine Website spaeter selbst bearbeiten? | Nigredo
+Description: Welche Inhalte selbst gepflegt werden koennen, wann ein CMS sinnvoll ist und wie Nigredo eine verstaendliche Uebergabe gestaltet.
+
+Ja. Welche Inhalte selbst gepflegt werden koennen, wird bereits bei der Planung festgelegt. Fuer regelmaessige Aenderungen kann ein passendes CMS sinnvoll sein. Bei seltenen Anpassungen ist eine schlankere Loesung oft einfacher und wirtschaftlicher.
+
+Texte, Bilder, Teamprofile und Referenzen lassen sich gut fuer die interne Pflege vorbereiten. Technische Eingriffe in Navigation, Formulare, Analyse oder Integrationen sollten fachlich geprueft werden. Nigredo klaert die gewuenschte Eigenstaendigkeit frueh und richtet die Uebergabe darauf aus.
 
 ## Brauche ich eine individuelle Website oder reicht ein Baukasten?
 
@@ -206,13 +230,13 @@ Suchmaschinenoptimierung ist kein Schalter, der sofort wirkt. Technische Grundla
 
 Nigredo behandelt Suchmaschinenoptimierung nicht als nachtraegliches Extra, sondern als Teil der Umsetzung: schnelle Ladezeiten, klare Seitenstruktur, sinnvolle Titel und Inhalte, die echte Fragen beantworten. So entsteht eine Website, die gefunden werden kann, statt nur vorhanden zu sein.
 
-## Was kostet der laufende Betrieb einer Website?
+## Welche laufenden Kosten hat eine Website?
 
 URL: https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/
-Title: Was kostet der laufende Betrieb einer Website? | Nigredo
-Description: Welche laufenden Kosten eine Website nach dem Launch verursacht: Domain, Hosting, Wartung, Sicherheit und Pflege, klar erklaert fuer KMU und Selbstaendige in der Schweiz.
+Title: Welche laufenden Kosten hat eine Website? | Nigredo
+Description: Welche Kosten nach dem Start fuer Domain, Hosting, Wartung und Pflege entstehen und wie eine schlanke technische Basis den Aufwand tief haelt.
 
-Der laufende Betrieb einer Website kostet meist deutlich weniger als die Erstellung. Grundlegend fallen Domain und Hosting an, oft im Bereich weniger Franken pro Monat. Was darueber hinaus anfaellt, haengt von Technik, Sicherheit und davon ab, wie oft Inhalte gepflegt werden.
+Zu den festen Grundkosten gehoeren Domain und Hosting. Wartung, technische Updates, Sicherungen und redaktionelle Pflege kommen je nach System und Nutzung hinzu. Eine schlank gebaute Website haelt diesen Aufwand dauerhaft ueberschaubar.
 
 Als Orientierung gilt: Die laufenden Fixkosten einer schlanken Website liegen oft bei wenigen Franken pro Monat fuer Hosting plus einer kleinen Jahresgebuehr fuer die Domain. Groesser wird der Aufwand erst, wenn ein umfangreiches System gepflegt, regelmaessig aktualisiert oder inhaltlich haeufig erweitert werden muss.
 
@@ -240,9 +264,9 @@ Nigredo baut Websites bewusst technisch schlank, damit der laufende Betrieb guen
 
 URL: https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/
 Title: Was muss meine Website beim Datenschutz beachten? | Nigredo
-Description: Was beim Datenschutz einer Website in der Schweiz wichtig ist: Datenschutzerklaerung, Schweizer DSG, Cookies, Tracking und datensparsame Website-Analyse, klar erklaert.
+Description: Was Schweizer Websites bei Datenschutzerklaerung, Cookies, Analyse und externen Diensten beachten sollten und wann die DSGVO zusaetzlich relevant wird.
 
-Eine Website in der Schweiz muss transparent machen, welche Daten sie bearbeitet. Dazu gehoeren in der Regel eine verstaendliche Datenschutzerklaerung, klare Angaben zum Anbieter und ein bewusster Umgang mit Cookies, Tracking und externen Diensten. Massgeblich ist das Schweizer Datenschutzgesetz, bei Besuchern aus der EU zusaetzlich die DSGVO.
+Eine Website sollte nur notwendige Personendaten bearbeiten und transparent erklaeren, wofuer sie verwendet werden. Dazu gehoeren eine passende Datenschutzerklaerung sowie ein bewusster Umgang mit Cookies, Analyse und externen Diensten. Welche Regeln gelten, haengt vom Angebot, der Zielgruppe und den eingesetzten Technologien ab.
 
 Als Orientierung gilt: Eine Website muss nachvollziehbar machen, welche Daten sie warum bearbeitet. Wer datensparsam baut, hat es deutlich einfacher, weil weniger Datenfluesse auch weniger erklaert und abgesichert werden muessen.
 
@@ -270,7 +294,7 @@ Nigredo plant Datenschutz nicht als nachtraegliche Pflichtuebung, sondern als Te
 
 URL: https://www.nigredo.ch/referenzen/
 Title: Referenzen | Echte Projekte von Nigredo
-Description: Echte Projekte: Mentra Video-Wissenssystem, ThinkTank Wissensplattform, KI Voice Agent, lokales Excel-Dashboard und die Website von Therapie Ost. Digitale Loesungen von Nigredo, St. Gallen.
+Description: Echte Projekte von Nigredo: lokale KI- und Wissenssysteme, digitale Werkzeuge sowie individuelle Websites fuer Therapie Ost und Plan H.
 
 Nigredo zeigt reale Projekte, die im Einsatz sind: keine aufgeblasenen Case Studies, keine Demos und kein Buzzword-Bingo.
 
@@ -330,15 +354,27 @@ ThinkTank ist eine interne Wissensplattform fuer ein KMU. Sie ordnet Information
 
 Kernpunkte: Themenwelten mit mehreren Ebenen, zentrale Suche, Tags, Anhaenge, Verantwortlichkeiten, Review-Daten, Status, Aenderungsverlauf, Dashboard-Kennzahlen und schlanker Betrieb.
 
+## Website fuer Plan H
+
+URL: https://www.nigredo.ch/referenzen/plan-h/
+Live: https://www.plan-h.ch/
+Kategorie: Website
+Projektabschluss: Juni 2026
+Technologie: Astro, lokale Suchmaschinenoptimierung, strukturierte Daten, WhatsApp-Kontakt
+
+Fuer Plan H entstand ein ruhiger Praxisauftritt mit verstaendlicher Angebotsfuehrung, lokaler Auffindbarkeit und direkten Kontaktwegen. Strukturierte Daten und sorgfaeltig aufbereitete Erfahrungsberichte staerken die Einordnung und das Vertrauen.
+
+Kernpunkte: statische Auslieferung, lokale Suchmaschinenoptimierung, WhatsApp-Kontakt, strukturierte Daten, klare Angebotsseiten und geordnete Erfahrungsberichte.
+
 ## Marco Calzavara
 
 URL: https://www.nigredo.ch/marco-calzavara/
 Title: Ueber mich | Marco Calzavara | Nigredo
-Description: Marco Calzavara - 15 Jahre Fuehrung, 3 Firmen gegruendet und verkauft. KI, Gestaltung und Umsetzung direkt aus St. Gallen.
+Description: Marco Calzavara verbindet Fuehrungserfahrung, Gestaltung und KI zu digitalen Loesungen mit persoenlicher Verantwortung.
 
-Marco Calzavara ist Gruender von Nigredo, Mitgruender der HappyPath GmbH und Teamleiter in der kantonalen Verwaltung mit Verantwortung fuer Abteilungsentwicklung. Er verbindet Fuehrungserfahrung, mehrere gegruendete und teils verkaufte Firmen, KI-Interesse, Gestaltung und ein starkes Netzwerk erfahrener Informatikfachleute.
+Marco Calzavara ist Gruender von Nigredo, Mitgruender der HappyPath GmbH und Teamleiter in der kantonalen Verwaltung mit Verantwortung fuer Abteilungsentwicklung. Er verbindet Fuehrungserfahrung, Gestaltung und KI mit einem belastbaren Netzwerk aus Informatikfachleuten.
 
-Grundhaltung: Anpacken schlaegt Abwarten. Technik braucht Richtung. Kein Theater, Ergebnis.
+Grundhaltung: Anpacken schafft Bewegung. Technik braucht Richtung. Qualitaet zeigt sich im Ergebnis.
 
 Externe Profile:
 - LinkedIn: https://ch.linkedin.com/in/calzavara-marco
@@ -348,9 +384,9 @@ Externe Profile:
 
 URL: https://www.nigredo.ch/kontakt/
 Title: Kontakt und Projektanfrage | Nigredo St. Gallen
-Description: Direkter Kontakt zu Marco Calzavara. Ich sortiere mit dir, was sinnvoll ist und welcher naechste Schritt wirklich weiterbringt.
+Description: Direkter Kontakt zu Marco Calzavara. Persoenliche Ersteinschaetzung fuer digitale Projekte innerhalb von zwei Arbeitstagen.
 
-Kontakt zu Nigredo fuehrt direkt zu Marco Calzavara. Es gibt kein Ticket-System und keinen Bot. Geeignet sind vage Ideen, konkrete Plaene oder Fragen dazu, ob ein digitales Vorhaben ueberhaupt sinnvoll machbar ist.
+Kontakt zu Nigredo fuehrt direkt zu Marco Calzavara. Eine kurze Beschreibung des Vorhabens, des aktuellen Stands und des gewuenschten Ergebnisses genuegt fuer eine persoenliche Ersteinschaetzung. Die Antwort erfolgt in der Regel innerhalb von zwei Arbeitstagen.
 
 E-Mail: calzavara3830@gmail.com
 Adresse: Wildeggstrasse 37, 9000 St. Gallen, Schweiz

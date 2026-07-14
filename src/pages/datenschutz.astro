@@ -17,7 +17,7 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": "https://www.nigredo.ch/datenschutz/#webpage",
       "name": "Datenschutz | Nigredo",
-      "description": "Datenschutzerklärung von Nigredo – transparente Information über Datenerhebung und -nutzung.",
+      "description": "Datenschutzerklärung von Nigredo mit transparenter Information über Datenerhebung und Datennutzung.",
       "url": "https://www.nigredo.ch/datenschutz/",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": "https://www.nigredo.ch/datenschutz/#breadcrumb" },
@@ -36,7 +36,7 @@ const schema = JSON.stringify({
   canonical="https://www.nigredo.ch/datenschutz/"
   schema={schema}
 >
-  <section class="section pt-sub legal-page legal-page--privacy" aria-labelledby="datenschutz-title" style="--legal-accent: #00d2ff;">
+  <section class="section pt-sub legal-page legal-page--privacy" aria-labelledby="datenschutz-title" style="--legal-accent: var(--brand-cyan);">
     <div class="hero-glow"></div>
     <div class="container legal-page__container">
 
@@ -46,7 +46,6 @@ const schema = JSON.stringify({
       ]} />
 
       <div class="fade-up legal-hero">
-        <span class="badge badge--cyan">DATENSCHUTZ</span>
         <h1 id="datenschutz-title" class="legal-hero__title">Datenschutz</h1>
         <p class="hero-lead legal-hero__lead">Kurz und klar: was gesammelt wird, warum und wer dafür verantwortlich ist.</p>
       </div>

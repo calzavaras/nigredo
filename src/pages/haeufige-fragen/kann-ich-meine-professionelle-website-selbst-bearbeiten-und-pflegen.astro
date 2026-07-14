@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/';
-const question = 'Kann ich meine professionelle Website später selbst bearbeiten und pflegen?';
-const answer = 'Ja, viele Inhalte einer professionellen Website lassen sich später selbst pflegen. Ob dafür ein CMS sinnvoll ist, hängt vor allem davon ab, wie häufig Inhalte geändert werden, wer sie bearbeitet und wie einfach die Pflege im Alltag wirklich sein soll.';
+const question = 'Kann ich meine Website später selbst bearbeiten?';
+const answer = 'Ja. Welche Inhalte du selbst pflegen kannst, wird bereits bei der Planung festgelegt. Für regelmässige Änderungen kann ein passendes CMS sinnvoll sein. Bei seltenen Anpassungen ist eine schlankere Lösung oft einfacher und wirtschaftlicher.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -36,15 +36,15 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Kann ich meine professionelle Website später selbst bearbeiten und pflegen? | Nigredo",
-      "description": "Wann eine Website sinnvoll selbst gepflegt werden kann, ob ein CMS nötig ist und wie viel Eigenständigkeit nach dem Launch realistisch ist.",
+      "name": "Kann ich meine Website später selbst bearbeiten? | Nigredo",
+      "description": "Welche Inhalte du selbst pflegen kannst, wann ein CMS sinnvoll ist und wie Nigredo eine verständliche Übergabe mit eindeutigen Zuständigkeiten gestaltet.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "mainEntity": { "@id": `${pageUrl}#faq` },
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-18",
-      "dateModified": "2026-06-04",
+      "dateModified": "2026-07-14",
       "isAccessibleForFree": true
     }
   ]
@@ -52,12 +52,12 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Kann ich meine professionelle Website später selbst bearbeiten und pflegen? | Nigredo"
-  description="Wann eine Website sinnvoll selbst gepflegt werden kann, ob ein CMS nötig ist und wie viel Eigenständigkeit nach dem Launch realistisch ist."
+  title="Kann ich meine Website später selbst bearbeiten? | Nigredo"
+  description="Welche Inhalte du selbst pflegen kannst, wann ein CMS sinnvoll ist und wie Nigredo eine verständliche Übergabe mit eindeutigen Zuständigkeiten gestaltet."
   canonical={pageUrl}
-  ogTitle="Kann ich meine professionelle Website später selbst bearbeiten und pflegen? | Nigredo"
+  ogTitle="Kann ich meine Website später selbst bearbeiten? | Nigredo"
   ogDescription="Wann ein CMS sinnvoll ist, welche Inhalte sich selbst pflegen lassen und wie viel Eigenständigkeit nach dem Launch realistisch bleibt."
-  twitterTitle="Kann ich meine professionelle Website später selbst bearbeiten und pflegen? | Nigredo"
+  twitterTitle="Kann ich meine Website später selbst bearbeiten? | Nigredo"
   twitterDescription="Wann eine Website selbst gepflegt werden kann und ob ein CMS wirklich nötig ist."
   schema={schema}
 >
@@ -71,64 +71,42 @@ const schema = JSON.stringify({
       ]} />
 
       <header class="faq-article__header fade-up">
-        <span class="badge badge--purple">Pflege & CMS</span>
         <h1 id="article-title">{question}</h1>
-        <p>
-          Ja, viele Inhalte lassen sich später selbst pflegen. Entscheidend ist nicht nur die Technik, sondern wie oft Änderungen anfallen, wer sie intern übernimmt und wie einfach der Pflegeprozess im Alltag wirklich sein muss. Nicht jede Website braucht deshalb automatisch ein umfangreiches CMS.
-        </p>
+        <p>{answer}</p>
       </header>
 
       <nav class="faq-article__nav fade-up delay-100" aria-label="Inhaltsübersicht">
-        <a href="#selbst-pflegen">Was sich selbst pflegen lässt</a>
+        <a href="#selbst-pflegen">Welche Inhalte sich gut pflegen lassen</a>
         <a href="#cms">Wann ein CMS sinnvoll ist</a>
-        <a href="#eigenstaendigkeit">Wie viel Eigenständigkeit realistisch ist</a>
+        <a href="#eigenstaendigkeit">Wann weniger Technik besser ist</a>
         <a href="#grenzen">Welche Änderungen besser begleitet bleiben</a>
-        <a href="#uebergabe">Wie Nigredo Übergabe und Pflege denkt</a>
+        <a href="#uebergabe">Wie Nigredo die Übergabe gestaltet</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
-        <p class="lead-answer">
-          Wer später nur gelegentlich Texte, Bilder oder einzelne Inhalte anpassen will, braucht oft vor allem eine saubere, verständliche Lösung. Ein CMS ist sinnvoll, wenn Änderungen regelmässig vorkommen und intern ohne technische Hürde möglich sein sollen.
+        <h2 id="selbst-pflegen">Welche Inhalte sich gut pflegen lassen</h2>
+        <p>
+          Texte, Bilder, Teamprofile, Referenzen und ähnliche Inhalte können so aufgebaut werden, dass du sie sicher selbst aktualisierst. Welche Bereiche bearbeitbar sein sollen, richtet sich nach deinem Alltag und deinen internen Abläufen.
         </p>
 
-        <h2 id="selbst-pflegen">Welche Inhalte sich typischerweise selbst pflegen lassen</h2>
+        <h2 id="cms">Wann ein CMS sinnvoll ist</h2>
         <p>
-          Häufig lassen sich Texte, Bilder, Teamangaben, Referenzen oder einfache Seiteninhalte später gut selbst anpassen. Genau diese Frage ist vor dem Projekt wichtig, weil sie beeinflusst, wie eine Website strukturiert und technisch aufgebaut werden sollte.
-        </p>
-        <p>
-          Entscheidend ist dabei nicht nur, ob etwas technisch möglich ist, sondern ob es sich für den Alltag wirklich eignet. Eine gute Pflegelösung spart Zeit und schafft Unabhängigkeit, statt neue Reibung zu erzeugen.
+          Ein CMS lohnt sich, wenn Inhalte häufig wechseln, mehrere Personen daran arbeiten oder regelmässig neue Seiten entstehen. Es sollte genau die Funktionen bieten, die tatsächlich gebraucht werden, und in der Bedienung verständlich bleiben.
         </p>
 
-        <h2 id="cms">Wann ein CMS sinnvoll ist und wann nicht</h2>
+        <h2 id="eigenstaendigkeit">Wann weniger Technik besser ist</h2>
         <p>
-          Ein CMS ist sinnvoll, wenn Inhalte regelmässig geändert werden, mehrere Personen daran arbeiten oder neue Seiten wiederkehrend entstehen. Dann lohnt sich eine redaktionelle Oberfläche, die Änderungen ohne Entwicklerzugriff ermöglicht.
-        </p>
-        <p>
-          Wenn Inhalte dagegen selten wechseln und die Website bewusst schlank bleiben soll, ist ein grosses System nicht automatisch die bessere Wahl. Mehr Technik bedeutet nicht immer mehr Nutzen. Manchmal entsteht dadurch nur unnötige Komplexität im Unterhalt.
-        </p>
-
-        <h2 id="eigenstaendigkeit">Wie viel Eigenständigkeit nach dem Launch realistisch ist</h2>
-        <p>
-          Eine professionelle Website sollte so aufgebaut sein, dass einfache Änderungen nicht zur Hürde werden. Gleichzeitig ist es realistisch zu unterscheiden: Redaktionelle Anpassungen lassen sich oft selbst erledigen, während strukturelle oder technische Eingriffe mehr Sorgfalt brauchen.
-        </p>
-        <p>
-          Genau diese Trennung ist hilfreich. Sie schafft Klarheit darüber, was intern sinnvoll machbar ist und wo externe Unterstützung langfristig die bessere Lösung bleibt.
+          Ändern sich Inhalte nur selten, kann ein grosses Redaktionssystem mehr Aufwand als Nutzen verursachen. Eine schlanke Website bleibt einfacher, sicherer und günstiger im Betrieb. Anpassungen können bei Bedarf gezielt vorgenommen werden.
         </p>
 
         <h2 id="grenzen">Welche Änderungen besser professionell begleitet bleiben</h2>
         <p>
-          Grössere Eingriffe in Navigation, Struktur, Tracking, technische Integrationen oder Suchmaschinenlogik sollten in der Regel sauber begleitet werden. Solche Änderungen wirken oft auf mehrere Bereiche gleichzeitig und sind mehr als nur eine kleine Textkorrektur.
-        </p>
-        <p>
-          Das heisst nicht, dass eine Website abhängig machen soll. Es heisst nur, dass Eigenständigkeit dort am meisten bringt, wo sie klar, sicher und effizient ist.
+          Redaktionelle Änderungen sind etwas anderes als Eingriffe in Navigation, Formulare, Analyse oder technische Integrationen. Solche Anpassungen betreffen oft mehrere Bereiche und sollten deshalb fachlich geprüft werden.
         </p>
 
-        <h2 id="uebergabe">Wie Nigredo Übergabe und Pflege denkt</h2>
+        <h2 id="uebergabe">Wie Nigredo die Übergabe gestaltet</h2>
         <p>
-          Nigredo denkt Pflege nicht als Nebensache am Schluss, sondern als Teil der Grundentscheidung. Wenn Eigenständigkeit wichtig ist, wird die Website von Anfang an so geplant, dass spätere Änderungen verständlich und praktikabel bleiben.
-        </p>
-        <p>
-          Wer zuerst wissen will, wie sich ein CMS oder zusätzliche Pflegeoptionen auf den Umfang auswirken, findet die Einordnung bei <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">der Frage zu den Website-Kosten</a>. Wer noch zwischen Vorlage und individueller Umsetzung abwägt, findet die Antwort bei <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">der Frage zu Baukasten oder individueller Website</a>.
+          Nigredo klärt früh, wie viel Eigenständigkeit gewünscht ist, und richtet die Website darauf aus. Du erhältst eine verständliche Lösung mit eindeutigen Zuständigkeiten, damit die Pflege im Alltag leicht bleibt.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -139,7 +117,7 @@ const schema = JSON.stringify({
               <span>Welche Faktoren den Preis beeinflussen und wie Zusatzaufwand sauber eingeordnet wird.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Was kostet der laufende Betrieb einer Website?</strong>
+              <strong>Welche laufenden Kosten hat eine Website?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
             <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">
@@ -155,7 +133,7 @@ const schema = JSON.stringify({
 
         <div class="article-links">
           <a href="/haeufige-fragen/">Zurück zu den häufigen Fragen</a>
-          <a href="/kontakt/">Pflegebedarf für meine Website klären</a>
+          <a href="/kontakt/">Passende Pflegeform klären</a>
         </div>
       </div>
     </div>
@@ -164,246 +142,8 @@ const schema = JSON.stringify({
 
 <style>
   .faq-article {
-    --faq-a: #ff7c20;
-    --faq-b: #ff2e55;
-    --faq-c: #cc20cc;
-    animation: faqCycle 90s ease-in-out infinite;
-    position: relative;
-    padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(84px, 8vw, 112px);
-    overflow: hidden;
-  }
-
-  .faq-article__container {
-    position: relative;
-  }
-
-  .faq-article :global(.breadcrumb) {
-    margin-bottom: 28px;
-  }
-
-  .faq-article__header {
-    max-width: 880px;
-  }
-
-  .faq-article__header .badge {
-    min-height: 26px;
-    margin-bottom: 0.9rem;
-    padding: 4px 10px;
-    font-size: 0.54rem;
-    letter-spacing: 0.14em;
-    color: rgba(255, 236, 224, 0.94);
-    border-color: color-mix(in srgb, var(--faq-b) 34%, rgba(255, 255, 255, 0.22));
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .faq-article .hero-glow {
-    background:
-      radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--faq-a) 16%, transparent) 0%, transparent 36%),
-      radial-gradient(circle at 56% 34%, color-mix(in srgb, var(--faq-b) 14%, transparent) 0%, transparent 32%),
-      radial-gradient(circle at 84% 44%, color-mix(in srgb, var(--faq-c) 13%, transparent) 0%, transparent 28%);
-  }
-
-  .faq-article__header h1 {
-    max-width: 920px;
-    margin: 0 0 clamp(24px, 3vw, 32px);
-    color: #f5f5f7;
-    font-size: clamp(2.95rem, 5.2vw, 4.55rem);
-    line-height: 0.99;
-    letter-spacing: 0;
-  }
-
-  .faq-article__header p {
-    max-width: 720px;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.68);
-    font-size: var(--lead-size);
-    line-height: 1.65;
-  }
-
-  .faq-article__nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    max-width: 760px;
-    margin-top: 30px;
-  }
-
-  .faq-article__nav a,
-  .related-faqs__grid a,
-  .article-links a {
-    text-decoration: none;
-  }
-
-  .faq-article__nav a {
-    min-height: 40px;
-    display: inline-flex;
-    align-items: center;
-    padding: 0 14px;
-    border-radius: 999px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.92rem;
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    background: rgba(255, 255, 255, 0.03);
-    transition: border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
-  }
-
-  .faq-article__nav a:hover {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.24);
-    transform: translateY(-2px);
-  }
-
-  .faq-article__content {
-    max-width: 760px;
-    margin-top: clamp(46px, 6vw, 72px);
-  }
-
-  .faq-article__content p {
-    margin: 0 0 1.25rem;
-    color: rgba(255, 255, 255, 0.68);
-    font-size: 1.04rem;
-    line-height: 1.78;
-  }
-
-  .faq-article__content .lead-answer {
-    color: rgba(255, 255, 255, 0.82);
-    font-size: clamp(1.12rem, 2vw, 1.28rem);
-    line-height: 1.72;
-    padding-bottom: clamp(22px, 4vw, 34px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .faq-article__content h2 {
-    margin: clamp(42px, 6vw, 62px) 0 1rem;
-    color: rgba(255, 255, 255, 0.95);
-    font-size: clamp(1.46rem, 2.8vw, 2rem);
-    line-height: 1.16;
-    letter-spacing: 0;
-  }
-
-  .faq-article__content a {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.18em;
-  }
-
-  .related-faqs {
-    margin-top: clamp(42px, 6vw, 62px);
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .related-faqs__grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-
-  .related-faqs__grid a {
-    display: grid;
-    gap: 10px;
-    padding: 20px;
-    border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.03);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-
-  .related-faqs__grid a:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.18);
-  }
-
-  .related-faqs__grid strong {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .related-faqs__grid span {
-    color: rgba(255, 255, 255, 0.62);
-    font-size: 0.96rem;
-    line-height: 1.6;
-  }
-
-  .article-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: clamp(42px, 6vw, 62px);
-    padding-top: 28px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .article-links a {
-    min-height: 48px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 18px;
-    border-radius: 999px;
-    color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.13);
-    background: rgba(255, 255, 255, 0.035);
-    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-
-  .article-links a:hover {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.28);
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 860px) {
-    .faq-article {
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 72px;
-    }
-
-    .faq-article__header h1 {
-      font-size: clamp(2.5rem, 8vw, 3.5rem);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-
-    .related-faqs__grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .faq-article__header h1 {
-      font-size: clamp(2.2rem, 10.8vw, 2.95rem);
-    }
-
-    .faq-article__header p {
-      font-size: var(--lead-size-mobile);
-      line-height: 1.6;
-    }
-
-    .faq-article__nav {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-
-    .faq-article__nav a {
-      justify-content: center;
-      text-align: center;
-    }
-
-    .faq-article__content {
-      margin-top: 48px;
-    }
-
-    .faq-article__content p {
-      font-size: 1rem;
-      line-height: 1.72;
-    }
-
-    .article-links {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
+    --faq-a: var(--brand-sun);
+    --faq-b: var(--brand-coral);
+    --faq-c: var(--brand-pink);
   }
 </style>

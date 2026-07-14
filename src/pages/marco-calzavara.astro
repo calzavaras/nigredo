@@ -26,7 +26,7 @@ const schema = JSON.stringify({
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-05-19",
+      "dateModified": "2026-07-14",
       "isAccessibleForFree": true,
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "about": { "@id": "https://www.nigredo.ch/#person" },
@@ -41,10 +41,6 @@ const schema = JSON.stringify({
         "caption": "Marco Calzavara, Gründer von Nigredo in St. Gallen",
         "representativeOfPage": true
       },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".pc-name", ".belief-title"]
-      },
       "mainEntity": { "@id": "https://www.nigredo.ch/#person" }
     },
     {
@@ -54,7 +50,7 @@ const schema = JSON.stringify({
       "givenName": "Marco",
       "familyName": "Calzavara",
       "jobTitle": "Gründer & Full-Stack Developer",
-      "description": "Marco Calzavara ist Gründer von Nigredo und entwickelt seit über 15 Jahren digitale Produkte. Als Full-Stack Developer und strategischer Denker setzt er Websites, KI-Lösungen und digitale Tools für KMU, Selbstständige und Organisationen in St. Gallen und der ganzen Schweiz um.",
+      "description": "Marco Calzavara ist Gründer von Nigredo. Er verbindet Führungserfahrung, Gestaltung und KI mit einem belastbaren Netzwerk aus Informatikfachleuten und übernimmt persönliche Verantwortung für jedes Projekt.",
       "url": pageUrl,
       "mainEntityOfPage": { "@id": `${pageUrl}#webpage` },
       "worksFor": { "@id": "https://www.nigredo.ch/#organization" },
@@ -70,17 +66,17 @@ const schema = JSON.stringify({
 
 <Layout
   title="Über mich | Marco Calzavara | Nigredo"
-  description={`Marco Calzavara – ${leadershipYears} Jahre Führung, 3 Firmen gegründet und verkauft. KI, Gestaltung und Umsetzung direkt aus St. Gallen.`}
+  description={`Marco Calzavara verbindet ${leadershipYears} Jahre Führungserfahrung, Gestaltung und KI zu digitalen Lösungen mit persönlicher Verantwortung.`}
   canonical={pageUrl}
-  ogTitle="Ein Mensch. 1001 Ideen."
-  ogDescription="15 Jahre Führung. 3 Firmen gegründet & verkauft. Baut mit KI-Agenten, liefert was sonst Teams brauchen. Direkt, persönlich, aus St. Gallen."
+  ogTitle="Marco Calzavara | Ideen mit Richtung"
+  ogDescription="Marco Calzavara verbindet Führungserfahrung, Gestaltung und KI zu digitalen Lösungen mit persönlicher Verantwortung."
   ogType="profile"
   ogImage="https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.jpg"
-  ogImageAlt="Marco Calzavara - Gründer von Nigredo"
+  ogImageAlt="Marco Calzavara, Gründer von Nigredo"
   ogImageWidth="768"
   ogImageHeight="1024"
-  twitterTitle="Ein Mensch. 1001 Ideen."
-  twitterDescription="Macher, Ideengeber und Gründer aus St. Gallen. Verwaltungsexpertise, KI und ein starkes IT-Netzwerk."
+  twitterTitle="Marco Calzavara | Ideen mit Richtung"
+  twitterDescription="Führungserfahrung, Gestaltung und KI, verbunden mit persönlicher Verantwortung."
   schema={schema}
   preloadImage="/assets/marco-calzavara-nigredo-st-gallen-500.avif"
   preloadImageType="image/avif"
@@ -98,10 +94,9 @@ const schema = JSON.stringify({
 
       <!-- Hero -->
       <div class="fade-up home-hero__inner about-hero__intro">
-        <span class="badge badge--pink">PROFIL</span>
         <h1 id="about-title" class="home-hero__title about-hero__title">
-          Ein Mensch.<br>
-          <span class="gradient-text">1001 Ideen.</span>
+          Ich sehe Möglichkeiten.<br>
+          <span class="gradient-text">Und bringe sie in Form.</span>
         </h1>
       </div>
 
@@ -116,7 +111,7 @@ const schema = JSON.stringify({
                 <source srcset="/assets/marco-calzavara-nigredo-st-gallen-500.webp 500w, /assets/marco-calzavara-nigredo-st-gallen-750.webp 750w, /assets/marco-calzavara-nigredo-st-gallen-1000.webp 1000w" sizes="(max-width: 600px) 204px, 252px" type="image/webp">
                 <img
                   src="/assets/marco-calzavara-nigredo-st-gallen.jpg"
-                  alt="Marco Calzavara – Gründer und Inhaber von Nigredo, St. Gallen"
+                  alt="Marco Calzavara, Gründer und Inhaber von Nigredo in St. Gallen"
                   class="au-photo-circle"
                   width="1086"
                   height="1086"
@@ -129,20 +124,20 @@ const schema = JSON.stringify({
           </div>
           <div class="au-profile-info">
             <h2 class="au-name">Marco Calzavara</h2>
-            <p class="au-role">Ideengeber. Vernetzer. Umsetzer.</p>
+            <p class="au-role">Gründer und direkter Ansprechpartner</p>
           </div>
         </div>
 
         <div class="au-content-column fade-up delay-150">
           <div class="au-statement">
             <blockquote class="hero-lead about-statement__quote">
-              Ich habe selten nur eine Idee. Aber meistens ziemlich schnell einen Anfang.
+              Ich erkenne schnell, wo etwas einfacher, klarer oder wirksamer werden kann. Dann bringe ich die richtigen Menschen und Werkzeuge zusammen.
             </blockquote>
           </div>
           
           <div class="au-bio">
             <p class="au-bio-intro">
-              Ich bin ein Macher mit Ideenüberschuss: kreativ, neugierig, manchmal unkonventionell und ziemlich allergisch gegen «Das haben wir schon immer so gemacht». Mich interessieren Möglichkeiten, bevor sie fertig sortiert sind. Und noch mehr interessiert mich, was daraus werden kann.
+              Mich interessieren digitale Lösungen, die einen spürbaren Unterschied machen. Dafür verbinde ich Führungserfahrung, Verwaltungswissen, Gestaltung und KI mit einem belastbaren Netzwerk aus Informatikfachleuten.
             </p>
             
             <div class="au-bio-more" data-bio-more>
@@ -158,13 +153,13 @@ const schema = JSON.stringify({
               <div id="au-bio-more-content" class="au-bio-more__panel" hidden data-bio-more-panel>
                 <div class="au-bio-more__content">
                   <p>
-                    Hauptberuflich arbeite ich seit 2009 bei der IV Stelle und bin seit 2011 in der Führung. Heute leite ich ein Expertenteam und bin für Abteilungsentwicklung zuständig. Das hat mich geprägt: klar denken, Menschen mitnehmen, Komplexität ordnen und Lösungen so bauen, dass sie im Alltag wirklich funktionieren.
+                    Seit 2009 arbeite ich bei der IV-Stelle, seit 2011 in einer Führungsfunktion. Heute leite ich ein Expertenteam und verantworte die Weiterentwicklung einer Abteilung. Diese Arbeit hat meinen Blick geprägt: Komplexität ordnen, Menschen einbeziehen und Entscheidungen so treffen, dass sie im Alltag tragen.
                   </p>
                   <p>
-                    Daneben entstehen Unternehmen, Projekte und digitale Lösungen. Ich habe mehrere Firmen gegründet, einige verkauft, viel umgesetzt und dabei noch mehr gelernt. Mit Nigredo verbinde ich Ideen, KI, Gestaltung und starke Informatikfachleute. Mit einem Kollegen führe ich ausserdem die HappyPath GmbH, eine schweizweite Softwarelösung für Sozialversicherungen.
+                    Parallel dazu habe ich Unternehmen gegründet, aufgebaut und verkauft. Mit Nigredo verbinde ich Ideen, Gestaltung, KI und technische Umsetzung. Gemeinsam mit einem Geschäftspartner führe ich zudem die HappyPath GmbH, eine schweizweit eingesetzte Softwarelösung für Sozialversicherungen.
                   </p>
                   <p>
-                    Ich muss nicht alles allein können. Aber ich muss erkennen, was möglich ist, die richtigen Menschen zusammenbringen und dafür sorgen, dass etwas passiert. Wenn ich etwas anpacke, bleibt es nicht monatelang in schönen Konzepten liegen. Kein grosses Theater. Lieber gute Arbeit, die man zeigen kann.
+                    Ich arbeite bewusst mit den passenden Fachleuten zusammen. Meine Aufgabe ist es, Möglichkeiten früh zu erkennen, die richtigen Kompetenzen zu verbinden und Verantwortung für das Ergebnis zu übernehmen.
                   </p>
                   <button type="button" class="au-bio-more__toggle au-bio-more__toggle--close" data-bio-more-close>
                     Weniger anzeigen
@@ -181,48 +176,47 @@ const schema = JSON.stringify({
         <div class="au-stat-card">
           <div class="au-stat-inner">
             <span class="au-stat-value">{leadershipYears}</span>
-            <span class="au-stat-desc">Jahre Führung seit {leadershipSinceYear}</span>
+            <span class="au-stat-desc">Jahre Führungserfahrung</span>
           </div>
         </div>
         <div class="au-stat-card">
           <div class="au-stat-inner">
             <span class="au-stat-value">3×</span>
-            <span class="au-stat-desc">Firmen gegründet, aufgebaut, verkauft</span>
+            <span class="au-stat-desc">Unternehmen gegründet, aufgebaut und verkauft</span>
           </div>
         </div>
         <div class="au-stat-card">
           <div class="au-stat-inner">
             <span class="au-stat-value">1</span>
-            <span class="au-stat-desc">Ideengeber, Netzwerk, direkte Verantwortung</span>
+            <span class="au-stat-desc">Direkter Ansprechpartner</span>
           </div>
         </div>
         <div class="au-stat-card">
           <div class="au-stat-inner">
             <span class="au-stat-value">∞</span>
-            <span class="au-stat-desc">Neugier, Initiative und Umsetzungsdrang</span>
+            <span class="au-stat-desc">Neugier auf gute Lösungen</span>
           </div>
         </div>
       </div>
 
       <!-- Principles -->
       <div class="mt-80 fade-up delay-300">
-        <span class="badge badge--pink">PRINZIPIEN</span>
         <h2>Woran ich glaube.</h2>
         <div class="grid-3">
           <article class="card au-principle-card">
             <div class="au-principle-number">01</div>
-            <h3><span>Anpacken</span> schlägt Abwarten.</h3>
-            <p class="au-principle-text">Viele gute Ideen scheitern nicht an der Technik, sondern daran, dass niemand den ersten Schritt macht.</p>
+            <h3><span>Anpacken</span> schafft Bewegung.</h3>
+            <p class="au-principle-text">Gute Ideen gewinnen erst an Wert, wenn jemand den ersten Schritt macht.</p>
           </article>
           <article class="card au-principle-card">
             <div class="au-principle-number">02</div>
             <h3>Technik braucht <span>Richtung</span>.</h3>
-            <p class="au-principle-text">KI, Software und gute Leute können viel. Entscheidend ist, wofür man sie einsetzt.</p>
+            <p class="au-principle-text">Entscheidend ist nicht, was möglich ist, sondern was für Menschen und Aufgabe sinnvoll ist.</p>
           </article>
           <article class="card au-principle-card">
             <div class="au-principle-number">03</div>
-            <h3>Kein Theater. <span>Ergebnis</span>.</h3>
-            <p class="au-principle-text">Klar denken, schnell starten, sauber umsetzen. Am Ende soll etwas stehen, das man gern zeigt.</p>
+            <h3><span>Qualität</span> zeigt sich im Ergebnis.</h3>
+            <p class="au-principle-text">Inhalt, Gestaltung und Technik müssen gemeinsam überzeugen.</p>
           </article>
         </div>
       </div>
@@ -230,8 +224,8 @@ const schema = JSON.stringify({
       <!-- CTA -->
       <div class="section about-final-section fade-up">
         <div class="section-cta about-final-cta">
-          <span class="cta-label">Und jetzt?</span>
-          <h2>Noch keine fertige Idee?<br><span>Genau richtig.</span></h2>
+          <span class="cta-label">Direkter Austausch</span>
+          <h2>Eine gute Idee braucht<br><span>noch keinen fertigen Plan.</span></h2>
           <div class="hero-cta-group" style="justify-content: center;">
             <a href="/kontakt/" class="btn btn-primary">Direkt schreiben</a>
             <a href="/referenzen/" class="btn btn-ghost">Projekte ansehen</a>
@@ -284,10 +278,10 @@ const schema = JSON.stringify({
 
 <style>
   .about-hero {
-    --about-a: #ffb830;
-    --about-b: #ff5030;
-    --about-c: #e0246a;
-    animation: aboutCycle 90s ease-in-out infinite;
+    --about-a: var(--brand-sun);
+    --about-b: var(--brand-coral);
+    --about-c: var(--brand-pink);
+    animation: none;
     padding-top: var(--hero-offset-top-breadcrumb);
     padding-bottom: var(--hero-offset-bottom);
   }
@@ -323,16 +317,7 @@ const schema = JSON.stringify({
   }
 
   .about-hero .gradient-text {
-    background: linear-gradient(
-      90deg,
-      var(--about-a) 0%,
-      color-mix(in srgb, var(--about-a) 84%, var(--about-b)) 14%,
-      color-mix(in srgb, var(--about-a) 58%, var(--about-b)) 28%,
-      color-mix(in srgb, var(--about-a) 24%, var(--about-b)) 44%,
-      color-mix(in srgb, var(--about-b) 90%, var(--about-c)) 64%,
-      color-mix(in srgb, var(--about-b) 62%, var(--about-c)) 80%,
-      var(--about-c) 100%
-    );
+    background: var(--brand-gradient-warm);
     background-size: 100% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -366,48 +351,39 @@ const schema = JSON.stringify({
     top: 132px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .au-photo-container {
     position: relative;
-    width: 252px;
-    height: 252px;
-    margin-bottom: 26px;
+    width: min(100%, 304px);
+    aspect-ratio: 4 / 5;
+    height: auto;
+    margin: 0 0 28px 14px;
   }
 
   .au-photo-aura {
     position: absolute;
-    inset: -12px;
-    background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--about-b) 78%, white 10%) 0%,
-      color-mix(in srgb, var(--about-b) 58%, black 14%) 100%
-    );
-    border-radius: 50%;
-    filter: blur(18px);
-    opacity: 0.16;
-    animation: aura-pulse 8s infinite alternate ease-in-out;
-  }
-
-  @keyframes aura-pulse {
-    0% { transform: scale(1); opacity: 0.15; }
-    100% { transform: scale(1.1); opacity: 0.25; }
+    inset: 18px 14px -18px -14px;
+    background: var(--brand-gradient-warm);
+    border-radius: var(--radius-lg);
+    filter: none;
+    opacity: 0.82;
   }
 
   .au-photo-circle-wrap {
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: var(--radius-lg);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: #050505;
+    background: #111014;
     z-index: 1;
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.04),
-      0 18px 45px rgba(0, 0, 0, 0.28);
+      0 8px 8px rgba(0, 0, 0, 0.22);
   }
 
   .au-photo-circle {
@@ -433,9 +409,9 @@ const schema = JSON.stringify({
 
   .au-role {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.42);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    color: var(--text-soft);
+    letter-spacing: 0;
+    text-transform: none;
     margin: 0;
   }
 
@@ -446,22 +422,21 @@ const schema = JSON.stringify({
   }
 
   .au-statement .about-statement__quote {
-    max-width: calc(100% + 32px);
+    max-width: var(--au-copy-max-width);
     box-sizing: border-box;
     font-size: var(--lead-size);
     line-height: 1.65;
     color: rgba(245, 245, 247, 0.92);
     font-style: italic;
-    margin: 0 0 0 -32px;
-    padding: 28px 32px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.016)),
-      #0a0a0c;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.035),
-      0 18px 45px rgba(0, 0, 0, 0.22);
+    margin: 0;
+    padding: 0 0 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background: transparent;
+    box-shadow: none;
   }
 
   .au-bio p {
@@ -493,7 +468,7 @@ const schema = JSON.stringify({
     padding: 0;
     border: 0;
     background: transparent;
-    color: rgba(255, 255, 255, 0.72);
+    color: var(--text-body);
     font-size: 0.92rem;
     font-weight: 700;
     line-height: 1.25;
@@ -552,17 +527,18 @@ const schema = JSON.stringify({
   .au-stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 18px;
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: clamp(68px, 7vw, 84px);
   }
 
   .au-stat-card {
     padding: 0;
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.016)),
-      #0a0a0c;
+    border-radius: 0;
+    border: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    background: transparent;
     transition:
       transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
       border-color 0.35s ease,
@@ -571,15 +547,13 @@ const schema = JSON.stringify({
   }
 
   .au-stat-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.16);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
-      #0b0b0d;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 28px 60px rgba(0, 0, 0, 0.32);
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.018);
+    box-shadow: none;
   }
+
+  .au-stat-card:first-child { border-left: 0; }
 
   .au-stat-inner {
     padding: 30px 24px;
@@ -606,7 +580,7 @@ const schema = JSON.stringify({
 
   .au-stat-desc {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.48);
+    color: var(--text-faint);
     line-height: 1.45;
   }
 
@@ -616,14 +590,13 @@ const schema = JSON.stringify({
 
   /* Principles specific */
   .au-principle-card {
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.018)),
-      #0a0a0c;
+    padding: 28px 0 0;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background: transparent;
     isolation: isolate;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.035),
-      0 18px 45px rgba(0, 0, 0, 0.22);
+    box-shadow: none;
     height: 100%;
     box-sizing: border-box;
   }
@@ -634,14 +607,10 @@ const schema = JSON.stringify({
   }
 
   .au-principle-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.16);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.022)),
-      #0b0b0d;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 28px 60px rgba(0, 0, 0, 0.32);
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.18);
+    background: transparent;
+    box-shadow: none;
   }
 
   .au-principle-number {
@@ -672,21 +641,21 @@ const schema = JSON.stringify({
   .au-principle-card h3 span {
     background: none;
     -webkit-text-fill-color: rgba(255, 255, 255, 0.72);
-    color: rgba(255, 255, 255, 0.72);
+    color: var(--text-body);
     font-style: normal;
   }
 
   .au-principle-text {
-    font-size: 0.95rem;
-    line-height: 1.62;
-    color: rgba(255, 255, 255, 0.55);
+    font-size: 1rem;
+    line-height: 1.68;
+    color: var(--text-soft);
     margin: 0;
   }
 
   .about-final-section {
     margin-top: clamp(60px, 7vw, 78px);
     padding-top: 0;
-    padding-bottom: clamp(72px, 7vw, 96px);
+    padding-bottom: var(--section-py-md);
   }
 
   .about-final-cta {
@@ -694,19 +663,19 @@ const schema = JSON.stringify({
   }
 
   .about-final-cta .cta-label {
-    color: rgba(255, 255, 255, 0.42);
+    color: var(--text-faint);
   }
 
   .about-final-cta h2 {
     color: #f5f5f7;
-    font-size: clamp(2.25rem, 4.5vw, 3.7rem);
+    font-size: var(--display-title);
     line-height: 1.04;
     letter-spacing: 0;
     margin-bottom: 0;
   }
 
   .about-final-cta h2 span {
-    color: rgba(255, 255, 255, 0.62);
+    color: var(--text-soft);
   }
 
   .about-final-cta .hero-cta-group {
@@ -793,9 +762,9 @@ const schema = JSON.stringify({
     }
 
     .au-photo-container {
-      width: 204px;
-      height: 204px;
-      margin-bottom: 18px;
+      width: min(78vw, 280px);
+      height: auto;
+      margin: 0 0 24px 12px;
     }
 
     .au-statement .about-statement__quote {
@@ -810,6 +779,18 @@ const schema = JSON.stringify({
       font-size: 2.5rem;
     }
 
+    .au-stats-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .au-stat-card:nth-child(odd) {
+      border-left: 0;
+    }
+
+    .au-stat-card:nth-child(n + 3) {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
     .about-final-section {
       margin-top: 56px;
       padding-top: 0;
@@ -817,7 +798,7 @@ const schema = JSON.stringify({
     }
 
     .about-final-cta h2 {
-      font-size: clamp(1.8rem, 11vw, 2.5rem);
+      font-size: var(--display-title);
     }
   }
 </style>

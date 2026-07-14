@@ -14,13 +14,19 @@ Diese Regeln sichern die technische Qualität der Website ab, ohne das sichtbare
 - `html lang="de-CH"`
 - moderner `viewport`
 - `title`, `description`, `canonical`
+- kompakte Seitentitel und eindeutige Titel/Descriptions
+- Canonical-URL passend zur tatsächlich gebauten Route
 - `hreflang="de-CH"` und `x-default`
 - Open Graph und Twitter Cards
 - genau eine `H1`
-- JSON-LD vorhanden
+- JSON-LD vorhanden und mit der Canonical-URL der Seite verknüpft
 - keine `SearchAction`, solange keine Suche existiert
 - `img` mit `width`, `height` und `alt`
 - Mobile-Menü mit `aria-label`, `aria-controls` und `aria-expanded`
+- vollständige Sitemap-Parität ohne `noindex`- oder verwaiste URLs
+- funktionierende interne Links und mindestens ein interner Verweis auf jede indexierbare Seite
+- explizite Freigabe der zentralen OpenAI-Crawler in `robots.txt`
+- Verlinkung von `llms.txt` und `llms-full.txt` im Dokumentkopf
 - Trailing-Slash-Konsistenz in `llms.txt` und `llms-full.txt`
 
 ## Inhalte und Struktur

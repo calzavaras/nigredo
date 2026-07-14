@@ -30,14 +30,13 @@ if (pageNumber > 1) {
     <Breadcrumb items={breadcrumbItems} />
 
     <div class="fade-up home-hero__inner refs-intro">
-      <span class="badge badge--yellow">GEBAUT. NICHT VERSPROCHEN.</span>
 
       <h1 id="referenzen-title" class="home-hero__title refs-hero__title">
         Echte Aufgaben.<br>
         <span class="gradient-text">Echte Ergebnisse.</span>
       </h1>
       <p class="hero-lead refs-hero__lead">
-        Keine Demos, keine schönen Attrappen. Echte Aufträge mit Kontext, Termindruck und Reibung. Jedes Projekt hier löst ein konkretes Problem eines konkreten Menschen. Gut möglich, dass du dein eigenes wiedererkennst.
+        Websites, KI-Anwendungen und digitale Werkzeuge für konkrete Anforderungen. Jede Referenz zeigt die Ausgangslage, den gewählten Weg und das Ergebnis.
       </p>
       {pageCount > 1 && (
         <p class="refs-page-kicker">Seite {pageNumber} von {pageCount}</p>
@@ -114,10 +113,10 @@ if (pageNumber > 1) {
 
 <style is:global>
   .refs-hero {
-    --refs-a: #00d4c8;
-    --refs-b: #7c38ff;
-    --refs-c: #ff5030;
-    animation: refsCycle 90s ease-in-out infinite;
+    --refs-a: var(--brand-cyan);
+    --refs-b: var(--brand-violet);
+    --refs-c: var(--brand-coral);
+    animation: none;
   }
 
   .refs-hero {
@@ -158,18 +157,7 @@ if (pageNumber > 1) {
   }
 
   .refs-hero .gradient-text {
-    background: linear-gradient(
-      90deg,
-      var(--refs-a) 0%,
-      color-mix(in srgb, var(--refs-a) 84%, var(--refs-b)) 14%,
-      color-mix(in srgb, var(--refs-a) 62%, var(--refs-b)) 28%,
-      color-mix(in srgb, var(--refs-a) 34%, var(--refs-b)) 42%,
-      color-mix(in srgb, var(--refs-a) 12%, var(--refs-b)) 54%,
-      color-mix(in srgb, var(--refs-b) 78%, var(--refs-c)) 66%,
-      color-mix(in srgb, var(--refs-b) 54%, var(--refs-c)) 78%,
-      color-mix(in srgb, var(--refs-b) 28%, var(--refs-c)) 90%,
-      var(--refs-c) 100%
-    );
+    background: var(--brand-gradient-mixed);
     background-size: 100% auto;
 
     background-clip: text;
@@ -200,7 +188,7 @@ if (pageNumber > 1) {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.44);
+    color: var(--text-faint);
   }
 
   .refs-grid {
@@ -237,9 +225,7 @@ if (pageNumber > 1) {
     .ref-main-card:hover {
       transform: translateY(-4px);
       border-color: rgba(255, 255, 255, 0.16);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.05),
-        0 28px 60px rgba(0, 0, 0, 0.32);
+      box-shadow: var(--shadow-card-hover);
     }
     .ref-main-card:hover .ref-main-card-img img {
       transform: scale(1.04);
@@ -313,7 +299,7 @@ if (pageNumber > 1) {
   }
 
   .ref-main-card-sub {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     color: var(--secondary-accent);
     margin-bottom: 16px;
     font-weight: 500;
@@ -328,9 +314,9 @@ if (pageNumber > 1) {
   }
 
   .ref-main-card-desc {
-    font-size: 0.92rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    line-height: 1.58;
+    line-height: 1.65;
     margin: 0;
     flex: 1;
   }
@@ -376,7 +362,8 @@ if (pageNumber > 1) {
     min-width: 44px;
     height: 44px;
     padding: 0 16px;
-    border-radius: 999px;
+    box-sizing: border-box;
+    border-radius: var(--radius-pill);
     border: 1px solid rgba(255, 255, 255, 0.12);
     background: rgba(255, 255, 255, 0.03);
     display: inline-flex;
@@ -404,8 +391,8 @@ if (pageNumber > 1) {
   }
 
   .refs-final-section {
-    padding-top: clamp(48px, 6vw, 72px);
-    padding-bottom: clamp(72px, 7vw, 96px);
+    padding-top: var(--section-py-sm);
+    padding-bottom: var(--section-py-md);
   }
 
   .refs-final-cta {
@@ -413,19 +400,19 @@ if (pageNumber > 1) {
   }
 
   .refs-final-cta .cta-label {
-    color: rgba(255, 255, 255, 0.42);
+    color: var(--text-faint);
   }
 
   .refs-final-cta h2 {
     color: #f5f5f7;
-    font-size: clamp(2.25rem, 4.5vw, 3.7rem);
+    font-size: var(--display-title);
     line-height: 1.04;
     letter-spacing: 0;
     margin-bottom: 0;
   }
 
   .refs-final-cta h2 span {
-    color: rgba(255, 255, 255, 0.62);
+    color: var(--text-soft);
   }
 
   .refs-final-cta .hero-cta-group {
@@ -506,7 +493,7 @@ if (pageNumber > 1) {
     }
 
     .refs-final-cta h2 {
-      font-size: clamp(1.8rem, 11vw, 2.5rem);
+      font-size: var(--display-title);
     }
   }
 </style>

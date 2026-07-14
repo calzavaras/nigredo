@@ -7,51 +7,44 @@ const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/';
 const faqEntries = [
   {
     id: 'faq-cost',
-    category: 'Website-Kosten',
     question: 'Was kostet eine professionelle Website?',
-    answer: 'Eine professionelle Website hat keinen seriösen Einheitspreis. Für KMU und Selbständige in der Schweiz beginnt eine sauber umgesetzte Website meist im unteren vierstelligen Bereich. Entscheidend sind Umfang, Inhalt, Gestaltung, Technik und das Ziel der Website.',
+    answer: 'Der Preis folgt der Aufgabe. Eine kompakte Website beginnt meist im unteren vierstelligen Bereich. Konzept, Text, individuelle Gestaltung und zusätzliche Funktionen erhöhen den Aufwand.',
     href: '/haeufige-fragen/was-kostet-eine-professionelle-website/'
   },
   {
     id: 'faq-timeline',
-    category: 'Projektablauf',
     question: 'Wie lange dauert die Erstellung einer professionellen Website?',
-    answer: 'Eine schlanke professionelle Website kann in wenigen Wochen online sein. Mehr Zeit braucht es, wenn Texte, Struktur, Bildmaterial, SEO oder Freigaben zuerst erarbeitet werden müssen. Der wichtigste Beschleuniger ist ein klarer Umfang.',
+    answer: 'Eine kompakte Website kann in wenigen Wochen online sein. Wie schnell es geht, bestimmen vor allem vorhandene Inhalte, klare Zuständigkeiten und kurze Freigabewege.',
     href: '/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/'
   },
   {
     id: 'faq-maintenance',
-    category: 'Pflege & CMS',
-    question: 'Kann ich meine professionelle Website später selbst bearbeiten und pflegen?',
-    answer: 'Ja, viele Inhalte lassen sich später selbst pflegen, wenn die Website entsprechend geplant wird. Ob ein CMS sinnvoll ist, hängt davon ab, wie oft Inhalte geändert werden und wer intern damit arbeitet. Nicht jede Website braucht dafür ein grosses System.',
+    question: 'Kann ich meine Website später selbst bearbeiten?',
+    answer: 'Ja. Texte, Bilder, Teamprofile oder Referenzen lassen sich auf Wunsch selbst pflegen. Ob dafür ein CMS sinnvoll ist, entscheidet die tatsächliche Nutzung im Alltag.',
     href: '/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/'
   },
   {
     id: 'faq-custom-or-builder',
-    category: 'Baukasten oder individuell',
     question: 'Brauche ich eine individuelle Website oder reicht ein Baukasten?',
-    answer: 'Ein Baukasten kann für eine sehr einfache Präsenz reichen. Eine individuelle Website lohnt sich, wenn Inhalt, Vertrauen, Gestaltung, Suchmaschinenoptimierung, technische Qualität oder spätere Erweiterungen wichtig sind.',
+    answer: 'Ein Baukasten genügt für einfache Auftritte mit wenig Veränderung. Eine individuelle Website lohnt sich, wenn Inhalt, Gestaltung, Funktionen und künftige Erweiterungen genau zur Aufgabe passen sollen.',
     href: '/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/'
   },
   {
     id: 'faq-google',
-    category: 'Sichtbarkeit & SEO',
     question: 'Wird meine Website bei Google gefunden?',
-    answer: 'Eine Website ist nicht automatisch gut auffindbar, nur weil sie online ist. Gefunden wird, was technisch sauber gebaut, inhaltlich klar und auf echte Suchbegriffe ausgerichtet ist. Suchmaschinenoptimierung gehört deshalb in die Umsetzung und ist kein Zusatz am Ende.',
+    answer: 'Eine gute Platzierung entsteht nicht allein durch den Launch. Google muss die Website technisch erfassen, ihren Inhalt verstehen und für konkrete Suchanfragen als relevant einstufen können.',
     href: '/haeufige-fragen/wird-meine-website-bei-google-gefunden/'
   },
   {
     id: 'faq-running-costs',
-    category: 'Betrieb & Unterhalt',
-    question: 'Was kostet der laufende Betrieb einer Website?',
-    answer: 'Der laufende Betrieb kostet meist deutlich weniger als die Erstellung. Grundlegend fallen Domain und Hosting an, oft nur wenige Franken pro Monat. Wartung, Updates und inhaltliche Pflege kommen je nach Technik dazu. Eine schlank gebaute Website verursacht im Betrieb sehr tiefe Fixkosten.',
+    question: 'Welche laufenden Kosten hat eine Website?',
+    answer: 'Domain und Hosting bilden die festen Grundkosten. Wartung, technische Updates und redaktionelle Pflege kommen nur hinzu, wenn Aufbau und Nutzung der Website sie erfordern.',
     href: '/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/'
   },
   {
     id: 'faq-privacy',
-    category: 'Datenschutz & Recht',
     question: 'Was muss meine Website beim Datenschutz beachten?',
-    answer: 'Eine Website muss transparent machen, welche Daten sie bearbeitet. Dazu gehören meist eine verständliche Datenschutzerklärung, klare Anbieterangaben und ein bewusster Umgang mit Cookies, Tracking und externen Diensten. Massgeblich ist das Schweizer Datenschutzgesetz, bei EU-Besuchern zusätzlich die DSGVO.',
+    answer: 'Eine Website sollte nur notwendige Daten bearbeiten und alle Datenflüsse verständlich offenlegen. Entscheidend sind eine passende Datenschutzerklärung sowie ein bewusster Umgang mit Cookies, Analyse und externen Diensten.',
     href: '/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/'
   }
 ];
@@ -72,7 +65,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
       "name": "Häufige Fragen zu professionellen Websites | Nigredo",
-      "description": "Klare Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites für KMU und Selbständige in der Schweiz.",
+      "description": "Klare Antworten zu Kosten, Dauer, Pflege, Baukasten, Google und Datenschutz für KMU und Selbstständige in der Schweiz.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "mainEntity": { "@id": `${pageUrl}#faq` },
@@ -80,7 +73,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-16",
-      "dateModified": "2026-06-17",
+      "dateModified": "2026-07-14",
       "isAccessibleForFree": true,
       "significantLink": faqEntries.map((entry) => `https://www.nigredo.ch${entry.href}`)
     },
@@ -115,12 +108,12 @@ const schema = JSON.stringify({
 
 <Layout
   title="Häufige Fragen zu professionellen Websites | Nigredo"
-  description="Klare Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites für KMU und Selbständige in der Schweiz."
+  description="Klare Antworten zu Kosten, Dauer, Pflege, Baukasten, Google und Datenschutz für KMU und Selbstständige in der Schweiz."
   canonical={pageUrl}
   ogTitle="Häufige Fragen zu professionellen Websites | Nigredo"
-  ogDescription="Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites. Prägnant, verständlich und hilfreich für KMU und Selbständige."
+  ogDescription="Klare Antworten zu Kosten, Dauer, Pflege, Baukasten, Google und Datenschutz für KMU und Selbstständige in der Schweiz."
   twitterTitle="Häufige Fragen zu professionellen Websites | Nigredo"
-  twitterDescription="Antworten zu Kosten, Dauer, Baukasten-Alternativen und Pflege professioneller Websites."
+  twitterDescription="Antworten zu Kosten, Dauer, Pflege, Baukasten, Google und Datenschutz."
   schema={schema}
 >
   <section class="section faq-overview" aria-labelledby="faq-title">
@@ -132,10 +125,9 @@ const schema = JSON.stringify({
       ]} />
 
       <div class="faq-overview__intro fade-up">
-        <span class="badge badge--yellow">FAQ</span>
         <h1 id="faq-title">Häufige <span class="gradient-text">Fragen.</span></h1>
         <p>
-          Hier findest du klare Antworten auf häufige Fragen rund um professionelle Websites, von Aufwand und Ablauf bis zur passenden Umsetzungsform, späteren Pflege und Weiterentwicklung.
+          Von Budget und Ablauf bis Sichtbarkeit, Pflege und Datenschutz: Hier findest du verständliche Antworten, damit du fundiert entscheiden kannst, was deine Website braucht.
         </p>
       </div>
 
@@ -148,7 +140,6 @@ const schema = JSON.stringify({
           >
             <div class="faq-card__topline">
               <span class="faq-card__number">{String(index + 1).padStart(2, '0')}</span>
-              <span class="faq-card__category">{entry.category}</span>
             </div>
 
             <div class="faq-card__body">
@@ -157,10 +148,15 @@ const schema = JSON.stringify({
             </div>
 
             <span class="faq-card__link">
-              Mehr lesen
+              Antwort lesen
             </span>
           </a>
         ))}
+      </div>
+
+      <div class="faq-overview__cta fade-up">
+        <p>Noch etwas offen?</p>
+        <a href="/kontakt/" class="btn btn-primary">Frage persönlich klären</a>
       </div>
 
     </div>
@@ -169,17 +165,17 @@ const schema = JSON.stringify({
 
 <style>
   .faq-overview {
-    --faq-a: #695cff;
-    --faq-b: #a05eff;
-    --faq-c: #ff83cf;
-    animation: faqCycle 90s ease-in-out infinite;
+    --faq-a: var(--brand-blue);
+    --faq-b: var(--brand-violet);
+    --faq-c: var(--brand-pink);
+    animation: none;
   }
 
   .faq-overview {
     position: relative;
     min-height: auto;
     padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: clamp(84px, 8vw, 112px);
+    padding-bottom: var(--section-py-md);
     overflow: hidden;
   }
 
@@ -201,8 +197,8 @@ const schema = JSON.stringify({
     min-height: 26px;
     margin-bottom: 0.9rem;
     padding: 4px 10px;
-    font-size: 0.54rem;
-    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
     color: rgba(246, 240, 255, 0.96);
     border-color: color-mix(in srgb, var(--faq-b) 36%, rgba(255, 255, 255, 0.22));
     background:
@@ -213,15 +209,7 @@ const schema = JSON.stringify({
   }
 
   .faq-overview__intro .gradient-text {
-    background: linear-gradient(
-      90deg,
-      var(--faq-a) 0%,
-      color-mix(in srgb, var(--faq-a) 78%, var(--faq-b)) 18%,
-      color-mix(in srgb, var(--faq-a) 34%, var(--faq-b)) 46%,
-      color-mix(in srgb, var(--faq-b) 74%, var(--faq-c)) 72%,
-      color-mix(in srgb, var(--faq-b) 28%, var(--faq-c)) 90%,
-      var(--faq-c) 100%
-    );
+    background: var(--brand-gradient-cool);
     background-size: 100% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -247,7 +235,7 @@ const schema = JSON.stringify({
   .faq-overview__intro p {
     max-width: 660px;
     margin: 0;
-    color: rgba(255, 255, 255, 0.66);
+    color: var(--text-body);
     font-size: var(--lead-size);
     line-height: 1.65;
   }
@@ -264,7 +252,7 @@ const schema = JSON.stringify({
     grid-template-rows: auto auto auto;
     gap: 24px;
     padding: clamp(24px, 3vw, 30px);
-    border-radius: 26px;
+    border-radius: var(--radius-xl);
     border: 1px solid rgba(255, 255, 255, 0.08);
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)),
@@ -312,15 +300,6 @@ const schema = JSON.stringify({
     line-height: 1;
   }
 
-  .faq-card__category {
-    color: rgba(255, 255, 255, 0.46);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    text-align: right;
-  }
-
   .faq-card__body h2 {
     max-width: 22ch;
     margin: 0 0 0.95rem;
@@ -332,8 +311,8 @@ const schema = JSON.stringify({
 
   .faq-card__body p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.62);
-    font-size: 0.99rem;
+    color: var(--text-soft);
+    font-size: 1rem;
     line-height: 1.72;
   }
 
@@ -345,7 +324,7 @@ const schema = JSON.stringify({
     align-items: center;
     justify-content: center;
     padding: 0 16px;
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
     color: rgba(255, 255, 255, 0.94);
     font-weight: 700;
     text-decoration: none;
@@ -403,7 +382,7 @@ const schema = JSON.stringify({
     .faq-card {
       gap: 20px;
       padding: 22px 20px;
-      border-radius: 22px;
+      border-radius: var(--radius-xl);
     }
 
     .faq-card__topline {
@@ -412,17 +391,13 @@ const schema = JSON.stringify({
       gap: 10px;
     }
 
-    .faq-card__category {
-      text-align: left;
-    }
-
     .faq-card__body h2 {
       max-width: none;
       font-size: 1.38rem;
     }
 
     .faq-card__body p {
-      font-size: 0.98rem;
+      font-size: 1rem;
       line-height: 1.68;
     }
 
@@ -430,6 +405,130 @@ const schema = JSON.stringify({
       width: auto;
       min-width: 148px;
       align-self: center;
+    }
+  }
+
+  /* Editorialer Fragenindex statt gleichförmiger Kartenwand */
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .faq-card {
+    grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr) auto;
+    grid-template-rows: auto;
+    align-items: start;
+    gap: clamp(24px, 5vw, 64px);
+    padding: var(--section-py-sm) 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .faq-card:hover,
+  .faq-card:focus-visible {
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(90deg, rgba(65, 101, 255, 0.045), transparent 70%);
+    box-shadow: none;
+  }
+
+  .faq-card__topline {
+    display: grid;
+    justify-content: start;
+    gap: 12px;
+  }
+
+  .faq-card__number {
+    color: color-mix(in srgb, var(--faq-a) 82%, white 8%);
+  }
+
+  .faq-card__body h2 {
+    max-width: 28ch;
+    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
+  }
+
+  .faq-card__body p {
+    max-width: 62ch;
+    color: var(--text-body);
+  }
+
+  .faq-card__link {
+    min-height: 44px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--text-body);
+    white-space: nowrap;
+  }
+
+  .faq-card__link::after {
+    content: '↗';
+    margin-left: 9px;
+    color: color-mix(in srgb, var(--faq-b) 78%, white 8%);
+  }
+
+  .faq-card:hover .faq-card__link,
+  .faq-card:focus-visible .faq-card__link {
+    transform: translateX(4px);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .faq-overview__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: clamp(56px, 7vw, 84px);
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .faq-overview__cta p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+    font-weight: 600;
+  }
+
+  @media (max-width: 760px) {
+    .faq-card {
+      grid-template-columns: 70px minmax(0, 1fr);
+      gap: 22px;
+    }
+
+    .faq-card__link {
+      grid-column: 2;
+      justify-self: start;
+    }
+
+    .faq-overview__cta {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .faq-card {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 28px 0;
+    }
+
+    .faq-card__topline,
+    .faq-card__link {
+      grid-column: 1;
+    }
+
+    .faq-card__link {
+      min-width: 0;
+      align-self: start;
     }
   }
 </style>

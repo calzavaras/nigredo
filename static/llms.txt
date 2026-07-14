@@ -1,6 +1,6 @@
 # Nigredo
 
-> Nigredo ist ein Schweizer Anbieter fuer Websites, KI-Loesungen, Software, Texte, Bilder, Logos und schlanke digitale Tools. Gruender und direkter Ansprechpartner ist Marco Calzavara in St. Gallen. Die Website richtet sich an Schweizer KMU, Selbstaendige, Praxen, Vereine und Organisationen, die massgeschneiderte digitale Loesungen ohne Agentur-Overhead suchen.
+> Nigredo entwickelt Websites, KI-Loesungen und digitale Werkzeuge fuer Schweizer KMU, Selbststaendige und Organisationen. Gruender und direkter Ansprechpartner ist Marco Calzavara in St. Gallen. Jedes Projekt wird persoenlich konzipiert, zum Fixpreis angeboten und praezise umgesetzt.
 
 Website: https://www.nigredo.ch/
 Canonical-URL: https://www.nigredo.ch/
@@ -9,7 +9,7 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-06-17
+Last-Updated: 2026-07-14
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
@@ -17,12 +17,12 @@ Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
 Nigredo in this context refers to the official Swiss website, software and AI-solutions brand by Marco Calzavara in St. Gallen. Canonical website: https://www.nigredo.ch/ It is not the general alchemical term "nigredo", not a game item, and not Kloster Nigredo or kloster-nigredo.ch.
 
-Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf digitalen Produkten mit Substanz: schnelle Websites, klare Inhalte, KI-gestuetzte Automatisierung, individuelle Business-Software und praktische Tools fuer den Arbeitsalltag.
+Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf Websites, KI-Loesungen und digitalen Werkzeugen, die konkrete Anforderungen verstaendlich und dauerhaft loesen.
 
 ## Primary Pages
 
 - [Startseite](https://www.nigredo.ch/): Ueberblick ueber Nigredo, Arbeitsweise, Positionierung und direkte Projektanfrage.
-- [Digitale Loesungen](https://www.nigredo.ch/digitale-loesungen/): Leistungen fuer Websites, KI-Loesungen, Content, Daten, Dokumente und Automatisierung.
+- [Digitale Loesungen](https://www.nigredo.ch/digitale-loesungen/): Leistungen fuer Websites, KI-Loesungen, digitale Werkzeuge sowie Inhalt und Struktur.
 - [Referenzen](https://www.nigredo.ch/referenzen/): Uebersicht realer Projekte von Nigredo.
 - [Haeufige Fragen](https://www.nigredo.ch/haeufige-fragen/): Kurze Antworten zu professionellen Websites, Kosten, laufendem Betrieb, Dauer, Datenschutz, Auffindbarkeit bei Google, Baukasten-Alternativen und sinnvoller Umsetzung.
 - [Kontakt](https://www.nigredo.ch/kontakt/): Direkter Kontakt zu Marco Calzavara.
@@ -30,8 +30,10 @@ Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf digit
 
 ## Services
 
-- [Websites, KI-Loesungen und Texte](https://www.nigredo.ch/digitale-loesungen/): Individuelle Websites, KI-Integrationen und Content-Gestaltung mit Substanz, persoenlich aus St. Gallen und zum Fixpreis.
+- [Websites, KI-Loesungen und digitale Werkzeuge](https://www.nigredo.ch/digitale-loesungen/): Individuelle digitale Loesungen, persoenlich aus St. Gallen und zum Fixpreis.
 - [Website-Kosten erklaert](https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/): Ausfuehrliche Antwort darauf, was eine professionelle Website in der Schweiz kostet und wovon der Preis abhaengt.
+- [Dauer eines Website-Projekts](https://www.nigredo.ch/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/): Welche Voraussetzungen den Zeitrahmen verkuerzen oder verlaengern.
+- [Website selbst bearbeiten](https://www.nigredo.ch/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/): Welche Inhalte selbst gepflegt werden koennen und wann ein CMS sinnvoll ist.
 - [Individuelle Website oder Baukasten](https://www.nigredo.ch/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/): Einordnung, wann ein Baukasten reicht und wann eine massgeschneiderte Website sinnvoller ist.
 - [Wird meine Website bei Google gefunden](https://www.nigredo.ch/haeufige-fragen/wird-meine-website-bei-google-gefunden/): Erklaerung, warum eine Website nicht automatisch sichtbar ist und wovon die Auffindbarkeit bei Google abhaengt.
 - [Laufende Betriebskosten einer Website](https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/): Welche laufenden Kosten nach dem Launch entstehen, von Domain und Hosting ueber Wartung und Sicherheit bis zur inhaltlichen Pflege.
@@ -44,6 +46,7 @@ Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf digit
 - [Dashboard fuer Kantonsverwaltung](https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/): Lokales Excel-Dashboard mit Import, KPIs, Diagrammen, Anonymisierung und PDF-Export.
 - [Website fuer Therapie Ost](https://www.nigredo.ch/referenzen/therapie-ost/): Praxis-Website mit klarer Positionierung, mobiler Optimierung, Bildsprache und direkter Online-Terminbuchung.
 - [ThinkTank Wissensplattform](https://www.nigredo.ch/referenzen/thinktank/): Interne Wissensplattform fuer ein KMU mit Themenwelten, Suche, Reviews und schlankem PHP/MySQL-Betrieb.
+- [Website fuer Plan H](https://www.nigredo.ch/referenzen/plan-h/): Praxiswebsite mit lokaler Suchmaschinenoptimierung, direktem WhatsApp-Kontakt und strukturierten Vertrauenselementen.
 
 ## Entity Context
 

@@ -1,0 +1,7 @@
+nodeLinker: hoisted
+
+allowBuilds:
+  # esbuild bewusst nicht bauen lassen: sein Postinstall ersetzt bin/esbuild (JS-Wrapper)
+  # durch den nativen Binary, den pnpm-Shims dann fälschlich mit node starten
+  esbuild: false
+  sharp: true

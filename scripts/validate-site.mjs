@@ -15,6 +15,12 @@ const errors = [];
 const warnings = [];
 const noindexCanonicals = [];
 const schemaDateModifiedByUrl = new Map();
+const htmlDocuments = [];
+const indexableCanonicals = new Set();
+const allCanonicals = new Set();
+const sitemapLocations = new Set();
+const titleOwners = new Map();
+const descriptionOwners = new Map();
 
 async function* walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -38,6 +44,23 @@ function addWarning(message) {
 
 function stripTags(value) {
   return value.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function addOwner(map, value, relativePath) {
+  if (!value) return;
+  const owners = map.get(value) ?? [];
+  owners.push(relativePath);
+  map.set(value, owners);
+}
+
+function expectedCanonicalForOutput(relativePath) {
+  const outputPath = relativePath.replace(/^public\//, '');
+  if (outputPath === 'index.html') return `${SITE_ORIGIN}/`;
+  if (outputPath === '404.html') return `${SITE_ORIGIN}/404/`;
+  if (outputPath.endsWith('/index.html')) {
+    return `${SITE_ORIGIN}/${outputPath.slice(0, -'index.html'.length)}`;
+  }
+  return `${SITE_ORIGIN}/${outputPath}`;
 }
 
 function getLocalPublicPath(url) {
@@ -118,8 +141,9 @@ function collectPageDateModified(parsed) {
   }
 }
 
-function validateJsonLd(html, relativePath) {
+function validateJsonLd(html, relativePath, canonical) {
   let jsonLdCount = 0;
+  let matchingPageNode = false;
 
   for (const match of html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi)) {
     jsonLdCount += 1;
@@ -143,10 +167,20 @@ function validateJsonLd(html, relativePath) {
     }
 
     collectPageDateModified(parsed);
+
+    for (const type of ['WebPage', 'CollectionPage', 'ContactPage', 'AboutPage', 'FAQPage']) {
+      for (const page of findSchemaNodesByType(parsed, type)) {
+        if (page?.['@id'] === `${canonical}#webpage` && page?.url === canonical) {
+          matchingPageNode = true;
+        }
+      }
+    }
   }
 
   if (jsonLdCount === 0) {
     addError(`${relativePath}: missing JSON-LD`);
+  } else if (canonical && !matchingPageNode) {
+    addError(`${relativePath}: missing JSON-LD page node matching canonical ${canonical}`);
   }
 }
 
@@ -199,6 +233,8 @@ async function validateHtml(html, relativePath) {
   const title = stripTags(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? '');
   if (!title) {
     addError(`${relativePath}: missing <title>`);
+  } else if (title.length > 65) {
+    addWarning(`${relativePath}: title length ${title.length} is above the compact 65-character guardrail`);
   }
 
   const description = html.match(/<meta[^>]+name="description"[^>]+content="([^"]*)"/i)?.[1] ?? '';
@@ -223,11 +259,26 @@ async function validateHtml(html, relativePath) {
     addError(`${relativePath}: missing canonical link`);
   } else {
     validateSiteUrl(canonical, relativePath, 'canonical');
+    if (relativePath !== 'public/404.html') {
+      const expectedCanonical = expectedCanonicalForOutput(relativePath);
+      if (canonical !== expectedCanonical) {
+        addError(`${relativePath}: canonical does not match output route (${expectedCanonical})`);
+      }
+    }
   }
 
   const robots = html.match(/<meta[^>]+name="robots"[^>]+content="([^"]+)"/i)?.[1] ?? '';
-  if (/noindex/i.test(robots) && canonical && relativePath !== 'public/404.html') {
-    noindexCanonicals.push(canonical);
+  const isNoindex = /noindex/i.test(robots);
+  if (canonical) {
+    allCanonicals.add(canonical);
+    htmlDocuments.push({ html, relativePath, canonical, isNoindex });
+    if (isNoindex) {
+      if (relativePath !== 'public/404.html') noindexCanonicals.push(canonical);
+    } else {
+      indexableCanonicals.add(canonical);
+      addOwner(titleOwners, title, relativePath);
+      addOwner(descriptionOwners, description, relativePath);
+    }
   }
 
   const hreflangDe = html.match(/<link[^>]+rel="alternate"[^>]+hreflang="de-CH"[^>]+href="([^"]+)"/i)?.[1];
@@ -265,8 +316,14 @@ async function validateHtml(html, relativePath) {
     addError(`${relativePath}: expected exactly one <h1>, found ${h1Count}`);
   }
 
-  validateJsonLd(html, relativePath);
+  validateJsonLd(html, relativePath, relativePath === 'public/404.html' ? undefined : canonical);
   await validateOpenGraphImage(html, relativePath);
+
+  for (const llmsFile of ['/llms.txt', '/llms-full.txt']) {
+    if (!html.includes(`rel="alternate" type="text/plain" href="${llmsFile}"`)) {
+      addError(`${relativePath}: missing LLM alternate link for ${llmsFile}`);
+    }
+  }
 
   if (/SearchAction/i.test(html) || /urlTemplate":"https:\/\/www\.nigredo\.ch\/\?q=/.test(html)) {
     addError(`${relativePath}: SearchAction schema should not be present`);
@@ -330,6 +387,7 @@ async function validateSitemap() {
     const loc = block.match(/<loc>([^<]+)<\/loc>/)?.[1];
     if (loc) {
       validateSiteUrl(loc, 'public/sitemap-0.xml', 'sitemap loc');
+      sitemapLocations.add(loc);
     } else {
       addError('public/sitemap-0.xml: sitemap entry is missing loc');
     }
@@ -361,6 +419,94 @@ async function validateSitemap() {
   for (const canonical of noindexCanonicals) {
     if (sitemap.includes(`<loc>${canonical}</loc>`)) {
       addError(`public/sitemap-0.xml: noindex URL must not be included -> ${canonical}`);
+    }
+  }
+
+  for (const canonical of indexableCanonicals) {
+    if (!sitemapLocations.has(canonical)) {
+      addError(`public/sitemap-0.xml: missing indexable canonical -> ${canonical}`);
+    }
+  }
+
+  for (const location of sitemapLocations) {
+    if (!indexableCanonicals.has(location)) {
+      addError(`public/sitemap-0.xml: URL has no indexable HTML page -> ${location}`);
+    }
+  }
+}
+
+async function validateInternalLinks() {
+  const inboundLinks = new Map([...indexableCanonicals].map((canonical) => [canonical, new Set()]));
+
+  for (const document of htmlDocuments) {
+    for (const match of document.html.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>/gi)) {
+      const href = match[1].trim();
+      if (!href || href.startsWith('#') || /^(mailto:|tel:|javascript:)/i.test(href)) continue;
+
+      let target;
+      try {
+        target = new URL(href, document.canonical);
+      } catch {
+        addError(`${document.relativePath}: invalid link href -> ${href}`);
+        continue;
+      }
+
+      if (target.origin !== SITE_ORIGIN) continue;
+      target.search = '';
+      target.hash = '';
+      const targetUrl = target.href;
+
+      if (allCanonicals.has(targetUrl)) {
+        if (targetUrl !== document.canonical && inboundLinks.has(targetUrl)) {
+          inboundLinks.get(targetUrl).add(document.canonical);
+        }
+        continue;
+      }
+
+      const slashVariant = target.pathname.endsWith('/') ? undefined : `${target.origin}${target.pathname}/`;
+      if (slashVariant && allCanonicals.has(slashVariant)) {
+        addError(`${document.relativePath}: internal page link is missing trailing slash -> ${href}`);
+        continue;
+      }
+
+      const assetPath = join(PUBLIC_DIR, decodeURIComponent(target.pathname).replace(/^\//, ''));
+      if (!existsSync(assetPath)) {
+        addError(`${document.relativePath}: broken internal link -> ${href}`);
+      }
+    }
+  }
+
+  for (const [canonical, sources] of inboundLinks) {
+    if (canonical !== `${SITE_ORIGIN}/` && sources.size === 0) {
+      addError(`orphan indexable page without an inbound internal link -> ${canonical}`);
+    }
+  }
+}
+
+function validateUniqueMetadata() {
+  for (const [title, owners] of titleOwners) {
+    if (owners.length > 1) {
+      addError(`duplicate title "${title}" -> ${owners.join(', ')}`);
+    }
+  }
+
+  for (const [description, owners] of descriptionOwners) {
+    if (owners.length > 1) {
+      addError(`duplicate meta description -> ${owners.join(', ')}`);
+    }
+  }
+}
+
+async function validateRobots() {
+  const robots = await readFile(join(STATIC_DIR, 'robots.txt'), 'utf8');
+  if (!robots.includes(`Sitemap: ${SITE_ORIGIN}/sitemap-index.xml`)) {
+    addError('static/robots.txt: missing canonical sitemap declaration');
+  }
+
+  for (const crawler of ['OAI-SearchBot', 'ChatGPT-User', 'GPTBot']) {
+    const allowed = new RegExp(`User-agent:\\s*${crawler}[\\s\\S]*?Allow:\\s*/(?:\\s|$)`, 'i');
+    if (!allowed.test(robots)) {
+      addError(`static/robots.txt: ${crawler} is not explicitly allowed`);
     }
   }
 }
@@ -401,7 +547,10 @@ async function main() {
   }
 
   await validateSitemap();
+  await validateInternalLinks();
+  validateUniqueMetadata();
   await validateServerConfig();
+  await validateRobots();
 
   for (const file of ['llms.txt', 'llms-full.txt']) {
     const fullPath = join(STATIC_DIR, file);
