@@ -9,7 +9,7 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-07-14
+Last-Updated: 2026-07-16
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
@@ -47,6 +47,7 @@ Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf Websi
 - [Website fuer Therapie Ost](https://www.nigredo.ch/referenzen/therapie-ost/): Praxis-Website mit klarer Positionierung, mobiler Optimierung, Bildsprache und direkter Online-Terminbuchung.
 - [ThinkTank Wissensplattform](https://www.nigredo.ch/referenzen/thinktank/): Interne Wissensplattform fuer ein KMU mit Themenwelten, Suche, Reviews und schlankem PHP/MySQL-Betrieb.
 - [Website fuer Plan H](https://www.nigredo.ch/referenzen/plan-h/): Praxiswebsite mit lokaler Suchmaschinenoptimierung, direktem WhatsApp-Kontakt und strukturierten Vertrauenselementen.
+- [Website fuer HappyPath](https://www.nigredo.ch/referenzen/happypath/): Dreisprachiger Webauftritt fuer TextRoom, eine Software fuer Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten damit. Lokale Schriften, gehaertete CSP und klare Kontaktwege sichern einen ruhigen, verlaesslichen Auftritt.
 
 ## Entity Context
 

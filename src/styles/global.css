@@ -636,7 +636,7 @@ a:focus:not(:focus-visible),
 }
 
 .hero-glow {
-  display: block;
+  display: none;
   position: absolute;
   inset: -10rem 0 auto;
   width: 100%;

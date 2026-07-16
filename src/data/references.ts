@@ -2,6 +2,23 @@ export const REFERENCES_PER_PAGE = 4;
 
 const referenceEntries = [
   {
+    href: '/referenzen/happypath/',
+    imgSrc: '/referenzen/happypath/happypath-iv-software-website-illustration.svg',
+    imgAlt: 'Stilisierte dunkle HappyPath Startseite mit originaler Bildmarke, grosser weisser Titelzeile und vertikaler Sektionsnavigation',
+    listImgCls: 'ref-main-card-img--coral',
+    moreImgCls: 'case-more-card-img--coral',
+    badge: { text: 'Website', cls: 'accent-coral' },
+    linkCls: '',
+    year: 'Jul 2026',
+    sortDate: '2026-07-16',
+    listTitle: 'Website für HappyPath',
+    moreTitle: 'Website für HappyPath',
+    sub: 'Dreisprachiger Webauftritt für TextRoom, eingesetzt bei 15 von 26 IV-Stellen',
+    listDesc: 'HappyPath präsentiert TextRoom in einem ruhigen, dreisprachigen Webauftritt. 15 von 26 Schweizer IV-Stellen arbeiten mit der Software. Präzise Scrollführung, lokale Schriften, eine gehärtete Sicherheitsrichtlinie und klare Kontaktwege schaffen Vertrauen beim Fachpublikum.',
+    moreDesc: 'Präsentiert TextRoom für 15 von 26 IV-Stellen in drei Sprachen, technisch gehärtet und klar geführt.',
+    ariaLabel: 'Details zur Website für die HappyPath GmbH ansehen',
+  },
+  {
     href: '/referenzen/mentra/',
     imgSrc: '/referenzen/mentra/mentra-video-wissenssystem-referenzbild.webp',
     imgAlt: 'Mentra KI-Wissenssystem als reduziertes App-Visual mit dunkler Oberfläche und KI-Farben',

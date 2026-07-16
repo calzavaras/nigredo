@@ -9,7 +9,7 @@ Kanonischer Markenname: Nigredo
 Kanonische URL: https://www.nigredo.ch/
 Registrierte Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-07-14
+Letzte Aktualisierung: 2026-07-16
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 Kontakt: calzavara3830@gmail.com
@@ -294,7 +294,7 @@ Nigredo plant Datenschutz nicht als nachtraegliche Pflichtuebung, sondern als Te
 
 URL: https://www.nigredo.ch/referenzen/
 Title: Referenzen | Echte Projekte von Nigredo
-Description: Echte Projekte von Nigredo: lokale KI- und Wissenssysteme, digitale Werkzeuge sowie individuelle Websites fuer Therapie Ost und Plan H.
+Description: Echte Projekte von Nigredo: HappyPath, Plan H, Mentra, ThinkTank, KI Voice Agent, Excel Dashboard und Therapie Ost.
 
 Nigredo zeigt reale Projekte, die im Einsatz sind: keine aufgeblasenen Case Studies, keine Demos und kein Buzzword-Bingo.
 
@@ -365,6 +365,18 @@ Technologie: Astro, lokale Suchmaschinenoptimierung, strukturierte Daten, WhatsA
 Fuer Plan H entstand ein ruhiger Praxisauftritt mit verstaendlicher Angebotsfuehrung, lokaler Auffindbarkeit und direkten Kontaktwegen. Strukturierte Daten und sorgfaeltig aufbereitete Erfahrungsberichte staerken die Einordnung und das Vertrauen.
 
 Kernpunkte: statische Auslieferung, lokale Suchmaschinenoptimierung, WhatsApp-Kontakt, strukturierte Daten, klare Angebotsseiten und geordnete Erfahrungsberichte.
+
+## Website fuer HappyPath
+
+URL: https://www.nigredo.ch/referenzen/happypath/
+Live: https://happypath.ch/
+Kategorie: Website
+Projektabschluss: Juli 2026
+Technologie: Astro, dreisprachige Inhalte (DE, FR und IT), lokal geladene Schriften, gehaertete Inhaltssicherheitsrichtlinie, strukturierte Daten
+
+Fuer die HappyPath GmbH entstand ein ruhiger Webauftritt fuer TextRoom, eine Software fuer Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten heute damit. Die Inhalte liegen vollstaendig in Deutsch, Franzoesisch und Italienisch vor, inklusive Impressum und Datenschutz. Eine klare Scrollfuehrung leitet durch die Seite und bietet eine bewegungsarme Alternative.
+
+Kernpunkte: TextRoom, Einsatz bei 15 von 26 Schweizer IV-Stellen, statische Auslieferung, drei Sprachversionen mit hreflang, lokal geladene Schriften, gehaertete und beim Build gepruefte CSP, schlankes Kontaktformular mit PHP, strukturierte Daten und LLM Dateien.
 
 ## Marco Calzavara
 

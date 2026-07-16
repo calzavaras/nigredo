@@ -1,0 +1,370 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
+
+const liveUrl = 'https://happypath.ch';
+const pageUrl = 'https://www.nigredo.ch/referenzen/happypath/';
+const detailImage = '/referenzen/happypath/happypath-iv-software-website-startseite-screenshot.png';
+const detailImageAvif = '/referenzen/happypath/happypath-iv-software-website-startseite-screenshot.avif';
+const detailImageWebp = '/referenzen/happypath/happypath-iv-software-website-startseite-screenshot.webp';
+const ogImage = 'https://www.nigredo.ch/referenzen/happypath/happypath-iv-software-website-startseite-screenshot-og.jpg';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.nigredo.ch/" },
+        { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://www.nigredo.ch/referenzen/" },
+        { "@type": "ListItem", "position": 3, "name": "Website für HappyPath", "item": pageUrl }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${pageUrl}#website-project`,
+      "name": "HappyPath Website für TextRoom",
+      "url": liveUrl,
+      "description": "Dreisprachiger Webauftritt für HappyPath und TextRoom. 15 von 26 Schweizer IV-Stellen arbeiten mit der Software. Die Website verbindet klare Inhalte mit ruhiger Scrollführung, lokalen Schriften, gehärteter Inhaltssicherheitsrichtlinie und direkter Kontaktführung.",
+      "keywords": [
+        "HappyPath GmbH",
+        "HappyPath Website",
+        "TextRoom",
+        "Software für IV-Stellen",
+        "dreisprachige Website",
+        "Webdesign St. Gallen"
+      ],
+      "inLanguage": ["de-CH", "fr-CH", "it-CH"],
+      "datePublished": "2026-07-16",
+      "dateModified": "2026-07-16",
+      "creator": { "@id": "https://www.nigredo.ch/#person" },
+      "author": { "@id": "https://www.nigredo.ch/#person" },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
+      "maintainer": { "@id": "https://www.nigredo.ch/#organization" },
+      "isPartOf": { "@id": "https://www.nigredo.ch/referenzen/#webpage" },
+      "about": { "@id": "https://happypath.ch/#organization" },
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "HappyPath Startseite (Deutsch)",
+          "url": `${liveUrl}/`
+        },
+        {
+          "@type": "WebPage",
+          "name": "HappyPath Startseite (Französisch)",
+          "url": `${liveUrl}/fr`
+        },
+        {
+          "@type": "WebPage",
+          "name": "HappyPath Startseite (Italienisch)",
+          "url": `${liveUrl}/it`
+        }
+      ],
+      "potentialAction": {
+        "@type": "ContactAction",
+        "target": `${liveUrl}/#kontakt`,
+        "name": "Gespräch mit HappyPath vereinbaren"
+      },
+      "image": { "@id": `${pageUrl}#primaryimage` }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://happypath.ch/#organization",
+      "name": "HappyPath GmbH",
+      "alternateName": "HappyPath",
+      "url": liveUrl,
+      "description": "HappyPath entwickelt TextRoom für Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten mit der Software.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Wildeggstrasse 37",
+        "postalCode": "9016",
+        "addressLocality": "St. Gallen",
+        "addressCountry": "CH"
+      },
+      "areaServed": { "@type": "Country", "name": "Schweiz" },
+      "sameAs": [liveUrl]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      "url": ogImage,
+      "contentUrl": ogImage,
+      "width": 1200,
+      "height": 831,
+      "caption": "Dunkle HappyPath Startseite für TextRoom mit grosser weisser Titelzeile und originaler Bildmarke"
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      "name": "Website für HappyPath GmbH | Nigredo Referenzen",
+      "url": pageUrl,
+      "description": "Dreisprachige HappyPath Website für TextRoom: 15 von 26 Schweizer IV-Stellen, lokale Schriften, gehärtete CSP und klare Kontaktführung.",
+      "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
+      "inLanguage": "de-CH",
+      "datePublished": "2026-07-16",
+      "dateModified": "2026-07-16",
+      "about": { "@id": `${pageUrl}#website-project` },
+      "mainEntity": { "@id": `${pageUrl}#website-project` },
+      "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
+      "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
+      "isAccessibleForFree": true
+    }
+  ]
+});
+---
+
+<Layout
+  title="HappyPath Website für TextRoom | Nigredo Referenzen"
+  description="Dreisprachige HappyPath Website für TextRoom: 15 von 26 Schweizer IV-Stellen, lokale Schriften, gehärtete CSP und klare Kontaktführung."
+  canonical={pageUrl}
+  ogTitle="Website für HappyPath GmbH"
+  ogDescription="Dreisprachige Website für HappyPath und TextRoom, eingesetzt bei 15 von 26 Schweizer IV-Stellen."
+  ogImage={ogImage}
+  ogImageAlt="Screenshot der dunklen HappyPath Startseite für TextRoom mit grosser weisser Titelzeile und originaler Bildmarke"
+  ogImageWidth="1200"
+  ogImageHeight="831"
+  twitterTitle="Website für HappyPath GmbH"
+  twitterDescription="HappyPath präsentiert TextRoom für 15 von 26 Schweizer IV-Stellen in Deutsch, Französisch und Italienisch."
+  schema={schema}
+  preloadImage={detailImageAvif}
+  preloadImageType="image/avif"
+>
+  <section class="section pt-sub case-page case-page--happypath" aria-labelledby="happypath-title">
+    <div class="hero-glow"></div>
+    <div class="container case-page__container">
+      <Breadcrumb items={[
+        { label: 'Start', href: '/' },
+        { label: 'Referenzen', href: '/referenzen/' },
+        { label: 'HappyPath' }
+      ]} />
+
+      <a href="/referenzen/" class="case-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Alle Referenzen
+      </a>
+
+      <div class="case-hero fade-up">
+        <div class="case-hero-content">
+          <span class="tech-badge accent-coral case-hero-badge">Website</span>
+          <h1 id="happypath-title" class="home-hero__title case-hero-title case-hero-title--happypath"><span class="case-hero-title-line">Website für</span> <span class="gradient-text">HappyPath</span></h1>
+          <p class="hero-lead case-hero-lead">
+            Für die HappyPath GmbH entstand ein ruhiger Webauftritt für TextRoom, eine Software für Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten heute damit. Deutsch, Französisch und Italienisch sind vollständig ausgearbeitet. Klare Scrollführung, lokale Schriften, eine gehärtete Sicherheitsrichtlinie und direkte Kontaktwege schaffen Vertrauen beim Fachpublikum.
+          </p>
+          <div class="hero-cta-group">
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">Website besuchen</a>
+          </div>
+        </div>
+
+        <div class="case-hero-visual">
+          <div class="case-hero-canvas case-hero-canvas--coral">
+            <button
+              type="button"
+              class="case-hero-float case-hero-float--wide lightbox-trigger"
+              data-gallery={`["${detailImage}"]`}
+              data-gallery-index="0"
+              aria-label="Website-Vorschau vergrössern"
+            >
+              <picture>
+                <source srcset={detailImageAvif} type="image/avif">
+                <source srcset={detailImageWebp} type="image/webp">
+                <img
+                  src={detailImage}
+                  alt="Screenshot der dunklen HappyPath Startseite für TextRoom mit grosser weisser Titelzeile und originaler Bildmarke"
+                  width="1696" height="1174"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                >
+              </picture>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-stats case-stats--happypath fade-up delay-100" style="--stats-cols: 5;">
+        <div class="case-stat">
+          <strong class="stat-website">Website</strong>
+          <span>statisch schnell</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-website">Sprachen</strong>
+          <span>DE, FR und IT</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-website">15 / 26</strong>
+          <span>IV-Stellen mit TextRoom</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-website">CSP</strong>
+          <span>gehärtet geprüft</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-website">Schema</strong>
+          <span>maschinenlesbar</span>
+        </div>
+      </div>
+
+      <div class="case-section fade-up delay-100">
+        <div class="case-section-hd">
+          <span class="case-eyebrow">Ergebnis im Detail</span>
+          <h2 class="case-section-title">Ein klarer Firmenauftritt für komplexe Fachsoftware</h2>
+        </div>
+        <div class="case-features">
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#happypath-feature-grad-1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="happypath-feature-grad-1" x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M12 4.5c3.8 0 6.8 3.2 8.2 7.5-1.4 4.3-4.4 7.5-8.2 7.5S5.2 16.3 3.8 12C5.2 7.7 8.2 4.5 12 4.5z"/><path d="M12 9.1a2.9 2.9 0 1 1 0 5.8 2.9 2.9 0 0 1 0-5.8z"/><path d="M18.5 4.5l.8 1.7 1.7.8-1.7.8-.8 1.7-.8-1.7-1.7-.8 1.7-.8.8-1.7z"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Ruhige Marke, klare technische Grundlage</h3>
+                <p>Die dunkle, konzentrierte Gestaltung überträgt den Anspruch von HappyPath in eine klare digitale Form. Die Startseite ordnet das Unternehmen und TextRoom sofort ein. Danach führen präzise gesetzte Abschnitte durch Produkt, Arbeitsweise und Team. Der statische Astro-Aufbau lädt schnell und liefert stabil aus.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#happypath-feature-grad-2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="happypath-feature-grad-2" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M5 7h6"/><path d="M5 12h10"/><path d="M5 17h7"/><path d="M16.5 6.5l2 2 2-2"/><path d="M18.5 8.5v7"/><path d="M16.5 17.5l2-2 2 2"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Dreisprachig ohne Bruch: Deutsch, Französisch, Italienisch</h3>
+                <p>Sämtliche Inhalte liegen vollständig in drei Sprachen vor, inklusive Impressum und Datenschutz. Der Sprachumschalter, passende hreflang Angaben und eigene Metadaten für jede Sprachversion führen Besucher und Suchmaschinen zuverlässig zur richtigen Fassung.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#happypath-feature-grad-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="happypath-feature-grad-3" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M5 12h11"/><path d="M12 6l6 6-6 6"/><path d="M5 7.5h4"/><path d="M5 16.5h4"/><path d="M18.5 4.5l.7 1.5 1.5.7-1.5.7-.7 1.5-.7-1.5-1.5-.7 1.5-.7.7-1.5z"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Bewegung als leise Orientierung</h3>
+                <p>Die Scrollführung, eine seitliche Sektionsnavigation und feine Prozesslinien geben jederzeit Orientierung, ohne von den Inhalten abzulenken. Für Menschen, die reduzierte Bewegung bevorzugen, steht automatisch eine ruhige Alternative bereit. Alle Inhalte bleiben vollständig zugänglich.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--coral">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#happypath-feature-grad-4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="happypath-feature-grad-4" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M6 18l7.8-7.8 2.7 2.7L8.7 20H6v-2z"/><path d="M15.7 8.3l1.2-1.2a1.9 1.9 0 0 1 2.7 2.7l-1.2 1.2"/><path d="M5 6.5h7"/><path d="M5 10h5"/><path d="M5 13.5h3"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Datenschutz und Auffindbarkeit ab Werk</h3>
+                <p>Alle Schriften werden lokal geladen. Die gehärtete Inhaltssicherheitsrichtlinie wird bei jedem Build automatisch geprüft. Strukturierte Daten, Sitemap und LLM Dateien machen den Auftritt für Suchmaschinen und KI Systeme verständlich. Das Kontaktformular arbeitet mit einem schlanken PHP Endpunkt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="case-date fade-up">Abgeschlossen: Juli 2026</span>
+
+      <div class="fade-up case-more-section">
+        <span class="case-more-label">Weitere Projekte</span>
+        <CaseMoreReferences />
+      </div>
+
+      <div class="section case-final-section fade-up">
+        <div class="section-cta case-final-cta">
+          <span class="cta-label">Der nächste Schritt</span>
+          <h2>Braucht deine Website<br><span>mehr Klarheit?</span></h2>
+          <div class="hero-cta-group" style="justify-content: center;">
+            <a href="/kontakt/" class="btn btn-primary">Kontakt aufnehmen</a>
+            <a href="/referenzen/" class="btn btn-ghost">Alle Projekte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  .case-page--happypath {
+    --case-accent: var(--brand-coral);
+    --case-accent-2: var(--brand-pink);
+    --case-accent-3: var(--brand-violet);
+    --case-accent-soft: color-mix(in srgb, var(--case-accent) 16%, transparent);
+    --case-accent-glow: color-mix(in srgb, var(--case-accent) 22%, transparent);
+  }
+
+  .case-page--happypath .gradient-text {
+    background: var(--case-gradient-website);
+    background-size: 100% auto;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .case-page--happypath .case-hero-title-line {
+    display: block;
+  }
+
+  .case-page--happypath .case-hero-canvas--coral {
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(255, 46, 99, 0.24) 0%, rgba(255, 46, 99, 0.08) 48%, rgba(255, 255, 255, 0.02) 100%),
+      #0a0a0c;
+    border-color: rgba(255, 46, 99, 0.18);
+  }
+
+  .case-page--happypath .case-feature:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: var(--shadow-card-hover),
+      0 0 28px rgba(255, 46, 99, 0.08);
+  }
+
+  .case-page--happypath .case-feature-icon svg {
+    filter:
+      brightness(1.14)
+      saturate(1.18)
+      drop-shadow(0 0 8px rgba(255, 46, 99, 0.18));
+  }
+
+  .case-page--happypath .case-feature:hover .case-feature-icon svg {
+    filter:
+      brightness(1.2)
+      saturate(1.32)
+      drop-shadow(0 0 12px rgba(255, 46, 99, 0.2))
+      drop-shadow(0 0 22px rgba(255, 46, 99, 0.14));
+  }
+
+  .case-feature-text p + p {
+    margin-top: 12px;
+  }
+
+  .stat-website {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--case-accent) 90%, white 10%) 0%, color-mix(in srgb, var(--case-accent) 68%, black 18%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .case-stats--happypath .case-stat strong {
+    font-size: clamp(1.45rem, 2.15vw, 1.82rem);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1024px) {
+    .case-stats--happypath .case-stat strong {
+      font-size: clamp(1.28rem, 3.2vw, 1.58rem);
+    }
+  }
+
+  @media (max-width: 680px) {
+    .case-stats--happypath .case-stat strong {
+      font-size: clamp(1.2rem, 6vw, 1.45rem);
+    }
+  }
+
+  .case-page--happypath .case-hero-float--wide {
+    width: 82%;
+  }
+
+  @media (max-width: 860px) {
+    .case-page--happypath .case-hero-float--wide { width: 100%; }
+  }
+</style>

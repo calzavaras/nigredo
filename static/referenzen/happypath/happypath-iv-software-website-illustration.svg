@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-labelledby="title desc">
+  <title id="title">Website für HappyPath</title>
+  <desc id="desc">Stilisierte schwarze Browseransicht der HappyPath Startseite mit abstrahierter grosser Titelzeile, Spektral Logo, Kontaktfläche und vertikaler Sektionsnavigation.</desc>
+  <defs>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="25" flood-color="#000" flood-opacity="0.72"/></filter>
+    <filter id="dotGlow" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="5"/></filter>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD34E"/>
+      <stop offset="0.27" stop-color="#FF735F"/>
+      <stop offset="0.52" stop-color="#FF3FA4"/>
+      <stop offset="0.76" stop-color="#8D5CFF"/>
+      <stop offset="1" stop-color="#22D7EF"/>
+    </linearGradient>
+    <linearGradient id="buttonEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFBE62"/>
+      <stop offset="0.5" stop-color="#FF55A5"/>
+      <stop offset="1" stop-color="#31D7EF"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#121014"/>
+      <stop offset="1" stop-color="#080709"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="800" fill="#070708"/>
+  <ellipse cx="244" cy="126" rx="270" ry="120" fill="#FF3F80" opacity="0.035"/>
+  <ellipse cx="1010" cy="676" rx="280" ry="120" fill="#6658FF" opacity="0.025"/>
+
+  <g filter="url(#shadow)">
+    <rect x="118" y="78" width="1044" height="644" rx="16" fill="url(#frame)" stroke="#2A272D"/>
+    <rect x="118" y="78" width="1044" height="46" rx="16" fill="#110F12"/>
+    <rect x="118" y="108" width="1044" height="16" fill="#110F12"/>
+    <circle cx="150" cy="102" r="6" fill="#FF6277" opacity="0.82"/>
+    <circle cx="170" cy="102" r="6" fill="#F8C957" opacity="0.82"/>
+    <circle cx="190" cy="102" r="6" fill="#42D7D1" opacity="0.82"/>
+    <rect x="320" y="93" width="640" height="18" rx="9" fill="#FFFFFF" opacity="0.035" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <rect x="338" y="100" width="142" height="6" rx="3" fill="#FFFFFF" opacity="0.16"/>
+  </g>
+
+  <rect x="148" y="148" width="944" height="548" rx="12" fill="#020203" stroke="#FFFFFF" stroke-opacity="0.05"/>
+
+  <!-- HappyPath Kopfzeile -->
+  <g transform="translate(176 166)">
+    <image width="58" height="52" preserveAspectRatio="xMidYMid meet" href="data:image/png;base64,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"/>
+    <rect x="58" y="14" width="114" height="10" rx="5" fill="#E5E3E7" opacity="0.76"/>
+    <rect x="58" y="31" width="72" height="6" rx="3" fill="#E5E3E7" opacity="0.18"/>
+  </g>
+
+  <g transform="translate(1004 186)">
+    <circle r="8" fill="none" stroke="#FFFFFF" stroke-opacity="0.23"/>
+    <path d="M-8 0h16M0-8c2.7 4.1 2.7 11.9 0 16M0-8c-2.7 4.1-2.7 11.9 0 16" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="0.9"/>
+    <rect x="19" y="-3" width="24" height="6" rx="3" fill="#FFFFFF" opacity="0.24"/>
+    <path d="m54-2 3 3 3-3" fill="none" stroke="#FFFFFF" stroke-opacity="0.23" stroke-linecap="round"/>
+  </g>
+
+  <!-- Hero als abstrahiertes Abbild der echten Startseite -->
+  <g transform="translate(184 300)">
+    <rect width="270" height="6" rx="3" fill="#A7A2AD" opacity="0.64"/>
+
+    <g transform="translate(0 54)" fill="#F3F2F4">
+      <rect width="326" height="43" rx="7"/>
+      <rect y="58" width="474" height="43" rx="7"/>
+      <rect y="116" width="288" height="43" rx="7"/>
+    </g>
+
+    <g transform="translate(0 250)">
+      <rect width="382" height="8" rx="4" fill="#99959E" opacity="0.72"/>
+      <rect y="27" width="338" height="8" rx="4" fill="#99959E" opacity="0.55"/>
+    </g>
+
+    <g transform="translate(0 326)">
+      <rect width="174" height="46" rx="23" fill="#F3F2F3"/>
+      <rect x="1" y="1" width="172" height="44" rx="22" fill="none" stroke="url(#buttonEdge)" stroke-width="1.5"/>
+      <rect x="39" y="19" width="96" height="8" rx="4" fill="#171519" opacity="0.88"/>
+    </g>
+  </g>
+
+  <!-- Sektionsnavigation rechts -->
+  <g transform="translate(1050 364)">
+    <rect x="-62" y="-4" width="34" height="7" rx="3.5" fill="#E9E6EC" opacity="0.7"/>
+    <circle r="13" fill="#8D5CFF" opacity="0.28" filter="url(#dotGlow)"/>
+    <circle r="4" fill="#F4F0FF"/>
+    <line y1="24" y2="186" stroke="#FFFFFF" stroke-opacity="0.09"/>
+    <circle cy="42" r="3" fill="#77737D"/>
+    <circle cy="80" r="3" fill="#77737D"/>
+    <circle cy="118" r="3" fill="#77737D"/>
+    <circle cy="156" r="3" fill="#77737D"/>
+    <circle cy="194" r="3" fill="#77737D"/>
+  </g>
+
+  <!-- Scrollhinweis -->
+  <g transform="translate(604 644)">
+    <rect width="72" height="6" rx="3" fill="#77727C" opacity="0.46"/>
+    <line x1="36" y1="18" x2="36" y2="39" stroke="#FFFFFF" stroke-opacity="0.17"/>
+    <circle cx="36" cy="40" r="2.5" fill="#F0EDF2"/>
+  </g>
+
+  <rect x="148" y="706" width="944" height="1" fill="#FFFFFF" opacity="0.06"/>
+</svg>

@@ -25,16 +25,24 @@ const schema = JSON.stringify({
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
       name: 'Referenzen mit echten Ergebnissen | Nigredo',
-      description: 'Echte Projekte: Plan H, Mentra, ThinkTank, KI Voice Agent, Excel-Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen.',
+      description: 'Echte Projekte: HappyPath, Plan H, Mentra, ThinkTank, KI Voice Agent, Excel Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen.',
       inLanguage: 'de-CH',
       datePublished: '2025-06-01',
-      dateModified: '2026-07-14',
+      dateModified: '2026-07-16',
       isPartOf: { '@id': 'https://www.nigredo.ch/#website' },
       publisher: { '@id': 'https://www.nigredo.ch/#organization' },
       breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
       isAccessibleForFree: true,
       about: { '@id': 'https://www.nigredo.ch/#organization' },
       mentions: [
+        {
+          '@type': 'WebSite',
+          '@id': 'https://www.nigredo.ch/referenzen/happypath/#website-project',
+          name: 'Website für HappyPath GmbH',
+          url: 'https://www.nigredo.ch/referenzen/happypath/',
+          description: 'Dreisprachige Website für HappyPath und TextRoom, eine Software für Schweizer IV-Stellen.',
+          creator: { '@id': 'https://www.nigredo.ch/#person' },
+        },
         {
           '@type': 'SoftwareApplication',
           '@id': 'https://www.nigredo.ch/referenzen/mentra/#project',
@@ -98,7 +106,7 @@ const schema = JSON.stringify({
 
 <Layout
   title="Referenzen | Echte Projekte von Nigredo"
-  description="Echte Projekte: Plan H, Mentra, ThinkTank, KI Voice Agent, Excel-Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen."
+  description="Echte Projekte: HappyPath, Plan H, Mentra, ThinkTank, KI Voice Agent, Excel Dashboard und Therapie Ost. Digitale Lösungen von Nigredo aus St. Gallen."
   canonical={pageUrl}
   ogTitle="Entwickelt für echte Anforderungen | Nigredo"
   ogDescription="Websites, KI-Anwendungen und digitale Werkzeuge, die konkrete Probleme lösen. Mit Ausgangslage, gewähltem Weg und Ergebnis."
