@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 const pageUrl = 'https://www.nigredo.ch/kontakt/';
 const schema = JSON.stringify({
@@ -22,7 +23,7 @@ const schema = JSON.stringify({
       "description": "Direkter Kontakt zu Marco Calzavara für Websites, digitale Werkzeuge und KI-Lösungen. Persönliche Ersteinschätzung innerhalb von zwei Arbeitstagen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-17",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -68,29 +69,8 @@ const schema = JSON.stringify({
           </p>
         </div>
 
-        <div class="contact-card contact-panel fade-up delay-100">
-          <div class="contact-top-stripe"></div>
-
-          <div class="card-icon">
-            <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
-              <defs>
-                <linearGradient id="mailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color: color-mix(in srgb, var(--contact-b) 88%, white 14%)"/>
-                  <stop offset="50%" style="stop-color: var(--contact-b)"/>
-                  <stop offset="100%" style="stop-color: color-mix(in srgb, var(--contact-b) 72%, black 18%)"/>
-                </linearGradient>
-              </defs>
-              <rect x="4" y="10" width="40" height="28" rx="4" stroke="url(#mailGrad)" stroke-width="2" fill="none"/>
-              <path d="M4 15l20 14 20-14" stroke="url(#mailGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            </svg>
-          </div>
-
-          <span class="cta-label">Persönlich beantwortet</span>
-          <h2>Direkt bei mir.</h2>
-          <p class="contact-text">Deine Nachricht erreicht die Person, die dein Projekt später konzipiert und umsetzt. Das hält Entscheidungswege kurz und die Verantwortung eindeutig.</p>
-
-          <button id="mailBtn" class="btn btn-primary">Projekt beschreiben</button>
-          <p class="contact-response">Antwort in der Regel innerhalb von zwei Arbeitstagen.</p>
+        <div class="contact-form-wrap fade-up delay-100">
+          <ContactForm />
         </div>
 
       </div>
@@ -126,9 +106,8 @@ const schema = JSON.stringify({
 
   .kontakt-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.72fr);
-    gap: clamp(44px, 6vw, 80px);
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(44px, 5vw, 64px);
   }
 
   .contact-hero__content {
@@ -174,132 +153,18 @@ const schema = JSON.stringify({
     line-height: 1.65;
   }
 
-  .contact-panel {
-    position: relative;
-    align-self: center;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.018)),
-      #0a0a0c;
-    isolation: isolate;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+  .contact-form-wrap {
+    width: min(100%, 780px);
+    min-width: 0;
   }
 
-  .contact-panel::before,
-  .contact-panel::after {
-    display: none;
-  }
-
-  .contact-panel:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 255, 255, 0.16);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.022)),
-      #0b0b0d;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  }
-
-  /* Top gradient accent stripe */
-  .contact-top-stripe {
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--contact-b) 84%, white 10%) 0%,
-      var(--contact-b) 54%,
-      color-mix(in srgb, var(--contact-b) 72%, black 18%) 100%
-    );
-    border-radius: 2px 2px 0 0;
-  }
-
-  .contact-panel .cta-label {
-    margin-bottom: 12px;
-    color: var(--text-faint);
-  }
-
-  .contact-panel h2 {
-    font-size: clamp(1.45rem, 2.4vw, 1.72rem);
-    line-height: 1.14;
-    letter-spacing: -0.02em;
-    margin-bottom: 14px;
-  }
-
-  .contact-text {
-    color: var(--text-soft);
-    margin-bottom: 32px;
-    font-size: 1rem;
-    line-height: 1.68;
-  }
-
-  .contact-response {
-    margin: 16px 0 0;
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 0.82rem;
-    line-height: 1.5;
-  }
-
-  .contact-card .card-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.024)),
-      rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.045),
-      0 0 14px color-mix(in srgb, var(--contact-b) 14%, transparent),
-      0 0 20px color-mix(in srgb, var(--contact-b) 10%, transparent);
-    transition:
-      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 0.35s ease,
-      background 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-
-  .contact-card .card-icon svg {
-    width: 30px;
-    height: 30px;
-    filter:
-      brightness(1.08)
-      saturate(1.08)
-      drop-shadow(0 0 6px color-mix(in srgb, var(--contact-b) 18%, transparent))
-      drop-shadow(0 0 12px color-mix(in srgb, var(--contact-b) 12%, transparent));
-    transition: filter 0.45s ease;
-  }
-
-  .contact-card:hover .card-icon {
-    transform: translateY(-1px);
-    border-color: rgba(255, 255, 255, 0.16);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025)),
-      rgba(255, 255, 255, 0.035);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 0 22px color-mix(in srgb, var(--contact-b) 18%, transparent),
-      0 0 36px color-mix(in srgb, var(--contact-b) 12%, transparent);
-  }
-
-  .contact-card:hover .card-icon svg {
-    filter:
-      brightness(1.14)
-      saturate(1.12)
-      drop-shadow(0 0 10px color-mix(in srgb, var(--contact-b) 22%, transparent))
-      drop-shadow(0 0 18px color-mix(in srgb, var(--contact-b) 14%, transparent));
-  }
-
-  @media (max-width: 860px) {
+  @media (max-width: 980px) {
     .contact-hero {
       padding-top: var(--hero-offset-top-breadcrumb-mobile);
       padding-bottom: 72px;
     }
 
     .kontakt-grid {
-      grid-template-columns: 1fr;
       gap: 38px;
     }
 
@@ -333,8 +198,5 @@ const schema = JSON.stringify({
       margin-top: 18px;
     }
 
-    .contact-panel {
-      padding: 30px 24px;
-    }
   }
 </style>

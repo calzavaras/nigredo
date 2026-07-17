@@ -6,7 +6,6 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import ContactModal from '../components/ContactModal.astro';
 
 interface Props {
   title: string;
@@ -422,6 +421,5 @@ const siteIdentitySchema = JSON.stringify({
 
   <script src={`/main.min.js?v=${jsVersion}`} defer></script>
 
-  <ContactModal />
 </body>
 </html>

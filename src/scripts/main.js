@@ -9,17 +9,14 @@ const TIMING = {
   IDLE_TIMEOUT:        1500,
   ANALYTICS_TIMEOUT:   3000,
   ANALYTICS_FALLBACK_DELAY: 1500,
-  MODAL_FOCUS_DELAY:    350,
-  MODAL_CLOSE_DELAY:    380,
   CLOSE_OVERLAY_DELAY:  300,
-  AUTO_CLOSE_DELAY:    5000,
   HERO_GLOW_DELAY:     1000,
   LIGHTBOX_FADE:        150,
   LIGHTBOX_OPEN_DELAY:   10,
 };
 
 // iOS Safari: body.overflow='hidden' verhindert Scrollen nicht zuverlässig.
-// Lock-Depth-Counter macht die Funktionen re-entrant-safe (z.B. Nav + Modal gleichzeitig offen).
+// Lock-Depth-Counter hält überlappende Scroll-Sperren stabil.
 // Auf Desktop wird unlockScroll() zu einem No-op, da lockScroll() nie aufgerufen wird.
 let _scrollLockY = 0;
 let _lockDepth = 0;
@@ -41,16 +38,11 @@ function unlockScroll() {
   }
 }
 
-let _closeModalTimer = 0;
-let _lastModalTrigger = null;
-const _modalBackground = [];
-
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initFaqAnchorNavigation();
   initScrollAnimations();
-  if (document.querySelector('#mailBtn, .reveal-mail, .open-contact')) initSpamProtection();
-  if (document.getElementById('contact-modal')) initContactModal();
+  if (document.getElementById('contact-form')) initContactForm();
   if (document.querySelector('.accordion-header')) initAccordions();
   if (document.querySelector('.lightbox-trigger')) setTimeout(initLightbox, TIMING.LIGHTBOX_INIT_DELAY);
   runWhenIdle(() => {
@@ -257,89 +249,6 @@ function initCardSpotlight() {
   });
 }
 
-function initSpamProtection() {
-  const triggers = document.querySelectorAll('#mailBtn, .reveal-mail, .open-contact');
-  triggers.forEach(el => {
-    el.addEventListener('click', (e) => {
-      e.preventDefault();
-      openContactModal(e.currentTarget);
-    });
-    el.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openContactModal(e.currentTarget);
-      }
-    });
-  });
-}
-
-function setModalBackgroundDisabled(disabled) {
-  const elements = document.querySelectorAll('header, main, footer');
-  if (disabled) {
-    _modalBackground.length = 0;
-    elements.forEach((el) => {
-      _modalBackground.push([el, el.getAttribute('aria-hidden'), el.inert]);
-      el.inert = true;
-      el.setAttribute('aria-hidden', 'true');
-    });
-    return;
-  }
-
-  _modalBackground.forEach(([el, ariaHidden, wasInert]) => {
-    el.inert = wasInert;
-    if (ariaHidden === null) {
-      el.removeAttribute('aria-hidden');
-    } else {
-      el.setAttribute('aria-hidden', ariaHidden);
-    }
-  });
-  _modalBackground.length = 0;
-}
-
-function getFocusableElements(container) {
-  return Array.from(container.querySelectorAll(
-    'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
-  )).filter(el => el.offsetParent !== null);
-}
-
-function openContactModal(trigger = document.activeElement) {
-  const modal = document.getElementById('contact-modal');
-  if (!modal) return;
-  _lastModalTrigger = trigger instanceof HTMLElement ? trigger : null;
-  clearTimeout(_closeModalTimer);
-  modal.style.display = 'block';
-  modal.setAttribute('aria-hidden', 'false');
-  setModalBackgroundDisabled(true);
-  lockScroll();
-  requestAnimationFrame(() => modal.classList.add('active'));
-  setTimeout(() => {
-    const firstInput = modal.querySelector('.cmodal-input');
-    const closeBtn = modal.querySelector('.cmodal-close');
-    (firstInput || closeBtn)?.focus();
-  }, TIMING.MODAL_FOCUS_DELAY);
-}
-
-function closeContactModal() {
-  const modal = document.getElementById('contact-modal');
-  if (!modal) return;
-  modal.classList.remove('active');
-  modal.setAttribute('aria-hidden', 'true');
-  _closeModalTimer = setTimeout(() => {
-    modal.style.display = 'none';
-    setModalBackgroundDisabled(false);
-    unlockScroll();
-    const successEl = document.getElementById('cmodal-success');
-    const form = document.getElementById('contact-form');
-    const header = modal.querySelector('.cmodal-header');
-    if (successEl) successEl.classList.remove('visible');
-    if (form) form.style.display = '';
-    if (header) header.style.display = '';
-    if (_lastModalTrigger && document.contains(_lastModalTrigger)) {
-      _lastModalTrigger.focus();
-    }
-  }, TIMING.MODAL_CLOSE_DELAY);
-}
-
 function getCsrfToken() {
   const existing = document.cookie.match(/(?:^|;\s*)_csrf=([^;]+)/)?.[1];
   if (existing) return existing;
@@ -353,76 +262,77 @@ function getCsrfToken() {
   return token;
 }
 
-function initContactModal() {
-  const modal = document.getElementById('contact-modal');
-  if (!modal) return;
-
-  modal.querySelector('.cmodal-close').addEventListener('click', closeContactModal);
-  modal.querySelector('.cmodal-backdrop').addEventListener('click', closeContactModal);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.classList.contains('active')) closeContactModal();
-    if (e.key !== 'Tab' || !modal.classList.contains('active')) return;
-
-    const focusable = getFocusableElements(modal);
-    if (focusable.length === 0) return;
-
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault();
-      last.focus();
-    } else if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault();
-      first.focus();
-    }
-  });
-
+function initContactForm() {
   const form = document.getElementById('contact-form');
-  const submitBtn = document.getElementById('cmodal-submit');
-  const feedback = document.getElementById('cmodal-feedback');
-  if (!form || !submitBtn || !feedback) return;
+  const submitBtn = document.getElementById('contact-submit');
+  const feedback = document.getElementById('contact-feedback');
+  const success = document.getElementById('contact-success');
+  const intro = document.querySelector('.contact-form-card__intro');
+  const divider = document.querySelector('.contact-form-card__divider');
+  const resetBtn = document.getElementById('contact-reset');
+  if (!form || !submitBtn || !feedback || !success) return;
 
   function showError(msg) {
     feedback.textContent = msg;
-    feedback.className = 'cmodal-feedback error';
-    feedback.style.display = 'block';
+    feedback.hidden = false;
+  }
+
+  function clearFieldErrors() {
+    form.querySelectorAll('[aria-invalid="true"]').forEach((field) => {
+      field.removeAttribute('aria-invalid');
+    });
+    form.querySelectorAll('.contact-form__field-error').forEach((error) => {
+      error.hidden = true;
+    });
+  }
+
+  function markInvalid(field) {
+    field.setAttribute('aria-invalid', 'true');
+    const errorId = field.getAttribute('aria-describedby');
+    const error = errorId ? document.getElementById(errorId) : null;
+    if (error) error.hidden = false;
   }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    feedback.style.display = 'none';
-    feedback.className = 'cmodal-feedback';
-    form.querySelectorAll('.cmodal-input').forEach(f => f.classList.remove('has-error'));
+    feedback.hidden = true;
+    clearFieldErrors();
 
     let valid = true;
+    let firstInvalid = null;
     ['name', 'email', 'message'].forEach(fieldName => {
       const field = form.querySelector(`[name="${fieldName}"]`);
       if (!field.value.trim()) {
-        field.classList.add('has-error');
+        markInvalid(field);
+        if (!firstInvalid) firstInvalid = field;
         valid = false;
       }
     });
 
     const emailField = form.querySelector('[name="email"]');
     if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
-      emailField.classList.add('has-error');
+      markInvalid(emailField);
+      if (!firstInvalid) firstInvalid = emailField;
       valid = false;
     }
 
     const phoneField = form.querySelector('[name="phone"]');
     if (phoneField.value && !/^[0-9+() .-]{7,32}$/.test(phoneField.value.trim())) {
-      phoneField.classList.add('has-error');
+      markInvalid(phoneField);
+      if (!firstInvalid) firstInvalid = phoneField;
       valid = false;
     }
 
     if (!valid) {
-      showError('Bitte alle Pflichtfelder korrekt ausfüllen.');
+      showError('Bitte prüfe die markierten Felder.');
+      firstInvalid?.focus();
       return;
     }
 
     submitBtn.dataset.loading = 'true';
+    submitBtn.disabled = true;
+    submitBtn.setAttribute('aria-busy', 'true');
 
     try {
       const csrf = getCsrfToken();
@@ -446,15 +356,11 @@ function initContactModal() {
 
       if (res.ok && data.success) {
         form.reset();
-        const header = modal.querySelector('.cmodal-header');
-        if (header) header.style.display = 'none';
-        form.style.display = 'none';
-        const successEl = document.getElementById('cmodal-success');
-        if (successEl) {
-          successEl.classList.add('visible');
-          successEl.querySelector('.cmodal-success-close').onclick = closeContactModal;
-        }
-        setTimeout(closeContactModal, TIMING.AUTO_CLOSE_DELAY);
+        form.hidden = true;
+        if (intro) intro.hidden = true;
+        if (divider) divider.hidden = true;
+        success.hidden = false;
+        resetBtn?.focus();
       } else {
         showError(data.message || 'Fehler beim Senden. Bitte erneut versuchen.');
       }
@@ -463,7 +369,19 @@ function initContactModal() {
       showError('Verbindungsfehler. Bitte erneut versuchen.');
     } finally {
       submitBtn.removeAttribute('data-loading');
+      submitBtn.removeAttribute('aria-busy');
+      submitBtn.disabled = false;
     }
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    success.hidden = true;
+    if (intro) intro.hidden = false;
+    if (divider) divider.hidden = false;
+    form.hidden = false;
+    feedback.hidden = true;
+    clearFieldErrors();
+    form.querySelector('[name="name"]')?.focus();
   });
 }
 

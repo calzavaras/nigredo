@@ -62,7 +62,7 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/kontakt/') {
           item.priority = 0.93;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {
           item.priority = 0.62;
