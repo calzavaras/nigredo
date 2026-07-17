@@ -9,7 +9,7 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-07-16
+Last-Updated: 2026-07-17
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
@@ -41,13 +41,13 @@ Nigredo arbeitet persoenlich, direkt und zum Fixpreis. Der Fokus liegt auf Websi
 
 ## Reference Projects
 
-- [Mentra Video-Wissenssystem](https://www.nigredo.ch/referenzen/mentra/): Lokale KI-App fuer Video-Wissen, semantische Suche, Chat mit Quellen, Reviews, Highlights, Quizfragen und Exporte.
-- [KI Voice Agent fuer IV-Stellen](https://www.nigredo.ch/referenzen/ki-voice-agent/): KI-Sprachassistent fuer AHV-Hilfsmittel mit Echtzeit-Verarbeitung, vier Sprachen und 24/7-Erreichbarkeit.
-- [Dashboard fuer Kantonsverwaltung](https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/): Lokales Excel-Dashboard mit Import, KPIs, Diagrammen, Anonymisierung und PDF-Export.
-- [Website fuer Therapie Ost](https://www.nigredo.ch/referenzen/therapie-ost/): Praxis-Website mit klarer Positionierung, mobiler Optimierung, Bildsprache und direkter Online-Terminbuchung.
-- [ThinkTank Wissensplattform](https://www.nigredo.ch/referenzen/thinktank/): Interne Wissensplattform fuer ein KMU mit Themenwelten, Suche, Reviews und schlankem PHP/MySQL-Betrieb.
-- [Website fuer Plan H](https://www.nigredo.ch/referenzen/plan-h/): Praxiswebsite mit lokaler Suchmaschinenoptimierung, direktem WhatsApp-Kontakt und strukturierten Vertrauenselementen.
-- [Website fuer HappyPath](https://www.nigredo.ch/referenzen/happypath/): Dreisprachiger Webauftritt fuer TextRoom, eine Software fuer Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten damit. Lokale Schriften, gehaertete CSP und klare Kontaktwege sichern einen ruhigen, verlaesslichen Auftritt.
+- [Mentra Video-Wissenssystem](https://www.nigredo.ch/referenzen/mentra/): Lokale KI-Anwendung fuer Video-Wissen mit semantischer Suche, Quellen, Reviews, Quizfragen und Exporten.
+- [KI Voice Agent fuer IV-Stellen](https://www.nigredo.ch/referenzen/ki-voice-agent/): KI-Sprachassistent fuer AHV-Hilfsmittel mit Echtzeit-Verarbeitung, vier Sprachen und fachlich fundierten Antworten.
+- [Dashboard fuer Kantonsverwaltung](https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/): Lokales Excel Dashboard mit Import, Kennzahlen, Diagrammen, Anonymisierung und PDF Export.
+- [Website fuer Therapie Ost](https://www.nigredo.ch/referenzen/therapie-ost/): Praxiswebsite mit klarer Positionierung, ruhiger Bildsprache und direkter Online-Terminbuchung.
+- [ThinkTank Wissensplattform](https://www.nigredo.ch/referenzen/thinktank/): Interne Wissensplattform fuer ein KMU mit Themenwelten, Suche, Reviews und schlankem PHP MySQL Betrieb.
+- [Website fuer Plan H](https://www.nigredo.ch/referenzen/plan-h/): Praxiswebsite mit lokaler Suchmaschinenoptimierung, direktem WhatsApp Kontakt und strukturierten Vertrauenselementen.
+- [Website fuer HappyPath](https://www.nigredo.ch/referenzen/happypath/): Dreisprachiger Webauftritt fuer TextRoom, eine Software fuer Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten damit. Lokale Schriften, gehärtete Sicherheitsrichtlinie und klare Kontaktwege sorgen fuer einen ruhigen, verlaesslichen Auftritt.
 
 ## Entity Context
 

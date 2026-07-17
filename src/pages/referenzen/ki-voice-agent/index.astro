@@ -24,7 +24,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#software`,
       "name": "KI Voice Agent für IV-Stellen",
       "url": pageUrl,
-      "description": "KI-gestützter Sprachassistent, der autonom Anrufe zu AHV-Hilfsmitteln beantwortet. Echtzeit-Sprachverarbeitung mit Google Gemini 2.5 Flash, vier Sprachen, 24/7 verfügbar.",
+      "description": "KI gestützter Sprachassistent für Anrufe zu AHV Hilfsmitteln. Der Prototyp verarbeitet Gespräche in Echtzeit, antwortet in vier Sprachen und ist jederzeit erreichbar.",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Artificial Intelligence",
       "operatingSystem": "Web Browser",
@@ -49,15 +49,28 @@ const schema = JSON.stringify({
       "creator": { "@id": "https://www.nigredo.ch/#organization" }
     },
     {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      "url": ogImage,
+      "contentUrl": ogImage,
+      "width": 1200,
+      "height": 630,
+      "caption": "KI Voice Agent im Gespräch mit Audio Visualisierung und Live Transkript"
+    },
+    {
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "name": "KI Voice Agent für IV-Stellen | Nigredo Referenzen",
       "url": pageUrl,
+      "description": "KI Sprachassistent für AHV Hilfsmittel mit Echtzeit Verarbeitung, vier Sprachen und fachlich fundierten Antworten.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-02-28",
       "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#software` },
+      "mainEntity": { "@id": `${pageUrl}#software` },
+      "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
     }
@@ -67,16 +80,16 @@ const schema = JSON.stringify({
 
 <Layout
   title="KI Voice Agent für IV-Stellen | Nigredo Referenzen"
-  description="KI-Sprachassistent für AHV-Hilfsmittel: Echtzeit-Verarbeitung, vier Sprachen und 24/7 erreichbar. Prototyp für Schweizer IV-Stellen."
+  description="KI Sprachassistent für AHV Hilfsmittel mit Echtzeit Verarbeitung, vier Sprachen und fachlich fundierten Antworten. Prototyp für Schweizer IV Stellen."
   canonical={pageUrl}
   ogTitle="KI Voice Agent für IV-Stellen"
-  ogDescription="Sprachassistent mit Google Gemini 2.5 Flash: 24/7 autonom, vier Sprachen (DE/FR/IT/EN), echtes Fachwissen zu AHV-Hilfsmitteln. Prototyp für Schweizer IV-Stellen."
+  ogDescription="Sprachassistent mit Google Gemini 2.5 Flash, vier Sprachen und Fachwissen zu AHV Hilfsmitteln. Prototyp für Schweizer IV Stellen."
   ogImage={ogImage}
   ogImageAlt="Oberfläche des lokalen KI Voice Agents Lio für Fragen zu AHV-Hilfsmitteln"
   ogImageWidth="1200"
   ogImageHeight="630"
   twitterTitle="KI Voice Agent für IV-Stellen"
-  twitterDescription="24/7 autonom, vier Sprachen, echtes Fachwissen zu AHV-Hilfsmitteln. KI-Sprachassistent von Nigredo."
+  twitterDescription="Jederzeit erreichbar, vier Sprachen und Fachwissen zu AHV Hilfsmitteln. KI Sprachassistent von Nigredo."
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"

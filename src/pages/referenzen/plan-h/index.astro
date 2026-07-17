@@ -26,7 +26,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#website-project`,
       "name": "Plan H Hypnosetherapie",
       "url": liveUrl,
-      "description": "Website für Plan H Hypnosetherapie in Bernhardzell bei St. Gallen mit lokaler Google-Ausrichtung, WhatsApp-Kontakt, sortierbaren Stimmen, strukturierter SEO-Basis und klarer Angebotsführung.",
+      "description": "Website für Plan H Hypnosetherapie in Bernhardzell bei St. Gallen mit lokaler Suchmaschinenoptimierung, WhatsApp Kontakt, strukturierten Daten und klarer Angebotsführung.",
       "keywords": [
         "Hypnosetherapie Website",
         "Website für Hypnosetherapie",
@@ -96,15 +96,28 @@ const schema = JSON.stringify({
       "image": ogImage
     },
     {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      "url": ogImage,
+      "contentUrl": ogImage,
+      "width": 1200,
+      "height": 630,
+      "caption": "Startseite von Plan H Hypnosetherapie mit WhatsApp Kontakt"
+    },
+    {
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "name": "Website für Plan H Hypnosetherapie | Nigredo Referenzen",
       "url": pageUrl,
+      "description": "Praxiswebsite für Plan H Hypnosetherapie mit lokaler Suchmaschinenoptimierung, WhatsApp Kontakt und klarer Angebotsführung.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-06-17",
       "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#website-project` },
+      "mainEntity": { "@id": `${pageUrl}#website-project` },
+      "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
     }
@@ -114,16 +127,16 @@ const schema = JSON.stringify({
 
 <Layout
   title="Website für Plan H Hypnosetherapie | Nigredo Referenzen"
-  description="Plan-H-Website mit Local SEO, WhatsApp-Kontakt, Google-Struktur, sortierbaren Stimmen und klarer Angebotsführung für Hypnosetherapie."
+  description="Praxiswebsite für Plan H Hypnosetherapie mit lokaler Suchmaschinenoptimierung, WhatsApp Kontakt und klarer Angebotsführung."
   canonical={pageUrl}
   ogTitle="Website für Plan H Hypnosetherapie"
-  ogDescription="Ein ruhiger Webauftritt mit Local SEO, WhatsApp-Kontakt, Google-Struktur und sortierbaren Stimmen."
+  ogDescription="Ruhige Praxiswebsite mit lokaler Suchmaschinenoptimierung, WhatsApp Kontakt, strukturierten Daten und klarer Anfrageführung."
   ogImage={ogImage}
   ogImageAlt="Startseite der Praxiswebsite von Plan H Hypnosetherapie mit korallfarbenem Akzent und WhatsApp-Kontakt"
   ogImageWidth="1200"
   ogImageHeight="630"
   twitterTitle="Website für Plan H Hypnosetherapie"
-  twitterDescription="Praxis-Website mit Local SEO, WhatsApp-Kontakt, Google-Struktur und klarer Anfrageführung."
+  twitterDescription="Praxiswebsite mit lokaler Suchmaschinenoptimierung, WhatsApp Kontakt, strukturierten Daten und klarer Anfrageführung."
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
@@ -224,8 +237,8 @@ const schema = JSON.stringify({
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-2" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M5 7h6"/><path d="M5 12h10"/><path d="M5 17h7"/><path d="M16.5 6.5l2 2 2-2"/><path d="M18.5 8.5v7"/><path d="M16.5 17.5l2-2 2 2"/></svg>
               </div>
               <div class="case-feature-text">
-                <h3>Google-Integration und lokale Auffindbarkeit</h3>
-                <p>Die Website ist auf Hypnosetherapie in Bernhardzell, St. Gallen und Umgebung ausgerichtet. Seitentitel, Beschreibungen, Sitemap, robots.txt, LocalBusiness-Daten und Angebots-Schema geben Google klare Signale, worum es geht, wo Plan H tätig ist und welche Leistungen angeboten werden.</p>
+                <h3>Lokale Auffindbarkeit in Google</h3>
+                <p>Die Website ist auf Hypnosetherapie in Bernhardzell, St. Gallen und Umgebung ausgerichtet. Seitentitel, Beschreibungen, Sitemap, robots.txt, LocalBusiness Daten und Angebots Schema machen klar, worum es geht, wo Plan H tätig ist und welche Leistungen angeboten werden.</p>
               </div>
             </div>
           </div>

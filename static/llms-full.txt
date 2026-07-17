@@ -296,7 +296,7 @@ URL: https://www.nigredo.ch/referenzen/
 Title: Referenzen | Echte Projekte von Nigredo
 Description: Echte Projekte von Nigredo: HappyPath, Plan H, Mentra, ThinkTank, KI Voice Agent, Excel Dashboard und Therapie Ost.
 
-Nigredo zeigt reale Projekte, die im Einsatz sind: keine aufgeblasenen Case Studies, keine Demos und kein Buzzword-Bingo.
+Nigredo zeigt reale Projekte mit klarer Aufgabe, nachvollziehbarer Umsetzung und einem Ergebnis, das im Arbeitsalltag oder im direkten Kundenkontakt trägt.
 
 ## Mentra Video-Wissenssystem
 
@@ -305,7 +305,7 @@ Kategorie: KI
 Projektabschluss: Juni 2026
 Technologie: Next.js, React, Prisma, MySQL, OpenAI, Anthropic, Gemini, lokale OpenAI-kompatible Modelle
 
-Mentra ist ein privates KI-gestuetztes Video-Wissenssystem, das lokal auf dem Rechner des Kunden ausgefuehrt wird. Videos werden nicht nur gesammelt, sondern als durchsuchbare Wissenseintraege mit Kategorien, Tags, Transkripten, Zusammenfassungen, Insights und Lernbloecken nutzbar gemacht.
+Mentra ist ein privates KI-gestuetztes Video-Wissenssystem fuer den lokalen Betrieb. Videos werden als durchsuchbare Wissenseintraege mit Kategorien, Tags, Transkripten, Zusammenfassungen und Lernbloecken nutzbar gemacht. Fragen beantwortet die Anwendung mit nachvollziehbaren Quellen.
 
 Kernpunkte: lokaler Betrieb, Video-Archiv, providerunabhaengige KI-Auswertung, semantische Suche, KI-Chat mit Quellen, FSRS-Reviews, Highlights, Quizfragen, Audit-Logs, verschluesselte API-Keys und Exporte fuer Markdown, Anki, JSON und PDF-nahe Ausgaben.
 
@@ -316,7 +316,7 @@ Kategorie: KI
 Projektabschluss: Februar 2026
 Technologie: Google Gemini 2.5 Flash, Python, WebSockets, JavaScript, Echtzeit-TTS
 
-Fuer einen Kunden wurde ein funktionsfaehiger Prototyp entwickelt: ein KI-gestuetzter Fachmitarbeiter, der rund um die Uhr Anrufe zu Hilfsmitteln der AHV entgegennimmt. Der Agent verfuegt ueber Fachwissen aus drei hinterlegten Dokumenten, versteht Deutsch, Franzoesisch, Italienisch und Englisch und fuehrt natuerliche Gespraeche in Echtzeit.
+Der Prototyp ist ein KI-gestuetzter Sprachassistent, der Anrufe zu Hilfsmitteln der AHV entgegennimmt. Er greift auf hinterlegtes Fachwissen zu, versteht Deutsch, Franzoesisch, Italienisch und Englisch und fuehrt Gespraeche in Echtzeit.
 
 Kernpunkte: Echtzeit-Sprachverarbeitung, tiefes Fachwissen, Mehrsprachigkeit, empathische Gespraechsfuehrung und 24/7-Verfuegbarkeit.
 
@@ -327,7 +327,7 @@ Kategorie: Tool
 Projektabschluss: Juni 2025
 Technologie: JavaScript, SheetJS, Chart.js, PDF-Export, kein Server
 
-Fuer einen Kunden entstand ein lokales Excel-Analyse-Dashboard. Tausende Zeilen Excel und sensible Personaldaten werden vollstaendig im Browser verarbeitet. Kein Server, kein Upload, keine Cloud.
+Das lokale Excel Dashboard verarbeitet auch umfangreiche Dateien und sensible Personaldaten vollstaendig im Browser. Die Daten bleiben auf dem Rechner. Es braucht keinen Server, keinen Upload und keine Cloud.
 
 Kernpunkte: Drag-and-drop-Import, lokale Verarbeitung, KPIs, Diagramme, Anonymisierung und PDF-Export.
 
@@ -339,7 +339,7 @@ Kategorie: Website
 Projektabschluss: April 2026
 Technologie: Astro, responsive Frontend-Entwicklung, Content-Struktur, Online-Buchungsintegration
 
-Fuer Therapie Ost entstand eine Website, die Vertrauen aufbaut, ohne nach Baukasten auszusehen. Die Inhalte sind klar gegliedert, die Bildsprache ist ruhig und die wichtigsten Handlungen sind sofort greifbar.
+Fuer Therapie Ost entstand eine Website, die Vertrauen aufbaut und Orientierung gibt. Die Inhalte sind klar gegliedert, die Bildsprache ist ruhig und die Online-Terminbuchung liegt direkt auf dem Weg zur Kontaktaufnahme.
 
 Kernpunkte: echte Praxisbilder, ruhige Farbwelt, klare Leistungsstruktur, mobile Optimierung, kurzer Weg zur Online-Terminbuchung und konkrete inhaltliche Positionierung.
 
@@ -350,7 +350,7 @@ Kategorie: App
 Projektabschluss: Mai 2026
 Technologie: statisches Frontend, PHP API, MySQL
 
-ThinkTank ist eine interne Wissensplattform fuer ein KMU. Sie ordnet Informationen in Themenwelten, macht Verantwortlichkeiten sichtbar und stellt Wissen im Alltag dort bereit, wo es gebraucht wird.
+ThinkTank ist eine interne Wissensplattform fuer ein KMU. Sie ordnet Informationen in Themenwelten, macht Verantwortlichkeiten sichtbar und hält Wissen dort auffindbar, wo es im Alltag gebraucht wird.
 
 Kernpunkte: Themenwelten mit mehreren Ebenen, zentrale Suche, Tags, Anhaenge, Verantwortlichkeiten, Review-Daten, Status, Aenderungsverlauf, Dashboard-Kennzahlen und schlanker Betrieb.
 
@@ -362,7 +362,7 @@ Kategorie: Website
 Projektabschluss: Juni 2026
 Technologie: Astro, lokale Suchmaschinenoptimierung, strukturierte Daten, WhatsApp-Kontakt
 
-Fuer Plan H entstand ein ruhiger Praxisauftritt mit verstaendlicher Angebotsfuehrung, lokaler Auffindbarkeit und direkten Kontaktwegen. Strukturierte Daten und sorgfaeltig aufbereitete Erfahrungsberichte staerken die Einordnung und das Vertrauen.
+Fuer Plan H entstand ein ruhiger Praxisauftritt mit verständlicher Angebotsführung, lokaler Auffindbarkeit und direkten Kontaktwegen. Strukturierte Daten und aufbereitete Erfahrungsberichte erleichtern die Einordnung und stärken das Vertrauen.
 
 Kernpunkte: statische Auslieferung, lokale Suchmaschinenoptimierung, WhatsApp-Kontakt, strukturierte Daten, klare Angebotsseiten und geordnete Erfahrungsberichte.
 
@@ -374,7 +374,7 @@ Kategorie: Website
 Projektabschluss: Juli 2026
 Technologie: Astro, dreisprachige Inhalte (DE, FR und IT), lokal geladene Schriften, gehaertete Inhaltssicherheitsrichtlinie, strukturierte Daten
 
-Fuer die HappyPath GmbH entstand ein ruhiger Webauftritt fuer TextRoom, eine Software fuer Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten heute damit. Die Inhalte liegen vollstaendig in Deutsch, Franzoesisch und Italienisch vor, inklusive Impressum und Datenschutz. Eine klare Scrollfuehrung leitet durch die Seite und bietet eine bewegungsarme Alternative.
+Fuer die HappyPath GmbH entstand ein ruhiger Webauftritt fuer TextRoom, eine Software fuer Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten heute damit. Die Inhalte liegen vollständig in Deutsch, Französisch und Italienisch vor, inklusive Impressum und Datenschutz. Eine klare Scrollführung leitet durch die Seite und bietet eine bewegungsarme Alternative.
 
 Kernpunkte: TextRoom, Einsatz bei 15 von 26 Schweizer IV-Stellen, statische Auslieferung, drei Sprachversionen mit hreflang, lokal geladene Schriften, gehaertete und beim Build gepruefte CSP, schlankes Kontaktformular mit PHP, strukturierte Daten und LLM Dateien.
 

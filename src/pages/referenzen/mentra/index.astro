@@ -25,7 +25,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#software`,
       "name": "Mentra Video-Wissenssystem",
       "url": pageUrl,
-      "description": "Privates KI-gestütztes Video-Wissenssystem, das lokal auf dem Rechner des Kunden ausgeführt wird. Mit Archiv, semantischer Suche, KI-Chat, Reviews, Highlights, Quizfragen und Exporten auf Basis von Next.js, Prisma und MySQL.",
+      "description": "Privates KI Video Wissenssystem für den lokalen Betrieb. Es erschliesst Videos mit Archiv, semantischer Suche, quellengestütztem KI Chat, Reviews, Quizfragen und Exporten.",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Knowledge Management",
       "operatingSystem": "Web Browser",
@@ -51,15 +51,28 @@ const schema = JSON.stringify({
       "creator": { "@id": "https://www.nigredo.ch/#organization" }
     },
     {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      "url": ogImage,
+      "contentUrl": ogImage,
+      "width": 1200,
+      "height": 630,
+      "caption": "Mentra Video Wissenssystem mit Archiv, KI Chat, Suche, Reviews und Exporten"
+    },
+    {
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "name": "Mentra Video-Wissenssystem | Nigredo Referenzen",
       "url": pageUrl,
+      "description": "Lokales KI Video Wissenssystem mit Archiv, semantischer Suche, Quellen, Reviews und Exporten.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-06-06",
       "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#software` },
+      "mainEntity": { "@id": `${pageUrl}#software` },
+      "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
     }
@@ -69,16 +82,16 @@ const schema = JSON.stringify({
 
 <Layout
   title="Mentra Video-Wissenssystem | Nigredo Referenzen"
-  description="Privates KI-gestütztes Video-Wissenssystem, lokal auf dem Rechner des Kunden ausgeführt. Mit Archiv, semantischer Suche, KI-Chat, Reviews und Exporten."
+  description="Lokales KI Video Wissenssystem mit Archiv, semantischer Suche, Quellen, Reviews und Exporten. Daten und Modelle bleiben beim Kunden."
   canonical={pageUrl}
   ogTitle="Mentra Video-Wissenssystem"
-  ogDescription="Ein lokales privates Second Brain für Videos: KI-Auswertung, semantische Suche, Chat mit Quellen, Reviews, Highlights, Quiz und Exporte."
+  ogDescription="Lokales Wissenssystem für Videos mit KI Auswertung, semantischer Suche, Quellen, Reviews, Quiz und Exporten."
   ogImage={ogImage}
   ogImageAlt="Oberfläche der lokalen Mentra-App mit KI-gestützter Suche im Video-Wissensarchiv"
   ogImageWidth="1200"
   ogImageHeight="630"
   twitterTitle="Mentra Video-Wissenssystem"
-  twitterDescription="Lokal ausgeführtes KI-Video-Wissen mit Archiv, semantischer Suche, Reviews und Exporten."
+  twitterDescription="Lokales KI Video Wissenssystem mit Archiv, semantischer Suche, Quellen, Reviews und Exporten."
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
@@ -156,7 +169,7 @@ const schema = JSON.stringify({
       <div class="case-section fade-up delay-100">
         <div class="case-section-hd">
           <span class="case-eyebrow">Ergebnis im Detail</span>
-          <h2 class="case-section-title">Wissen aus Videos, das sich wieder benutzen lässt</h2>
+          <h2 class="case-section-title">Video Wissen, das im Alltag nutzbar bleibt</h2>
         </div>
         <div class="case-features">
           <div class="case-feature">
@@ -165,8 +178,8 @@ const schema = JSON.stringify({
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#mentra-feature-grad-1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="mentra-feature-grad-1" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-violet)"/><stop offset="0.5" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-cyan)"/></linearGradient></defs><path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h7"/><path d="m16 15 4 3-4 3v-6Z"/></svg>
               </div>
               <div class="case-feature-text">
-                <h3>Archiv statt verstreute Links</h3>
-                <p>Jedes Video wird zu einem klaren Eintrag mit Kategorien, Tags, Status und eigenen Notizen. So entsteht ein Archiv, das Themen auffindbar hält und den Kontext bewahrt.</p>
+                <h3>Ein Archiv statt verstreuter Links</h3>
+                <p>Jedes Video wird zu einem klaren Eintrag mit Kategorien, Tags, Status und eigenen Notizen. So bleiben Themen auffindbar und ihr Kontext erhalten.</p>
               </div>
             </div>
           </div>
@@ -177,7 +190,7 @@ const schema = JSON.stringify({
               </div>
               <div class="case-feature-text">
                 <h3>Semantische Suche und Chat mit Quellen</h3>
-                <p>Frag einfach, statt zu scrollen. Die Suche durchsucht Transkripte, Zusammenfassungen und Notizen. Der Chat mit KI greift dabei nur auf dein eigenes Wissen zu, zeigt jede Quelle und antwortet so, dass du den Inhalt überprüfen kannst.</p>
+                <p>Statt lange zu suchen, stellst du eine Frage. Die Suche durchsucht Transkripte, Zusammenfassungen und Notizen. Der KI Chat greift nur auf dein eigenes Wissen zu, zeigt die Quellen und macht Antworten überprüfbar.</p>
               </div>
             </div>
           </div>

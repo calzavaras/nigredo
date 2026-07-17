@@ -47,15 +47,28 @@ const schema = JSON.stringify({
       "image": ogImage
     },
     {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      "url": ogImage,
+      "contentUrl": ogImage,
+      "width": 1200,
+      "height": 630,
+      "caption": "Startseite von Therapie Ost mit Leistungsversprechen und Behandlungsraum"
+    },
+    {
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "name": "Website für Therapie Ost | Nigredo Referenzen",
       "url": pageUrl,
+      "description": "Praxiswebsite für Therapie Ost in St. Gallen mit klarer Positionierung, starker Bildsprache und direkter Online Terminbuchung.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-04-27",
       "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#website-project` },
+      "mainEntity": { "@id": `${pageUrl}#website-project` },
+      "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
     }
@@ -65,16 +78,16 @@ const schema = JSON.stringify({
 
 <Layout
   title="Website für Therapie Ost | Nigredo Referenzen"
-  description="Ruhige Website für Therapie Ost in St. Gallen: klare Positionierung, mobile Optimierung, starke Bildsprache und direkte Online-Terminbuchung."
+  description="Praxiswebsite für Therapie Ost in St. Gallen mit klarer Positionierung, starker Bildsprache und direkter Online Terminbuchung."
   canonical={pageUrl}
   ogTitle="Website für Therapie Ost"
-  ogDescription="Eine ruhige, klare Website für Therapie Ost mit starker Bildsprache und direkter Online-Terminbuchung."
+  ogDescription="Ruhige Praxiswebsite für Therapie Ost in St. Gallen mit starker Bildsprache und direkter Online Terminbuchung."
   ogImage={ogImage}
   ogImageAlt="Startseite der Praxiswebsite von Therapie Ost mit grünem Akzent, Leistungsversprechen und Foto des Behandlungsraums"
   ogImageWidth="1200"
   ogImageHeight="630"
   twitterTitle="Website für Therapie Ost"
-  twitterDescription="Klare Praxis-Website mit Vertrauen, Struktur und direkter Online-Terminbuchung."
+  twitterDescription="Klare Praxiswebsite mit Vertrauen, Struktur und direkter Online Terminbuchung."
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
@@ -178,8 +191,8 @@ const schema = JSON.stringify({
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#therapie-feature-grad-2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="therapie-feature-grad-2" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-coral)"/><stop offset="0.48" stop-color="var(--brand-pink)"/><stop offset="1" stop-color="var(--brand-violet)"/></linearGradient></defs><path d="M5 7h6"/><path d="M5 12h10"/><path d="M5 17h7"/><path d="M16.5 6.5l2 2 2-2"/><path d="M18.5 8.5v7"/><path d="M16.5 17.5l2-2 2 2"/></svg>
               </div>
               <div class="case-feature-text">
-                <h3>Klare Führung auf Desktop und Mobile</h3>
-                <p>Die einzelnen Seiten sind so aufgebaut, dass man sich schnell zurechtfindet. Die Navigation bleibt einfach, die Inhalte haben Luft, und die wichtigsten Informationen sind auf jedem Gerät ohne Umwege erreichbar.</p>
+                <h3>Klare Orientierung auf jedem Gerät</h3>
+                <p>Die Seiten führen Interessierte schnell zu den wichtigen Informationen. Die Navigation bleibt einfach, die Inhalte haben Luft, und die Terminbuchung ist auf jedem Gerät ohne Umwege erreichbar.</p>
               </div>
             </div>
           </div>

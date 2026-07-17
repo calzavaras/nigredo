@@ -25,7 +25,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#software`,
       "name": "ThinkTank Wissensplattform",
       "url": pageUrl,
-      "description": "Interne Wissensplattform für ein KMU mit Themenwelten, zentraler Suche, Reviews, Verantwortlichkeiten und Historie auf Basis eines statischen Frontends, einer schlanken PHP API und MySQL.",
+      "description": "Interne Wissensplattform für ein KMU mit Themenwelten, zentraler Suche, Reviews, Verantwortlichkeiten und Historie. Sie basiert auf einem statischen Frontend, einer schlanken PHP API und MySQL.",
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Knowledge Management",
       "operatingSystem": "Web Browser",
@@ -49,15 +49,28 @@ const schema = JSON.stringify({
       "creator": { "@id": "https://www.nigredo.ch/#organization" }
     },
     {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      "url": ogImage,
+      "contentUrl": ogImage,
+      "width": 1200,
+      "height": 630,
+      "caption": "ThinkTank Wissensplattform mit Themenwelten, Einträgen und Statuskennzahlen"
+    },
+    {
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "name": "ThinkTank Wissensplattform für ein KMU | Nigredo Referenzen",
       "url": pageUrl,
+      "description": "Interne Wissensplattform für ein KMU mit Themenwelten, Suche, Reviews, Verantwortlichkeiten und schlankem Betrieb.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-08",
       "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#software` },
+      "mainEntity": { "@id": `${pageUrl}#software` },
+      "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
     }
@@ -154,7 +167,7 @@ const schema = JSON.stringify({
       <div class="case-section fade-up delay-100">
         <div class="case-section-hd">
           <span class="case-eyebrow">Ergebnis im Detail</span>
-          <h2 class="case-section-title">Wissensplattform für den produktiven Alltag</h2>
+          <h2 class="case-section-title">Wissen mit Struktur für den Arbeitsalltag</h2>
         </div>
         <div class="case-features">
           <div class="case-feature">
@@ -185,8 +198,8 @@ const schema = JSON.stringify({
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#thinktank-feature-grad-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="thinktank-feature-grad-3" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--brand-cyan)"/><stop offset="0.52" stop-color="var(--brand-violet)"/><stop offset="1" stop-color="var(--brand-blue)"/></linearGradient></defs><path d="M12 3v4"/><path d="M12 17v4"/><path d="M5 8h14"/><path d="M5 16h14"/><path d="M7 12h4"/><path d="M15 12h2"/><circle cx="18" cy="12" r="3"/></svg>
               </div>
               <div class="case-feature-text">
-                <h3>Reviews, Besitzer und Historie eingebaut</h3>
-                <p>Wissen ist nur so viel wert, wie es aktuell ist. Darum stecken Wiedervorlagen, verantwortliche Personen, Status und Verlauf direkt in der Anwendung, sichtbar auf einem Dashboard. Pflege wird so kein Zusatzaufwand, sondern Teil des normalen Arbeitens.</p>
+                <h3>Reviews, Verantwortung und Verlauf</h3>
+                <p>Wissen ist nur dann hilfreich, wenn es aktuell bleibt. Wiedervorlagen, verantwortliche Personen, Status und Verlauf sind deshalb direkt in der Anwendung sichtbar. So wird Pflege Teil des normalen Arbeitens.</p>
               </div>
             </div>
           </div>

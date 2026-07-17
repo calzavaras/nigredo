@@ -24,7 +24,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#software`,
       "name": "Dashboard für Verwaltung",
       "url": pageUrl,
-      "description": "Lokales Excel-Analyse-Dashboard für eine Schweizer Kantonsverwaltung. Drag-and-Drop-Import, KPIs, Diagramme, Anonymisierung und PDF-Export. Sämtliche Daten bleiben auf dem Rechner.",
+      "description": "Lokales Excel Dashboard für eine Schweizer Kantonsverwaltung. Import, Kennzahlen, Diagramme, Anonymisierung und PDF Export laufen vollständig im Browser. Sämtliche Daten bleiben auf dem Rechner.",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web Browser",
       "inLanguage": "de",
@@ -48,15 +48,28 @@ const schema = JSON.stringify({
       "creator": { "@id": "https://www.nigredo.ch/#organization" }
     },
     {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      "url": ogImage,
+      "contentUrl": ogImage,
+      "width": 1200,
+      "height": 630,
+      "caption": "Lokales Verwaltungs Dashboard mit anonymisierten Kennzahlen, Statusübersicht und Auswertung"
+    },
+    {
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "name": "Dashboard für Verwaltung | Nigredo Referenzen",
       "url": pageUrl,
+      "description": "Lokales Excel Dashboard für eine Schweizer Kantonsverwaltung mit Import, Kennzahlen, Diagrammen, Anonymisierung und PDF Export.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
       "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#software` },
+      "mainEntity": { "@id": `${pageUrl}#software` },
+      "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
     }
@@ -66,16 +79,16 @@ const schema = JSON.stringify({
 
 <Layout
   title="Dashboard für Verwaltung | Nigredo Referenzen"
-  description="Lokales Excel-Dashboard für eine Schweizer Kantonsverwaltung: Import, KPIs, Diagramme, Anonymisierung und PDF-Export. Daten bleiben lokal."
+  description="Lokales Excel Dashboard für eine Schweizer Kantonsverwaltung: Import, Kennzahlen, Diagramme, Anonymisierung und PDF Export. Daten bleiben lokal."
   canonical={pageUrl}
   ogTitle="Dashboard für Verwaltung"
-  ogDescription="Drag & Drop Excel-Import, KPIs, Diagramme, Anonymisierung, PDF-Export. Sensible Personaldaten 100% lokal im Browser. Keine Cloud, keine Kompromisse."
+  ogDescription="Excel Import, Kennzahlen, Diagramme, Anonymisierung und PDF Export. Sensible Personaldaten bleiben vollständig lokal im Browser."
   ogImage={ogImage}
   ogImageAlt="Lokales Verwaltungs-Dashboard mit anonymisierten Kennzahlen, Statusübersicht und Auswertung"
   ogImageWidth="1200"
   ogImageHeight="630"
   twitterTitle="Dashboard für Verwaltung"
-  twitterDescription="Excel-Analyse ohne Cloud mit KPIs, Diagrammen und Anonymisierung. Sämtliche Daten bleiben lokal im Browser."
+  twitterDescription="Excel Auswertung ohne Cloud mit Kennzahlen, Diagrammen und Anonymisierung. Sämtliche Daten bleiben lokal im Browser."
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
