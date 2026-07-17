@@ -13,6 +13,7 @@ const TIMING = {
   HERO_GLOW_DELAY:     1000,
   LIGHTBOX_FADE:        150,
   LIGHTBOX_OPEN_DELAY:   10,
+  CONTACT_SUCCESS_REDIRECT_DELAY: 4500,
 };
 
 // iOS Safari: body.overflow='hidden' verhindert Scrollen nicht zuverlässig.
@@ -270,6 +271,7 @@ function initContactForm() {
   const intro = document.querySelector('.contact-form-card__intro');
   const divider = document.querySelector('.contact-form-card__divider');
   const resetBtn = document.getElementById('contact-reset');
+  let successRedirectTimer = null;
   if (!form || !submitBtn || !feedback || !success) return;
 
   function showError(msg) {
@@ -361,6 +363,9 @@ function initContactForm() {
         if (divider) divider.hidden = true;
         success.hidden = false;
         resetBtn?.focus();
+        successRedirectTimer = window.setTimeout(() => {
+          window.location.assign('/');
+        }, TIMING.CONTACT_SUCCESS_REDIRECT_DELAY);
       } else {
         showError(data.message || 'Fehler beim Senden. Bitte erneut versuchen.');
       }
@@ -375,6 +380,10 @@ function initContactForm() {
   });
 
   resetBtn?.addEventListener('click', () => {
+    if (successRedirectTimer) {
+      window.clearTimeout(successRedirectTimer);
+      successRedirectTimer = null;
+    }
     success.hidden = true;
     if (intro) intro.hidden = false;
     if (divider) divider.hidden = false;
