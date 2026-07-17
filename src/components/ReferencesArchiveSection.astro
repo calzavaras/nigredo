@@ -1,5 +1,6 @@
 ---
 import Breadcrumb from './Breadcrumb.astro';
+import ReferenzVisual from './ReferenzVisual.astro';
 import {
   getReferencePageHref,
   type ReferenceEntry,
@@ -14,6 +15,7 @@ interface Props {
 const { pageNumber, pageCount, pageItems } = Astro.props;
 const prevHref = pageNumber > 1 ? getReferencePageHref(pageNumber - 1) : null;
 const nextHref = pageNumber < pageCount ? getReferencePageHref(pageNumber + 1) : null;
+const archiveImageSizes = '(max-width: 700px) calc(100vw - 44px), (max-width: 1024px) calc(50vw - 44px), 432px';
 const breadcrumbItems = [
   { label: 'Start', href: '/' },
   { label: 'Referenzen', href: '/referenzen/' },
@@ -47,16 +49,11 @@ if (pageNumber > 1) {
       id="refs-grid"
       class="refs-grid"
     >
-      {pageItems.map((reference) => (
-        <a
-          href={reference.href}
+      {pageItems.map((reference, index) => (
+        <article
           class={`ref-main-card${reference.linkCls === 'ref-main-link--ki' ? ' ref-main-card--ki' : ''}${reference.badge.cls === 'accent-cyan' ? ' ref-main-card--app' : ''}`}
-          aria-label={reference.ariaLabel}
         >
-          <div class={`ref-main-card-img ${reference.listImgCls}`}>
-            <img src={reference.imgSrc} alt={reference.imgAlt} width="800" height="450" loading="lazy" decoding="async">
-            <span class={`tech-badge ${reference.badge.cls} ref-main-badge`}>{reference.badge.text}</span>
-          </div>
+          <ReferenzVisual reference={reference} sizes={archiveImageSizes} priority={index === 0} />
           <div class="ref-main-card-body">
             <div class="ref-main-card-header">
               <h2 class="ref-main-card-title">{reference.listTitle}</h2>
@@ -64,11 +61,17 @@ if (pageNumber > 1) {
             </div>
             <p class="ref-main-card-sub">{reference.sub}</p>
             <p class="ref-main-card-desc">{reference.listDesc}</p>
+            <p class="ref-main-card-role"><span>Rolle:</span> {reference.rolle}</p>
             <div class="ref-main-card-footer">
-              <span class={`ref-main-link ${reference.linkCls}`.trim()}>Details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+              <a href={reference.href} class={`ref-main-link ref-main-link--stretched ${reference.linkCls}`.trim()} aria-label={reference.ariaLabel}>Details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              {reference.liveUrl ? (
+                <a href={reference.liveUrl} class="ref-main-live-link" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website ansehen <span aria-hidden="true">↗</span></a>
+              ) : (
+                <span class="ref-main-live-note">{reference.liveNote}</span>
+              )}
             </div>
           </div>
-        </a>
+        </article>
       ))}
     </div>
 
@@ -205,6 +208,7 @@ if (pageNumber > 1) {
   }
 
   .ref-main-card {
+    --card-accent: var(--neon-red);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -213,12 +217,19 @@ if (pageNumber > 1) {
     background: rgba(10, 10, 12, 0.75);
     background-clip: padding-box;
     overflow: hidden;
-    text-decoration: none;
     color: #fff;
     position: relative;
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
                 border-color 0.4s ease,
                 box-shadow 0.4s ease;
+  }
+
+  .ref-main-card--ki {
+    --card-accent: var(--tertiary-accent);
+  }
+
+  .ref-main-card--app {
+    --card-accent: var(--quaternary-accent);
   }
 
   @media (hover: hover) {
@@ -227,45 +238,9 @@ if (pageNumber > 1) {
       border-color: rgba(255, 255, 255, 0.16);
       box-shadow: var(--shadow-card-hover);
     }
-    .ref-main-card:hover .ref-main-card-img img {
+    .ref-main-card:hover .referenz-visual__image {
       transform: scale(1.04);
     }
-  }
-
-  .ref-main-card-img {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    flex-shrink: 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-  }
-
-  .ref-main-card-img--purple {
-    background: radial-gradient(ellipse at 25% 35%, rgba(255, 138, 31, 0.5) 0%, transparent 56%), #140b06;
-  }
-
-  .ref-main-card-img--cyan {
-    background: radial-gradient(ellipse at 25% 35%, rgba(255, 212, 0, 0.46) 0%, transparent 56%), #141006;
-  }
-
-  .ref-main-card-img--coral {
-    background: radial-gradient(ellipse at 25% 35%, rgba(255, 68, 171, 0.5) 0%, transparent 56%), #16070f;
-  }
-
-  .ref-main-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-
-  .ref-main-badge {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    z-index: 1;
   }
 
   .ref-main-card-body {
@@ -321,7 +296,23 @@ if (pageNumber > 1) {
     flex: 1;
   }
 
+  .ref-main-card-role {
+    margin: 18px 0 0;
+    color: var(--text-faint);
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  .ref-main-card-role span {
+    color: var(--text-soft);
+    font-weight: 600;
+  }
+
   .ref-main-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px 20px;
+    flex-wrap: wrap;
     margin-top: 20px;
     padding-top: 18px;
     border-top: 1px solid rgba(255,255,255,0.06);
@@ -335,11 +326,68 @@ if (pageNumber > 1) {
     font-weight: 600;
     color: var(--text-secondary);
     transition: color 0.3s ease, gap 0.3s ease;
+    text-decoration: none;
+  }
+
+  .ref-main-link--stretched::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: var(--radius-lg);
+  }
+
+  .ref-main-link--stretched:focus-visible {
+    outline: none;
+  }
+
+  .ref-main-link--stretched:focus-visible::after {
+    outline: 2px solid var(--card-accent);
+    outline-offset: -3px;
+  }
+
+  .ref-main-live-link {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-soft);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .ref-main-live-link:hover {
+    color: #fff;
+  }
+
+  .ref-main-live-link:focus-visible {
+    outline: 2px solid var(--card-accent);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+  }
+
+  .ref-main-live-note {
+    color: var(--text-faint);
+    font-size: 0.78rem;
+    line-height: 1.45;
   }
 
   .ref-main-card:hover .ref-main-link {
     color: #fff;
     gap: 12px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ref-main-card,
+    .ref-main-link,
+    .ref-main-live-link,
+    .ref-main-card .referenz-visual__image {
+      transition: none !important;
+      transform: none !important;
+    }
   }
 
   .refs-pagination {

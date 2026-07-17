@@ -5,7 +5,8 @@ import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const liveUrl = 'https://www.plan-h.ch';
 const pageUrl = 'https://www.nigredo.ch/referenzen/plan-h/';
-const detailImage = '/referenzen/plan-h/plan-h-hypnosetherapie-website-startseite-screenshot.png';
+const detailImage = '/referenzen/plan-h/plan-h-hypnosetherapie-website-startseite-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/plan-h/plan-h-hypnosetherapie-website-startseite-screenshot-2160.avif';
 const ogImage = 'https://www.nigredo.ch/referenzen/plan-h/plan-h-hypnosetherapie-website-startseite-screenshot-og.jpg';
 
 const schema = JSON.stringify({
@@ -102,7 +103,7 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-06-17",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#website-project` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
@@ -118,14 +119,14 @@ const schema = JSON.stringify({
   ogTitle="Website für Plan H Hypnosetherapie"
   ogDescription="Ein ruhiger Webauftritt mit Local SEO, WhatsApp-Kontakt, Google-Struktur und sortierbaren Stimmen."
   ogImage={ogImage}
-  ogImageAlt="Screenshot der Plan-H-Hypnosetherapie-Website mit Hero-Bereich, Navigation und türkisfarbener Illustration"
+  ogImageAlt="Startseite der Praxiswebsite von Plan H Hypnosetherapie mit korallfarbenem Akzent und WhatsApp-Kontakt"
   ogImageWidth="1200"
-  ogImageHeight="831"
+  ogImageHeight="630"
   twitterTitle="Website für Plan H Hypnosetherapie"
   twitterDescription="Praxis-Website mit Local SEO, WhatsApp-Kontakt, Google-Struktur und klarer Anfrageführung."
   schema={schema}
-  preloadImage={detailImage}
-  preloadImageType="image/png"
+  preloadImage={detailImageAvif}
+  preloadImageType="image/avif"
 >
   <section class="section pt-sub case-page case-page--plan-h" aria-labelledby="plan-h-title">
     <div class="hero-glow"></div>
@@ -143,7 +144,6 @@ const schema = JSON.stringify({
 
       <div class="case-hero fade-up">
         <div class="case-hero-content">
-          <span class="tech-badge accent-coral case-hero-badge">Website</span>
           <h1 id="plan-h-title" class="home-hero__title case-hero-title case-hero-title--plan-h"><span class="case-hero-title-line">Website für</span> <span class="gradient-text">Plan H</span></h1>
           <p class="hero-lead case-hero-lead">
             Für Plan H entstand ein ruhiger Praxisauftritt, der Vertrauen aufbaut und technisch sauber arbeitet: lokale Google-Ausrichtung, strukturierte Daten, klare Angebotsseiten, sortierbare Stimmen und direkte Kontaktwege bis hin zum WhatsApp-Chat.
@@ -162,14 +162,17 @@ const schema = JSON.stringify({
               data-gallery-index="0"
               aria-label="Website-Vorschau vergrössern"
             >
-              <img
-                src={detailImage}
-                alt="Screenshot der Plan H Hypnosetherapie Website mit Hero Bereich und ruhiger türkisfarbener Gestaltung"
-                width="1696" height="1174"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              >
+              <picture>
+                <source srcset={detailImageAvif} type="image/avif">
+                <img
+                  src={detailImage}
+                  alt="Startseite der Praxiswebsite von Plan H Hypnosetherapie mit korallfarbenem Akzent und WhatsApp-Kontakt"
+                  width="2160" height="1215"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                >
+              </picture>
             </button>
           </div>
         </div>
@@ -277,12 +280,13 @@ const schema = JSON.stringify({
     --case-accent: var(--brand-coral);
     --case-accent-2: var(--brand-pink);
     --case-accent-3: var(--brand-violet);
+    --case-title-gradient: var(--brand-gradient-cool);
     --case-accent-soft: color-mix(in srgb, var(--case-accent) 16%, transparent);
     --case-accent-glow: color-mix(in srgb, var(--case-accent) 22%, transparent);
   }
 
   .case-page--plan-h .gradient-text {
-    background: var(--case-gradient-website);
+    background: var(--case-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;

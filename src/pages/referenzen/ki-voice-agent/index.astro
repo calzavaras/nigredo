@@ -4,6 +4,9 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const pageUrl = 'https://www.nigredo.ch/referenzen/ki-voice-agent/';
+const detailImage = '/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-assistent-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-assistent-screenshot-2160.avif';
+const ogImage = 'https://www.nigredo.ch/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-assistent-screenshot-og.jpg';
 const schema = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
@@ -39,7 +42,7 @@ const schema = JSON.stringify({
       "screenshot": [
         {
           "@type": "ImageObject",
-          "url": "https://www.nigredo.ch/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-sprachassistent-og.jpg",
+          "url": ogImage,
           "caption": "KI Voice Agent im aktiven Gespräch mit Audio-Visualizer und Live-Transkript"
         }
       ],
@@ -53,7 +56,7 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-02-28",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#software` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
@@ -68,15 +71,15 @@ const schema = JSON.stringify({
   canonical={pageUrl}
   ogTitle="KI Voice Agent für IV-Stellen"
   ogDescription="Sprachassistent mit Google Gemini 2.5 Flash: 24/7 autonom, vier Sprachen (DE/FR/IT/EN), echtes Fachwissen zu AHV-Hilfsmitteln. Prototyp für Schweizer IV-Stellen."
-  ogImage="https://www.nigredo.ch/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-sprachassistent-og.jpg"
-  ogImageAlt="KI Voice Agent für IV-Stellen mit Echtzeit-Transkript von Nigredo"
-  ogImageWidth="587"
-  ogImageHeight="793"
+  ogImage={ogImage}
+  ogImageAlt="Oberfläche des lokalen KI Voice Agents Lio für Fragen zu AHV-Hilfsmitteln"
+  ogImageWidth="1200"
+  ogImageHeight="630"
   twitterTitle="KI Voice Agent für IV-Stellen"
   twitterDescription="24/7 autonom, vier Sprachen, echtes Fachwissen zu AHV-Hilfsmitteln. KI-Sprachassistent von Nigredo."
   schema={schema}
-  preloadImage="/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-sprachassistent.webp"
-  preloadImageType="image/webp"
+  preloadImage={detailImageAvif}
+  preloadImageType="image/avif"
 >
   <section class="section pt-sub case-page case-page--ki" aria-labelledby="ki-voice-agent-title">
     <div class="hero-glow"></div>
@@ -96,7 +99,6 @@ const schema = JSON.stringify({
       <!-- Hero: Split Layout -->
       <div class="case-hero fade-up">
         <div class="case-hero-content">
-          <span class="tech-badge accent-purple case-hero-badge">KI-Lösung</span>
           <h1 id="ki-voice-agent-title" class="home-hero__title case-hero-title">KI Voice Agent <span class="gradient-text">für IV-Stellen</span></h1>
           <p class="hero-lead case-hero-lead">
             Dieser Prototyp beantwortet wiederkehrende Fachfragen ohne Warteschleife. Der Agent ist rund um die Uhr erreichbar, spricht vier Sprachen und greift gezielt auf hinterlegtes Wissen zu AHV-Hilfsmitteln zu.
@@ -107,19 +109,22 @@ const schema = JSON.stringify({
           <div class="case-hero-canvas case-hero-canvas--purple">
             <button
               type="button"
-              class="case-hero-float lightbox-trigger"
-              data-gallery='["/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-sprachassistent.webp"]'
+              class="case-hero-float case-hero-float--wide lightbox-trigger"
+              data-gallery={`["${detailImage}"]`}
               data-gallery-index="0"
               aria-label="Screenshot vergrössern"
             >
-              <img
-                src="/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-sprachassistent.webp"
-                alt="Screenshot KI Voice Agent Sprachassistent für AHV-Hilfsmittel der IV-Stellen, entwickelt von Nigredo"
-                width="587" height="793"
-                loading="eager"
-                decoding="async"
-                fetchpriority="high"
-              >
+              <picture>
+                <source srcset={detailImageAvif} type="image/avif">
+                <img
+                  src={detailImage}
+                  alt="Oberfläche des lokalen KI Voice Agents Lio für Fragen zu AHV-Hilfsmitteln"
+                  width="2160" height="1215"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                >
+              </picture>
             </button>
           </div>
         </div>
@@ -228,12 +233,13 @@ const schema = JSON.stringify({
     --case-accent: var(--brand-violet);
     --case-accent-2: var(--brand-pink);
     --case-accent-3: var(--brand-blue);
+    --case-title-gradient: var(--brand-gradient-signature);
     --case-accent-soft: color-mix(in srgb, var(--case-accent) 14%, transparent);
     --case-accent-glow: color-mix(in srgb, var(--case-accent) 26%, transparent);
   }
 
   .case-page--ki .gradient-text {
-    background: var(--case-gradient-ki);
+    background: var(--case-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;
@@ -243,7 +249,7 @@ const schema = JSON.stringify({
   }
 
   .stat-ki {
-    background: var(--case-gradient-ki);
+    background: var(--case-title-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

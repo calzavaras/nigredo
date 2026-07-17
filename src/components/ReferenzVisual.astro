@@ -1,0 +1,139 @@
+---
+import type { ReferenceEntry } from '../data/references';
+
+interface Props {
+  reference: ReferenceEntry;
+  sizes: string;
+  priority?: boolean;
+}
+
+const { reference, sizes, priority = false } = Astro.props;
+const hasResponsiveImage = reference.imageBase !== null;
+---
+
+<div class={`referenz-visual referenz-visual--${reference.frame}`}>
+  {reference.frame !== 'none' && (
+    <div class="referenz-visual__chrome">
+      <span class="referenz-visual__dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      {reference.domain && <span class="referenz-visual__domain">{reference.domain}</span>}
+    </div>
+  )}
+
+  {hasResponsiveImage ? (
+    <picture class="referenz-visual__picture">
+      <source
+        type="image/avif"
+        srcset={`${reference.imageBase}-720.avif 720w, ${reference.imageBase}-1080.avif 1080w, ${reference.imageBase}-1440.avif 1440w, ${reference.imageBase}-2160.avif 2160w`}
+        sizes={sizes}
+      >
+      <source
+        type="image/webp"
+        srcset={`${reference.imageBase}-720.webp 720w, ${reference.imageBase}-1080.webp 1080w, ${reference.imageBase}-1440.webp 1440w`}
+        sizes={sizes}
+      >
+      <img
+        class="referenz-visual__image"
+        src={reference.imgSrc}
+        srcset={`${reference.imageBase}-720.webp 720w, ${reference.imageBase}-1080.webp 1080w, ${reference.imageBase}-1440.webp 1440w`}
+        sizes={sizes}
+        width={reference.imgWidth}
+        height={reference.imgHeight}
+        alt={reference.imgAlt}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        fetchpriority={priority ? 'high' : 'auto'}
+      >
+    </picture>
+  ) : (
+    <img
+      class="referenz-visual__image referenz-visual__image--legacy"
+      src={reference.imgSrc}
+      width={reference.imgWidth}
+      height={reference.imgHeight}
+      alt={reference.imgAlt}
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+      fetchpriority={priority ? 'high' : 'auto'}
+    >
+  )}
+</div>
+
+<style>
+  .referenz-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 8 / 5;
+    overflow: hidden;
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  .referenz-visual__chrome {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 10%;
+    min-height: 22px;
+    padding: 0 clamp(12px, 3vw, 18px);
+    color: var(--text-muted);
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  .referenz-visual__dots {
+    position: absolute;
+    left: clamp(12px, 3vw, 18px);
+    display: inline-flex;
+    gap: 5px;
+  }
+
+  .referenz-visual__dots span {
+    width: 5px;
+    height: 5px;
+    border-radius: var(--radius-pill);
+    background: var(--text-faint);
+  }
+
+  .referenz-visual__domain {
+    max-width: 58%;
+    overflow: hidden;
+    color: var(--text-muted);
+    font-size: clamp(0.58rem, 1.4vw, 0.72rem);
+    font-weight: 500;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .referenz-visual__picture {
+    display: block;
+    min-width: 0;
+    min-height: 0;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .referenz-visual__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s var(--ease-spring);
+  }
+
+  .referenz-visual__image--legacy {
+    object-position: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .referenz-visual__image {
+      transition: none;
+    }
+  }
+</style>

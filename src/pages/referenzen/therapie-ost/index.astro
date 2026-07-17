@@ -5,6 +5,9 @@ import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const liveUrl = 'https://www.therapie-ost.ch';
 const pageUrl = 'https://www.nigredo.ch/referenzen/therapie-ost/';
+const detailImage = '/referenzen/therapie-ost/therapie-ost-praxiswebsite-startseite-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/therapie-ost/therapie-ost-praxiswebsite-startseite-screenshot-2160.avif';
+const ogImage = 'https://www.nigredo.ch/referenzen/therapie-ost/therapie-ost-praxiswebsite-startseite-screenshot-og.jpg';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -41,7 +44,7 @@ const schema = JSON.stringify({
           "addressCountry": "CH"
         }
       },
-      "image": "https://www.nigredo.ch/referenzen/therapie-ost/therapie-ost-website-screenshot-og.jpg"
+      "image": ogImage
     },
     {
       "@type": "WebPage",
@@ -51,7 +54,7 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-04-27",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#website-project` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
@@ -66,14 +69,14 @@ const schema = JSON.stringify({
   canonical={pageUrl}
   ogTitle="Website für Therapie Ost"
   ogDescription="Eine ruhige, klare Website für Therapie Ost mit starker Bildsprache und direkter Online-Terminbuchung."
-  ogImage="https://www.nigredo.ch/referenzen/therapie-ost/therapie-ost-website-screenshot-og.jpg"
-  ogImageAlt="Screenshot der Therapie-Ost-Website mit Hero-Bereich und Praxisbild"
-  ogImageWidth="1360"
-  ogImageHeight="823"
+  ogImage={ogImage}
+  ogImageAlt="Startseite der Praxiswebsite von Therapie Ost mit grünem Akzent, Leistungsversprechen und Foto des Behandlungsraums"
+  ogImageWidth="1200"
+  ogImageHeight="630"
   twitterTitle="Website für Therapie Ost"
   twitterDescription="Klare Praxis-Website mit Vertrauen, Struktur und direkter Online-Terminbuchung."
   schema={schema}
-  preloadImage="/referenzen/therapie-ost/therapie-ost-website-screenshot.avif"
+  preloadImage={detailImageAvif}
   preloadImageType="image/avif"
 >
   <section class="section pt-sub case-page case-page--website" aria-labelledby="therapie-ost-title">
@@ -92,7 +95,6 @@ const schema = JSON.stringify({
 
       <div class="case-hero fade-up">
         <div class="case-hero-content">
-          <span class="tech-badge accent-coral case-hero-badge">Website</span>
           <h1 id="therapie-ost-title" class="home-hero__title case-hero-title">Website für <span class="gradient-text">Therapie Ost</span></h1>
           <p class="hero-lead case-hero-lead">
             Für Therapie Ost in St. Gallen entstand ein ruhiger, klar geführter Praxisauftritt. Er schafft Vertrauen, erklärt die Leistungen verständlich und führt Interessierte ohne Umwege zur Terminbuchung.
@@ -107,19 +109,19 @@ const schema = JSON.stringify({
             <button
               type="button"
               class="case-hero-float case-hero-float--wide lightbox-trigger"
-              data-gallery='["/referenzen/therapie-ost/therapie-ost-website-screenshot.webp"]'
+              data-gallery={`["${detailImage}"]`}
               data-gallery-index="0"
               aria-label="Website-Vorschau vergrössern"
             >
               <picture>
                 <source
-                  srcset="/referenzen/therapie-ost/therapie-ost-website-screenshot.avif"
+                  srcset={detailImageAvif}
                   type="image/avif"
                 >
               <img
-                src="/referenzen/therapie-ost/therapie-ost-website-screenshot.webp"
-                alt="Screenshot der Therapie Ost Website mit Hero Bereich und Praxisbild"
-                width="1360" height="823"
+                src={detailImage}
+                alt="Startseite der Praxiswebsite von Therapie Ost mit grünem Akzent, Leistungsversprechen und Foto des Behandlungsraums"
+                width="2160" height="1215"
                 loading="eager"
                 decoding="async"
                 fetchpriority="high"
@@ -232,12 +234,13 @@ const schema = JSON.stringify({
     --case-accent: var(--brand-coral);
     --case-accent-2: var(--brand-pink);
     --case-accent-3: var(--brand-violet);
+    --case-title-gradient: linear-gradient(96deg, var(--brand-cyan) 0%, var(--brand-blue) 64%, var(--brand-violet) 100%);
     --case-accent-soft: color-mix(in srgb, var(--case-accent) 16%, transparent);
     --case-accent-glow: color-mix(in srgb, var(--case-accent) 22%, transparent);
   }
 
   .case-page--website .gradient-text {
-    background: var(--case-gradient-website);
+    background: var(--case-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;

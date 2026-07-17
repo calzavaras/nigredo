@@ -1,22 +1,36 @@
 ---
+import ReferenzVisual from './ReferenzVisual.astro';
 import { references } from '../data/references';
 
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
-const others = references.filter(r => r.href !== currentPath).slice(0, 3);
+const currentReference = references.find(reference => reference.href === currentPath);
+const sameCategory = currentReference
+  ? references.filter(reference => reference.href !== currentPath && reference.badge.cls === currentReference.badge.cls)
+  : [];
+const remaining = references.filter(reference => (
+  reference.href !== currentPath && !sameCategory.includes(reference)
+));
+const others = [...sameCategory, ...remaining].slice(0, 3);
+const moreImageSizes = '(max-width: 700px) calc(100vw - 44px), (max-width: 1024px) calc(33.333vw - 32px), 283px';
 ---
 
 <div class="case-more-grid">
-  {others.map(r => (
-    <a href={r.href} class={`case-more-card${r.linkCls === 'ref-main-link--ki' ? ' case-more-card--ki' : ''}`} aria-label={r.ariaLabel}>
-      <div class={`case-more-card-img ${r.moreImgCls}`}>
-        <img src={r.imgSrc} alt={r.imgAlt} loading="lazy" decoding="async" width="800" height="450">
-      </div>
+  {others.map(reference => (
+    <article class={`case-more-card${reference.linkCls === 'ref-main-link--ki' ? ' case-more-card--ki' : ''}${reference.badge.cls === 'accent-cyan' ? ' case-more-card--app' : ''}`}>
+      <ReferenzVisual reference={reference} sizes={moreImageSizes} />
       <div class="case-more-card-body">
-        <span class={`tech-badge ${r.badge.cls}`}>{r.badge.text}</span>
-        <p class="case-more-card-title">{r.moreTitle}</p>
-        <p class="case-more-card-desc">{r.moreDesc}</p>
-        <span class="case-more-card-arrow">Details ansehen <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <p class="case-more-card-title">{reference.moreTitle}</p>
+        <p class="case-more-card-desc">{reference.moreDesc}</p>
+        <p class="case-more-card-role"><span>Rolle:</span> {reference.rolle}</p>
+        <div class="case-more-card-footer">
+          <a href={reference.href} class="case-more-card-arrow case-more-card-arrow--stretched" aria-label={reference.ariaLabel}>Details ansehen <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          {reference.liveUrl ? (
+            <a href={reference.liveUrl} class="case-more-live-link" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website ansehen <span aria-hidden="true">↗</span></a>
+          ) : (
+            <span class="case-more-live-note">{reference.liveNote}</span>
+          )}
+        </div>
       </div>
-    </a>
+    </article>
   ))}
 </div>

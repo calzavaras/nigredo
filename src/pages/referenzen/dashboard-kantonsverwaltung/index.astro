@@ -4,6 +4,9 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const pageUrl = 'https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/';
+const detailImage = '/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-verwaltungsdashboard-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-verwaltungsdashboard-screenshot-2160.avif';
+const ogImage = 'https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-verwaltungsdashboard-screenshot-og.jpg';
 const schema = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
@@ -38,8 +41,8 @@ const schema = JSON.stringify({
       "screenshot": [
         {
           "@type": "ImageObject",
-          "url": "https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.png",
-          "caption": "Dashboard für Verwaltung mit KPI-Übersicht, Diagrammen und Auswertungen"
+          "url": ogImage,
+          "caption": "Lokales Verwaltungs-Dashboard mit anonymisierten Kennzahlen, Statusübersicht und Auswertung"
         }
       ],
       "creator": { "@id": "https://www.nigredo.ch/#organization" }
@@ -52,7 +55,7 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#software` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
@@ -67,14 +70,14 @@ const schema = JSON.stringify({
   canonical={pageUrl}
   ogTitle="Dashboard für Verwaltung"
   ogDescription="Drag & Drop Excel-Import, KPIs, Diagramme, Anonymisierung, PDF-Export. Sensible Personaldaten 100% lokal im Browser. Keine Cloud, keine Kompromisse."
-  ogImage="https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.png"
-  ogImageAlt="Lokales Excel-Dashboard für Verwaltung mit KPI-Auswertung ohne Cloud"
-  ogImageWidth="1860"
-  ogImageHeight="946"
+  ogImage={ogImage}
+  ogImageAlt="Lokales Verwaltungs-Dashboard mit anonymisierten Kennzahlen, Statusübersicht und Auswertung"
+  ogImageWidth="1200"
+  ogImageHeight="630"
   twitterTitle="Dashboard für Verwaltung"
   twitterDescription="Excel-Analyse ohne Cloud mit KPIs, Diagrammen und Anonymisierung. Sämtliche Daten bleiben lokal im Browser."
   schema={schema}
-  preloadImage="/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.avif"
+  preloadImage={detailImageAvif}
   preloadImageType="image/avif"
 >
   <section class="section pt-sub case-page case-page--app" aria-labelledby="dashboard-kantonsverwaltung-title">
@@ -95,7 +98,6 @@ const schema = JSON.stringify({
       <!-- Hero: Split Layout -->
       <div class="case-hero fade-up">
         <div class="case-hero-content">
-          <span class="tech-badge accent-cyan case-hero-badge">App</span>
           <h1 id="dashboard-kantonsverwaltung-title" class="home-hero__title case-hero-title">Excel Dashboard<br><span class="gradient-text">für Verwaltung</span></h1>
           <p class="hero-lead case-hero-lead">
             Dieses lokale Dashboard wertet sensible Personaldaten direkt im Browser aus. Excel-Dateien werden importiert, anonymisiert, visualisiert und als PDF ausgegeben, ohne Server, Cloud oder externe Datenübertragung.
@@ -107,19 +109,19 @@ const schema = JSON.stringify({
             <button
               type="button"
               class="case-hero-float lightbox-trigger"
-              data-gallery='["/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.webp"]'
+              data-gallery={`["${detailImage}"]`}
               data-gallery-index="0"
               aria-label="Screenshot vergrössern"
             >
               <picture>
                 <source
-                  srcset="/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.avif"
+                  srcset={detailImageAvif}
                   type="image/avif"
                 >
               <img
-                src="/referenzen/dashboard-kantonsverwaltung/dashboard-kantonsverwaltung-excel-kpi-browser.webp"
-                alt="Excel-KPI-Dashboard für eine Kantonsverwaltung, lokal im Browser und ohne Cloud"
-                width="1860" height="946"
+                src={detailImage}
+                alt="Lokales Verwaltungs-Dashboard mit anonymisierten Kennzahlen, Statusübersicht und Auswertung"
+                width="1440" height="810"
                 loading="eager"
                 decoding="async"
                 fetchpriority="high"
@@ -222,12 +224,13 @@ const schema = JSON.stringify({
     --case-accent: var(--brand-cyan);
     --case-accent-2: var(--brand-blue);
     --case-accent-3: var(--brand-violet);
+    --case-title-gradient: linear-gradient(96deg, var(--brand-cyan) 0%, var(--brand-violet) 52%, var(--brand-sun) 100%);
     --case-accent-soft: color-mix(in srgb, var(--case-accent) 14%, transparent);
     --case-accent-glow: color-mix(in srgb, var(--case-accent) 24%, transparent);
   }
 
   .case-page--app .gradient-text {
-    background: var(--case-gradient-tool);
+    background: var(--case-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;
@@ -237,7 +240,7 @@ const schema = JSON.stringify({
   }
 
   .stat-tool {
-    background: var(--case-gradient-tool);
+    background: var(--case-title-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

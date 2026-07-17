@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ReferenzVisual from '../components/ReferenzVisual.astro';
 import { references } from '../data/references';
 
 const showcase = references.slice(0, 3);
@@ -27,7 +28,7 @@ const schema = JSON.stringify({
       ],
       "description": "Nigredo entwickelt Websites, KI-Lösungen und digitale Werkzeuge für Selbstständige, KMU und Organisationen. Persönlich umgesetzt in St. Gallen.",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-07-17",
       "inLanguage": "de-CH"
     },
     {
@@ -133,23 +134,31 @@ const services = [
 
       <div class="showcase-grid">
         {showcase.map((reference, index) => (
-          <a
-            href={reference.href}
-            class={`showcase-card fade-up${index === 0 ? ' showcase-card--featured' : ''}${index > 0 ? ` delay-${index * 100}` : ''}`}
-            aria-label={reference.ariaLabel}
+          <article
+            class={`showcase-card fade-up${index === 0 ? ' showcase-card--featured' : ''}${reference.badge.cls === 'accent-purple' ? ' showcase-card--ki' : ''}${reference.badge.cls === 'accent-cyan' ? ' showcase-card--app' : ''}${index > 0 ? ` delay-${index * 100}` : ''}`}
           >
-            <div class={`showcase-card__media ${reference.listImgCls}`}>
-              <img src={reference.imgSrc} alt={reference.imgAlt} width="1200" height="675" loading="lazy" decoding="async">
-            </div>
+            <ReferenzVisual
+              reference={reference}
+              sizes={index === 0 ? '(max-width: 860px) calc(100vw - 44px), 894px' : '(max-width: 860px) calc(100vw - 44px), 432px'}
+              priority={index === 0}
+            />
             <div class="showcase-card__body">
-              {index === 0 && <span class="showcase-card__badge badge">{reference.badge.text}</span>}
               <div class="showcase-card__header">
                 <h3 class="showcase-card__title">{reference.listTitle}</h3>
                 <span class="showcase-card__year">{reference.year}</span>
               </div>
               <p class="showcase-card__sub">{reference.sub}</p>
+              <p class="showcase-card__role"><span>Rolle:</span> {reference.rolle}</p>
+              <div class="showcase-card__footer">
+                <a href={reference.href} class="showcase-card__details" aria-label={reference.ariaLabel}>Details <span aria-hidden="true">→</span></a>
+                {reference.liveUrl ? (
+                  <a href={reference.liveUrl} class="showcase-card__live" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website ansehen <span aria-hidden="true">↗</span></a>
+                ) : (
+                  <span class="showcase-card__note">{reference.liveNote}</span>
+                )}
+              </div>
             </div>
-          </a>
+          </article>
         ))}
       </div>
     </div>

@@ -14,7 +14,7 @@ export default defineConfig({
         const url = item.url;
         if (url === 'https://www.nigredo.ch/') {
           item.priority = 1.0;
-          item.lastmod = new Date('2026-07-16');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/digitale-loesungen/') {
           item.priority = 0.95;
@@ -22,39 +22,39 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/referenzen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-07-16');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/mentra/') {
           item.priority = 0.65;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/seite/2/') {
           item.priority = 0.45;
-          item.lastmod = new Date('2026-07-16');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/ki-voice-agent/') {
           item.priority = 0.65;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/') {
           item.priority = 0.65;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/therapie-ost/') {
           item.priority = 0.65;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/happypath/') {
           item.priority = 0.65;
-          item.lastmod = new Date('2026-07-16');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/plan-h/') {
           item.priority = 0.65;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/thinktank/') {
           item.priority = 0.65;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-17');
         }
         else if (url === 'https://www.nigredo.ch/marco-calzavara/') {
           item.priority = 0.95;

@@ -4,9 +4,9 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const pageUrl = 'https://www.nigredo.ch/referenzen/thinktank/';
-const detailImage = '/referenzen/thinktank/thinktank-wissensdatenbank-kmu-detailansicht.webp';
-const detailImageAvif = '/referenzen/thinktank/thinktank-wissensdatenbank-kmu-detailansicht.avif';
-const ogImage = 'https://www.nigredo.ch/referenzen/thinktank/thinktank-wissensdatenbank-kmu-detailansicht-og.jpg';
+const detailImage = '/referenzen/thinktank/thinktank-wissensplattform-prozessuebersicht-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/thinktank/thinktank-wissensplattform-prozessuebersicht-screenshot-2160.avif';
+const ogImage = 'https://www.nigredo.ch/referenzen/thinktank/thinktank-wissensplattform-prozessuebersicht-screenshot-og.jpg';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -56,7 +56,7 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-08",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#software` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
@@ -72,9 +72,9 @@ const schema = JSON.stringify({
   ogTitle="ThinkTank Wissensplattform für ein KMU"
   ogDescription="Themenwelten, zentrale Suche, Reviews und Verantwortlichkeiten in einer klar geführten Wissensplattform für den produktiven Alltag."
   ogImage={ogImage}
-  ogImageAlt="ThinkTank Wissensplattform für ein KMU mit Themenwelten, Wissenseinträgen und Statusdetails"
-  ogImageWidth="1672"
-  ogImageHeight="941"
+  ogImageAlt="Oberfläche der lokalen ThinkTank-App mit Themenübersicht, Wissenseinträgen und Statuskennzahlen"
+  ogImageWidth="1200"
+  ogImageHeight="630"
   twitterTitle="ThinkTank Wissensplattform für ein KMU"
   twitterDescription="Zentrale Suche, Reviews und klare Themenwelten in einer internen Wissensplattform für den produktiven Alltag."
   schema={schema}
@@ -97,7 +97,6 @@ const schema = JSON.stringify({
 
       <div class="case-hero fade-up">
         <div class="case-hero-content">
-          <span class="tech-badge accent-cyan case-hero-badge">App</span>
           <h1 id="thinktank-title" class="home-hero__title case-hero-title">ThinkTank <span class="gradient-text">für ein KMU</span></h1>
           <p class="hero-lead case-hero-lead">
             ThinkTank bündelt das Wissen eines KMU an einem zentralen Ort. Die Plattform ordnet Themen, macht Verantwortlichkeiten sichtbar und erinnert an fällige Überprüfungen, damit Informationen auffindbar und aktuell bleiben.
@@ -120,9 +119,9 @@ const schema = JSON.stringify({
                 >
                 <img
                   src={detailImage}
-                  alt="ThinkTank Wissensplattform für ein KMU als veredeltes Produktbild mit Themenwelten, Wissenseinträgen, Statusdetails und klarer Bedienoberfläche"
-                  width="1672"
-                  height="941"
+                  alt="Oberfläche der lokalen ThinkTank-App mit Themenübersicht, Wissenseinträgen und Statuskennzahlen"
+                  width="2160"
+                  height="1215"
                   loading="eager"
                   decoding="async"
                   fetchpriority="high"
@@ -231,6 +230,7 @@ const schema = JSON.stringify({
     --case-accent: var(--brand-cyan);
     --case-accent-2: var(--brand-blue);
     --case-accent-3: var(--brand-violet);
+    --case-title-gradient: var(--brand-gradient-cool);
     --case-accent-soft: color-mix(in srgb, var(--case-accent) 14%, transparent);
     --case-accent-glow: color-mix(in srgb, var(--case-accent) 24%, transparent);
   }
@@ -240,7 +240,7 @@ const schema = JSON.stringify({
   }
 
   .case-page--thinktank .gradient-text {
-    background: var(--case-gradient-tool);
+    background: var(--case-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;
@@ -250,7 +250,7 @@ const schema = JSON.stringify({
   }
 
   .stat-tool {
-    background: var(--case-gradient-tool);
+    background: var(--case-title-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

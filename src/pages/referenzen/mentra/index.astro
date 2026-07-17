@@ -4,9 +4,9 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const pageUrl = 'https://www.nigredo.ch/referenzen/mentra/';
-const detailImage = '/referenzen/mentra/mentra-video-wissenssystem-klarbild.webp';
-const detailImageAvif = '/referenzen/mentra/mentra-video-wissenssystem-klarbild.avif';
-const ogImage = 'https://www.nigredo.ch/referenzen/mentra/mentra-video-wissenssystem-klarbild-og.jpg';
+const detailImage = '/referenzen/mentra/mentra-video-wissenssystem-app-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/mentra/mentra-video-wissenssystem-app-screenshot-2160.avif';
+const ogImage = 'https://www.nigredo.ch/referenzen/mentra/mentra-video-wissenssystem-app-screenshot-og.jpg';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -58,7 +58,7 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-06-06",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#software` },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "isAccessibleForFree": true
@@ -74,9 +74,9 @@ const schema = JSON.stringify({
   ogTitle="Mentra Video-Wissenssystem"
   ogDescription="Ein lokales privates Second Brain für Videos: KI-Auswertung, semantische Suche, Chat mit Quellen, Reviews, Highlights, Quiz und Exporte."
   ogImage={ogImage}
-  ogImageAlt="Mentra Video-Wissenssystem mit Archiv, KI-Chat, Suche, Reviews und Exporten"
-  ogImageWidth="1530"
-  ogImageHeight="861"
+  ogImageAlt="Oberfläche der lokalen Mentra-App mit KI-gestützter Suche im Video-Wissensarchiv"
+  ogImageWidth="1200"
+  ogImageHeight="630"
   twitterTitle="Mentra Video-Wissenssystem"
   twitterDescription="Lokal ausgeführtes KI-Video-Wissen mit Archiv, semantischer Suche, Reviews und Exporten."
   schema={schema}
@@ -99,7 +99,6 @@ const schema = JSON.stringify({
 
       <div class="case-hero fade-up">
         <div class="case-hero-content">
-          <span class="tech-badge accent-purple case-hero-badge">KI-Lösung</span>
           <h1 id="mentra-title" class="home-hero__title case-hero-title">Mentra <span class="gradient-text">Wissen aus Videos.</span></h1>
           <p class="hero-lead case-hero-lead">
             Mentra verwandelt Videos in nutzbares Wissen. Die lokale Anwendung erfasst Inhalte, ordnet wichtige Stellen, beantwortet Fragen mit Quellen und plant Wiederholungen. Daten und Modelle bleiben dabei unter der Kontrolle des Kunden.
@@ -122,9 +121,9 @@ const schema = JSON.stringify({
                 >
                 <img
                   src={detailImage}
-                  alt="Mentra Video-Wissenssystem als lokale KI-App mit Video-Detail, KI-Analyse, Tags, Navigation und dunkler Oberfläche"
-                  width="1530"
-                  height="861"
+                  alt="Oberfläche der lokalen Mentra-App mit KI-gestützter Suche im Video-Wissensarchiv"
+                  width="2160"
+                  height="1215"
                   loading="eager"
                   decoding="async"
                   fetchpriority="high"
@@ -233,6 +232,7 @@ const schema = JSON.stringify({
     --case-accent: var(--brand-violet);
     --case-accent-2: var(--brand-pink);
     --case-accent-3: var(--brand-blue);
+    --case-title-gradient: var(--brand-gradient-cool);
     --case-accent-soft: color-mix(in srgb, var(--case-accent) 14%, transparent);
     --case-accent-glow: color-mix(in srgb, var(--case-accent) 26%, transparent);
   }
@@ -242,7 +242,7 @@ const schema = JSON.stringify({
   }
 
   .case-page--mentra .gradient-text {
-    background: var(--case-gradient-ki);
+    background: var(--case-title-gradient);
     background-size: 100% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -251,7 +251,7 @@ const schema = JSON.stringify({
   }
 
   .case-page--mentra .stat-tool {
-    background: var(--case-gradient-ki);
+    background: var(--case-title-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

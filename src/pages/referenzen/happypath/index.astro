@@ -5,10 +5,10 @@ import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const liveUrl = 'https://happypath.ch';
 const pageUrl = 'https://www.nigredo.ch/referenzen/happypath/';
-const detailImage = '/referenzen/happypath/happypath-iv-software-website-startseite-screenshot.png';
-const detailImageAvif = '/referenzen/happypath/happypath-iv-software-website-startseite-screenshot.avif';
-const detailImageWebp = '/referenzen/happypath/happypath-iv-software-website-startseite-screenshot.webp';
-const ogImage = 'https://www.nigredo.ch/referenzen/happypath/happypath-iv-software-website-startseite-screenshot-og.jpg';
+const detailImage = '/referenzen/happypath/happypath-textroom-website-startseite-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/happypath/happypath-textroom-website-startseite-screenshot-2160.avif';
+const detailImageWebp = '/referenzen/happypath/happypath-textroom-website-startseite-screenshot-2160.webp';
+const ogImage = 'https://www.nigredo.ch/referenzen/happypath/happypath-textroom-website-startseite-screenshot-og.jpg';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -38,7 +38,7 @@ const schema = JSON.stringify({
       ],
       "inLanguage": ["de-CH", "fr-CH", "it-CH"],
       "datePublished": "2026-07-16",
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-07-17",
       "creator": { "@id": "https://www.nigredo.ch/#person" },
       "author": { "@id": "https://www.nigredo.ch/#person" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
@@ -92,8 +92,8 @@ const schema = JSON.stringify({
       "url": ogImage,
       "contentUrl": ogImage,
       "width": 1200,
-      "height": 831,
-      "caption": "Dunkle HappyPath Startseite für TextRoom mit grosser weisser Titelzeile und originaler Bildmarke"
+      "height": 630,
+      "caption": "HappyPath Startseite für TextRoom mit Positionierung für Schweizer IV-Stellen"
     },
     {
       "@type": "WebPage",
@@ -104,7 +104,7 @@ const schema = JSON.stringify({
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "inLanguage": "de-CH",
       "datePublished": "2026-07-16",
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-07-17",
       "about": { "@id": `${pageUrl}#website-project` },
       "mainEntity": { "@id": `${pageUrl}#website-project` },
       "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
@@ -123,9 +123,9 @@ const schema = JSON.stringify({
   ogTitle="Website für HappyPath GmbH"
   ogDescription="Dreisprachige Website für HappyPath und TextRoom, eingesetzt bei 15 von 26 Schweizer IV-Stellen."
   ogImage={ogImage}
-  ogImageAlt="Screenshot der dunklen HappyPath Startseite für TextRoom mit grosser weisser Titelzeile und originaler Bildmarke"
+  ogImageAlt="Startseite von HappyPath mit der TextRoom-Positionierung für Schweizer IV-Stellen"
   ogImageWidth="1200"
-  ogImageHeight="831"
+  ogImageHeight="630"
   twitterTitle="Website für HappyPath GmbH"
   twitterDescription="HappyPath präsentiert TextRoom für 15 von 26 Schweizer IV-Stellen in Deutsch, Französisch und Italienisch."
   schema={schema}
@@ -148,7 +148,6 @@ const schema = JSON.stringify({
 
       <div class="case-hero fade-up">
         <div class="case-hero-content">
-          <span class="tech-badge accent-coral case-hero-badge">Website</span>
           <h1 id="happypath-title" class="home-hero__title case-hero-title case-hero-title--happypath"><span class="case-hero-title-line">Website für</span> <span class="gradient-text">HappyPath</span></h1>
           <p class="hero-lead case-hero-lead">
             Für die HappyPath GmbH entstand ein ruhiger Webauftritt für TextRoom, eine Software für Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten heute damit. Deutsch, Französisch und Italienisch sind vollständig ausgearbeitet. Klare Scrollführung, lokale Schriften, eine gehärtete Sicherheitsrichtlinie und direkte Kontaktwege schaffen Vertrauen beim Fachpublikum.
@@ -172,8 +171,8 @@ const schema = JSON.stringify({
                 <source srcset={detailImageWebp} type="image/webp">
                 <img
                   src={detailImage}
-                  alt="Screenshot der dunklen HappyPath Startseite für TextRoom mit grosser weisser Titelzeile und originaler Bildmarke"
-                  width="1696" height="1174"
+                  alt="Startseite von HappyPath mit der TextRoom-Positionierung für Schweizer IV-Stellen"
+                  width="1440" height="810"
                   loading="eager"
                   decoding="async"
                   fetchpriority="high"
@@ -286,12 +285,13 @@ const schema = JSON.stringify({
     --case-accent: var(--brand-coral);
     --case-accent-2: var(--brand-pink);
     --case-accent-3: var(--brand-violet);
+    --case-title-gradient: var(--brand-gradient-signature);
     --case-accent-soft: color-mix(in srgb, var(--case-accent) 16%, transparent);
     --case-accent-glow: color-mix(in srgb, var(--case-accent) 22%, transparent);
   }
 
   .case-page--happypath .gradient-text {
-    background: var(--case-gradient-website);
+    background: var(--case-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;
