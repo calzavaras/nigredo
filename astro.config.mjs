@@ -14,15 +14,15 @@ export default defineConfig({
         const url = item.url;
         if (url === 'https://www.nigredo.ch/') {
           item.priority = 1.0;
-          item.lastmod = new Date('2026-07-17');
+          item.lastmod = new Date('2026-07-30');
         }
         else if (url === 'https://www.nigredo.ch/digitale-loesungen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-30');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-07-17');
+          item.lastmod = new Date('2026-07-30');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/mentra/') {
           item.priority = 0.65;
@@ -30,7 +30,7 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/referenzen/seite/2/') {
           item.priority = 0.45;
-          item.lastmod = new Date('2026-07-17');
+          item.lastmod = new Date('2026-07-30');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/ki-voice-agent/') {
           item.priority = 0.65;
@@ -58,15 +58,15 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/marco-calzavara/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-30');
         }
         else if (url === 'https://www.nigredo.ch/kontakt/') {
           item.priority = 0.93;
-          item.lastmod = new Date('2026-07-17');
+          item.lastmod = new Date('2026-07-30');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {
           item.priority = 0.62;
-          item.lastmod = new Date('2026-07-14');
+          item.lastmod = new Date('2026-07-30');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/') {
           item.priority = 0.55;
@@ -95,6 +95,16 @@ export default defineConfig({
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/') {
           item.priority = 0.55;
           item.lastmod = new Date('2026-07-14');
+        }
+        else if ([
+          'https://www.nigredo.ch/haeufige-fragen/arbeitest-du-allein/',
+          'https://www.nigredo.ch/haeufige-fragen/kann-eine-anwendung-vollstaendig-lokal-betrieben-werden/',
+          'https://www.nigredo.ch/haeufige-fragen/muss-meine-idee-bereits-ausgearbeitet-sein/',
+          'https://www.nigredo.ch/haeufige-fragen/was-bedeuten-mehrere-hundert-ki-agenten/',
+          'https://www.nigredo.ch/haeufige-fragen/wem-gehoeren-code-daten-und-zugaenge/',
+        ].includes(url)) {
+          item.priority = 0.55;
+          item.lastmod = new Date('2026-07-30');
         }
         else if (url === 'https://www.nigredo.ch/impressum/' || url === 'https://www.nigredo.ch/datenschutz/') {
           item.priority = 0.3;

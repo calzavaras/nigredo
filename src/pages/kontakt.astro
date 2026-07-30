@@ -18,12 +18,12 @@ const schema = JSON.stringify({
     {
       "@type": "ContactPage",
       "@id": `${pageUrl}#webpage`,
-      "name": "Kontakt und Projektanfrage | Nigredo St. Gallen",
+      "name": "Projekt besprechen | Nigredo St. Gallen",
       "url": pageUrl,
-      "description": "Direkter Kontakt zu Marco Calzavara für Websites, digitale Werkzeuge und KI-Lösungen. Persönliche Ersteinschätzung innerhalb von zwei Arbeitstagen.",
+      "description": "Besprich deine Idee, Website, KI-Lösung oder digitale Anwendung direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-17",
+      "dateModified": "2026-07-30",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -35,18 +35,17 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Kontakt und Projektanfrage | Nigredo St. Gallen"
-  description="Direkter Kontakt zu Marco Calzavara. Persönliche Ersteinschätzung für dein digitales Projekt innerhalb von zwei Arbeitstagen."
+  title="Projekt besprechen | Nigredo St. Gallen"
+  description="Besprich deine Idee, Website, KI-Lösung oder digitale Anwendung direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen."
   canonical={pageUrl}
-  ogTitle="Lass uns klären, was dein Projekt braucht."
-  ogDescription="Beschreibe dein Vorhaben in wenigen Sätzen und erhalte eine persönliche, klare Ersteinschätzung von Marco Calzavara."
+  ogTitle="Bring mir die Idee. Sie darf noch Ecken haben."
+  ogDescription="Ein konkreter Auftrag, ein erster Gedanke oder ein Ablauf, der besser funktionieren sollte: Beides ist ein guter Anfang."
   ogImageAlt="Nigredo Kontakt: direkter Austausch mit Marco Calzavara"
-  twitterTitle="Lass uns klären, was dein Projekt braucht | Nigredo"
-  twitterDescription="Direkter Kontakt und eine persönliche Ersteinschätzung innerhalb von zwei Arbeitstagen."
+  twitterTitle="Bring mir die Idee | Nigredo"
+  twitterDescription="Auch ein erster Gedanke oder eine offene Frage genügen."
   schema={schema}
 >
   <section class="section pt-sub contact-hero" aria-labelledby="kontakt-title">
-    <div class="hero-glow"></div>
     <div class="container">
 
       <Breadcrumb items={[
@@ -58,11 +57,11 @@ const schema = JSON.stringify({
 
         <div class="fade-up contact-hero__content">
           <h1 id="kontakt-title" class="contact-hero__title">
-            Lass uns klären,<br>
-            <span class="gradient-text">was dein Projekt braucht.</span>
+            Bring mir die Idee.<br>
+            <span class="gradient-text">Sie darf noch Ecken haben.</span>
           </h1>
           <p class="hero-lead contact-hero__lead">
-            Schreib mir, worum es geht, wo du heute stehst und was sich verändern soll. Ich prüfe dein Vorhaben persönlich und antworte mit einer ehrlichen ersten Einschätzung.
+            Vielleicht hast du bereits einen konkreten Auftrag. Vielleicht erst den Gedanken: «Eigentlich müsste man doch …» Beides ist ein guter Anfang. Schreib mir, was entstehen soll, wo es heute hakt oder was künftig besser funktionieren könnte. Ich prüfe dein Vorhaben persönlich und antworte mit einer ehrlichen ersten Einschätzung.
           </p>
         </div>
 
@@ -77,10 +76,16 @@ const schema = JSON.stringify({
 </Layout>
 
 <style>
+  :global(body) {
+    --page-accent-a: var(--contact-neon-a);
+    --page-accent-b: var(--contact-neon-b);
+    --page-accent: var(--contact-neon-b);
+  }
+
   .contact-hero {
-    --contact-a: var(--brand-sun);
-    --contact-b: var(--brand-coral);
-    --contact-c: var(--brand-pink);
+    --contact-a: var(--contact-neon-a);
+    --contact-b: var(--contact-neon-b);
+    --contact-c: var(--contact-neon-b);
     animation: none;
   }
 
@@ -95,7 +100,7 @@ const schema = JSON.stringify({
 
   .contact-hero .badge {
     margin-bottom: 0.95rem;
-    color: rgba(255, 239, 222, 0.94);
+    color: color-mix(in srgb, var(--contact-a) 72%, white 28%);
     border-color: color-mix(in srgb, var(--contact-b) 36%, rgba(255, 255, 255, 0.22));
     background: transparent;
     box-shadow: none;
@@ -120,7 +125,7 @@ const schema = JSON.stringify({
   }
 
   .contact-hero .gradient-text {
-    background: var(--brand-gradient-warm);
+    background: linear-gradient(96deg, var(--contact-a) 0%, var(--contact-b) 100%);
     background-size: 100% auto;
 
     background-clip: text;
@@ -133,13 +138,6 @@ const schema = JSON.stringify({
     max-width: 620px;
     font-size: var(--lead-size);
     line-height: 1.65;
-  }
-
-  .contact-hero .hero-glow {
-    background:
-      radial-gradient(circle at 18% 38%, color-mix(in srgb, var(--contact-a) 18%, transparent) 0%, transparent 30%),
-      radial-gradient(circle at 54% 44%, color-mix(in srgb, var(--contact-b) 18%, transparent) 0%, transparent 28%),
-      radial-gradient(circle at 84% 28%, color-mix(in srgb, var(--contact-c) 16%, transparent) 0%, transparent 24%);
   }
 
   .contact-form-wrap {

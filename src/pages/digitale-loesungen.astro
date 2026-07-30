@@ -18,11 +18,11 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Websites, KI-Lösungen und digitale Werkzeuge | Nigredo Schweiz",
-      "description": "Nigredo entwickelt Websites, KI-Lösungen und digitale Werkzeuge für konkrete Anforderungen. Strategie, Inhalt, Gestaltung und Technik werden gemeinsam gedacht.",
+      "name": "Websites, KI und digitale Produkte | Nigredo St. Gallen",
+      "description": "Individuelle Websites, KI-Systeme, lokale Anwendungen, Backends, digitale Werkzeuge, Logos und Inhalte für konkrete Aufgaben.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-30",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -33,7 +33,7 @@ const schema = JSON.stringify({
       "@type": "ItemList",
       "@id": `${pageUrl}#services`,
       "name": "Leistungen",
-      "description": "Websites, KI-Lösungen und digitale Werkzeuge aus einer Hand",
+      "description": "Websites, KI-Systeme, Anwendungen, Backends, Marken und Inhalte aus einer Hand",
       "numberOfItems": 3,
       "itemListElement": [
         {
@@ -111,18 +111,17 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Lösungen | Websites, KI & digitale Werkzeuge | Nigredo"
-  description="Nigredo entwickelt Websites, KI-Lösungen und digitale Werkzeuge für konkrete Aufgaben. Persönlich, klar und zum Fixpreis."
+  title="Websites, KI und digitale Produkte | Nigredo St. Gallen"
+  description="Individuelle Websites, KI-Systeme, lokale Anwendungen, Backends, digitale Werkzeuge, Logos und Inhalte für konkrete Aufgaben."
   canonical={pageUrl}
-  ogTitle="Digitale Lösungen, die im Alltag bestehen."
-  ogDescription="Websites, KI-Lösungen und digitale Werkzeuge, bei denen Strategie, Inhalt, Gestaltung und Technik ineinandergreifen."
+  ogTitle="Aus «Man müsste mal» wird etwas, das funktioniert."
+  ogDescription="Websites, KI-Systeme, lokale Anwendungen, Backends, Marken und Inhalte als zusammenhängende digitale Produkte."
   ogImageAlt="Nigredo: individuelle Websites, KI-Lösungen und digitale Werkzeuge"
-  twitterTitle="Digitale Lösungen, die im Alltag bestehen | Nigredo"
-  twitterDescription="Websites, KI-Lösungen und digitale Werkzeuge für konkrete Aufgaben. Persönlich, klar und zum Fixpreis."
+  twitterTitle="Websites, KI und digitale Produkte | Nigredo"
+  twitterDescription="Entwickelt für konkrete Aufgaben statt für möglichst viele Funktionen."
   schema={schema}
 >
   <section class="section pt-sub solutions-hero" aria-labelledby="loesungen-title">
-    <div class="hero-glow"></div>
     <div class="container solutions-hero__container">
 
       <Breadcrumb items={[
@@ -133,132 +132,95 @@ const schema = JSON.stringify({
       <div class="fade-up home-hero__inner solutions-hero__content">
 
         <h1 id="loesungen-title" class="home-hero__title solutions-hero__title">
-          <span class="solutions-hero__line">Digitale Lösungen,</span>
-          <span class="gradient-text solutions-hero__line">die im Alltag bestehen.</span>
+          <span class="solutions-hero__line">Aus «Man müsste mal»</span>
+          <span class="gradient-text solutions-hero__line">wird etwas, das funktioniert.</span>
         </h1>
         <p class="hero-lead solutions-hero__lead">
-          Ich entwickle Websites, KI-Lösungen und digitale Werkzeuge für Anforderungen, die Standardlösungen nicht überzeugend abdecken. Strategie, Inhalt, Gestaltung und Technik werden gemeinsam gedacht, damit ein Produkt entsteht, das verständlich funktioniert und dauerhaft überzeugt.
+          Ich entwickle digitale Produkte für Aufgaben, die Standardlösungen nicht überzeugend abdecken. Websites, KI-Systeme, lokale Anwendungen, Backends, Marken und Inhalte denke ich als zusammenhängendes Produkt, bei dem Aussage, Bedienung, Gestaltung und Technik dieselbe Richtung verfolgen. KI schafft mehr Varianten und kürzere Wege. Mein Urteil gibt dem Ergebnis Richtung.
         </p>
       </div>
 
-      <div class="fade-up delay-100 mt-80 solutions-accordion-wrap">
-
-        <div class="accordion solutions-accordion" role="list">
-
-          <div class="accordion-item solutions-accordion__item active" role="listitem">
-            <h3 class="accordion-h3">
-              <button id="acc-btn-1" class="accordion-header" aria-expanded="true" aria-controls="acc-1">
-                <div class="accordion-title-wrapper">
-                  <span class="acc-icon-title" aria-hidden="true">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="acc-grad-1" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                          <stop style="stop-color: color-mix(in srgb, var(--solutions-b) 92%, white 12%)"/><stop offset="0.5" style="stop-color: var(--solutions-b)"/><stop offset="1" style="stop-color: color-mix(in srgb, var(--solutions-b) 72%, black 18%)"/>
-                        </linearGradient>
-                      </defs>
-                      <rect x="3" y="4" width="18" height="15" rx="2.4" stroke="url(#acc-grad-1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                      <line x1="3" y1="8" x2="21" y2="8" stroke="url(#acc-grad-1)" stroke-width="1.6" stroke-linecap="round"/>
-                      <circle cx="6.2" cy="6.1" r="0.55" fill="url(#acc-grad-1)"/>
-                      <circle cx="8.4" cy="6.1" r="0.55" fill="url(#acc-grad-1)"/>
-                      <path d="M7 13.4L10.1 10.3L12.6 12.7L17.2 9.4" stroke="url(#acc-grad-1)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M15.6 9.2H17.4V11" stroke="url(#acc-grad-1)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M14.2 14.3L18.2 16.1L16.5 16.9L17.5 19L16.1 19.6L15.1 17.5L13.7 18.8L14.2 14.3Z" stroke="url(#acc-grad-1)" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span>Websites mit klarer Aufgabe.</span>
-                </div>
-                <span class="accordion-icon" aria-hidden="true">+</span>
-              </button>
-            </h3>
-            <div id="acc-1" class="accordion-content" role="region" aria-labelledby="acc-btn-1" aria-hidden="false">
-              <p>
-                Eine gute Website vermittelt dein Angebot, schafft Vertrauen und führt selbstverständlich zum nächsten Schritt. Ich entwickle individuelle Auftritte für Selbstständige, KMU und Organisationen, von Struktur und Text bis zu Design, Technik, Performance und Suchmaschinenbasis.
-              </p>
+      <div class="fade-up delay-100 solutions-fields" role="list" aria-label="Leistungsfelder">
+        <article class="solutions-field solutions-field--web" role="listitem">
+          <div class="solutions-field__head">
+            <span class="solutions-field__signal" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="4" width="18" height="15" rx="2.4" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M3 8H21M7 13.4L10.1 10.3L12.6 12.7L17.2 9.4M15.6 9.2H17.4V11" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>Websites, die nicht nur herumstehen.</h3>
+          </div>
+          <div class="solutions-field__content">
+            <p class="solutions-field__lead">Eine gute Website ist keine digitale Broschüre, die man einmal veröffentlicht und anschliessend höflich ignoriert. Sie erklärt dein Angebot, zeigt deine Haltung, schafft Vertrauen und führt Menschen selbstverständlich zum nächsten Schritt.</p>
+            <div class="solutions-field__details">
+              <p>Ich entwickle individuelle Websites für Selbstständige, KMU, Organisationen und anspruchsvolle Fachbereiche. Je nach Aufgabe reicht das von einer fokussierten Unternehmensseite bis zu einer Plattform mit Backend, Login, Datenbank, Schnittstellen oder eigener Inhaltsverwaltung.</p>
+              <p>Dazu gehören Positionierung, Seitenstruktur, Texte, individuelles Design, technische Umsetzung, Performance, Barrierearmut, Suchmaschinenbasis, Datenschutz, Sicherheit und passende Funktionen. Das technische System richtet sich nach der Aufgabe. Nicht umgekehrt.</p>
             </div>
           </div>
+        </article>
 
-          <div class="accordion-item solutions-accordion__item" role="listitem">
-            <h3 class="accordion-h3">
-              <button id="acc-btn-2" class="accordion-header" aria-expanded="false" aria-controls="acc-2">
-                <div class="accordion-title-wrapper">
-                  <span class="acc-icon-title" aria-hidden="true">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="acc-grad-2" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                          <stop style="stop-color: color-mix(in srgb, var(--solutions-b) 92%, white 12%)"/><stop offset="0.5" style="stop-color: var(--solutions-b)"/><stop offset="1" style="stop-color: color-mix(in srgb, var(--solutions-b) 72%, black 18%)"/>
-                        </linearGradient>
-                      </defs>
-                      <circle cx="12" cy="12" r="2" stroke="url(#acc-grad-2)" stroke-width="1.8"/>
-                      <circle cx="4.5" cy="8" r="1.5" stroke="url(#acc-grad-2)" stroke-width="1.5"/>
-                      <circle cx="4.5" cy="16" r="1.5" stroke="url(#acc-grad-2)" stroke-width="1.5"/>
-                      <circle cx="19.5" cy="8" r="1.5" stroke="url(#acc-grad-2)" stroke-width="1.5"/>
-                      <circle cx="19.5" cy="16" r="1.5" stroke="url(#acc-grad-2)" stroke-width="1.5"/>
-                      <circle cx="12" cy="3" r="1.5" stroke="url(#acc-grad-2)" stroke-width="1.5"/>
-                      <line x1="10.3" y1="11" x2="6" y2="8.7" stroke="url(#acc-grad-2)" stroke-width="1.2"/><line x1="10.3" y1="13" x2="6" y2="15.3" stroke="url(#acc-grad-2)" stroke-width="1.2"/><line x1="13.7" y1="11" x2="18" y2="8.7" stroke="url(#acc-grad-2)" stroke-width="1.2"/><line x1="13.7" y1="13" x2="18" y2="15.3" stroke="url(#acc-grad-2)" stroke-width="1.2"/><line x1="12" y1="10" x2="12" y2="4.5" stroke="url(#acc-grad-2)" stroke-width="1.2"/>
-                    </svg>
-                  </span>
-                  <span>KI und Software, die Arbeit erleichtern.</span>
-                </div>
-                <span class="accordion-icon" aria-hidden="true">+</span>
-              </button>
-            </h3>
-            <div id="acc-2" class="accordion-content" role="region" aria-labelledby="acc-btn-2" aria-hidden="true">
-              <p>
-                Am Anfang steht nicht die Technologie, sondern dein Arbeitsablauf. Daraus entstehen Assistenten, Wissenssysteme, Dashboards und Automatisierungen mit verständlicher Bedienung, eindeutiger Funktion und einer verlässlichen technischen Grundlage.
-              </p>
+        <article class="solutions-field solutions-field--systems" role="listitem">
+          <div class="solutions-field__head">
+            <span class="solutions-field__signal" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.7"/>
+                <circle cx="4.5" cy="8" r="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="4.5" cy="16" r="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="19.5" cy="8" r="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="19.5" cy="16" r="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="12" cy="3" r="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M10.3 11L6 8.7M10.3 13L6 15.3M13.7 11L18 8.7M13.7 13L18 15.3M12 10V4.5" stroke="currentColor" stroke-width="1.15"/>
+              </svg>
+            </span>
+            <h3>KI und Software mit einem echten Grund.</h3>
+          </div>
+          <div class="solutions-field__content">
+            <p class="solutions-field__lead">KI ist kein Pflichtprogramm. Sie ist ein Werkzeug. Und wie bei jedem Werkzeug entscheidet die Aufgabe, ob ihr Einsatz sinnvoll ist.</p>
+            <div class="solutions-field__details">
+              <p>Ich entwickle KI-Assistenten, Wissenssysteme, Automatisierungen, lokale Anwendungen, Dashboards und digitale Werkzeuge, die konkrete Arbeitsschritte verbessern. Sie erschliessen Wissen aus Dokumenten oder Videos, durchsuchen interne Informationen, werten Daten aus, beantworten Fachfragen anhand eigener Quellen oder bilden komplexe Abläufe in einer einfachen Oberfläche ab.</p>
+              <p>Mehrere hundert spezialisierte KI-Agenten unterstützen Recherche, Konzeption, Text, Gestaltung, Entwicklung, Tests und Qualitätssicherung. Sie liefern Möglichkeiten. Ich bestimme die Richtung, prüfe die Ergebnisse und führe alles zu einem funktionierenden Produkt zusammen. Schnell bedeutet dabei nicht oberflächlich, sondern weniger Leerlauf und kürzere Wege zwischen Vorstellung und Umsetzung.</p>
             </div>
           </div>
+        </article>
 
-          <div class="accordion-item solutions-accordion__item" role="listitem">
-            <h3 class="accordion-h3">
-              <button id="acc-btn-3" class="accordion-header" aria-expanded="false" aria-controls="acc-3">
-                <div class="accordion-title-wrapper">
-                  <span class="acc-icon-title" aria-hidden="true">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <defs>
-                        <linearGradient id="acc-grad-3" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                          <stop style="stop-color: color-mix(in srgb, var(--solutions-b) 92%, white 12%)"/><stop offset="0.5" style="stop-color: var(--solutions-b)"/><stop offset="1" style="stop-color: color-mix(in srgb, var(--solutions-b) 72%, black 18%)"/>
-                        </linearGradient>
-                      </defs>
-                      <path d="M4 6.4C4 5.1 5.1 4 6.4 4H17.6C18.9 4 20 5.1 20 6.4V17.6C20 18.9 18.9 20 17.6 20H6.4C5.1 20 4 18.9 4 17.6V6.4Z" stroke="url(#acc-grad-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M7.2 8.1H13.2" stroke="url(#acc-grad-3)" stroke-width="1.5" stroke-linecap="round"/>
-                      <path d="M7.2 11.3H11.6" stroke="url(#acc-grad-3)" stroke-width="1.5" stroke-linecap="round"/>
-                      <path d="M7.2 15.9L9.8 13.4L11.6 15.1L16.8 9.9" stroke="url(#acc-grad-3)" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M15.1 9.8H16.9V11.6" stroke="url(#acc-grad-3)" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span>Inhalt, der Entscheidungen erleichtert.</span>
-                </div>
-                <span class="accordion-icon" aria-hidden="true">+</span>
-              </button>
-            </h3>
-            <div id="acc-3" class="accordion-content" role="region" aria-labelledby="acc-btn-3" aria-hidden="true">
-              <p>
-                Komplexe Angebote brauchen eine nachvollziehbare Struktur, präzise Sprache und Bilder mit Aussage. Ich ordne Inhalte, schärfe Botschaften und entwickle eine Darstellung, die Menschen schnell verstehen und sicher einordnen können.
-              </p>
+        <article class="solutions-field solutions-field--identity" role="listitem">
+          <div class="solutions-field__head">
+            <span class="solutions-field__signal" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="4" width="16" height="16" rx="2.4" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M7.2 8.1H13.2M7.2 11.3H11.6M7.2 15.9L9.8 13.4L11.6 15.1L16.8 9.9M15.1 9.8H16.9V11.6" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>Ideen brauchen eine Form, die man versteht und behält.</h3>
+          </div>
+          <div class="solutions-field__content">
+            <p class="solutions-field__lead">Ein gutes digitales Produkt beginnt nicht beim Code. Es beginnt bei der Frage, was Menschen sehen, verstehen und fühlen sollen.</p>
+            <div class="solutions-field__details">
+              <p>Ich entwickle Namen, Logos, Texte, Bildwelten, Inhaltsstrukturen und visuelle Identitäten, die einem Vorhaben ein klares Gesicht geben. Dazu gehören Positionierung, Kernbotschaft, Navigation, Benutzerführung, mehrsprachige Inhalte und die verständliche Darstellung komplexer Themen.</p>
+              <p>Es geht nicht darum, etwas lediglich schöner zu machen. Es geht darum, eine Idee so klar in Form zu bringen, dass sie verstanden wird und im Kopf bleibt.</p>
             </div>
           </div>
-
-        </div>
+        </article>
       </div>
 
       <section class="solutions-process fade-up" aria-labelledby="solutions-process-title">
         <div class="solutions-process__intro">
           <p class="solutions-process__label">Zusammenarbeit</p>
-          <h2 id="solutions-process-title">Von der offenen Frage zum klaren Ergebnis.</h2>
+          <h2 id="solutions-process-title">Vom Gedanken zum Produkt. Ohne unnötige Ehrenrunde.</h2>
         </div>
         <ol class="solutions-process__steps">
           <li>
             <span>01</span>
-            <div><strong>Verstehen</strong><p>Wir klären Ziel, Nutzer, Rahmenbedingungen und den Kern der Aufgabe.</p></div>
+            <div><strong>Erst zuhören. Dann weiterdenken.</strong><p>Wir klären, was entstehen oder besser funktionieren soll, wer das Produkt nutzt und woran ein gutes Ergebnis erkennbar ist. Eine klare Schwierigkeit oder eine gute Idee reichen als Anfang.</p></div>
           </li>
           <li>
             <span>02</span>
-            <div><strong>Entscheiden</strong><p>Du erhältst einen konkreten Vorschlag mit Umfang, Prioritäten, Fixpreis und Zeitrahmen.</p></div>
+            <div><strong>Möglichkeiten prüfen. Klar entscheiden.</strong><p>Ich strukturiere die Aufgabe, entwickle sinnvolle Varianten und zeige dir, welcher Weg überzeugt. Du erhältst einen verständlichen Vorschlag mit Umfang, Prioritäten, Fixpreis und realistischem Zeitrahmen.</p></div>
           </li>
           <li>
             <span>03</span>
-            <div><strong>Umsetzen</strong><p>Ich gestalte, entwickle und verfeinere, bis Inhalt, Funktion und Wirkung zusammenpassen.</p></div>
+            <div><strong>Früh sichtbar. Sauber fertig.</strong><p>Ich texte, gestalte, entwickle und teste. Wo es sinnvoll ist, entstehen früh funktionierende Versionen, damit wir nicht wochenlang über etwas sprechen, das man längst ausprobieren könnte.</p></div>
           </li>
         </ol>
       </section>
@@ -270,7 +232,7 @@ const schema = JSON.stringify({
     <div class="container">
       <div class="section-cta solutions-final-cta fade-up">
         <span class="cta-label">Nächster Schritt</span>
-        <h2 id="loesungen-cta-title">Erzähl mir, was<br><span>besser funktionieren soll.</span></h2>
+        <h2 id="loesungen-cta-title">Was sollte längst<br><span>einfacher funktionieren?</span></h2>
         <div class="hero-cta-group" style="justify-content: center;">
           <a href="/kontakt/" class="btn btn-primary">Projekt besprechen</a>
           <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
@@ -281,12 +243,18 @@ const schema = JSON.stringify({
 </Layout>
 
 <style>
+  :global(body) {
+    --page-accent-a: var(--solutions-neon-a);
+    --page-accent-b: var(--solutions-neon-b);
+    --page-accent: var(--solutions-neon-b);
+  }
+
   .solutions-hero,
-  .solutions-accordion-wrap,
+  .solutions-fields,
   .solutions-final-section {
-    --solutions-a: var(--brand-cyan);
-    --solutions-b: var(--brand-blue);
-    --solutions-c: var(--brand-violet);
+    --solutions-a: var(--solutions-neon-a);
+    --solutions-b: var(--solutions-neon-b);
+    --solutions-c: var(--solutions-neon-c);
     --page-accent: var(--solutions-b);
     animation: none;
   }
@@ -337,7 +305,7 @@ const schema = JSON.stringify({
   }
 
   .solutions-hero .gradient-text {
-    background: var(--brand-gradient-cool);
+    background: linear-gradient(96deg, var(--solutions-a) 0%, var(--solutions-b) 100%);
     background-size: 100% auto;
 
     background-clip: text;
@@ -352,156 +320,120 @@ const schema = JSON.stringify({
     line-height: 1.65;
   }
 
-  .solutions-hero .hero-glow {
-    background:
-      radial-gradient(circle at 18% 38%, color-mix(in srgb, var(--solutions-a) 18%, transparent) 0%, transparent 36%),
-      radial-gradient(circle at 52% 44%, color-mix(in srgb, var(--solutions-b) 18%, transparent) 0%, transparent 32%),
-      radial-gradient(circle at 84% 28%, color-mix(in srgb, var(--solutions-c) 16%, transparent) 0%, transparent 28%);
+  .solutions-fields {
+    display: grid;
+    margin-top: clamp(72px, 8vw, 96px);
+    border-top: 1px solid rgba(255, 255, 255, 0.11);
+    overflow: clip;
   }
 
-  .solutions-accordion-wrap {
-    margin-top: clamp(64px, 7vw, 82px);
-    max-width: 880px;
-  }
-
-  .solutions-accordion {
+  .solutions-field {
+    --field-color: var(--solutions-a);
+    display: grid;
+    grid-template-columns: minmax(250px, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(40px, 7vw, 88px);
     position: relative;
+    padding: clamp(54px, 7vw, 82px) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    isolation: isolate;
   }
 
-  .accordion-h3 {
-    margin: 0;
+  .solutions-field--systems {
+    --field-color: var(--solutions-b);
   }
 
-  .solutions-accordion__item {
-    position: relative;
-    border-bottom-color: rgba(255, 255, 255, 0.07);
-    transition:
-      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 0.35s ease,
-      box-shadow 0.35s ease,
-      background-color 0.35s ease;
+  .solutions-field--identity {
+    --field-color: var(--solutions-c);
   }
 
-  .solutions-accordion :global(.accordion-header) {
-    position: relative;
-    z-index: 1;
-    padding: 28px 8px;
-    color: rgba(245, 245, 247, 0.92);
-    transition:
-      color 0.25s ease,
-      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  .solutions-field::before {
+    content: "";
+    position: absolute;
+    inset: 14% -8% 12% 50%;
+    z-index: -1;
+    background: radial-gradient(circle at center, color-mix(in srgb, var(--field-color) 9%, transparent), transparent 68%);
+    opacity: 0.55;
+    pointer-events: none;
+    transition: opacity 0.5s var(--ease-spring), transform 0.5s var(--ease-spring);
   }
 
-  .solutions-accordion__item:hover :global(.accordion-header) {
-    color: #ffffff;
-  }
-
-  .solutions-accordion__item.active :global(.accordion-header) {
-    color: #f5f5f7;
-  }
-
-  .solutions-accordion :global(.accordion-title-wrapper) {
-    gap: 18px;
-  }
-
-  .solutions-accordion :global(.accordion-title-wrapper > span:last-child) {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    font-weight: 600;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-  }
-
-  .solutions-accordion :global(.acc-icon-title) {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    border-color: rgba(255, 255, 255, 0.1);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.024)),
-      rgba(255, 255, 255, 0.02);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.045),
-      0 0 16px color-mix(in srgb, var(--solutions-b) 14%, transparent);
-    transition:
-      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 0.35s ease,
-      background 0.35s ease,
-      box-shadow 0.35s ease;
-  }
-
-  .solutions-accordion :global(.acc-icon-title svg) {
+  .solutions-field:hover::before {
     opacity: 0.9;
-    filter:
-      brightness(1.08)
-      saturate(1.06)
-      drop-shadow(0 0 6px color-mix(in srgb, var(--solutions-b) 18%, transparent));
-    transition: opacity 0.45s ease, filter 0.45s ease;
+    transform: translateX(-2%);
   }
 
-  .solutions-accordion__item:hover :global(.acc-icon-title),
-  .solutions-accordion__item.active :global(.acc-icon-title) {
-    transform: translateY(-1px);
-    border-color: rgba(255, 255, 255, 0.16);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025)),
-      rgba(255, 255, 255, 0.035);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.05),
-      0 0 22px color-mix(in srgb, var(--solutions-b) 18%, transparent),
-      0 0 40px color-mix(in srgb, var(--solutions-b) 12%, transparent);
-  }
-
-  .solutions-accordion__item:hover :global(.acc-icon-title svg),
-  .solutions-accordion__item.active :global(.acc-icon-title svg) {
-    opacity: 1;
-    filter:
-      brightness(1.14)
-      saturate(1.12)
-      drop-shadow(0 0 10px color-mix(in srgb, var(--solutions-b) 22%, transparent))
-      drop-shadow(0 0 18px color-mix(in srgb, var(--solutions-b) 16%, transparent));
-  }
-
-  .solutions-accordion :global(.accordion-icon) {
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-pill);
-    color: var(--text-faint);
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition:
-      transform 0.3s ease,
-      color 0.25s ease,
-      border-color 0.25s ease,
-      background-color 0.25s ease,
-      box-shadow 0.25s ease;
-  }
-
-  .solutions-accordion__item:hover :global(.accordion-icon) {
-    color: rgba(255, 255, 255, 0.82);
-    border-color: rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .solutions-accordion__item.active :global(.accordion-icon) {
-    color: color-mix(in srgb, var(--solutions-b) 92%, white 6%);
-    border-color: color-mix(in srgb, var(--solutions-b) 30%, rgba(255, 255, 255, 0.14));
-    background: color-mix(in srgb, var(--solutions-b) 14%, transparent);
-    box-shadow:
-      0 0 18px color-mix(in srgb, var(--solutions-b) 16%, transparent),
-      0 0 28px color-mix(in srgb, var(--solutions-b) 10%, transparent);
-  }
-
-  .solutions-accordion :global(.accordion-content) {
+  .solutions-field__head {
+    align-self: start;
     position: relative;
-    z-index: 1;
+    padding-top: 4px;
   }
 
-  .accordion-content p {
-    padding: 0 28px 34px 70px;
-    max-width: 68ch;
-    color: var(--text-body);
-    line-height: 1.72;
+  .solutions-field__signal {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 28px;
+    color: color-mix(in srgb, var(--field-color) 88%, white 10%);
+    border: 1px solid color-mix(in srgb, var(--field-color) 34%, rgba(255, 255, 255, 0.12));
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--field-color) 7%, transparent);
+    transition: transform 0.45s var(--ease-spring), background-color 0.45s ease;
+  }
+
+  .solutions-field:hover .solutions-field__signal {
+    transform: rotate(-5deg) scale(1.04);
+    background: color-mix(in srgb, var(--field-color) 12%, transparent);
+  }
+
+  .solutions-field__signal::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 72px;
+    width: clamp(44px, 7vw, 82px);
+    height: 1px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--field-color) 58%, transparent), transparent);
+  }
+
+  .solutions-field__head h3 {
+    max-width: 13ch;
     margin: 0;
+    color: #f5f5f7;
+    font-size: clamp(1.85rem, 3.25vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .solutions-field__content {
+    min-width: 0;
+  }
+
+  .solutions-field__lead {
+    max-width: 31ch;
+    margin: 0 0 clamp(30px, 4vw, 42px);
+    color: rgba(245, 245, 247, 0.92);
+    font-size: clamp(1.22rem, 2vw, 1.55rem);
+    font-weight: 500;
+    line-height: 1.42;
+    letter-spacing: -0.012em;
+    text-wrap: pretty;
+  }
+
+  .solutions-field__details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(24px, 4vw, 42px);
+  }
+
+  .solutions-field__details p {
+    max-width: 36ch;
+    margin: 0;
+    color: var(--text-body);
+    line-height: 1.7;
+    text-wrap: pretty;
   }
 
   .solutions-process {
@@ -632,17 +564,22 @@ const schema = JSON.stringify({
       line-height: var(--hero-title-line-height-mobile);
     }
 
-    .solutions-accordion-wrap {
-      margin-top: 58px;
-      max-width: none;
+    .solutions-fields {
+      margin-top: 62px;
     }
 
-    .solutions-accordion :global(.accordion-header) {
-      padding: 24px 0;
+    .solutions-field {
+      grid-template-columns: minmax(210px, 0.7fr) minmax(0, 1.3fr);
+      gap: 38px;
     }
 
-    .accordion-content p {
-      padding: 0 24px 30px 0;
+    .solutions-field__details {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .solutions-field__details p {
+      max-width: 52ch;
     }
 
     .solutions-process {
@@ -657,17 +594,18 @@ const schema = JSON.stringify({
   }
 
   @media (max-width: 768px) {
-    .solutions-accordion :global(.accordion-title-wrapper) {
-      align-items: flex-start;
+    .solutions-field {
+      grid-template-columns: 1fr;
+      gap: 34px;
+      padding: 52px 0;
     }
 
-    .solutions-accordion :global(.accordion-title-wrapper > span:last-child) {
-      font-size: 1.14rem;
-      line-height: 1.22;
+    .solutions-field__head h3 {
+      max-width: 16ch;
     }
 
-    .accordion-content p {
-      padding: 0 20px 24px 20px;
+    .solutions-field__lead {
+      max-width: 42ch;
     }
   }
 
@@ -678,45 +616,54 @@ const schema = JSON.stringify({
     }
 
     .solutions-hero__title {
-      font-size: var(--hero-title-size-mobile);
+      width: calc(100% + var(--container-gutter));
+      max-width: calc(100vw - var(--container-gutter));
+      font-size: clamp(2.1rem, 8.7vw, 2.8rem);
       line-height: var(--hero-title-line-height-mobile);
+      letter-spacing: -0.02em;
     }
 
-    .solutions-accordion-wrap {
-      margin-top: 46px;
+    .solutions-fields {
+      margin-top: 48px;
     }
 
-    .solutions-accordion :global(.accordion-header) {
-      align-items: flex-start;
-      gap: 14px;
-      padding: 22px 0;
+    .solutions-field {
+      gap: 28px;
+      padding: 44px 0;
     }
 
-    .solutions-accordion :global(.accordion-title-wrapper) {
-      gap: 14px;
+    .solutions-field::before {
+      inset: 4% -30% 38% 18%;
     }
 
-    .solutions-accordion :global(.acc-icon-title) {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      flex-shrink: 0;
+    .solutions-field__signal {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 24px;
     }
 
-    .solutions-accordion :global(.accordion-icon) {
-      width: 36px;
-      height: 36px;
-      flex-shrink: 0;
+    .solutions-field__signal::after {
+      top: 31px;
+      left: 64px;
     }
 
-    .accordion-content p {
-      padding: 0 0 22px 0;
+    .solutions-field__head h3 {
+      font-size: clamp(1.75rem, 8vw, 2.2rem);
+    }
+
+    .solutions-field__lead {
+      margin-bottom: 26px;
+      font-size: 1.18rem;
+      line-height: 1.48;
+    }
+
+    .solutions-field__details {
+      gap: 20px;
+    }
+
+    .solutions-field__details p {
       font-size: 1rem;
       line-height: 1.68;
-    }
-
-    .solutions-hero__title {
-      font-size: clamp(2.18rem, 10.4vw, 2.88rem);
     }
 
     .solutions-final-section {

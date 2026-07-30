@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumb from './Breadcrumb.astro';
+
+interface Section {
+  id: string;
+  title: string;
+  paragraphs: string[];
+}
+
+interface RelatedQuestion {
+  href: string;
+  title: string;
+  text: string;
+}
+
+interface Props {
+  pageUrl: string;
+  question: string;
+  answer: string;
+  title: string;
+  description: string;
+  sections: Section[];
+  relatedQuestions: RelatedQuestion[];
+  contactLabel: string;
+}
+
+const {
+  pageUrl,
+  question,
+  answer,
+  title,
+  description,
+  sections,
+  relatedQuestions,
+  contactLabel,
+} = Astro.props;
+
+const schema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://www.nigredo.ch/' },
+        { '@type': 'ListItem', position: 2, name: 'Häufige Fragen', item: 'https://www.nigredo.ch/haeufige-fragen/' },
+        { '@type': 'ListItem', position: 3, name: question, item: pageUrl },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: answer,
+          },
+        },
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: title,
+      description,
+      isPartOf: { '@id': 'https://www.nigredo.ch/#website' },
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+      mainEntity: { '@id': `${pageUrl}#faq` },
+      about: { '@id': 'https://www.nigredo.ch/#organization' },
+      inLanguage: 'de-CH',
+      datePublished: '2026-07-30',
+      dateModified: '2026-07-30',
+      isAccessibleForFree: true,
+    },
+  ],
+});
+---
+
+<Layout
+  title={title}
+  description={description}
+  canonical={pageUrl}
+  ogTitle={title}
+  ogDescription={description}
+  twitterTitle={title}
+  twitterDescription={description}
+  schema={schema}
+>
+  <article class="section faq-article" aria-labelledby="article-title">
+    <div class="hero-glow"></div>
+    <div class="container faq-article__container">
+      <Breadcrumb items={[
+        { label: 'Start', href: '/' },
+        { label: 'Häufige Fragen', href: '/haeufige-fragen/' },
+        { label: question },
+      ]} />
+
+      <header class="faq-article__header fade-up">
+        <h1 id="article-title">{question}</h1>
+        <p>{answer}</p>
+      </header>
+
+      <nav class="faq-article__nav fade-up delay-100" aria-label="Inhaltsübersicht">
+        {sections.map((section) => (
+          <a href={`#${section.id}`}>{section.title}</a>
+        ))}
+      </nav>
+
+      <div class="faq-article__content fade-up delay-100">
+        {sections.map((section) => (
+          <>
+            <h2 id={section.id}>{section.title}</h2>
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </>
+        ))}
+
+        <section class="related-faqs" aria-labelledby="related-faqs-title">
+          <h2 id="related-faqs-title">Verwandte Fragen</h2>
+          <div class="related-faqs__grid">
+            {relatedQuestions.map((related) => (
+              <a href={related.href}>
+                <strong>{related.title}</strong>
+                <span>{related.text}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <div class="article-links">
+          <a href="/haeufige-fragen/">Zurück zu den häufigen Fragen</a>
+          <a href="/kontakt/">{contactLabel}</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  :global(body) {
+    --page-accent-a: var(--faq-neon-a);
+    --page-accent-b: var(--faq-neon-b);
+    --page-accent: var(--faq-neon-a);
+  }
+
+  .faq-article {
+    --faq-a: var(--faq-neon-a);
+    --faq-b: var(--faq-neon-b);
+    --faq-c: var(--faq-neon-b);
+  }
+</style>

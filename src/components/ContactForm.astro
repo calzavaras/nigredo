@@ -6,9 +6,8 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
         <defs>
           <linearGradient id="contact-form-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="var(--brand-sun)" />
-            <stop offset="52%" stop-color="var(--brand-coral)" />
-            <stop offset="100%" stop-color="var(--brand-pink)" />
+            <stop offset="0%" stop-color="var(--contact-a, var(--contact-neon-a))" />
+            <stop offset="100%" stop-color="var(--contact-b, var(--contact-neon-b))" />
           </linearGradient>
         </defs>
         <rect x="3" y="7" width="26" height="18" rx="3" stroke="url(#contact-form-gradient)" stroke-width="1.8" />
@@ -17,8 +16,8 @@
     </div>
     <div>
       <span class="contact-form-card__label">Persönlich beantwortet</span>
-      <h2 id="contact-form-title">Erzähl mir von deinem Vorhaben.</h2>
-      <p>Deine Nachricht landet direkt bei mir. In der Regel antworte ich innerhalb von zwei Arbeitstagen.</p>
+      <h2 id="contact-form-title">Was geht dir nicht mehr aus dem Kopf?</h2>
+      <p>Deine Nachricht landet direkt bei mir. Kein Verkaufsteam, kein Formularlabyrinth und keine automatische Einladung zu einem einstündigen Kennenlerntermin. Ich lese dein Anliegen selbst und melde mich in der Regel innerhalb von zwei Arbeitstagen. Bitte übermittle hier keine besonders schützenswerten Daten. Für vertrauliche Unterlagen finden wir einen sicheren Weg.</p>
     </div>
   </div>
 
@@ -30,7 +29,7 @@
     <div class="contact-form__row">
       <div class="contact-form__field">
         <label for="contact-name">Name <span aria-hidden="true">*</span></label>
-        <input type="text" id="contact-name" name="name" placeholder="Dein Name" required autocomplete="name" maxlength="120" aria-describedby="contact-name-error" />
+        <input type="text" id="contact-name" name="name" placeholder="Wie darf ich dich ansprechen?" required autocomplete="name" maxlength="120" aria-describedby="contact-name-error" />
         <p id="contact-name-error" class="contact-form__field-error" hidden>Bitte gib deinen Namen ein.</p>
       </div>
       <div class="contact-form__field">
@@ -48,19 +47,19 @@
       </div>
       <div class="contact-form__field">
         <label for="contact-subject">Betreff <span class="contact-form__optional">Optional</span></label>
-        <input type="text" id="contact-subject" name="subject" placeholder="Worum geht es?" maxlength="250" />
+        <input type="text" id="contact-subject" name="subject" placeholder="Worum geht es in einem Satz?" maxlength="250" />
       </div>
     </div>
 
     <div class="contact-form__field">
       <label for="contact-message">Nachricht <span aria-hidden="true">*</span></label>
-      <textarea id="contact-message" name="message" placeholder="Was möchtest du entwickeln oder verbessern?" required rows="6" maxlength="6000" aria-describedby="contact-message-error"></textarea>
+      <textarea id="contact-message" name="message" placeholder="Was soll entstehen oder besser funktionieren?" required rows="6" maxlength="6000" aria-describedby="contact-message-error"></textarea>
       <p id="contact-message-error" class="contact-form__field-error" hidden>Bitte beschreibe dein Vorhaben kurz.</p>
     </div>
 
     <div class="contact-form__footer">
       <button type="submit" id="contact-submit" class="btn btn-primary contact-form__submit">
-        <span class="contact-form__button-text">Nachricht senden</span>
+        <span class="contact-form__button-text">Idee senden</span>
         <span class="contact-form__button-loading" aria-hidden="true">Wird gesendet…</span>
       </button>
     </div>
@@ -75,8 +74,8 @@
         <path d="M20 32l9 9 16-16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
-    <h3>Vielen Dank für deine Nachricht.</h3>
-    <p>Deine Anfrage ist angekommen. Ich melde mich persönlich innerhalb von zwei Arbeitstagen.</p>
+    <h3>Die Idee ist angekommen.</h3>
+    <p>Ich lese deine Nachricht persönlich und melde mich innerhalb von zwei Arbeitstagen. Bis dahin darf sie ruhig noch etwas weiterwachsen.</p>
     <button id="contact-reset" class="btn btn-ghost" type="button">Weitere Nachricht schreiben</button>
   </div>
 </article>
@@ -98,7 +97,11 @@
     position: absolute;
     inset: 0 0 auto;
     height: 2px;
-    background: var(--brand-gradient-warm);
+    background: linear-gradient(
+      90deg,
+      var(--contact-a, var(--contact-neon-a)),
+      var(--contact-b, var(--contact-neon-b))
+    );
   }
 
   .contact-form-card__intro {
@@ -159,7 +162,12 @@
   .contact-form-card__divider {
     height: 1px;
     margin: 26px 0 28px;
-    background: linear-gradient(90deg, color-mix(in srgb, var(--brand-coral) 36%, transparent), rgba(255, 255, 255, 0.07), transparent);
+    background: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--contact-a, var(--contact-neon-a)) 38%, transparent),
+      color-mix(in srgb, var(--contact-b, var(--contact-neon-b)) 22%, rgba(255, 255, 255, 0.07)),
+      transparent
+    );
   }
 
   .contact-form {
@@ -196,7 +204,7 @@
   }
 
   .contact-form label > span:not(.contact-form__optional) {
-    color: var(--brand-coral);
+    color: var(--contact-a, var(--contact-neon-a));
   }
 
   .contact-form__optional {
@@ -234,17 +242,17 @@
 
   .contact-form input:hover,
   .contact-form textarea:hover {
-    border-color: color-mix(in srgb, var(--brand-coral) 28%, rgba(255, 255, 255, 0.1));
+    border-color: color-mix(in srgb, var(--contact-b, var(--contact-neon-b)) 36%, rgba(255, 255, 255, 0.1));
     background: rgba(255, 255, 255, 0.045);
   }
 
   .contact-form input:focus,
   .contact-form textarea:focus {
-    outline: 2px solid color-mix(in srgb, var(--brand-coral) 72%, transparent);
+    outline: 2px solid color-mix(in srgb, var(--contact-a, var(--contact-neon-a)) 72%, transparent);
     outline-offset: 2px;
-    border-color: color-mix(in srgb, var(--brand-coral) 64%, transparent);
+    border-color: color-mix(in srgb, var(--contact-b, var(--contact-neon-b)) 68%, transparent);
     background: rgba(255, 255, 255, 0.055);
-    box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand-coral) 9%, transparent);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--contact-a, var(--contact-neon-a)) 10%, transparent);
   }
 
   .contact-form :is(input, textarea)[aria-invalid="true"] {

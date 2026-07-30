@@ -1,0 +1,81 @@
+---
+import FaqArticlePage from '../../components/FaqArticlePage.astro';
+
+const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/kann-eine-anwendung-vollstaendig-lokal-betrieben-werden/';
+const question = 'Kann eine Anwendung vollständig lokal betrieben werden?';
+const answer = 'Ja, sofern die Aufgabe und die gewünschten Funktionen dies zulassen. Lokale Anwendungen können Daten direkt auf dem Gerät oder innerhalb der Infrastruktur des Kunden verarbeiten. Sensible Inhalte müssen dadurch nicht zwingend an externe Server oder Cloud-Dienste übertragen werden.';
+const title = 'Kann eine Anwendung vollständig lokal laufen? | Nigredo';
+const description = 'Wann Anwendungen Daten vollständig lokal verarbeiten können, wo technische Grenzen liegen und welche Architektur für sensible Inhalte sinnvoll ist.';
+
+const sections = [
+  {
+    id: 'lokal',
+    title: 'Was vollständig lokal bedeutet',
+    paragraphs: [
+      'Die Anwendung läuft auf einem einzelnen Gerät, in einem internen Netzwerk oder auf der eigenen Infrastruktur. Daten und Verarbeitung bleiben dort, statt für jeden Arbeitsschritt an externe Dienste übertragen zu werden.',
+    ],
+  },
+  {
+    id: 'geeignet',
+    title: 'Welche Aufgaben sich dafür eignen',
+    paragraphs: [
+      'Lokale Wissenssysteme, Auswertungen, Dashboards, Dokumentenverarbeitung und bestimmte KI-Funktionen lassen sich häufig ohne öffentliche Cloud umsetzen. Besonders interessant ist das, wenn sensible Informationen verarbeitet werden oder eine Organisation möglichst unabhängig bleiben möchte.',
+    ],
+  },
+  {
+    id: 'grenzen',
+    title: 'Wo lokale Lösungen Grenzen haben',
+    paragraphs: [
+      'Einige Funktionen benötigen aktuelle externe Daten, hohe Rechenleistung, gemeinsame Zugriffe über mehrere Standorte oder Dienste, die nur online angeboten werden. Lokal ist deshalb kein Selbstzweck. Die Architektur muss zur Aufgabe, zum Betrieb und zum Budget passen.',
+    ],
+  },
+  {
+    id: 'betrieb',
+    title: 'Was beim Betrieb zu klären ist',
+    paragraphs: [
+      'Auch eine lokale Anwendung braucht ein Konzept für Zugriffsrechte, Sicherungen, Aktualisierungen und Verantwortlichkeiten. Ohne diese Punkte wäre die Cloud zwar draussen, die Betriebsfrage aber noch immer im Raum.',
+    ],
+  },
+  {
+    id: 'entscheidung',
+    title: 'Wie die passende Architektur entsteht',
+    paragraphs: [
+      'Ich prüfe Datenarten, Funktionen, Nutzer, Infrastruktur und Wartungsbedarf. Daraus entsteht eine nachvollziehbare Empfehlung: vollständig lokal, gezielt hybrid oder online, aber so sparsam und kontrolliert wie möglich.',
+    ],
+  },
+];
+
+const relatedQuestions = [
+  {
+    href: '/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/',
+    title: 'Was muss beim Datenschutz beachtet werden?',
+    text: 'Welche Datenflüsse, Zugriffsrechte und externen Dienste wichtig sind.',
+  },
+  {
+    href: '/haeufige-fragen/wem-gehoeren-code-daten-und-zugaenge/',
+    title: 'Wem gehören Ergebnis, Daten und Zugänge?',
+    text: 'Wie Kontrolle, Rechte und Abhängigkeiten geregelt werden.',
+  },
+  {
+    href: '/haeufige-fragen/was-bedeuten-mehrere-hundert-ki-agenten/',
+    title: 'Was bedeuten mehrere hundert KI-Agenten?',
+    text: 'Wie KI-Abläufe ausgewählt, geführt und kontrolliert werden.',
+  },
+  {
+    href: '/haeufige-fragen/arbeitest-du-allein/',
+    title: 'Arbeitest du allein?',
+    text: 'Wer technische Entscheidungen trifft und Verantwortung übernimmt.',
+  },
+];
+---
+
+<FaqArticlePage
+  {pageUrl}
+  {question}
+  {answer}
+  {title}
+  {description}
+  {sections}
+  {relatedQuestions}
+  contactLabel="Lokale Lösung für mein Vorhaben prüfen"
+/>

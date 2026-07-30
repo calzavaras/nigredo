@@ -15,7 +15,7 @@ interface Props {
 const { pageNumber, pageCount, pageItems } = Astro.props;
 const prevHref = pageNumber > 1 ? getReferencePageHref(pageNumber - 1) : null;
 const nextHref = pageNumber < pageCount ? getReferencePageHref(pageNumber + 1) : null;
-const archiveImageSizes = '(max-width: 700px) calc(100vw - 44px), (max-width: 1024px) calc(50vw - 44px), 432px';
+const archiveImageSizes = '(max-width: 860px) calc(100vw - 40px), 560px';
 const breadcrumbItems = [
   { label: 'Start', href: '/' },
   { label: 'Referenzen', href: '/referenzen/' },
@@ -27,18 +27,17 @@ if (pageNumber > 1) {
 ---
 
 <section class="section pt-sub refs-hero" aria-labelledby="referenzen-title">
-  <div class="hero-glow"></div>
   <div class="container refs-hero__container">
     <Breadcrumb items={breadcrumbItems} />
 
     <div class="fade-up home-hero__inner refs-intro">
 
       <h1 id="referenzen-title" class="home-hero__title refs-hero__title">
-        Echte Aufgaben.<br>
-        <span class="gradient-text">Echte Ergebnisse.</span>
+        Nicht nur gedacht.<br>
+        <span class="gradient-text">Wirklich gemacht.</span>
       </h1>
       <p class="hero-lead refs-hero__lead">
-        Websites, KI-Anwendungen und digitale Werkzeuge für konkrete Anforderungen. Jede Referenz zeigt die Ausgangslage, den gewählten Weg und das Ergebnis.
+        Hier gibt es keine schönen Konzepte, die friedlich in einer Schublade schlafen. Die Referenzen zeigen Websites, KI-Anwendungen und digitale Werkzeuge, die aus konkreten Anforderungen entstanden sind. Jedes Projekt beginnt anders. Entscheidend ist, dass am Ende etwas funktioniert, das vorher gefehlt hat.
       </p>
       {pageCount > 1 && (
         <p class="refs-page-kicker">Seite {pageNumber} von {pageCount}</p>
@@ -47,27 +46,34 @@ if (pageNumber > 1) {
 
     <div
       id="refs-grid"
-      class="refs-grid"
+      class="refs-list"
     >
       {pageItems.map((reference, index) => (
         <article
-          class={`ref-main-card${reference.linkCls === 'ref-main-link--ki' ? ' ref-main-card--ki' : ''}${reference.badge.cls === 'accent-cyan' ? ' ref-main-card--app' : ''}`}
+          class="ref-project"
+          style={`--card-accent: ${reference.accent};`}
         >
-          <ReferenzVisual reference={reference} sizes={archiveImageSizes} priority={index === 0} />
-          <div class="ref-main-card-body">
-            <div class="ref-main-card-header">
-              <h2 class="ref-main-card-title">{reference.listTitle}</h2>
-              <span class="ref-main-card-year">{reference.year}</span>
+          <div class="ref-project__visual">
+            <ReferenzVisual reference={reference} sizes={archiveImageSizes} priority={index === 0} />
+          </div>
+          <div class="ref-project__body">
+            <div class="ref-project__meta">
+              <span class="ref-project__type">
+                <span class="ref-project__accent" aria-hidden="true"></span>
+                {reference.badge.text}
+              </span>
+              <span>{reference.year}</span>
             </div>
-            <p class="ref-main-card-sub">{reference.sub}</p>
-            <p class="ref-main-card-desc">{reference.listDesc}</p>
-            <p class="ref-main-card-role"><span>Rolle:</span> {reference.rolle}</p>
-            <div class="ref-main-card-footer">
-              <a href={reference.href} class={`ref-main-link ref-main-link--stretched ${reference.linkCls}`.trim()} aria-label={reference.ariaLabel}>Details <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <h2 class="ref-project__title">{reference.listTitle}</h2>
+            <p class="ref-project__sub">{reference.sub}</p>
+            <p class="ref-project__summary">{reference.moreDesc}</p>
+            <p class="ref-project__role">{reference.rolle}</p>
+            <div class="ref-project__actions">
+              <a href={reference.href} class="ref-project__details ref-project__details--stretched" aria-label={reference.ariaLabel}>Projekt ansehen <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
               {reference.liveUrl ? (
-                <a href={reference.liveUrl} class="ref-main-live-link" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website ansehen <span aria-hidden="true">↗</span></a>
+                <a href={reference.liveUrl} class="ref-project__live" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website öffnen <span aria-hidden="true">↗</span></a>
               ) : (
-                <span class="ref-main-live-note">{reference.liveNote}</span>
+                <span class="ref-project__note">{reference.liveNote}</span>
               )}
             </div>
           </div>
@@ -104,7 +110,7 @@ if (pageNumber > 1) {
     <div class="section refs-final-section">
       <div class="section-cta refs-final-cta fade-up">
         <span class="cta-label">Der nächste Schritt</span>
-        <h2>Dein Projekt soll hier stehen?<br><span>Erzähl mir davon.</span></h2>
+        <h2>Dein Projekt fehlt noch.<br><span>Vielleicht beginnt es heute.</span></h2>
         <div class="hero-cta-group" style="justify-content: center;">
           <a href="/kontakt/" class="btn btn-primary">Kontakt aufnehmen</a>
           <a href="/marco-calzavara/" class="btn btn-ghost">Über mich</a>
@@ -115,10 +121,16 @@ if (pageNumber > 1) {
 </section>
 
 <style is:global>
+  body {
+    --page-accent-a: var(--refs-neon-a);
+    --page-accent-b: var(--refs-neon-b);
+    --page-accent: var(--refs-neon-b);
+  }
+
   .refs-hero {
-    --refs-a: var(--brand-cyan);
-    --refs-b: var(--brand-violet);
-    --refs-c: var(--brand-coral);
+    --refs-a: var(--refs-neon-a);
+    --refs-b: var(--refs-neon-b);
+    --refs-c: var(--refs-neon-b);
     animation: none;
   }
 
@@ -160,29 +172,20 @@ if (pageNumber > 1) {
   }
 
   .refs-hero .gradient-text {
-    background: var(--brand-gradient-mixed);
+    background: linear-gradient(96deg, var(--refs-a) 0%, var(--refs-b) 100%);
     background-size: 100% auto;
 
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    filter:
-      drop-shadow(0 0 12px color-mix(in srgb, var(--refs-a) 22%, transparent))
-      drop-shadow(0 0 18px color-mix(in srgb, var(--refs-c) 14%, transparent));
+    filter: none;
   }
 
   .refs-hero__lead {
     max-width: 620px;
     font-size: var(--lead-size);
     line-height: 1.65;
-  }
-
-  .refs-hero .hero-glow {
-    background:
-      radial-gradient(circle at 20% 36%, color-mix(in srgb, var(--refs-a) 18%, transparent) 0%, transparent 34%),
-      radial-gradient(circle at 56% 46%, color-mix(in srgb, var(--refs-b) 17%, transparent) 0%, transparent 30%),
-      radial-gradient(circle at 84% 30%, color-mix(in srgb, var(--refs-c) 16%, transparent) 0%, transparent 24%);
   }
 
   .refs-page-kicker {
@@ -194,197 +197,202 @@ if (pageNumber > 1) {
     color: var(--text-faint);
   }
 
-  .refs-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(24px, 3vw, 32px);
-    margin-bottom: clamp(32px, 4vw, 40px);
-    align-items: stretch;
-  }
-
   .refs-intro {
     max-width: 940px;
     margin-bottom: clamp(60px, 7vw, 76px);
   }
 
-  .ref-main-card {
-    --card-accent: var(--neon-red);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(10, 10, 12, 0.75);
-    background-clip: padding-box;
-    overflow: hidden;
-    color: #fff;
+  .refs-list {
+    margin-bottom: clamp(36px, 5vw, 56px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .ref-project {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.78fr);
+    gap: clamp(34px, 5vw, 64px);
+    align-items: center;
+    padding: clamp(38px, 5vw, 58px) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
-    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-                border-color 0.4s ease,
-                box-shadow 0.4s ease;
-  }
-
-  .ref-main-card--ki {
-    --card-accent: var(--tertiary-accent);
-  }
-
-  .ref-main-card--app {
-    --card-accent: var(--quaternary-accent);
-  }
-
-  @media (hover: hover) {
-    .ref-main-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 255, 255, 0.16);
-      box-shadow: var(--shadow-card-hover);
-    }
-    .ref-main-card:hover .referenz-visual__image {
-      transform: scale(1.04);
-    }
-  }
-
-  .ref-main-card-body {
-    padding: clamp(24px, 2.4vw, 32px) clamp(22px, 2.6vw, 28px);
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-height: 0;
-  }
-
-  .ref-main-card-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-
-  .ref-main-card-year {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.3);
-    white-space: nowrap;
-    padding-top: 4px;
-  }
-
-  .ref-main-card-title {
-    font-size: 1.22rem;
-    font-weight: 700;
-    margin: 0;
     color: #fff;
   }
 
-  .ref-main-card-sub {
-    font-size: 0.875rem;
-    color: var(--secondary-accent);
-    margin-bottom: 16px;
-    font-weight: 500;
+  .ref-project__visual {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    aspect-ratio: 4 / 3;
+    padding: clamp(30px, 4vw, 52px);
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid color-mix(in srgb, var(--card-accent) 18%, rgba(255, 255, 255, 0.1));
+    background:
+      radial-gradient(
+        ellipse at 50% 48%,
+        color-mix(in srgb, var(--card-accent) 22%, transparent) 0%,
+        color-mix(in srgb, var(--card-accent) 8%, transparent) 50%,
+        rgba(255, 255, 255, 0.02) 100%
+      ),
+      #09090b;
+    transition: border-color 0.35s ease;
   }
 
-  .ref-main-card--ki .ref-main-card-sub {
-    color: #c69aff;
+  .ref-project__visual .referenz-visual {
+    width: 100%;
+    aspect-ratio: 8 / 5;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+    border-bottom: 0;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.28);
   }
 
-  .ref-main-card--app .ref-main-card-sub {
-    color: #62e6db;
+  .ref-project__body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 4px 0;
   }
 
-  .ref-main-card-desc {
-    font-size: 1rem;
-    color: var(--text-muted);
-    line-height: 1.65;
-    margin: 0;
-    flex: 1;
-  }
-
-  .ref-main-card-role {
-    margin: 18px 0 0;
-    color: var(--text-faint);
-    font-size: 0.78rem;
-    line-height: 1.55;
-  }
-
-  .ref-main-card-role span {
-    color: var(--text-soft);
-    font-weight: 600;
-  }
-
-  .ref-main-card-footer {
+  .ref-project__meta {
     display: flex;
     align-items: center;
-    gap: 12px 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: clamp(22px, 2.6vw, 30px);
+    color: var(--text-faint);
+    font-size: 0.76rem;
+    line-height: 1.2;
   }
 
-  .ref-main-link {
+  .ref-project__type {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    transition: color 0.3s ease, gap 0.3s ease;
-    text-decoration: none;
+    gap: 9px;
+    color: var(--text-soft);
   }
 
-  .ref-main-link--stretched::after {
+  .ref-project__accent {
+    width: 22px;
+    height: 2px;
+    flex-shrink: 0;
+    background: var(--card-accent);
+  }
+
+  .ref-project__title {
+    max-width: 14ch;
+    margin: 0;
+    color: #fff;
+    font-size: clamp(1.7rem, 2.7vw, 2.35rem);
+    line-height: 1.08;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  .ref-project__sub {
+    max-width: 34ch;
+    margin: 18px 0 0;
+    color: color-mix(in srgb, var(--card-accent) 74%, white 26%);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .ref-project__summary {
+    max-width: 40ch;
+    margin: 16px 0 0;
+    color: var(--text-body);
+    font-size: 0.97rem;
+    line-height: 1.68;
+  }
+
+  .ref-project__role {
+    margin: clamp(24px, 3vw, 34px) 0 0;
+    color: var(--text-faint);
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+
+  .ref-project__actions {
+    display: flex;
+    align-items: center;
+    gap: 14px 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .ref-project__details,
+  .ref-project__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--text-secondary);
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+    transition: color 0.28s ease, gap 0.28s ease;
+  }
+
+  .ref-project__details--stretched::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 1;
-    border-radius: var(--radius-lg);
   }
 
-  .ref-main-link--stretched:focus-visible {
+  .ref-project__details--stretched:focus-visible {
     outline: none;
   }
 
-  .ref-main-link--stretched:focus-visible::after {
+  .ref-project__details--stretched:focus-visible::after {
     outline: 2px solid var(--card-accent);
-    outline-offset: -3px;
+    outline-offset: -4px;
   }
 
-  .ref-main-live-link {
+  .ref-project__live {
     position: relative;
     z-index: 2;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
     color: var(--text-soft);
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
   }
 
-  .ref-main-live-link:hover {
-    color: #fff;
-  }
-
-  .ref-main-live-link:focus-visible {
+  .ref-project__live:focus-visible {
     outline: 2px solid var(--card-accent);
     outline-offset: 4px;
     border-radius: var(--radius-sm);
   }
 
-  .ref-main-live-note {
+  .ref-project__note {
+    max-width: 26ch;
     color: var(--text-faint);
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     line-height: 1.45;
   }
 
-  .ref-main-card:hover .ref-main-link {
-    color: #fff;
-    gap: 12px;
+  @media (hover: hover) {
+    .ref-project:hover .ref-project__visual {
+      border-color: color-mix(in srgb, var(--card-accent) 40%, rgba(255, 255, 255, 0.14));
+    }
+    .ref-project:hover .referenz-visual__image {
+      transform: scale(1.018);
+    }
+
+    .ref-project:hover .ref-project__details {
+      gap: 11px;
+      color: #fff;
+    }
+
+    .ref-project__live:hover {
+      color: #fff;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .ref-main-card,
-    .ref-main-link,
-    .ref-main-live-link,
-    .ref-main-card .referenz-visual__image {
+    .ref-project__visual,
+    .ref-project__details,
+    .ref-project__live,
+    .ref-project .referenz-visual__image {
       transition: none !important;
       transform: none !important;
     }
@@ -500,9 +508,18 @@ if (pageNumber > 1) {
       line-height: var(--hero-title-line-height-mobile);
     }
 
-    .refs-grid {
+    .ref-project {
       grid-template-columns: 1fr;
-      gap: 24px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .ref-project__body {
+      padding: 0 2px 4px;
+    }
+
+    .ref-project__title {
+      max-width: 20ch;
     }
 
     .refs-intro {
@@ -533,6 +550,27 @@ if (pageNumber > 1) {
 
     .refs-intro {
       margin-bottom: 42px;
+    }
+
+    .ref-project {
+      gap: 24px;
+      padding: 30px 0 34px;
+    }
+
+    .ref-project__meta {
+      margin-bottom: 20px;
+    }
+
+    .ref-project__title {
+      font-size: clamp(1.55rem, 8vw, 2rem);
+    }
+
+    .ref-project__sub {
+      margin-top: 14px;
+    }
+
+    .ref-project__summary {
+      margin-top: 14px;
     }
 
     .refs-final-section {

@@ -1,0 +1,81 @@
+---
+import FaqArticlePage from '../../components/FaqArticlePage.astro';
+
+const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/wem-gehoeren-code-daten-und-zugaenge/';
+const question = 'Wem gehören das Ergebnis, die Daten und die Zugänge?';
+const answer = 'Das wird vor Projektbeginn klar geregelt. Deine Inhalte, Daten, Domains und persönlichen Zugänge bleiben unter deiner Kontrolle. Bei individuell entwickeltem Code, verwendeten Komponenten oder externen Lizenzen wird transparent festgehalten, welche Rechte gelten.';
+const title = 'Wem gehören Code, Daten und Zugänge? | Nigredo';
+const description = 'Wie Nigredo Eigentum, Nutzungsrechte, Daten, Domains, Zugänge, externe Lizenzen und die Übergabe digitaler Projekte transparent regelt.';
+
+const sections = [
+  {
+    id: 'daten',
+    title: 'Daten, Inhalte, Domains und Zugänge',
+    paragraphs: [
+      'Deine Inhalte und Daten bleiben deine. Domains und persönliche Konten werden nach Möglichkeit direkt auf dich oder deine Organisation registriert. Du erhältst die nötigen Zugänge und behältst die Kontrolle über zentrale Dienste.',
+    ],
+  },
+  {
+    id: 'code',
+    title: 'Wie Rechte am Code geregelt werden',
+    paragraphs: [
+      'Bei individuell entwickeltem Code wird im Angebot festgehalten, welche Nutzungs- oder Eigentumsrechte übertragen werden. Wiederverwendbare Grundlagen, offene Software und bestehende Komponenten werden sauber davon unterschieden.',
+    ],
+  },
+  {
+    id: 'lizenzen',
+    title: 'Was bei externen Lizenzen gilt',
+    paragraphs: [
+      'Schriften, Bibliotheken, Modelle, Plugins oder Plattformen können eigene Lizenzbedingungen haben. Solche Abhängigkeiten werden benannt, damit klar ist, welche Rechte gelten und welche laufenden Kosten entstehen können.',
+    ],
+  },
+  {
+    id: 'uebergabe',
+    title: 'Was zu einer sauberen Übergabe gehört',
+    paragraphs: [
+      'Je nach Projekt umfasst die Übergabe Quellcode, Zugangsdaten, Dokumentation, Betriebsinformationen und Hinweise zu Wartung oder Erweiterungen. Ziel ist, dass das Produkt nicht nur funktioniert, solange ich danebenstehe.',
+    ],
+  },
+  {
+    id: 'klarheit',
+    title: 'Warum das vor dem Start geklärt wird',
+    paragraphs: [
+      'Unklare Besitzverhältnisse schaffen Abhängigkeit und werden spätestens beim ersten Wechsel unangenehm. Deshalb gehören Rechte, Datenhoheit und Zugänge in den Projektumfang, nicht ins Kleingedruckte. Abhängigkeit als Geschäftsmodell interessiert mich nicht.',
+    ],
+  },
+];
+
+const relatedQuestions = [
+  {
+    href: '/haeufige-fragen/kann-eine-anwendung-vollstaendig-lokal-betrieben-werden/',
+    title: 'Kann eine Anwendung vollständig lokal betrieben werden?',
+    text: 'Wann Daten und Verarbeitung in der eigenen Umgebung bleiben.',
+  },
+  {
+    href: '/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/',
+    title: 'Was muss beim Datenschutz beachtet werden?',
+    text: 'Wie Datenflüsse und externe Dienste bewusst geplant werden.',
+  },
+  {
+    href: '/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/',
+    title: 'Welche laufenden Kosten entstehen?',
+    text: 'Welche Kosten nach dem Start realistisch sind.',
+  },
+  {
+    href: '/haeufige-fragen/arbeitest-du-allein/',
+    title: 'Arbeitest du allein?',
+    text: 'Wer die Zusammenarbeit führt und Verantwortung übernimmt.',
+  },
+];
+---
+
+<FaqArticlePage
+  {pageUrl}
+  {question}
+  {answer}
+  {title}
+  {description}
+  {sections}
+  {relatedQuestions}
+  contactLabel="Rechte und Übergabe klären"
+/>

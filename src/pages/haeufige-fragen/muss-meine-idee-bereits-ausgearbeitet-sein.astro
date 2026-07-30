@@ -1,0 +1,81 @@
+---
+import FaqArticlePage from '../../components/FaqArticlePage.astro';
+
+const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/muss-meine-idee-bereits-ausgearbeitet-sein/';
+const question = 'Muss meine Idee bereits vollständig ausgearbeitet sein?';
+const answer = 'Nein. Eine erste Vorstellung, ein störender Ablauf, eine Skizze oder der Satz «Eigentlich müsste man doch …» reichen als Ausgangspunkt. Ich helfe dir, die Idee zu ordnen, Möglichkeiten zu prüfen und daraus eine umsetzbare Richtung zu entwickeln.';
+const title = 'Muss meine Idee schon ausgearbeitet sein? | Nigredo';
+const description = 'Warum ein erster Gedanke für den Projektstart genügt und wie Nigredo daraus Ziel, Umfang, Prioritäten und eine umsetzbare Richtung entwickelt.';
+
+const sections = [
+  {
+    id: 'anfang',
+    title: 'Was als Anfang genügt',
+    paragraphs: [
+      'Du brauchst weder ein fertiges Konzept noch ein umfangreiches Pflichtenheft. Ein Problem, das immer wieder Zeit kostet, eine grobe Skizze oder eine Vorstellung davon, was besser funktionieren sollte, reicht für ein erstes Gespräch.',
+    ],
+  },
+  {
+    id: 'klaerung',
+    title: 'Wie aus dem Gedanken eine Aufgabe wird',
+    paragraphs: [
+      'Wir klären, wer die Lösung nutzt, welches Ergebnis wichtig ist und woran wir erkennen, dass sie funktioniert. Daraus lassen sich Anforderungen, Prioritäten und sinnvolle Grenzen ableiten.',
+    ],
+  },
+  {
+    id: 'varianten',
+    title: 'Wann erste Varianten helfen',
+    paragraphs: [
+      'Manche Fragen lassen sich besser an einem Entwurf als in einer langen Diskussion beantworten. Deshalb mache ich Möglichkeiten früh sichtbar, vergleiche Wege und prüfe Annahmen, bevor unnötig viel Aufwand entsteht.',
+    ],
+  },
+  {
+    id: 'nicht-noetig',
+    title: 'Was du noch nicht vorbereiten musst',
+    paragraphs: [
+      'Du musst keine Technologie auswählen, jede Unterseite benennen oder bereits wissen, ob du eine Website, eine Anwendung oder etwas dazwischen brauchst. Genau diese Einordnung ist Teil der Zusammenarbeit.',
+    ],
+  },
+  {
+    id: 'naechster-schritt',
+    title: 'Wie der nächste Schritt aussieht',
+    paragraphs: [
+      'Nach dem ersten Austausch erhältst du eine ehrliche Einschätzung: was sinnvoll erscheint, welche Fragen noch offen sind und ob ein konkreter Vorschlag der richtige nächste Schritt ist. Unfertige Ideen sind willkommen. Unklare Versprechen eher nicht.',
+    ],
+  },
+];
+
+const relatedQuestions = [
+  {
+    href: '/haeufige-fragen/arbeitest-du-allein/',
+    title: 'Arbeitest du allein?',
+    text: 'Wer dein Vorhaben führt und welche Fachleute bei Bedarf dazukommen.',
+  },
+  {
+    href: '/haeufige-fragen/was-kostet-eine-professionelle-website/',
+    title: 'Was kostet eine Website oder digitale Lösung?',
+    text: 'Wie aus Ziel und Umfang ein transparenter Preis entsteht.',
+  },
+  {
+    href: '/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/',
+    title: 'Wie schnell kann ein Projekt umgesetzt werden?',
+    text: 'Was Tempo, Prototypen und einen belastbaren Zeitrahmen bestimmt.',
+  },
+  {
+    href: '/haeufige-fragen/was-bedeuten-mehrere-hundert-ki-agenten/',
+    title: 'Was bedeuten mehrere hundert KI-Agenten?',
+    text: 'Wie digitale Rollen Ideen früher sichtbar und prüfbar machen.',
+  },
+];
+---
+
+<FaqArticlePage
+  {pageUrl}
+  {question}
+  {answer}
+  {title}
+  {description}
+  {sections}
+  {relatedQuestions}
+  contactLabel="Unfertige Idee besprechen"
+/>

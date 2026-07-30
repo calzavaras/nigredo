@@ -1,0 +1,81 @@
+---
+import FaqArticlePage from '../../components/FaqArticlePage.astro';
+
+const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/was-bedeuten-mehrere-hundert-ki-agenten/';
+const question = 'Was bedeuten «mehrere hundert KI-Agenten» konkret?';
+const answer = 'Damit sind spezialisierte digitale Rollen und Abläufe gemeint. Sie unterstützen Recherche, Struktur, Text, Entwicklung, Tests und Gegenprüfung. Ich wähle die passenden Agenten aus, führe ihre Ergebnisse zusammen und kontrolliere die Qualität.';
+const title = 'Was sind mehrere hundert KI-Agenten? | Nigredo';
+const description = 'Wie Marco Calzavara spezialisierte KI-Agenten für Recherche, Konzeption, Text, Entwicklung, Tests und Qualitätssicherung einsetzt.';
+
+const sections = [
+  {
+    id: 'begriff',
+    title: 'Was mit einem KI-Agenten gemeint ist',
+    paragraphs: [
+      'Ein KI-Agent ist in diesem Zusammenhang eine klar definierte digitale Rolle mit einer bestimmten Aufgabe, passenden Werkzeugen und eindeutigen Prüfkriterien. Einer recherchiert Quellen, ein anderer strukturiert Inhalte, ein dritter sucht gezielt nach technischen oder sprachlichen Schwächen.',
+    ],
+  },
+  {
+    id: 'einsatz',
+    title: 'Wie die Agenten eingesetzt werden',
+    paragraphs: [
+      'Ich stelle für jede Aufgabe einen passenden Ablauf zusammen. Bei einer Website kann das von Positionierung und Inhaltsstruktur über Text und Entwicklung bis zu Barrierefreiheit, Sicherheit und Tests reichen. Eine lokale Anwendung benötigt wiederum andere Rollen und Prüfungen.',
+    ],
+  },
+  {
+    id: 'anzahl',
+    title: 'Warum es mehrere hundert sind',
+    paragraphs: [
+      'Die Zahl beschreibt den Werkzeugkasten, nicht eine Dauerbesetzung. Es arbeiten also nicht mehrere hundert digitale Gestalten gleichzeitig wild an deiner Website. Das wäre vermutlich unterhaltsam, aber wenig hilfreich. Zum Einsatz kommen nur jene Rollen, die für die konkrete Aufgabe einen nachvollziehbaren Nutzen haben.',
+    ],
+  },
+  {
+    id: 'verantwortung',
+    title: 'Wer entscheidet und Verantwortung trägt',
+    paragraphs: [
+      'Agenten liefern Vorschläge, Varianten und Prüfberichte. Ich bewerte die Ergebnisse, verwerfe Unpassendes, treffe die Entscheidungen und führe alles zu einem stimmigen Produkt zusammen. Verantwortung lässt sich nicht an einen Arbeitsablauf delegieren.',
+    ],
+  },
+  {
+    id: 'nutzen',
+    title: 'Was du davon merkst',
+    paragraphs: [
+      'Du siehst Ideen früher, erhältst mehr geprüfte Varianten und wartest weniger auf Arbeitsschritte, die sinnvoll parallel laufen können. Das Ziel ist nicht möglichst viel KI, sondern ein besseres Ergebnis mit kürzeren Wegen.',
+    ],
+  },
+];
+
+const relatedQuestions = [
+  {
+    href: '/haeufige-fragen/arbeitest-du-allein/',
+    title: 'Arbeitest du allein?',
+    text: 'Wie persönliche Verantwortung und ein erweitertes Fachnetzwerk zusammenpassen.',
+  },
+  {
+    href: '/haeufige-fragen/kann-eine-anwendung-vollstaendig-lokal-betrieben-werden/',
+    title: 'Kann eine Anwendung vollständig lokal betrieben werden?',
+    text: 'Wann Daten und Verarbeitung in der eigenen Umgebung bleiben können.',
+  },
+  {
+    href: '/haeufige-fragen/muss-meine-idee-bereits-ausgearbeitet-sein/',
+    title: 'Muss meine Idee bereits ausgearbeitet sein?',
+    text: 'Was für ein erstes Gespräch als Ausgangspunkt genügt.',
+  },
+  {
+    href: '/haeufige-fragen/wem-gehoeren-code-daten-und-zugaenge/',
+    title: 'Wem gehören Ergebnis, Daten und Zugänge?',
+    text: 'Wie Eigentum, Rechte und Zugänge vor dem Projekt geregelt werden.',
+  },
+];
+---
+
+<FaqArticlePage
+  {pageUrl}
+  {question}
+  {answer}
+  {title}
+  {description}
+  {sections}
+  {relatedQuestions}
+  contactLabel="KI-Einsatz für mein Vorhaben klären"
+/>

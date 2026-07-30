@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/';
-const question = 'Welche laufenden Kosten hat eine Website?';
-const answer = 'Zu den festen Grundkosten gehören Domain und Hosting. Wartung, technische Updates, Sicherungen und redaktionelle Pflege kommen je nach System und Nutzung hinzu. Eine schlank gebaute Website hält diesen Aufwand dauerhaft überschaubar.';
+const question = 'Welche laufenden Kosten entstehen?';
+const answer = 'Domain und Hosting bilden die üblichen Grundkosten. Je nach technischer Lösung können Wartung, Sicherheitsupdates, externe Dienste, KI-Nutzung oder redaktionelle Pflege hinzukommen. Du erfährst vor Projektbeginn, welche laufenden Kosten realistisch sind. Unangenehme Überraschungen gehören nicht zum Funktionsumfang.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -36,7 +36,7 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Welche laufenden Kosten hat eine Website? | Nigredo",
+      "name": "Welche laufenden Kosten entstehen? | Nigredo",
       "description": "Welche Kosten nach dem Start für Domain, Hosting, Wartung und Pflege entstehen und wie eine schlanke technische Basis den Aufwand tief hält.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -52,12 +52,12 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Welche laufenden Kosten hat eine Website? | Nigredo"
+  title="Welche laufenden Kosten entstehen? | Nigredo"
   description="Welche Kosten nach dem Start für Domain, Hosting, Wartung und Pflege entstehen und wie eine schlanke technische Basis den Aufwand tief hält."
   canonical={pageUrl}
-  ogTitle="Welche laufenden Kosten hat eine Website? | Nigredo"
+  ogTitle="Welche laufenden Kosten entstehen? | Nigredo"
   ogDescription="Domain, Hosting, Wartung und Pflege: Welche Kosten nach dem Start anfallen und wie sich der Aufwand dauerhaft klein halten lässt."
-  twitterTitle="Welche laufenden Kosten hat eine Website? | Nigredo"
+  twitterTitle="Welche laufenden Kosten entstehen? | Nigredo"
   twitterDescription="Welche laufenden Kosten eine Website nach dem Launch verursacht und wie man sie tief hält."
   schema={schema}
 >
@@ -113,7 +113,7 @@ const schema = JSON.stringify({
           <h2 id="related-faqs-title">Verwandte Fragen</h2>
           <div class="related-faqs__grid">
             <a href="/haeufige-fragen/was-kostet-eine-professionelle-website/">
-              <strong>Was kostet eine professionelle Website?</strong>
+              <strong>Was kostet eine Website oder digitale Lösung?</strong>
               <span>Wovon der Preis abhängt und wie sich die Kosten für die Erstellung seriös einschätzen lassen.</span>
             </a>
             <a href="/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/">
@@ -121,7 +121,7 @@ const schema = JSON.stringify({
               <span>Wann ein CMS sinnvoll ist und wie viel Eigenständigkeit realistisch bleibt.</span>
             </a>
             <a href="/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/">
-              <strong>Was muss meine Website beim Datenschutz beachten?</strong>
+              <strong>Was muss beim Datenschutz beachtet werden?</strong>
               <span>Was das Schweizer Datenschutzgesetz für deine Website bedeutet, von Cookies bis Analyse.</span>
             </a>
             <a href="/haeufige-fragen/wird-meine-website-bei-google-gefunden/">

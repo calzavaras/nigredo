@@ -20,13 +20,13 @@ const schema = JSON.stringify({
     {
       "@type": "AboutPage",
       "@id": `${pageUrl}#webpage`,
-      "name": "Über mich | Marco Calzavara | Nigredo",
+      "name": "Marco Calzavara | Ideen, KI und digitale Umsetzung",
       "url": pageUrl,
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-30",
       "isAccessibleForFree": true,
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "about": { "@id": "https://www.nigredo.ch/#person" },
@@ -50,7 +50,7 @@ const schema = JSON.stringify({
       "givenName": "Marco",
       "familyName": "Calzavara",
       "jobTitle": "Gründer & Full-Stack Developer",
-      "description": "Marco Calzavara ist Gründer von Nigredo. Er verbindet Führungserfahrung, Gestaltung und KI mit einem belastbaren Netzwerk aus Informatikfachleuten und übernimmt persönliche Verantwortung für jedes Projekt.",
+      "description": "Marco Calzavara verbindet Führungserfahrung, Geschäftssinn, Gestaltung und KI. Aus Ideen entstehen digitale Produkte mit Charakter.",
       "url": pageUrl,
       "mainEntityOfPage": { "@id": `${pageUrl}#webpage` },
       "worksFor": { "@id": "https://www.nigredo.ch/#organization" },
@@ -65,18 +65,18 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Über mich | Marco Calzavara | Nigredo"
-  description={`Marco Calzavara verbindet ${leadershipYears} Jahre Führungserfahrung, Gestaltung und KI zu digitalen Lösungen mit persönlicher Verantwortung.`}
+  title="Marco Calzavara | Ideen, KI und digitale Umsetzung"
+  description="Marco Calzavara verbindet Führungserfahrung, Geschäftssinn, Gestaltung und KI. Aus Ideen entstehen digitale Produkte mit Charakter."
   canonical={pageUrl}
-  ogTitle="Marco Calzavara | Ideen mit Richtung"
-  ogDescription="Marco Calzavara verbindet Führungserfahrung, Gestaltung und KI zu digitalen Lösungen mit persönlicher Verantwortung."
+  ogTitle="Marco Calzavara | Ideen, KI und digitale Umsetzung"
+  ogDescription="Führungserfahrung, Geschäftssinn, Gestaltung, KI und ein starkes Informatiknetzwerk für digitale Produkte mit Charakter."
   ogType="profile"
   ogImage="https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.jpg"
   ogImageAlt="Marco Calzavara, Gründer von Nigredo"
   ogImageWidth="768"
   ogImageHeight="1024"
-  twitterTitle="Marco Calzavara | Ideen mit Richtung"
-  twitterDescription="Führungserfahrung, Gestaltung und KI, verbunden mit persönlicher Verantwortung."
+  twitterTitle="Marco Calzavara | Ideen, KI und digitale Umsetzung"
+  twitterDescription="Aus Ideen entstehen digitale Produkte mit Charakter."
   schema={schema}
   preloadImage="/assets/marco-calzavara-nigredo-st-gallen-500.avif"
   preloadImageType="image/avif"
@@ -84,7 +84,6 @@ const schema = JSON.stringify({
   preloadImageSizes="(max-width: 600px) 204px, 252px"
 >
   <section class="section pt-sub about-hero" aria-labelledby="about-title">
-    <div class="hero-glow"></div>
     <div class="container about-hero__container">
 
       <Breadcrumb items={[
@@ -96,7 +95,7 @@ const schema = JSON.stringify({
       <div class="fade-up home-hero__inner about-hero__intro">
         <h1 id="about-title" class="home-hero__title about-hero__title">
           Ich sehe Möglichkeiten.<br>
-          <span class="gradient-text">Und bringe sie in Form.</span>
+          <span class="gradient-text">Und lasse sie nicht liegen.</span>
         </h1>
       </div>
 
@@ -131,13 +130,13 @@ const schema = JSON.stringify({
         <div class="au-content-column fade-up delay-150">
           <div class="au-statement">
             <blockquote class="hero-lead about-statement__quote">
-              Ich erkenne schnell, wo etwas einfacher, klarer oder wirksamer werden kann. Dann bringe ich die richtigen Menschen und Werkzeuge zusammen.
+              Ich habe selten nur eine Idee. Meistens kommen gleich mehrere. Die stärkste erhält keine lange Präsentation, sondern möglichst bald einen ersten funktionierenden Entwurf.
             </blockquote>
           </div>
           
           <div class="au-bio">
             <p class="au-bio-intro">
-              Mich interessieren digitale Lösungen, die einen spürbaren Unterschied machen. Dafür verbinde ich Führungserfahrung, Verwaltungswissen, Gestaltung und KI mit einem belastbaren Netzwerk aus Informatikfachleuten.
+              Mich interessieren Situationen, in denen etwas klarer, einfacher, schöner oder wirksamer werden könnte. Ich höre genau hin, erkenne Zusammenhänge und verbinde Einfühlungsvermögen, Geschäftssinn, Gestaltung und technische Möglichkeiten zu einer umsetzbaren Richtung. Ideen, die jahrelang auf ihren perfekten Moment warten, sind nicht meine Disziplin.
             </p>
             
             <div class="au-bio-more" data-bio-more>
@@ -153,13 +152,25 @@ const schema = JSON.stringify({
               <div id="au-bio-more-content" class="au-bio-more__panel" hidden data-bio-more-panel>
                 <div class="au-bio-more__content">
                   <p>
-                    Seit 2009 arbeite ich bei der IV-Stelle, seit 2011 in einer Führungsfunktion. Heute leite ich ein Expertenteam und verantworte die Weiterentwicklung einer Abteilung. Diese Arbeit hat meinen Blick geprägt: Komplexität ordnen, Menschen einbeziehen und Entscheidungen so treffen, dass sie im Alltag tragen.
+                    Seit 2009 arbeite ich bei der IV-Stelle, seit 2011 in einer Führungsfunktion. Heute leite ich ein Expertenteam und verantworte die fachliche und organisatorische Weiterentwicklung einer Abteilung. Diese Arbeit hat meinen Blick geprägt: Menschen verstehen, Interessen erkennen, Informationen ordnen und Entscheidungen so treffen, dass sie im Alltag bestehen.
                   </p>
                   <p>
-                    Parallel dazu habe ich Unternehmen gegründet, aufgebaut und verkauft. Mit Nigredo verbinde ich Ideen, Gestaltung, KI und technische Umsetzung. Gemeinsam mit einem Geschäftspartner führe ich zudem die HappyPath GmbH, eine schweizweit eingesetzte Softwarelösung für Sozialversicherungen.
+                    Parallel dazu habe ich Unternehmen gegründet, aufgebaut und verkauft. Gemeinsam mit einem Geschäftspartner führe ich die HappyPath GmbH, die mit TextRoom eine schweizweit eingesetzte Software für Sozialversicherungen entwickelt.
                   </p>
                   <p>
-                    Ich arbeite bewusst mit den passenden Fachleuten zusammen. Meine Aufgabe ist es, Möglichkeiten früh zu erkennen, die richtigen Kompetenzen zu verbinden und Verantwortung für das Ergebnis zu übernehmen.
+                    Mit Nigredo verbinde ich die Klarheit aus der Führung, das Einfühlungsvermögen aus der Arbeit mit Menschen, den Blick für wirtschaftlich sinnvolle Lösungen, die Freude an Gestaltung, die Möglichkeiten moderner KI und den hartnäckigen Wunsch, Ideen tatsächlich umzusetzen.
+                  </p>
+                  <p>
+                    <strong>KI erweitert meine Werkbank.</strong> Ich habe ein System aus mehreren hundert spezialisierten KI-Agenten und abgestimmten Arbeitsabläufen aufgebaut. Das sind klar definierte digitale Rollen für Recherche, Strategie, Struktur, Text, Gestaltung, Programmierung, Tests, Qualitätssicherung und Gegenprüfung. Manche entwickeln Vorschläge. Andere suchen bewusst nach Schwächen oder stellen unbequeme Fragen.
+                  </p>
+                  <p>
+                    Ich führe die Ergebnisse zusammen, treffe die Entscheidungen und prüfe, ob das Resultat fachlich, sprachlich, gestalterisch und technisch überzeugt. KI ersetzt weder meine Kreativität noch meine Verantwortung. Sie macht gute Ideen früher sichtbar, besser prüfbar und schneller umsetzbar.
+                  </p>
+                  <p>
+                    <strong>Ein gutes Netzwerk gehört dazu.</strong> Für besondere Anforderungen arbeite ich mit Fachleuten für Frontend- und Backend-Entwicklung, Datenbanken, Schnittstellen, Infrastruktur, Betrieb, Sicherheit, Datenschutz, Automatisierung, KI und die Architektur komplexer Anwendungen zusammen.
+                  </p>
+                  <p>
+                    Je nach Projekt stelle ich die passende Kombination zusammen. Für dich bleibt die Zusammenarbeit einfach: Ich bin dein direkter Ansprechpartner, halte die Fäden zusammen und stehe für das Ergebnis ein.
                   </p>
                   <button type="button" class="au-bio-more__toggle au-bio-more__toggle--close" data-bio-more-close>
                     Weniger anzeigen
@@ -175,7 +186,7 @@ const schema = JSON.stringify({
       <div class="au-stats-grid mt-80 fade-up delay-200">
         <div class="au-stat-card">
           <div class="au-stat-inner">
-            <span class="au-stat-value">{leadershipYears}</span>
+            <span class="au-stat-value">{leadershipYears}+</span>
             <span class="au-stat-desc">Jahre Führungserfahrung</span>
           </div>
         </div>
@@ -187,14 +198,14 @@ const schema = JSON.stringify({
         </div>
         <div class="au-stat-card">
           <div class="au-stat-inner">
-            <span class="au-stat-value">1</span>
-            <span class="au-stat-desc">Direkter Ansprechpartner</span>
+            <span class="au-stat-value au-stat-value--words">Mehrere hundert</span>
+            <span class="au-stat-desc">spezialisierte KI-Agenten im Werkzeugkasten</span>
           </div>
         </div>
         <div class="au-stat-card">
           <div class="au-stat-inner">
-            <span class="au-stat-value">∞</span>
-            <span class="au-stat-desc">Neugier auf gute Lösungen</span>
+            <span class="au-stat-value">1</span>
+            <span class="au-stat-desc">direkter Ansprechpartner</span>
           </div>
         </div>
       </div>
@@ -205,18 +216,18 @@ const schema = JSON.stringify({
         <div class="grid-3">
           <article class="card au-principle-card">
             <div class="au-principle-number">01</div>
-            <h3><span>Anpacken</span> schafft Bewegung.</h3>
-            <p class="au-principle-text">Gute Ideen gewinnen erst an Wert, wenn jemand den ersten Schritt macht.</p>
+            <h3>Ideen wollen Bewegung.</h3>
+            <p class="au-principle-text">Eine Idee gewinnt nicht dadurch an Wert, dass man länger über sie spricht. Fast immer braucht es jemanden, der beginnt.</p>
           </article>
           <article class="card au-principle-card">
             <div class="au-principle-number">02</div>
-            <h3>Technik braucht <span>Richtung</span>.</h3>
-            <p class="au-principle-text">Entscheidend ist nicht, was möglich ist, sondern was für Menschen und Aufgabe sinnvoll ist.</p>
+            <h3>KI vergrössert die Werkbank.</h3>
+            <p class="au-principle-text">Technologie eröffnet Möglichkeiten. Die Richtung entsteht trotzdem aus Verständnis, Urteil und Erfahrung.</p>
           </article>
           <article class="card au-principle-card">
             <div class="au-principle-number">03</div>
-            <h3><span>Qualität</span> zeigt sich im Ergebnis.</h3>
-            <p class="au-principle-text">Inhalt, Gestaltung und Technik müssen gemeinsam überzeugen.</p>
+            <h3>Stillstand ist höchstens ein kurzer Ladebildschirm.</h3>
+            <p class="au-principle-text">Wenn ein Ablauf einfacher oder eine Idee wirksamer werden kann, fällt es mir schwer, sie einfach liegen zu lassen.</p>
           </article>
         </div>
       </div>
@@ -225,7 +236,8 @@ const schema = JSON.stringify({
       <div class="section about-final-section fade-up">
         <div class="section-cta about-final-cta">
           <span class="cta-label">Direkter Austausch</span>
-          <h2>Eine gute Idee braucht<br><span>noch keinen fertigen Plan.</span></h2>
+          <h2>Eine gute Idee braucht<br><span>noch keinen perfekten Plan.</span></h2>
+          <p>Bring mir den unfertigen Gedanken, das störende Problem oder die Vorstellung, die dich nicht mehr loslässt. Wir finden heraus, was daraus werden kann.</p>
           <div class="hero-cta-group" style="justify-content: center;">
             <a href="/kontakt/" class="btn btn-primary">Direkt schreiben</a>
             <a href="/referenzen/" class="btn btn-ghost">Projekte ansehen</a>
@@ -277,13 +289,27 @@ const schema = JSON.stringify({
 </script>
 
 <style>
+  :global(body) {
+    --about-a: var(--about-neon-a);
+    --about-b: var(--about-neon-b);
+    --about-c: oklch(24.7% 0.047 44.8);
+    --about-d: oklch(13.8% 0.044 20.2);
+    --about-light: var(--about-neon-b);
+    --page-accent-a: var(--about-neon-a);
+    --page-accent-b: var(--about-neon-b);
+    background: var(--bg-color);
+  }
+
+  :global(body)::before {
+    display: none;
+  }
+
   .about-hero {
-    --about-a: var(--brand-sun);
-    --about-b: var(--brand-coral);
-    --about-c: var(--brand-pink);
+    --page-accent: var(--about-a);
     animation: none;
     padding-top: var(--hero-offset-top-breadcrumb);
     padding-bottom: var(--hero-offset-bottom);
+    background: transparent;
   }
 
   .about-hero__container {
@@ -297,8 +323,8 @@ const schema = JSON.stringify({
 
   .about-hero .badge {
     margin-bottom: 0.95rem;
-    color: rgba(255, 241, 232, 0.94);
-    border-color: color-mix(in srgb, var(--about-b) 38%, rgba(255, 255, 255, 0.22));
+    color: var(--about-light);
+    border-color: color-mix(in srgb, var(--about-b) 48%, rgba(255, 255, 255, 0.2));
     background: transparent;
     box-shadow: none;
   }
@@ -317,19 +343,12 @@ const schema = JSON.stringify({
   }
 
   .about-hero .gradient-text {
-    background: var(--brand-gradient-warm);
-    background-size: 100% auto;
+    background: linear-gradient(105deg, var(--about-b) 0%, var(--about-a) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
-
-  .about-hero .hero-glow {
-    background:
-      radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--about-a) 18%, transparent) 0%, transparent 36%),
-      radial-gradient(circle at 58% 44%, color-mix(in srgb, var(--about-b) 17%, transparent) 0%, transparent 32%),
-      radial-gradient(circle at 84% 28%, color-mix(in srgb, var(--about-c) 16%, transparent) 0%, transparent 28%);
+    color: var(--about-a);
+    filter: none;
   }
 
   /* Main Layout Grid */
@@ -366,10 +385,16 @@ const schema = JSON.stringify({
   .au-photo-aura {
     position: absolute;
     inset: 18px 14px -18px -14px;
-    background: var(--brand-gradient-warm);
+    background: linear-gradient(
+      145deg,
+      var(--about-a) 0%,
+      var(--about-b) 42%,
+      var(--about-c) 76%,
+      var(--about-d) 100%
+    );
     border-radius: var(--radius-lg);
     filter: none;
-    opacity: 0.82;
+    opacity: 0.96;
   }
 
   .au-photo-circle-wrap {
@@ -378,8 +403,8 @@ const schema = JSON.stringify({
     height: 100%;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: #111014;
+    border: 1px solid color-mix(in srgb, var(--about-a) 24%, rgba(255, 255, 255, 0.08));
+    background: var(--about-d);
     z-index: 1;
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.04),
@@ -409,7 +434,7 @@ const schema = JSON.stringify({
 
   .au-role {
     font-size: 0.85rem;
-    color: var(--text-soft);
+    color: color-mix(in srgb, var(--about-a) 48%, white 30%);
     letter-spacing: 0;
     text-transform: none;
     margin: 0;
@@ -424,13 +449,14 @@ const schema = JSON.stringify({
   .au-statement .about-statement__quote {
     max-width: var(--au-copy-max-width);
     box-sizing: border-box;
-    font-size: var(--lead-size);
-    line-height: 1.65;
-    color: rgba(245, 245, 247, 0.92);
-    font-style: italic;
+    font-size: clamp(1.12rem, 1.5vw, 1.3rem);
+    line-height: 1.58;
+    color: rgba(245, 245, 247, 0.96);
+    font-style: normal;
+    font-weight: 550;
     margin: 0;
     padding: 0 0 28px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid color-mix(in srgb, var(--about-b) 44%, rgba(255, 255, 255, 0.1));
     border-radius: 0;
     border-top: 0;
     border-left: 0;
@@ -468,7 +494,7 @@ const schema = JSON.stringify({
     padding: 0;
     border: 0;
     background: transparent;
-    color: var(--text-body);
+    color: var(--about-a);
     font-size: 0.92rem;
     font-weight: 700;
     line-height: 1.25;
@@ -484,7 +510,7 @@ const schema = JSON.stringify({
 
   .au-bio-more__toggle:hover,
   .au-bio-more__toggle:focus-visible {
-    color: #fff;
+    color: var(--about-light);
   }
 
   .au-bio-more__toggle:focus-visible {
@@ -528,8 +554,8 @@ const schema = JSON.stringify({
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid color-mix(in srgb, var(--about-b) 28%, rgba(255, 255, 255, 0.08));
+    border-bottom: 1px solid color-mix(in srgb, var(--about-b) 28%, rgba(255, 255, 255, 0.08));
     margin-top: clamp(68px, 7vw, 84px);
   }
 
@@ -537,7 +563,7 @@ const schema = JSON.stringify({
     padding: 0;
     border-radius: 0;
     border: 0;
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 1px solid color-mix(in srgb, var(--about-b) 22%, rgba(255, 255, 255, 0.06));
     background: transparent;
     transition:
       transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
@@ -548,8 +574,8 @@ const schema = JSON.stringify({
 
   .au-stat-card:hover {
     transform: none;
-    border-color: rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.018);
+    border-color: color-mix(in srgb, var(--about-b) 32%, rgba(255, 255, 255, 0.08));
+    background: color-mix(in srgb, var(--about-d) 72%, transparent);
     box-shadow: none;
   }
 
@@ -568,14 +594,12 @@ const schema = JSON.stringify({
     line-height: 1;
     margin-bottom: 10px;
     display: block;
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--about-b) 88%, white 10%) 0%,
-      color-mix(in srgb, var(--about-b) 64%, black 16%) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--about-a);
+  }
+
+  .au-stat-value--words {
+    font-size: 1.9rem;
+    line-height: 1.05;
   }
 
   .au-stat-desc {
@@ -592,7 +616,7 @@ const schema = JSON.stringify({
   .au-principle-card {
     padding: 28px 0 0;
     border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid color-mix(in srgb, var(--about-b) 30%, rgba(255, 255, 255, 0.08));
     border-radius: 0;
     background: transparent;
     isolation: isolate;
@@ -608,7 +632,7 @@ const schema = JSON.stringify({
 
   .au-principle-card:hover {
     transform: none;
-    border-color: rgba(255, 255, 255, 0.18);
+    border-color: color-mix(in srgb, var(--about-a) 46%, rgba(255, 255, 255, 0.14));
     background: transparent;
     box-shadow: none;
   }
@@ -616,15 +640,7 @@ const schema = JSON.stringify({
   .au-principle-number {
     font-size: 0.75rem;
     font-weight: 700;
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--about-b) 90%, white 8%) 0%,
-      color-mix(in srgb, var(--about-b) 68%, black 16%) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: var(--about-a);
     letter-spacing: 0.12em;
     margin-bottom: 16px;
     display: block;
@@ -636,13 +652,6 @@ const schema = JSON.stringify({
     letter-spacing: -0.01em;
     margin-bottom: 14px;
     color: rgba(245, 245, 247, 0.96);
-  }
-
-  .au-principle-card h3 span {
-    background: none;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.72);
-    color: var(--text-body);
-    font-style: normal;
   }
 
   .au-principle-text {
@@ -770,13 +779,17 @@ const schema = JSON.stringify({
     .au-statement .about-statement__quote {
       max-width: 100%;
       margin-left: 0;
-      padding: 24px;
+      padding: 0 0 24px;
       font-size: var(--lead-size-mobile);
       line-height: 1.6;
     }
 
     .au-stat-value {
       font-size: 2.5rem;
+    }
+
+    .au-stat-value--words {
+      font-size: 1.5rem;
     }
 
     .au-stats-grid {

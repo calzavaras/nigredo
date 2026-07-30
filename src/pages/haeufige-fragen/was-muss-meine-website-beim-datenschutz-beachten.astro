@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/';
-const question = 'Was muss meine Website beim Datenschutz beachten?';
-const answer = 'Eine Website sollte nur notwendige Personendaten bearbeiten und transparent erklären, wofür sie verwendet werden. Dazu gehören eine passende Datenschutzerklärung sowie ein bewusster Umgang mit Cookies, Analyse und externen Diensten. Welche Regeln gelten, hängt vom Angebot, der Zielgruppe und den eingesetzten Technologien ab.';
+const question = 'Was muss beim Datenschutz beachtet werden?';
+const answer = 'Eine digitale Lösung sollte nur jene Daten bearbeiten, die sie tatsächlich benötigt. Entscheidend sind nachvollziehbare Datenflüsse, passende Zugriffsrechte, eine verständliche Datenschutzerklärung und ein bewusster Umgang mit externen Diensten. Bei sensiblen Aufgaben prüfe ich, ob Daten lokal verarbeitet, anonymisiert oder vollständig von externen Systemen ferngehalten werden können.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -36,7 +36,7 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Was muss meine Website beim Datenschutz beachten? | Nigredo",
+      "name": "Was muss beim Datenschutz beachtet werden? | Nigredo",
       "description": "Was Schweizer Websites bei Datenschutzerklärung, Cookies, Analyse und externen Diensten beachten sollten und wann die DSGVO zusätzlich relevant wird.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -52,12 +52,12 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Was muss meine Website beim Datenschutz beachten? | Nigredo"
+  title="Was muss beim Datenschutz beachtet werden? | Nigredo"
   description="Was Schweizer Websites bei Datenschutzerklärung, Cookies, Analyse und externen Diensten beachten sollten und wann die DSGVO zusätzlich relevant wird."
   canonical={pageUrl}
-  ogTitle="Was muss meine Website beim Datenschutz beachten? | Nigredo"
+  ogTitle="Was muss beim Datenschutz beachtet werden? | Nigredo"
   ogDescription="Datenschutzerklärung, Schweizer DSG, Cookies und schonende Analyse: Was beim Datenschutz einer Website wirklich zählt und wie man es schlank löst."
-  twitterTitle="Was muss meine Website beim Datenschutz beachten? | Nigredo"
+  twitterTitle="Was muss beim Datenschutz beachtet werden? | Nigredo"
   twitterDescription="Datenschutz für Websites in der Schweiz, verständlich erklärt: DSG, Cookies, Tracking und datensparsame Analyse."
   schema={schema}
 >
@@ -117,7 +117,7 @@ const schema = JSON.stringify({
               <span>Warum eine Website nicht automatisch sichtbar ist und wovon die Auffindbarkeit abhängt.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Welche laufenden Kosten hat eine Website?</strong>
+              <strong>Welche laufenden Kosten entstehen?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
             <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">

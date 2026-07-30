@@ -1,0 +1,81 @@
+---
+import FaqArticlePage from '../../components/FaqArticlePage.astro';
+
+const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/arbeitest-du-allein/';
+const question = 'Arbeitest du allein?';
+const answer = 'Du hast mit mir einen direkten Ansprechpartner. Ich konzipiere, entscheide, koordiniere und übernehme Verantwortung für das Ergebnis. Bei Bedarf ziehe ich passende Fachleute aus meinem Netzwerk hinzu.';
+const title = 'Arbeitet Nigredo allein oder im Team? | Nigredo';
+const description = 'Wie Marco Calzavara Projekte persönlich führt, wann Spezialisten dazukommen und warum die Verantwortung bei einem Ansprechpartner bleibt.';
+
+const sections = [
+  {
+    id: 'ansprechpartner',
+    title: 'Ein direkter Ansprechpartner',
+    paragraphs: [
+      'Vom ersten Gespräch bis zur Übergabe sprichst du mit mir. Dadurch gehen Gedanken nicht auf dem Weg von Verkauf zu Projektleitung und weiter zur Umsetzung verloren. Entscheidungen bleiben nachvollziehbar und die Wege angenehm kurz.',
+    ],
+  },
+  {
+    id: 'aufgaben',
+    title: 'Was ich selbst übernehme',
+    paragraphs: [
+      'Ich kläre die Aufgabe, entwickle die Richtung, verbinde Inhalt, Gestaltung und Technik und prüfe das Ergebnis. Auch wenn mehrere Disziplinen beteiligt sind, bleibt das Produkt als Ganzes geführt.',
+    ],
+  },
+  {
+    id: 'netzwerk',
+    title: 'Wann Fachleute dazukommen',
+    paragraphs: [
+      'Bei besonderen Anforderungen ziehe ich Spezialisten für Frontend, Backend, Datenbanken, Schnittstellen, Infrastruktur, Sicherheit oder weitere technische Disziplinen hinzu. Entscheidend ist nicht eine möglichst grosse Runde, sondern die richtige Kompetenz zur richtigen Zeit.',
+    ],
+  },
+  {
+    id: 'koordination',
+    title: 'Wie die Zusammenarbeit organisiert ist',
+    paragraphs: [
+      'Ich definiere Aufgaben, führe Ergebnisse zusammen und halte Termine, Qualität und Abhängigkeiten im Blick. Für dich entsteht kein zusätzliches Koordinationsprojekt neben dem eigentlichen Projekt.',
+    ],
+  },
+  {
+    id: 'modell',
+    title: 'Was dieses Modell verbindet',
+    paragraphs: [
+      'Du erhältst die Nähe und Geschwindigkeit einer persönlichen Zusammenarbeit und bei Bedarf die Tiefe eines erweiterten Teams. Das digitale Orchester darf gross sein. Den Taktstock musst du trotzdem nicht übernehmen.',
+    ],
+  },
+];
+
+const relatedQuestions = [
+  {
+    href: '/haeufige-fragen/was-bedeuten-mehrere-hundert-ki-agenten/',
+    title: 'Was bedeuten mehrere hundert KI-Agenten?',
+    text: 'Wie spezialisierte digitale Rollen die Arbeit unterstützen.',
+  },
+  {
+    href: '/haeufige-fragen/muss-meine-idee-bereits-ausgearbeitet-sein/',
+    title: 'Muss meine Idee bereits ausgearbeitet sein?',
+    text: 'Wie aus einem ersten Gedanken eine umsetzbare Richtung entsteht.',
+  },
+  {
+    href: '/haeufige-fragen/wem-gehoeren-code-daten-und-zugaenge/',
+    title: 'Wem gehören Ergebnis, Daten und Zugänge?',
+    text: 'Wie Eigentum und Zuständigkeiten transparent geregelt werden.',
+  },
+  {
+    href: '/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/',
+    title: 'Wie schnell kann ein Projekt umgesetzt werden?',
+    text: 'Welche Faktoren Tempo und Zeitrahmen bestimmen.',
+  },
+];
+---
+
+<FaqArticlePage
+  {pageUrl}
+  {question}
+  {answer}
+  {title}
+  {description}
+  {sections}
+  {relatedQuestions}
+  contactLabel="Zusammenarbeit persönlich besprechen"
+/>

@@ -3,20 +3,15 @@ import ReferenzVisual from './ReferenzVisual.astro';
 import { references } from '../data/references';
 
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
-const currentReference = references.find(reference => reference.href === currentPath);
-const sameCategory = currentReference
-  ? references.filter(reference => reference.href !== currentPath && reference.badge.cls === currentReference.badge.cls)
-  : [];
-const remaining = references.filter(reference => (
-  reference.href !== currentPath && !sameCategory.includes(reference)
-));
-const others = [...sameCategory, ...remaining].slice(0, 3);
+const others = references
+  .filter(reference => reference.href !== currentPath)
+  .slice(0, 3);
 const moreImageSizes = '(max-width: 700px) calc(100vw - 44px), (max-width: 1024px) calc(33.333vw - 32px), 283px';
 ---
 
 <div class="case-more-grid">
   {others.map(reference => (
-    <article class={`case-more-card${reference.linkCls === 'ref-main-link--ki' ? ' case-more-card--ki' : ''}${reference.badge.cls === 'accent-cyan' ? ' case-more-card--app' : ''}`}>
+    <article class="case-more-card" style={`--card-accent: ${reference.accent};`}>
       <ReferenzVisual reference={reference} sizes={moreImageSizes} />
       <div class="case-more-card-body">
         <p class="case-more-card-title">{reference.moreTitle}</p>

@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   runWhenIdle(() => {
     initCardSpotlight();
     initMagneticButtons();
-    if (document.querySelector('.gradient-icon')) initGradientIcons();
     initAnalytics();
   }, TIMING.IDLE_TIMEOUT);
   setTimeout(() => {
@@ -215,7 +214,7 @@ function initScrollAnimations() {
 }
 
 function initCardSpotlight() {
-  const cards = Array.from(document.querySelectorAll('.card, .contact-card, .case-feature'));
+  const cards = Array.from(document.querySelectorAll('.card, .case-feature'));
   if (cards.length === 0) return;
 
   cards.forEach((card) => {
@@ -614,26 +613,6 @@ function initLightbox() {
     if (touchEndX < touchStartX - swipeThreshold) showNext();
     if (touchEndX > touchStartX + swipeThreshold) showPrev();
   }, { passive: true });
-}
-
-function initGradientIcons() {
-  const rootStyles = getComputedStyle(document.documentElement);
-  const fallbackColors = ['#FFDA72', '#FF749E', '#FF3DBB', '#8B4DFF', '#4165FF', '#24D6E7'];
-  const tokenNames = ['sun', 'coral', 'pink', 'violet', 'blue', 'cyan'];
-  const colors = tokenNames.map((name, index) =>
-    rootStyles.getPropertyValue(`--brand-${name}`).trim() || fallbackColors[index]
-  );
-  const adjacentPairs = colors.map((color, index) => [color, colors[(index + 1) % colors.length]]);
-
-  function getRandomPair() {
-    return adjacentPairs[Math.floor(Math.random() * adjacentPairs.length)];
-  }
-
-  document.querySelectorAll('.gradient-icon').forEach((icon) => {
-    const [color1, color2] = getRandomPair();
-    icon.style.setProperty('--gradient-color-1', color1);
-    icon.style.setProperty('--gradient-color-2', color2);
-  });
 }
 
 function initAnalytics() {

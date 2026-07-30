@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/';
-const question = 'Was kostet eine professionelle Website?';
-const answer = 'Eine kompakte, professionell umgesetzte Website beginnt meist im unteren vierstelligen Bereich. Der konkrete Fixpreis richtet sich nach Ziel, Inhalt, Gestaltung und Funktionen. Je genauer der Umfang definiert ist, desto verlässlicher lässt sich das Budget planen.';
+const question = 'Was kostet eine Website oder digitale Lösung?';
+const answer = 'Der Preis folgt der Aufgabe, nicht der Anzahl verwendeter Fachbegriffe. Eine kompakte Website beginnt meist im unteren vierstelligen Bereich. Individuelle Gestaltung, umfangreiche Texte, Backends, Datenbanken, Schnittstellen oder KI-Funktionen erhöhen den Aufwand. Nach einem ersten Gespräch zeige ich transparent, welcher Umfang sinnvoll ist, was er kostet und worauf verzichtet werden kann.';
 
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -36,7 +36,7 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Was kostet eine professionelle Website? | Nigredo",
+      "name": "Was kostet eine Website oder digitale Lösung? | Nigredo",
       "description": "Was eine professionelle Website in der Schweiz kostet, welche Leistungen den Preis bestimmen und wie Nigredo einen transparenten Fixpreis entwickelt.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -52,12 +52,12 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Was kostet eine professionelle Website? | Nigredo"
+  title="Was kostet eine Website oder digitale Lösung? | Nigredo"
   description="Was eine professionelle Website in der Schweiz kostet, welche Leistungen den Preis bestimmen und wie Nigredo einen transparenten Fixpreis entwickelt."
   canonical={pageUrl}
-  ogTitle="Was kostet eine professionelle Website? | Nigredo"
+  ogTitle="Was kostet eine Website oder digitale Lösung? | Nigredo"
   ogDescription="Eine klare Antwort darauf, wovon Website-Kosten für KMU und Selbstständige in der Schweiz abhängen."
-  twitterTitle="Was kostet eine professionelle Website? | Nigredo"
+  twitterTitle="Was kostet eine Website oder digitale Lösung? | Nigredo"
   twitterDescription="Was eine professionelle Website kostet und wovon der Preis wirklich abhängt."
   schema={schema}
 >
@@ -113,11 +113,11 @@ const schema = JSON.stringify({
           <h2 id="related-faqs-title">Verwandte Fragen</h2>
           <div class="related-faqs__grid">
             <a href="/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/">
-              <strong>Wie lange dauert die Erstellung einer professionellen Website?</strong>
+              <strong>Wie schnell kann ein Projekt umgesetzt werden?</strong>
               <span>Realistische Zeitrahmen, Projektphasen und typische Verzögerungen.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Welche laufenden Kosten hat eine Website?</strong>
+              <strong>Welche laufenden Kosten entstehen?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
             <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">
