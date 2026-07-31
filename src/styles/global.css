@@ -1154,7 +1154,7 @@ nav {
   font-size: 0.9rem;
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) and (min-width: 981px) {
 
   *,
   *::before,
@@ -1628,7 +1628,7 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) and (min-width: 981px) {
   .site-header-polish .nav-container,
   .site-header-polish .nav-links a::after,
   :is(.solutions-field, .ref-project, .ref-project__title, .ref-project__summary, .ref-project__role),
@@ -2121,7 +2121,7 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) and (min-width: 981px) {
 
   html.js-reveal .fade-up {
     opacity: 1;
@@ -2663,7 +2663,7 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) and (min-width: 981px) {
 
   .gradient-text {
     animation: none;
@@ -4129,7 +4129,7 @@ html.js-reveal .home-about .about-strip.fade-up.visible {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) and (min-width: 981px) {
   .floating-header.home-header-polish,
   .home-header-polish .nav-container,
   .home-header-polish .nav-links a::after,
