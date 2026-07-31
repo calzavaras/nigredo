@@ -85,7 +85,6 @@ const schema = JSON.stringify({
   .contact-hero {
     --contact-a: var(--contact-neon-a);
     --contact-b: var(--contact-neon-b);
-    --contact-c: var(--contact-neon-b);
     animation: none;
   }
 
@@ -125,7 +124,7 @@ const schema = JSON.stringify({
   }
 
   .contact-hero .gradient-text {
-    background: linear-gradient(96deg, var(--contact-a) 0%, var(--contact-b) 100%);
+    background: var(--page-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;

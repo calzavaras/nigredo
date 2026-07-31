@@ -111,6 +111,7 @@ if (pageNumber > 1) {
       <div class="section-cta refs-final-cta fade-up">
         <span class="cta-label">Der nächste Schritt</span>
         <h2>Dein Projekt fehlt noch.<br><span>Vielleicht beginnt es heute.</span></h2>
+        <p>Erzähl mir kurz, worum es geht. Ich schaue mit dir auf Ausgangslage, Ziele und die passende Umsetzung.</p>
         <div class="hero-cta-group" style="justify-content: center;">
           <a href="/kontakt/" class="btn btn-primary">Kontakt aufnehmen</a>
           <a href="/marco-calzavara/" class="btn btn-ghost">Über mich</a>
@@ -130,7 +131,6 @@ if (pageNumber > 1) {
   .refs-hero {
     --refs-a: var(--refs-neon-a);
     --refs-b: var(--refs-neon-b);
-    --refs-c: var(--refs-neon-b);
     animation: none;
   }
 
@@ -172,7 +172,7 @@ if (pageNumber > 1) {
   }
 
   .refs-hero .gradient-text {
-    background: linear-gradient(96deg, var(--refs-a) 0%, var(--refs-b) 100%);
+    background: var(--page-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;

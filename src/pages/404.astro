@@ -40,8 +40,14 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
+  :global(body) {
+    --page-accent-a: var(--not-found-neon-a);
+    --page-accent-b: var(--not-found-neon-b);
+    --page-accent: var(--not-found-neon-b);
+  }
+
   .not-found-page {
-    --nf-accent: var(--brand-pink);
+    --nf-accent: var(--not-found-neon-b);
     min-height: min(620px, 68vh);
     display: flex;
     align-items: center;

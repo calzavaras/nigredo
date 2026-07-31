@@ -28,23 +28,29 @@ html::-webkit-scrollbar {
   --brand-violet: #8B4DFF;
   --brand-blue: #4165FF;
   --brand-cyan: #24D6E7;
-  /* Seitenpaletten: zwei satte, harmonische Farben pro Hauptseite.
-     Hohe Farbdichte, kontrollierte Helligkeit – bewusst ohne Neonleuchten. */
-  --home-neon-a: oklch(72% 0.2 14);
-  --home-neon-b: oklch(69% 0.22 338);
-  --refs-neon-a: oklch(76% 0.18 125);
-  --refs-neon-b: oklch(69% 0.18 155);
-  --solutions-neon-a: oklch(75% 0.16 194);
-  --solutions-neon-b: oklch(66% 0.19 257);
-  --solutions-neon-c: oklch(70% 0.17 228);
-  --about-neon-a: oklch(73% 0.17 43);
-  --about-neon-b: oklch(78% 0.15 72);
-  --contact-neon-a: oklch(76% 0.15 166);
-  --contact-neon-b: oklch(69% 0.16 190);
-  --faq-neon-a: oklch(72% 0.18 305);
-  --faq-neon-b: oklch(65% 0.19 276);
+  /* Seitenpaletten: je zwei benachbarte, farbreine Neonfarben.
+     Die höhere Chroma orientiert sich an klaren Neonlinien, ohne die dunkle Basis aufzuhellen. */
+  --home-neon-a: oklch(66% 0.21 24);
+  --home-neon-b: oklch(62% 0.22 340);
+  --refs-neon-a: oklch(66% 0.19 250);
+  --refs-neon-b: oklch(61% 0.21 286);
+  --solutions-neon-a: oklch(68% 0.17 204);
+  --solutions-neon-b: oklch(62% 0.20 252);
+  --about-neon-a: oklch(69% 0.19 48);
+  --about-neon-b: oklch(63% 0.22 18);
+  --contact-neon-a: oklch(68% 0.17 178);
+  --contact-neon-b: oklch(62% 0.19 218);
+  --faq-neon-a: oklch(66% 0.20 326);
+  --faq-neon-b: oklch(61% 0.21 288);
+  --imprint-neon-a: oklch(65% 0.16 276);
+  --imprint-neon-b: oklch(61% 0.18 310);
+  --privacy-neon-a: oklch(67% 0.15 172);
+  --privacy-neon-b: oklch(61% 0.17 207);
+  --not-found-neon-a: oklch(65% 0.20 18);
+  --not-found-neon-b: oklch(60% 0.21 330);
   --page-accent-a: var(--home-neon-a);
   --page-accent-b: var(--home-neon-b);
+  --page-title-gradient: linear-gradient(102deg, var(--page-accent-a) 0%, var(--page-accent-b) 100%);
   --secondary-accent: var(--brand-pink);
   --quaternary-accent: var(--brand-cyan);
   --brand-gradient-signature: linear-gradient(
@@ -125,6 +131,7 @@ html::-webkit-scrollbar {
 }
 
 body {
+  --page-title-gradient: linear-gradient(102deg, var(--page-accent-a) 0%, var(--page-accent-b) 100%);
   margin: 0;
   background:
     radial-gradient(circle at 12% -8%, color-mix(in srgb, var(--page-accent-a) 5%, transparent), transparent 30rem),
@@ -338,6 +345,16 @@ a:focus:not(:focus-visible),
   color: var(--text-soft);
 }
 
+.final-cta-content > p,
+.section-cta > p {
+  max-width: 58ch;
+  margin: clamp(20px, 2.4vw, 28px) auto 0;
+  color: var(--text-body);
+  font-size: clamp(1rem, 1.35vw, 1.1rem);
+  line-height: 1.68;
+  text-wrap: pretty;
+}
+
 .final-cta-content .hero-cta-group {
   margin-top: 34px;
 }
@@ -392,7 +409,7 @@ a:focus:not(:focus-visible),
 
 /* Effects */
 .gradient-text {
-  background: var(--brand-gradient-signature);
+  background: var(--page-title-gradient);
   background-size: 100% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -406,11 +423,34 @@ a:focus:not(:focus-visible),
    Padding gibt der Gradient-Fläche Raum, negativer Margin hält das Layout. */
 .gradient-text,
 .home-gradient-text,
+.page-title-gradient,
 .stat-ki,
 .stat-tool,
 .stat-website {
   padding-bottom: 0.16em;
   margin-bottom: -0.16em;
+}
+
+.home-gradient-text,
+.page-title-gradient {
+  background: var(--page-title-gradient);
+  background-size: 100% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: none;
+}
+
+@supports (background: linear-gradient(90deg in oklab, red, blue)) {
+  :root,
+  body {
+    --page-title-gradient: linear-gradient(
+      102deg in oklab,
+      var(--page-accent-a) 0%,
+      var(--page-accent-b) 100%
+    );
+  }
 }
 
 .hero-glow {
@@ -543,8 +583,10 @@ html.js-reveal .fade-up.visible {
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: transparent;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), inset 0 0 40px rgba(0, 210, 255, 0.05);
+  border-color: color-mix(in srgb, var(--page-accent-b) 18%, rgba(255, 255, 255, 0.08));
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.36),
+    inset 0 0 36px color-mix(in srgb, var(--page-accent-a) 3%, transparent);
 }
 
 .card::before {
@@ -553,9 +595,19 @@ html.js-reveal .fade-up.visible {
   inset: 0;
   border-radius: inherit;
   padding: 2px;
-  background: conic-gradient(from calc(var(--border-angle, 0turn) + var(--start-angle, 0deg)),
-      transparent 0%, color-mix(in srgb, var(--brand-violet) 15%, transparent) 10%, var(--brand-cyan) 18%, var(--brand-violet) 22%, var(--brand-pink) 25%, transparent 28%,
-      transparent 50%, color-mix(in srgb, var(--brand-coral) 15%, transparent) 60%, var(--brand-sun) 68%, var(--brand-coral) 72%, var(--brand-pink) 75%, transparent 78%);
+  background: conic-gradient(
+    from calc(var(--border-angle, 0turn) + var(--start-angle, 0deg)),
+    transparent 0%,
+    color-mix(in srgb, var(--page-accent-a) 24%, transparent) 10%,
+    var(--page-accent-a) 18%,
+    var(--page-accent-b) 25%,
+    transparent 34%,
+    transparent 58%,
+    color-mix(in srgb, var(--page-accent-b) 22%, transparent) 68%,
+    var(--page-accent-b) 76%,
+    var(--page-accent-a) 83%,
+    transparent 92%
+  );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -564,11 +616,11 @@ html.js-reveal .fade-up.visible {
   transition: opacity 0.8s ease;
   pointer-events: none;
   z-index: 10;
-  filter: drop-shadow(0 0 6px rgba(153, 85, 255, 0.5));
+  filter: none;
 }
 
 .card:hover::before {
-  opacity: 0.5;
+  opacity: 0.34;
   animation: borderRotate 14s linear infinite;
 }
 
@@ -1800,7 +1852,7 @@ nav {
   margin-top: 2px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.045),
-    0 0 14px var(--case-accent-soft);
+    0 10px 24px color-mix(in srgb, var(--case-accent) 9%, transparent);
   transition:
     transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     border-color 0.35s ease,
@@ -1811,13 +1863,17 @@ nav {
 .case-feature-icon--purple,
 .case-feature-icon--cyan,
 .case-feature-icon--coral {
-  background: color-mix(in srgb, var(--case-accent) 8%, transparent);
-  border: 1px solid color-mix(in srgb, var(--case-accent) 20%, transparent);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--case-accent) 9%, transparent),
+    color-mix(in srgb, var(--case-accent-2, var(--case-accent)) 8%, transparent)
+  );
+  border: 1px solid color-mix(in srgb, var(--case-accent-2, var(--case-accent)) 20%, transparent);
   color: var(--case-accent);
 }
 
 .case-feature-icon svg {
-  filter: brightness(1.08) saturate(1.06) drop-shadow(0 0 6px var(--case-accent-glow));
+  filter: brightness(1.04) saturate(0.96);
   transition: filter 0.45s ease;
 }
 
@@ -1827,13 +1883,11 @@ nav {
   background: color-mix(in srgb, var(--case-accent) 10%, rgba(255, 255, 255, 0.02));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    0 0 22px var(--case-accent-glow),
-    0 0 48px var(--case-accent-soft);
+    0 14px 32px color-mix(in srgb, var(--case-accent-2, var(--case-accent)) 12%, transparent);
 }
 
 .case-feature:hover .case-feature-icon svg {
-  filter:
-    brightness(1.14) saturate(1.12) drop-shadow(0 0 10px var(--case-accent-glow)) drop-shadow(0 0 20px var(--case-accent-soft));
+  filter: brightness(1.1) saturate(1.02);
 }
 
 .case-feature-text h3 {
@@ -1882,6 +1936,11 @@ nav {
   line-height: var(--hero-title-line-height);
   letter-spacing: -0.02em;
   margin-bottom: 0;
+  background: var(--page-title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .legal-hero__lead {
@@ -2248,6 +2307,10 @@ nav {
 
 /* FAQ-Artikel: gemeinsame Typografie, Navigation und verwandte Fragen. */
 .faq-article {
+  --faq-a: var(--faq-neon-a);
+  --faq-b: var(--faq-neon-b);
+  --page-accent-a: var(--faq-a);
+  --page-accent-b: var(--faq-b);
   animation: none;
   position: relative;
   padding-top: var(--hero-offset-top-breadcrumb);
@@ -2282,14 +2345,17 @@ nav {
 .faq-article .hero-glow {
   background:
     radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--faq-a) 16%, transparent) 0%, transparent 36%),
-    radial-gradient(circle at 56% 34%, color-mix(in srgb, var(--faq-b) 14%, transparent) 0%, transparent 32%),
-    radial-gradient(circle at 84% 44%, color-mix(in srgb, var(--faq-c) 13%, transparent) 0%, transparent 28%);
+    radial-gradient(circle at 76% 40%, color-mix(in srgb, var(--faq-b) 13%, transparent) 0%, transparent 34%);
 }
 
 .faq-article__header h1 {
   max-width: 920px;
   margin: 0 0 clamp(24px, 3vw, 32px);
-  color: var(--text-primary);
+  background: var(--page-title-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   font-size: clamp(2.95rem, 5.2vw, 4.55rem);
   line-height: 0.99;
   letter-spacing: 0;
@@ -2788,51 +2854,102 @@ nav {
   padding-top: 4px;
 }
 
-/* --- About-Strip: Portrait + Kurzvorstellung --- */
+/* --- About: offene persönliche Signatur --- */
+.home-about {
+  overflow: hidden;
+}
+
 .about-strip {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: clamp(28px, 4.5vw, 56px);
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: clamp(36px, 4.5vw, 52px);
   align-items: center;
-  padding: clamp(30px, 4vw, 52px);
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background:
-    linear-gradient(180deg, var(--surface-2), var(--surface-1)),
-    #0a0a0c;
-  box-shadow: var(--shadow-card);
+  padding-top: clamp(34px, 5vw, 64px);
+  padding-bottom: clamp(34px, 5vw, 64px);
+  position: relative;
+}
+
+.about-strip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.11) 18%, rgba(255, 255, 255, 0.11) 82%, transparent);
+}
+
+.about-strip__identity {
+  width: 140px;
+  justify-self: end;
+  align-self: start;
+  margin-top: 16px;
 }
 
 .about-strip__portrait {
-  width: clamp(128px, 15vw, 176px);
-  height: clamp(128px, 15vw, 176px);
+  aspect-ratio: 1;
+  position: relative;
+  background: #0a0a0c;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  flex-shrink: 0;
+  box-shadow:
+    inset 0 0 0 2px rgba(5, 5, 5, 0.7),
+    0 10px 28px rgba(0, 0, 0, 0.32);
+}
+
+.about-strip__portrait picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .about-strip__portrait img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: 50% 50%;
+  mix-blend-mode: lighten;
+  filter: contrast(1.015);
+  transition: transform 0.7s var(--ease-spring), filter 0.5s ease;
+}
+
+.about-strip:hover .about-strip__portrait img {
+  transform: scale(1.025);
+  filter: contrast(1.015);
+}
+
+.about-strip__content {
+  max-width: 590px;
 }
 
 .about-strip__title {
-  font-size: clamp(1.5rem, 2.4vw, 1.95rem);
-  font-weight: 700;
-  letter-spacing: -0.015em;
+  margin: 0;
   color: #fff;
-  margin: 0 0 12px;
+  font-size: clamp(2.15rem, 3.7vw, 3.05rem);
+  font-weight: 700;
+  line-height: 1.01;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
 }
 
-.about-strip__text {
-  font-size: 1rem;
+.about-strip__title span {
   color: var(--text-soft);
+}
+
+.about-strip__lead {
+  max-width: 52ch;
+  margin: clamp(26px, 3.5vw, 38px) 0 0;
+  color: var(--text-body);
+  font-size: clamp(1.03rem, 1.45vw, 1.16rem);
   line-height: 1.72;
-  margin: 0 0 22px;
-  max-width: 560px;
+  text-wrap: pretty;
+}
+
+.about-strip__link {
+  display: inline-flex;
+  margin-top: clamp(28px, 3.5vw, 40px);
 }
 
 /* --- Responsive: Editorial Patterns --- */
@@ -2877,8 +2994,12 @@ nav {
   }
 
   .about-strip {
-    grid-template-columns: 1fr;
-    text-align: left;
+    grid-template-columns: 138px minmax(0, 1fr);
+    gap: clamp(30px, 5vw, 48px);
+  }
+
+  .about-strip__identity {
+    width: 128px;
   }
 }
 
@@ -2899,5 +3020,28 @@ nav {
 
   .showcase-card__title {
     min-height: 0;
+  }
+
+  .about-strip {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 18px;
+    padding-bottom: 24px;
+  }
+
+  .about-strip__identity {
+    width: 112px;
+    justify-self: center;
+    margin-top: 0;
+    justify-self: center;
+  }
+
+  .about-strip__title {
+    font-size: clamp(2rem, 10vw, 2.7rem);
+    letter-spacing: -0.025em;
+  }
+
+  .about-strip__lead {
+    margin-top: 24px;
   }
 }

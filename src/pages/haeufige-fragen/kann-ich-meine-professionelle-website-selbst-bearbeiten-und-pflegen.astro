@@ -141,9 +141,14 @@ const schema = JSON.stringify({
 </Layout>
 
 <style>
+  :global(body) {
+    --page-accent-a: var(--faq-neon-a);
+    --page-accent-b: var(--faq-neon-b);
+    --page-accent: var(--faq-neon-a);
+  }
+
   .faq-article {
-    --faq-a: var(--brand-sun);
-    --faq-b: var(--brand-coral);
-    --faq-c: var(--brand-pink);
+    --faq-a: var(--faq-neon-a);
+    --faq-b: var(--faq-neon-b);
   }
 </style>

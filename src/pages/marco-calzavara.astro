@@ -33,11 +33,11 @@ const schema = JSON.stringify({
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "@id": `${pageUrl}#primaryimage`,
-        "url": "https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.jpg",
-        "contentUrl": "https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.jpg",
-        "thumbnailUrl": "https://www.nigredo.ch/assets/marco-calzavara-nigredo-st-gallen-500.webp",
-        "width": 768,
-        "height": 1024,
+        "url": "https://www.nigredo.ch/assets/marco-calzavara-home-v5-photo.jpg",
+        "contentUrl": "https://www.nigredo.ch/assets/marco-calzavara-home-v5-photo.jpg",
+        "thumbnailUrl": "https://www.nigredo.ch/assets/marco-calzavara-home-v5-photo-500.webp",
+        "width": 1000,
+        "height": 1000,
         "caption": "Marco Calzavara, Gründer von Nigredo in St. Gallen",
         "representativeOfPage": true
       },
@@ -71,16 +71,16 @@ const schema = JSON.stringify({
   ogTitle="Marco Calzavara | Ideen, KI und digitale Umsetzung"
   ogDescription="Führungserfahrung, Geschäftssinn, Gestaltung, KI und ein starkes Informatiknetzwerk für digitale Produkte mit Charakter."
   ogType="profile"
-  ogImage="https://www.nigredo.ch/assets/marco-calzavara-portrait-nigredo-st-gallen.jpg"
+  ogImage="https://www.nigredo.ch/assets/marco-calzavara-home-v5-photo.jpg"
   ogImageAlt="Marco Calzavara, Gründer von Nigredo"
-  ogImageWidth="768"
-  ogImageHeight="1024"
+  ogImageWidth="1000"
+  ogImageHeight="1000"
   twitterTitle="Marco Calzavara | Ideen, KI und digitale Umsetzung"
   twitterDescription="Aus Ideen entstehen digitale Produkte mit Charakter."
   schema={schema}
-  preloadImage="/assets/marco-calzavara-nigredo-st-gallen-500.avif"
+  preloadImage="/assets/marco-calzavara-home-v5-photo-500.avif"
   preloadImageType="image/avif"
-  preloadImageSrcset="/assets/marco-calzavara-nigredo-st-gallen-500.avif 500w, /assets/marco-calzavara-nigredo-st-gallen-750.avif 750w, /assets/marco-calzavara-nigredo-st-gallen-1000.avif 1000w"
+  preloadImageSrcset="/assets/marco-calzavara-home-v5-photo-500.avif 500w, /assets/marco-calzavara-home-v5-photo-750.avif 750w"
   preloadImageSizes="(max-width: 600px) 204px, 252px"
 >
   <section class="section pt-sub about-hero" aria-labelledby="about-title">
@@ -106,14 +106,14 @@ const schema = JSON.stringify({
             <div class="au-photo-aura"></div>
             <div class="au-photo-circle-wrap">
               <picture>
-                <source srcset="/assets/marco-calzavara-nigredo-st-gallen-500.avif 500w, /assets/marco-calzavara-nigredo-st-gallen-750.avif 750w, /assets/marco-calzavara-nigredo-st-gallen-1000.avif 1000w" sizes="(max-width: 600px) 204px, 252px" type="image/avif">
-                <source srcset="/assets/marco-calzavara-nigredo-st-gallen-500.webp 500w, /assets/marco-calzavara-nigredo-st-gallen-750.webp 750w, /assets/marco-calzavara-nigredo-st-gallen-1000.webp 1000w" sizes="(max-width: 600px) 204px, 252px" type="image/webp">
+                <source srcset="/assets/marco-calzavara-home-v5-photo-500.avif 500w, /assets/marco-calzavara-home-v5-photo-750.avif 750w" sizes="(max-width: 600px) 204px, 252px" type="image/avif">
+                <source srcset="/assets/marco-calzavara-home-v5-photo-500.webp 500w, /assets/marco-calzavara-home-v5-photo-750.webp 750w" sizes="(max-width: 600px) 204px, 252px" type="image/webp">
                 <img
-                  src="/assets/marco-calzavara-nigredo-st-gallen.jpg"
+                  src="/assets/marco-calzavara-home-v5-photo.jpg"
                   alt="Marco Calzavara, Gründer und Inhaber von Nigredo in St. Gallen"
                   class="au-photo-circle"
-                  width="1086"
-                  height="1086"
+                  width="1000"
+                  height="1000"
                   loading="eager"
                   fetchpriority="high"
                   decoding="async"
@@ -343,7 +343,7 @@ const schema = JSON.stringify({
   }
 
   .about-hero .gradient-text {
-    background: linear-gradient(105deg, var(--about-b) 0%, var(--about-a) 100%);
+    background: var(--page-title-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

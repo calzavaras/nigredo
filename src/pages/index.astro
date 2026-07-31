@@ -171,32 +171,33 @@ const services = [
 
   <section class="section section--lg home-about" aria-labelledby="about-title">
     <div class="container about-strip fade-up">
-      <div class="about-strip__portrait">
-        <picture>
-          <source srcset="/assets/marco-calzavara-nigredo-st-gallen-500.avif 500w, /assets/marco-calzavara-nigredo-st-gallen-750.avif 750w" sizes="(max-width: 720px) 100vw, 360px" type="image/avif">
-          <source srcset="/assets/marco-calzavara-nigredo-st-gallen-500.webp 500w, /assets/marco-calzavara-nigredo-st-gallen-750.webp 750w" sizes="(max-width: 720px) 100vw, 360px" type="image/webp">
-          <img
-            src="/assets/marco-calzavara-nigredo-st-gallen.jpg"
-            alt="Marco Calzavara, Gründer von Nigredo in St. Gallen"
-            width="750"
-            height="750"
-            loading="lazy"
-            decoding="async"
-          >
-        </picture>
+      <div class="about-strip__identity">
+        <div class="about-strip__portrait">
+          <picture>
+            <source srcset="/assets/marco-calzavara-home-v5-round-500.avif 500w" sizes="(max-width: 620px) 112px, (max-width: 860px) 128px, 140px" type="image/avif">
+            <source srcset="/assets/marco-calzavara-home-v5-round-500.webp 500w" sizes="(max-width: 620px) 112px, (max-width: 860px) 128px, 140px" type="image/webp">
+            <img
+              src="/assets/marco-calzavara-home-v5-round.jpg"
+              alt="Marco Calzavara, Gründer von Nigredo in St. Gallen"
+              width="760"
+              height="760"
+              loading="lazy"
+              decoding="async"
+            >
+          </picture>
+        </div>
       </div>
-      <div>
-        <h2 id="about-title" class="about-strip__title">Viele Möglichkeiten.<br>Ein Ansprechpartner.</h2>
-        <p class="about-strip__text"><strong>Ich bin Marco Calzavara und begleite dein Projekt vom ersten Gedanken bis zum fertigen Produkt.</strong></p>
-        <p class="about-strip__text">Mehrere hundert spezialisierte KI-Agenten erweitern meine digitale Werkbank. Einige recherchieren, andere strukturieren, schreiben, gestalten, programmieren, testen oder suchen sehr gewissenhaft nach allem, was noch nicht überzeugt.</p>
-        <p class="about-strip__text">Je nach Aufgabe ziehe ich Fachleute aus meinem Netzwerk bei. Ich führe alles zusammen, treffe die Entscheidungen und übernehme die Verantwortung für das Ergebnis. Du musst das digitale Orchester nicht dirigieren. Das übernehme ich.</p>
-        <a href="/marco-calzavara/" class="section-link">Mehr über mich <span aria-hidden="true">→</span></a>
+      <div class="about-strip__content">
+        <h2 id="about-title" class="about-strip__title">Direkt mit mir.<br><span>Von der Idee bis zur Umsetzung.</span></h2>
+        <p class="about-strip__lead">Du erklärst mir, was du erreichen möchtest. Ich kläre, was es dafür braucht, setze die passende Lösung um und halte dich verständlich auf dem Laufenden. Wenn zusätzliche Fachleute nötig sind, koordiniere ich sie. Für dich bleibt die Zusammenarbeit einfach.</p>
+        <a href="/marco-calzavara/" class="section-link about-strip__link">Mehr über mich <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
   <section class="final-cta-section" aria-labelledby="cta-title">
     <div class="container final-cta-content final-cta-content--centered fade-up">
+      <span class="cta-label">Der nächste Schritt</span>
       <h2 id="cta-title">
         Was wäre möglich,<br>
         <span>wenn du die Idee nicht länger vertagst?</span>
@@ -204,6 +205,7 @@ const services = [
       <p>Sie muss noch nicht fertig sein. Ein Satz, eine Skizze, ein umständlicher Ablauf oder eine Vorstellung davon, was besser funktionieren könnte, genügen. Ich höre zu, denke weiter und sage dir offen, was daraus werden kann.</p>
       <div class="hero-cta-group">
         <a href="/kontakt/" class="btn btn-primary">Idee besprechen</a>
+        <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
       </div>
     </div>
   </section>
@@ -223,7 +225,7 @@ const services = [
   .home-gradient-text {
     display: inline-block;
     color: #f5f5f7;
-    background: linear-gradient(96deg, var(--home-neon-a) 0%, var(--home-neon-b) 100%);
+    background: var(--page-title-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

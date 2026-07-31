@@ -132,8 +132,9 @@ const schema = JSON.stringify({
       <div class="fade-up home-hero__inner solutions-hero__content">
 
         <h1 id="loesungen-title" class="home-hero__title solutions-hero__title">
-          <span class="solutions-hero__line">Aus «Man müsste mal»</span>
-          <span class="gradient-text solutions-hero__line">wird etwas, das funktioniert.</span>
+          <span class="solutions-hero__line">Aus «Man müsste</span>
+          <span class="solutions-hero__line">mal» <span class="gradient-text">wird etwas,</span></span>
+          <span class="gradient-text solutions-hero__line">das funktioniert.</span>
         </h1>
         <p class="hero-lead solutions-hero__lead">
           Ich entwickle digitale Produkte für Aufgaben, die Standardlösungen nicht überzeugend abdecken. Websites, KI-Systeme, lokale Anwendungen, Backends, Marken und Inhalte denke ich als zusammenhängendes Produkt, bei dem Aussage, Bedienung, Gestaltung und Technik dieselbe Richtung verfolgen. KI schafft mehr Varianten und kürzere Wege. Mein Urteil gibt dem Ergebnis Richtung.
@@ -233,6 +234,7 @@ const schema = JSON.stringify({
       <div class="section-cta solutions-final-cta fade-up">
         <span class="cta-label">Nächster Schritt</span>
         <h2 id="loesungen-cta-title">Was sollte längst<br><span>einfacher funktionieren?</span></h2>
+        <p>Du musst die Lösung noch nicht kennen. Beschreibe, was heute zu viel Zeit, Klarheit oder Nerven kostet. Gemeinsam prüfen wir, welcher nächste Schritt wirklich hilft.</p>
         <div class="hero-cta-group" style="justify-content: center;">
           <a href="/kontakt/" class="btn btn-primary">Projekt besprechen</a>
           <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
@@ -254,7 +256,7 @@ const schema = JSON.stringify({
   .solutions-final-section {
     --solutions-a: var(--solutions-neon-a);
     --solutions-b: var(--solutions-neon-b);
-    --solutions-c: var(--solutions-neon-c);
+    --solutions-c: color-mix(in oklab, var(--solutions-neon-a) 42%, var(--solutions-neon-b));
     --page-accent: var(--solutions-b);
     animation: none;
   }
@@ -294,9 +296,9 @@ const schema = JSON.stringify({
 
   .solutions-hero__title {
     max-width: 940px;
-    font-size: var(--hero-title-size);
+    font-size: clamp(3.05rem, 5.35vw, 4.9rem);
     line-height: var(--hero-title-line-height);
-    letter-spacing: -0.015em;
+    letter-spacing: -0.04em;
     margin-bottom: clamp(24px, 3vw, 30px);
   }
 
@@ -305,7 +307,7 @@ const schema = JSON.stringify({
   }
 
   .solutions-hero .gradient-text {
-    background: linear-gradient(96deg, var(--solutions-a) 0%, var(--solutions-b) 100%);
+    background: var(--page-title-gradient);
     background-size: 100% auto;
 
     background-clip: text;

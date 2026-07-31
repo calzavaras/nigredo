@@ -202,7 +202,6 @@ const schema = JSON.stringify({
   .faq-overview {
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
-    --faq-c: var(--faq-neon-b);
     animation: none;
   }
 
@@ -237,12 +236,12 @@ const schema = JSON.stringify({
     color: rgba(246, 240, 255, 0.96);
     border-color: color-mix(in srgb, var(--faq-b) 36%, rgba(255, 255, 255, 0.22));
     background:
-      linear-gradient(180deg, color-mix(in srgb, var(--faq-a) 14%, rgba(255, 255, 255, 0.03)), color-mix(in srgb, var(--faq-c) 10%, rgba(255, 255, 255, 0.015)));
+      linear-gradient(180deg, color-mix(in srgb, var(--faq-a) 14%, rgba(255, 255, 255, 0.03)), color-mix(in srgb, var(--faq-b) 10%, rgba(255, 255, 255, 0.015)));
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
   .faq-overview__intro .gradient-text {
-    background: linear-gradient(96deg, var(--faq-a) 0%, var(--faq-b) 100%);
+    background: var(--page-title-gradient);
     background-size: 100% auto;
     background-clip: text;
     -webkit-background-clip: text;

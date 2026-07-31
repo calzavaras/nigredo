@@ -36,7 +36,7 @@ const schema = JSON.stringify({
   canonical="https://www.nigredo.ch/impressum/"
   schema={schema}
 >
-  <section class="section pt-sub legal-page legal-page--impressum" aria-labelledby="impressum-title" style="--legal-accent: var(--brand-violet);">
+  <section class="section pt-sub legal-page legal-page--impressum" aria-labelledby="impressum-title" style="--legal-accent: var(--imprint-neon-b);">
     <div class="hero-glow"></div>
     <div class="container legal-page__container">
 
@@ -91,3 +91,11 @@ const schema = JSON.stringify({
     </div>
   </section>
 </Layout>
+
+<style>
+  :global(body) {
+    --page-accent-a: var(--imprint-neon-a);
+    --page-accent-b: var(--imprint-neon-b);
+    --page-accent: var(--imprint-neon-b);
+  }
+</style>
