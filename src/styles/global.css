@@ -22,26 +22,32 @@ html::-webkit-scrollbar {
   --text-secondary: #b2b2ba;
   --text-muted: #92929b;
   /* Nigredo Spektrum: abgeleitet aus der farbigen Bildmarke. */
-  --brand-sun: #FFDA72;
-  --brand-coral: #FF749E;
-  --brand-pink: #FF3DBB;
-  --brand-violet: #8B4DFF;
-  --brand-blue: #4165FF;
-  --brand-cyan: #24D6E7;
-  /* Seitenpaletten: je zwei benachbarte, farbreine Neonfarben.
-     Die höhere Chroma orientiert sich an klaren Neonlinien, ohne die dunkle Basis aufzuhellen. */
-  --home-neon-a: oklch(66% 0.21 24);
-  --home-neon-b: oklch(62% 0.22 340);
-  --refs-neon-a: oklch(66% 0.19 250);
-  --refs-neon-b: oklch(61% 0.21 286);
-  --solutions-neon-a: oklch(68% 0.17 204);
-  --solutions-neon-b: oklch(62% 0.20 252);
-  --about-neon-a: oklch(69% 0.19 48);
-  --about-neon-b: oklch(63% 0.22 18);
-  --contact-neon-a: oklch(68% 0.17 178);
-  --contact-neon-b: oklch(62% 0.19 218);
-  --faq-neon-a: oklch(66% 0.20 326);
-  --faq-neon-b: oklch(61% 0.21 288);
+  --brand-sun: #FFD461;
+  --brand-coral: #FF778C;
+  --brand-pink: #F244C7;
+  --brand-purple: #AA4AE2;
+  --brand-violet: #744CE8;
+  --brand-blue: #2E82F0;
+  --brand-cyan: #0FD8D5;
+  /* Eigenständige Seitenpaletten mit derselben ruhigen Drei-Farben-Logik. */
+  --home-neon-a: #F044C8;
+  --home-neon-c: #C540E7;
+  --home-neon-b: #9148F4;
+  --refs-neon-a: var(--brand-coral);
+  --refs-neon-c: #FA5EAA;
+  --refs-neon-b: var(--brand-pink);
+  --solutions-neon-a: var(--brand-cyan);
+  --solutions-neon-c: var(--brand-blue);
+  --solutions-neon-b: var(--brand-violet);
+  --about-neon-a: var(--brand-sun);
+  --about-neon-c: #FF9B70;
+  --about-neon-b: var(--brand-coral);
+  --contact-neon-a: var(--brand-purple);
+  --contact-neon-c: #8B4DE6;
+  --contact-neon-b: var(--brand-violet);
+  --faq-neon-a: #4AA4F4;
+  --faq-neon-c: var(--brand-blue);
+  --faq-neon-b: #5364EB;
   --imprint-neon-a: oklch(65% 0.16 276);
   --imprint-neon-b: oklch(61% 0.18 310);
   --privacy-neon-a: oklch(67% 0.15 172);
@@ -50,7 +56,13 @@ html::-webkit-scrollbar {
   --not-found-neon-b: oklch(60% 0.21 330);
   --page-accent-a: var(--home-neon-a);
   --page-accent-b: var(--home-neon-b);
-  --page-title-gradient: linear-gradient(102deg, var(--page-accent-a) 0%, var(--page-accent-b) 100%);
+  --page-accent-c: var(--home-neon-c);
+  --page-title-gradient: linear-gradient(
+    102deg,
+    var(--page-accent-a) 0%,
+    var(--page-accent-c) 50%,
+    var(--page-accent-b) 100%
+  );
   --secondary-accent: var(--brand-pink);
   --quaternary-accent: var(--brand-cyan);
   --brand-gradient-signature: linear-gradient(
@@ -448,6 +460,7 @@ a:focus:not(:focus-visible),
     --page-title-gradient: linear-gradient(
       102deg in oklab,
       var(--page-accent-a) 0%,
+      var(--page-accent-c) 50%,
       var(--page-accent-b) 100%
     );
   }
@@ -775,7 +788,7 @@ nav {
   width: 18px;
   height: 1.5px;
   background: #fff;
-  transition: transform 0.32s cubic-bezier(0.68, -0.6, 0.32, 1.6), opacity 0.2s ease, width 0.28s ease, background-color 0.25s ease;
+  transition: transform 0.32s var(--ease-spring), opacity 0.2s ease, background-color 0.25s ease;
 }
 
 .menu-open .menu-toggle {
@@ -789,7 +802,6 @@ nav {
 
 .menu-open .menu-toggle span:nth-child(1) {
   transform: translateY(2.75px) rotate(45deg);
-  width: 20px;
 }
 
 .menu-open .menu-toggle span:nth-child(2) {
@@ -799,7 +811,6 @@ nav {
 
 .menu-open .menu-toggle span:nth-child(3) {
   transform: translateY(-2.75px) rotate(-45deg);
-  width: 20px;
 }
 
 @media (max-width: 980px) {
@@ -1255,6 +1266,398 @@ nav {
   .case-hero {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+}
+
+/* ============================================================
+   Unterseiten: konsistenter Premium-Feinschliff
+   Die eigenständigen Akzentfarben und jeweiligen Seitenraster
+   bleiben erhalten; verfeinert werden nur Rhythmus, Rückmeldung
+   und Bewegung.
+   ============================================================ */
+
+/* Der Header reagiert auf jeder Seite gleich ruhig auf den Scroll. */
+.floating-header.site-header-polish {
+  transition: none;
+}
+
+.site-header-polish .nav-container {
+  transform-origin: top center;
+  transition:
+    transform 0.32s var(--ease-spring),
+    background-color 0.32s ease,
+    border-color 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+.site-header-polish.is-scrolled .nav-container {
+  transform: translateY(-4px);
+  background: rgba(12, 12, 15, 0.88);
+  border-color: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.32);
+}
+
+.site-header-polish .nav-links a {
+  position: relative;
+}
+
+.site-header-polish .nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 7px;
+  left: 18px;
+  height: 1px;
+  background: color-mix(in srgb, var(--page-accent-b) 62%, white 38%);
+  opacity: 0;
+  transform: scaleX(0.4);
+  transition: opacity 0.26s ease, transform 0.32s var(--ease-spring);
+}
+
+.site-header-polish .nav-links a:hover::after,
+.site-header-polish .nav-links a.active::after {
+  opacity: 0.72;
+  transform: scaleX(1);
+}
+
+/* Abschlussaktionen erhalten denselben klaren, aber zurückhaltenden Impuls. */
+:is(
+  .solutions-final-cta,
+  .refs-final-cta,
+  .case-final-cta,
+  .about-final-cta,
+  .faq-overview__cta,
+  .not-found-page,
+  .contact-form-card
+) .btn-primary::after {
+  content: "→";
+  width: 1em;
+  margin-left: 10px;
+  opacity: 0.56;
+  transform: translateX(0) scale(0.92);
+  transition: opacity 0.22s ease, transform 0.28s var(--ease-spring);
+}
+
+:is(
+  .solutions-final-cta,
+  .refs-final-cta,
+  .case-final-cta,
+  .about-final-cta,
+  .faq-overview__cta,
+  .not-found-page,
+  .contact-form-card
+) .btn-primary:is(:hover, :focus-visible)::after {
+  opacity: 1;
+  transform: translateX(3px) scale(1);
+}
+
+:is(
+  .solutions-final-cta,
+  .refs-final-cta,
+  .case-final-cta,
+  .about-final-cta,
+  .faq-overview__cta,
+  .not-found-page,
+  .contact-form-card
+) .btn:active {
+  transform: translateY(0) scale(0.985);
+}
+
+/* Lösungen: Editorial-Zeilen werden beim Überfahren präziser lesbar. */
+.solutions-field {
+  transition:
+    border-color 0.34s ease,
+    background-color 0.34s ease,
+    transform 0.42s var(--ease-spring);
+}
+
+.solutions-field__head h3,
+.solutions-field__lead,
+.solutions-field__details {
+  transition: transform 0.36s var(--ease-spring), color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .solutions-field:hover {
+    border-color: color-mix(in srgb, var(--page-accent-b) 34%, rgba(255, 255, 255, 0.12));
+    background-color: rgba(255, 255, 255, 0.018);
+    transform: translateX(4px);
+  }
+
+  .solutions-field:hover :is(.solutions-field__head h3, .solutions-field__lead, .solutions-field__details) {
+    transform: translateX(3px);
+  }
+
+  .solutions-process__steps li {
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+
+  .solutions-process__steps li:hover {
+    border-color: color-mix(in srgb, var(--page-accent-a) 30%, rgba(255, 255, 255, 0.12));
+    background-color: rgba(255, 255, 255, 0.018);
+  }
+}
+
+/* Referenzen: Bild, Titel und Aktion bilden pro Projekt eine Einheit. */
+.ref-project {
+  transition: border-color 0.34s ease;
+}
+
+.ref-project__title,
+.ref-project__summary,
+.ref-project__role {
+  transition: transform 0.38s var(--ease-spring), color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ref-project:hover {
+    border-color: color-mix(in srgb, var(--card-accent) 32%, rgba(255, 255, 255, 0.14));
+  }
+
+  .ref-project:hover :is(.ref-project__title, .ref-project__summary, .ref-project__role) {
+    transform: translateX(4px);
+  }
+}
+
+.refs-page-link {
+  transition:
+    color 0.24s ease,
+    background-color 0.24s ease,
+    border-color 0.24s ease,
+    transform 0.3s var(--ease-spring);
+}
+
+.refs-page-link:not(.is-disabled):is(:hover, :focus-visible) {
+  transform: translateY(-2px);
+}
+
+/* Über mich: Statistiken und Prinzipien behalten ihren Charakter, wirken aber greifbarer. */
+.au-profile-column,
+.au-content-column,
+.au-stats-grid,
+.au-principle-card {
+  isolation: isolate;
+}
+
+.au-stat-card {
+  transition:
+    background-color 0.34s ease,
+    border-color 0.34s ease,
+    transform 0.4s var(--ease-spring);
+}
+
+.au-principle-number,
+.au-principle-card h3,
+.au-principle-text {
+  transition: transform 0.36s var(--ease-spring), color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .au-stat-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .au-principle-card:hover .au-principle-number {
+    transform: translateY(-2px);
+  }
+
+  .au-principle-card:hover :is(h3, .au-principle-text) {
+    transform: translateX(3px);
+  }
+}
+
+/* Kontakt: Der Fokus bleibt auf dem Gespräch, mit einer ruhigeren Formularkarte. */
+.contact-form-card {
+  transition:
+    border-color 0.36s ease,
+    box-shadow 0.36s ease,
+    transform 0.42s var(--ease-spring);
+}
+
+.contact-form-card__icon {
+  transition:
+    transform 0.4s var(--ease-spring),
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contact-form-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--contact-b, var(--page-accent-b)) 30%, rgba(255, 255, 255, 0.12));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 16px 36px rgba(0, 0, 0, 0.18);
+  }
+
+  .contact-form-card:hover .contact-form-card__icon {
+    transform: translateY(-2px) rotate(-3deg);
+    border-color: color-mix(in srgb, var(--contact-a, var(--page-accent-a)) 32%, rgba(255, 255, 255, 0.12));
+  }
+}
+
+/* FAQs und rechtliche Inhalte bleiben leicht, erhalten aber eindeutigere Interaktionszustände. */
+.faq-card {
+  transition:
+    transform 0.42s var(--ease-spring),
+    border-color 0.32s ease,
+    background-color 0.32s ease;
+}
+
+.faq-card__number,
+.faq-card__body h2,
+.faq-card__body p,
+.faq-card__link {
+  transition: transform 0.34s var(--ease-spring), color 0.28s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .faq-card:hover :is(.faq-card__number, .faq-card__body h2, .faq-card__body p) {
+    transform: translateX(3px);
+  }
+}
+
+.related-faqs__grid a,
+.faq-article__nav a,
+.legal-card,
+.legal-item,
+.not-found-page__links a {
+  transition-timing-function: var(--ease-spring);
+}
+
+.legal-item:hover .legal-num {
+  border-color: color-mix(in srgb, var(--legal-accent) 34%, rgba(255, 255, 255, 0.12));
+  background: color-mix(in srgb, var(--legal-accent) 10%, rgba(255, 255, 255, 0.025));
+}
+
+.legal-num {
+  transition: transform 0.36s var(--ease-spring), border-color 0.3s ease, background-color 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .legal-item:hover .legal-num {
+    transform: translateY(-2px);
+  }
+}
+
+/* Seitenbezogene Einblendungen: gleiche Sprache, unterschiedliche Gewichtung. */
+html.js-reveal :is(
+  .solutions-hero__content,
+  .refs-intro,
+  .about-hero__intro,
+  .contact-hero__content,
+  .faq-overview__intro,
+  .faq-article__header,
+  .legal-hero,
+  .not-found-page__inner,
+  .case-hero-content
+).fade-up {
+  filter: blur(6px);
+  transform: translateY(18px);
+}
+
+:is(
+  .solutions-hero__content,
+  .refs-intro,
+  .about-hero__intro,
+  .contact-hero__content,
+  .faq-overview__intro,
+  .faq-article__header,
+  .legal-hero,
+  .not-found-page__inner,
+  .case-hero-content
+).fade-up {
+  transition:
+    opacity 0.76s var(--ease-spring),
+    transform 0.76s var(--ease-spring),
+    filter 0.68s ease;
+}
+
+html.js-reveal :is(
+  .solutions-hero__content,
+  .refs-intro,
+  .about-hero__intro,
+  .contact-hero__content,
+  .faq-overview__intro,
+  .faq-article__header,
+  .legal-hero,
+  .not-found-page__inner,
+  .case-hero-content
+).fade-up.visible {
+  filter: blur(0);
+  transform: none;
+}
+
+html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-card).fade-up {
+  transform: translateY(18px) scale(0.988);
+}
+
+:is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-card).fade-up {
+  transition:
+    opacity 0.7s var(--ease-spring),
+    transform 0.7s var(--ease-spring),
+    border-color 0.32s ease,
+    background-color 0.32s ease;
+}
+
+html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-card).fade-up.visible {
+  transform: none;
+}
+
+@media (max-width: 980px) {
+  .site-header-polish .nav-links {
+    border-radius: var(--radius-lg);
+  }
+
+  .site-header-polish .nav-links a {
+    border-radius: var(--radius-sm);
+  }
+
+  .site-header-polish .nav-links a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header-polish.is-scrolled .nav-container {
+    transform: none;
+  }
+
+  .solutions-field:hover,
+  .contact-form-card:hover,
+  .au-stat-card:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header-polish .nav-container,
+  .site-header-polish .nav-links a::after,
+  :is(.solutions-field, .ref-project, .ref-project__title, .ref-project__summary, .ref-project__role),
+  :is(.au-stat-card, .au-principle-number, .au-principle-card h3, .au-principle-text),
+  :is(.contact-form-card, .contact-form-card__icon, .faq-card, .faq-card__number, .faq-card__body h2, .faq-card__body p, .faq-card__link),
+  :is(.legal-num, .refs-page-link),
+  :is(.solutions-hero__content, .refs-intro, .about-hero__intro, .contact-hero__content, .faq-overview__intro, .faq-article__header, .legal-hero, .not-found-page__inner, .case-hero-content).fade-up,
+  :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-card).fade-up {
+    transition: none !important;
+  }
+
+  html.js-reveal :is(
+    .solutions-hero__content,
+    .refs-intro,
+    .about-hero__intro,
+    .contact-hero__content,
+    .faq-overview__intro,
+    .faq-article__header,
+    .legal-hero,
+    .not-found-page__inner,
+    .case-hero-content,
+    .faq-card,
+    .related-faqs__grid a,
+    .legal-card,
+    .case-more-card
+  ).fade-up {
+    filter: none;
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -1817,13 +2220,13 @@ nav {
 
 .case-page .case-hero-title {
   max-width: 940px;
-  font-size: var(--hero-title-size);
+  font-size: clamp(3.4rem, 5.35vw, 4.8rem);
   line-height: var(--hero-title-line-height);
   letter-spacing: -0.02em;
   margin-bottom: clamp(24px, 3vw, 30px);
-  overflow-wrap: break-word;
-  hyphens: auto;
-  hyphenate-limit-chars: 10 4 4;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .case-page .case-hero-lead {
@@ -3043,5 +3446,716 @@ nav {
 
   .about-strip__lead {
     margin-top: 24px;
+  }
+}
+
+/* ============================================================
+   Startseite: Premium-Feinschliff
+   Struktur und Bildwelt bleiben unverändert. Dieser Layer
+   verfeinert Rhythmus, Interaktion und Motion gezielt.
+   ============================================================ */
+
+/* Ruhiger, kompakterer Header-Zustand nach dem Einstieg */
+.floating-header.home-header-polish {
+  transition: none;
+}
+
+.home-header-polish .nav-container {
+  transform-origin: top center;
+  transition:
+    transform 0.32s var(--ease-spring),
+    background-color 0.32s ease,
+    border-color 0.32s ease,
+    box-shadow 0.32s ease;
+}
+
+.home-header-polish.is-scrolled .nav-container {
+  transform: translateY(-4px);
+  background: rgba(12, 12, 15, 0.88);
+  border-color: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.32);
+}
+
+.home-header-polish .nav-links a {
+  position: relative;
+}
+
+.home-header-polish .nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 7px;
+  left: 18px;
+  height: 1px;
+  background: color-mix(in srgb, var(--page-accent-b) 62%, white 38%);
+  opacity: 0;
+  transform: scaleX(0.4);
+  transition: opacity 0.26s ease, transform 0.32s var(--ease-spring);
+}
+
+.home-header-polish .nav-links a:hover::after,
+.home-header-polish .nav-links a.active::after {
+  opacity: 0.72;
+  transform: scaleX(1);
+}
+
+/* CTA- und Linkzustände */
+.home-hero .btn,
+.final-cta-section .btn {
+  min-height: 54px;
+  padding-inline: clamp(28px, 3vw, 36px);
+}
+
+.home-hero .btn-primary::after,
+.final-cta-section .btn-primary::after {
+  content: "→";
+  margin-left: 10px;
+  width: 1em;
+  opacity: 0.56;
+  transform: translateX(0) scale(0.92);
+  transition:
+    opacity 0.22s ease,
+    transform 0.28s var(--ease-spring);
+}
+
+.home-hero .btn-primary:hover::after,
+.home-hero .btn-primary:focus-visible::after,
+.final-cta-section .btn-primary:hover::after,
+.final-cta-section .btn-primary:focus-visible::after {
+  opacity: 1;
+  transform: translateX(3px) scale(1);
+}
+
+.home-hero .btn:active,
+.final-cta-section .btn:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.home-hero .section-link span,
+.home-work .section-link span,
+.home-about .section-link span {
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.home-hero .section-link:hover span,
+.home-hero .section-link:focus-visible span,
+.home-work .section-link:hover span,
+.home-work .section-link:focus-visible span,
+.home-about .section-link:hover span,
+.home-about .section-link:focus-visible span {
+  transform: translateX(3px);
+}
+
+/* Bewusst variierter Seitenrhythmus statt identischer Section-Abstände */
+.home-services {
+  padding-top: clamp(104px, 9vw, 132px);
+  padding-bottom: clamp(84px, 7.5vw, 108px);
+}
+
+.home-work {
+  padding-top: clamp(86px, 7.8vw, 112px);
+  padding-bottom: clamp(104px, 9.5vw, 140px);
+}
+
+.home-about {
+  padding-top: clamp(82px, 7.5vw, 108px);
+  padding-bottom: clamp(76px, 7vw, 102px);
+}
+
+.home-services .section-head,
+.home-work .section-head {
+  margin-bottom: clamp(42px, 4.5vw, 56px);
+}
+
+.home-work .section-head--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+}
+
+.home-services .section-head__title,
+.home-work .section-head__title {
+  font-size: clamp(2.05rem, 3.65vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.026em;
+}
+
+.home-services .section-head__lead,
+.home-work .section-head__lead {
+  max-width: 64ch;
+  margin-top: 20px;
+  font-size: clamp(1.04rem, 1.25vw, 1.12rem);
+  line-height: 1.68;
+}
+
+/* Leistungszeilen: bessere Scanbarkeit und klare Rückmeldung */
+.home-services .numbered-row {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-right: 46px;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.home-services .numbered-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--page-accent-b) 7%, transparent),
+    transparent 68%
+  );
+  opacity: 0;
+  transform: scaleX(0.86);
+  transform-origin: left;
+  transition: opacity 0.34s ease, transform 0.46s var(--ease-spring);
+}
+
+.home-services .numbered-row::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  color: color-mix(in srgb, var(--page-accent-b) 72%, white 28%);
+  font-size: 1.12rem;
+  opacity: 0;
+  transform: translate(-8px, -50%);
+  transition: opacity 0.26s ease, transform 0.38s var(--ease-spring);
+}
+
+.home-services .numbered-row__num,
+.home-services .numbered-row__label,
+.home-services .numbered-row__title,
+.home-services .numbered-row__text {
+  transition: color 0.3s ease, transform 0.38s var(--ease-spring);
+}
+
+.home-services .numbered-row__text {
+  font-size: clamp(1rem, 1.2vw, 1.06rem);
+  line-height: 1.68;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-services .numbered-row:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .home-services .numbered-row:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .home-services .numbered-row:hover::after {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+
+  .home-services .numbered-row:hover .numbered-row__num {
+    color: color-mix(in srgb, var(--page-accent-b) 82%, white 18%);
+    transform: translateX(3px);
+  }
+
+  .home-services .numbered-row:hover .numbered-row__title {
+    transform: translateX(3px);
+  }
+}
+
+.home-services .numbered-row:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.home-services .numbered-row:focus-visible::before,
+.home-services .numbered-row:focus-visible::after {
+  opacity: 1;
+}
+
+.home-services .numbered-row:focus-visible::after {
+  transform: translate(0, -50%);
+}
+
+/* Referenzen: mehr Tiefe, ohne das editoriale Raster zu verändern */
+.home-work .showcase-grid {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.home-work .showcase-card {
+  isolation: isolate;
+  transition:
+    background-color 0.38s ease,
+    border-color 0.38s ease,
+    transform 0.42s var(--ease-spring);
+}
+
+.home-work .showcase-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 78% 8%,
+    color-mix(in srgb, var(--card-accent) 8%, transparent),
+    transparent 42%
+  );
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.home-work .showcase-card__visual {
+  border-color: rgba(255, 255, 255, 0.1);
+  transition: border-color 0.35s ease;
+}
+
+.home-work .showcase-card__meta {
+  margin-bottom: 22px;
+}
+
+.home-work .showcase-card__sub {
+  font-size: 0.98rem;
+  line-height: 1.64;
+}
+
+.home-work .showcase-card__footer {
+  margin-top: 22px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-work .showcase-card:hover {
+    background: rgba(255, 255, 255, 0.024);
+    transform: translateY(-3px);
+  }
+
+  .home-work .showcase-card:hover::after {
+    opacity: 1;
+  }
+
+  .home-work .showcase-card:hover .showcase-card__visual {
+    border-color: color-mix(in srgb, var(--card-accent) 34%, rgba(255, 255, 255, 0.1));
+  }
+}
+
+/* Persönlicher Abschnitt: stärkere Präsenz, gleiche Aussage */
+.home-about .about-strip {
+  gap: clamp(40px, 5vw, 60px);
+}
+
+.home-about .about-strip__identity {
+  position: relative;
+}
+
+.home-about .about-strip__identity::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--page-accent-a) 18%, transparent),
+    transparent 68%
+  );
+  opacity: 0.46;
+  filter: blur(14px);
+  transition: opacity 0.45s ease, transform 0.55s var(--ease-spring);
+}
+
+.home-about .about-strip__portrait {
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 0 0 2px rgba(5, 5, 5, 0.74),
+    0 12px 28px rgba(0, 0, 0, 0.34);
+  transition: border-color 0.4s ease, transform 0.55s var(--ease-spring);
+}
+
+.home-about .about-strip:hover .about-strip__identity::before {
+  opacity: 0.72;
+  transform: scale(1.08);
+}
+
+.home-about .about-strip:hover .about-strip__portrait {
+  border-color: color-mix(in srgb, var(--page-accent-a) 38%, rgba(255, 255, 255, 0.3));
+  transform: translateY(-2px);
+}
+
+.home-about .about-strip__title {
+  font-size: clamp(2.2rem, 3.8vw, 3.12rem);
+  line-height: 1.03;
+}
+
+.home-about .about-strip__lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.17rem);
+  line-height: 1.7;
+}
+
+/* Abschluss mit einer klareren optischen Zäsur */
+.home-about + .final-cta-section {
+  position: relative;
+  padding-top: clamp(86px, 8vw, 116px);
+  padding-bottom: clamp(88px, 8.5vw, 124px);
+  overflow: hidden;
+}
+
+.home-about + .final-cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(calc(100% - (2 * var(--container-gutter))), var(--shell-width));
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.16) 22%,
+    rgba(255, 255, 255, 0.16) 78%,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+.home-about + .final-cta-section::after {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: 50%;
+  width: min(760px, 90vw);
+  height: 360px;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse,
+    color-mix(in srgb, var(--page-accent-b) 8%, transparent),
+    transparent 68%
+  );
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.home-about + .final-cta-section .final-cta-content {
+  max-width: 700px;
+}
+
+.home-about + .final-cta-section h2 {
+  font-size: clamp(2.2rem, 4.1vw, 3.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.026em;
+}
+
+.home-about + .final-cta-section > .container > p,
+.home-about + .final-cta-section .final-cta-content > p {
+  font-size: clamp(1.04rem, 1.35vw, 1.13rem);
+  line-height: 1.7;
+}
+
+/* Ein abgestimmtes Bewegungssystem statt identischer Fade-ups */
+html.js-reveal .home-hero .fade-up {
+  filter: blur(7px);
+  transform: translateY(20px);
+}
+
+.home-hero .fade-up {
+  transition:
+    opacity 0.78s var(--ease-spring),
+    transform 0.78s var(--ease-spring),
+    filter 0.72s ease;
+}
+
+html.js-reveal .home-hero .fade-up.visible {
+  filter: blur(0);
+  transform: none;
+}
+
+html.js-reveal .home-hero__title.fade-up {
+  clip-path: inset(0 0 14% 0);
+}
+
+.home-hero__title.fade-up {
+  transition:
+    opacity 0.82s var(--ease-spring),
+    transform 0.82s var(--ease-spring),
+    filter 0.76s ease,
+    clip-path 0.86s var(--ease-spring);
+}
+
+html.js-reveal .home-hero__title.fade-up.visible {
+  clip-path: inset(0);
+}
+
+html.js-reveal .home-services .section-head.fade-up,
+html.js-reveal .home-work .section-head.fade-up {
+  filter: blur(5px);
+  transform: translateY(16px);
+}
+
+.home-services .section-head.fade-up,
+.home-work .section-head.fade-up {
+  transition:
+    opacity 0.72s var(--ease-spring),
+    transform 0.72s var(--ease-spring),
+    filter 0.64s ease;
+}
+
+html.js-reveal .home-services .section-head.fade-up.visible,
+html.js-reveal .home-work .section-head.fade-up.visible {
+  filter: blur(0);
+  transform: none;
+}
+
+html.js-reveal .home-services .numbered-row.fade-up {
+  transform: translateY(18px);
+}
+
+.home-services .numbered-row.fade-up {
+  transition:
+    opacity 0.68s var(--ease-spring),
+    transform 0.68s var(--ease-spring),
+    border-color 0.3s ease;
+}
+
+html.js-reveal .home-services .numbered-row.fade-up.visible {
+  transform: none;
+}
+
+html.js-reveal .home-work .showcase-card.fade-up {
+  transform: translateY(22px) scale(0.985);
+}
+
+.home-work .showcase-card.fade-up {
+  transition:
+    opacity 0.76s var(--ease-spring),
+    transform 0.76s var(--ease-spring),
+    background-color 0.38s ease,
+    border-color 0.38s ease;
+}
+
+html.js-reveal .home-work .showcase-card.fade-up.visible {
+  transform: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html.js-reveal .home-work .showcase-card.fade-up.visible:hover {
+    transform: translateY(-3px);
+  }
+}
+
+html.js-reveal .home-about .about-strip.fade-up {
+  filter: blur(5px);
+  transform: translateY(18px);
+}
+
+.home-about .about-strip.fade-up {
+  transition:
+    opacity 0.76s var(--ease-spring),
+    transform 0.76s var(--ease-spring),
+    filter 0.68s ease;
+}
+
+html.js-reveal .home-about .about-strip.fade-up.visible {
+  filter: blur(0);
+  transform: none;
+}
+
+/* Tablet und Mobil */
+@media (max-width: 980px) {
+  .home-header-polish .nav-links {
+    border-radius: var(--radius-lg);
+  }
+
+  .home-header-polish .nav-links a {
+    border-radius: var(--radius-sm);
+  }
+
+  .home-header-polish .nav-links a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .home-services,
+  .home-work {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .home-about {
+    padding-top: 76px;
+    padding-bottom: 76px;
+  }
+
+  .home-services .numbered-row {
+    gap: 9px;
+    padding: 30px 42px 30px 2px;
+  }
+
+  .home-services .numbered-row::after {
+    right: 6px;
+    opacity: 0.46;
+    transform: translate(0, -50%);
+  }
+
+  .home-work .showcase-card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-header-polish.is-scrolled .nav-container {
+    transform: none;
+  }
+
+  .home-services {
+    padding-top: 78px;
+    padding-bottom: 70px;
+  }
+
+  .home-work {
+    padding-top: 72px;
+    padding-bottom: 86px;
+  }
+
+  .home-about {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .home-services .section-head,
+  .home-work .section-head {
+    margin-bottom: 34px;
+  }
+
+  .home-work .section-head--split {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .home-services .section-head__title,
+  .home-work .section-head__title {
+    font-size: clamp(2rem, 10.2vw, 2.62rem);
+    letter-spacing: -0.02em;
+  }
+
+  .home-services .section-head__lead,
+  .home-work .section-head__lead {
+    margin-top: 16px;
+    font-size: 1.02rem;
+    line-height: 1.66;
+  }
+
+  .home-services .numbered-row {
+    padding: 28px 36px 28px 0;
+  }
+
+  .home-services .numbered-row__num,
+  .home-services .numbered-row__label {
+    font-size: 0.875rem;
+  }
+
+  .home-services .numbered-row__label {
+    margin-bottom: 8px;
+    letter-spacing: 0.14em;
+  }
+
+  .home-services .numbered-row__title {
+    font-size: clamp(1.28rem, 6.7vw, 1.52rem);
+    line-height: 1.18;
+  }
+
+  .home-services .numbered-row__text {
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 1.66;
+  }
+
+  .home-work .showcase-card {
+    padding-top: 22px;
+    padding-bottom: 30px;
+  }
+
+  .home-work .showcase-card__meta {
+    font-size: 0.875rem;
+  }
+
+  .home-work .showcase-card__type::before {
+    width: 14px;
+  }
+
+  .home-work .showcase-card__year {
+    font-size: 0.875rem;
+  }
+
+  .home-work .showcase-card__details,
+  .home-work .showcase-card__live,
+  .home-work .showcase-card__note {
+    font-size: 0.875rem;
+  }
+
+  .home-about .about-strip {
+    gap: 24px;
+    padding-top: 28px;
+    padding-bottom: 30px;
+  }
+
+  .home-about .about-strip__identity {
+    width: 116px;
+    justify-self: start;
+  }
+
+  .home-about .about-strip__title {
+    font-size: clamp(2.08rem, 10.2vw, 2.72rem);
+    line-height: 1.04;
+  }
+
+  .home-about .about-strip__lead {
+    font-size: 1.04rem;
+    line-height: 1.68;
+  }
+
+  .home-about + .final-cta-section {
+    padding-top: 78px;
+    padding-bottom: 84px;
+  }
+
+  .home-about + .final-cta-section h2 {
+    font-size: clamp(2.08rem, 10vw, 2.68rem);
+    letter-spacing: -0.02em;
+  }
+
+  .home-hero .btn {
+    min-height: 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-header.home-header-polish,
+  .home-header-polish .nav-container,
+  .home-header-polish .nav-links a::after,
+  .home-hero .btn-primary::after,
+  .final-cta-section .btn-primary::after,
+  .home-services .numbered-row,
+  .home-services .numbered-row::before,
+  .home-services .numbered-row::after,
+  .home-work .showcase-card,
+  .home-work .showcase-card::after,
+  .home-about .about-strip__identity::before,
+  .home-about .about-strip__portrait,
+  .home-hero .fade-up,
+  .home-services .fade-up,
+  .home-work .fade-up,
+  .home-about .fade-up {
+    transition: none !important;
+  }
+
+  html.js-reveal .home-hero .fade-up,
+  html.js-reveal .home-services .fade-up,
+  html.js-reveal .home-work .fade-up,
+  html.js-reveal .home-about .fade-up {
+    clip-path: none;
+    filter: none;
+    opacity: 1;
+    transform: none;
   }
 }

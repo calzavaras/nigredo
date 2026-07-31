@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/';
-const question = 'Was muss beim Datenschutz beachtet werden?';
+const question = 'Was muss meine Website beim Datenschutz beachten?';
 const answer = 'Eine digitale Lösung sollte nur jene Daten bearbeiten, die sie tatsächlich benötigt. Entscheidend sind nachvollziehbare Datenflüsse, passende Zugriffsrechte, eine verständliche Datenschutzerklärung und ein bewusster Umgang mit externen Diensten. Bei sensiblen Aufgaben prüfe ich, ob Daten lokal verarbeitet, anonymisiert oder vollständig von externen Systemen ferngehalten werden können.';
 
 const schema = JSON.stringify({
@@ -36,7 +36,7 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Was muss beim Datenschutz beachtet werden? | Nigredo",
+      "name": "Datenschutz für Websites in der Schweiz | Nigredo",
       "description": "Was Schweizer Websites bei Datenschutzerklärung, Cookies, Analyse und externen Diensten beachten sollten und wann die DSGVO zusätzlich relevant wird.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -44,7 +44,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-06-17",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-31",
       "isAccessibleForFree": true
     }
   ]
@@ -52,12 +52,12 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Was muss beim Datenschutz beachtet werden? | Nigredo"
+  title="Datenschutz für Websites in der Schweiz | Nigredo"
   description="Was Schweizer Websites bei Datenschutzerklärung, Cookies, Analyse und externen Diensten beachten sollten und wann die DSGVO zusätzlich relevant wird."
   canonical={pageUrl}
-  ogTitle="Was muss beim Datenschutz beachtet werden? | Nigredo"
+  ogTitle="Was muss meine Website beim Datenschutz beachten? | Nigredo"
   ogDescription="Datenschutzerklärung, Schweizer DSG, Cookies und schonende Analyse: Was beim Datenschutz einer Website wirklich zählt und wie man es schlank löst."
-  twitterTitle="Was muss beim Datenschutz beachtet werden? | Nigredo"
+  twitterTitle="Datenschutz für Websites in der Schweiz | Nigredo"
   twitterDescription="Datenschutz für Websites in der Schweiz, verständlich erklärt: DSG, Cookies, Tracking und datensparsame Analyse."
   schema={schema}
 >
@@ -80,7 +80,7 @@ const schema = JSON.stringify({
         <a href="#datenschutzerklaerung">Was in die Datenschutzerklärung gehört</a>
         <a href="#cookies">Wann die DSGVO zusätzlich relevant wird</a>
         <a href="#analyse">Cookies, Analyse und externe Dienste</a>
-        <a href="#nigredo">Wie Nigredo Datenschutz berücksichtigt</a>
+        <a href="#nigredo">Wie ich Datenschutz mitdenke</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
@@ -104,9 +104,9 @@ const schema = JSON.stringify({
           Ob eine Einwilligung oder ein Banner nötig ist, hängt von Zweck und Funktionsweise der eingesetzten Technologie ab. Besonders sorgfältig zu prüfen sind Profiling, personalisierte Werbung und Dienste, die Daten an Dritte oder ins Ausland übertragen. Datensparsame Lösungen reduzieren rechtliche und technische Komplexität.
         </p>
 
-        <h2 id="nigredo">Wie Nigredo Datenschutz berücksichtigt</h2>
+        <h2 id="nigredo">Wie ich Datenschutz mitdenke</h2>
         <p>
-          Nigredo setzt externe Dienste zurückhaltend ein und gestaltet Datenflüsse so sparsam wie möglich. Die technische Umsetzung ersetzt keine Rechtsberatung, schafft aber eine nachvollziehbare Grundlage für eine passende rechtliche Prüfung.
+          Ich setze externe Dienste zurückhaltend ein und gestalte Datenflüsse so sparsam wie möglich. Die technische Umsetzung ersetzt keine Rechtsberatung, schafft aber eine nachvollziehbare Grundlage für eine passende rechtliche Prüfung.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -117,7 +117,7 @@ const schema = JSON.stringify({
               <span>Warum eine Website nicht automatisch sichtbar ist und wovon die Auffindbarkeit abhängt.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Welche laufenden Kosten entstehen?</strong>
+              <strong>Was kostet eine Website nach dem Start?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
             <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">
@@ -144,11 +144,13 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--faq-neon-a);
     --page-accent-b: var(--faq-neon-b);
-    --page-accent: var(--faq-neon-a);
+    --page-accent-c: var(--faq-neon-c);
+    --page-accent: var(--faq-neon-c);
   }
 
   .faq-article {
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
+    --faq-c: var(--faq-neon-c);
   }
 </style>

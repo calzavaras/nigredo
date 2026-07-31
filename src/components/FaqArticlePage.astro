@@ -74,7 +74,7 @@ const schema = JSON.stringify({
       about: { '@id': 'https://www.nigredo.ch/#organization' },
       inLanguage: 'de-CH',
       datePublished: '2026-07-30',
-      dateModified: '2026-07-30',
+      dateModified: '2026-07-31',
       isAccessibleForFree: true,
     },
   ],
@@ -144,11 +144,19 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--faq-neon-a);
     --page-accent-b: var(--faq-neon-b);
-    --page-accent: var(--faq-neon-a);
+    --page-accent-c: var(--faq-neon-c);
+    --page-accent: var(--faq-neon-c);
+    --page-title-gradient: linear-gradient(
+      102deg in oklab,
+      var(--page-accent-a) 0%,
+      var(--page-accent-c) 50%,
+      var(--page-accent-b) 100%
+    );
   }
 
   .faq-article {
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
+    --faq-c: var(--faq-neon-c);
   }
 </style>

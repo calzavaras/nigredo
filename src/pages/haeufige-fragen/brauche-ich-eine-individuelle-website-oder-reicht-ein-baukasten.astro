@@ -44,7 +44,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-27",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-31",
       "isAccessibleForFree": true
     }
   ]
@@ -80,7 +80,7 @@ const schema = JSON.stringify({
         <a href="#grenzen">Wo die Grenzen liegen</a>
         <a href="#individuell">Was eine individuelle Lösung verändert</a>
         <a href="#inhalt">Warum der Inhalt entscheidet</a>
-        <a href="#einschaetzung">Wie Nigredo entscheidet</a>
+        <a href="#einschaetzung">Wie ich entscheide</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
@@ -104,9 +104,9 @@ const schema = JSON.stringify({
           Auch die beste technische Plattform ersetzt keine eindeutige Aussage. Besucher müssen rasch verstehen, was angeboten wird, für wen es gedacht ist und wie der nächste Schritt aussieht. Erst daraus entsteht eine überzeugende Website.
         </p>
 
-        <h2 id="einschaetzung">Wie Nigredo entscheidet</h2>
+        <h2 id="einschaetzung">Wie ich entscheide</h2>
         <p>
-          Nigredo empfiehlt keine grössere Lösung als nötig. Wenn ein Baukasten die Aufgabe erfüllt, darf die Lösung klein bleiben. Wenn Profil, Qualität oder Wachstum mehr Freiheit verlangen, wird eine individuelle Grundlage entwickelt.
+          Ich empfehle keine grössere Lösung als nötig. Wenn ein Baukasten die Aufgabe erfüllt, darf der Aufbau klein bleiben. Wenn Profil, Qualität oder Wachstum mehr Freiheit verlangen, entwickle ich eine individuelle Grundlage.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -117,11 +117,11 @@ const schema = JSON.stringify({
               <span>Welche Faktoren den Preis beeinflussen und wie sich Kosten seriös einschätzen lassen.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Welche laufenden Kosten entstehen?</strong>
+              <strong>Was kostet eine Website nach dem Start?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
             <a href="/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/">
-              <strong>Was muss beim Datenschutz beachtet werden?</strong>
+              <strong>Was muss meine Website beim Datenschutz beachten?</strong>
               <span>Was das Schweizer Datenschutzgesetz für deine Website bedeutet, von Cookies bis Analyse.</span>
             </a>
             <a href="/haeufige-fragen/wird-meine-website-bei-google-gefunden/">
@@ -144,11 +144,13 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--faq-neon-a);
     --page-accent-b: var(--faq-neon-b);
-    --page-accent: var(--faq-neon-a);
+    --page-accent-c: var(--faq-neon-c);
+    --page-accent: var(--faq-neon-c);
   }
 
   .faq-article {
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
+    --faq-c: var(--faq-neon-c);
   }
 </style>

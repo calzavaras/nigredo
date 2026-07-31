@@ -18,15 +18,15 @@ const schema = JSON.stringify({
       ]
     },
     {
-      "@type": "AboutPage",
+      "@type": ["AboutPage", "ProfilePage"],
       "@id": `${pageUrl}#webpage`,
-      "name": "Marco Calzavara | Ideen, KI und digitale Umsetzung",
+      "name": "Marco Calzavara | Gründer von Nigredo",
       "url": pageUrl,
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-30",
+      "dateModified": "2026-07-31",
       "isAccessibleForFree": true,
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "about": { "@id": "https://www.nigredo.ch/#person" },
@@ -49,8 +49,8 @@ const schema = JSON.stringify({
       "name": "Marco Calzavara",
       "givenName": "Marco",
       "familyName": "Calzavara",
-      "jobTitle": "Gründer & Full-Stack Developer",
-      "description": "Marco Calzavara verbindet Führungserfahrung, Geschäftssinn, Gestaltung und KI. Aus Ideen entstehen digitale Produkte mit Charakter.",
+      "jobTitle": "Gründer und Full Stack Developer",
+      "description": "Marco Calzavara verbindet Führungserfahrung, Geschäftssinn, Gestaltung, Softwareentwicklung und KI zu digitalen Produkten mit Charakter.",
       "url": pageUrl,
       "mainEntityOfPage": { "@id": `${pageUrl}#webpage` },
       "worksFor": { "@id": "https://www.nigredo.ch/#organization" },
@@ -65,18 +65,18 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Marco Calzavara | Ideen, KI und digitale Umsetzung"
-  description="Marco Calzavara verbindet Führungserfahrung, Geschäftssinn, Gestaltung und KI. Aus Ideen entstehen digitale Produkte mit Charakter."
+  title="Marco Calzavara | Gründer von Nigredo"
+  description="Marco Calzavara verbindet Führungserfahrung, Geschäftssinn, Gestaltung, Softwareentwicklung und KI zu digitalen Produkten mit Charakter."
   canonical={pageUrl}
-  ogTitle="Marco Calzavara | Ideen, KI und digitale Umsetzung"
-  ogDescription="Führungserfahrung, Geschäftssinn, Gestaltung, KI und ein starkes Informatiknetzwerk für digitale Produkte mit Charakter."
+  ogTitle="Marco Calzavara | Gründer von Nigredo"
+  ogDescription="Führungserfahrung, Gestaltung, Softwareentwicklung, KI und persönliche Verantwortung für digitale Produkte mit Charakter."
   ogType="profile"
   ogImage="https://www.nigredo.ch/assets/marco-calzavara-home-v5-photo.jpg"
   ogImageAlt="Marco Calzavara, Gründer von Nigredo"
   ogImageWidth="1000"
   ogImageHeight="1000"
-  twitterTitle="Marco Calzavara | Ideen, KI und digitale Umsetzung"
-  twitterDescription="Aus Ideen entstehen digitale Produkte mit Charakter."
+  twitterTitle="Marco Calzavara | Gründer von Nigredo"
+  twitterDescription="Persönlich geführte Entwicklung für Websites, Software und digitale Produkte mit KI."
   schema={schema}
   preloadImage="/assets/marco-calzavara-home-v5-photo-500.avif"
   preloadImageType="image/avif"
@@ -94,8 +94,8 @@ const schema = JSON.stringify({
       <!-- Hero -->
       <div class="fade-up home-hero__inner about-hero__intro">
         <h1 id="about-title" class="home-hero__title about-hero__title">
-          Ich sehe Möglichkeiten.<br>
-          <span class="gradient-text">Und lasse sie nicht liegen.</span>
+          <span class="about-hero__title-line">Ein Mensch.</span>
+          <span class="gradient-text about-hero__title-line">1001 Ideen.</span>
         </h1>
       </div>
 
@@ -130,7 +130,7 @@ const schema = JSON.stringify({
         <div class="au-content-column fade-up delay-150">
           <div class="au-statement">
             <blockquote class="hero-lead about-statement__quote">
-              Ich habe selten nur eine Idee. Meistens kommen gleich mehrere. Die stärkste erhält keine lange Präsentation, sondern möglichst bald einen ersten funktionierenden Entwurf.
+              Die stärkste davon erhält keine lange Präsentation, sondern möglichst bald einen ersten funktionierenden Entwurf.
             </blockquote>
           </div>
           
@@ -158,16 +158,16 @@ const schema = JSON.stringify({
                     Parallel dazu habe ich Unternehmen gegründet, aufgebaut und verkauft. Gemeinsam mit einem Geschäftspartner führe ich die HappyPath GmbH, die mit TextRoom eine schweizweit eingesetzte Software für Sozialversicherungen entwickelt.
                   </p>
                   <p>
-                    Mit Nigredo verbinde ich die Klarheit aus der Führung, das Einfühlungsvermögen aus der Arbeit mit Menschen, den Blick für wirtschaftlich sinnvolle Lösungen, die Freude an Gestaltung, die Möglichkeiten moderner KI und den hartnäckigen Wunsch, Ideen tatsächlich umzusetzen.
+                    Mit Nigredo verbinde ich Führungserfahrung, Einfühlungsvermögen, Geschäftssinn, Gestaltung und moderne Technologie. Daraus entsteht eine Arbeitsweise, die genau zuhört, zügig entscheidet und Gedanken tatsächlich in Bewegung bringt.
                   </p>
                   <p>
-                    <strong>KI erweitert meine Werkbank.</strong> Ich habe ein System aus mehreren hundert spezialisierten KI-Agenten und abgestimmten Arbeitsabläufen aufgebaut. Das sind klar definierte digitale Rollen für Recherche, Strategie, Struktur, Text, Gestaltung, Programmierung, Tests, Qualitätssicherung und Gegenprüfung. Manche entwickeln Vorschläge. Andere suchen bewusst nach Schwächen oder stellen unbequeme Fragen.
+                    <strong>KI erweitert meine Werkbank.</strong> Ich habe ein System aus mehreren hundert spezialisierten KI-Agenten und abgestimmten Arbeitsabläufen aufgebaut. Sie unterstützen Recherche, Strategie, Text, Gestaltung, Programmierung, Tests und Gegenprüfung. Manche entwickeln Vorschläge. Andere suchen bewusst nach Schwächen oder stellen unbequeme Fragen.
                   </p>
                   <p>
                     Ich führe die Ergebnisse zusammen, treffe die Entscheidungen und prüfe, ob das Resultat fachlich, sprachlich, gestalterisch und technisch überzeugt. KI ersetzt weder meine Kreativität noch meine Verantwortung. Sie macht gute Ideen früher sichtbar, besser prüfbar und schneller umsetzbar.
                   </p>
                   <p>
-                    <strong>Ein gutes Netzwerk gehört dazu.</strong> Für besondere Anforderungen arbeite ich mit Fachleuten für Frontend- und Backend-Entwicklung, Datenbanken, Schnittstellen, Infrastruktur, Betrieb, Sicherheit, Datenschutz, Automatisierung, KI und die Architektur komplexer Anwendungen zusammen.
+                    <strong>Ein gutes Netzwerk gehört dazu.</strong> Für besondere Anforderungen arbeite ich mit Fachleuten für Entwicklung, Datenbanken, Infrastruktur, Sicherheit, Datenschutz und komplexe Systemarchitektur zusammen.
                   </p>
                   <p>
                     Je nach Projekt stelle ich die passende Kombination zusammen. Für dich bleibt die Zusammenarbeit einfach: Ich bin dein direkter Ansprechpartner, halte die Fäden zusammen und stehe für das Ergebnis ein.
@@ -212,7 +212,7 @@ const schema = JSON.stringify({
 
       <!-- Principles -->
       <div class="mt-80 fade-up delay-300">
-        <h2>Woran ich glaube.</h2>
+        <h2>Was meine Arbeit antreibt.</h2>
         <div class="grid-3">
           <article class="card au-principle-card">
             <div class="au-principle-number">01</div>
@@ -297,6 +297,13 @@ const schema = JSON.stringify({
     --about-light: var(--about-neon-b);
     --page-accent-a: var(--about-neon-a);
     --page-accent-b: var(--about-neon-b);
+    --page-accent-c: var(--about-neon-c);
+    --page-title-gradient: linear-gradient(
+      102deg in oklab,
+      var(--page-accent-a) 0%,
+      var(--page-accent-c) 50%,
+      var(--page-accent-b) 100%
+    );
     background: var(--bg-color);
   }
 
@@ -305,7 +312,7 @@ const schema = JSON.stringify({
   }
 
   .about-hero {
-    --page-accent: var(--about-a);
+    --page-accent: var(--about-neon-c);
     animation: none;
     padding-top: var(--hero-offset-top-breadcrumb);
     padding-bottom: var(--hero-offset-bottom);
@@ -335,11 +342,16 @@ const schema = JSON.stringify({
   }
 
   .about-hero__title {
-    max-width: 940px;
-    font-size: var(--hero-title-size);
+    max-width: 960px;
+    font-size: clamp(3.05rem, 5.25vw, 4.8rem);
     line-height: var(--hero-title-line-height);
     letter-spacing: -0.02em;
     margin-bottom: 0;
+  }
+
+  .about-hero__title-line {
+    display: block;
+    white-space: nowrap;
   }
 
   .about-hero .gradient-text {
@@ -597,6 +609,18 @@ const schema = JSON.stringify({
     color: var(--about-a);
   }
 
+  .au-stat-card:nth-child(2) .au-stat-value {
+    color: var(--about-neon-c);
+  }
+
+  .au-stat-card:nth-child(3) .au-stat-value {
+    color: var(--about-b);
+  }
+
+  .au-stat-card:nth-child(4) .au-stat-value {
+    color: var(--about-neon-c);
+  }
+
   .au-stat-value--words {
     font-size: 1.9rem;
     line-height: 1.05;
@@ -733,6 +757,10 @@ const schema = JSON.stringify({
     .about-hero__title {
       font-size: var(--hero-title-size-tablet);
       line-height: var(--hero-title-line-height-mobile);
+    }
+
+    .about-hero__title-line {
+      white-space: normal;
     }
 
     .au-main-grid {

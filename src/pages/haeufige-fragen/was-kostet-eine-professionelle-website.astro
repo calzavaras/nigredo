@@ -44,7 +44,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-16",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-31",
       "isAccessibleForFree": true
     }
   ]
@@ -80,7 +80,7 @@ const schema = JSON.stringify({
         <a href="#kostentreiber">Was den Preis bestimmt</a>
         <a href="#enthalten">Was im Angebot enthalten sein sollte</a>
         <a href="#schnellloesung">Wann eine einfache Lösung genügt</a>
-        <a href="#einschaetzung">Wie Nigredo kalkuliert</a>
+        <a href="#einschaetzung">Wie ich kalkuliere</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
@@ -104,9 +104,9 @@ const schema = JSON.stringify({
           Für eine kleine Präsenz mit wenigen Inhalten kann ein reduzierter Aufbau vollkommen richtig sein. Mehr Aufwand lohnt sich dort, wo die Website ein Angebot erklären, Vertrauen aufbauen, Anfragen gewinnen oder später erweitert werden soll.
         </p>
 
-        <h2 id="einschaetzung">Wie Nigredo kalkuliert</h2>
+        <h2 id="einschaetzung">Wie ich kalkuliere</h2>
         <p>
-          Nigredo klärt zuerst, was die Website leisten muss und welche Grundlagen bereits vorhanden sind. Daraus entstehen ein definierter Umfang, nachvollziehbare Prioritäten und ein transparenter Fixpreis. Bezahlt wird für eine passende Lösung, nicht für unnötige Komplexität.
+          Ich kläre zuerst, was die Website leisten muss und welche Grundlagen bereits vorhanden sind. Daraus entstehen ein definierter Umfang, nachvollziehbare Prioritäten und ein transparenter Fixpreis. Bezahlt wird für eine passende Umsetzung, nicht für unnötige Komplexität.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -117,7 +117,7 @@ const schema = JSON.stringify({
               <span>Realistische Zeitrahmen, Projektphasen und typische Verzögerungen.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Welche laufenden Kosten entstehen?</strong>
+              <strong>Was kostet eine Website nach dem Start?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
             <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">
@@ -144,11 +144,13 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--faq-neon-a);
     --page-accent-b: var(--faq-neon-b);
-    --page-accent: var(--faq-neon-a);
+    --page-accent-c: var(--faq-neon-c);
+    --page-accent: var(--faq-neon-c);
   }
 
   .faq-article {
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
+    --faq-c: var(--faq-neon-c);
   }
 </style>

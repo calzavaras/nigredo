@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 
 const pageUrl = 'https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/';
-const question = 'Welche laufenden Kosten entstehen?';
+const question = 'Was kostet eine Website nach dem Start?';
 const answer = 'Domain und Hosting bilden die üblichen Grundkosten. Je nach technischer Lösung können Wartung, Sicherheitsupdates, externe Dienste, KI-Nutzung oder redaktionelle Pflege hinzukommen. Du erfährst vor Projektbeginn, welche laufenden Kosten realistisch sind. Unangenehme Überraschungen gehören nicht zum Funktionsumfang.';
 
 const schema = JSON.stringify({
@@ -36,7 +36,7 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Welche laufenden Kosten entstehen? | Nigredo",
+      "name": "Was kostet eine Website nach dem Start? | Nigredo",
       "description": "Welche Kosten nach dem Start für Domain, Hosting, Wartung und Pflege entstehen und wie eine schlanke technische Basis den Aufwand tief hält.",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -44,7 +44,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-06-17",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-31",
       "isAccessibleForFree": true
     }
   ]
@@ -52,12 +52,12 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Welche laufenden Kosten entstehen? | Nigredo"
+  title="Was kostet eine Website nach dem Start? | Nigredo"
   description="Welche Kosten nach dem Start für Domain, Hosting, Wartung und Pflege entstehen und wie eine schlanke technische Basis den Aufwand tief hält."
   canonical={pageUrl}
-  ogTitle="Welche laufenden Kosten entstehen? | Nigredo"
+  ogTitle="Was kostet eine Website nach dem Start? | Nigredo"
   ogDescription="Domain, Hosting, Wartung und Pflege: Welche Kosten nach dem Start anfallen und wie sich der Aufwand dauerhaft klein halten lässt."
-  twitterTitle="Welche laufenden Kosten entstehen? | Nigredo"
+  twitterTitle="Was kostet eine Website nach dem Start? | Nigredo"
   twitterDescription="Welche laufenden Kosten eine Website nach dem Launch verursacht und wie man sie tief hält."
   schema={schema}
 >
@@ -80,7 +80,7 @@ const schema = JSON.stringify({
         <a href="#hosting-domain">Was Hosting leisten muss</a>
         <a href="#wartung">Wann Wartung nötig ist</a>
         <a href="#pflege">Was redaktionelle Pflege kostet</a>
-        <a href="#nigredo">Wie Nigredo Folgekosten klein hält</a>
+        <a href="#nigredo">Wie ich Folgekosten klein halte</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
@@ -104,9 +104,9 @@ const schema = JSON.stringify({
           Neue Texte, Bilder oder Seiten sind keine festen Betriebskosten. Der Aufwand entsteht nur, wenn sich Inhalte ändern. Ob diese Pflege intern oder durch Nigredo erfolgt, wird passend zum gewünschten Mass an Eigenständigkeit festgelegt.
         </p>
 
-        <h2 id="nigredo">Wie Nigredo Folgekosten klein hält</h2>
+        <h2 id="nigredo">Wie ich Folgekosten klein halte</h2>
         <p>
-          Nigredo wählt Technik nicht nach Funktionsmenge, sondern nach Aufgabe. Wenige Abhängigkeiten, zuverlässiges Hosting und ein verständlicher Pflegeprozess halten die Website stabil und die laufenden Kosten transparent.
+          Ich wähle Technik nicht nach Funktionsmenge, sondern nach Aufgabe. Wenige Abhängigkeiten, zuverlässiges Hosting und ein verständlicher Pflegeprozess halten die Website stabil und die laufenden Kosten transparent.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -121,7 +121,7 @@ const schema = JSON.stringify({
               <span>Wann ein CMS sinnvoll ist und wie viel Eigenständigkeit realistisch bleibt.</span>
             </a>
             <a href="/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/">
-              <strong>Was muss beim Datenschutz beachtet werden?</strong>
+              <strong>Was muss meine Website beim Datenschutz beachten?</strong>
               <span>Was das Schweizer Datenschutzgesetz für deine Website bedeutet, von Cookies bis Analyse.</span>
             </a>
             <a href="/haeufige-fragen/wird-meine-website-bei-google-gefunden/">
@@ -144,11 +144,13 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--faq-neon-a);
     --page-accent-b: var(--faq-neon-b);
-    --page-accent: var(--faq-neon-a);
+    --page-accent-c: var(--faq-neon-c);
+    --page-accent: var(--faq-neon-c);
   }
 
   .faq-article {
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
+    --faq-c: var(--faq-neon-c);
   }
 </style>

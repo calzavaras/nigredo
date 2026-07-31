@@ -37,7 +37,7 @@ if (pageNumber > 1) {
         <span class="gradient-text">Wirklich gemacht.</span>
       </h1>
       <p class="hero-lead refs-hero__lead">
-        Hier gibt es keine schönen Konzepte, die friedlich in einer Schublade schlafen. Die Referenzen zeigen Websites, KI-Anwendungen und digitale Werkzeuge, die aus konkreten Anforderungen entstanden sind. Jedes Projekt beginnt anders. Entscheidend ist, dass am Ende etwas funktioniert, das vorher gefehlt hat.
+        Hier gibt es keine schönen Konzepte, die friedlich in einer Schublade schlafen. Diese Arbeiten sind aus konkreten Anforderungen entstanden und werden tatsächlich genutzt. Jedes Projekt beginnt anders. Am Ende zählt, dass etwas funktioniert, das vorher gefehlt hat.
       </p>
       {pageCount > 1 && (
         <p class="refs-page-kicker">Seite {pageNumber} von {pageCount}</p>
@@ -109,7 +109,7 @@ if (pageNumber > 1) {
 
     <div class="section refs-final-section">
       <div class="section-cta refs-final-cta fade-up">
-        <span class="cta-label">Der nächste Schritt</span>
+        <span class="cta-label">Dein Projekt</span>
         <h2>Dein Projekt fehlt noch.<br><span>Vielleicht beginnt es heute.</span></h2>
         <p>Erzähl mir kurz, worum es geht. Ich schaue mit dir auf Ausgangslage, Ziele und die passende Umsetzung.</p>
         <div class="hero-cta-group" style="justify-content: center;">
@@ -125,12 +125,20 @@ if (pageNumber > 1) {
   body {
     --page-accent-a: var(--refs-neon-a);
     --page-accent-b: var(--refs-neon-b);
-    --page-accent: var(--refs-neon-b);
+    --page-accent-c: var(--refs-neon-c);
+    --page-accent: var(--refs-neon-c);
+    --page-title-gradient: linear-gradient(
+      102deg in oklab,
+      var(--page-accent-a) 0%,
+      var(--page-accent-c) 50%,
+      var(--page-accent-b) 100%
+    );
   }
 
   .refs-hero {
     --refs-a: var(--refs-neon-a);
     --refs-b: var(--refs-neon-b);
+    --refs-c: var(--refs-neon-c);
     animation: none;
   }
 

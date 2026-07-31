@@ -20,10 +20,10 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#webpage`,
       "name": "Projekt besprechen | Nigredo St. Gallen",
       "url": pageUrl,
-      "description": "Besprich deine Idee, Website, KI-Lösung oder digitale Anwendung direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen.",
+      "description": "Besprich deine Website, Software oder digitale Aufgabe direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-30",
+      "dateModified": "2026-07-31",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -36,10 +36,10 @@ const schema = JSON.stringify({
 
 <Layout
   title="Projekt besprechen | Nigredo St. Gallen"
-  description="Besprich deine Idee, Website, KI-Lösung oder digitale Anwendung direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen."
+  description="Besprich deine Website, Software oder digitale Aufgabe direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen."
   canonical={pageUrl}
   ogTitle="Bring mir die Idee. Sie darf noch Ecken haben."
-  ogDescription="Ein konkreter Auftrag, ein erster Gedanke oder ein Ablauf, der besser funktionieren sollte: Beides ist ein guter Anfang."
+  ogDescription="Ein konkreter Auftrag, ein erster Gedanke oder ein Ablauf, der besser werden sollte: Alles ist ein guter Anfang."
   ogImageAlt="Nigredo Kontakt: direkter Austausch mit Marco Calzavara"
   twitterTitle="Bring mir die Idee | Nigredo"
   twitterDescription="Auch ein erster Gedanke oder eine offene Frage genügen."
@@ -61,7 +61,7 @@ const schema = JSON.stringify({
             <span class="gradient-text">Sie darf noch Ecken haben.</span>
           </h1>
           <p class="hero-lead contact-hero__lead">
-            Vielleicht hast du bereits einen konkreten Auftrag. Vielleicht erst den Gedanken: «Eigentlich müsste man doch …» Beides ist ein guter Anfang. Schreib mir, was entstehen soll, wo es heute hakt oder was künftig besser funktionieren könnte. Ich prüfe dein Vorhaben persönlich und antworte mit einer ehrlichen ersten Einschätzung.
+            Vielleicht hast du bereits einen konkreten Auftrag. Vielleicht erst einen unfertigen Gedanken oder einen Ablauf, der unnötig Nerven kostet. Alles ist ein guter Anfang. Schreib mir, was entstehen soll oder wo es heute hakt. Ich prüfe dein Vorhaben persönlich und antworte mit einer ehrlichen ersten Einschätzung.
           </p>
         </div>
 
@@ -79,12 +79,20 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--contact-neon-a);
     --page-accent-b: var(--contact-neon-b);
-    --page-accent: var(--contact-neon-b);
+    --page-accent-c: var(--contact-neon-c);
+    --page-accent: var(--contact-neon-c);
+    --page-title-gradient: linear-gradient(
+      102deg in oklab,
+      var(--page-accent-a) 0%,
+      var(--page-accent-c) 50%,
+      var(--page-accent-b) 100%
+    );
   }
 
   .contact-hero {
     --contact-a: var(--contact-neon-a);
     --contact-b: var(--contact-neon-b);
+    --contact-c: var(--contact-neon-c);
     animation: none;
   }
 

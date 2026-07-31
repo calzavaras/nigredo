@@ -316,7 +316,7 @@ if (mail($emailTo, $encodedSubject, $multipartBody, $headers)) {
     closeRateLimitHandle($rlHandle);
     echo json_encode([
         'success' => true,
-        'message' => 'Deine Nachricht ist angekommen! Ich melde mich persönlich.',
+        'message' => 'Deine Nachricht ist angekommen. Ich melde mich persönlich.',
     ]);
 } else {
     closeRateLimitHandle($rlHandle);

@@ -18,11 +18,11 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": "Websites, KI und digitale Produkte | Nigredo St. Gallen",
-      "description": "Individuelle Websites, KI-Systeme, lokale Anwendungen, Backends, digitale Werkzeuge, Logos und Inhalte für konkrete Aufgaben.",
+      "name": "Websites, Software und KI | Nigredo St. Gallen",
+      "description": "Individuelle Websites, Software und Lösungen mit KI für konkrete Aufgaben. Persönlich konzipiert und entwickelt in St. Gallen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-30",
+      "dateModified": "2026-07-31",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -33,7 +33,7 @@ const schema = JSON.stringify({
       "@type": "ItemList",
       "@id": `${pageUrl}#services`,
       "name": "Leistungen",
-      "description": "Websites, KI-Systeme, Anwendungen, Backends, Marken und Inhalte aus einer Hand",
+      "description": "Websites, individuelle Software und Lösungen mit KI aus einer Hand",
       "numberOfItems": 3,
       "itemListElement": [
         {
@@ -68,9 +68,9 @@ const schema = JSON.stringify({
           "item": {
             "@type": "Service",
             "@id": `${pageUrl}#ki`,
-            "name": "KI-Lösungen für KMU",
-            "description": "Digitale Werkzeuge und KI-Lösungen, die wiederkehrende Arbeit vereinfachen, Wissen nutzbar machen und im Alltag verlässlich funktionieren.",
-            "serviceType": "KI-Lösungen",
+            "name": "Software und Lösungen mit KI für KMU",
+            "description": "Digitale Werkzeuge mit KI, die wiederkehrende Arbeit vereinfachen, Wissen nutzbar machen und im Alltag verlässlich funktionieren.",
+            "serviceType": "Softwareentwicklung und künstliche Intelligenz",
             "provider": { "@id": "https://www.nigredo.ch/#organization" },
             "brand": { "@id": "https://www.nigredo.ch/#brand" },
             "areaServed": [
@@ -111,14 +111,14 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Websites, KI und digitale Produkte | Nigredo St. Gallen"
-  description="Individuelle Websites, KI-Systeme, lokale Anwendungen, Backends, digitale Werkzeuge, Logos und Inhalte für konkrete Aufgaben."
+  title="Websites, Software und KI | Nigredo St. Gallen"
+  description="Individuelle Websites, Software und Lösungen mit KI für konkrete Aufgaben. Persönlich konzipiert und entwickelt in St. Gallen."
   canonical={pageUrl}
-  ogTitle="Aus «Man müsste mal» wird etwas, das funktioniert."
-  ogDescription="Websites, KI-Systeme, lokale Anwendungen, Backends, Marken und Inhalte als zusammenhängende digitale Produkte."
+  ogTitle="Was digital noch fehlt, entwickle ich."
+  ogDescription="Individuelle Websites, Software und Lösungen mit KI für Aufgaben, die Standardprodukte nicht überzeugend abdecken."
   ogImageAlt="Nigredo: individuelle Websites, KI-Lösungen und digitale Werkzeuge"
-  twitterTitle="Websites, KI und digitale Produkte | Nigredo"
-  twitterDescription="Entwickelt für konkrete Aufgaben statt für möglichst viele Funktionen."
+  twitterTitle="Websites, Software und KI | Nigredo"
+  twitterDescription="Digitale Produkte für konkrete Aufgaben, persönlich entwickelt in St. Gallen."
   schema={schema}
 >
   <section class="section pt-sub solutions-hero" aria-labelledby="loesungen-title">
@@ -132,12 +132,11 @@ const schema = JSON.stringify({
       <div class="fade-up home-hero__inner solutions-hero__content">
 
         <h1 id="loesungen-title" class="home-hero__title solutions-hero__title">
-          <span class="solutions-hero__line">Aus «Man müsste</span>
-          <span class="solutions-hero__line">mal» <span class="gradient-text">wird etwas,</span></span>
-          <span class="gradient-text solutions-hero__line">das funktioniert.</span>
+          <span class="solutions-hero__line">Was digital noch fehlt,</span>
+          <span class="gradient-text solutions-hero__line">entwickle ich.</span>
         </h1>
         <p class="hero-lead solutions-hero__lead">
-          Ich entwickle digitale Produkte für Aufgaben, die Standardlösungen nicht überzeugend abdecken. Websites, KI-Systeme, lokale Anwendungen, Backends, Marken und Inhalte denke ich als zusammenhängendes Produkt, bei dem Aussage, Bedienung, Gestaltung und Technik dieselbe Richtung verfolgen. KI schafft mehr Varianten und kürzere Wege. Mein Urteil gibt dem Ergebnis Richtung.
+          Ich entwickle Websites, Software und digitale Werkzeuge für Aufgaben, die Standardprodukte nicht überzeugend lösen. Aussage, Bedienung, Gestaltung und Technik folgen dabei einer gemeinsamen Richtung. KI eröffnet Varianten und verkürzt Wege. Die Entscheidungen treffe ich.
         </p>
       </div>
 
@@ -153,11 +152,17 @@ const schema = JSON.stringify({
             <h3>Websites, die nicht nur herumstehen.</h3>
           </div>
           <div class="solutions-field__content">
-            <p class="solutions-field__lead">Eine gute Website ist keine digitale Broschüre, die man einmal veröffentlicht und anschliessend höflich ignoriert. Sie erklärt dein Angebot, zeigt deine Haltung, schafft Vertrauen und führt Menschen selbstverständlich zum nächsten Schritt.</p>
-            <div class="solutions-field__details">
-              <p>Ich entwickle individuelle Websites für Selbstständige, KMU, Organisationen und anspruchsvolle Fachbereiche. Je nach Aufgabe reicht das von einer fokussierten Unternehmensseite bis zu einer Plattform mit Backend, Login, Datenbank, Schnittstellen oder eigener Inhaltsverwaltung.</p>
-              <p>Dazu gehören Positionierung, Seitenstruktur, Texte, individuelles Design, technische Umsetzung, Performance, Barrierearmut, Suchmaschinenbasis, Datenschutz, Sicherheit und passende Funktionen. Das technische System richtet sich nach der Aufgabe. Nicht umgekehrt.</p>
-            </div>
+            <p class="solutions-field__lead">Eine gute Website erklärt dein Angebot, schafft Vertrauen und führt Menschen zum nächsten Schritt. Inhalt, Gestaltung und Technik arbeiten dafür gemeinsam.</p>
+            <details class="solutions-field__disclosure">
+              <summary>
+                <span class="solutions-field__summary-label">Leistungsumfang</span>
+                <span class="solutions-field__summary-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="solutions-field__details">
+                <p class="solutions-field__detail-copy">Ich entwickle individuelle Websites für Selbstständige, KMU, Organisationen und anspruchsvolle Fachbereiche. Das reicht von einer fokussierten Unternehmensseite bis zu einer Plattform mit Backend oder eigener Inhaltsverwaltung.</p>
+                <p class="solutions-field__detail-note">Positionierung, Inhalte und Design verbinde ich mit einer schnellen, zugänglichen und sicheren technischen Umsetzung. Die passende Technik richtet sich nach der Aufgabe.</p>
+              </div>
+            </details>
           </div>
         </article>
 
@@ -174,14 +179,20 @@ const schema = JSON.stringify({
                 <path d="M10.3 11L6 8.7M10.3 13L6 15.3M13.7 11L18 8.7M13.7 13L18 15.3M12 10V4.5" stroke="currentColor" stroke-width="1.15"/>
               </svg>
             </span>
-            <h3>KI und Software mit einem echten Grund.</h3>
+            <h3>KI und Software für echte Aufgaben.</h3>
           </div>
           <div class="solutions-field__content">
-            <p class="solutions-field__lead">KI ist kein Pflichtprogramm. Sie ist ein Werkzeug. Und wie bei jedem Werkzeug entscheidet die Aufgabe, ob ihr Einsatz sinnvoll ist.</p>
-            <div class="solutions-field__details">
-              <p>Ich entwickle KI-Assistenten, Wissenssysteme, Automatisierungen, lokale Anwendungen, Dashboards und digitale Werkzeuge, die konkrete Arbeitsschritte verbessern. Sie erschliessen Wissen aus Dokumenten oder Videos, durchsuchen interne Informationen, werten Daten aus, beantworten Fachfragen anhand eigener Quellen oder bilden komplexe Abläufe in einer einfachen Oberfläche ab.</p>
-              <p>Mehrere hundert spezialisierte KI-Agenten unterstützen Recherche, Konzeption, Text, Gestaltung, Entwicklung, Tests und Qualitätssicherung. Sie liefern Möglichkeiten. Ich bestimme die Richtung, prüfe die Ergebnisse und führe alles zu einem funktionierenden Produkt zusammen. Schnell bedeutet dabei nicht oberflächlich, sondern weniger Leerlauf und kürzere Wege zwischen Vorstellung und Umsetzung.</p>
-            </div>
+            <p class="solutions-field__lead">KI ist ein Werkzeug für konkrete Aufgaben. Entscheidend ist, ob ihr Einsatz die Arbeit tatsächlich verbessert.</p>
+            <details class="solutions-field__disclosure">
+              <summary>
+                <span class="solutions-field__summary-label">Leistungsumfang</span>
+                <span class="solutions-field__summary-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="solutions-field__details">
+                <p class="solutions-field__detail-copy">Ich entwickle KI-Assistenten, Wissenssysteme, Automatisierungen, lokale Anwendungen und Dashboards, die konkrete Arbeitsschritte verbessern.</p>
+                <p class="solutions-field__detail-note">Die Systeme erschliessen Wissen aus Dokumenten und internen Quellen, werten Daten aus und vereinfachen komplexe Abläufe. Spezialisierte KI-Agenten unterstützen mich bei Konzeption, Gestaltung, Entwicklung und Tests. Ich bestimme die Richtung und führe alles zu einem funktionierenden Produkt zusammen.</p>
+              </div>
+            </details>
           </div>
         </article>
 
@@ -193,14 +204,20 @@ const schema = JSON.stringify({
                 <path d="M7.2 8.1H13.2M7.2 11.3H11.6M7.2 15.9L9.8 13.4L11.6 15.1L16.8 9.9M15.1 9.8H16.9V11.6" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </span>
-            <h3>Ideen brauchen eine Form, die man versteht und behält.</h3>
+            <h3>Eine Form, die man versteht und behält.</h3>
           </div>
           <div class="solutions-field__content">
-            <p class="solutions-field__lead">Ein gutes digitales Produkt beginnt nicht beim Code. Es beginnt bei der Frage, was Menschen sehen, verstehen und fühlen sollen.</p>
-            <div class="solutions-field__details">
-              <p>Ich entwickle Namen, Logos, Texte, Bildwelten, Inhaltsstrukturen und visuelle Identitäten, die einem Vorhaben ein klares Gesicht geben. Dazu gehören Positionierung, Kernbotschaft, Navigation, Benutzerführung, mehrsprachige Inhalte und die verständliche Darstellung komplexer Themen.</p>
-              <p>Es geht nicht darum, etwas lediglich schöner zu machen. Es geht darum, eine Idee so klar in Form zu bringen, dass sie verstanden wird und im Kopf bleibt.</p>
-            </div>
+            <p class="solutions-field__lead">Ein gutes digitales Produkt beginnt mit Klarheit: Was sollen Menschen sehen, verstehen und in Erinnerung behalten?</p>
+            <details class="solutions-field__disclosure">
+              <summary>
+                <span class="solutions-field__summary-label">Leistungsumfang</span>
+                <span class="solutions-field__summary-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="solutions-field__details">
+                <p class="solutions-field__detail-copy">Ich entwickle Namen, Logos, Texte, Bildwelten und Inhaltsstrukturen, die einem Vorhaben ein klares Gesicht geben.</p>
+                <p class="solutions-field__detail-note">Je nach Aufgabe entstehen daraus eine klare Positionierung, Kernbotschaft, Navigation und Benutzerführung, auch für mehrsprachige oder komplexe Inhalte. Das Ziel ist eine Form, die verstanden wird und im Kopf bleibt.</p>
+              </div>
+            </details>
           </div>
         </article>
       </div>
@@ -233,8 +250,8 @@ const schema = JSON.stringify({
     <div class="container">
       <div class="section-cta solutions-final-cta fade-up">
         <span class="cta-label">Nächster Schritt</span>
-        <h2 id="loesungen-cta-title">Was sollte längst<br><span>einfacher funktionieren?</span></h2>
-        <p>Du musst die Lösung noch nicht kennen. Beschreibe, was heute zu viel Zeit, Klarheit oder Nerven kostet. Gemeinsam prüfen wir, welcher nächste Schritt wirklich hilft.</p>
+        <h2 id="loesungen-cta-title">Was kostet dich heute<br><span>unnötig Zeit oder Nerven?</span></h2>
+        <p>Du musst die Antwort noch nicht kennen. Beschreibe, wo es hakt oder unnötig kompliziert wird. Gemeinsam finden wir heraus, was wirklich hilft.</p>
         <div class="hero-cta-group" style="justify-content: center;">
           <a href="/kontakt/" class="btn btn-primary">Projekt besprechen</a>
           <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
@@ -248,15 +265,22 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--solutions-neon-a);
     --page-accent-b: var(--solutions-neon-b);
-    --page-accent: var(--solutions-neon-b);
+    --page-accent-c: var(--solutions-neon-c);
+    --page-accent: var(--solutions-neon-c);
+    --page-title-gradient: linear-gradient(
+      102deg in oklab,
+      var(--page-accent-a) 0%,
+      var(--page-accent-c) 50%,
+      var(--page-accent-b) 100%
+    );
   }
 
   .solutions-hero,
   .solutions-fields,
   .solutions-final-section {
     --solutions-a: var(--solutions-neon-a);
-    --solutions-b: var(--solutions-neon-b);
-    --solutions-c: color-mix(in oklab, var(--solutions-neon-a) 42%, var(--solutions-neon-b));
+    --solutions-b: var(--solutions-neon-c);
+    --solutions-c: var(--solutions-neon-b);
     --page-accent: var(--solutions-b);
     animation: none;
   }
@@ -335,7 +359,7 @@ const schema = JSON.stringify({
     grid-template-columns: minmax(250px, 0.82fr) minmax(0, 1.18fr);
     gap: clamp(40px, 7vw, 88px);
     position: relative;
-    padding: clamp(54px, 7vw, 82px) 0;
+    padding: clamp(48px, 6vw, 68px) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.11);
     isolation: isolate;
   }
@@ -373,9 +397,9 @@ const schema = JSON.stringify({
   .solutions-field__signal {
     display: grid;
     place-items: center;
-    width: 64px;
-    height: 64px;
-    margin-bottom: 28px;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 24px;
     color: color-mix(in srgb, var(--field-color) 88%, white 10%);
     border: 1px solid color-mix(in srgb, var(--field-color) 34%, rgba(255, 255, 255, 0.12));
     border-radius: 50%;
@@ -391,8 +415,8 @@ const schema = JSON.stringify({
   .solutions-field__signal::after {
     content: "";
     position: absolute;
-    top: 35px;
-    left: 72px;
+    top: 32px;
+    left: 66px;
     width: clamp(44px, 7vw, 82px);
     height: 1px;
     background: linear-gradient(90deg, color-mix(in srgb, var(--field-color) 58%, transparent), transparent);
@@ -402,9 +426,9 @@ const schema = JSON.stringify({
     max-width: 13ch;
     margin: 0;
     color: #f5f5f7;
-    font-size: clamp(1.85rem, 3.25vw, 2.8rem);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
     font-weight: 600;
-    line-height: 1.04;
+    line-height: 1.08;
     letter-spacing: -0.025em;
     text-wrap: balance;
   }
@@ -415,27 +439,118 @@ const schema = JSON.stringify({
 
   .solutions-field__lead {
     max-width: 31ch;
-    margin: 0 0 clamp(30px, 4vw, 42px);
+    margin: 0 0 26px;
     color: rgba(245, 245, 247, 0.92);
-    font-size: clamp(1.22rem, 2vw, 1.55rem);
+    font-size: clamp(1.16rem, 1.8vw, 1.42rem);
     font-weight: 500;
-    line-height: 1.42;
+    line-height: 1.5;
     letter-spacing: -0.012em;
     text-wrap: pretty;
   }
 
-  .solutions-field__details {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(24px, 4vw, 42px);
+  .solutions-field__disclosure {
+    max-width: 100%;
   }
 
-  .solutions-field__details p {
-    max-width: 36ch;
+  .solutions-field__disclosure summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(100%, 620px);
+    min-height: 48px;
+    padding: 10px 16px 10px 0;
+    box-sizing: border-box;
+    color: color-mix(in srgb, var(--field-color) 78%, white 16%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition:
+      color 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .solutions-field__disclosure summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .solutions-field__disclosure summary:hover {
+    color: color-mix(in srgb, var(--field-color) 88%, white 12%);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  .solutions-field__disclosure summary:focus-visible {
+    outline: 2px solid var(--field-color);
+    outline-offset: 5px;
+  }
+
+  .solutions-field__summary-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+  }
+
+  .solutions-field__summary-icon::before,
+  .solutions-field__summary-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 1px;
+    background: currentColor;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .solutions-field__summary-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .solutions-field__disclosure[open] .solutions-field__summary-icon::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  .solutions-field__disclosure[open] .solutions-field__summary-icon::after {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  .solutions-field__details {
+    max-width: 620px;
+    padding: clamp(28px, 4vw, 38px) 0 6px;
+    animation: solution-details-reveal 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .solutions-field__detail-copy {
+    max-width: 59ch;
     margin: 0;
     color: var(--text-body);
     line-height: 1.7;
     text-wrap: pretty;
+  }
+
+  .solutions-field__detail-note {
+    max-width: 60ch;
+    margin: 24px 0 0;
+    color: var(--text-soft);
+    font-size: 0.94rem;
+    line-height: 1.65;
+    text-wrap: pretty;
+  }
+
+  @keyframes solution-details-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .solutions-process {
@@ -576,12 +691,7 @@ const schema = JSON.stringify({
     }
 
     .solutions-field__details {
-      grid-template-columns: 1fr;
-      gap: 22px;
-    }
-
-    .solutions-field__details p {
-      max-width: 52ch;
+      max-width: 100%;
     }
 
     .solutions-process {
@@ -654,16 +764,20 @@ const schema = JSON.stringify({
     }
 
     .solutions-field__lead {
-      margin-bottom: 26px;
+      margin-bottom: 22px;
       font-size: 1.18rem;
       line-height: 1.48;
     }
 
-    .solutions-field__details {
-      gap: 20px;
+    .solutions-field__disclosure summary {
+      width: 100%;
     }
 
-    .solutions-field__details p {
+    .solutions-field__details {
+      padding-top: 26px;
+    }
+
+    .solutions-field__detail-copy {
       font-size: 1rem;
       line-height: 1.68;
     }

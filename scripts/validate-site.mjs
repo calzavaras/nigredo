@@ -316,6 +316,16 @@ async function validateHtml(html, relativePath) {
     addError(`${relativePath}: expected exactly one <h1>, found ${h1Count}`);
   }
 
+  const visibleText = stripTags(
+    html
+      .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+  );
+  const forbiddenCharacter = visibleText.match(/[ßẞ–—]/)?.[0];
+  if (forbiddenCharacter) {
+    addError(`${relativePath}: visible text contains forbidden character "${forbiddenCharacter}"`);
+  }
+
   validateJsonLd(html, relativePath, relativePath === 'public/404.html' ? undefined : canonical);
   await validateOpenGraphImage(html, relativePath);
 
@@ -381,6 +391,11 @@ function validateTrailingSlashes(text, relativePath) {
 
 async function validateSitemap() {
   const sitemap = await readFile(join(PUBLIC_DIR, 'sitemap-0.xml'), 'utf8');
+  let sitemapImageCount = 0;
+
+  if (!sitemap.includes('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"')) {
+    addError('public/sitemap-0.xml: missing Google image sitemap namespace');
+  }
 
   for (const match of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
     const block = match[1];
@@ -401,6 +416,29 @@ async function validateSitemap() {
         addError(`public/sitemap-0.xml: lastmod ${sitemapLastmod} does not match JSON-LD dateModified ${schemaDateModified} -> ${loc}`);
       }
     }
+
+    const pageImages = new Set();
+    for (const imageMatch of block.matchAll(/<image:loc>([^<]+)<\/image:loc>/g)) {
+      const imageUrl = imageMatch[1];
+      sitemapImageCount += 1;
+      if (pageImages.has(imageUrl)) {
+        addError(`public/sitemap-0.xml: duplicate image URL for ${loc ?? 'unknown URL'} -> ${imageUrl}`);
+      }
+      pageImages.add(imageUrl);
+      validateSiteUrl(imageUrl, 'public/sitemap-0.xml', 'image sitemap loc', { allowAssets: true });
+
+      const localPath = getLocalPublicPath(imageUrl);
+      if (!localPath || !existsSync(localPath)) {
+        addError(`public/sitemap-0.xml: image sitemap asset does not exist -> ${imageUrl}`);
+      }
+      if (!/\.(?:avif|gif|jpe?g|png|svg|webp)$/i.test(new URL(imageUrl).pathname)) {
+        addError(`public/sitemap-0.xml: unsupported image sitemap format -> ${imageUrl}`);
+      }
+    }
+  }
+
+  if (sitemapImageCount === 0) {
+    addError('public/sitemap-0.xml: image sitemap contains no images');
   }
 
   for (const url of [
@@ -503,10 +541,54 @@ async function validateRobots() {
     addError('static/robots.txt: missing canonical sitemap declaration');
   }
 
-  for (const crawler of ['OAI-SearchBot', 'ChatGPT-User', 'GPTBot']) {
-    const allowed = new RegExp(`User-agent:\\s*${crawler}[\\s\\S]*?Allow:\\s*/(?:\\s|$)`, 'i');
-    if (!allowed.test(robots)) {
-      addError(`static/robots.txt: ${crawler} is not explicitly allowed`);
+  const groups = [];
+  let agents = [];
+  let rules = [];
+  const flushGroup = () => {
+    if (agents.length > 0) groups.push({ agents, rules });
+    agents = [];
+    rules = [];
+  };
+
+  for (const rawLine of robots.split(/\r?\n/)) {
+    const line = rawLine.replace(/#.*$/, '').trim();
+    if (!line) {
+      if (rules.length > 0) flushGroup();
+      continue;
+    }
+
+    const userAgent = line.match(/^user-agent:\s*(.+)$/i)?.[1]?.toLowerCase();
+    if (userAgent) {
+      if (rules.length > 0) flushGroup();
+      agents.push(userAgent);
+      continue;
+    }
+
+    const rule = line.match(/^(allow|disallow):\s*(.*)$/i);
+    if (rule && agents.length > 0) {
+      rules.push({ directive: rule[1].toLowerCase(), path: rule[2].trim() });
+    }
+  }
+  flushGroup();
+
+  const groupFor = (crawler) => groups.find((group) => group.agents.includes(crawler.toLowerCase()));
+  const hasRule = (group, directive, path) => group?.rules.some((rule) => rule.directive === directive && rule.path === path);
+
+  const wildcard = groupFor('*');
+  if (!hasRule(wildcard, 'allow', '/') || !hasRule(wildcard, 'disallow', '/send-mail.php')) {
+    addError('static/robots.txt: wildcard group must allow the site and block send-mail.php');
+  }
+
+  for (const crawler of ['OAI-SearchBot', 'ChatGPT-User', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot']) {
+    const group = groupFor(crawler);
+    if (!hasRule(group, 'allow', '/') || !hasRule(group, 'disallow', '/send-mail.php')) {
+      addError(`static/robots.txt: ${crawler} must be explicitly allowed while send-mail.php stays blocked`);
+    }
+  }
+
+  for (const crawler of ['GPTBot', 'ClaudeBot', 'anthropic-ai']) {
+    if (!hasRule(groupFor(crawler), 'disallow', '/')) {
+      addError(`static/robots.txt: ${crawler} must be excluded from training crawls`);
     }
   }
 }
@@ -531,6 +613,10 @@ async function validateServerConfig() {
 
   if (!/<Files\s+"send-mail\.php">[\s\S]*Header\s+set\s+X-Robots-Tag\s+"noindex,\s*nofollow,\s*noarchive"[\s\S]*<\/Files>/i.test(htaccess)) {
     addError('static/.htaccess: missing X-Robots-Tag for send-mail.php');
+  }
+
+  if (!/<FilesMatch\s+"\\\.\(\?:html\|php\)\$">[\s\S]*Header\s+set\s+Content-Language\s+"de-CH"[\s\S]*<\/FilesMatch>/i.test(htaccess)) {
+    addError('static/.htaccess: missing de-CH Content-Language header for HTML and PHP');
   }
 }
 
@@ -558,6 +644,15 @@ async function main() {
     validateTrailingSlashes(text, `static/${file}`);
     if (!text.includes('https://www.nigredo.ch/')) {
       addError(`static/${file}: missing canonical URL https://www.nigredo.ch/`);
+    }
+    const forbiddenCharacter = text.match(/[ßẞ–—]/)?.[0];
+    if (forbiddenCharacter) {
+      addError(`static/${file}: contains forbidden character "${forbiddenCharacter}"`);
+    }
+    for (const location of sitemapLocations) {
+      if (!text.includes(location)) {
+        addError(`static/${file}: missing indexable sitemap URL -> ${location}`);
+      }
     }
   }
 

@@ -17,14 +17,14 @@ const schema = JSON.stringify({
       "@type": "WebPage",
       "@id": "https://www.nigredo.ch/datenschutz/#webpage",
       "name": "Datenschutz | Nigredo",
-      "description": "Datenschutzerklärung von Nigredo mit transparenter Information über Datenerhebung und Datennutzung.",
+      "description": "Datenschutzerklärung von Nigredo zu Hosting, Umami Cloud, Kontaktformular, Sicherheitscookies und deinen Rechten.",
       "url": "https://www.nigredo.ch/datenschutz/",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": "https://www.nigredo.ch/datenschutz/#breadcrumb" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-04-28"
+      "dateModified": "2026-07-31"
     }
   ]
 });
@@ -32,7 +32,7 @@ const schema = JSON.stringify({
 
 <Layout
   title="Datenschutz | Nigredo"
-  description="Datenschutzerklärung von Nigredo. Transparente Information über die Erhebung und Nutzung deiner Daten."
+  description="Datenschutzerklärung von Nigredo zu Hosting, Umami Cloud, Kontaktformular, Sicherheitscookies und deinen Rechten."
   canonical="https://www.nigredo.ch/datenschutz/"
   schema={schema}
 >
@@ -47,7 +47,7 @@ const schema = JSON.stringify({
 
       <div class="fade-up legal-hero">
         <h1 id="datenschutz-title" class="legal-hero__title">Datenschutz</h1>
-        <p class="hero-lead legal-hero__lead">Kurz und klar: was gesammelt wird, warum und wer dafür verantwortlich ist.</p>
+        <p class="hero-lead legal-hero__lead">Welche Daten verarbeitet werden, warum das geschieht und wer dafür verantwortlich ist.</p>
       </div>
 
         <div class="legal-text-block fade-up delay-100">
@@ -70,15 +70,16 @@ const schema = JSON.stringify({
             <span class="legal-num">02</span>
             <div>
               <h2>Hosting</h2>
-              <p>Diese Website wird bei <strong>Hosttech</strong> in der Schweiz gehostet. Der Hosting-Provider speichert automatisch Server-Logs (IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit). Diese Daten werden ausschliesslich zu technischen Zwecken erhoben und unterliegen dem schweizerischen Datenschutzgesetz (DSG).</p>
+              <p>Diese Website wird bei <strong>Hosttech</strong> in der Schweiz gehostet. Beim Aufruf verarbeitet der Hostinganbieter automatisch technische Verbindungsdaten wie IP-Adresse, Browsertyp, Betriebssystem, Datum und Uhrzeit. Diese Serverprotokolle dienen dem sicheren und zuverlässigen Betrieb der Website.</p>
             </div>
           </section>
 
           <section class="legal-item">
             <span class="legal-num">03</span>
             <div>
-              <h2>Analyse-Tools & Cookies</h2>
-              <p>Diese Website nutzt <strong>Umami Analytics</strong>, ein datenschutzfreundliches, cookiefreies Analyse-Tool. Umami erfasst anonymisierte Nutzungsdaten (z.B. besuchte Seiten, Verweildauer) ohne persönlich identifizierbare Informationen zu speichern. Es werden keine Cookies gesetzt und keine Daten an Dritte weitergegeben. Die Verarbeitung erfolgt in Übereinstimmung mit dem Schweizer Datenschutzgesetz (DSG).</p>
+              <h2>Analyse und Cookies</h2>
+              <p>Diese Website nutzt <strong>Umami Cloud</strong> für eine sparsame Reichweitenmessung. Erfasst werden technische Nutzungsdaten wie aufgerufene Seiten, Verweildauer, verweisende Seite, Browser, Betriebssystem, Gerätetyp und ungefähres Herkunftsland. Umami setzt dafür keine Analysecookies ein, verfolgt Besucher nicht über verschiedene Websites hinweg und speichert nach eigenen Angaben keine persönlich identifizierbaren Informationen.</p>
+              <p>Die Analysedaten werden durch den externen Anbieter Umami verarbeitet. Umami nennt für sein Cloudangebot Serverstandorte in der Europäischen Union und den USA. Beim Absenden des Kontaktformulars können zusätzlich technisch notwendige Sicherheits- und Sitzungscookies gesetzt werden. Sie dienen ausschliesslich dem Schutz vor missbräuchlichen Anfragen.</p>
             </div>
           </section>
 
@@ -86,7 +87,8 @@ const schema = JSON.stringify({
             <span class="legal-num">04</span>
             <div>
               <h2>Kontaktaufnahme</h2>
-              <p>Wenn du mich per E-Mail kontaktierst, werden deine Angaben (E-Mail-Adresse, Name, Nachricht) gespeichert, um deine Anfrage zu bearbeiten. Diese Daten werden nicht ohne deine Einwilligung weitergegeben.</p>
+              <p>Wenn du das Kontaktformular nutzt, werden dein Name, deine E-Mail-Adresse, optional deine Telefonnummer und dein Betreff sowie deine Nachricht verarbeitet. Die Angaben werden als E-Mail an mein Postfach übermittelt und dort zur Bearbeitung deiner Anfrage gespeichert. Der dabei eingesetzte E-Mail-Anbieter kann an der Übertragung und Speicherung beteiligt sein.</p>
+              <p>Zum Schutz vor Spam wird die IP Adresse für eine kurze Zugriffssperre in einen Hashwert umgewandelt. Das Kontaktformular speichert dabei keine lesbare IP Adresse. Bitte übermittle über das Formular keine besonders schützenswerten Personendaten. Für vertrauliche Unterlagen vereinbaren wir einen geeigneten Übertragungsweg.</p>
             </div>
           </section>
 
@@ -94,15 +96,15 @@ const schema = JSON.stringify({
             <span class="legal-num">05</span>
             <div>
               <h2>Deine Rechte</h2>
-              <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten. Kontaktiere mich dafür einfach per E-Mail.</p>
+              <p>Du hast im Rahmen des anwendbaren Datenschutzrechts insbesondere das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner Personendaten. Nutze dafür das Kontaktformular und beschreibe kurz, worum es geht.</p>
             </div>
           </section>
 
           <section class="legal-item">
             <span class="legal-num">06</span>
             <div>
-              <h2>SSL-Verschlüsselung</h2>
-              <p>Diese Website nutzt SSL-Verschlüsselung für die sichere Übertragung von Daten. Verschlüsselte Seiten erkennst du am «https://» in der Adresszeile und am Schloss-Symbol im Browser.</p>
+              <h2>Verschlüsselte Verbindung</h2>
+              <p>Diese Website überträgt Daten über eine verschlüsselte HTTPS-Verbindung. Du erkennst sie am «https://» in der Adresszeile und am Schloss-Symbol im Browser.</p>
             </div>
           </section>
         </div>

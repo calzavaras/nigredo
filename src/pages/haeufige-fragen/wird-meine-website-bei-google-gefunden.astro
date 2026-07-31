@@ -44,7 +44,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-06-04",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-31",
       "isAccessibleForFree": true
     }
   ]
@@ -80,7 +80,7 @@ const schema = JSON.stringify({
         <a href="#faktoren">Was Google einordnen muss</a>
         <a href="#inhalt">Warum Suchabsicht wichtiger ist als Wortmenge</a>
         <a href="#dauer">Wann Ergebnisse sichtbar werden</a>
-        <a href="#nigredo">Wie Nigredo Sichtbarkeit vorbereitet</a>
+        <a href="#nigredo">Wie ich Sichtbarkeit vorbereite</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
@@ -104,9 +104,9 @@ const schema = JSON.stringify({
           Technische Verbesserungen können rasch erfasst werden. Neue Platzierungen entwickeln sich meist über Wochen oder Monate, besonders bei umkämpften Suchbegriffen. Verlässliche Sichtbarkeit entsteht durch Qualität, Relevanz und kontinuierliche Weiterentwicklung.
         </p>
 
-        <h2 id="nigredo">Wie Nigredo Sichtbarkeit vorbereitet</h2>
+        <h2 id="nigredo">Wie ich Sichtbarkeit vorbereite</h2>
         <p>
-          Nigredo verbindet technische Suchmaschinenoptimierung mit präziser Inhaltsarbeit. Jede Seite erhält eine eindeutige Funktion, passende Metadaten und eine Struktur, die Menschen wie Suchmaschinen gut verstehen können.
+          Ich verbinde technische Suchmaschinenoptimierung mit präziser Inhaltsarbeit. Jede Seite erhält eine eindeutige Funktion, passende Metadaten und eine Struktur, die Menschen wie Suchmaschinen gut verstehen können.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -121,11 +121,11 @@ const schema = JSON.stringify({
               <span>Wann eine Vorlage genügt und wann eine massgeschneiderte Lösung sinnvoller ist.</span>
             </a>
             <a href="/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/">
-              <strong>Was muss beim Datenschutz beachtet werden?</strong>
+              <strong>Was muss meine Website beim Datenschutz beachten?</strong>
               <span>Was das Schweizer Datenschutzgesetz für deine Website bedeutet, von Cookies bis Analyse.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Welche laufenden Kosten entstehen?</strong>
+              <strong>Was kostet eine Website nach dem Start?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
           </div>
@@ -144,11 +144,13 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--faq-neon-a);
     --page-accent-b: var(--faq-neon-b);
-    --page-accent: var(--faq-neon-a);
+    --page-accent-c: var(--faq-neon-c);
+    --page-accent: var(--faq-neon-c);
   }
 
   .faq-article {
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
+    --faq-c: var(--faq-neon-c);
   }
 </style>

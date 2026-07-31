@@ -44,7 +44,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-18",
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-07-31",
       "isAccessibleForFree": true
     }
   ]
@@ -80,7 +80,7 @@ const schema = JSON.stringify({
         <a href="#cms">Wann ein CMS sinnvoll ist</a>
         <a href="#eigenstaendigkeit">Wann weniger Technik besser ist</a>
         <a href="#grenzen">Welche Änderungen besser begleitet bleiben</a>
-        <a href="#uebergabe">Wie Nigredo die Übergabe gestaltet</a>
+        <a href="#uebergabe">Wie ich die Übergabe gestalte</a>
       </nav>
 
       <div class="faq-article__content fade-up delay-100">
@@ -104,9 +104,9 @@ const schema = JSON.stringify({
           Redaktionelle Änderungen sind etwas anderes als Eingriffe in Navigation, Formulare, Analyse oder technische Integrationen. Solche Anpassungen betreffen oft mehrere Bereiche und sollten deshalb fachlich geprüft werden.
         </p>
 
-        <h2 id="uebergabe">Wie Nigredo die Übergabe gestaltet</h2>
+        <h2 id="uebergabe">Wie ich die Übergabe gestalte</h2>
         <p>
-          Nigredo klärt früh, wie viel Eigenständigkeit gewünscht ist, und richtet die Website darauf aus. Du erhältst eine verständliche Lösung mit eindeutigen Zuständigkeiten, damit die Pflege im Alltag leicht bleibt.
+          Ich kläre früh, wie viel Eigenständigkeit du wünschst, und richte die Website darauf aus. Du erhältst eine verständliche Verwaltung mit eindeutigen Zuständigkeiten, damit die Pflege im Alltag leicht bleibt.
         </p>
 
         <section class="related-faqs" aria-labelledby="related-faqs-title">
@@ -117,7 +117,7 @@ const schema = JSON.stringify({
               <span>Welche Faktoren den Preis beeinflussen und wie Zusatzaufwand sauber eingeordnet wird.</span>
             </a>
             <a href="/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/">
-              <strong>Welche laufenden Kosten entstehen?</strong>
+              <strong>Was kostet eine Website nach dem Start?</strong>
               <span>Welche laufenden Kosten nach dem Launch entstehen, von Hosting bis Wartung.</span>
             </a>
             <a href="/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/">
@@ -125,7 +125,7 @@ const schema = JSON.stringify({
               <span>Wann eine Vorlage genügt und wann eine massgeschneiderte Lösung sinnvoller ist.</span>
             </a>
             <a href="/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/">
-              <strong>Was muss beim Datenschutz beachtet werden?</strong>
+              <strong>Was muss meine Website beim Datenschutz beachten?</strong>
               <span>Was das Schweizer Datenschutzgesetz für deine Website bedeutet, von Cookies bis Analyse.</span>
             </a>
           </div>
@@ -144,11 +144,13 @@ const schema = JSON.stringify({
   :global(body) {
     --page-accent-a: var(--faq-neon-a);
     --page-accent-b: var(--faq-neon-b);
-    --page-accent: var(--faq-neon-a);
+    --page-accent-c: var(--faq-neon-c);
+    --page-accent: var(--faq-neon-c);
   }
 
   .faq-article {
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
+    --faq-c: var(--faq-neon-c);
   }
 </style>

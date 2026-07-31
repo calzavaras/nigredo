@@ -41,6 +41,7 @@ function unlockScroll() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
+  initHeaderScrollState();
   initFaqAnchorNavigation();
   initScrollAnimations();
   if (document.getElementById('contact-form')) initContactForm();
@@ -55,6 +56,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.hero-glow').forEach(el => el.classList.add('animated'));
   }, TIMING.HERO_GLOW_DELAY);
 });
+
+function initHeaderScrollState() {
+  const header = document.querySelector('.floating-header');
+  const homeHero = document.querySelector('.home-hero');
+  if (!header) return;
+
+  header.classList.add('site-header-polish');
+  if (homeHero) header.classList.add('home-header-polish');
+
+  let rafPending = false;
+  function updateHeader() {
+    header.classList.toggle('is-scrolled', window.scrollY > 32);
+    rafPending = false;
+  }
+
+  updateHeader();
+  window.addEventListener('scroll', () => {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(updateHeader);
+  }, { passive: true });
+}
 
 function initFaqAnchorNavigation() {
   const faqNavLinks = Array.from(document.querySelectorAll('.faq-article__nav a[href^="#"]'));

@@ -23,7 +23,7 @@ const pageCount = getReferencePageCount();
 const rawHref = getReferencePageHref(pageNumber);
 const pageHref = rawHref.endsWith('/') ? rawHref : `${rawHref}/`;
 const pageUrl = `https://www.nigredo.ch${pageHref}`;
-const referenceArchiveModified = '2026-07-30';
+const referenceArchiveModified = '2026-07-31';
 const rawPrevHref = getReferencePageHref(pageNumber - 1);
 const prevHref = rawPrevHref.endsWith('/') ? rawPrevHref : `${rawPrevHref}/`;
 const rawNextHref = pageNumber < pageCount ? getReferencePageHref(pageNumber + 1) : undefined;
@@ -48,7 +48,7 @@ const schema = JSON.stringify({
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
       name: `Referenzprojekte, Seite ${pageNumber} | Nigredo`,
-      description: 'Weitere Websites, KI-Anwendungen, Wissenssysteme und digitale Werkzeuge von Nigredo. Echte Aufgaben, nachvollziehbare Lösungen und funktionierende Ergebnisse.',
+      description: 'Weitere Websites, Wissenssysteme, lokale Anwendungen und Software mit KI von Nigredo. Mit Aufgabe, Umsetzung und Ergebnis.',
       inLanguage: 'de-CH',
       datePublished: '2025-06-01',
       dateModified: referenceArchiveModified,
@@ -71,13 +71,13 @@ const schema = JSON.stringify({
 
 <Layout
   title={`Referenzprojekte, Seite ${pageNumber} | Nigredo`}
-  description="Weitere Websites, KI-Anwendungen, Wissenssysteme und digitale Werkzeuge von Nigredo. Echte Aufgaben, nachvollziehbare Lösungen und funktionierende Ergebnisse."
+  description="Weitere Websites, Wissenssysteme, lokale Anwendungen und Software mit KI von Nigredo. Mit Aufgabe, Umsetzung und Ergebnis."
   canonical={pageUrl}
   ogTitle={`Referenzen, Seite ${pageNumber} | Nigredo`}
-  ogDescription="Echte Aufgaben, nachvollziehbare Lösungen und funktionierende Ergebnisse."
+  ogDescription="Weitere digitale Projekte von Nigredo mit Aufgabe, Umsetzung und Ergebnis."
   ogImageAlt="Nigredo Referenzen mit weiteren Projekten"
   twitterTitle={`Referenzen, Seite ${pageNumber} | Nigredo`}
-  twitterDescription="Echte Aufgaben, nachvollziehbare Lösungen und funktionierende Ergebnisse."
+  twitterDescription="Weitere Websites, Software und digitale Werkzeuge von Nigredo."
   schema={schema}
   prevUrl={prevUrl}
   nextUrl={nextUrl}
