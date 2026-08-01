@@ -9,7 +9,7 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-07-31
+Last-Updated: 2026-08-01
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 

@@ -14,7 +14,7 @@ export default defineConfig({
         const url = item.url;
         if (url === 'https://www.nigredo.ch/') {
           item.priority = 1.0;
-          item.lastmod = new Date('2026-07-31');
+          item.lastmod = new Date('2026-08-01');
         }
         else if (url === 'https://www.nigredo.ch/digitale-loesungen/') {
           item.priority = 0.95;
