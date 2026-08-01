@@ -163,16 +163,6 @@ body {
   position: relative;
 }
 
-body::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  background: url("/assets/nigredo-noise.png") repeat;
-  background-size: 96px 96px;
-}
-
 body::before {
   content: "";
   position: absolute;
