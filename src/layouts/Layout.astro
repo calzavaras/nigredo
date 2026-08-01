@@ -21,6 +21,10 @@ interface Props {
   ogImageType?: string;
   twitterTitle?: string;
   twitterDescription?: string;
+  author?: string;
+  profileFirstName?: string;
+  profileLastName?: string;
+  profileUsername?: string;
   schema?: string;
   preloadImage?: string;
   preloadImageType?: string;
@@ -59,6 +63,10 @@ const {
   ogImageType,
   twitterTitle,
   twitterDescription,
+  author = 'Nigredo',
+  profileFirstName,
+  profileLastName,
+  profileUsername,
   schema,
   preloadImage,
   preloadImageType,
@@ -200,7 +208,8 @@ const siteIdentitySchema = JSON.stringify({
       "name": "Marco Calzavara",
       "givenName": "Marco",
       "familyName": "Calzavara",
-      "jobTitle": "Gründer und Full Stack Developer",
+      "jobTitle": "Unternehmer, Gründer und Full Stack Developer",
+      "description": "Marco Calzavara ist Unternehmer, Gründer von Nigredo und Full Stack Developer in St. Gallen. Er verbindet Führung, Gestaltung, Softwareentwicklung und KI.",
       "url": "https://www.nigredo.ch/marco-calzavara/",
       "mainEntityOfPage": { "@id": "https://www.nigredo.ch/marco-calzavara/#webpage" },
       "image": {
@@ -213,7 +222,18 @@ const siteIdentitySchema = JSON.stringify({
         "height": 1000,
         "caption": "Marco Calzavara, Gründer von Nigredo in St. Gallen"
       },
-      "worksFor": { "@id": "https://www.nigredo.ch/#organization" }
+      "worksFor": { "@id": "https://www.nigredo.ch/#organization" },
+      "affiliation": {
+        "@type": "Organization",
+        "@id": "https://happypath.ch/#organization",
+        "name": "HappyPath GmbH",
+        "url": "https://happypath.ch/"
+      },
+      "knowsAbout": ["Führung", "Unternehmertum", "Webdesign", "Softwareentwicklung", "Künstliche Intelligenz", "Branding", "User Experience Design", "Automatisierung"],
+      "sameAs": [
+        "https://ch.linkedin.com/in/calzavara-marco",
+        "https://github.com/calza"
+      ]
     }
   ]
 });
@@ -249,7 +269,7 @@ const siteIdentitySchema = JSON.stringify({
 
   <title>{title}</title>
   <meta name="description" content={description}>
-  <meta name="author" content="Nigredo">
+  <meta name="author" content={author}>
   <meta name="publisher" content="Nigredo">
   <meta name="robots" content={robots}>
   <link rel="canonical" href={canonicalUrl}>
@@ -264,6 +284,9 @@ const siteIdentitySchema = JSON.stringify({
   <meta property="og:url" content={canonicalUrl}>
   <meta property="og:locale" content="de_CH">
   <meta property="og:site_name" content="Nigredo">
+  {ogType === 'profile' && profileFirstName && <meta property="profile:first_name" content={profileFirstName}>}
+  {ogType === 'profile' && profileLastName && <meta property="profile:last_name" content={profileLastName}>}
+  {ogType === 'profile' && profileUsername && <meta property="profile:username" content={profileUsername}>}
   {ogImage && <meta property="og:image" content={ogImage}>}
   {ogImage && <meta property="og:image:secure_url" content={ogImage}>}
   {ogImage && <meta property="og:image:alt" content={ogImageAlt}>}

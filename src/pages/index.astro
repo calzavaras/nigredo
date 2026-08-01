@@ -213,15 +213,15 @@ const services = [
 
 <style>
   :global(body) {
-    --page-accent-a: var(--home-neon-a);
-    --page-accent-b: var(--home-neon-b);
-    --page-accent-c: var(--home-neon-c);
-    --page-accent: var(--home-neon-c);
+    --page-accent-a: oklch(72% 0.29 342);
+    --page-accent-b: oklch(67% 0.22 252);
+    --page-accent-c: oklch(68% 0.3 326);
+    --page-accent: var(--page-accent-c);
     --page-title-gradient: linear-gradient(
       102deg in oklab,
-      oklch(72% 0.28 333) 0%,
-      oklch(67% 0.29 316) 50%,
-      oklch(63% 0.28 294) 100%
+      var(--page-accent-a) 0%,
+      var(--page-accent-c) 38%,
+      var(--page-accent-b) 100%
     );
     --text-body: rgba(245, 245, 247, 0.76);
     --text-soft: rgba(255, 255, 255, 0.64);

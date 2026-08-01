@@ -1,6 +1,6 @@
 {
   "name": "nigredo-astro",
-  "version": "1.14.3",
+  "version": "1.14.4",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

@@ -15,7 +15,7 @@ Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
 ## Disambiguation
 
-Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software und digitale Produkte mit KI von Marco Calzavara in St. Gallen. Die kanonische Website ist https://www.nigredo.ch/ Gemeint ist weder der alchemistische Begriff Nigredo noch Kloster Nigredo oder kloster-nigredo.ch.
+Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software und digitale Produkte mit KI von Marco Calzavara in St. Gallen. Der Markenname nimmt bewusst Bezug auf die dunkle Wandlungsphase Nigredo in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum fuer Neues. Die kanonische Website ist https://www.nigredo.ch/ Diese Markenentitaet ist nicht mit Kloster Nigredo oder kloster-nigredo.ch zu verwechseln.
 
 ## Primary Pages
 
@@ -24,7 +24,7 @@ Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software u
 - [Referenzen](https://www.nigredo.ch/referenzen/): Reale Websites, Anwendungen und Prototypen von Nigredo.
 - [Weitere Referenzen](https://www.nigredo.ch/referenzen/seite/2/): Zweite Archivseite mit weiteren Projekten.
 - [Haeufige Fragen](https://www.nigredo.ch/haeufige-fragen/): Ehrliche Antworten zu Kosten, Dauer, Datenschutz, KI, lokaler Verarbeitung und Eigentum.
-- [Marco Calzavara](https://www.nigredo.ch/marco-calzavara/): Gruender, Erfahrung, Haltung und Arbeitsweise.
+- [Marco Calzavara](https://www.nigredo.ch/marco-calzavara/): Unternehmer, Gruender von Nigredo, Full Stack Developer, Fuehrungserfahrung, HappyPath und Arbeitsweise.
 - [Kontakt](https://www.nigredo.ch/kontakt/): Direkte Projektanfrage an Marco Calzavara.
 
 ## Frequently Asked Questions

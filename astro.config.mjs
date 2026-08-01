@@ -58,7 +58,7 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/marco-calzavara/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-07-31');
+          item.lastmod = new Date('2026-08-01');
         }
         else if (url === 'https://www.nigredo.ch/kontakt/') {
           item.priority = 0.93;

@@ -15,7 +15,7 @@ Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 
 ## Eindeutige Zuordnung
 
-Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software und digitale Produkte mit KI von Marco Calzavara in St. Gallen. Diese Entitaet ist weder der allgemeine alchemistische Begriff Nigredo noch Kloster Nigredo oder kloster-nigredo.ch.
+Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software und digitale Produkte mit KI von Marco Calzavara in St. Gallen. Der Markenname nimmt bewusst Bezug auf die dunkle Wandlungsphase Nigredo in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum fuer Neues. Diese Markenentitaet ist nicht mit Kloster Nigredo oder kloster-nigredo.ch zu verwechseln.
 
 ## Unternehmensprofil
 
@@ -206,13 +206,17 @@ Die dreisprachige Website erklaert TextRoom fuer Schweizer IV Stellen. 15 von 26
 ## Marco Calzavara
 
 URL: https://www.nigredo.ch/marco-calzavara/
-Title: Marco Calzavara | Gruender von Nigredo
-Description: Marco Calzavara verbindet Fuehrungserfahrung, Geschaeftssinn, Gestaltung, Softwareentwicklung und KI zu digitalen Produkten mit Charakter.
+Title: Marco Calzavara | Unternehmer und Gruender von Nigredo
+Description: Marco Calzavara ist Unternehmer, Gruender von Nigredo und Full Stack Developer in St. Gallen. Er verbindet Fuehrung, Gestaltung, Softwareentwicklung und KI.
 H1: Ein Mensch. 1001 Ideen.
 
-Marco Calzavara ist Gruender und direkter Ansprechpartner von Nigredo. Seit 2009 arbeitet er bei der IV Stelle und seit 2011 in einer Fuehrungsfunktion. Er hat Unternehmen gegruendet, aufgebaut und verkauft und fuehrt gemeinsam mit einem Geschaeftspartner die HappyPath GmbH.
+Marco Calzavara ist Unternehmer, Full Stack Developer, Gruender und direkter Ansprechpartner von Nigredo. Seit 2009 arbeitet er bei der IV Stelle und seit 2011 in einer Fuehrungsfunktion. Heute leitet er ein Expertenteam und entwickelt eine Abteilung fachlich und organisatorisch weiter.
 
-Er verbindet Fuehrungserfahrung, Einfuehlungsvermoegen, Geschaeftssinn, Gestaltung und moderne Technologie. Ein Netzwerk aus Fachleuten erweitert die persoenlich gefuehrte Zusammenarbeit bei Bedarf.
+Parallel dazu hat er mehrere Unternehmen gegruendet und aufgebaut, einige davon spaeter verkauft. Derzeit fuehrt er gemeinsam mit einem Geschaeftspartner die HappyPath GmbH. Deren Software TextRoom wird bei der Mehrheit der IV Stellen in der Schweiz eingesetzt.
+
+Der Markenname Nigredo bezieht sich auf die dunkle Phase der Wandlung in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum fuer etwas Neues. Diese Bedeutung praegt Marcos Arbeitsweise.
+
+Marco Calzavara verbindet Fuehrung, Einfuehlungsvermoegen, Geschaeftssinn, Gestaltung, Softwareentwicklung und KI. Ein System aus mehreren hundert spezialisierten KI Agenten unterstuetzt Recherche, Strategie, Gestaltung, Entwicklung und Gegenpruefung. Richtung, Urteil und Verantwortung bleiben bei Marco Calzavara. Ein ausgewaehltes Fachnetzwerk erweitert die persoenlich gefuehrte Zusammenarbeit bei Bedarf.
 
 Externe Profile:
 

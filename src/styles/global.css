@@ -39,9 +39,9 @@ html::-webkit-scrollbar {
   --solutions-neon-a: var(--brand-cyan);
   --solutions-neon-c: var(--brand-blue);
   --solutions-neon-b: var(--brand-violet);
-  --about-neon-a: var(--brand-sun);
-  --about-neon-c: #FF9B70;
-  --about-neon-b: var(--brand-coral);
+  --about-neon-a: oklch(73% 0.17 32);
+  --about-neon-c: oklch(70% 0.22 8);
+  --about-neon-b: oklch(68% 0.26 336);
   --contact-neon-a: var(--brand-purple);
   --contact-neon-c: #8B4DE6;
   --contact-neon-b: var(--brand-violet);
@@ -3296,6 +3296,9 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
+  isolation: isolate;
   box-shadow:
     inset 0 0 0 2px rgba(5, 5, 5, 0.7),
     0 10px 28px rgba(0, 0, 0, 0.32);
@@ -3305,21 +3308,27 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: inherit;
+  overflow: hidden;
+  overflow: clip;
+  clip-path: inset(0 round 50%);
 }
 
 .about-strip__portrait img {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: inherit;
   object-fit: cover;
   object-position: 50% 50%;
   mix-blend-mode: lighten;
   filter: contrast(1.015);
+  transform: translateZ(0);
   transition: transform 0.7s var(--ease-spring), filter 0.5s ease;
 }
 
 .about-strip:hover .about-strip__portrait img {
-  transform: scale(1.025);
+  transform: translateZ(0) scale(1.025);
   filter: contrast(1.015);
 }
 

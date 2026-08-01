@@ -20,14 +20,17 @@ const schema = JSON.stringify({
     {
       "@type": ["AboutPage", "ProfilePage"],
       "@id": `${pageUrl}#webpage`,
-      "name": "Marco Calzavara | Gründer von Nigredo",
+      "name": "Marco Calzavara | Unternehmer und Gründer von Nigredo",
+      "headline": "Marco Calzavara, Unternehmer und Gründer von Nigredo",
+      "description": "Marco Calzavara ist Unternehmer, Gründer von Nigredo und Full Stack Developer in St. Gallen. Er verbindet Führung, Gestaltung, Softwareentwicklung und KI.",
       "url": pageUrl,
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-31",
+      "dateModified": "2026-08-01",
       "isAccessibleForFree": true,
+      "author": { "@id": "https://www.nigredo.ch/#person" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "about": { "@id": "https://www.nigredo.ch/#person" },
       "primaryImageOfPage": {
@@ -49,34 +52,47 @@ const schema = JSON.stringify({
       "name": "Marco Calzavara",
       "givenName": "Marco",
       "familyName": "Calzavara",
-      "jobTitle": "Gründer und Full Stack Developer",
-      "description": "Marco Calzavara verbindet Führungserfahrung, Geschäftssinn, Gestaltung, Softwareentwicklung und KI zu digitalen Produkten mit Charakter.",
+      "jobTitle": "Unternehmer, Gründer und Full Stack Developer",
+      "description": "Marco Calzavara ist Unternehmer, Gründer von Nigredo und Full Stack Developer in St. Gallen. Er verbindet Führung, Gestaltung, Softwareentwicklung und KI.",
       "url": pageUrl,
       "mainEntityOfPage": { "@id": `${pageUrl}#webpage` },
       "worksFor": { "@id": "https://www.nigredo.ch/#organization" },
+      "affiliation": { "@id": "https://happypath.ch/#organization" },
+      "knowsAbout": ["Führung", "Unternehmertum", "Webdesign", "Softwareentwicklung", "Künstliche Intelligenz", "Branding", "User Experience Design", "Automatisierung"],
       "image": { "@id": `${pageUrl}#primaryimage` },
       "sameAs": [
         "https://ch.linkedin.com/in/calzavara-marco",
         "https://github.com/calza"
       ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://happypath.ch/#organization",
+      "name": "HappyPath GmbH",
+      "url": "https://happypath.ch/",
+      "description": "HappyPath entwickelt TextRoom, eine Software, die bei der Mehrheit der IV-Stellen in der Schweiz eingesetzt wird."
     }
   ]
 });
 ---
 
 <Layout
-  title="Marco Calzavara | Gründer von Nigredo"
-  description="Marco Calzavara verbindet Führungserfahrung, Geschäftssinn, Gestaltung, Softwareentwicklung und KI zu digitalen Produkten mit Charakter."
+  title="Marco Calzavara | Unternehmer und Gründer von Nigredo"
+  description="Marco Calzavara ist Unternehmer, Gründer von Nigredo und Full Stack Developer in St. Gallen. Er verbindet Führung, Gestaltung, Softwareentwicklung und KI."
   canonical={pageUrl}
-  ogTitle="Marco Calzavara | Gründer von Nigredo"
-  ogDescription="Führungserfahrung, Gestaltung, Softwareentwicklung, KI und persönliche Verantwortung für digitale Produkte mit Charakter."
+  ogTitle="Marco Calzavara | Unternehmer und Gründer von Nigredo"
+  ogDescription="Führung, Unternehmertum, Gestaltung, Softwareentwicklung und KI: Marco Calzavara entwickelt digitale Produkte persönlich und mit klarer Verantwortung."
   ogType="profile"
   ogImage="https://www.nigredo.ch/assets/marco-calzavara-home-v5-photo.jpg"
   ogImageAlt="Marco Calzavara, Gründer von Nigredo"
   ogImageWidth="1000"
   ogImageHeight="1000"
-  twitterTitle="Marco Calzavara | Gründer von Nigredo"
-  twitterDescription="Persönlich geführte Entwicklung für Websites, Software und digitale Produkte mit KI."
+  twitterTitle="Marco Calzavara | Unternehmer und Gründer von Nigredo"
+  twitterDescription="Unternehmer, Full Stack Developer und Gründer von Nigredo in St. Gallen. Führung, Gestaltung, Softwareentwicklung und KI aus einer Hand."
+  author="Marco Calzavara"
+  profileFirstName="Marco"
+  profileLastName="Calzavara"
+  profileUsername="calzavara-marco"
   schema={schema}
   preloadImage="/assets/marco-calzavara-home-v5-photo-500.avif"
   preloadImageType="image/avif"
@@ -130,13 +146,16 @@ const schema = JSON.stringify({
         <div class="au-content-column fade-up delay-150">
           <div class="au-statement">
             <blockquote class="hero-lead about-statement__quote">
-              Die stärkste davon erhält keine lange Präsentation, sondern möglichst bald einen ersten funktionierenden Entwurf.
+              Die stärksten Ideen sind selten sofort offensichtlich. Mich interessiert der Moment, in dem sie sichtbar werden.
             </blockquote>
           </div>
           
           <div class="au-bio">
             <p class="au-bio-intro">
-              Mich interessieren Situationen, in denen etwas klarer, einfacher, schöner oder wirksamer werden könnte. Ich höre genau hin, erkenne Zusammenhänge und verbinde Einfühlungsvermögen, Geschäftssinn, Gestaltung und technische Möglichkeiten zu einer umsetzbaren Richtung. Ideen, die jahrelang auf ihren perfekten Moment warten, sind nicht meine Disziplin.
+              Mich ziehen Aufgaben an, die noch keine klare Form haben. Wo andere einzelne Teile sehen, erkenne ich oft bereits einen Zusammenhang. Ich höre genau hin, ordne, verbinde und folge einer Spur, bis aus einer Ahnung etwas entsteht, das trägt.
+            </p>
+            <p>
+              <em>Nigredo ist in der Alchemie die dunkle Phase der Wandlung. Altes verliert seine Form, Verborgenes tritt hervor. So entsteht Raum für etwas Neues, Schönes und Kraftvolles.</em>
             </p>
             
             <div class="au-bio-more" data-bio-more>
@@ -152,25 +171,22 @@ const schema = JSON.stringify({
               <div id="au-bio-more-content" class="au-bio-more__panel" hidden data-bio-more-panel>
                 <div class="au-bio-more__content">
                   <p>
-                    Seit 2009 arbeite ich bei der IV-Stelle, seit 2011 in einer Führungsfunktion. Heute leite ich ein Expertenteam und verantworte die fachliche und organisatorische Weiterentwicklung einer Abteilung. Diese Arbeit hat meinen Blick geprägt: Menschen verstehen, Interessen erkennen, Informationen ordnen und Entscheidungen so treffen, dass sie im Alltag bestehen.
+                    Mein Weg führt durch Welten, die auf den ersten Blick wenig miteinander zu tun haben und gerade deshalb erstaunlich gut zusammenpassen.
                   </p>
                   <p>
-                    Parallel dazu habe ich Unternehmen gegründet, aufgebaut und verkauft. Gemeinsam mit einem Geschäftspartner führe ich die HappyPath GmbH, die mit TextRoom eine schweizweit eingesetzte Software für Sozialversicherungen entwickelt.
+                    Seit 2009 arbeite ich bei der IV-Stelle, seit 2011 in einer Führungsfunktion. Heute leite ich ein Expertenteam und entwickle eine Abteilung fachlich und organisatorisch weiter. Diese Arbeit hat meinen Blick geschärft: für Menschen, Systeme und jene feinen Zusammenhänge, an denen gute Entscheidungen hängen.
                   </p>
                   <p>
-                    Mit Nigredo verbinde ich Führungserfahrung, Einfühlungsvermögen, Geschäftssinn, Gestaltung und moderne Technologie. Daraus entsteht eine Arbeitsweise, die genau zuhört, zügig entscheidet und Gedanken tatsächlich in Bewegung bringt.
+                    Parallel dazu habe ich mehrere Unternehmen gegründet und aufgebaut, einige davon später verkauft. Derzeit führe ich gemeinsam mit einem Geschäftspartner die HappyPath GmbH. Mit TextRoom entwickeln wir eine Software, die bei der Mehrheit der IV-Stellen in der Schweiz eingesetzt wird. Ideen kenne ich deshalb in verschiedenen Aggregatszuständen: als Skizze, als Herausforderung und als funktionierendes Produkt.
                   </p>
                   <p>
-                    <strong>KI erweitert meine Werkbank.</strong> Ich habe ein System aus mehreren hundert spezialisierten KI-Agenten und abgestimmten Arbeitsabläufen aufgebaut. Sie unterstützen Recherche, Strategie, Text, Gestaltung, Programmierung, Tests und Gegenprüfung. Manche entwickeln Vorschläge. Andere suchen bewusst nach Schwächen oder stellen unbequeme Fragen.
+                    Mit Nigredo verbinde ich Führung, Einfühlungsvermögen, Geschäftssinn, Gestaltung, Softwareentwicklung und KI. Mich fasziniert der Augenblick, in dem sich Komplexität plötzlich ordnet und eine Lösung erscheint, die im Nachhinein beinahe selbstverständlich wirkt.
                   </p>
                   <p>
-                    Ich führe die Ergebnisse zusammen, treffe die Entscheidungen und prüfe, ob das Resultat fachlich, sprachlich, gestalterisch und technisch überzeugt. KI ersetzt weder meine Kreativität noch meine Verantwortung. Sie macht gute Ideen früher sichtbar, besser prüfbar und schneller umsetzbar.
+                    Dafür habe ich ein System aus mehreren hundert spezialisierten KI-Agenten aufgebaut. Einige entwickeln Möglichkeiten, andere suchen Schwächen. Die wertvollsten widersprechen mir.
                   </p>
                   <p>
-                    <strong>Ein gutes Netzwerk gehört dazu.</strong> Für besondere Anforderungen arbeite ich mit Fachleuten für Entwicklung, Datenbanken, Infrastruktur, Sicherheit, Datenschutz und komplexe Systemarchitektur zusammen.
-                  </p>
-                  <p>
-                    Je nach Projekt stelle ich die passende Kombination zusammen. Für dich bleibt die Zusammenarbeit einfach: Ich bin dein direkter Ansprechpartner, halte die Fäden zusammen und stehe für das Ergebnis ein.
+                    Richtung, Urteil und Verantwortung bleiben bei mir. Wenn zusätzliche Tiefe gefragt ist, ergänze ich das Projekt mit ausgewählten Fachleuten aus meinem Netzwerk. Für dich bleibt es einfach: ein direkter Ansprechpartner, kurze Wege und ein Ergebnis, hinter dem ich persönlich stehe.
                   </p>
                   <button type="button" class="au-bio-more__toggle au-bio-more__toggle--close" data-bio-more-close>
                     Weniger anzeigen
@@ -216,18 +232,18 @@ const schema = JSON.stringify({
         <div class="grid-3">
           <article class="card au-principle-card">
             <div class="au-principle-number">01</div>
-            <h3>Ideen wollen Bewegung.</h3>
-            <p class="au-principle-text">Eine Idee gewinnt nicht dadurch an Wert, dass man länger über sie spricht. Fast immer braucht es jemanden, der beginnt.</p>
+            <h3>Sehen, was noch verborgen ist.</h3>
+            <p class="au-principle-text">Die entscheidende Idee liegt oft zwischen den offensichtlichen.</p>
           </article>
           <article class="card au-principle-card">
             <div class="au-principle-number">02</div>
-            <h3>KI vergrössert die Werkbank.</h3>
-            <p class="au-principle-text">Technologie eröffnet Möglichkeiten. Die Richtung entsteht trotzdem aus Verständnis, Urteil und Erfahrung.</p>
+            <h3>Verbinden, was andere getrennt betrachten.</h3>
+            <p class="au-principle-text">Mensch, Geschäft, Gestaltung und Technik ergeben gemeinsam ein anderes Bild.</p>
           </article>
           <article class="card au-principle-card">
             <div class="au-principle-number">03</div>
-            <h3>Stillstand ist höchstens ein kurzer Ladebildschirm.</h3>
-            <p class="au-principle-text">Wenn ein Ablauf einfacher oder eine Idee wirksamer werden kann, fällt es mir schwer, sie einfach liegen zu lassen.</p>
+            <h3>Aus Gedanken Wirklichkeit machen.</h3>
+            <p class="au-principle-text">Eine Idee zeigt ihre Stärke erst, wenn sie eine Form bekommt.</p>
           </article>
         </div>
       </div>
@@ -236,8 +252,8 @@ const schema = JSON.stringify({
       <div class="section about-final-section fade-up">
         <div class="section-cta about-final-cta">
           <span class="cta-label">Direkter Austausch</span>
-          <h2>Eine gute Idee braucht<br><span>noch keinen perfekten Plan.</span></h2>
-          <p>Bring mir den unfertigen Gedanken, das störende Problem oder die Vorstellung, die dich nicht mehr loslässt. Wir finden heraus, was daraus werden kann.</p>
+          <h2>Vielleicht ist die Form schon da.<br><span>Sie muss nur noch gefunden werden.</span></h2>
+          <p>Erzähl mir von dem Gedanken, der dich nicht loslässt, oder von dem Problem, das längst eine bessere Lösung verdient. Wir finden heraus, was darin steckt.</p>
           <div class="hero-cta-group" style="justify-content: center;">
             <a href="/kontakt/" class="btn btn-primary">Direkt schreiben</a>
             <a href="/referenzen/" class="btn btn-ghost">Projekte ansehen</a>
@@ -294,7 +310,8 @@ const schema = JSON.stringify({
     --about-b: var(--about-neon-b);
     --about-c: oklch(24.7% 0.047 44.8);
     --about-d: oklch(13.8% 0.044 20.2);
-    --about-light: var(--about-neon-b);
+    --about-light: var(--about-neon-c);
+    --about-stat-long: oklch(67% 0.14 344);
     --page-accent-a: var(--about-neon-a);
     --page-accent-b: var(--about-neon-b);
     --page-accent-c: var(--about-neon-c);
@@ -400,8 +417,9 @@ const schema = JSON.stringify({
     background: linear-gradient(
       145deg,
       var(--about-a) 0%,
-      var(--about-b) 42%,
-      var(--about-c) 76%,
+      var(--page-accent-c) 36%,
+      var(--about-b) 64%,
+      var(--about-c) 82%,
       var(--about-d) 100%
     );
     border-radius: var(--radius-lg);
@@ -610,20 +628,21 @@ const schema = JSON.stringify({
   }
 
   .au-stat-card:nth-child(2) .au-stat-value {
-    color: var(--about-neon-c);
+    color: var(--page-accent-c);
   }
 
   .au-stat-card:nth-child(3) .au-stat-value {
-    color: var(--about-b);
+    color: var(--about-stat-long);
   }
 
   .au-stat-card:nth-child(4) .au-stat-value {
-    color: var(--about-neon-c);
+    color: var(--page-accent-c);
   }
 
   .au-stat-value--words {
-    font-size: 1.9rem;
-    line-height: 1.05;
+    font-size: 1.78rem;
+    font-weight: 650;
+    line-height: 1.08;
   }
 
   .au-stat-desc {
