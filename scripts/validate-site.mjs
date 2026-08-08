@@ -10,6 +10,7 @@ const PUBLIC_DIR = join(ROOT, 'public');
 const STATIC_DIR = join(ROOT, 'static');
 const HTACCESS_PATH = join(STATIC_DIR, '.htaccess');
 const SITE_ORIGIN = 'https://www.nigredo.ch';
+const ISO_DATETIME_WITH_TIMEZONE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/;
 
 const errors = [];
 const warnings = [];
@@ -125,6 +126,30 @@ function findSchemaNodesByType(node, type, results = []) {
   return results;
 }
 
+function validateSchemaDateModified(node, relativePath) {
+  if (Array.isArray(node)) {
+    for (const item of node) validateSchemaDateModified(item, relativePath);
+    return;
+  }
+
+  if (!node || typeof node !== 'object') return;
+
+  if (Object.hasOwn(node, 'dateModified')) {
+    const value = node.dateModified;
+    if (
+      typeof value !== 'string'
+      || !ISO_DATETIME_WITH_TIMEZONE.test(value)
+      || Number.isNaN(Date.parse(value))
+    ) {
+      addError(`${relativePath}: JSON-LD dateModified must be an ISO 8601 date-time with timezone -> ${String(value)}`);
+    }
+  }
+
+  for (const value of Object.values(node)) {
+    validateSchemaDateModified(value, relativePath);
+  }
+}
+
 function collectPageDateModified(parsed) {
   const candidates = [
     ...findSchemaNodesByType(parsed, 'WebPage'),
@@ -155,6 +180,8 @@ function validateJsonLd(html, relativePath, canonical) {
       addError(`${relativePath}: invalid JSON-LD block #${jsonLdCount} (${error.message})`);
       continue;
     }
+
+    validateSchemaDateModified(parsed, relativePath);
 
     for (const faqPage of findSchemaNodesByType(parsed, 'FAQPage')) {
       const questions = Array.isArray(faqPage.mainEntity) ? faqPage.mainEntity : [];
@@ -411,7 +438,7 @@ async function validateSitemap() {
       addError(`public/sitemap-0.xml: sitemap entry is missing lastmod -> ${loc ?? 'unknown URL'}`);
     } else if (loc && schemaDateModifiedByUrl.has(loc)) {
       const sitemapLastmod = block.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1]?.slice(0, 10);
-      const schemaDateModified = schemaDateModifiedByUrl.get(loc);
+      const schemaDateModified = schemaDateModifiedByUrl.get(loc)?.slice(0, 10);
       if (sitemapLastmod !== schemaDateModified) {
         addError(`public/sitemap-0.xml: lastmod ${sitemapLastmod} does not match JSON-LD dateModified ${schemaDateModified} -> ${loc}`);
       }
