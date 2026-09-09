@@ -1,0 +1,310 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
+
+const liveUrl = 'https://simonamueller.ch';
+const pageUrl = 'https://www.nigredo.ch/referenzen/simona-mueller/';
+const detailImage = '/referenzen/simona-mueller/simona-mueller-kinesiologie-hypnose-website-startseite-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/simona-mueller/simona-mueller-kinesiologie-hypnose-website-startseite-screenshot-2160.avif';
+const ogImage = 'https://www.nigredo.ch/referenzen/simona-mueller/simona-mueller-kinesiologie-hypnose-website-startseite-screenshot-og.jpg';
+
+const schema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://www.nigredo.ch/' },
+        { '@type': 'ListItem', position: 2, name: 'Referenzen', item: 'https://www.nigredo.ch/referenzen/' },
+        { '@type': 'ListItem', position: 3, name: 'Website für Simona Müller', item: pageUrl },
+      ],
+    },
+    {
+      '@type': ['WebSite', 'CreativeWork'],
+      '@id': `${pageUrl}#website-project`,
+      name: 'Website für Simona Müller',
+      url: liveUrl,
+      description: 'Persönliche Praxiswebsite für Simona Müller in Zuzwil mit echter Fotografie, klaren Leistungsseiten, Online-Terminbuchung, robusten Formularen und lokaler Auffindbarkeit.',
+      featureList: [
+        'Individuell gestaltete, responsive Praxiswebsite',
+        'Echte Fotografie aus der Praxis und von Simona Müller',
+        'Eigene Leistungsseiten für Kinesiologie, Hypnose und Kinder',
+        'Online-Terminbuchung über Cal.com',
+        'Abgesicherte Kontakt- und Gutscheinformulare',
+        'Geschützte Verwaltung veröffentlichter Kundenstimmen',
+        'Lokale Suchmaschinenoptimierung und strukturierte Daten',
+        'Datenschutzfreundliche Karte und Routenplanung nach Einwilligung',
+      ],
+      inLanguage: 'de-CH',
+      dateCreated: '2026-09-09',
+      creator: { '@id': 'https://www.nigredo.ch/#person' },
+      author: { '@id': 'https://www.nigredo.ch/#person' },
+      publisher: { '@id': 'https://www.nigredo.ch/#organization' },
+      maintainer: { '@id': 'https://www.nigredo.ch/#organization' },
+      isPartOf: { '@id': 'https://www.nigredo.ch/referenzen/#webpage' },
+      about: {
+        '@type': 'ProfessionalService',
+        '@id': `${liveUrl}/#practice`,
+        name: 'Simona Müller – Kinesiologie & Hypnose',
+        url: liveUrl,
+        address: {
+          '@type': 'PostalAddress',
+          postalCode: '9524',
+          addressLocality: 'Zuzwil',
+          addressRegion: 'St. Gallen',
+          addressCountry: 'CH',
+        },
+      },
+      hasPart: [
+        { '@type': 'WebPage', name: 'Kinesiologie in Zuzwil', url: `${liveUrl}/kinesiologie-zuzwil/` },
+        { '@type': 'WebPage', name: 'Hypnosetherapie in Zuzwil', url: `${liveUrl}/hypnosetherapie-zuzwil/` },
+        { '@type': 'WebPage', name: 'Kinesiologie für Kinder', url: `${liveUrl}/kinesiologie-fuer-kinder/` },
+        { '@type': 'ContactPage', name: 'Termin und Kontakt', url: `${liveUrl}/termin-kontakt/` },
+      ],
+      potentialAction: {
+        '@type': 'ContactAction',
+        target: `${liveUrl}/termin-kontakt/`,
+        name: 'Termin bei Simona Müller buchen',
+      },
+      image: ogImage,
+    },
+    {
+      '@type': 'ImageObject',
+      '@id': `${pageUrl}#primaryimage`,
+      url: ogImage,
+      contentUrl: ogImage,
+      width: 1200,
+      height: 630,
+      caption: 'Startseite der Praxiswebsite von Simona Müller mit persönlicher Kinesiologie-Fotografie und direkter Terminbuchung',
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      name: 'Simona Müller: Praxiswebsite für Kinesiologie | Nigredo',
+      url: pageUrl,
+      description: 'Praxiswebsite für Simona Müller in Zuzwil mit echter Fotografie, Online-Terminbuchung, Formularen, Kundenstimmen und lokaler Auffindbarkeit.',
+      isPartOf: { '@id': 'https://www.nigredo.ch/#website' },
+      inLanguage: 'de-CH',
+      datePublished: '2026-09-09',
+      dateModified: '2026-09-09T22:00:00+02:00',
+      about: { '@id': `${pageUrl}#website-project` },
+      mainEntity: { '@id': `${pageUrl}#website-project` },
+      primaryImageOfPage: { '@id': `${pageUrl}#primaryimage` },
+      publisher: { '@id': 'https://www.nigredo.ch/#organization' },
+      breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+      isAccessibleForFree: true,
+    },
+  ],
+});
+---
+
+<Layout
+  title="Simona Müller: Praxiswebsite für Kinesiologie | Nigredo"
+  description="Praxiswebsite für Simona Müller in Zuzwil mit echter Fotografie, Online-Terminbuchung, Formularen, Kundenstimmen und lokaler Auffindbarkeit."
+  canonical={pageUrl}
+  ogTitle="Simona Müller: Achtsam bis zum Termin"
+  ogDescription="Persönliche Praxiswebsite für Kinesiologie und Hypnose mit echten Bildern, klaren Leistungen, Online-Terminen und robusten Formularen."
+  ogImage={ogImage}
+  ogImageAlt="Startseite der Praxiswebsite von Simona Müller mit persönlicher Kinesiologie-Fotografie und direkter Terminbuchung"
+  ogImageWidth="1200"
+  ogImageHeight="630"
+  twitterTitle="Simona Müller: Achtsam bis zum Termin"
+  twitterDescription="Persönliche Praxiswebsite für Kinesiologie und Hypnose mit echten Bildern, Online-Terminen und robusten Formularen."
+  schema={schema}
+  preloadImage={detailImageAvif}
+  preloadImageType="image/avif"
+>
+  <section class="section pt-sub case-page case-page--simona-mueller" aria-labelledby="simona-mueller-title">
+    <div class="hero-glow"></div>
+    <div class="container case-page__container">
+      <Breadcrumb items={[
+        { label: 'Start', href: '/' },
+        { label: 'Referenzen', href: '/referenzen/' },
+        { label: 'Simona Müller' },
+      ]} />
+
+      <a href="/referenzen/" class="case-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Alle Referenzen
+      </a>
+
+      <div class="case-hero fade-up">
+        <div class="case-hero-content">
+          <h1 id="simona-mueller-title" class="home-hero__title case-hero-title"><span class="case-hero-title-line">Simona Müller.</span> <span class="gradient-text">Achtsam bis zum Termin.</span></h1>
+          <p class="hero-lead case-hero-lead">Für Simona Müller entstand eine persönliche Praxiswebsite für Kinesiologie und Hypnose in Zuzwil. Echte Fotografie, klare Leistungsseiten, Online-Terminbuchung und robuste Formulare führen verständlich vom ersten Eindruck bis zur Kontaktaufnahme.</p>
+          <div class="hero-cta-group">
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">Website besuchen</a>
+          </div>
+        </div>
+
+        <div class="case-hero-visual">
+          <div class="case-hero-canvas case-hero-canvas--simona">
+            <button
+              type="button"
+              class="case-hero-float case-hero-float--wide lightbox-trigger"
+              data-gallery={`["${detailImage}"]`}
+              data-gallery-index="0"
+              aria-label="Website-Vorschau vergrössern"
+            >
+              <picture>
+                <source srcset={detailImageAvif} type="image/avif">
+                <img src={detailImage} alt="Startseite der Praxiswebsite von Simona Müller mit persönlicher Kinesiologie-Fotografie und direkter Terminbuchung" width="2160" height="1215" loading="eager" decoding="async" fetchpriority="high">
+              </picture>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-stats case-stats--simona fade-up delay-100" style="--stats-cols: 5;">
+        <div class="case-stat"><strong class="stat-website">Website</strong><span>Individuell gestaltet</span></div>
+        <div class="case-stat"><strong class="stat-website">Termine</strong><span>Online buchbar</span></div>
+        <div class="case-stat"><strong class="stat-website">Google</strong><span>Lokal auffindbar</span></div>
+        <div class="case-stat"><strong class="stat-website">Formulare</strong><span>Kontakt und Gutscheine</span></div>
+        <div class="case-stat"><strong class="stat-website">Stimmen</strong><span>Selbst verwaltbar</span></div>
+      </div>
+
+      <div class="case-section fade-up delay-100">
+        <div class="case-section-hd">
+          <span class="case-eyebrow">Ergebnis im Detail</span>
+          <h2 class="case-section-title">Ein persönlicher Praxisauftritt, der sicher zum nächsten Schritt führt</h2>
+        </div>
+        <div class="case-features">
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10.2A4.8 4.8 0 0 1 13.4 7.6 4.8 4.8 0 0 1 22 10.8C22 16.6 15 21 12 21Z"/><path d="M8.5 12.5c1.7.3 3-1 3.5-2.8.5 1.8 1.8 3.1 3.5 2.8"/></svg></div>
+              <div class="case-feature-text">
+                <h3>Eine Bildwelt, die wirklich zur Praxis gehört</h3>
+                <p>Echte Aufnahmen aus der Praxis und von Simona Müller geben dem Auftritt Nähe und Glaubwürdigkeit. Die ruhige Gestaltung nimmt ihre Farben und ihre persönliche Arbeitsweise auf, ohne in austauschbare Wellness-Bilder oder esoterische Klischees auszuweichen.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 4.5 4.5"/><path d="M8 11h6M11 8v6"/></svg></div>
+              <div class="case-feature-text">
+                <h3>Leistungen verständlich und lokal auffindbar</h3>
+                <p>Kinesiologie, Hypnose und die Begleitung von Kindern erhalten eigene, klar geführte Seiten. Präzise Metadaten, strukturierte Daten, Sitemap und lokale Inhalte machen verständlich, was Simona anbietet, für wen es gedacht ist und wo die Praxis zu finden ist.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/><path d="m9.5 15 1.7 1.7 3.5-3.7"/></svg></div>
+              <div class="case-feature-text">
+                <h3>Termin, Kontakt und Anreise ohne Umwege</h3>
+                <p>Erst-, Folge- und Kindersitzungen lassen sich online über Cal.com auswählen. Telefon, WhatsApp und Kontaktformular bleiben als persönliche Wege erhalten. Karte, Ortsvorschläge und Routen werden erst nach Einwilligung geladen und helfen bei der Anreise nach Zuzwil.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.7 2.8 8.2 7 10 4.2-1.8 7-5.3 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+              <div class="case-feature-text">
+                <h3>Robuste Funktionen für den Praxisalltag</h3>
+                <p>Kontakt- und Gutscheinformulare arbeiten mit abgesichertem PHP-Mailversand und verständlichen Bestätigungen. Veröffentlichte Kundenstimmen werden in einer geschützten SQLite-Datenbank verwaltet. Tastaturbedienung, reduzierte Bewegung und klare Zustände bleiben auf allen Geräten berücksichtigt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="case-date fade-up">Abgeschlossen: September 2026</span>
+
+      <div class="fade-up case-more-section">
+        <span class="case-more-label">Weitere Projekte</span>
+        <CaseMoreReferences />
+      </div>
+
+      <div class="section case-final-section fade-up">
+        <div class="section-cta case-final-cta">
+          <span class="cta-label">Der nächste Schritt</span>
+          <h2>Soll deine Website schon vor dem ersten Gespräch<br><span>Vertrauen schaffen?</span></h2>
+          <p>Wir ordnen Angebot, Inhalte, Bilder und Kontaktwege so, dass Interessierte verstehen, wer du bist und wie sie den nächsten Schritt gehen.</p>
+          <div class="hero-cta-group" style="justify-content: center;">
+            <a href="/kontakt/" class="btn btn-primary">Kontakt aufnehmen</a>
+            <a href="/referenzen/" class="btn btn-ghost">Alle Projekte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  .case-page--simona-mueller {
+    --case-accent: oklch(75% 0.13 91);
+    --case-accent-2: oklch(60% 0.06 154);
+    --page-accent-a: var(--case-accent);
+    --page-accent-b: var(--case-accent-2);
+    --case-title-gradient: var(--page-title-gradient);
+    --case-accent-soft: color-mix(in srgb, var(--case-accent) 16%, transparent);
+    --case-accent-glow: color-mix(in srgb, var(--case-accent) 22%, transparent);
+  }
+
+  body {
+    --page-accent-a: oklch(75% 0.13 91);
+    --page-accent-b: oklch(60% 0.06 154);
+  }
+
+  .case-page--simona-mueller .gradient-text {
+    background: var(--case-title-gradient);
+    background-size: 100% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .case-page--simona-mueller .case-hero-title-line { display: block; }
+
+  .case-page--simona-mueller .case-hero-canvas--simona {
+    background:
+      radial-gradient(ellipse at 42% 45%, rgba(209, 172, 54, 0.2) 0%, rgba(209, 172, 54, 0.06) 50%, transparent 76%),
+      radial-gradient(ellipse at 75% 60%, rgba(109, 133, 118, 0.14) 0%, transparent 58%),
+      #0a0a0c;
+    border-color: rgba(209, 172, 54, 0.2);
+  }
+
+  .case-page--simona-mueller .case-feature:hover {
+    border-color: rgba(209, 172, 54, 0.2);
+    box-shadow: var(--shadow-card-hover), 0 0 28px rgba(209, 172, 54, 0.08);
+  }
+
+  .case-page--simona-mueller .case-feature-icon { color: var(--case-accent); }
+
+  .case-page--simona-mueller .case-feature-icon svg {
+    filter: brightness(1.12) saturate(1.08) drop-shadow(0 0 8px rgba(209, 172, 54, 0.18));
+  }
+
+  .case-page--simona-mueller .case-feature:hover .case-feature-icon svg {
+    filter: brightness(1.2) saturate(1.18) drop-shadow(0 0 12px rgba(209, 172, 54, 0.22));
+  }
+
+  .stat-website {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--case-accent) 90%, white 10%) 0%, color-mix(in srgb, var(--case-accent) 68%, black 18%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .case-stats--simona .case-stat strong {
+    font-size: clamp(1.38rem, 2.05vw, 1.76rem);
+    white-space: nowrap;
+  }
+
+  .case-page--simona-mueller .case-hero-float--wide { width: 82%; }
+
+  @media (max-width: 1024px) {
+    .case-stats--simona .case-stat strong { font-size: clamp(1.24rem, 3vw, 1.52rem); }
+  }
+
+  @media (max-width: 860px) {
+    .case-page--simona-mueller .case-hero-float--wide { width: 100%; }
+  }
+
+  @media (max-width: 680px) {
+    .case-stats--simona .case-stat strong { font-size: clamp(1.16rem, 5.7vw, 1.4rem); }
+  }
+</style>

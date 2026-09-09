@@ -44,6 +44,7 @@ Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software u
 
 ## Reference Projects
 
+- [Simona Müller](https://www.nigredo.ch/referenzen/simona-mueller/): Persönliche Praxiswebsite für Kinesiologie und Hypnose mit echten Bildern, Online-Terminen und robusten Formularen.
 - [Mentra](https://www.nigredo.ch/referenzen/mentra/): Lokales KI Wissenssystem, das Videos mit Suche, Quellen, Reviews und Exporten nutzbar macht.
 - [KI Voice Agent](https://www.nigredo.ch/referenzen/ki-voice-agent/): Prototyp fuer IV Stellen mit Echtzeit Gespraechen, vier Sprachen und Fachwissen zu AHV Hilfsmitteln.
 - [Excel Dashboard](https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/): Lokale Auswertung sensibler Verwaltungsdaten mit Anonymisierung und PDF Export.

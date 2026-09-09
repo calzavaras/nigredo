@@ -9,6 +9,10 @@ const widths = [720, 1080, 1440, 2160];
 
 const projects = [
   {
+    slug: 'simona-mueller',
+    base: 'simona-mueller-kinesiologie-hypnose-website-startseite-screenshot',
+  },
+  {
     slug: 'plan-h',
     base: 'plan-h-hypnosetherapie-website-startseite-screenshot',
   },
