@@ -11,7 +11,7 @@ const referenceEntries = [
     frame: 'app',
     domain: null,
     badge: { text: 'App' },
-    accent: '#d87824',
+    accent: '#a39dff',
     rolle: 'Konzept · Design · Entwicklung · Umsetzung',
     liveUrl: null,
     liveNote: 'Native macOS-App, nicht öffentlich zugänglich',

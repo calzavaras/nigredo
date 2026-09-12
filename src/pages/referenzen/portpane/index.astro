@@ -244,20 +244,19 @@ const schema = JSON.stringify({
 
 <style is:global>
   .case-page--portpane {
-    --case-accent: oklch(74% 0.18 63);
-    --case-accent-2: oklch(64% 0.19 43);
-    --page-accent-c: oklch(69% 0.16 52);
+    --case-accent: oklch(78% 0.15 282);
+    --case-accent-2: oklch(67% 0.16 292);
+    --page-accent-c: oklch(72% 0.16 287);
     --page-accent-a: var(--case-accent);
     --page-accent-b: var(--case-accent-2);
-    --case-title-gradient: linear-gradient(102deg in oklab, var(--case-accent) 0%, var(--page-accent-c) 52%, var(--case-accent-2) 100%);
     --case-accent-soft: color-mix(in srgb, var(--case-accent) 14%, transparent);
     --case-accent-glow: color-mix(in srgb, var(--case-accent) 26%, transparent);
   }
 
   body {
-    --page-accent-a: oklch(74% 0.18 63);
-    --page-accent-c: oklch(69% 0.16 52);
-    --page-accent-b: oklch(64% 0.19 43);
+    --page-accent-a: oklch(78% 0.15 282);
+    --page-accent-c: oklch(72% 0.16 287);
+    --page-accent-b: oklch(67% 0.16 292);
   }
 
   .case-page--portpane .case-hero-float--wide {
@@ -265,19 +264,32 @@ const schema = JSON.stringify({
   }
 
   .case-page--portpane .gradient-text {
-    background: var(--case-title-gradient);
-    background-size: 100% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: var(--case-accent);
   }
 
   .stat-tool {
-    background: var(--case-title-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: var(--case-accent);
+  }
+
+  /* Die Headline bestimmt den Umbruch: Bei schmalen Desktopfenstern
+     würde das lange Wort sonst in die benachbarte Visualisierung ragen. */
+  @media (max-width: 1180px) {
+    .case-page--portpane .case-hero {
+      grid-template-columns: minmax(0, 1fr);
+      gap: clamp(36px, 5vw, 48px);
+    }
+
+    .case-page--portpane .case-hero-content {
+      max-width: 720px;
+    }
+
+    .case-page--portpane .case-hero-visual {
+      width: min(100%, 760px);
+    }
   }
 
   .case-page--portpane .case-hero-canvas--portpane {
