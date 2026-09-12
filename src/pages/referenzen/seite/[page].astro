@@ -23,7 +23,10 @@ const pageCount = getReferencePageCount();
 const rawHref = getReferencePageHref(pageNumber);
 const pageHref = rawHref.endsWith('/') ? rawHref : `${rawHref}/`;
 const pageUrl = `https://www.nigredo.ch${pageHref}`;
-const referenceArchiveModified = '2026-09-09T22:00:00+02:00';
+const pageDescription = pageNumber === 2
+  ? 'Weitere Referenzprojekte von Nigredo: lokale Anwendungen, Websites und Software mit KI, jeweils mit Aufgabe, Umsetzung und Ergebnis.'
+  : `Referenzprojekte von Nigredo auf Archivseite ${pageNumber}: Websites, Software und digitale Werkzeuge mit Aufgabe, Umsetzung und Ergebnis.`;
+const referenceArchiveModified = '2026-09-12T08:00:00+02:00';
 const rawPrevHref = getReferencePageHref(pageNumber - 1);
 const prevHref = rawPrevHref.endsWith('/') ? rawPrevHref : `${rawPrevHref}/`;
 const rawNextHref = pageNumber < pageCount ? getReferencePageHref(pageNumber + 1) : undefined;
@@ -48,7 +51,7 @@ const schema = JSON.stringify({
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
       name: `Referenzprojekte, Seite ${pageNumber} | Nigredo`,
-      description: 'Weitere Websites, Wissenssysteme, lokale Anwendungen und Software mit KI von Nigredo. Mit Aufgabe, Umsetzung und Ergebnis.',
+      description: pageDescription,
       inLanguage: 'de-CH',
       datePublished: '2025-06-01',
       dateModified: referenceArchiveModified,
@@ -71,7 +74,7 @@ const schema = JSON.stringify({
 
 <Layout
   title={`Referenzprojekte, Seite ${pageNumber} | Nigredo`}
-  description="Weitere Websites, Wissenssysteme, lokale Anwendungen und Software mit KI von Nigredo. Mit Aufgabe, Umsetzung und Ergebnis."
+  description={pageDescription}
   canonical={pageUrl}
   ogTitle={`Referenzen, Seite ${pageNumber} | Nigredo`}
   ogDescription="Weitere digitale Projekte von Nigredo mit Aufgabe, Umsetzung und Ergebnis."

@@ -9,7 +9,7 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-08-01
+Last-Updated: 2026-09-12
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
@@ -23,6 +23,7 @@ Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software u
 - [Websites, Software und KI](https://www.nigredo.ch/digitale-loesungen/): Individuelle digitale Loesungen fuer konkrete Aufgaben.
 - [Referenzen](https://www.nigredo.ch/referenzen/): Reale Websites, Anwendungen und Prototypen von Nigredo.
 - [Weitere Referenzen](https://www.nigredo.ch/referenzen/seite/2/): Zweite Archivseite mit weiteren Projekten.
+- [Weitere Referenzen, Seite 3](https://www.nigredo.ch/referenzen/seite/3/): Dritte Archivseite mit weiteren Projekten.
 - [Haeufige Fragen](https://www.nigredo.ch/haeufige-fragen/): Ehrliche Antworten zu Kosten, Dauer, Datenschutz, KI, lokaler Verarbeitung und Eigentum.
 - [Marco Calzavara](https://www.nigredo.ch/marco-calzavara/): Unternehmer, Gruender von Nigredo, Full Stack Developer, Fuehrungserfahrung, HappyPath und Arbeitsweise.
 - [Kontakt](https://www.nigredo.ch/kontakt/): Direkte Projektanfrage an Marco Calzavara.
@@ -44,6 +45,7 @@ Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software u
 
 ## Reference Projects
 
+- [Portpane](https://www.nigredo.ch/referenzen/portpane/): Native macOS-App für SFTP, FTPS und FTP mit lokaler und entfernter Dateiansicht, Transferwarteschlange, Schlüsselbund-Speicherung und sicheren Zugangsarchiven.
 - [Simona Müller](https://www.nigredo.ch/referenzen/simona-mueller/): Persönliche Praxiswebsite für Kinesiologie und Hypnose mit echten Bildern, Online-Terminen und robusten Formularen.
 - [Mentra](https://www.nigredo.ch/referenzen/mentra/): Lokales KI Wissenssystem, das Videos mit Suche, Quellen, Reviews und Exporten nutzbar macht.
 - [KI Voice Agent](https://www.nigredo.ch/referenzen/ki-voice-agent/): Prototyp fuer IV Stellen mit Echtzeit Gespraechen, vier Sprachen und Fachwissen zu AHV Hilfsmitteln.

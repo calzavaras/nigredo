@@ -1,0 +1,301 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
+
+const pageUrl = 'https://www.nigredo.ch/referenzen/portpane/';
+const detailImage = '/referenzen/portpane/portpane-file-transfer-app-screenshot-2160.webp';
+const detailImageAvif = '/referenzen/portpane/portpane-file-transfer-app-screenshot-2160.avif';
+const ogImage = 'https://www.nigredo.ch/referenzen/portpane/portpane-file-transfer-app-screenshot-og.jpg';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.nigredo.ch/" },
+        { "@type": "ListItem", "position": 2, "name": "Referenzen", "item": "https://www.nigredo.ch/referenzen/" },
+        { "@type": "ListItem", "position": 3, "name": "Portpane", "item": pageUrl }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${pageUrl}#software`,
+      "name": "Portpane",
+      "url": pageUrl,
+      "description": "Native macOS-App für sichere Serververbindungen, lokale und entfernte Dateiansichten sowie nachvollziehbare Übertragungen per SFTP, FTPS oder FTP.",
+      "applicationCategory": "UtilitiesApplication",
+      "applicationSubCategory": "File Transfer",
+      "operatingSystem": "macOS 26 oder neuer",
+      "inLanguage": "de-CH",
+      "dateCreated": "2026-09-11",
+      "datePublished": "2026-09-12",
+      "featureList": [
+        "Lokale und entfernte Dateiansicht mit verstellbarem Trenner",
+        "Serververbindungen per SFTP, FTPS und FTP",
+        "Uploads, Downloads und rekursive Serverordner-Übertragungen",
+        "Transferwarteschlange mit Fortschritt, Wiederaufnahme und Abbruch",
+        "Serverpasswörter im macOS-Schlüsselbund",
+        "Nachvollziehbare Hostschlüssel- und Zertifikatsentscheidungen",
+        "Zugangs-Export und -Import über portpanevault-Archive"
+      ],
+      "screenshot": [
+        {
+          "@type": "ImageObject",
+          "url": ogImage,
+          "caption": "Portpane mit lokaler und entfernter Dateiansicht, SFTP-Verbindung und aktiver Transferwarteschlange"
+        }
+      ],
+      "creator": { "@id": "https://www.nigredo.ch/#organization" }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": `${pageUrl}#primaryimage`,
+      "url": ogImage,
+      "contentUrl": ogImage,
+      "width": 1200,
+      "height": 630,
+      "caption": "Portpane Dateimanager für macOS mit lokaler und entfernter Dateiansicht"
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      "name": "Portpane: SFTP- und FTP-Dateimanager für macOS | Nigredo",
+      "url": pageUrl,
+      "description": "Native macOS-App für SFTP, FTPS und FTP mit lokaler und entfernter Dateiansicht, Transferwarteschlange und Schlüsselbund-Speicherung.",
+      "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
+      "inLanguage": "de-CH",
+      "datePublished": "2026-09-12",
+      "dateModified": "2026-09-12T08:00:00+02:00",
+      "about": { "@id": `${pageUrl}#software` },
+      "mainEntity": { "@id": `${pageUrl}#software` },
+      "primaryImageOfPage": { "@id": `${pageUrl}#primaryimage` },
+      "publisher": { "@id": "https://www.nigredo.ch/#organization" },
+      "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".case-hero-title", ".case-hero-lead", ".case-section-title"]
+      },
+      "isAccessibleForFree": true
+    }
+  ]
+});
+---
+
+<Layout
+  title="Portpane: SFTP- und FTP-Dateimanager für macOS | Nigredo"
+  description="Native macOS-App für SFTP, FTPS und FTP mit lokaler und entfernter Dateiansicht, Transferwarteschlange und Schlüsselbund-Speicherung."
+  canonical={pageUrl}
+  ogTitle="Portpane: Serverdateien. Klar verwaltet."
+  ogDescription="Native macOS-App für SFTP, FTPS und FTP mit zwei Dateiansichten, sicherer Verbindung und nachvollziehbaren Übertragungen."
+  ogImage={ogImage}
+  ogImageAlt="Portpane mit lokaler und entfernter Dateiansicht, SFTP-Verbindung und aktiver Transferwarteschlange"
+  ogImageWidth="1200"
+  ogImageHeight="630"
+  twitterTitle="Portpane: SFTP- und FTP-Dateimanager für macOS"
+  twitterDescription="Lokale und entfernte Dateien verwalten, übertragen und sicher im Blick behalten."
+  schema={schema}
+  preloadImage={detailImageAvif}
+  preloadImageType="image/avif"
+>
+  <section class="section pt-sub case-page case-page--portpane" aria-labelledby="portpane-title">
+    <div class="hero-glow"></div>
+    <div class="container case-page__container">
+      <Breadcrumb items={[
+        { label: 'Start', href: '/' },
+        { label: 'Referenzen', href: '/referenzen/' },
+        { label: 'Portpane' }
+      ]} />
+
+      <a href="/referenzen/" class="case-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Alle Referenzen
+      </a>
+
+      <div class="case-hero fade-up">
+        <div class="case-hero-content">
+          <h1 id="portpane-title" class="home-hero__title case-hero-title">Portpane.<br><span class="gradient-text">Serverdateien. Klar verwaltet.</span></h1>
+          <p class="hero-lead case-hero-lead">
+            Portpane bringt lokale Dateien und Serverordner in einem ruhigen macOS-Werkzeug zusammen. Verbindungen per SFTP, FTPS oder FTP, sichere Zugangsdaten und laufende Übertragungen bleiben sichtbar, ohne dass der Terminal zur Voraussetzung wird.
+          </p>
+        </div>
+
+        <div class="case-hero-visual">
+          <div class="case-hero-canvas case-hero-canvas--portpane">
+            <button
+              type="button"
+              class="case-hero-float case-hero-float--wide lightbox-trigger"
+              data-gallery={`["${detailImage}"]`}
+              data-gallery-index="0"
+              aria-label="Portpane Screenshot vergrössern"
+            >
+              <picture>
+                <source srcset={detailImageAvif} type="image/avif">
+                <img
+                  src={detailImage}
+                  alt="Portpane mit lokaler und entfernter Dateiansicht, SFTP-Verbindung und aktiver Transferwarteschlange"
+                  width="2160"
+                  height="1359"
+                  loading="eager"
+                  decoding="async"
+                  fetchpriority="high"
+                >
+              </picture>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-stats fade-up delay-100" style="--stats-cols: 4;">
+        <div class="case-stat">
+          <strong class="stat-tool">SFTP</strong>
+          <span>FTPS und FTP</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-tool">2 Seiten</strong>
+          <span>Lokal und Server</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-tool">Queue</strong>
+          <span>Transfers im Blick</span>
+        </div>
+        <div class="case-stat">
+          <strong class="stat-tool">Keychain</strong>
+          <span>Zugänge geschützt</span>
+        </div>
+      </div>
+
+      <div class="case-section fade-up delay-100">
+        <div class="case-section-hd">
+          <span class="case-eyebrow">Ergebnis im Detail</span>
+          <h2 class="case-section-title">Dateitransfer, der verständlich und kontrollierbar bleibt</h2>
+        </div>
+        <div class="case-features">
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--portpane">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#portpane-feature-grad-1)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="portpane-feature-grad-1" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--case-accent)"/><stop offset="1" stop-color="var(--case-accent-2)"/></linearGradient></defs><rect x="3" y="5" width="7" height="14" rx="1"/><rect x="14" y="5" width="7" height="14" rx="1"/><path d="M10 12h4"/><path d="m12 10 2 2-2 2"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Lokal und Server im selben Fenster</h3>
+                <p>Zwei Dateiansichten zeigen Arbeitsordner und Serverziel nebeneinander. Pfade bleiben nachvollziehbar, der Trenner lässt sich anpassen und Dateien können direkt per Kontextmenü oder Drag-and-drop übertragen werden.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--portpane">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#portpane-feature-grad-2)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="portpane-feature-grad-2" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--case-accent)"/><stop offset="1" stop-color="var(--case-accent-2)"/></linearGradient></defs><path d="M4 7h16"/><path d="M4 12h11"/><path d="M4 17h8"/><path d="m16 15 4 3-4 3v-6Z"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Transfers mit klarer Rückmeldung</h3>
+                <p>Uploads und Downloads laufen über eine eigene Warteschlange. Fortschritt, Zielpfad, Fehler, Wiederholungen und Abbruch bleiben sichtbar, auch wenn mehrere Dateien oder ganze Serverordner übertragen werden.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--portpane">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#portpane-feature-grad-3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="portpane-feature-grad-3" x1="3" y1="3" x2="21" y2="21" gradientUnits="userSpaceOnUse"><stop stop-color="var(--case-accent)"/><stop offset="1" stop-color="var(--case-accent-2)"/></linearGradient></defs><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Sicherheit bleibt verständlich</h3>
+                <p>Serverpasswörter werden im macOS-Schlüsselbund gespeichert. Hostschlüssel und Zertifikate erhalten eine nachvollziehbare Vertrauensentscheidung, während SFTP, FTPS und FTP passend zur Verbindung gewählt werden.</p>
+              </div>
+            </div>
+          </div>
+          <div class="case-feature">
+            <div class="case-feature-body">
+              <div class="case-feature-icon case-feature-icon--portpane">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#portpane-feature-grad-4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><defs><linearGradient id="portpane-feature-grad-4" x1="4" y1="2" x2="20" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="var(--case-accent)"/><stop offset="1" stop-color="var(--case-accent-2)"/></linearGradient></defs><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
+              </div>
+              <div class="case-feature-text">
+                <h3>Zugänge sauber übertragen</h3>
+                <p>Portpane exportiert Serverprofile als portpanevault-Archiv und trennt normale Migrationen bewusst von ausdrücklich gekennzeichneten Zugangsdatenimporten. So bleibt klar, welche Informationen eine Datei tatsächlich enthält.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="case-date fade-up">Abgeschlossen: September 2026</span>
+
+      <div class="fade-up case-more-section">
+        <span class="case-more-label">Weitere Projekte</span>
+        <CaseMoreReferences />
+      </div>
+
+      <div class="section case-final-section fade-up">
+        <div class="section-cta case-final-cta">
+          <span class="cta-label">Der nächste Schritt</span>
+          <h2>Welche Dateien sollten<br><span>einfacher unterwegs sein?</span></h2>
+          <p>Wenn Serverzugänge, Arbeitsordner oder wiederkehrende Übertragungen unnötig kompliziert werden, entsteht Raum für ein passendes Werkzeug.</p>
+          <div class="hero-cta-group" style="justify-content: center;">
+            <a href="/kontakt/" class="btn btn-primary">Kontakt aufnehmen</a>
+            <a href="/referenzen/" class="btn btn-ghost">Alle Projekte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  .case-page--portpane {
+    --case-accent: oklch(74% 0.18 63);
+    --case-accent-2: oklch(64% 0.19 43);
+    --page-accent-c: oklch(69% 0.16 52);
+    --page-accent-a: var(--case-accent);
+    --page-accent-b: var(--case-accent-2);
+    --case-title-gradient: linear-gradient(102deg in oklab, var(--case-accent) 0%, var(--page-accent-c) 52%, var(--case-accent-2) 100%);
+    --case-accent-soft: color-mix(in srgb, var(--case-accent) 14%, transparent);
+    --case-accent-glow: color-mix(in srgb, var(--case-accent) 26%, transparent);
+  }
+
+  body {
+    --page-accent-a: oklch(74% 0.18 63);
+    --page-accent-c: oklch(69% 0.16 52);
+    --page-accent-b: oklch(64% 0.19 43);
+  }
+
+  .case-page--portpane .case-hero-float--wide {
+    width: 100%;
+  }
+
+  .case-page--portpane .gradient-text {
+    background: var(--case-title-gradient);
+    background-size: 100% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .stat-tool {
+    background: var(--case-title-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .case-page--portpane .case-hero-canvas--portpane {
+    background:
+      radial-gradient(ellipse at 45% 45%, color-mix(in srgb, var(--case-accent) 24%, transparent) 0%, color-mix(in srgb, var(--case-accent-2) 11%, transparent) 48%, rgba(255, 255, 255, 0.02) 100%),
+      #0a0a0c;
+    border-color: color-mix(in srgb, var(--case-accent) 30%, transparent);
+  }
+
+  .case-page--portpane .case-feature:hover {
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: var(--shadow-card-hover), 0 0 28px color-mix(in srgb, var(--case-accent) 12%, transparent);
+  }
+
+  .case-page--portpane .case-feature-icon svg {
+    filter:
+      brightness(1.14)
+      saturate(1.18)
+      drop-shadow(0 0 8px color-mix(in srgb, var(--case-accent) 18%, transparent));
+  }
+</style>

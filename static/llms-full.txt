@@ -9,7 +9,7 @@ Kanonischer Markenname: Nigredo
 Kanonische URL: https://www.nigredo.ch/
 Registrierte Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-08-01
+Letzte Aktualisierung: 2026-09-12
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 
@@ -141,6 +141,20 @@ Title: Referenzen: Websites, Software und KI | Nigredo
 Description: Ausgewaehlte Websites, Software und KI Projekte von Nigredo mit Aufgabe, Umsetzung und Ergebnis.
 
 Weitere Archivseite: https://www.nigredo.ch/referenzen/seite/2/
+
+Dritte Archivseite: https://www.nigredo.ch/referenzen/seite/3/
+
+### Portpane: SFTP- und FTP-Dateimanager für macOS
+
+URL: https://www.nigredo.ch/referenzen/portpane/
+Kategorie: App
+Projektabschluss: September 2026
+
+Portpane ist eine native macOS-App für sichere Serververbindungen und nachvollziehbaren Dateitransfer. Lokale Dateien und entfernte Serverordner stehen in zwei anpassbaren Dateiansichten nebeneinander. SFTP, FTPS und FTP werden unterstützt, während laufende Uploads, Downloads und rekursive Serverordner-Übertragungen in einer eigenen Warteschlange sichtbar bleiben.
+
+Kernpunkte: lokale und entfernte Dateiansicht, Drag-and-drop und Kontextmenüs, SFTP/FTPS/FTP, Upload- und Download-Warteschlange, Fortschritt und Wiederaufnahme, sichere Ablage von Serverpasswörtern im macOS-Schlüsselbund, nachvollziehbare Hostschlüssel- und Zertifikatsentscheidungen sowie portpanevault-Archive für Zugangsübertragung.
+
+Die App ist nicht öffentlich zugänglich. Sie wurde als eigenständiges macOS-Werkzeug für Menschen entwickelt, die Websites und Server ohne unnötige Terminalschritte pflegen.
 
 ### Simona Mueller: Praxiswebsite fuer Kinesiologie und Hypnose
 
