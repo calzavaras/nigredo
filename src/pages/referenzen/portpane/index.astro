@@ -115,12 +115,10 @@ const schema = JSON.stringify({
       </a>
 
       <div class="case-hero fade-up">
-        <div class="case-hero-content">
-          <h1 id="portpane-title" class="home-hero__title case-hero-title">Portpane.<br><span class="gradient-text">Serverdateien. Klar verwaltet.</span></h1>
-          <p class="hero-lead case-hero-lead">
-            Portpane bringt lokale Dateien und Serverordner in einem ruhigen macOS-Werkzeug zusammen. Verbindungen per SFTP, FTPS oder FTP, sichere Zugangsdaten und laufende Übertragungen bleiben sichtbar, ohne dass der Terminal zur Voraussetzung wird.
-          </p>
-        </div>
+        <h1 id="portpane-title" class="home-hero__title case-hero-title">Portpane.<br><span class="gradient-text">Serverdateien. Klar verwaltet.</span></h1>
+        <p class="hero-lead case-hero-lead">
+          Portpane bringt lokale Dateien und Serverordner in einem ruhigen macOS-Werkzeug zusammen. Verbindungen per SFTP, FTPS oder FTP, sichere Zugangsdaten und laufende Übertragungen bleiben sichtbar, ohne dass der Terminal zur Voraussetzung wird.
+        </p>
 
         <div class="case-hero-visual">
           <div class="case-hero-canvas case-hero-canvas--portpane">
@@ -275,20 +273,41 @@ const schema = JSON.stringify({
     color: var(--case-accent);
   }
 
-  /* Die Headline bestimmt den Umbruch: Bei schmalen Desktopfenstern
-     würde das lange Wort sonst in die benachbarte Visualisierung ragen. */
-  @media (max-width: 1180px) {
+  /* Die lange Headline nutzt die ganze Inhaltsbreite. Lead und Screenshot
+     teilen sich erst darunter das Raster und können deshalb nie kollidieren. */
+  .case-page--portpane .case-hero {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+    grid-template-areas:
+      "title title"
+      "lead visual";
+    align-items: start;
+    column-gap: clamp(36px, 5vw, 56px);
+    row-gap: clamp(28px, 3.5vw, 42px);
+  }
+
+  .case-page--portpane .case-hero-title {
+    grid-area: title;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  .case-page--portpane .case-hero-lead {
+    grid-area: lead;
+  }
+
+  .case-page--portpane .case-hero-visual {
+    grid-area: visual;
+    width: 100%;
+  }
+
+  @media (max-width: 860px) {
     .case-page--portpane .case-hero {
       grid-template-columns: minmax(0, 1fr);
-      gap: clamp(36px, 5vw, 48px);
-    }
-
-    .case-page--portpane .case-hero-content {
-      max-width: 720px;
-    }
-
-    .case-page--portpane .case-hero-visual {
-      width: min(100%, 760px);
+      grid-template-areas:
+        "title"
+        "lead"
+        "visual";
+      row-gap: 30px;
     }
   }
 
