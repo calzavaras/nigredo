@@ -9,7 +9,7 @@ Kanonischer Markenname: Nigredo
 Kanonische URL: https://www.nigredo.ch/
 Registrierte Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-09-12
+Letzte Aktualisierung: 2026-09-19
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 
@@ -30,14 +30,13 @@ Title: Nigredo St. Gallen | Websites, KI und digitale Produkte
 Description: Nigredo entwickelt individuelle Websites, Software und digitale Produkte mit KI. Persoenlich gefuehrt von Marco Calzavara in St. Gallen.
 H1: Ich arbeite weiter, wo andere aufhoeren.
 
-Aus Ideen werden Websites, Anwendungen, Marken und Inhalte. Nigredo verbindet Gestaltung, Technik, KI und ein starkes Fachnetzwerk zu digitalen Produkten, die rasch Form annehmen und nicht nach Vorlage aussehen.
+Nigredo entwickelt individuelle Websites, KI-Loesungen und digitale Werkzeuge fuer Selbststaendige, KMU und Organisationen. Marco Calzavara begleitet die Projekte von der ersten Idee bis zur Umsetzung direkt und zieht bei Bedarf sein Fachnetzwerk hinzu.
 
 Leistungsfelder:
 
-- Individuelle Websites, die ein Angebot verstaendlich machen, Vertrauen schaffen und zum naechsten Schritt fuehren.
-- Software, Plattformen, Dashboards und lokale Anwendungen fuer Aufgaben, bei denen Standardprodukte nicht passen.
-- Assistenten und Automatisierungen mit KI, wenn sie Arbeit tatsaechlich verbessern.
-- Namen, Logos, Texte, Bildwelten und Inhaltsstrukturen, die einem Vorhaben Identitaet geben.
+- Websites mit klarer Aufgabe, etwa eine Praxiswebsite mit direkter Online-Terminbuchung.
+- KI und Software fuer konkrete Arbeit, etwa ein lokales Dashboard oder ein Wissenssystem mit Quellen.
+- Namen, Texte, Gestaltung und Inhaltsstrukturen fuer einen eigenstaendigen, verstaendlichen Auftritt.
 
 ## Websites, Software und KI
 
@@ -167,6 +166,24 @@ Die persoenliche Praxiswebsite fuer Simona Mueller in Zuzwil verbindet echte Fot
 
 Kernpunkte: individuelle Gestaltung, echte Praxisfotografie, lokale Auffindbarkeit, Online Termine ueber Cal.com, abgesicherte Kontakt- und Gutscheinformulare, verwaltbare Kundenstimmen sowie datenschutzfreundliche Karte und Routenplanung.
 
+### HappyPath: Website fuer TextRoom
+
+URL: https://www.nigredo.ch/referenzen/happypath/
+Live: https://happypath.ch/
+Kategorie: Website
+Projektabschluss: Juli 2026
+
+Die dreisprachige Website erklaert TextRoom fuer Schweizer IV Stellen. 15 von 26 IV Stellen arbeiten mit der Software. Deutsch, Franzoesisch und Italienisch sind vollstaendig umgesetzt. Lokale Schriften, eine gehaertete Inhaltssicherheitsrichtlinie und direkte Kontaktwege ergaenzen den Auftritt.
+
+### Plan H: Website fuer Hypnosetherapie
+
+URL: https://www.nigredo.ch/referenzen/plan-h/
+Live: https://www.plan-h.ch/
+Kategorie: Website
+Projektabschluss: Juni 2026
+
+Die Praxiswebsite verbindet eine ruhige Gestaltung mit lokaler Suchmaschinenoptimierung, strukturierten Daten, Erfahrungsberichten und direkten Kontaktwegen per Formular, Telefon und WhatsApp.
+
 ### Mentra: Wissen aus Videos
 
 URL: https://www.nigredo.ch/referenzen/mentra/
@@ -176,6 +193,23 @@ Projektabschluss: Juni 2026
 Mentra verwandelt Videos in nutzbares Wissen. Die lokale Anwendung erfasst Inhalte, ordnet wichtige Stellen, beantwortet Fragen mit Quellen und plant Wiederholungen. Daten und Modelle bleiben unter der Kontrolle des Kunden.
 
 Kernpunkte: lokaler Betrieb, Videoarchiv, frei waehlbare KI Modelle, semantische Suche, KI Chat mit Quellen, Reviews, Highlights, Quizfragen und Exporte.
+
+### ThinkTank: Wissensplattform fuer KMU
+
+URL: https://www.nigredo.ch/referenzen/thinktank/
+Kategorie: Software
+Projektabschluss: Mai 2026
+
+ThinkTank buendelt das Wissen eines KMU. Themenwelten, Suche, Verantwortlichkeiten, Wiedervorlagen und Verlauf sorgen dafuer, dass Informationen auffindbar und aktuell bleiben.
+
+### Therapie Ost: Praxiswebsite
+
+URL: https://www.nigredo.ch/referenzen/therapie-ost/
+Live: https://www.therapie-ost.ch/
+Kategorie: Website
+Projektabschluss: April 2026
+
+Die Website fuer Therapie Ost in St. Gallen schafft Vertrauen, erklaert Leistungen verstaendlich und fuehrt ohne Umwege zur Online Terminbuchung. Echte Praxisbilder, eine ruhige Farbwelt und eine eindeutige Positionierung tragen den Auftritt.
 
 ### KI Voice Agent fuer IV Stellen
 
@@ -192,41 +226,6 @@ Kategorie: Software
 Projektabschluss: Juni 2025
 
 Das Dashboard verarbeitet sensible Personaldaten vollstaendig im Browser. Excel Dateien werden lokal importiert, ausgewertet, anonymisiert und als PDF ausgegeben. Es braucht keinen Server und keinen Upload in eine Cloud.
-
-### Therapie Ost: Praxiswebsite
-
-URL: https://www.nigredo.ch/referenzen/therapie-ost/
-Live: https://www.therapie-ost.ch/
-Kategorie: Website
-Projektabschluss: April 2026
-
-Die Website fuer Therapie Ost in St. Gallen schafft Vertrauen, erklaert Leistungen verstaendlich und fuehrt ohne Umwege zur Online Terminbuchung. Echte Praxisbilder, eine ruhige Farbwelt und eine eindeutige Positionierung tragen den Auftritt.
-
-### ThinkTank: Wissensplattform fuer KMU
-
-URL: https://www.nigredo.ch/referenzen/thinktank/
-Kategorie: Software
-Projektabschluss: Mai 2026
-
-ThinkTank buendelt das Wissen eines KMU. Themenwelten, Suche, Verantwortlichkeiten, Wiedervorlagen und Verlauf sorgen dafuer, dass Informationen auffindbar und aktuell bleiben.
-
-### Plan H: Website fuer Hypnosetherapie
-
-URL: https://www.nigredo.ch/referenzen/plan-h/
-Live: https://www.plan-h.ch/
-Kategorie: Website
-Projektabschluss: Juni 2026
-
-Die Praxiswebsite verbindet eine ruhige Gestaltung mit lokaler Suchmaschinenoptimierung, strukturierten Daten, Erfahrungsberichten und direkten Kontaktwegen per Formular, Telefon und WhatsApp.
-
-### HappyPath: Website fuer TextRoom
-
-URL: https://www.nigredo.ch/referenzen/happypath/
-Live: https://happypath.ch/
-Kategorie: Website
-Projektabschluss: Juli 2026
-
-Die dreisprachige Website erklaert TextRoom fuer Schweizer IV Stellen. 15 von 26 IV Stellen arbeiten mit der Software. Deutsch, Franzoesisch und Italienisch sind vollstaendig umgesetzt. Lokale Schriften, eine gehaertete Inhaltssicherheitsrichtlinie und direkte Kontaktwege ergaenzen den Auftritt.
 
 ## Marco Calzavara
 

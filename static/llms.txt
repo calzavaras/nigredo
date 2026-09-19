@@ -9,7 +9,7 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-09-12
+Last-Updated: 2026-09-19
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
@@ -47,13 +47,13 @@ Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software u
 
 - [Portpane](https://www.nigredo.ch/referenzen/portpane/): Native macOS-App für SFTP, FTPS und FTP mit lokaler und entfernter Dateiansicht, Transferwarteschlange, Schlüsselbund-Speicherung und sicheren Zugangsarchiven.
 - [Simona Müller](https://www.nigredo.ch/referenzen/simona-mueller/): Persönliche Praxiswebsite für Kinesiologie und Hypnose mit echten Bildern, Online-Terminen und robusten Formularen.
+- [HappyPath](https://www.nigredo.ch/referenzen/happypath/): Dreisprachige Website, die TextRoom fuer Schweizer IV Stellen verstaendlich erklaert.
+- [Plan H](https://www.nigredo.ch/referenzen/plan-h/): Praxiswebsite mit lokaler Suchmaschinenoptimierung und direkten Kontaktwegen.
 - [Mentra](https://www.nigredo.ch/referenzen/mentra/): Lokales KI Wissenssystem, das Videos mit Suche, Quellen, Reviews und Exporten nutzbar macht.
+- [ThinkTank](https://www.nigredo.ch/referenzen/thinktank/): Interne Wissensplattform fuer ein KMU mit Suche, Reviews und Verantwortlichkeiten.
+- [Therapie Ost](https://www.nigredo.ch/referenzen/therapie-ost/): Praxiswebsite mit ruhiger Bildsprache und direkter Terminbuchung.
 - [KI Voice Agent](https://www.nigredo.ch/referenzen/ki-voice-agent/): Prototyp fuer IV Stellen mit Echtzeit Gespraechen, vier Sprachen und Fachwissen zu AHV Hilfsmitteln.
 - [Excel Dashboard](https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/): Lokale Auswertung sensibler Verwaltungsdaten mit Anonymisierung und PDF Export.
-- [Therapie Ost](https://www.nigredo.ch/referenzen/therapie-ost/): Praxiswebsite mit ruhiger Bildsprache und direkter Terminbuchung.
-- [ThinkTank](https://www.nigredo.ch/referenzen/thinktank/): Interne Wissensplattform fuer ein KMU mit Suche, Reviews und Verantwortlichkeiten.
-- [Plan H](https://www.nigredo.ch/referenzen/plan-h/): Praxiswebsite mit lokaler Suchmaschinenoptimierung und direkten Kontaktwegen.
-- [HappyPath](https://www.nigredo.ch/referenzen/happypath/): Dreisprachige Website, die TextRoom fuer Schweizer IV Stellen verstaendlich erklaert.
 
 ## Entity Context
 

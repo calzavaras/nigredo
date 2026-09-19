@@ -1139,7 +1139,7 @@ nav {
   font-size: 0.9rem;
 }
 
-@media (prefers-reduced-motion: reduce) and (min-width: 981px) {
+@media (prefers-reduced-motion: reduce) {
 
   *,
   *::before,
@@ -3426,9 +3426,7 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
 }
 
 /* ============================================================
-   Startseite: Premium-Feinschliff
-   Struktur und Bildwelt bleiben unverändert. Dieser Layer
-   verfeinert Rhythmus, Interaktion und Motion gezielt.
+   Startseite: Abstände, Interaktionen und Bewegung
    ============================================================ */
 
 /* Ruhiger, kompakterer Header-Zustand nach dem Einstieg */

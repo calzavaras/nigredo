@@ -22,7 +22,7 @@ const schema = JSON.stringify({
       "description": "Individuelle Websites, Software und Lösungen mit KI für konkrete Aufgaben. Persönlich konzipiert und entwickelt in St. Gallen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-31T12:00:00+02:00",
+      "dateModified": "2026-09-19T14:40:00+02:00",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -141,7 +141,7 @@ const schema = JSON.stringify({
       </div>
 
       <div class="fade-up delay-100 solutions-fields" role="list" aria-label="Leistungsfelder">
-        <article class="solutions-field solutions-field--web" role="listitem">
+        <article id="websites" class="solutions-field solutions-field--web" role="listitem">
           <div class="solutions-field__head">
             <span class="solutions-field__signal" aria-hidden="true">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
@@ -166,7 +166,7 @@ const schema = JSON.stringify({
           </div>
         </article>
 
-        <article class="solutions-field solutions-field--systems" role="listitem">
+        <article id="ki-und-software" class="solutions-field solutions-field--systems" role="listitem">
           <div class="solutions-field__head">
             <span class="solutions-field__signal" aria-hidden="true">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
@@ -196,7 +196,7 @@ const schema = JSON.stringify({
           </div>
         </article>
 
-        <article class="solutions-field solutions-field--identity" role="listitem">
+        <article id="marke-und-inhalt" class="solutions-field solutions-field--identity" role="listitem">
           <div class="solutions-field__head">
             <span class="solutions-field__signal" aria-hidden="true">
               <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
@@ -354,6 +354,7 @@ const schema = JSON.stringify({
   }
 
   .solutions-field {
+    scroll-margin-top: 120px;
     --field-color: var(--solutions-a);
     display: grid;
     grid-template-columns: minmax(250px, 0.82fr) minmax(0, 1.18fr);

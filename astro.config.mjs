@@ -14,11 +14,11 @@ export default defineConfig({
         const url = item.url;
         if (url === 'https://www.nigredo.ch/') {
           item.priority = 1.0;
-          item.lastmod = new Date('2026-09-12');
+          item.lastmod = new Date('2026-09-19');
         }
         else if (url === 'https://www.nigredo.ch/digitale-loesungen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-07-31');
+          item.lastmod = new Date('2026-09-19');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/') {
           item.priority = 0.95;

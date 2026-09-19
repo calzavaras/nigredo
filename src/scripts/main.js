@@ -207,11 +207,7 @@ function initScrollAnimations() {
   const elements = Array.from(document.querySelectorAll('.fade-up'));
   if (elements.length === 0) return;
 
-  // On mobile (≤980px) the reveal animations always run, even when the OS
-  // "reduce motion" setting is enabled – matching the CSS media queries below.
-  const isMobileViewport = window.matchMedia('(max-width: 980px)').matches;
-  const prefersReducedMotion =
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches && !isMobileViewport;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
     elements.forEach(el => el.classList.add('visible'));
     return;
