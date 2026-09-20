@@ -208,7 +208,44 @@ function initScrollAnimations() {
   if (elements.length === 0) return;
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+  if (prefersReducedMotion) {
+    elements.forEach(el => el.classList.add('visible'));
+
+    // On narrow screens, keep the reveal without spatial movement or hidden content.
+    if (!window.matchMedia('(max-width: 980px)').matches ||
+        !('IntersectionObserver' in window) ||
+        !('animate' in Element.prototype)) return;
+
+    const targets = [...elements];
+    const artwork = document.querySelector('.home-artwork__surface');
+    if (artwork) targets.push(artwork);
+
+    const reveal = (element) => {
+      element.animate([{ opacity: 0.55 }, { opacity: 1 }], {
+        duration: 240,
+        easing: 'ease-out',
+      });
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        reveal(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+    const immediateRevealLine = window.innerHeight * 0.9;
+    targets.forEach((element) => {
+      if (element.getBoundingClientRect().top < immediateRevealLine) {
+        reveal(element);
+      } else {
+        observer.observe(element);
+      }
+    });
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
     elements.forEach(el => el.classList.add('visible'));
     return;
   }
@@ -229,7 +266,12 @@ function initScrollAnimations() {
   const immediateRevealLine = window.innerHeight * 0.9;
   elements.forEach((element) => {
     if (element.getBoundingClientRect().top < immediateRevealLine) {
-      element.classList.add('visible');
+      // Let the initial state paint before starting the entrance transition.
+      if (document.visibilityState === 'hidden') {
+        element.classList.add('visible');
+      } else {
+        requestAnimationFrame(() => requestAnimationFrame(() => element.classList.add('visible')));
+      }
     } else {
       observer.observe(element);
     }
