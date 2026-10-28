@@ -743,6 +743,13 @@ const slots = ['Di 09:30', 'Mi 14:00', 'Do 17:15'];
   to { opacity: 0; transform: translate(var(--cx), var(--cy)) scale(1.5); }
 }
 
+/* Auch CSS-Schleifen pausieren, wenn die Bühne nicht sichtbar ist. */
+.home-stage:not([data-running]) *,
+.home-stage:not([data-running]) *::before,
+.home-stage:not([data-running]) *::after {
+  animation-play-state: paused !important;
+}
+
 @media (max-width: 620px) {
   .home-stage__window { border-radius: 12px; }
   .home-stage__bar { height: 32px; padding: 0 10px; }
@@ -758,9 +765,23 @@ const slots = ['Di 09:30', 'Mi 14:00', 'Do 17:15'];
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-stage__window { transform: none; }
+  /* Derselbe Ablauf mit weichen Überblendungen statt räumlicher Bewegung. */
   .home-stage *,
-  .home-stage *::before { transition: none !important; animation: none !important; }
+  .home-stage *::before,
+  .home-stage *::after {
+    transition: opacity .45s ease !important;
+    animation: none !important;
+  }
+  .home-stage :is(.home-stage__window, .home-stage__sketch g, .home-stage__brief,
+    .lumen, .lumen__in, .lumen__cta, .lumen__booking, .lumen__confirm,
+    .lumen__chat, .lumen__bubble, .lumen__source, .lumen-phone) {
+    transform: none !important;
+  }
+  .home-stage :is(.home-stage__cursor, .home-stage__ripple, .home-stage__caret) {
+    display: none;
+  }
+  .home-stage__step::after { transform: none; opacity: 0; }
+  .home-stage__step.is-active::after { opacity: 1; }
 }
 </style>
 
@@ -782,6 +803,11 @@ if (stage) {
 
   const typeInto = (element: HTMLElement | null, text: string, speed: number, done?: () => void) => {
     if (!element) return;
+    if (motion.matches) {
+      element.textContent = text;
+      done?.();
+      return;
+    }
     let length = 0;
     element.textContent = '';
     const timer = window.setInterval(() => {
@@ -797,6 +823,7 @@ if (stage) {
 
   // Mauszeiger auf ein Element der fiktiven Website setzen.
   const pointAt = (target: string) => {
+    if (motion.matches) return;
     const element = stage.querySelector<HTMLElement>(`[data-target="${target}"]`);
     if (!element) return;
     const box = viewport.getBoundingClientRect();
@@ -807,12 +834,14 @@ if (stage) {
   };
 
   const parkCursor = () => {
+    if (motion.matches) return;
     const box = viewport.getBoundingClientRect();
     stage.style.setProperty('--cx', `${box.width * .96}px`);
     stage.style.setProperty('--cy', `${box.height * 1.08}px`);
   };
 
   const click = () => {
+    if (motion.matches) return;
     stage.dataset.click = '';
     later(420, () => { delete stage.dataset.click; });
   };
@@ -889,14 +918,8 @@ if (stage) {
   };
 
   const update = () => {
-    if (motion.matches) {
-      running = false;
-      clearTimers();
-      resetFlags();
-      show(phases[3]);
-      return;
-    }
     const shouldRun = visible && !document.hidden;
+    stage.toggleAttribute('data-running', shouldRun);
     if (shouldRun && !running) {
       running = true;
       run();
@@ -907,7 +930,7 @@ if (stage) {
   };
 
   parkCursor();
-  if (!motion.matches) show(phases[0]);
+  show(phases[0]);
 
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(([entry]) => {
@@ -920,7 +943,12 @@ if (stage) {
   }
 
   document.addEventListener('visibilitychange', update);
-  motion.addEventListener('change', update);
+  motion.addEventListener('change', () => {
+    running = false;
+    clearTimers();
+    update();
+    tilt();
+  });
 
   // Leichte Neigung, die sich beim Scrollen aufrichtet.
   const desktop = window.matchMedia('(min-width: 861px)');

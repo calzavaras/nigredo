@@ -103,7 +103,7 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "inLanguage": "de-CH",
       "datePublished": "2026-05-16",
-      "dateModified": "2026-07-31T12:00:00+02:00",
+      "dateModified": "2026-10-28T12:00:00+01:00",
       "isAccessibleForFree": true,
       "significantLink": faqEntries.map((entry) => `https://www.nigredo.ch${entry.href}`)
     },
@@ -156,7 +156,7 @@ const schema = JSON.stringify({
       <div class="faq-overview__intro fade-up">
         <h1 id="faq-title">Was du vor dem Start wissen willst.<br><span class="gradient-text">Ehrlich beantwortet.</span></h1>
         <p>
-          Kosten, Zeit, KI, Datenschutz und offene Gedanken: Hier findest du Antworten auf die Fragen, die vor einem digitalen Projekt wirklich zählen. Ohne Kleingedrucktes und ohne technische Nebelmaschine.
+          Antworten zu Kosten, Dauer, Pflege und Technik. Damit du weisst, was dich vor dem Projektstart erwartet.
         </p>
       </div>
 
@@ -210,15 +210,12 @@ const schema = JSON.stringify({
     --faq-a: var(--faq-neon-a);
     --faq-b: var(--faq-neon-b);
     --faq-c: var(--faq-neon-c);
-    animation: none;
-  }
-
-  .faq-overview {
     position: relative;
     min-height: auto;
     padding-top: var(--hero-offset-top-breadcrumb);
     padding-bottom: var(--section-py-md);
     overflow: hidden;
+    animation: none;
   }
 
   .faq-overview__container {
@@ -231,8 +228,8 @@ const schema = JSON.stringify({
   }
 
   .faq-overview__intro {
-    max-width: 780px;
-    margin-bottom: clamp(44px, 6vw, 64px);
+    max-width: 980px;
+    margin-bottom: clamp(32px, 4vw, 48px);
   }
 
   .faq-overview__intro .gradient-text {
@@ -245,10 +242,10 @@ const schema = JSON.stringify({
   }
 
   .faq-overview__intro h1 {
-    margin: 0 0 clamp(22px, 3vw, 30px);
-    font-size: clamp(3.45rem, 6.4vw, 5.7rem);
-    line-height: 0.98;
-    letter-spacing: 0;
+    margin: 0 0 clamp(20px, 2.5vw, 28px);
+    font-size: clamp(2.7rem, 5.2vw, 4.6rem);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
     color: #f5f5f7;
   }
 
@@ -260,33 +257,30 @@ const schema = JSON.stringify({
     line-height: 1.65;
   }
 
+  /* Editorialer Fragenindex mit einer einzigen, konsistenten Definition. */
   .faq-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px;
+    grid-template-columns: 1fr;
+    gap: 0;
     align-items: stretch;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .faq-card {
     --faq-card-accent: var(--faq-a);
     display: grid;
-    grid-template-rows: auto auto auto;
-    gap: 24px;
-    padding: clamp(24px, 3vw, 30px);
-    border-radius: var(--radius-xl);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.015)),
-      rgba(10, 10, 12, 0.92);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.03),
-      0 18px 44px rgba(0, 0, 0, 0.22);
+    grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr) auto;
+    grid-template-rows: auto;
+    align-items: start;
+    gap: clamp(24px, 5vw, 64px);
+    padding: var(--section-py-sm) 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     text-decoration: none;
-    transition:
-      transform 0.24s ease,
-      border-color 0.24s ease,
-      box-shadow 0.24s ease,
-      background 0.24s ease;
+    transition: border-color 0.24s ease, background 0.24s ease;
   }
 
   .faq-card:nth-child(even) {
@@ -299,14 +293,8 @@ const schema = JSON.stringify({
 
   .faq-card:hover,
   .faq-card:focus-visible {
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.14);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
-      rgba(10, 10, 12, 0.94);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.045),
-      0 24px 52px rgba(0, 0, 0, 0.28);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(90deg, color-mix(in srgb, var(--faq-card-accent) 7%, transparent), transparent 70%);
   }
 
   .faq-card:focus-visible {
@@ -315,14 +303,14 @@ const schema = JSON.stringify({
   }
 
   .faq-card__topline {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
-    gap: 18px;
+    justify-content: start;
+    gap: 12px;
   }
 
   .faq-card__number {
-    color: rgba(255, 255, 255, 0.78);
+    color: color-mix(in srgb, var(--faq-card-accent) 82%, white 8%);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 0.16em;
@@ -330,170 +318,38 @@ const schema = JSON.stringify({
   }
 
   .faq-card__body h2 {
-    max-width: 22ch;
+    max-width: 28ch;
     margin: 0 0 0.95rem;
     color: rgba(255, 255, 255, 0.96);
-    font-size: clamp(1.3rem, 2.2vw, 1.78rem);
+    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
     line-height: 1.14;
     letter-spacing: -0.01em;
   }
 
   .faq-card__body p {
+    max-width: 62ch;
     margin: 0;
-    color: var(--text-soft);
+    color: var(--text-body);
     font-size: 1rem;
     line-height: 1.72;
   }
 
   .faq-card__link {
-    margin-top: 2px;
     width: fit-content;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0 16px;
-    border-radius: var(--radius-pill);
-    color: rgba(255, 255, 255, 0.94);
-    font-weight: 700;
-    text-decoration: none;
-    background:
-      linear-gradient(#050505, #050505),
-      linear-gradient(rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    border: 1px solid transparent;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-image 0.2s ease;
-  }
-
-  .faq-card:hover .faq-card__link,
-  .faq-card:focus-visible .faq-card__link {
-    transform: translateY(-2px);
-    background-image:
-      linear-gradient(#0a0a0c, #0a0a0c),
-      linear-gradient(
-        color-mix(in srgb, var(--faq-b) 28%, transparent),
-        color-mix(in srgb, var(--faq-b) 18%, transparent)
-      );
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
-  }
-
-  @media (max-width: 980px) {
-    .faq-overview {
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 72px;
-    }
-
-    .faq-overview__intro h1 {
-      font-size: clamp(2.9rem, 10.2vw, 4.3rem);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-
-    .faq-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .faq-overview__intro {
-      margin-bottom: 38px;
-    }
-
-    .faq-overview__intro h1 {
-      font-size: clamp(2.6rem, 13.6vw, 3.45rem);
-    }
-
-    .faq-overview__intro p {
-      font-size: var(--lead-size-mobile);
-      line-height: 1.6;
-    }
-
-    .faq-card {
-      gap: 20px;
-      padding: 22px 20px;
-      border-radius: var(--radius-xl);
-    }
-
-    .faq-card__topline {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .faq-card__body h2 {
-      max-width: none;
-      font-size: 1.38rem;
-    }
-
-    .faq-card__body p {
-      font-size: 1rem;
-      line-height: 1.68;
-    }
-
-    .faq-card__link {
-      width: auto;
-      min-width: 148px;
-      align-self: center;
-    }
-  }
-
-  /* Editorialer Fragenindex statt gleichförmiger Kartenwand */
-  .faq-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .faq-card {
-    grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr) auto;
-    grid-template-rows: auto;
-    align-items: start;
-    gap: clamp(24px, 5vw, 64px);
-    padding: var(--section-py-sm) 0;
-    border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .faq-card:hover,
-  .faq-card:focus-visible {
-    transform: none;
-    border-color: rgba(255, 255, 255, 0.2);
-    background: linear-gradient(90deg, color-mix(in srgb, var(--faq-card-accent) 7%, transparent), transparent 70%);
-    box-shadow: none;
-  }
-
-  .faq-card__topline {
-    display: grid;
-    justify-content: start;
-    gap: 12px;
-  }
-
-  .faq-card__number {
-    color: color-mix(in srgb, var(--faq-card-accent) 82%, white 8%);
-  }
-
-  .faq-card__body h2 {
-    max-width: 28ch;
-    font-size: clamp(1.45rem, 2.7vw, 2.15rem);
-  }
-
-  .faq-card__body p {
-    max-width: 62ch;
-    color: var(--text-body);
-  }
-
-  .faq-card__link {
-    min-height: 44px;
     margin: 0;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: transparent;
     color: var(--text-body);
+    font-weight: 700;
+    text-decoration: none;
     white-space: nowrap;
+    transition: transform 0.2s ease;
   }
 
   .faq-card__link::after {
@@ -505,8 +361,6 @@ const schema = JSON.stringify({
   .faq-card:hover .faq-card__link,
   .faq-card:focus-visible .faq-card__link {
     transform: translateX(4px);
-    background: transparent;
-    box-shadow: none;
   }
 
   .faq-overview__cta {
@@ -524,6 +378,13 @@ const schema = JSON.stringify({
     color: rgba(255, 255, 255, 0.82);
     font-size: clamp(1.2rem, 2.4vw, 1.65rem);
     font-weight: 600;
+  }
+
+  @media (max-width: 980px) {
+    .faq-overview {
+      padding-top: var(--hero-offset-top-breadcrumb-mobile);
+      padding-bottom: 72px;
+    }
   }
 
   @media (max-width: 760px) {
@@ -544,10 +405,23 @@ const schema = JSON.stringify({
   }
 
   @media (max-width: 520px) {
+    .faq-overview__intro h1 {
+      font-size: clamp(2.1rem, 9.8vw, 2.7rem);
+    }
+
+    .faq-overview__intro p {
+      font-size: var(--lead-size-mobile);
+      line-height: 1.6;
+    }
+
     .faq-card {
       grid-template-columns: 1fr;
       gap: 16px;
       padding: 28px 0;
+    }
+
+    .faq-card__topline {
+      align-items: start;
     }
 
     .faq-card__topline,
@@ -555,7 +429,16 @@ const schema = JSON.stringify({
       grid-column: 1;
     }
 
+    .faq-card__body h2 {
+      max-width: 28ch;
+    }
+
+    .faq-card__body p {
+      line-height: 1.68;
+    }
+
     .faq-card__link {
+      width: auto;
       min-width: 0;
       align-self: start;
     }

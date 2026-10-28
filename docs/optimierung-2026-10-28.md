@@ -97,3 +97,31 @@ und persönliche Konfigurationsdateien gehören nicht auf den Webserver.
 
 `robots.txt`, die Bild-Sitemap und die LLM-Dateien sind im Build enthalten.
 Ein IndexNow-Aufruf vor dem Upload wäre verfrüht und wird deshalb nicht ausgeführt.
+
+
+## E · Kompaktheit und Laufzeit (Version 1.18.2)
+
+Zwei spezialisierte Agenten haben Layout und Leistung überarbeitet und gegenseitig
+geprüft. Der zusätzliche Barrierefreiheits-Audit war ausdrücklich ausgenommen.
+
+- FAQ-Einstieg kompakter: erste Frage bei 1440 Pixeln ab 528 statt 790 Pixeln,
+  bei 375 Pixeln ab 425 statt 662 Pixeln. FAQ- und Formular-Einleitung gekürzt;
+  die gewünschten Warnsätze auch aus Datenschutz und LLM-Zusammenfassung entfernt.
+- Überschriebene FAQ-Regeln, 17 ungenutzte CSS-Altklassen, zwei Tokens und den
+  unerreichbaren Bild-Legacyzweig gelöscht. Alle 110 statischen Dateien und elf
+  Komponenten auf Nutzung geprüft; benötigte Assets und Bildmaster bleiben erhalten.
+- Magnetbuttons bündeln Layout-Abfragen pro Frame: synthetischer Test mit 50
+  Zeigerereignissen benötigt eine statt 50 Abfragen. CSS-Schleifen der Startseitenbühne
+  pausieren jetzt ebenso wie ihre Timer ausserhalb des Bildschirms und in verborgenen Tabs.
+- Auf ausdrücklichen Wunsch funktionieren Animationen auch mit reduzierter Bewegung:
+  vollständiger Bühnenablauf mit acht Phasen und sanften Überblendungen, ohne grosse
+  räumliche Bewegung. Leistungsvisualisierungen nutzen langsame Deckkraftwechsel.
+- Gebautes CSS insgesamt 106’690 → 104’137 Byte; Hauptskript gzip 4’829 → 4’824 Byte.
+  Diese Grössen und Funktionstests sind keine Feldmessung der Core Web Vitals.
+- Abschluss: 96 Browseransichten (32 Seiten × 320/768/1440 Pixel) ohne Überläufe oder
+  defekte geladene Bilder, 1’843 lokale Verweise gültig, 15 Apache-Prüfungen erfolgreich,
+  Build-/SEO-/Sitemap-/CSP-Validierung ohne Warnungen. Reduzierter Bewegungsmodus
+  zusätzlich in Chrome bei 375 Pixeln geprüft, anschliessend Emulation zurückgesetzt.
+- Öffentliche Hosting-Header lesend geprüft: Domainvarianten führen zu HTTPS/www;
+  Startseite, robots.txt und Sitemap erreichbar, Mail-Endpunkt weist HEAD mit 405 ab.
+  Kein Mailversand, kein Suchmaschinen-Ping und kein Upload ausgelöst.

@@ -219,9 +219,8 @@ function initScrollAnimations() {
   if (prefersReducedMotion) {
     elements.forEach(el => el.classList.add('visible'));
 
-    // On narrow screens, keep the reveal without spatial movement or hidden content.
-    if (!window.matchMedia('(max-width: 980px)').matches ||
-        !('IntersectionObserver' in window) ||
+    // Sanfte Überblendung ohne räumliche Bewegung auf allen Bildschirmgrössen.
+    if (!('IntersectionObserver' in window) ||
         !('animate' in Element.prototype)) return;
 
     const targets = [...elements];
@@ -683,11 +682,14 @@ function initMagneticButtons() {
 
   buttons.forEach(btn => {
     let rafId = null;
-    let targetX = 0;
-    let targetY = 0;
+    let pointerX = 0;
+    let pointerY = 0;
 
     const apply = () => {
       rafId = null;
+      const rect = btn.getBoundingClientRect();
+      const targetX = (pointerX - rect.left - rect.width / 2) * STRENGTH_X;
+      const targetY = (pointerY - rect.top - rect.height / 2) * STRENGTH_Y;
       btn.style.transform = `translate(${targetX}px, ${targetY}px) scale(1.02)`;
     };
 
@@ -698,9 +700,8 @@ function initMagneticButtons() {
     });
 
     btn.addEventListener('mousemove', (e) => {
-      const rect = btn.getBoundingClientRect();
-      targetX = (e.clientX - rect.left - rect.width / 2) * STRENGTH_X;
-      targetY = (e.clientY - rect.top - rect.height / 2) * STRENGTH_Y;
+      pointerX = e.clientX;
+      pointerY = e.clientY;
       if (rafId === null) rafId = requestAnimationFrame(apply);
     }, { passive: true });
 

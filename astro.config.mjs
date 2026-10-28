@@ -78,7 +78,7 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {
           item.priority = 0.62;
-          item.lastmod = new Date('2026-07-31');
+          item.lastmod = new Date('2026-10-28');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/') {
           item.priority = 0.55;
@@ -121,7 +121,7 @@ export default defineConfig({
         else if (url === 'https://www.nigredo.ch/impressum/' || url === 'https://www.nigredo.ch/datenschutz/') {
           item.priority = 0.3;
           item.changefreq = 'yearly';
-          item.lastmod = new Date('2026-07-31');
+          item.lastmod = new Date(url.endsWith('/datenschutz/') ? '2026-10-28' : '2026-07-31');
         }
         return item;
       },

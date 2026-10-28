@@ -1,6 +1,6 @@
 ---
 // Kleine, ruhige Animationen für die drei Leistungsbereiche (Startseite und Lösungen).
-// Sie laufen nur, solange sie sichtbar sind, und stehen bei reduzierter Bewegung still.
+// Sie laufen nur im sichtbaren Bereich; reduzierte Bewegung nutzt sanfte Überblendungen.
 interface Props {
   type: 'web' | 'ki' | 'brand';
 }
@@ -227,10 +227,28 @@ const { type } = Astro.props;
   92%, 100% { font-weight: 250; }
 }
 
+@keyframes sv-soft-reveal {
+  0%, 8%, 100% { opacity: 0.6; }
+  30%, 78% { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .service-visual *,
   .service-visual *::before {
     animation: none !important;
+  }
+
+  /* Derselbe Ablauf bleibt sichtbar, ohne Skalieren, Verschieben oder Schriftumbau. */
+  .service-visual :is(
+    .sv-web__title, .sv-web__line, .sv-web__btn, .sv-web__media,
+    .sv-ki > span, .sv-ki__a i,
+    .sv-brand__type, .sv-brand__swatches i, .sv-brand__lines i
+  ) {
+    transform: none !important;
+    animation-name: sv-soft-reveal !important;
+    animation-duration: 6s !important;
+    animation-timing-function: ease-in-out !important;
+    animation-iteration-count: infinite !important;
   }
 }
 </style>

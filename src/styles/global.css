@@ -81,7 +81,6 @@ html::-webkit-scrollbar {
   --radius-xl: 24px;
   --radius-lg: 16px;
   --radius-pill: 999px;
-  --shadow-card: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 45px rgba(0, 0, 0, 0.22);
   --shadow-card-hover: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 28px 60px rgba(0, 0, 0, 0.34);
   --text-body: rgba(245, 245, 247, 0.70);
   --text-soft: rgba(255, 255, 255, 0.58);
@@ -102,7 +101,6 @@ html::-webkit-scrollbar {
   --shell-width: 1120px;
   --container-gutter: clamp(20px, 5vw, 32px);
   --reading-width: 72ch;
-  --section-title-size: clamp(1.95rem, 3.5vw, 2.85rem);
   --surface-2: rgba(255, 255, 255, 0.045);
   --hero-title-line-height: 1.06;
   --hero-title-line-height-mobile: 1.08;
@@ -1029,7 +1027,9 @@ nav {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
-    transition-duration: 0.001ms !important;
+    transition-property: opacity, color, background-color, border-color !important;
+    transition-duration: 180ms !important;
+    transition-delay: 0ms !important;
   }
 
 }
@@ -1156,25 +1156,6 @@ nav {
   transform: translateY(0) scale(0.985);
 }
 
-/* Lösungen: Editorial-Zeilen werden beim Überfahren präziser lesbar. */
-
-@media (hover: hover) and (pointer: fine) {
-
-  .solutions-field:hover :is(.solutions-field__head h3, .solutions-field__lead, .solutions-field__details) {
-    transform: translateX(3px);
-  }
-
-}
-
-/* Referenzen: Bild, Titel und Aktion bilden pro Projekt eine Einheit. */
-
-@media (hover: hover) and (pointer: fine) {
-
-  .ref-project:hover :is(.ref-project__title, .ref-project__summary, .ref-project__role) {
-    transform: translateX(4px);
-  }
-}
-
 .refs-page-link {
   transition:
     color 0.24s ease,
@@ -1185,15 +1166,6 @@ nav {
 
 .refs-page-link:not(.is-disabled):is(:hover, :focus-visible) {
   transform: translateY(-2px);
-}
-
-/* Über mich: Statistiken und Prinzipien behalten ihren Charakter, wirken aber greifbarer. */
-
-@media (hover: hover) and (pointer: fine) {
-
-  .au-principle-card:hover :is(h3, .au-principle-text) {
-    transform: translateX(3px);
-  }
 }
 
 /* Kontakt: Der Fokus bleibt auf dem Gespräch, mit einer ruhigeren Formularkarte. */
@@ -1270,10 +1242,6 @@ nav {
 
 /* Seitenbezogene Einblendungen: gleiche Sprache, unterschiedliche Gewichtung. */
 html.js-reveal :is(
-  .solutions-hero__content,
-  .refs-intro,
-  .about-hero__intro,
-  .contact-hero__content,
   .faq-overview__intro,
   .faq-article__header,
   .legal-hero,
@@ -1284,10 +1252,6 @@ html.js-reveal :is(
 }
 
 :is(
-  .solutions-hero__content,
-  .refs-intro,
-  .about-hero__intro,
-  .contact-hero__content,
   .faq-overview__intro,
   .faq-article__header,
   .legal-hero,
@@ -1300,10 +1264,6 @@ html.js-reveal :is(
 }
 
 html.js-reveal :is(
-  .solutions-hero__content,
-  .refs-intro,
-  .about-hero__intro,
-  .contact-hero__content,
   .faq-overview__intro,
   .faq-article__header,
   .legal-hero,
@@ -1313,11 +1273,11 @@ html.js-reveal :is(
   transform: none;
 }
 
-html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-card).fade-up {
+html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card).fade-up {
   transform: translateY(18px) scale(0.988);
 }
 
-:is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-card).fade-up {
+:is(.faq-card, .related-faqs__grid a, .legal-card).fade-up {
   transition:
     opacity 0.7s var(--ease-spring),
     transform 0.7s var(--ease-spring),
@@ -1325,7 +1285,7 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
     background-color 0.32s ease;
 }
 
-html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-card).fade-up.visible {
+html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card).fade-up.visible {
   transform: none;
 }
 
@@ -1356,20 +1316,14 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
 @media (prefers-reduced-motion: reduce) and (min-width: 981px) {
   .site-header-polish .nav-container,
   .site-header-polish .nav-links a::after,
-  :is(.solutions-field, .ref-project, .ref-project__title, .ref-project__summary, .ref-project__role),
-  :is(.au-stat-card, .au-principle-number, .au-principle-card h3, .au-principle-text),
   :is(.contact-form-card, .contact-form-card__icon, .faq-card, .faq-card__number, .faq-card__body h2, .faq-card__body p, .faq-card__link),
   :is(.legal-num, .refs-page-link),
-  :is(.solutions-hero__content, .refs-intro, .about-hero__intro, .contact-hero__content, .faq-overview__intro, .faq-article__header, .legal-hero, .not-found-page__inner, .case-hero-content).fade-up,
-  :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-card).fade-up {
+  :is(.faq-overview__intro, .faq-article__header, .legal-hero, .not-found-page__inner, .case-hero-content).fade-up,
+  :is(.faq-card, .related-faqs__grid a, .legal-card).fade-up {
     transition: none !important;
   }
 
   html.js-reveal :is(
-    .solutions-hero__content,
-    .refs-intro,
-    .about-hero__intro,
-    .contact-hero__content,
     .faq-overview__intro,
     .faq-article__header,
     .legal-hero,
@@ -1377,8 +1331,7 @@ html.js-reveal :is(.faq-card, .related-faqs__grid a, .legal-card, .case-more-car
     .case-hero-content,
     .faq-card,
     .related-faqs__grid a,
-    .legal-card,
-    .case-more-card
+    .legal-card
   ).fade-up {
     filter: none;
     opacity: 1;

@@ -8,7 +8,6 @@ interface Props {
 }
 
 const { reference, sizes, priority = false } = Astro.props;
-const hasResponsiveImage = reference.imageBase !== null;
 ---
 
 <div class={`referenz-visual referenz-visual--${reference.frame}`}>
@@ -21,35 +20,22 @@ const hasResponsiveImage = reference.imageBase !== null;
     </div>
   )}
 
-  {hasResponsiveImage ? (
-    <picture class="referenz-visual__picture">
-      <source
-        type="image/avif"
-        srcset={`${reference.imageBase}-720.avif 720w, ${reference.imageBase}-1080.avif 1080w, ${reference.imageBase}-1440.avif 1440w, ${reference.imageBase}-2160.avif 2160w`}
-        sizes={sizes}
-      >
-      <source
-        type="image/webp"
-        srcset={`${reference.imageBase}-720.webp 720w, ${reference.imageBase}-1080.webp 1080w, ${reference.imageBase}-1440.webp 1440w`}
-        sizes={sizes}
-      >
-      <img
-        class="referenz-visual__image"
-        src={reference.imgSrc}
-        srcset={`${reference.imageBase}-720.webp 720w, ${reference.imageBase}-1080.webp 1080w, ${reference.imageBase}-1440.webp 1440w`}
-        sizes={sizes}
-        width={reference.imgWidth}
-        height={reference.imgHeight}
-        alt={reference.imgAlt}
-        loading={priority ? 'eager' : 'lazy'}
-        decoding="async"
-        fetchpriority={priority ? 'high' : 'auto'}
-      >
-    </picture>
-  ) : (
+  <picture class="referenz-visual__picture">
+    <source
+      type="image/avif"
+      srcset={`${reference.imageBase}-720.avif 720w, ${reference.imageBase}-1080.avif 1080w, ${reference.imageBase}-1440.avif 1440w, ${reference.imageBase}-2160.avif 2160w`}
+      sizes={sizes}
+    >
+    <source
+      type="image/webp"
+      srcset={`${reference.imageBase}-720.webp 720w, ${reference.imageBase}-1080.webp 1080w, ${reference.imageBase}-1440.webp 1440w`}
+      sizes={sizes}
+    >
     <img
-      class="referenz-visual__image referenz-visual__image--legacy"
+      class="referenz-visual__image"
       src={reference.imgSrc}
+      srcset={`${reference.imageBase}-720.webp 720w, ${reference.imageBase}-1080.webp 1080w, ${reference.imageBase}-1440.webp 1440w`}
+      sizes={sizes}
       width={reference.imgWidth}
       height={reference.imgHeight}
       alt={reference.imgAlt}
@@ -57,7 +43,7 @@ const hasResponsiveImage = reference.imageBase !== null;
       decoding="async"
       fetchpriority={priority ? 'high' : 'auto'}
     >
-  )}
+  </picture>
 </div>
 
 <style>
@@ -127,13 +113,9 @@ const hasResponsiveImage = reference.imageBase !== null;
     transition: transform 0.5s var(--ease-spring);
   }
 
-  .referenz-visual__image--legacy {
-    object-position: center;
-  }
-
   @media (prefers-reduced-motion: reduce) {
     .referenz-visual__image {
-      transition: none;
+      transform: none !important;
     }
   }
 </style>

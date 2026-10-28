@@ -35,6 +35,7 @@ Diese Regeln sichern die technische Qualität der Website ab, ohne das sichtbare
 ## Inhalte und Struktur
 
 - Hauptseiten sollen visuell stabil bleiben.
+- Animationen laufen bei reduzierter Bewegung in sanfter Form weiter. Startseitenbühne und Leistungsvisualisierungen pausieren ausserhalb des sichtbaren Bereichs.
 - Seitenkopf (`.page-hero`), Abschnittsköpfe (`.home-head`), Projektkarten (`.work-card`),
   offene Karten (`.open-card`) und der Abschluss (`.section-cta`) kommen zentral aus
   `src/styles/stil-2026.css`. Neue Seiten nutzen diese Bausteine statt eigener Varianten.
