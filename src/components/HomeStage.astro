@@ -1,17 +1,17 @@
 ---
 // Hero-Bühne der Startseite: Aus einer Idee entsteht eine fiktive, elegante Website.
 // Ablauf: Idee (Satz) → Skizze (von Hand) → Raster → Gestaltung → Terminbuchung → KI-Antwort mit Quelle → Mobil.
-// Jede zweite Runde zeigt dieselbe Marke in einer hellen Stimmung. Keine Kundendaten, keine Pflege bei neuen Referenzen.
+// Keine Kundendaten, keine Pflege bei neuen Referenzen.
 const steps = ['Idee', 'Skizze', 'Gestaltung', 'Funktion'];
 const slots = ['Di 09:30', 'Mi 14:00', 'Do 17:15'];
 ---
-<div class="home-stage" data-home-stage data-phase="design" data-mood="dark" aria-hidden="true" data-nosnippet>
+<div class="home-stage" data-home-stage data-phase="design" aria-hidden="true" data-nosnippet>
   <div class="home-stage__window">
     <div class="home-stage__bar">
       <span class="home-stage__dots"><i></i><i></i><i></i></span>
       <span class="home-stage__address">
         <svg viewBox="0 0 16 16" width="11" height="11"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v6.5h-9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-        <span>Lumen · Entwurf</span>
+        <span>lumen-studio.ch</span>
       </span>
       <span class="home-stage__dots home-stage__dots--ghost"><i></i><i></i><i></i></span>
     </div>
@@ -242,18 +242,6 @@ const slots = ['Di 09:30', 'Mi 14:00', 'Do 17:15'];
   --s-b: oklch(67% 0.22 262);
   --s-btn: #f4f3f7;
   --s-btn-ink: #0c0c10;
-}
-
-.home-stage[data-mood="light"] :is(.lumen, .lumen-phone) {
-  --s-bg: #f4efe7;
-  --s-ink: #1f1c19;
-  --s-muted: rgba(31, 28, 25, .62);
-  --s-line: rgba(31, 28, 25, .14);
-  --s-card: rgba(255, 255, 255, .95);
-  --s-a: #e07a5a;
-  --s-b: #c39a5c;
-  --s-btn: #1f1c19;
-  --s-btn-ink: #f4efe7;
 }
 
 .lumen {
@@ -862,7 +850,6 @@ if (stage) {
   ];
 
   let index = 0;
-  let loop = 0;
   let running = false;
   let visible = false;
 
@@ -886,11 +873,10 @@ if (stage) {
     clearTimers();
     const phase = phases[index];
     if (phase.name === 'idea') {
-      // Nach «out» ist der Inhalt unsichtbar: Zustände ohne Übergang zurücksetzen und Stimmung wechseln.
+      // Nach «out» ist der Inhalt unsichtbar: Zustände ohne Übergang zurücksetzen.
       stage.dataset.reset = '';
       resetFlags();
       parkCursor();
-      stage.dataset.mood = loop % 2 ? 'light' : 'dark';
       requestAnimationFrame(() => requestAnimationFrame(() => { delete stage.dataset.reset; }));
     }
     if (phase.name === 'book') resetFlags();
@@ -898,7 +884,6 @@ if (stage) {
     phase.cues?.forEach(([ms, fn]) => later(ms, fn));
     later(phase.duration, () => {
       index = (index + 1) % phases.length;
-      if (index === 0) loop += 1;
       run();
     });
   };

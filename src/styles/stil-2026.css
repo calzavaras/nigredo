@@ -440,6 +440,11 @@
   }
 }
 
+/* Typografie: Bricolage für Überschriften und grosse Anzeigewerte, Geist für alles Übrige */
+:is(.stat-row strong, .case-stat strong, .about-profile__quote, .home-stage__brief-text, .sv-brand__type) {
+  font-family: var(--font-heading);
+}
+
 /* ------------------------------------------------------------------ */
 /* Seitenkopf der Unterseiten                                          */
 /* ------------------------------------------------------------------ */

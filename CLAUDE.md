@@ -44,7 +44,7 @@ npx esbuild src/scripts/main.js --minify --target=es2017 --outfile=static/main.m
 The contact form UI is in `src/components/ContactForm.astro`. Form submissions POST to `/send-mail.php`; the source handler lives in `static/send-mail.php` and is copied to `public/send-mail.php` during the build (PHP, runs server-side on the host). Spam protection layers: honeypot field, CSRF double-submit cookie, IP-based + session-based rate limiting (60s cooldown).
 
 ### CSS
-Single global file: `src/styles/global.css`, complemented by page-local Astro style blocks. The site uses the locally hosted variable font Bricolage Grotesque, a dark base (`--bg-color: #050505`), a six-colour Nigredo spectrum, `--container-width: 960px`, and `--shell-width: 960px`.
+`src/styles/global.css` holds the base styles; `src/styles/stil-2026.css` (loaded after it) holds the shared building blocks of the 2026 design (`.page-hero`, `.home-head`, `.work-card`, `.service-card`, `.open-card`, `.section-cta`), complemented by page-local Astro style blocks. Typography: locally hosted variable fonts, Bricolage Grotesque for headings and large display values (`--font-heading`), Geist for body text, navigation, buttons and forms (`--font-family`). Dark base (`--bg-color: #050505`), a six-colour Nigredo spectrum, `--container-width: 1120px` and `--shell-width: 1120px`.
 
 ### Sitemap
 `/404` is filtered out from the sitemap. `impressum` and `datenschutz` are included with low priority (0.3, `changefreq: yearly`) and are indexable. Priority and `lastmod` for all pages are set manually in `astro.config.mjs`.
