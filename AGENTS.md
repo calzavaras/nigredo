@@ -14,7 +14,7 @@ npm run preview   # Preview the production build
 
 **Important:** The dev server (`npm run dev`) loads `/main.min.js` directly. If you modify `src/scripts/main.js` during development, re-run the esbuild step manually to keep `main.min.js` in sync:
 ```bash
-npx esbuild src/scripts/main.js --minify --target=es2017 --outfile=static/main.min.js
+npm run build:assets
 ```
 
 ## Versioning policy
@@ -38,7 +38,7 @@ npx esbuild src/scripts/main.js --minify --target=es2017 --outfile=static/main.m
 `src/layouts/Layout.astro` is the single shared layout. It handles all SEO meta tags, Open Graph, Twitter cards, JSON-LD schema.org markup, font loading, Umami analytics, and shared page chrome. Every page passes `title`, `description`, and `canonical` as required props, plus optional `schema` (JSON string) for page-specific structured data.
 
 ### JavaScript
-`src/scripts/main.js` is a single vanilla JS source file. It initialises on `DOMContentLoaded`: navigation/mobile menu, scroll animations, the contact form, accordions, the lightbox gallery, and analytics. It is minified to `static/main.min.js` by esbuild before the Astro build; the final deploy artifact lands in `public/main.min.js`.
+`src/scripts/main.js` initialises navigation/mobile menu, scroll animations, the contact form, accordions and the lightbox gallery on `DOMContentLoaded`. It imports `src/scripts/cookie-consent.js`, which manages local consent and loads Umami only after explicit approval. Esbuild bundles both into one classic IIFE script at `static/main.min.js` before the Astro build; the final deploy artifact lands in `public/main.min.js`. Use `npm run build:assets` to keep imports bundled when updating the dev script.
 
 ### Contact form
 The contact form UI is in `src/components/ContactForm.astro`. Form submissions POST to `/send-mail.php`; the source handler lives in `static/send-mail.php` and is copied to `public/send-mail.php` during the build (PHP, runs server-side on the host). Spam protection layers: honeypot field, CSRF double-submit cookie, IP-based + session-based rate limiting (60s cooldown).

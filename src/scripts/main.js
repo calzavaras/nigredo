@@ -3,12 +3,12 @@
  * Navigation, Einblendungen, Lightbox, Kontaktformular und Analyse.
  */
 
+import { initCookieConsent } from './cookie-consent.js';
+
 const TIMING = {
   LIGHTBOX_INIT_DELAY:  100,
   IDLE_FALLBACK_DELAY:  200,
   IDLE_TIMEOUT:        1500,
-  ANALYTICS_TIMEOUT:   3000,
-  ANALYTICS_FALLBACK_DELAY: 1500,
   CLOSE_OVERLAY_DELAY:  300,
   LIGHTBOX_FADE:        150,
   LIGHTBOX_OPEN_DELAY:   10,
@@ -46,6 +46,7 @@ function unlockScroll() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  initCookieConsent();
   initNavigation();
   initHeaderScrollState();
   initFaqAnchorNavigation();
@@ -55,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
   runWhenIdle(() => {
     initCardSpotlight();
     initMagneticButtons();
-    initAnalytics();
   }, TIMING.IDLE_TIMEOUT);
 });
 
@@ -654,20 +654,6 @@ function initLightbox() {
     if (touchEndX < touchStartX - swipeThreshold) showNext();
     if (touchEndX > touchStartX + swipeThreshold) showPrev();
   }, { passive: true });
-}
-
-function initAnalytics() {
-  const src = document.querySelector('meta[name="umami-src"]')?.content;
-  const websiteId = document.querySelector('meta[name="umami-website-id"]')?.content;
-  if (!src || !websiteId || document.querySelector(`script[src="${src}"]`)) return;
-
-  runWhenIdle(() => {
-    const script = document.createElement('script');
-    script.defer = true;
-    script.src = src;
-    script.dataset.websiteId = websiteId;
-    document.head.appendChild(script);
-  }, TIMING.ANALYTICS_TIMEOUT, TIMING.ANALYTICS_FALLBACK_DELAY);
 }
 
 function initMagneticButtons() {

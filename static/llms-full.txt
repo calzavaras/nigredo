@@ -300,7 +300,7 @@ URL: https://www.nigredo.ch/datenschutz/
 
 Verantwortlich ist Nigredo, Marco Calzavara, Wildeggstrasse 37, 9000 St. Gallen, Schweiz. Die Website wird bei Hosttech in der Schweiz gehostet. Technische Verbindungsdaten können in Serverprotokollen verarbeitet werden.
 
-Die Website nutzt Umami Cloud für eine sparsame Reichweitenmessung. Nach Angaben des Anbieters werden keine Analysecookies, keine Verfolgung über verschiedene Websites und keine persönlich identifizierbaren Informationen eingesetzt. Umami nennt Serverstandorte in der Europäischen Union und den USA.
+Die Website lädt Umami Cloud ausschliesslich nach ausdrücklicher Zustimmung zur optionalen Reichweitenmessung. Ohne Zustimmung wird keine Verbindung zu Umami aufgebaut. Die Auswahl wird für 180 Tage lokal im Browser gespeichert und kann jederzeit über die Cookie-Einstellungen im Footer geändert oder widerrufen werden. Umami verwendet keine Analysecookies und nennt Serverstandorte in der Europäischen Union und den USA. Technische Verbindungsdaten beim Hosting fallen unabhängig von dieser Auswahl an.
 
 Das Kontaktformular verarbeitet die eingegebenen Kontaktdaten und übermittelt sie als E-Mail an das Postfach von Nigredo. Der E-Mail Anbieter kann an Übertragung und Speicherung beteiligt sein. Zum Schutz vor Spam wird die verwendete IP-Adresse für eine kurze Zugriffssperre in einen Hashwert umgewandelt.
 
