@@ -28,7 +28,7 @@ const schema = JSON.stringify({
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-08-01T12:00:00+02:00",
+      "dateModified": "2026-10-28T12:00:00+01:00",
       "isAccessibleForFree": true,
       "author": { "@id": "https://www.nigredo.ch/#person" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
@@ -97,170 +97,139 @@ const schema = JSON.stringify({
   preloadImage="/assets/marco-calzavara-home-v5-photo-500.avif"
   preloadImageType="image/avif"
   preloadImageSrcset="/assets/marco-calzavara-home-v5-photo-500.avif 500w, /assets/marco-calzavara-home-v5-photo-750.avif 750w"
-  preloadImageSizes="(max-width: 600px) 204px, 252px"
+  preloadImageSizes="(max-width: 860px) 80vw, 460px"
 >
-  <section class="section pt-sub about-hero" aria-labelledby="about-title">
-    <div class="container about-hero__container">
-
+  <section class="page-hero about-hero" aria-labelledby="about-title">
+    <div class="container">
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
         { label: 'Über mich' }
       ]} />
+      <h1 id="about-title" class="page-hero__title fade-up">
+        Ein Mensch.<br>
+        <span class="gradient-text">1001 Ideen.</span>
+      </h1>
+    </div>
+  </section>
 
-      <!-- Hero -->
-      <div class="fade-up home-hero__inner about-hero__intro">
-        <h1 id="about-title" class="home-hero__title about-hero__title">
-          <span class="about-hero__title-line">Ein Mensch.</span>
-          <span class="gradient-text about-hero__title-line">1001 Ideen.</span>
-        </h1>
-      </div>
+  <section class="home-section about-profile" aria-label="Profil">
+    <div class="container about-split about-profile__grid">
+      <figure class="about-split__portrait about-profile__portrait fade-up">
+        <picture>
+          <source srcset="/assets/marco-calzavara-home-v5-photo-500.avif 500w, /assets/marco-calzavara-home-v5-photo-750.avif 750w" sizes="(max-width: 860px) 80vw, 460px" type="image/avif">
+          <source srcset="/assets/marco-calzavara-home-v5-photo-500.webp 500w, /assets/marco-calzavara-home-v5-photo-750.webp 750w" sizes="(max-width: 860px) 80vw, 460px" type="image/webp">
+          <img
+            src="/assets/marco-calzavara-home-v5-photo.jpg"
+            alt="Marco Calzavara, Gründer und Inhaber von Nigredo in St. Gallen"
+            width="1000"
+            height="1000"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
+        <figcaption>
+          <h2 class="about-profile__name">Marco Calzavara</h2>
+          <p class="about-profile__role">Gründer und direkter Ansprechpartner</p>
+        </figcaption>
+      </figure>
 
-      <!-- Main Profile & Intro Grid -->
-      <div class="au-main-grid mt-80">
-        <div class="au-profile-column fade-up delay-100">
-          <div class="au-photo-container">
-            <div class="au-photo-aura"></div>
-            <div class="au-photo-circle-wrap">
-              <picture>
-                <source srcset="/assets/marco-calzavara-home-v5-photo-500.avif 500w, /assets/marco-calzavara-home-v5-photo-750.avif 750w" sizes="(max-width: 600px) 204px, 252px" type="image/avif">
-                <source srcset="/assets/marco-calzavara-home-v5-photo-500.webp 500w, /assets/marco-calzavara-home-v5-photo-750.webp 750w" sizes="(max-width: 600px) 204px, 252px" type="image/webp">
-                <img
-                  src="/assets/marco-calzavara-home-v5-photo.jpg"
-                  alt="Marco Calzavara, Gründer und Inhaber von Nigredo in St. Gallen"
-                  class="au-photo-circle"
-                  width="1000"
-                  height="1000"
-                  loading="eager"
-                  fetchpriority="high"
-                  decoding="async"
-                />
-              </picture>
-            </div>
-          </div>
-          <div class="au-profile-info">
-            <h2 class="au-name">Marco Calzavara</h2>
-            <p class="au-role">Gründer und direkter Ansprechpartner</p>
-          </div>
-        </div>
-
-        <div class="au-content-column fade-up delay-150">
-          <div class="au-statement">
-            <blockquote class="hero-lead about-statement__quote">
-              Die stärksten Ideen sind selten sofort offensichtlich. Mich interessiert der Moment, in dem sie sichtbar werden.
-            </blockquote>
-          </div>
-          
-          <div class="au-bio">
-            <p class="au-bio-intro">
-              Mich ziehen Aufgaben an, die noch keine klare Form haben. Wo andere einzelne Teile sehen, erkenne ich oft bereits einen Zusammenhang. Ich höre genau hin, ordne, verbinde und folge einer Spur, bis aus einer Ahnung etwas entsteht, das trägt.
-            </p>
-            <p>
-              <em>Nigredo ist in der Alchemie die dunkle Phase der Wandlung. Altes verliert seine Form, Verborgenes tritt hervor. So entsteht Raum für etwas Neues, Schönes und Kraftvolles.</em>
-            </p>
-            
-            <div class="au-bio-more" data-bio-more>
-              <button
-                type="button"
-                class="au-bio-more__toggle"
-                aria-expanded="false"
-                aria-controls="au-bio-more-content"
-                data-bio-more-toggle
-              >
-                Mehr erfahren
+      <div class="about-profile__content fade-up delay-100">
+        <blockquote class="about-profile__quote">
+          Die stärksten Ideen sind selten sofort offensichtlich. Mich interessiert der Moment, in dem sie sichtbar werden.
+        </blockquote>
+        <div class="au-bio">
+          <p class="au-bio-intro">
+            Mich ziehen Aufgaben an, die noch keine klare Form haben. Wo andere einzelne Teile sehen, erkenne ich oft bereits einen Zusammenhang. Ich höre genau hin, ordne, verbinde und folge einer Spur, bis aus einer Ahnung etwas entsteht, das trägt.
+          </p>
+          <p>
+            <em>Nigredo ist in der Alchemie die dunkle Phase der Wandlung. Altes verliert seine Form, Verborgenes tritt hervor. So entsteht Raum für etwas Neues, Schönes und Kraftvolles.</em>
+          </p>
+        <div class="au-bio-more" data-bio-more>
+          <button
+            type="button"
+            class="au-bio-more__toggle"
+            aria-expanded="false"
+            aria-controls="au-bio-more-content"
+            data-bio-more-toggle
+          >
+            Mehr erfahren
+          </button>
+          <div id="au-bio-more-content" class="au-bio-more__panel" hidden="until-found" data-bio-more-panel>
+            <div class="au-bio-more__content">
+              <p>
+                Mein Weg führt durch Welten, die auf den ersten Blick wenig miteinander zu tun haben und gerade deshalb erstaunlich gut zusammenpassen.
+              </p>
+              <p>
+                Seit 2009 arbeite ich bei der IV-Stelle, seit 2011 in einer Führungsfunktion. Heute leite ich ein Expertenteam und entwickle eine Abteilung fachlich und organisatorisch weiter. Diese Arbeit hat meinen Blick geschärft: für Menschen, Systeme und jene feinen Zusammenhänge, an denen gute Entscheidungen hängen.
+              </p>
+              <p>
+                Parallel dazu habe ich mehrere Unternehmen gegründet und aufgebaut, einige davon später verkauft. Derzeit führe ich gemeinsam mit einem Geschäftspartner die HappyPath GmbH. Mit TextRoom entwickeln wir eine Software, die bei der Mehrheit der IV-Stellen in der Schweiz eingesetzt wird. Ideen kenne ich deshalb in verschiedenen Aggregatszuständen: als Skizze, als Herausforderung und als funktionierendes Produkt.
+              </p>
+              <p>
+                Mit Nigredo verbinde ich Führung, Einfühlungsvermögen, Geschäftssinn, Gestaltung, Softwareentwicklung und KI. Mich fasziniert der Augenblick, in dem sich Komplexität plötzlich ordnet und eine Lösung erscheint, die im Nachhinein beinahe selbstverständlich wirkt.
+              </p>
+              <p>
+                Dafür habe ich ein System aus mehreren hundert spezialisierten KI-Agenten aufgebaut. Einige entwickeln Möglichkeiten, andere suchen Schwächen. Die wertvollsten widersprechen mir.
+              </p>
+              <p>
+                Richtung, Urteil und Verantwortung bleiben bei mir. Wenn zusätzliche Tiefe gefragt ist, ergänze ich das Projekt mit ausgewählten Fachleuten aus meinem Netzwerk. Für dich bleibt es einfach: ein direkter Ansprechpartner, kurze Wege und ein Ergebnis, hinter dem ich persönlich stehe.
+              </p>
+              <button type="button" class="au-bio-more__toggle au-bio-more__toggle--close" data-bio-more-close>
+                Weniger anzeigen
               </button>
-              <div id="au-bio-more-content" class="au-bio-more__panel" hidden data-bio-more-panel>
-                <div class="au-bio-more__content">
-                  <p>
-                    Mein Weg führt durch Welten, die auf den ersten Blick wenig miteinander zu tun haben und gerade deshalb erstaunlich gut zusammenpassen.
-                  </p>
-                  <p>
-                    Seit 2009 arbeite ich bei der IV-Stelle, seit 2011 in einer Führungsfunktion. Heute leite ich ein Expertenteam und entwickle eine Abteilung fachlich und organisatorisch weiter. Diese Arbeit hat meinen Blick geschärft: für Menschen, Systeme und jene feinen Zusammenhänge, an denen gute Entscheidungen hängen.
-                  </p>
-                  <p>
-                    Parallel dazu habe ich mehrere Unternehmen gegründet und aufgebaut, einige davon später verkauft. Derzeit führe ich gemeinsam mit einem Geschäftspartner die HappyPath GmbH. Mit TextRoom entwickeln wir eine Software, die bei der Mehrheit der IV-Stellen in der Schweiz eingesetzt wird. Ideen kenne ich deshalb in verschiedenen Aggregatszuständen: als Skizze, als Herausforderung und als funktionierendes Produkt.
-                  </p>
-                  <p>
-                    Mit Nigredo verbinde ich Führung, Einfühlungsvermögen, Geschäftssinn, Gestaltung, Softwareentwicklung und KI. Mich fasziniert der Augenblick, in dem sich Komplexität plötzlich ordnet und eine Lösung erscheint, die im Nachhinein beinahe selbstverständlich wirkt.
-                  </p>
-                  <p>
-                    Dafür habe ich ein System aus mehreren hundert spezialisierten KI-Agenten aufgebaut. Einige entwickeln Möglichkeiten, andere suchen Schwächen. Die wertvollsten widersprechen mir.
-                  </p>
-                  <p>
-                    Richtung, Urteil und Verantwortung bleiben bei mir. Wenn zusätzliche Tiefe gefragt ist, ergänze ich das Projekt mit ausgewählten Fachleuten aus meinem Netzwerk. Für dich bleibt es einfach: ein direkter Ansprechpartner, kurze Wege und ein Ergebnis, hinter dem ich persönlich stehe.
-                  </p>
-                  <button type="button" class="au-bio-more__toggle au-bio-more__toggle--close" data-bio-more-close>
-                    Weniger anzeigen
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Stats -->
-      <div class="au-stats-grid mt-80 fade-up delay-200">
-        <div class="au-stat-card">
-          <div class="au-stat-inner">
-            <span class="au-stat-value">{leadershipYears}+</span>
-            <span class="au-stat-desc">Jahre Führungserfahrung</span>
-          </div>
-        </div>
-        <div class="au-stat-card">
-          <div class="au-stat-inner">
-            <span class="au-stat-value">3×</span>
-            <span class="au-stat-desc">Unternehmen gegründet, aufgebaut und verkauft</span>
-          </div>
-        </div>
-        <div class="au-stat-card">
-          <div class="au-stat-inner">
-            <span class="au-stat-value au-stat-value--words">Mehrere hundert</span>
-            <span class="au-stat-desc">spezialisierte KI-Agenten im Werkzeugkasten</span>
-          </div>
-        </div>
-        <div class="au-stat-card">
-          <div class="au-stat-inner">
-            <span class="au-stat-value">1</span>
-            <span class="au-stat-desc">direkter Ansprechpartner</span>
-          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Principles -->
-      <div class="mt-80 fade-up delay-300">
-        <h2>Was meine Arbeit antreibt.</h2>
-        <div class="grid-3">
-          <article class="card au-principle-card">
-            <div class="au-principle-number">01</div>
-            <h3>Sehen, was noch verborgen ist.</h3>
-            <p class="au-principle-text">Die entscheidende Idee liegt oft zwischen den offensichtlichen.</p>
-          </article>
-          <article class="card au-principle-card">
-            <div class="au-principle-number">02</div>
-            <h3>Verbinden, was andere getrennt betrachten.</h3>
-            <p class="au-principle-text">Mensch, Geschäft, Gestaltung und Technik ergeben gemeinsam ein anderes Bild.</p>
-          </article>
-          <article class="card au-principle-card">
-            <div class="au-principle-number">03</div>
-            <h3>Aus Gedanken Wirklichkeit machen.</h3>
-            <p class="au-principle-text">Eine Idee zeigt ihre Stärke erst, wenn sie eine Form bekommt.</p>
-          </article>
+  <section class="home-section about-stats" aria-label="Kennzahlen">
+    <div class="container">
+      <ul class="stat-row fade-up">
+        <li><strong>{leadershipYears}+</strong><span>Jahre Führungserfahrung</span></li>
+        <li><strong>3×</strong><span>Unternehmen gegründet, aufgebaut und verkauft</span></li>
+        <li><strong class="stat-row__words">Mehrere hundert</strong><span>spezialisierte KI-Agenten im Werkzeugkasten</span></li>
+        <li><strong>1</strong><span>direkter Ansprechpartner</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="home-section about-principles" aria-labelledby="about-principles-title">
+    <div class="container">
+      <div class="home-head fade-up">
+        <h2 id="about-principles-title" class="home-head__title">Was meine Arbeit antreibt.</h2>
+      </div>
+      <div class="open-cards">
+        <article class="open-card fade-up">
+          <h3>Sehen, was noch verborgen ist.</h3>
+          <p>Die entscheidende Idee liegt oft zwischen den offensichtlichen.</p>
+        </article>
+        <article class="open-card fade-up delay-100">
+          <h3>Verbinden, was andere getrennt betrachten.</h3>
+          <p>Mensch, Geschäft, Gestaltung und Technik ergeben gemeinsam ein anderes Bild.</p>
+        </article>
+        <article class="open-card fade-up delay-200">
+          <h3>Aus Gedanken Wirklichkeit machen.</h3>
+          <p>Eine Idee zeigt ihre Stärke erst, wenn sie eine Form bekommt.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-final-section" aria-labelledby="about-cta-title">
+    <div class="container">
+      <div class="section-cta about-final-cta fade-up">
+        <span class="cta-label">Direkter Austausch</span>
+        <h2 id="about-cta-title">Vielleicht ist die Form schon da.<br><span>Sie muss nur noch gefunden werden.</span></h2>
+        <p>Erzähl mir von dem Gedanken, der dich nicht loslässt, oder von dem Problem, das längst eine bessere Lösung verdient. Wir finden heraus, was darin steckt.</p>
+        <div class="hero-cta-group">
+          <a href="/kontakt/" class="btn btn-primary">Direkt schreiben</a>
+          <a href="/referenzen/" class="section-link">Projekte ansehen <span aria-hidden="true">→</span></a>
         </div>
       </div>
-
-      <!-- CTA -->
-      <div class="section about-final-section fade-up">
-        <div class="section-cta about-final-cta">
-          <span class="cta-label">Direkter Austausch</span>
-          <h2>Vielleicht ist die Form schon da.<br><span>Sie muss nur noch gefunden werden.</span></h2>
-          <p>Erzähl mir von dem Gedanken, der dich nicht loslässt, oder von dem Problem, das längst eine bessere Lösung verdient. Wir finden heraus, was darin steckt.</p>
-          <div class="hero-cta-group" style="justify-content: center;">
-            <a href="/kontakt/" class="btn btn-primary">Direkt schreiben</a>
-            <a href="/referenzen/" class="btn btn-ghost">Projekte ansehen</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 </Layout>
@@ -291,12 +260,14 @@ const schema = JSON.stringify({
       bioMoreToggle.hidden = false;
       closeTimer = window.setTimeout(() => {
         if (bioMoreToggle.getAttribute('aria-expanded') !== 'true') {
-          bioMorePanel.hidden = true;
+          // Eingeklappt, aber für Seitensuche und Suchmaschinen auffindbar.
+          bioMorePanel.setAttribute('hidden', 'until-found');
         }
       }, 480);
     };
 
     bioMoreToggle.addEventListener('click', () => setBioMoreOpen(true));
+    bioMorePanel.addEventListener('beforematch', () => setBioMoreOpen(true));
 
     if (bioMoreClose instanceof HTMLButtonElement) {
       bioMoreClose.addEventListener('click', () => setBioMoreOpen(false));
@@ -328,193 +299,8 @@ const schema = JSON.stringify({
     display: none;
   }
 
-  .about-hero {
-    --page-accent: var(--about-neon-c);
-    animation: none;
-    padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: var(--hero-offset-bottom);
-    background: transparent;
-  }
-
-  .about-hero__container {
-    position: relative;
-    width: 100%;
-  }
-
-  .about-hero :global(.breadcrumb) {
-    margin-bottom: 28px;
-  }
-
-  .about-hero .badge {
-    margin-bottom: 0.95rem;
-    color: var(--about-light);
-    border-color: color-mix(in srgb, var(--about-b) 48%, rgba(255, 255, 255, 0.2));
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .about-hero__intro {
-    width: 100%;
-    max-width: 940px;
-  }
-
-  .about-hero__title {
-    max-width: 960px;
-    font-size: clamp(3.05rem, 5.25vw, 4.8rem);
-    line-height: var(--hero-title-line-height);
-    letter-spacing: -0.02em;
-    margin-bottom: 0;
-  }
-
-  .about-hero__title-line {
-    display: block;
-    white-space: nowrap;
-  }
-
-  .about-hero .gradient-text {
-    background: var(--page-title-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: var(--about-a);
-    filter: none;
-  }
-
-  /* Main Layout Grid */
-  .au-main-grid {
-    display: grid;
-    grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
-    gap: clamp(44px, 6vw, 80px);
-    align-items: start;
-    margin-top: clamp(64px, 7vw, 82px);
-  }
-
-  .au-content-column {
-    --au-copy-max-width: 690px;
-  }
-
-  /* Profile Column */
-  .au-profile-column {
-    position: sticky;
-    top: 132px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .au-photo-container {
-    position: relative;
-    width: min(100%, 304px);
-    aspect-ratio: 4 / 5;
-    height: auto;
-    margin: 0 0 28px 14px;
-  }
-
-  .au-photo-aura {
-    position: absolute;
-    inset: 18px 14px -18px -14px;
-    background: linear-gradient(
-      145deg,
-      var(--about-a) 0%,
-      var(--page-accent-c) 36%,
-      var(--about-b) 64%,
-      var(--about-c) 82%,
-      var(--about-d) 100%
-    );
-    border-radius: var(--radius-lg);
-    filter: none;
-    opacity: 0.96;
-  }
-
-  .au-photo-circle-wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid color-mix(in srgb, var(--about-a) 24%, rgba(255, 255, 255, 0.08));
-    background: var(--about-d);
-    z-index: 1;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.04),
-      0 8px 8px rgba(0, 0, 0, 0.22);
-  }
-
-  .au-photo-circle {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-    cursor: default;
-    transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
-  }
-
-  .au-photo-circle:hover { transform: scale(1.02); }
-
-  .au-name {
-    font-size: clamp(1.28rem, 2vw, 1.5rem);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin: 0 0 7px;
-    color: #fff;
-  }
-
-  .au-role {
-    font-size: 0.85rem;
-    color: color-mix(in srgb, var(--about-a) 48%, white 30%);
-    letter-spacing: 0;
-    text-transform: none;
-    margin: 0;
-  }
-
-  /* Content Column */
-  .au-statement {
-    max-width: var(--au-copy-max-width);
-    margin-bottom: 32px;
-  }
-
-  .au-statement .about-statement__quote {
-    max-width: var(--au-copy-max-width);
-    box-sizing: border-box;
-    font-size: clamp(1.12rem, 1.5vw, 1.3rem);
-    line-height: 1.58;
-    color: rgba(245, 245, 247, 0.96);
-    font-style: normal;
-    font-weight: 550;
-    margin: 0;
-    padding: 0 0 28px;
-    border-bottom: 1px solid color-mix(in srgb, var(--about-b) 44%, rgba(255, 255, 255, 0.1));
-    border-radius: 0;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .au-bio p {
-    max-width: var(--au-copy-max-width);
-    font-size: var(--lead-size);
-    line-height: 1.65;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
-  }
-
-  .au-bio-intro {
-    color: rgba(245, 245, 247, 0.76);
-    margin-bottom: 20px;
-  }
-
-  .au-bio strong {
-    color: #fff;
-    font-weight: 700;
-  }
-
   .au-bio-more {
-    max-width: var(--au-copy-max-width);
+    max-width: 620px;
     margin-top: 0;
   }
 
@@ -558,7 +344,7 @@ const schema = JSON.stringify({
     grid-template-rows: 1fr;
   }
 
-  .au-bio-more__panel[hidden] {
+  .au-bio-more__panel[hidden]:not([hidden="until-found"]) {
     display: none;
   }
 
@@ -579,286 +365,65 @@ const schema = JSON.stringify({
     margin-top: 2px;
   }
 
-  /* Stats Grid */
-  .au-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0;
-    border-top: 1px solid color-mix(in srgb, var(--about-b) 28%, rgba(255, 255, 255, 0.08));
-    border-bottom: 1px solid color-mix(in srgb, var(--about-b) 28%, rgba(255, 255, 255, 0.08));
-    margin-top: clamp(68px, 7vw, 84px);
+  .about-profile {
+    padding-top: clamp(64px, 8vw, 104px);
   }
 
-  .au-stat-card {
-    padding: 0;
-    border-radius: 0;
-    border: 0;
-    border-left: 1px solid color-mix(in srgb, var(--about-b) 22%, rgba(255, 255, 255, 0.06));
-    background: transparent;
-    transition:
-      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 0.35s ease,
-      box-shadow 0.35s ease,
-      background 0.35s ease;
+  .about-profile__grid {
+    align-items: start;
   }
 
-  .au-stat-card:hover {
-    transform: none;
-    border-color: color-mix(in srgb, var(--about-b) 32%, rgba(255, 255, 255, 0.08));
-    background: color-mix(in srgb, var(--about-d) 72%, transparent);
-    box-shadow: none;
+  .about-profile__portrait figcaption {
+    left: 28px;
+    bottom: 24px;
+    right: 28px;
   }
 
-  .au-stat-card:first-child { border-left: 0; }
-
-  .au-stat-inner {
-    padding: 30px 24px;
-    text-align: center;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  .au-stat-value {
-    font-size: clamp(2.55rem, 4.2vw, 3rem);
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 10px;
-    display: block;
-    color: var(--about-a);
-  }
-
-  .au-stat-card:nth-child(2) .au-stat-value {
-    color: var(--page-accent-c);
-  }
-
-  .au-stat-card:nth-child(3) .au-stat-value {
-    color: var(--about-stat-long);
-  }
-
-  .au-stat-card:nth-child(4) .au-stat-value {
-    color: var(--page-accent-c);
-  }
-
-  .au-stat-value--words {
-    font-size: 1.78rem;
-    font-weight: 650;
-    line-height: 1.08;
-  }
-
-  .au-stat-desc {
-    font-size: 0.85rem;
-    color: var(--text-faint);
-    line-height: 1.45;
-  }
-
-  .mt-80.fade-up.delay-300 {
-    margin-top: 84px;
-  }
-
-  /* Principles specific */
-  .au-principle-card {
-    padding: 28px 0 0;
-    border: 0;
-    border-top: 1px solid color-mix(in srgb, var(--about-b) 30%, rgba(255, 255, 255, 0.08));
-    border-radius: 0;
-    background: transparent;
-    isolation: isolate;
-    box-shadow: none;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  .au-principle-card::before,
-  .au-principle-card::after {
-    display: none;
-  }
-
-  .au-principle-card:hover {
-    transform: none;
-    border-color: color-mix(in srgb, var(--about-a) 46%, rgba(255, 255, 255, 0.14));
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .au-principle-number {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--about-a);
-    letter-spacing: 0.12em;
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .au-principle-card h3 {
-    font-size: clamp(1.23rem, 2.2vw, 1.48rem);
-    line-height: 1.18;
-    letter-spacing: -0.01em;
-    margin-bottom: 14px;
-    color: rgba(245, 245, 247, 0.96);
-  }
-
-  .au-principle-text {
-    font-size: 1rem;
-    line-height: 1.68;
-    color: var(--text-soft);
+  .about-profile__name {
     margin: 0;
-  }
-
-  .about-final-section {
-    margin-top: clamp(60px, 7vw, 78px);
-    padding-top: 0;
-    padding-bottom: var(--section-py-md);
-  }
-
-  .about-final-cta {
-    max-width: 660px;
-  }
-
-  .about-final-cta .cta-label {
-    color: var(--text-faint);
-  }
-
-  .about-final-cta h2 {
     color: #f5f5f7;
-    font-size: var(--display-title);
-    line-height: 1.04;
-    letter-spacing: 0;
-    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
-  .about-final-cta h2 span {
+  .about-profile__role {
+    margin: 6px 0 0;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+  }
+
+  .about-profile__quote {
+    margin: 0 0 clamp(28px, 3vw, 40px);
+    padding: 0;
+    border: 0;
+    color: #f5f5f7;
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight: 600;
+    line-height: 1.22;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+
+  .au-bio p {
+    max-width: 620px;
+    margin: 0 0 20px;
+    color: var(--text-body);
+    font-size: 1.04rem;
+    line-height: 1.68;
+  }
+
+  .au-bio em {
     color: var(--text-soft);
   }
 
-  .about-final-cta .hero-cta-group {
-    margin-top: 34px;
-  }
-
-  .about-final-cta .btn-ghost {
-    background-image:
-      linear-gradient(#050505, #050505),
-      linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-  }
-
-  .about-final-cta .btn-ghost:hover {
-    animation: none;
-    transform: translateY(-2px);
-    background-image:
-      linear-gradient(#0a0a0c, #0a0a0c),
-      linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
-    box-shadow: 0 10px 26px rgba(255, 255, 255, 0.08);
-  }
-
-  .about-final-cta .btn-primary:hover {
-    box-shadow:
-      inset 0 2px 4px rgba(255, 255, 255, 1),
-      0 10px 26px rgba(255, 255, 255, 0.14);
-  }
-
-  /* Responsive */
-  @media (max-width: 1024px) {
-    .au-main-grid {
-      grid-template-columns: 1fr;
-      gap: 44px;
-    }
-
-    .au-profile-column {
-      position: static;
-    }
+  .about-stats {
+    padding-top: clamp(80px, 10vw, 140px);
   }
 
   @media (max-width: 860px) {
-    .about-hero {
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 50px;
-    }
-
-    .about-hero__title {
-      font-size: var(--hero-title-size-tablet);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-
-    .about-hero__title-line {
-      white-space: normal;
-    }
-
-    .au-main-grid {
-      margin-top: 58px;
-    }
-
-    .au-stats-grid {
-      margin-top: 64px;
-    }
-
-    .mt-80.fade-up.delay-300 {
-      margin-top: 70px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .au-main-grid {
-      margin-top: 40px;
-      gap: 28px;
-    }
-
-    .au-content-column {
-      order: 1;
-      --au-copy-max-width: 100%;
-    }
-
-    .au-profile-column {
-      order: 2;
-      align-items: center;
-      text-align: center;
-    }
-
-    .about-hero__title {
-      font-size: var(--hero-title-size-mobile);
-      line-height: var(--hero-title-line-height-mobile);
-    }
-
-    .au-photo-container {
-      width: min(78vw, 280px);
-      height: auto;
-      margin: 0 0 24px 12px;
-    }
-
-    .au-statement .about-statement__quote {
-      max-width: 100%;
-      margin-left: 0;
-      padding: 0 0 24px;
-      font-size: var(--lead-size-mobile);
-      line-height: 1.6;
-    }
-
-    .au-stat-value {
-      font-size: 2.5rem;
-    }
-
-    .au-stat-value--words {
-      font-size: 1.5rem;
-    }
-
-    .au-stats-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .au-stat-card:nth-child(odd) {
-      border-left: 0;
-    }
-
-    .au-stat-card:nth-child(n + 3) {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .about-final-section {
-      margin-top: 56px;
-      padding-top: 0;
-      padding-bottom: 72px;
-    }
-
-    .about-final-cta h2 {
-      font-size: var(--display-title);
+    .about-profile__portrait {
+      max-width: 460px;
     }
   }
 </style>

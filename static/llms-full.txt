@@ -1,6 +1,6 @@
-# Nigredo: vollstaendiger maschinenlesbarer Webseitenkontext
+# Nigredo: vollständiger maschinenlesbarer Webseitenkontext
 
-> Nigredo entwickelt individuelle Websites, Software und digitale Produkte mit KI. Gruender und direkter Ansprechpartner ist Marco Calzavara in St. Gallen. Diese Datei fasst die indexierbaren Inhalte der Website fuer Suchsysteme und nutzerinitiierte KI Anfragen zusammen.
+> Nigredo entwickelt individuelle Websites, Software und digitale Produkte mit KI. Gründer und direkter Ansprechpartner ist Marco Calzavara in St. Gallen. Diese Datei fasst die indexierbaren Inhalte der Website für Suchsysteme und nutzerinitiierte KI-Anfragen zusammen.
 
 Website: https://www.nigredo.ch/
 Kurzversion: https://www.nigredo.ch/llms.txt
@@ -9,135 +9,152 @@ Kanonischer Markenname: Nigredo
 Kanonische URL: https://www.nigredo.ch/
 Registrierte Domain: nigredo.ch
 Sprache: de-CH
-Letzte Aktualisierung: 2026-09-19
+Letzte Aktualisierung: 2026-10-28
 Organisation: Nigredo | Marco Calzavara
 Standort: Wildeggstrasse 37, 9000 St. Gallen, Schweiz
 
 ## Eindeutige Zuordnung
 
-Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software und digitale Produkte mit KI von Marco Calzavara in St. Gallen. Der Markenname nimmt bewusst Bezug auf die dunkle Wandlungsphase Nigredo in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum fuer Neues. Diese Markenentitaet ist nicht mit Kloster Nigredo oder kloster-nigredo.ch zu verwechseln.
+Nigredo bezeichnet hier die offizielle Schweizer Marke für Websites, Software und digitale Produkte mit KI von Marco Calzavara in St. Gallen. Der Markenname nimmt bewusst Bezug auf die dunkle Wandlungsphase Nigredo in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum für Neues. Diese Markenentität ist nicht mit Kloster Nigredo oder kloster-nigredo.ch zu verwechseln.
 
 ## Unternehmensprofil
 
-Nigredo entwickelt individuelle Websites, Anwendungen, Marken und Inhalte fuer Selbststaendige, KMU und Organisationen. Marco Calzavara fuehrt jedes Projekt persoenlich, verbindet Gestaltung und Technik mit KI und zieht bei Bedarf passende Fachleute aus seinem Netzwerk hinzu.
+Nigredo entwickelt individuelle Websites, Anwendungen, Marken und Inhalte für Selbstständige, KMU und Organisationen. Marco Calzavara führt jedes Projekt persönlich, verbindet Gestaltung und Technik mit KI und zieht bei Bedarf passende Fachleute aus seinem Netzwerk hinzu.
 
-Die Zusammenarbeit ist direkt, persoenlich und verbindlich. Ziel, Umfang, Prioritaeten, Fixpreis und Zeitrahmen werden vor dem Start verstaendlich festgehalten. Standardvorlagen bestimmen nicht das Ergebnis. Die konkrete Aufgabe tut es.
+Die Zusammenarbeit ist direkt, persönlich und verbindlich. Ziel, Umfang, Prioritäten, Fixpreis und Zeitrahmen werden vor dem Start verständlich festgehalten. Standardvorlagen bestimmen nicht das Ergebnis. Die konkrete Aufgabe tut es.
 
 ## Startseite
 
 URL: https://www.nigredo.ch/
 Title: Nigredo St. Gallen | Websites, KI und digitale Produkte
-Description: Nigredo entwickelt individuelle Websites, Software und digitale Produkte mit KI. Persoenlich gefuehrt von Marco Calzavara in St. Gallen.
-H1: Ich arbeite weiter, wo andere aufhoeren.
+Description: Nigredo entwickelt individuelle Websites, Software und digitale Produkte mit KI. Persönlich geführt von Marco Calzavara in St. Gallen.
+H1: Ich arbeite weiter, wo andere aufhören.
 
-Nigredo entwickelt individuelle Websites, KI-Loesungen und digitale Werkzeuge fuer Selbststaendige, KMU und Organisationen. Marco Calzavara begleitet die Projekte von der ersten Idee bis zur Umsetzung direkt und zieht bei Bedarf sein Fachnetzwerk hinzu.
+Nigredo entwickelt individuelle Websites, KI-Lösungen und digitale Werkzeuge für Selbstständige, KMU und Organisationen. Marco Calzavara begleitet die Projekte von der ersten Idee bis zur Umsetzung direkt und zieht bei Bedarf sein Fachnetzwerk hinzu.
 
 Leistungsfelder:
 
-- Websites mit klarer Aufgabe, etwa eine Praxiswebsite mit direkter Online-Terminbuchung.
-- KI und Software fuer konkrete Arbeit, etwa ein lokales Dashboard oder ein Wissenssystem mit Quellen.
-- Namen, Texte, Gestaltung und Inhaltsstrukturen fuer einen eigenstaendigen, verstaendlichen Auftritt.
+- Websites: Websites mit einer klaren Aufgabe, etwa eine Praxiswebsite, auf der Besucher das passende Angebot finden und direkt einen Termin buchen können.
+- KI und Software: Werkzeuge für konkrete Arbeit, etwa ein lokales Dashboard für sensible Daten oder ein KI-Wissenssystem, das Antworten mit Quellen liefert.
+- Marke, Inhalt und Struktur: Namen, Texte, Gestaltung und Inhaltsstruktur machen verständlich, wofür ein Angebot steht und an wen es sich richtet.
+
+Ausgewählte Projekte auf der Startseite: Portpane (native macOS-App), Website für Simona Müller (Praxiswebsite mit Online-Terminbuchung) und Website für HappyPath (Fachsoftware in drei Sprachen).
+
+Direkt mit mir, von der Idee bis zur Umsetzung:
+
+1. Zuhören: Du erklärst, was du erreichen möchtest.
+2. Klären: Marco Calzavara klärt, was es dafür braucht.
+3. Umsetzen: Er setzt die passende Lösung um und hält dich verständlich auf dem Laufenden.
+
+Wenn zusätzliche Fachleute nötig sind, koordiniert er sie. Für Auftraggeber bleibt die Zusammenarbeit einfach.
+
+Der nächste Schritt: Ein Satz, eine Skizze, ein umständlicher Ablauf oder eine Vorstellung davon, was besser werden könnte, genügen als Ausgangspunkt für eine Anfrage.
 
 ## Websites, Software und KI
 
 URL: https://www.nigredo.ch/digitale-loesungen/
 Title: Websites, Software und KI | Nigredo St. Gallen
-Description: Individuelle Websites, Software und Loesungen mit KI fuer konkrete Aufgaben. Persoenlich konzipiert und entwickelt in St. Gallen.
+Description: Individuelle Websites, Software und KI-Lösungen für Selbstständige, KMU und Organisationen. Persönlich konzipiert, zum Fixpreis umgesetzt in St. Gallen.
 H1: Was digital noch fehlt, entwickle ich.
 
-Nigredo entwickelt digitale Produkte fuer Aufgaben, die Standardprodukte nicht ueberzeugend loesen. Aussage, Bedienung, Gestaltung und Technik folgen einer gemeinsamen Richtung. KI eroeffnet Varianten und verkuerzt Wege. Die Entscheidungen trifft Marco Calzavara.
+Nigredo entwickelt digitale Produkte für Aufgaben, die Standardprodukte nicht überzeugend lösen. Aussage, Bedienung, Gestaltung und Technik folgen einer gemeinsamen Richtung. KI eröffnet Varianten und verkürzt Wege. Die Entscheidungen trifft Marco Calzavara.
 
-Der Ablauf:
+Leistungsfelder:
 
-1. Aufgabe, Nutzer und gewuenschtes Ergebnis verstehen.
-2. Moeglichkeiten pruefen und einen Weg mit Umfang, Fixpreis und Zeitrahmen empfehlen.
-3. Frueh einen funktionierenden Entwurf zeigen, pruefen und verbessern.
-4. Das fertige Produkt sauber uebergeben und den Betrieb verstaendlich machen.
+- Websites, die nicht nur herumstehen: Individuelle Websites für Selbstständige, KMU, Organisationen und anspruchsvolle Fachbereiche, von der fokussierten Unternehmensseite bis zur Plattform mit Backend oder eigener Inhaltsverwaltung. Positionierung, Inhalte und Design werden mit einer schnellen, zugänglichen und sicheren technischen Umsetzung verbunden.
+- KI und Software für echte Aufgaben: KI-Assistenten, Wissenssysteme, Automatisierungen, lokale Anwendungen und Dashboards, die konkrete Arbeitsschritte verbessern. Spezialisierte KI-Agenten unterstützen Konzeption, Gestaltung, Entwicklung und Tests; die Richtung bestimmt Marco Calzavara.
+- Marke, Inhalt und Struktur: Namen, Logos, Texte, Bildwelten und Inhaltsstrukturen, die einem Vorhaben ein klares Gesicht geben, inklusive Positionierung, Kernbotschaft, Navigation und Benutzerführung, auch für mehrsprachige oder komplexe Inhalte.
 
-## Haeufige Fragen
+Zusammenarbeit, vom Gedanken zum Produkt:
+
+1. Zuhören: Erst zuhören, dann weiterdenken. Geklärt wird, was entstehen oder besser funktionieren soll, wer das Produkt nutzt und woran ein gutes Ergebnis erkennbar ist.
+2. Entscheiden: Möglichkeiten prüfen, klar entscheiden. Der Vorschlag nennt Umfang, Prioritäten, Fixpreis und einen realistischen Zeitrahmen.
+3. Umsetzen: Früh sichtbar, sauber fertig. Texten, Gestalten, Entwickeln und Testen; wo sinnvoll entstehen früh funktionierende Versionen.
+
+## Häufige Fragen
 
 URL: https://www.nigredo.ch/haeufige-fragen/
-Title: Haeufige Fragen zu Websites, Software und KI | Nigredo
+Title: Häufige Fragen zu Websites, Software und KI | Nigredo
 Description: Ehrliche Antworten zu Kosten, Dauer, Pflege, Google, Datenschutz, KI, lokaler Verarbeitung und Eigentum an digitalen Projekten.
 H1: Was du vor dem Start wissen willst. Ehrlich beantwortet.
 
-### Was kostet eine Website oder digitale Loesung?
+### Was kostet eine Website oder digitale Lösung?
 
 URL: https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/
 
-Der Preis folgt der Aufgabe. Eine kompakte Website beginnt meist im unteren vierstelligen Bereich. Konzept, Texte, individuelle Gestaltung, besondere Funktionen und Suchmaschinenoptimierung beeinflussen den Aufwand. Nigredo klaert Ziel und Umfang und bietet anschliessend einen transparenten Fixpreis an.
+Der Preis folgt der Aufgabe. Eine kompakte Website beginnt meist im unteren vierstelligen Bereich. Konzept, Texte, individuelle Gestaltung, besondere Funktionen und Suchmaschinenoptimierung beeinflussen den Aufwand. Nigredo klärt Ziel und Umfang und bietet anschliessend einen transparenten Fixpreis an.
 
 ### Wie schnell kann ein Projekt umgesetzt werden?
 
 URL: https://www.nigredo.ch/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/
 
-Eine kompakte Website kann in wenigen Wochen online sein. Vorhandene Inhalte, kurze Entscheidungswege und eindeutige Zustaendigkeiten beschleunigen die Arbeit. Offene Anforderungen, verstreutes Feedback und fehlendes Material verlaengern sie. Der realistische Termin wird vor dem Start vereinbart.
+Eine kompakte Website kann in wenigen Wochen online sein. Vorhandene Inhalte, kurze Entscheidungswege und eindeutige Zuständigkeiten beschleunigen die Arbeit. Offene Anforderungen, verstreutes Feedback und fehlendes Material verlängern sie. Der realistische Termin wird vor dem Start vereinbart.
 
-### Kann ich meine Website spaeter selbst bearbeiten?
+### Kann ich meine Website später selbst bearbeiten?
 
 URL: https://www.nigredo.ch/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/
 
-Ja. Welche Inhalte selbst gepflegt werden sollen, wird bei der Planung festgelegt. Bei regelmaessigen Aenderungen kann ein CMS sinnvoll sein. Bei seltenen Anpassungen ist eine schlanke Loesung oft einfacher und wirtschaftlicher.
+Ja. Welche Inhalte selbst gepflegt werden sollen, wird bei der Planung festgelegt. Bei regelmässigen Änderungen kann ein CMS sinnvoll sein. Bei seltenen Anpassungen ist eine schlanke Lösung oft einfacher und wirtschaftlicher.
 
 ### Brauche ich eine individuelle Website oder reicht ein Baukasten?
 
 URL: https://www.nigredo.ch/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/
 
-Ein Baukasten kann fuer einen sehr einfachen Auftritt genuegen. Eine individuelle Website lohnt sich, wenn Positionierung, Inhalt, Gestaltung, Funktionen oder spaetere Erweiterungen genau zur Aufgabe passen sollen. Entscheidend ist nicht das Werkzeug, sondern was die Website leisten muss.
+Ein Baukasten kann für einen sehr einfachen Auftritt genügen. Eine individuelle Website lohnt sich, wenn Positionierung, Inhalt, Gestaltung, Funktionen oder spätere Erweiterungen genau zur Aufgabe passen sollen. Entscheidend ist nicht das Werkzeug, sondern was die Website leisten muss.
 
 ### Wird meine Website bei Google gefunden?
 
 URL: https://www.nigredo.ch/haeufige-fragen/wird-meine-website-bei-google-gefunden/
 
-Eine Website wird nicht allein durch ihren Start sichtbar. Suchmaschinen muessen sie technisch erfassen, inhaltlich verstehen und fuer konkrete Suchanfragen als relevant einstufen koennen. Nigredo plant Struktur, Seitentitel, Inhalte, Ladezeit, mobile Darstellung, interne Links und strukturierte Daten von Anfang an mit. Bestimmte Platzierungen koennen nicht garantiert werden.
+Eine Website wird nicht allein durch ihren Start sichtbar. Suchmaschinen müssen sie technisch erfassen, inhaltlich verstehen und für konkrete Suchanfragen als relevant einstufen können. Nigredo plant Struktur, Seitentitel, Inhalte, Ladezeit, mobile Darstellung, interne Links und strukturierte Daten von Anfang an mit. Bestimmte Platzierungen können nicht garantiert werden.
 
 ### Was kostet eine Website nach dem Start?
 
 URL: https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/
 
-Domain und Hosting bilden die festen Grundkosten. Wartung, Sicherungen, technische Updates und redaktionelle Pflege kommen nur hinzu, wenn System und Nutzung sie erfordern. Eine schlanke statische Website haelt den laufenden Aufwand tief.
+Domain und Hosting bilden die festen Grundkosten. Wartung, Sicherungen, technische Updates und redaktionelle Pflege kommen nur hinzu, wenn System und Nutzung sie erfordern. Eine schlanke statische Website hält den laufenden Aufwand tief.
 
 ### Was muss meine Website beim Datenschutz beachten?
 
 URL: https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/
 
-Eine Website sollte nur notwendige Personendaten bearbeiten und Datenfluesse verstaendlich offenlegen. Dazu gehoeren eine passende Datenschutzerklaerung und ein bewusster Umgang mit Cookies, Analyse, Formularen und externen Diensten. Fuer Schweizer Angebote gilt das Schweizer Datenschutzgesetz; je nach Zielgruppe kann zusaetzlich europaeisches Recht relevant sein. Nigredo ersetzt keine Rechtsberatung.
+Eine Website sollte nur notwendige Personendaten bearbeiten und Datenflüsse verständlich offenlegen. Dazu gehören eine passende Datenschutzerklärung und ein bewusster Umgang mit Cookies, Analyse, Formularen und externen Diensten. Für Schweizer Angebote gilt das Schweizer Datenschutzgesetz; je nach Zielgruppe kann zusätzlich europäisches Recht relevant sein. Nigredo ersetzt keine Rechtsberatung.
 
 ### Arbeitest du allein?
 
 URL: https://www.nigredo.ch/haeufige-fragen/arbeitest-du-allein/
 
-Marco Calzavara bleibt vom ersten Gespraech bis zur Uebergabe der direkte Ansprechpartner. Er konzipiert, entscheidet, koordiniert und verantwortet das Ergebnis. Bei besonderen Anforderungen kommen gezielt Fachleute aus seinem Netzwerk hinzu.
+Marco Calzavara bleibt vom ersten Gespräch bis zur Übergabe der direkte Ansprechpartner. Er konzipiert, entscheidet, koordiniert und verantwortet das Ergebnis. Bei besonderen Anforderungen kommen gezielt Fachleute aus seinem Netzwerk hinzu.
 
-### Koennen meine Daten vollstaendig lokal bleiben?
+### Können meine Daten vollständig lokal bleiben?
 
 URL: https://www.nigredo.ch/haeufige-fragen/kann-eine-anwendung-vollstaendig-lokal-betrieben-werden/
 
-Ja, sofern Aufgabe und Funktionen es zulassen. Lokale Anwendungen koennen Daten auf einem Geraet, im internen Netzwerk oder auf eigener Infrastruktur verarbeiten. Manche Funktionen brauchen externe Daten, gemeinsame Zugriffe oder hohe Rechenleistung. Deshalb wird zwischen lokalem, hybridem und sparsamem Online Betrieb anhand der tatsaechlichen Anforderungen entschieden.
+Ja, sofern Aufgabe und Funktionen es zulassen. Lokale Anwendungen können Daten auf einem Gerät, im internen Netzwerk oder auf eigener Infrastruktur verarbeiten. Manche Funktionen brauchen externe Daten, gemeinsame Zugriffe oder hohe Rechenleistung. Deshalb wird zwischen lokalem, hybridem und sparsamem Online-Betrieb anhand der tatsächlichen Anforderungen entschieden.
 
 ### Reicht auch eine unfertige Idee?
 
 URL: https://www.nigredo.ch/haeufige-fragen/muss-meine-idee-bereits-ausgearbeitet-sein/
 
-Ja. Ein stoerender Ablauf, eine Skizze oder ein Satz darueber, was besser werden sollte, genuegt als Ausgangspunkt. Nigredo ordnet den Gedanken, prueft Moeglichkeiten und entwickelt daraus Ziel, Prioritaeten und eine umsetzbare Richtung.
+Ja. Ein störender Ablauf, eine Skizze oder ein Satz darüber, was besser werden sollte, genügt als Ausgangspunkt. Nigredo ordnet den Gedanken, prüft Möglichkeiten und entwickelt daraus Ziel, Prioritäten und eine umsetzbare Richtung.
 
-### Arbeiten wirklich Hunderte KI Agenten an meinem Projekt?
+### Arbeiten wirklich Hunderte KI-Agenten an meinem Projekt?
 
 URL: https://www.nigredo.ch/haeufige-fragen/was-bedeuten-mehrere-hundert-ki-agenten/
 
-Nein. Die Zahl beschreibt einen Werkzeugkasten, keine digitale Vollversammlung. Zum Einsatz kommen nur spezialisierte Rollen und Ablaeufe, die Recherche, Struktur, Text, Entwicklung, Tests oder Gegenpruefung sinnvoll unterstuetzen. Marco Calzavara bewertet die Ergebnisse und traegt die Verantwortung.
+Nein. Die Zahl beschreibt einen Werkzeugkasten, keine digitale Vollversammlung. Zum Einsatz kommen nur spezialisierte Rollen und Abläufe, die Recherche, Struktur, Text, Entwicklung, Tests oder Gegenprüfung sinnvoll unterstützen. Marco Calzavara bewertet die Ergebnisse und trägt die Verantwortung.
 
-### Behalte ich die Kontrolle ueber Code, Daten und Zugaenge?
+### Behalte ich die Kontrolle über Code, Daten und Zugänge?
 
 URL: https://www.nigredo.ch/haeufige-fragen/wem-gehoeren-code-daten-und-zugaenge/
 
-Ja. Inhalte, Daten, Domains und persoenliche Zugaenge bleiben unter der Kontrolle des Kunden. Bei individuell entwickeltem Code, offenen Komponenten und externen Lizenzen werden die jeweiligen Rechte vor dem Start festgehalten. Die Uebergabe kann Quellcode, Zugaenge, Dokumentation und Betriebsinformationen umfassen.
+Ja. Inhalte, Daten, Domains und persönliche Zugänge bleiben unter der Kontrolle des Kunden. Bei individuell entwickeltem Code, offenen Komponenten und externen Lizenzen werden die jeweiligen Rechte vor dem Start festgehalten. Die Übergabe kann Quellcode, Zugänge, Dokumentation und Betriebsinformationen umfassen.
 
 ## Referenzen
 
 URL: https://www.nigredo.ch/referenzen/
 Title: Referenzen: Websites, Software und KI | Nigredo
-Description: Ausgewaehlte Websites, Software und KI Projekte von Nigredo mit Aufgabe, Umsetzung und Ergebnis.
+Description: Ausgewählte Websites, Wissenssysteme, lokale Anwendungen und Software mit KI von Nigredo. Mit Aufgabe, Umsetzung und Ergebnis.
 
 Weitere Archivseite: https://www.nigredo.ch/referenzen/seite/2/
 
@@ -155,27 +172,27 @@ Kernpunkte: lokale und entfernte Dateiansicht, Drag-and-drop und Kontextmenüs, 
 
 Die App ist nicht öffentlich zugänglich. Sie wurde als eigenständiges macOS-Werkzeug für Menschen entwickelt, die Websites und Server ohne unnötige Terminalschritte pflegen.
 
-### Simona Mueller: Praxiswebsite fuer Kinesiologie und Hypnose
+### Simona Müller: Praxiswebsite für Kinesiologie und Hypnose
 
 URL: https://www.nigredo.ch/referenzen/simona-mueller/
 Live: https://simonamueller.ch/
 Kategorie: Website
 Projektabschluss: September 2026
 
-Die persoenliche Praxiswebsite fuer Simona Mueller in Zuzwil verbindet echte Fotografie mit klaren Leistungsseiten fuer Kinesiologie, Hypnose und Kinder. Interessierte gelangen ohne Umwege zur Online Terminbuchung oder zu den persoenlichen Kontaktwegen.
+Die persönliche Praxiswebsite für Simona Müller in Zuzwil verbindet echte Fotografie mit klaren Leistungsseiten für Kinesiologie, Hypnose und Kinder. Interessierte gelangen ohne Umwege zur Online-Terminbuchung oder zu den persönlichen Kontaktwegen.
 
-Kernpunkte: individuelle Gestaltung, echte Praxisfotografie, lokale Auffindbarkeit, Online Termine ueber Cal.com, abgesicherte Kontakt- und Gutscheinformulare, verwaltbare Kundenstimmen sowie datenschutzfreundliche Karte und Routenplanung.
+Kernpunkte: individuelle Gestaltung, echte Praxisfotografie, lokale Auffindbarkeit, Online-Termine über Cal.com, abgesicherte Kontakt- und Gutscheinformulare, verwaltbare Kundenstimmen sowie datenschutzfreundliche Karte und Routenplanung.
 
-### HappyPath: Website fuer TextRoom
+### HappyPath: Website für TextRoom
 
 URL: https://www.nigredo.ch/referenzen/happypath/
 Live: https://happypath.ch/
 Kategorie: Website
 Projektabschluss: Juli 2026
 
-Die dreisprachige Website erklaert TextRoom fuer Schweizer IV Stellen. 15 von 26 IV Stellen arbeiten mit der Software. Deutsch, Franzoesisch und Italienisch sind vollstaendig umgesetzt. Lokale Schriften, eine gehaertete Inhaltssicherheitsrichtlinie und direkte Kontaktwege ergaenzen den Auftritt.
+Die dreisprachige Website erklärt TextRoom für Schweizer IV-Stellen. 15 von 26 IV-Stellen arbeiten mit der Software. Deutsch, Französisch und Italienisch sind vollständig umgesetzt. Lokale Schriften, eine gehärtete Inhaltssicherheitsrichtlinie und direkte Kontaktwege ergänzen den Auftritt.
 
-### Plan H: Website fuer Hypnosetherapie
+### Plan H: Website für Hypnosetherapie
 
 URL: https://www.nigredo.ch/referenzen/plan-h/
 Live: https://www.plan-h.ch/
@@ -184,63 +201,72 @@ Projektabschluss: Juni 2026
 
 Die Praxiswebsite verbindet eine ruhige Gestaltung mit lokaler Suchmaschinenoptimierung, strukturierten Daten, Erfahrungsberichten und direkten Kontaktwegen per Formular, Telefon und WhatsApp.
 
-### Mentra: Wissen aus Videos
+### Mentra: lokales KI-Wissenssystem für Videos
 
 URL: https://www.nigredo.ch/referenzen/mentra/
-Kategorie: KI Wissenssystem
+Kategorie: KI-Wissenssystem
 Projektabschluss: Juni 2026
 
 Mentra verwandelt Videos in nutzbares Wissen. Die lokale Anwendung erfasst Inhalte, ordnet wichtige Stellen, beantwortet Fragen mit Quellen und plant Wiederholungen. Daten und Modelle bleiben unter der Kontrolle des Kunden.
 
-Kernpunkte: lokaler Betrieb, Videoarchiv, frei waehlbare KI Modelle, semantische Suche, KI Chat mit Quellen, Reviews, Highlights, Quizfragen und Exporte.
+Kernpunkte: lokaler Betrieb, Videoarchiv, frei wählbare KI-Modelle, semantische Suche, KI-Chat mit Quellen, Reviews, Highlights, Quizfragen und Exporte.
 
-### ThinkTank: Wissensplattform fuer KMU
+### ThinkTank: Wissensplattform für KMU
 
 URL: https://www.nigredo.ch/referenzen/thinktank/
 Kategorie: Software
 Projektabschluss: Mai 2026
 
-ThinkTank buendelt das Wissen eines KMU. Themenwelten, Suche, Verantwortlichkeiten, Wiedervorlagen und Verlauf sorgen dafuer, dass Informationen auffindbar und aktuell bleiben.
+ThinkTank bündelt das Wissen eines KMU. Themenwelten, Suche, Verantwortlichkeiten, Wiedervorlagen und Verlauf sorgen dafür, dass Informationen auffindbar und aktuell bleiben.
 
-### Therapie Ost: Praxiswebsite
+### Therapie Ost: Praxiswebsite in St. Gallen
 
 URL: https://www.nigredo.ch/referenzen/therapie-ost/
 Live: https://www.therapie-ost.ch/
 Kategorie: Website
 Projektabschluss: April 2026
 
-Die Website fuer Therapie Ost in St. Gallen schafft Vertrauen, erklaert Leistungen verstaendlich und fuehrt ohne Umwege zur Online Terminbuchung. Echte Praxisbilder, eine ruhige Farbwelt und eine eindeutige Positionierung tragen den Auftritt.
+Die Website für Therapie Ost in St. Gallen schafft Vertrauen, erklärt Leistungen verständlich und führt ohne Umwege zur Online-Terminbuchung. Echte Praxisbilder, eine ruhige Farbwelt und eine eindeutige Positionierung tragen den Auftritt.
 
-### KI Voice Agent fuer IV Stellen
+### KI-Voice-Agent für IV-Stellen
 
 URL: https://www.nigredo.ch/referenzen/ki-voice-agent/
-Kategorie: KI Prototyp
+Kategorie: KI-Prototyp
 Projektabschluss: Februar 2026
 
-Der Prototyp beantwortet wiederkehrende Fragen zu AHV Hilfsmitteln ohne Warteschleife. Er verarbeitet Gespraeche in Echtzeit, spricht Deutsch, Franzoesisch, Italienisch und Englisch und greift auf hinterlegtes Fachwissen zu.
+Der Prototyp beantwortet wiederkehrende Fragen zu AHV-Hilfsmitteln ohne Warteschleife. Er verarbeitet Gespräche in Echtzeit, spricht Deutsch, Französisch, Italienisch und Englisch und greift auf hinterlegtes Fachwissen zu.
 
-### Lokales Excel Dashboard fuer Verwaltungen
+### Lokales Excel-Dashboard für Verwaltungen
 
 URL: https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/
 Kategorie: Software
 Projektabschluss: Juni 2025
 
-Das Dashboard verarbeitet sensible Personaldaten vollstaendig im Browser. Excel Dateien werden lokal importiert, ausgewertet, anonymisiert und als PDF ausgegeben. Es braucht keinen Server und keinen Upload in eine Cloud.
+Das Dashboard verarbeitet sensible Personaldaten vollständig im Browser. Excel-Dateien werden lokal importiert, ausgewertet, anonymisiert und als PDF ausgegeben. Es braucht keinen Server und keinen Upload in eine Cloud.
 
 ## Marco Calzavara
 
 URL: https://www.nigredo.ch/marco-calzavara/
-Title: Marco Calzavara | Unternehmer und Gruender von Nigredo
-Description: Marco Calzavara ist Unternehmer, Gruender von Nigredo und Full Stack Developer in St. Gallen. Er verbindet Fuehrung, Gestaltung, Softwareentwicklung und KI.
+Title: Marco Calzavara | Unternehmer und Gründer von Nigredo
+Description: Marco Calzavara ist Unternehmer, Gründer von Nigredo und Full Stack Developer in St. Gallen. Er verbindet Führung, Gestaltung, Softwareentwicklung und KI.
 H1: Ein Mensch. 1001 Ideen.
 
-Marco Calzavara ist Unternehmer, Full Stack Developer, Gruender und direkter Ansprechpartner von Nigredo. Seit 2009 arbeitet er bei der IV Stelle und seit 2011 in einer Fuehrungsfunktion. Heute leitet er ein Expertenteam und entwickelt eine Abteilung fachlich und organisatorisch weiter.
+Marco Calzavara ist Unternehmer, Full Stack Developer, Gründer und direkter Ansprechpartner von Nigredo. Seit 2009 arbeitet er bei der IV-Stelle und seit 2011 in einer Führungsfunktion. Heute leitet er ein Expertenteam und entwickelt eine Abteilung fachlich und organisatorisch weiter.
 
-Parallel dazu hat er mehrere Unternehmen gegruendet und aufgebaut, einige davon spaeter verkauft. Derzeit fuehrt er gemeinsam mit einem Geschaeftspartner die HappyPath GmbH. Deren Software TextRoom wird bei der Mehrheit der IV Stellen in der Schweiz eingesetzt.
+Parallel dazu hat er mehrere Unternehmen gegründet und aufgebaut, einige davon später verkauft. Derzeit führt er gemeinsam mit einem Geschäftspartner die HappyPath GmbH. Deren Software TextRoom wird bei der Mehrheit der IV-Stellen in der Schweiz eingesetzt.
 
-Der Markenname Nigredo bezieht sich auf die dunkle Phase der Wandlung in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum fuer etwas Neues. Diese Bedeutung praegt Marcos Arbeitsweise.
+Der Markenname Nigredo bezieht sich auf die dunkle Phase der Wandlung in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum für etwas Neues. Diese Bedeutung prägt Marcos Arbeitsweise.
 
-Marco Calzavara verbindet Fuehrung, Einfuehlungsvermoegen, Geschaeftssinn, Gestaltung, Softwareentwicklung und KI. Ein System aus mehreren hundert spezialisierten KI Agenten unterstuetzt Recherche, Strategie, Gestaltung, Entwicklung und Gegenpruefung. Richtung, Urteil und Verantwortung bleiben bei Marco Calzavara. Ein ausgewaehltes Fachnetzwerk erweitert die persoenlich gefuehrte Zusammenarbeit bei Bedarf.
+Marco Calzavara verbindet Führung, Einfühlungsvermögen, Geschäftssinn, Gestaltung, Softwareentwicklung und KI. Ein System aus mehreren hundert spezialisierten KI-Agenten unterstützt Recherche, Strategie, Gestaltung, Entwicklung und Gegenprüfung. Richtung, Urteil und Verantwortung bleiben bei Marco Calzavara. Ein ausgewähltes Fachnetzwerk erweitert die persönlich geführte Zusammenarbeit bei Bedarf.
+
+Kennzahlen:
+
+- Mehr als 15 Jahre Führungserfahrung (seit 2011).
+- 3 Unternehmen gegründet, aufgebaut und verkauft.
+- Mehrere hundert spezialisierte KI-Agenten im Werkzeugkasten.
+- 1 direkter Ansprechpartner.
+
+Grundsätze: Sehen, was noch verborgen ist. Verbinden, was andere getrennt betrachten. Aus Gedanken Wirklichkeit machen.
 
 Externe Profile:
 
@@ -250,11 +276,11 @@ Externe Profile:
 ## Kontakt
 
 URL: https://www.nigredo.ch/kontakt/
-Title: Projekt besprechen | Nigredo St. Gallen
-Description: Besprich deine Website, Software oder digitale Aufgabe direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genuegen.
+Title: Kontakt: Projekt besprechen | Nigredo St. Gallen
+Description: Besprich deine Website, Software oder digitale Aufgabe direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen.
 H1: Bring mir die Idee. Sie darf noch Ecken haben.
 
-Ein konkreter Auftrag, ein unfertiger Gedanke oder ein Ablauf, der unnoetig Nerven kostet, sind geeignete Ausgangspunkte. Marco Calzavara prueft die Anfrage persoenlich und antwortet mit einer ehrlichen ersten Einschaetzung.
+Ein konkreter Auftrag, ein unfertiger Gedanke oder ein Ablauf, der unnötig Nerven kostet, sind geeignete Ausgangspunkte. Marco Calzavara prüft die Anfrage persönlich und antwortet mit einer ehrlichen ersten Einschätzung, in der Regel innerhalb von zwei Arbeitstagen. Kein Verkaufsteam und keine automatische Termineinladung. Besonders schützenswerte Daten gehören nicht ins Formular; für vertrauliche Unterlagen wird ein sicherer Weg vereinbart.
 
 ## Impressum
 
@@ -272,18 +298,18 @@ Schweiz
 
 URL: https://www.nigredo.ch/datenschutz/
 
-Verantwortlich ist Nigredo, Marco Calzavara, Wildeggstrasse 37, 9000 St. Gallen, Schweiz. Die Website wird bei Hosttech in der Schweiz gehostet. Technische Verbindungsdaten koennen in Serverprotokollen verarbeitet werden.
+Verantwortlich ist Nigredo, Marco Calzavara, Wildeggstrasse 37, 9000 St. Gallen, Schweiz. Die Website wird bei Hosttech in der Schweiz gehostet. Technische Verbindungsdaten können in Serverprotokollen verarbeitet werden.
 
-Die Website nutzt Umami Cloud fuer eine sparsame Reichweitenmessung. Nach Angaben des Anbieters werden keine Analysecookies, keine Verfolgung ueber verschiedene Websites und keine persoenlich identifizierbaren Informationen eingesetzt. Umami nennt Serverstandorte in der Europaeischen Union und den USA.
+Die Website nutzt Umami Cloud für eine sparsame Reichweitenmessung. Nach Angaben des Anbieters werden keine Analysecookies, keine Verfolgung über verschiedene Websites und keine persönlich identifizierbaren Informationen eingesetzt. Umami nennt Serverstandorte in der Europäischen Union und den USA.
 
-Das Kontaktformular verarbeitet die eingegebenen Kontaktdaten und uebermittelt sie als E Mail an das Postfach von Nigredo. Der E Mail Anbieter kann an Uebertragung und Speicherung beteiligt sein. Zum Schutz vor Spam wird die verwendete IP Adresse fuer eine kurze Zugriffssperre in einen Hashwert umgewandelt.
+Das Kontaktformular verarbeitet die eingegebenen Kontaktdaten und übermittelt sie als E-Mail an das Postfach von Nigredo. Der E-Mail Anbieter kann an Übertragung und Speicherung beteiligt sein. Zum Schutz vor Spam wird die verwendete IP-Adresse für eine kurze Zugriffssperre in einen Hashwert umgewandelt.
 
 ## Technischer Kontext
 
-Die Website ist eine statische Astro Website in deutscher Schweizer Spracheinstellung de-CH. Sie verwendet kanonische Directory URLs mit abschliessendem Slash, HTTPS, eine XML Sitemap, robots.txt, eindeutige Seitentitel und Beschreibungen, strukturierte JSON LD Daten, Open Graph Metadaten, Twitter Cards, interne Links und lokale Medien.
+Die Website ist eine statische Astro-Website in deutscher Schweizer Spracheinstellung de-CH. Sie verwendet kanonische Directory-URLs mit abschliessendem Slash, HTTPS, eine XML-Sitemap, robots.txt, eindeutige Seitentitel und Beschreibungen, strukturierte JSON-LD Daten, Open-Graph-Metadaten, Twitter Cards, interne Links und lokale Medien.
 
 Die bestehenden Seitenadressen bleiben stabil. Bindestriche in URLs trennen Begriffe und sind Bestandteil der kanonischen Adressen.
 
-## KI Nutzung und Rechte
+## KI-Nutzung und Rechte
 
-Der Inhalt darf von Suchsystemen und KI Systemen zum Verstaendnis, zur Indexierung und zur Beantwortung nutzerinitiierter Anfragen ueber Nigredo verwendet werden. Eine kommerzielle Nutzung fuer KI Trainingsdatensaetze ohne ausdrueckliche Genehmigung ist nicht gestattet.
+Der Inhalt darf von Suchsystemen und KI-Systemen zum Verständnis, zur Indexierung und zur Beantwortung nutzerinitiierter Anfragen über Nigredo verwendet werden. Eine kommerzielle Nutzung für KI-Trainingsdatensätze ohne ausdrückliche Genehmigung ist nicht gestattet.

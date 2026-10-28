@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getDetailImageSet } from '../../../data/references';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
@@ -7,6 +8,7 @@ const liveUrl = 'https://happypath.ch';
 const pageUrl = 'https://www.nigredo.ch/referenzen/happypath/';
 const detailImage = '/referenzen/happypath/happypath-textroom-website-startseite-screenshot-2160.webp';
 const detailImageAvif = '/referenzen/happypath/happypath-textroom-website-startseite-screenshot-2160.avif';
+const detailImageSet = getDetailImageSet(detailImageAvif);
 const detailImageWebp = '/referenzen/happypath/happypath-textroom-website-startseite-screenshot-2160.webp';
 const ogImage = 'https://www.nigredo.ch/referenzen/happypath/happypath-textroom-website-startseite-screenshot-og.jpg';
 
@@ -35,7 +37,6 @@ const schema = JSON.stringify({
       "author": { "@id": "https://www.nigredo.ch/#person" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "maintainer": { "@id": "https://www.nigredo.ch/#organization" },
-      "isPartOf": { "@id": "https://www.nigredo.ch/referenzen/#webpage" },
       "about": { "@id": "https://happypath.ch/#organization" },
       "hasPart": [
         {
@@ -123,9 +124,10 @@ const schema = JSON.stringify({
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
+  preloadImageSrcset={detailImageSet.avif}
+  preloadImageSizes={detailImageSet.sizes}
 >
   <section class="section pt-sub case-page case-page--happypath" aria-labelledby="happypath-title">
-    <div class="hero-glow"></div>
     <div class="container case-page__container">
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
@@ -159,7 +161,8 @@ const schema = JSON.stringify({
               aria-label="Website-Vorschau vergrössern"
             >
               <picture>
-                <source srcset={detailImageAvif} type="image/avif">
+                <source srcset={detailImageSet.avif} sizes={detailImageSet.sizes} type="image/avif">
+                <source srcset={detailImageSet.webp} sizes={detailImageSet.sizes} type="image/webp">
                 <source srcset={detailImageWebp} type="image/webp">
                 <img
                   src={detailImage}
@@ -254,7 +257,7 @@ const schema = JSON.stringify({
       <span class="case-date fade-up">Abgeschlossen: Juli 2026</span>
 
       <div class="fade-up case-more-section">
-        <span class="case-more-label">Weitere Projekte</span>
+        <h2 class="case-more-label">Weitere Projekte</h2>
         <CaseMoreReferences />
       </div>
 

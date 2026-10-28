@@ -1,0 +1,249 @@
+---
+// Kleine, ruhige Animationen für die drei Leistungsbereiche (Startseite und Lösungen).
+// Sie laufen nur, solange sie sichtbar sind, und stehen bei reduzierter Bewegung still.
+interface Props {
+  type: 'web' | 'ki' | 'brand';
+}
+
+const { type } = Astro.props;
+---
+<div class="service-visual" data-service-visual data-nosnippet>
+  {type === 'web' && (
+    <div class="sv-web">
+      <span class="sv-web__bar"><i></i><i></i><i></i></span>
+      <span class="sv-web__title"></span>
+      <span class="sv-web__title sv-web__title--short"></span>
+      <span class="sv-web__line"></span>
+      <span class="sv-web__line sv-web__line--short"></span>
+      <span class="sv-web__btn">Termin buchen</span>
+      <span class="sv-web__media"></span>
+    </div>
+  )}
+  {type === 'ki' && (
+    <div class="sv-ki">
+      <span class="sv-ki__q">Welche Frist gilt hier?</span>
+      <span class="sv-ki__a"><i></i><i></i><i></i></span>
+      <span class="sv-ki__src">Quelle · Handbuch, Kapitel 3</span>
+    </div>
+  )}
+  {type === 'brand' && (
+    <div class="sv-brand">
+      <span class="sv-brand__type">Aa</span>
+      <span class="sv-brand__swatches"><i></i><i></i><i></i><i></i></span>
+      <span class="sv-brand__lines"><i></i><i></i></span>
+    </div>
+  )}
+</div>
+
+<style>
+.service-visual {
+  position: absolute;
+  inset: 0;
+}
+
+.service-visual:not(.is-live) *,
+.service-visual:not(.is-live) *::before {
+  animation-play-state: paused !important;
+}
+
+/* Website */
+.sv-web {
+  position: absolute;
+  inset: 14% 9%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sv-web > span {
+  position: absolute;
+  left: 8%;
+  transform-origin: 0 50%;
+}
+
+.sv-web__bar {
+  inset: 0 0 auto 0 !important;
+  left: 0 !important;
+  display: flex;
+  gap: 4px;
+  height: 15%;
+  padding-left: 8px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.sv-web__bar i { width: 5px; height: 5px; border-radius: 50%; background: rgba(255, 255, 255, 0.2); }
+
+.sv-web__title { top: 28%; width: 46%; height: 8%; border-radius: 4px; background: #f2f2f5; animation: sv-build 6s cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+.sv-web__title--short { top: 40%; width: 30%; animation-delay: 0.15s; background: linear-gradient(90deg, oklch(72% 0.27 342), oklch(67% 0.22 262)); }
+.sv-web__line { top: 56%; width: 40%; height: 3.5%; border-radius: 4px; background: rgba(255, 255, 255, 0.28); animation: sv-build 6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s infinite; }
+.sv-web__line--short { top: 63%; width: 30%; animation-delay: 0.4s; }
+
+.sv-web__btn {
+  top: 74%;
+  padding: 0.32em 0.9em;
+  border-radius: 99px;
+  background: #f2f2f5;
+  color: #0b0b0f;
+  font-size: 0.62rem;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: sv-btn 6s ease infinite;
+}
+
+.sv-web__media {
+  left: auto !important;
+  right: 7%;
+  top: 26%;
+  width: 34%;
+  height: 62%;
+  border-radius: 10px;
+  background: conic-gradient(from 160deg at 40% 40%, oklch(72% 0.27 342), oklch(67% 0.22 262), oklch(60% 0.2 300), oklch(72% 0.27 342));
+  animation: sv-media 6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+/* KI */
+.sv-ki {
+  position: absolute;
+  inset: 12% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sv-ki > span { animation: sv-pop 6s cubic-bezier(0.22, 1, 0.36, 1) infinite; }
+
+.sv-ki__q {
+  align-self: flex-end;
+  padding: 7px 11px;
+  border-radius: 12px 12px 3px 12px;
+  background: linear-gradient(100deg, oklch(64% 0.25 342), oklch(58% 0.22 262));
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.sv-ki__a {
+  align-self: flex-start;
+  display: grid;
+  gap: 6px;
+  width: 76%;
+  padding: 11px 12px;
+  border-radius: 12px 12px 12px 3px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  animation-delay: 0.5s !important;
+}
+
+.sv-ki__a i {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.55);
+  transform-origin: 0 50%;
+  animation: sv-build 6s cubic-bezier(0.22, 1, 0.36, 1) 0.9s infinite;
+}
+
+.sv-ki__a i:nth-child(2) { animation-delay: 1.1s; }
+.sv-ki__a i:nth-child(3) { width: 60%; animation-delay: 1.3s; }
+
+.sv-ki__src {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 99px;
+  border: 1px solid oklch(67% 0.22 300 / 0.7);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.64rem;
+  animation-delay: 1.8s !important;
+}
+
+/* Marke */
+.sv-brand {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 14px;
+}
+
+.sv-brand__type {
+  font-size: clamp(3.6rem, 6vw, 5rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  background: linear-gradient(100deg, #f5f5f7 30%, oklch(72% 0.27 342) 60%, oklch(67% 0.22 262));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sv-weight 6s ease-in-out infinite;
+}
+
+.sv-brand__swatches { display: flex; gap: 8px; }
+
+.sv-brand__swatches i {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  animation: sv-pop 6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.sv-brand__swatches i:nth-child(1) { background: oklch(72% 0.27 342); animation-delay: 0.2s; }
+.sv-brand__swatches i:nth-child(2) { background: oklch(66% 0.26 315); animation-delay: 0.35s; }
+.sv-brand__swatches i:nth-child(3) { background: oklch(67% 0.22 262); animation-delay: 0.5s; }
+.sv-brand__swatches i:nth-child(4) { background: #f2f2f5; animation-delay: 0.65s; }
+
+.sv-brand__lines { display: grid; justify-items: center; gap: 6px; width: 120px; }
+.sv-brand__lines i { width: 100%; height: 4px; border-radius: 3px; background: rgba(255, 255, 255, 0.24); animation: sv-build 6s cubic-bezier(0.22, 1, 0.36, 1) 0.8s infinite; transform-origin: 50% 50%; }
+.sv-brand__lines i + i { width: 70%; animation-delay: 1s; }
+
+@keyframes sv-build {
+  0%, 4% { transform: scaleX(0); }
+  22%, 86% { transform: scaleX(1); }
+  96%, 100% { transform: scaleX(0); }
+}
+
+@keyframes sv-media {
+  0%, 12% { opacity: 0; transform: scale(0.88); }
+  32%, 86% { opacity: 1; transform: none; }
+  96%, 100% { opacity: 0; transform: scale(0.96); }
+}
+
+@keyframes sv-btn {
+  0%, 28% { opacity: 0; transform: translateY(4px); }
+  38%, 86% { opacity: 1; transform: none; box-shadow: 0 0 0 0 oklch(72% 0.27 342 / 0); }
+  55% { box-shadow: 0 0 0 6px oklch(72% 0.27 342 / 0.25); }
+  96%, 100% { opacity: 0; }
+}
+
+@keyframes sv-pop {
+  0%, 6% { opacity: 0; transform: translateY(6px) scale(0.96); }
+  16%, 86% { opacity: 1; transform: none; }
+  96%, 100% { opacity: 0; transform: translateY(-4px); }
+}
+
+@keyframes sv-weight {
+  0%, 8% { font-weight: 250; }
+  40%, 62% { font-weight: 800; }
+  92%, 100% { font-weight: 250; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-visual *,
+  .service-visual *::before {
+    animation: none !important;
+  }
+}
+</style>
+
+<script>
+  // Animationen nur abspielen, solange die Grafik im Bild ist.
+  const visuals = document.querySelectorAll<HTMLElement>('[data-service-visual]');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => entry.target.classList.toggle('is-live', entry.isIntersecting));
+    }, { threshold: 0.2 });
+    visuals.forEach(visual => observer.observe(visual));
+  } else {
+    visuals.forEach(visual => visual.classList.add('is-live'));
+  }
+</script>

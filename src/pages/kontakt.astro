@@ -23,7 +23,7 @@ const schema = JSON.stringify({
       "description": "Besprich deine Website, Software oder digitale Aufgabe direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen.",
       "inLanguage": "de-CH",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-31T12:00:00+02:00",
+      "dateModified": "2026-10-28T12:00:00+01:00",
       "isPartOf": { "@id": "https://www.nigredo.ch/#website" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
@@ -35,7 +35,7 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Projekt besprechen | Nigredo St. Gallen"
+  title="Kontakt: Projekt besprechen | Nigredo St. Gallen"
   description="Besprich deine Website, Software oder digitale Aufgabe direkt mit Marco Calzavara. Auch ein erster Gedanke oder eine offene Frage genügen."
   canonical={pageUrl}
   ogTitle="Bring mir die Idee. Sie darf noch Ecken haben."
@@ -45,32 +45,30 @@ const schema = JSON.stringify({
   twitterDescription="Auch ein erster Gedanke oder eine offene Frage genügen."
   schema={schema}
 >
-  <section class="section pt-sub contact-hero" aria-labelledby="kontakt-title">
+  <section class="page-hero contact-hero" aria-labelledby="kontakt-title">
     <div class="container">
-
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
         { label: 'Kontakt' }
       ]} />
-
-      <div class="kontakt-grid">
-
-        <div class="fade-up contact-hero__content">
-          <h1 id="kontakt-title" class="contact-hero__title">
-            Bring mir die Idee.<br>
-            <span class="gradient-text">Sie darf noch Ecken haben.</span>
-          </h1>
-          <p class="hero-lead contact-hero__lead">
-            Vielleicht hast du bereits einen konkreten Auftrag. Vielleicht erst einen unfertigen Gedanken oder einen Ablauf, der unnötig Nerven kostet. Alles ist ein guter Anfang. Schreib mir, was entstehen soll oder wo es heute hakt. Ich prüfe dein Vorhaben persönlich und antworte mit einer ehrlichen ersten Einschätzung.
-          </p>
-        </div>
-
-        <div class="contact-form-wrap fade-up delay-100">
-          <ContactForm />
-        </div>
-
+      <h1 id="kontakt-title" class="page-hero__title fade-up">
+        Bring mir die Idee.<br>
+        <span class="gradient-text">Sie darf noch Ecken haben.</span>
+      </h1>
+      <div class="page-hero__row fade-up delay-100">
+        <p class="page-hero__lead">
+          Vielleicht hast du bereits einen konkreten Auftrag. Vielleicht erst einen unfertigen Gedanken oder einen Ablauf, der unnötig Nerven kostet. Alles ist ein guter Anfang. Schreib mir, was entstehen soll oder wo es heute hakt. Ich prüfe dein Vorhaben persönlich und antworte mit einer ehrlichen ersten Einschätzung.
+        </p>
       </div>
+    </div>
+  </section>
 
+  <section class="contact-form-section" aria-label="Kontaktformular">
+    <div class="contact-form-section__glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="contact-form-wrap fade-up delay-100">
+        <ContactForm />
+      </div>
     </div>
   </section>
 </Layout>
@@ -93,98 +91,34 @@ const schema = JSON.stringify({
     --contact-a: var(--contact-neon-a);
     --contact-b: var(--contact-neon-b);
     --contact-c: var(--contact-neon-c);
-    animation: none;
   }
 
-  .contact-hero {
-    padding-top: var(--hero-offset-top-breadcrumb);
-    padding-bottom: var(--section-py-md);
+  .contact-form-section {
+    position: relative;
+    overflow-x: clip;
+    padding: clamp(64px, 8vw, 104px) 0 clamp(110px, 12vw, 170px);
   }
 
-  .contact-hero :global(.breadcrumb) {
-    margin-bottom: 28px;
-  }
-
-  .contact-hero .badge {
-    margin-bottom: 0.95rem;
-    color: color-mix(in srgb, var(--contact-a) 72%, white 28%);
-    border-color: color-mix(in srgb, var(--contact-b) 36%, rgba(255, 255, 255, 0.22));
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .kontakt-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: clamp(44px, 5vw, 64px);
-  }
-
-  .contact-hero__content {
-    max-width: 940px;
-  }
-
-  .contact-hero__title {
-    max-width: 940px;
-    font-size: var(--hero-title-size);
-    line-height: var(--hero-title-line-height);
-    letter-spacing: -0.02em;
-    margin-bottom: clamp(24px, 3vw, 30px);
-  }
-
-  .contact-hero .gradient-text {
-    background: var(--page-title-gradient);
-    background-size: 100% auto;
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
-
-  .contact-hero__lead {
-    max-width: 620px;
-    font-size: var(--lead-size);
-    line-height: 1.65;
+  .contact-form-section__glow {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: min(1000px, 100vw);
+    aspect-ratio: 2 / 1;
+    transform: translateX(-50%);
+    background:
+      radial-gradient(45% 55% at 35% 50%, color-mix(in oklab, var(--page-accent-a) 22%, transparent), transparent 70%),
+      radial-gradient(45% 55% at 65% 50%, color-mix(in oklab, var(--page-accent-b) 22%, transparent), transparent 70%);
+    filter: blur(70px);
+    pointer-events: none;
   }
 
   .contact-form-wrap {
-    width: min(100%, 780px);
-    min-width: 0;
-  }
-
-  @media (max-width: 980px) {
-    .contact-hero {
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 72px;
-    }
-
-    .kontakt-grid {
-      gap: 38px;
-    }
-
-    .contact-hero__title {
-      font-size: var(--hero-title-size-tablet);
-      line-height: var(--hero-title-line-height-mobile);
-      letter-spacing: 0;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .contact-hero {
-      padding-top: var(--hero-offset-top-breadcrumb-mobile);
-      padding-bottom: 72px;
-    }
-
-    .contact-hero__title {
-      font-size: var(--hero-title-size-mobile);
-      line-height: var(--hero-title-line-height-mobile);
-      letter-spacing: 0;
-    }
-
-    .contact-hero__lead {
-      font-size: var(--lead-size-mobile);
-      line-height: 1.6;
-    }
-
+    position: relative;
+    width: min(100%, 820px);
+    margin: 0 auto;
+    --contact-a: var(--contact-neon-a);
+    --contact-b: var(--contact-neon-b);
+    --contact-c: var(--contact-neon-c);
   }
 </style>

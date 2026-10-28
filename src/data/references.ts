@@ -228,3 +228,14 @@ export function getReferencePage(pageNumber: number) {
 export function getReferencePageHref(pageNumber: number) {
   return pageNumber <= 1 ? '/referenzen/' : `/referenzen/seite/${pageNumber}/`;
 }
+
+// Responsive Quellen für das Hero-Bild einer Referenz-Detailseite (1080/1440/2160 px).
+export function getDetailImageSet(detailImageAvif: string) {
+  const base = detailImageAvif.replace(/-2160\.avif$/, '');
+  const srcset = (type: string) => [1080, 1440, 2160].map(width => `${base}-${width}.${type} ${width}w`).join(', ');
+  return {
+    avif: srcset('avif'),
+    webp: srcset('webp'),
+    sizes: '(max-width: 860px) calc(100vw - 48px), 600px',
+  };
+}

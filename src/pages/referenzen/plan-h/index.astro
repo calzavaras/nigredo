@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getDetailImageSet } from '../../../data/references';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
@@ -7,6 +8,7 @@ const liveUrl = 'https://www.plan-h.ch';
 const pageUrl = 'https://www.nigredo.ch/referenzen/plan-h/';
 const detailImage = '/referenzen/plan-h/plan-h-hypnosetherapie-website-startseite-screenshot-2160.webp';
 const detailImageAvif = '/referenzen/plan-h/plan-h-hypnosetherapie-website-startseite-screenshot-2160.avif';
+const detailImageSet = getDetailImageSet(detailImageAvif);
 const ogImage = 'https://www.nigredo.ch/referenzen/plan-h/plan-h-hypnosetherapie-website-startseite-screenshot-og.jpg';
 
 const schema = JSON.stringify({
@@ -26,7 +28,7 @@ const schema = JSON.stringify({
       "@id": `${pageUrl}#website-project`,
       "name": "Plan H Hypnosetherapie",
       "url": liveUrl,
-      "description": "Website für Plan H Hypnosetherapie in Bernhardzell bei St. Gallen mit lokaler Suchmaschinenoptimierung, direktem WhatsApp Kontakt, strukturierten Daten und verständlicher Angebotsführung.",
+      "description": "Website für Plan H Hypnosetherapie in Bernhardzell bei St. Gallen mit lokaler Suchmaschinenoptimierung, direktem WhatsApp-Kontakt, strukturierten Daten und verständlicher Angebotsführung.",
       "featureList": [
         "Responsive Astro-Website mit statischer Auslieferung",
         "Lokale Suchmaschinenoptimierung für Bernhardzell und St. Gallen",
@@ -42,7 +44,6 @@ const schema = JSON.stringify({
       "author": { "@id": "https://www.nigredo.ch/#person" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
       "maintainer": { "@id": "https://www.nigredo.ch/#organization" },
-      "isPartOf": { "@id": "https://www.nigredo.ch/referenzen/#webpage" },
       "about": {
         "@type": "LocalBusiness",
         "name": "Plan H Hypnosetherapie",
@@ -130,9 +131,10 @@ const schema = JSON.stringify({
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
+  preloadImageSrcset={detailImageSet.avif}
+  preloadImageSizes={detailImageSet.sizes}
 >
   <section class="section pt-sub case-page case-page--plan-h" aria-labelledby="plan-h-title">
-    <div class="hero-glow"></div>
     <div class="container case-page__container">
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
@@ -166,7 +168,8 @@ const schema = JSON.stringify({
               aria-label="Website-Vorschau vergrössern"
             >
               <picture>
-                <source srcset={detailImageAvif} type="image/avif">
+                <source srcset={detailImageSet.avif} sizes={detailImageSet.sizes} type="image/avif">
+                <source srcset={detailImageSet.webp} sizes={detailImageSet.sizes} type="image/webp">
                 <img
                   src={detailImage}
                   alt="Startseite der Praxiswebsite von Plan H Hypnosetherapie mit korallfarbenem Akzent und WhatsApp-Kontakt"
@@ -260,7 +263,7 @@ const schema = JSON.stringify({
       <span class="case-date fade-up">Abgeschlossen: Juni 2026</span>
 
       <div class="fade-up case-more-section">
-        <span class="case-more-label">Weitere Projekte</span>
+        <h2 class="case-more-label">Weitere Projekte</h2>
         <CaseMoreReferences />
       </div>
 

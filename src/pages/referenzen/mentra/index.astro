@@ -1,11 +1,13 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getDetailImageSet } from '../../../data/references';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const pageUrl = 'https://www.nigredo.ch/referenzen/mentra/';
 const detailImage = '/referenzen/mentra/mentra-video-wissenssystem-app-screenshot-2160.webp';
 const detailImageAvif = '/referenzen/mentra/mentra-video-wissenssystem-app-screenshot-2160.avif';
+const detailImageSet = getDetailImageSet(detailImageAvif);
 const ogImage = 'https://www.nigredo.ch/referenzen/mentra/mentra-video-wissenssystem-app-screenshot-og.jpg';
 
 const schema = JSON.stringify({
@@ -81,8 +83,8 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="Mentra: Wissen aus Videos | Nigredo"
-  description="Lokales KI Wissenssystem für Videos mit Archiv, semantischer Suche, Quellen, Reviews und Exporten. Daten und Modelle bleiben beim Kunden."
+  title="Mentra: lokales KI-Wissenssystem für Videos | Nigredo"
+  description="Lokales KI-Wissenssystem für Videos mit Archiv, semantischer Suche, Quellen, Reviews und Exporten. Daten und Modelle bleiben beim Kunden."
   canonical={pageUrl}
   ogTitle="Mentra: Aus Videos wird nutzbares Wissen"
   ogDescription="Lokales Wissenssystem für Videos mit KI Auswertung, semantischer Suche, Quellen, Reviews, Quiz und Exporten."
@@ -95,9 +97,10 @@ const schema = JSON.stringify({
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
+  preloadImageSrcset={detailImageSet.avif}
+  preloadImageSizes={detailImageSet.sizes}
 >
   <section class="section pt-sub case-page case-page--mentra" aria-labelledby="mentra-title">
-    <div class="hero-glow"></div>
     <div class="container case-page__container">
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
@@ -128,10 +131,8 @@ const schema = JSON.stringify({
               aria-label="Mentra Produktvisual vergrössern"
             >
               <picture>
-                <source
-                  srcset={detailImageAvif}
-                  type="image/avif"
-                >
+                <source srcset={detailImageSet.avif} sizes={detailImageSet.sizes} type="image/avif">
+                <source srcset={detailImageSet.webp} sizes={detailImageSet.sizes} type="image/webp">
                 <img
                   src={detailImage}
                   alt="Oberfläche der lokalen Mentra-App mit KI-gestützter Suche im Video-Wissensarchiv"
@@ -222,7 +223,7 @@ const schema = JSON.stringify({
       <span class="case-date fade-up">Abgeschlossen: Juni 2026</span>
 
       <div class="fade-up case-more-section">
-        <span class="case-more-label">Weitere Projekte</span>
+        <h2 class="case-more-label">Weitere Projekte</h2>
         <CaseMoreReferences />
       </div>
 

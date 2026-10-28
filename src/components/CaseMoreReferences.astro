@@ -3,26 +3,31 @@ import ReferenzVisual from './ReferenzVisual.astro';
 import { references } from '../data/references';
 
 const currentPath = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
-const others = references
-  .filter(reference => reference.href !== currentPath)
-  .slice(0, 3);
-const moreImageSizes = '(max-width: 700px) calc(100vw - 44px), (max-width: 1024px) calc(33.333vw - 32px), 283px';
+// Die nächsten drei Referenzen der Liste (rundum), damit jede Detailseite intern verlinkt wird.
+const currentIndex = references.findIndex(reference => reference.href === currentPath);
+const others = [1, 2, 3].map(offset => references[(currentIndex + offset + references.length) % references.length]);
+const moreImageSizes = '(max-width: 700px) calc(100vw - 48px), (max-width: 1024px) 45vw, 340px';
 ---
 
-<div class="case-more-grid">
+<div class="work-grid work-grid--three case-more-grid">
   {others.map(reference => (
-    <article class="case-more-card" style={`--card-accent: ${reference.accent};`}>
-      <ReferenzVisual reference={reference} sizes={moreImageSizes} />
-      <div class="case-more-card-body">
-        <p class="case-more-card-title">{reference.moreTitle}</p>
-        <p class="case-more-card-desc">{reference.moreDesc}</p>
-        <p class="case-more-card-role"><span>Rolle:</span> {reference.rolle}</p>
-        <div class="case-more-card-footer">
-          <a href={reference.href} class="case-more-card-arrow case-more-card-arrow--stretched" aria-label={reference.ariaLabel}>Projekt ansehen <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <article class="work-card" style={`--card-accent: ${reference.accent};`}>
+      <div class="work-card__visual">
+        <ReferenzVisual reference={reference} sizes={moreImageSizes} />
+      </div>
+      <div class="work-card__body">
+        <p class="work-card__meta"><span>{reference.badge.text}</span><span>{reference.year}</span></p>
+        <h3 class="work-card__title">
+          <a href={reference.href} class="work-card__link" aria-label={reference.ariaLabel}>{reference.moreTitle}</a>
+        </h3>
+        <p class="work-card__summary">{reference.moreDesc}</p>
+        <p class="work-card__role"><span>Rolle</span> {reference.rolle}</p>
+        <div class="work-card__footer">
+          <span class="work-card__more" aria-hidden="true">Projekt ansehen <span>→</span></span>
           {reference.liveUrl ? (
-            <a href={reference.liveUrl} class="case-more-live-link" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website ansehen <span aria-hidden="true">↗</span></a>
+            <a href={reference.liveUrl} class="work-card__live" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website ansehen <span aria-hidden="true">↗</span></a>
           ) : (
-            <span class="case-more-live-note">{reference.liveNote}</span>
+            <span class="work-card__note">{reference.liveNote}</span>
           )}
         </div>
       </div>

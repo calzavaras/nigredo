@@ -1,0 +1,952 @@
+---
+// Hero-Bühne der Startseite: Aus einer Idee entsteht eine fiktive, elegante Website.
+// Ablauf: Idee (Satz) → Skizze (von Hand) → Raster → Gestaltung → Terminbuchung → KI-Antwort mit Quelle → Mobil.
+// Jede zweite Runde zeigt dieselbe Marke in einer hellen Stimmung. Keine Kundendaten, keine Pflege bei neuen Referenzen.
+const steps = ['Idee', 'Skizze', 'Gestaltung', 'Funktion'];
+const slots = ['Di 09:30', 'Mi 14:00', 'Do 17:15'];
+---
+<div class="home-stage" data-home-stage data-phase="design" data-mood="dark" aria-hidden="true" data-nosnippet>
+  <div class="home-stage__window">
+    <div class="home-stage__bar">
+      <span class="home-stage__dots"><i></i><i></i><i></i></span>
+      <span class="home-stage__address">
+        <svg viewBox="0 0 16 16" width="11" height="11"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v6.5h-9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <span>Lumen · Entwurf</span>
+      </span>
+      <span class="home-stage__dots home-stage__dots--ghost"><i></i><i></i><i></i></span>
+    </div>
+
+    <div class="home-stage__viewport">
+      <div class="home-stage__grid"></div>
+
+      <div class="home-stage__content">
+        <svg class="home-stage__sketch" viewBox="0 0 100 56.25" preserveAspectRatio="none">
+          <g>
+            <rect pathLength="1" x="6" y="3.4" width="8" height="2.6" rx="1.3" style="--i: 0" />
+            <rect pathLength="1" x="46" y="4.1" width="22" height="1.2" rx=".6" style="--i: 1" />
+            <rect pathLength="1" x="82" y="3.3" width="12" height="2.8" rx="1.4" style="--i: 2" />
+            <rect pathLength="1" x="6" y="13.6" width="15" height="1" rx=".5" style="--i: 3" />
+            <rect pathLength="1" x="6" y="16.2" width="33" height="5" rx=".6" style="--i: 4" />
+            <rect pathLength="1" x="6" y="22.2" width="28" height="5" rx=".6" style="--i: 5" />
+            <rect pathLength="1" x="6" y="29.6" width="27" height="1.1" rx=".55" style="--i: 6" />
+            <rect pathLength="1" x="6" y="32" width="19" height="1.1" rx=".55" style="--i: 7" />
+            <rect pathLength="1" x="6" y="36.4" width="13" height="3.6" rx="1.8" style="--i: 8" />
+            <circle pathLength="1" cx="73" cy="28.6" r="16.5" style="--i: 9" />
+            <path pathLength="1" d="M60 41.5 C66 37, 80 37, 86 41.5" style="--i: 10" />
+            <rect pathLength="1" x="6" y="48" width="9" height="2.4" rx="1.2" style="--i: 11" />
+            <rect pathLength="1" x="16.4" y="48" width="8" height="2.4" rx="1.2" style="--i: 12" />
+            <rect pathLength="1" x="25.8" y="48" width="11" height="2.4" rx="1.2" style="--i: 13" />
+          </g>
+        </svg>
+
+        <div class="lumen">
+          <div class="lumen__nav lumen__in" style="--d: 0">
+            <span class="lumen__logo"><i></i>Lumen</span>
+            <span class="lumen__links"><span>Angebot</span><span>Ablauf</span><span>Kontakt</span></span>
+            <span class="lumen__navbtn">Termin</span>
+          </div>
+          <div class="lumen__hero">
+            <span class="lumen__kicker lumen__in" style="--d: 1">Studio für Bewegung</span>
+            <p class="lumen__title">
+              <span class="lumen__in" style="--d: 2">Bewegung,</span>
+              <span class="lumen__in lumen__grad" style="--d: 3">die bleibt.</span>
+            </p>
+            <p class="lumen__sub lumen__in" style="--d: 4">Persönliche Begleitung. Termine direkt online buchen.</p>
+            <span class="lumen__cta lumen__in" style="--d: 5" data-target="cta">Termin buchen <b>→</b></span>
+          </div>
+          <div class="lumen__orb lumen__in" style="--d: 2"><i></i><i></i><span></span></div>
+          <div class="lumen__chips lumen__in" style="--d: 6"><span>Online buchen</span><span>Persönlich</span><span>Zentral gelegen</span></div>
+
+          <div class="lumen__booking">
+            <span class="lumen__panel-title">Termin wählen</span>
+            <span class="lumen__panel-sub">Nächste freie Zeiten</span>
+            <span class="lumen__slots">
+              {slots.map((slot, i) => (
+                <span class="lumen__slot" data-target={i === 1 ? 'slot' : undefined}>{slot}</span>
+              ))}
+            </span>
+            <span class="lumen__confirm"><b>✓</b> Termin reserviert</span>
+          </div>
+
+          <div class="lumen__chat">
+            <span class="lumen__chat-head"><i></i>Fragen an Lumen</span>
+            <span class="lumen__bubble lumen__bubble--q">Wie lange dauert eine Sitzung?</span>
+            <span class="lumen__bubble lumen__bubble--a"><span class="lumen__answer" data-answer="Eine Sitzung dauert 50 Minuten, das Erstgespräch 60 Minuten."></span><span class="lumen__typing"><i></i><i></i><i></i></span></span>
+            <span class="lumen__source">
+              <svg viewBox="0 0 16 16" width="10" height="10"><path d="M4 1.5h5.5L12.5 4.5v10h-8.5z M9.5 1.5v3h3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              Quelle: Angebot › Ablauf
+            </span>
+          </div>
+        </div>
+
+        <div class="lumen-phone">
+          <div class="lumen-phone__screen">
+            <span class="lumen-phone__nav"><span class="lumen__logo"><i></i>Lumen</span><span class="lumen-phone__menu"><i></i><i></i></span></span>
+            <span class="lumen-phone__orb"><i></i><i></i></span>
+            <span class="lumen-phone__kicker">Studio für Bewegung</span>
+            <span class="lumen-phone__title">Bewegung,<br><span class="lumen__grad">die bleibt.</span></span>
+            <span class="lumen-phone__cta">Termin buchen</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-stage__brief">
+        <span class="home-stage__brief-label">Die Idee</span>
+        <p class="home-stage__brief-text"><span class="home-stage__typed" data-text="Eine Website, die Vertrauen schafft und Termine bringt."></span><span class="home-stage__caret"></span></p>
+      </div>
+
+      <span class="home-stage__ripple"></span>
+      <svg class="home-stage__cursor" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M5 3l13.5 8.2-6.1 1.3 3.4 6.6-2.6 1.3-3.4-6.6L5 18.1z" fill="#fff" stroke="#0b0b0e" stroke-width="1.3" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="home-stage__meta">
+    <ol class="home-stage__steps">
+      {steps.map((step, i) => (
+        <li class={`home-stage__step${i === 2 ? ' is-active' : ''}`}>{step}</li>
+      ))}
+    </ol>
+    <p class="home-stage__caption">Typografie, Farbe, Form</p>
+  </div>
+</div>
+<script is:inline>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.querySelector('[data-home-stage]').dataset.phase = 'idea';
+</script>
+
+<style>
+.home-stage {
+  --stage-ease: cubic-bezier(.22, 1, .36, 1);
+  --cx: 0px;
+  --cy: 0px;
+  position: relative;
+  width: 100%;
+}
+
+.home-stage::before {
+  content: "";
+  position: absolute;
+  inset: 8% 6% 10%;
+  background:
+    radial-gradient(40% 55% at 22% 40%, oklch(62% 0.27 342 / .42), transparent 70%),
+    radial-gradient(45% 60% at 78% 55%, oklch(60% 0.22 262 / .44), transparent 70%);
+  filter: blur(70px);
+  opacity: .5;
+  pointer-events: none;
+}
+
+.home-stage__window {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0a0a0d;
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .6), 0 40px 120px -30px rgba(0, 0, 0, .9), inset 0 1px 0 rgba(255, 255, 255, .06);
+  transform: perspective(1800px) rotateX(var(--tilt, 0deg));
+  transform-origin: 50% 0;
+}
+
+.home-stage__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 42px;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, .07);
+  background: rgba(255, 255, 255, .025);
+}
+
+.home-stage__dots { display: flex; gap: 7px; }
+.home-stage__dots i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, .16); }
+.home-stage__dots--ghost { visibility: hidden; }
+
+.home-stage__address {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: min(320px, 50%);
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .055);
+  color: rgba(255, 255, 255, .62);
+  font-size: .78rem;
+  white-space: nowrap;
+}
+
+.home-stage__viewport {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  isolation: isolate;
+  container-type: inline-size;
+}
+
+.home-stage__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .06) 1px, transparent 1px);
+  background-size: calc(100% / 12) calc(100% / 8);
+  mask-image: radial-gradient(ellipse at center, #000 35%, transparent 80%);
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+
+.home-stage__content {
+  position: absolute;
+  inset: 0;
+  transition: opacity .45s ease .5s;
+}
+
+/* Skizze */
+.home-stage__sketch {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.home-stage__sketch g {
+  transform: rotate(-1.4deg) translate(-.8px, 1.4px) scale(1.012);
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  transition: transform .9s cubic-bezier(.68, -0.35, .27, 1.3);
+}
+
+.home-stage__sketch :is(rect, circle, path) {
+  fill: none;
+  stroke: rgba(205, 186, 255, .72);
+  stroke-width: .13;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset .9s cubic-bezier(.65, 0, .35, 1) calc(var(--i) * 110ms), stroke .6s ease;
+}
+
+/* Fiktive Website «Lumen» */
+.lumen,
+.lumen-phone {
+  --s-bg: #0c0c10;
+  --s-ink: #f4f3f7;
+  --s-muted: rgba(244, 243, 247, .6);
+  --s-line: rgba(255, 255, 255, .12);
+  --s-card: rgba(22, 22, 28, .92);
+  --s-a: oklch(72% 0.27 342);
+  --s-b: oklch(67% 0.22 262);
+  --s-btn: #f4f3f7;
+  --s-btn-ink: #0c0c10;
+}
+
+.home-stage[data-mood="light"] :is(.lumen, .lumen-phone) {
+  --s-bg: #f4efe7;
+  --s-ink: #1f1c19;
+  --s-muted: rgba(31, 28, 25, .62);
+  --s-line: rgba(31, 28, 25, .14);
+  --s-card: rgba(255, 255, 255, .95);
+  --s-a: #e07a5a;
+  --s-b: #c39a5c;
+  --s-btn: #1f1c19;
+  --s-btn-ink: #f4efe7;
+}
+
+.lumen {
+  position: absolute;
+  inset: 0;
+  background: var(--s-bg);
+  color: var(--s-ink);
+  font-size: 1.2cqw;
+  line-height: 1.4;
+  opacity: 0;
+  transition: opacity .6s ease, transform .8s var(--stage-ease);
+  transform-origin: 30% 50%;
+}
+
+.lumen__in {
+  opacity: 0;
+  transform: translateY(1.4cqw);
+  transition: opacity .6s ease calc(var(--d) * 110ms), transform .9s var(--stage-ease) calc(var(--d) * 110ms);
+}
+
+.lumen__nav {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 5.6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lumen__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: .7cqw;
+  font-size: 1.55cqw;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+.lumen__logo i {
+  width: 1.7cqw;
+  height: 1.7cqw;
+  border-radius: 50%;
+  background: conic-gradient(from 200deg, var(--s-a), var(--s-b), var(--s-a));
+}
+
+.lumen__links { display: flex; gap: 2.6cqw; margin-left: 8cqw; color: var(--s-muted); font-size: 1.1cqw; }
+
+.lumen__navbtn {
+  padding: .55cqw 1.4cqw;
+  border: 1px solid var(--s-line);
+  border-radius: 99px;
+  font-size: 1.05cqw;
+  font-weight: 600;
+}
+
+.lumen__hero { position: absolute; left: 6%; top: 24%; width: 46%; }
+
+.lumen__kicker {
+  display: block;
+  margin-bottom: 1.5cqw;
+  color: var(--s-muted);
+  font-size: 1cqw;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.lumen__title {
+  margin: 0;
+  font-size: 5.3cqw;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.lumen__title > span { display: block; }
+
+.lumen__grad {
+  background: linear-gradient(100deg, var(--s-a), var(--s-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lumen__sub {
+  max-width: 28cqw;
+  margin: 2cqw 0 0;
+  color: var(--s-muted);
+  font-size: 1.4cqw;
+  line-height: 1.45;
+}
+
+.lumen__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .8cqw;
+  margin-top: 2.6cqw;
+  padding: 1cqw 1.9cqw;
+  border-radius: 99px;
+  background: var(--s-btn);
+  color: var(--s-btn-ink);
+  font-size: 1.2cqw;
+  font-weight: 600;
+  transition: opacity .6s ease calc(var(--d) * 110ms), transform .9s var(--stage-ease) calc(var(--d) * 110ms), box-shadow .3s ease;
+}
+
+.lumen__cta b { font-weight: 500; }
+
+.lumen__orb {
+  position: absolute;
+  left: 56%;
+  top: 16%;
+  width: 34%;
+  aspect-ratio: 1;
+}
+
+.lumen__orb i,
+.lumen-phone__orb i {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.lumen__orb i:first-child,
+.lumen-phone__orb i:first-child {
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, .85), transparent 22%),
+    conic-gradient(from 140deg, var(--s-a), var(--s-b), color-mix(in oklab, var(--s-a) 50%, var(--s-bg)), var(--s-a));
+  filter: blur(.25cqw);
+  animation: lumen-spin 16s linear infinite;
+}
+
+.lumen__orb i:last-child,
+.lumen-phone__orb i:last-child {
+  background: radial-gradient(circle at 70% 75%, color-mix(in oklab, var(--s-bg) 70%, transparent), transparent 55%);
+}
+
+.lumen__orb span {
+  position: absolute;
+  inset: -9%;
+  border-radius: 50%;
+  border: 1px solid var(--s-line);
+}
+
+.lumen__chips {
+  position: absolute;
+  left: 6%;
+  bottom: 8%;
+  display: flex;
+  gap: 1cqw;
+}
+
+.lumen__chips span {
+  padding: .5cqw 1.1cqw;
+  border: 1px solid var(--s-line);
+  border-radius: 99px;
+  color: var(--s-muted);
+  font-size: .95cqw;
+}
+
+/* Panels */
+.lumen__booking,
+.lumen__chat {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 1.8cqw;
+  border: 1px solid var(--s-line);
+  border-radius: 1.4cqw;
+  background: var(--s-card);
+  box-shadow: 0 2.4cqw 5cqw -1.6cqw rgba(0, 0, 0, .55);
+  opacity: 0;
+  transform: translateY(2cqw) scale(.97);
+  transition: opacity .45s ease, transform .7s var(--stage-ease);
+}
+
+.lumen__booking { left: 57%; top: 27%; width: 31%; gap: .5cqw; }
+
+.lumen__panel-title { font-size: 1.4cqw; font-weight: 650; letter-spacing: -.01em; }
+.lumen__panel-sub { color: var(--s-muted); font-size: 1cqw; }
+
+.lumen__slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8cqw; margin-top: 1.2cqw; }
+
+.lumen__slot {
+  position: relative;
+  isolation: isolate;
+  padding: .9cqw 0;
+  border: 1px solid var(--s-line);
+  border-radius: .9cqw;
+  font-size: 1.05cqw;
+  font-weight: 600;
+  text-align: center;
+  transition: color .3s ease, border-color .3s ease;
+}
+
+.lumen__slot::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(100deg, var(--s-a), var(--s-b));
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.lumen__confirm {
+  display: flex;
+  align-items: center;
+  gap: .6cqw;
+  margin-top: 1.2cqw;
+  color: var(--s-muted);
+  font-size: 1.05cqw;
+  opacity: 0;
+  transform: translateY(.6cqw);
+  transition: opacity .4s ease, transform .5s var(--stage-ease);
+}
+
+.lumen__confirm b {
+  display: inline-grid;
+  place-items: center;
+  width: 1.6cqw;
+  height: 1.6cqw;
+  border-radius: 50%;
+  background: linear-gradient(100deg, var(--s-a), var(--s-b));
+  color: #fff;
+  font-size: .9cqw;
+}
+
+.lumen__chat { left: 50%; top: 40%; width: 42%; gap: 1cqw; }
+
+.lumen__chat-head { display: flex; align-items: center; gap: .6cqw; color: var(--s-muted); font-size: .95cqw; font-weight: 600; }
+.lumen__chat-head i { width: .8cqw; height: .8cqw; border-radius: 50%; background: linear-gradient(100deg, var(--s-a), var(--s-b)); }
+
+.lumen__bubble {
+  max-width: 84%;
+  padding: 1cqw 1.3cqw;
+  border-radius: 1.2cqw;
+  font-size: 1.15cqw;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(.8cqw);
+  transition: opacity .4s ease, transform .55s var(--stage-ease);
+}
+
+.lumen__bubble--q {
+  align-self: flex-end;
+  border-bottom-right-radius: .3cqw;
+  background: linear-gradient(100deg, var(--s-a), var(--s-b));
+  color: #fff;
+}
+
+.lumen__bubble--a {
+  align-self: flex-start;
+  min-height: 3.4cqw;
+  border: 1px solid var(--s-line);
+  border-bottom-left-radius: .3cqw;
+}
+
+.lumen__typing { display: inline-flex; gap: .35cqw; }
+.lumen__typing i { width: .55cqw; height: .55cqw; border-radius: 50%; background: var(--s-muted); animation: lumen-dot 1s ease-in-out infinite; }
+.lumen__typing i:nth-child(2) { animation-delay: .15s; }
+.lumen__typing i:nth-child(3) { animation-delay: .3s; }
+
+.lumen__source {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: .5cqw;
+  padding: .4cqw .9cqw;
+  border: 1px solid color-mix(in oklab, var(--s-a) 55%, transparent);
+  border-radius: 99px;
+  color: var(--s-ink);
+  font-size: .9cqw;
+  opacity: 0;
+  transform: translateY(.6cqw);
+  transition: opacity .4s ease, transform .5s var(--stage-ease);
+}
+
+/* Mobile Ansicht */
+.lumen-phone {
+  position: absolute;
+  right: 7%;
+  top: 8%;
+  width: 21%;
+  aspect-ratio: 9 / 19;
+  padding: .55cqw;
+  border-radius: 3.2cqw;
+  background: #1b1b21;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .14), 0 3cqw 6cqw -2cqw rgba(0, 0, 0, .7);
+  opacity: 0;
+  transform: translateX(60%) rotate(4deg);
+  transition: opacity .5s ease, transform 1s var(--stage-ease);
+}
+
+.lumen-phone__screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.2cqw 1.6cqw;
+  border-radius: 2.7cqw;
+  overflow: hidden;
+  background: var(--s-bg);
+  color: var(--s-ink);
+}
+
+.lumen-phone__nav { display: flex; align-items: center; justify-content: space-between; }
+.lumen-phone__nav .lumen__logo { font-size: 1.15cqw; gap: .5cqw; }
+.lumen-phone__nav .lumen__logo i { width: 1.2cqw; height: 1.2cqw; }
+.lumen-phone__menu { display: grid; gap: .35cqw; }
+.lumen-phone__menu i { width: 1.4cqw; height: 1.5px; background: var(--s-ink); }
+
+.lumen-phone__orb { position: relative; width: 62%; aspect-ratio: 1; margin: 3cqw auto 2.6cqw; }
+
+.lumen-phone__kicker { color: var(--s-muted); font-size: .7cqw; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.lumen-phone__title { margin-top: .8cqw; font-size: 2.3cqw; font-weight: 650; line-height: 1.02; letter-spacing: -.035em; }
+
+.lumen-phone__cta {
+  margin-top: auto;
+  padding: .9cqw 0;
+  border-radius: 99px;
+  background: var(--s-btn);
+  color: var(--s-btn-ink);
+  font-size: .95cqw;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Idee */
+.home-stage__brief {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 10% 8% 0;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .45s ease, transform .6s var(--stage-ease);
+}
+
+.home-stage__brief-label {
+  color: rgba(226, 220, 233, .58);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.home-stage__brief-text {
+  margin: 0;
+  max-width: 22ch;
+  color: #f5f5f7;
+  font-size: clamp(1.15rem, 3.3cqw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+
+.home-stage__caret {
+  display: inline-block;
+  width: .08em;
+  height: .95em;
+  margin-left: .06em;
+  vertical-align: -.1em;
+  background: linear-gradient(to bottom, oklch(72% 0.29 342), oklch(67% 0.22 252));
+  animation: stage-caret 1s steps(1) infinite;
+}
+
+/* Mauszeiger */
+.home-stage__cursor,
+.home-stage__ripple {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.home-stage__cursor {
+  width: clamp(16px, 2.1cqw, 24px);
+  height: auto;
+  margin: -3px 0 0 -5px;
+  opacity: 0;
+  transform: translate(var(--cx), var(--cy));
+  transition: opacity .3s ease, transform .95s var(--stage-ease);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .45));
+}
+
+.home-stage__ripple {
+  width: 44px;
+  height: 44px;
+  margin: -22px 0 0 -22px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .9);
+  opacity: 0;
+  transform: translate(var(--cx), var(--cy));
+}
+
+/* Bildunterschrift und Schritte */
+.home-stage__meta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 0 4px;
+}
+
+.home-stage__steps { display: flex; gap: clamp(14px, 2.4vw, 28px); margin: 0; padding: 0; list-style: none; }
+
+.home-stage__step {
+  position: relative;
+  padding-top: 12px;
+  color: rgba(255, 255, 255, .36);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  transition: color .4s ease;
+}
+
+.home-stage__step::before,
+.home-stage__step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, .12);
+}
+
+.home-stage__step::after {
+  background: linear-gradient(90deg, oklch(72% 0.29 342), oklch(67% 0.22 252));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .5s var(--stage-ease);
+}
+
+.home-stage__step.is-active { color: #f5f5f7; }
+.home-stage__step.is-active::after { transform: scaleX(1); }
+
+.home-stage__caption { margin: 0; color: rgba(255, 255, 255, .62); font-size: .88rem; }
+
+/* Phasen: idea → sketch → snap → design → book → ai → mobile → out */
+.home-stage[data-phase="idea"] .home-stage__brief { opacity: 1; transform: none; }
+
+.home-stage:is([data-phase="sketch"], [data-phase="snap"]) .home-stage__sketch { opacity: 1; }
+.home-stage:is([data-phase="sketch"], [data-phase="snap"]) .home-stage__sketch :is(rect, circle, path) { stroke-dashoffset: 0; }
+.home-stage[data-phase="snap"] .home-stage__sketch g { transform: none; }
+.home-stage[data-phase="snap"] .home-stage__sketch :is(rect, circle, path) { stroke: rgba(205, 186, 255, .95); }
+.home-stage[data-phase="snap"] .home-stage__grid { opacity: 1; }
+
+.home-stage:is([data-phase="design"], [data-phase="book"], [data-phase="ai"], [data-phase="mobile"], [data-phase="out"]) :is(.lumen, .lumen__in) {
+  opacity: 1;
+  transform: none;
+}
+
+.home-stage[data-hover="cta"] .lumen__cta {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 .4cqw color-mix(in oklab, var(--s-a) 35%, transparent), 0 1.4cqw 3cqw -1cqw color-mix(in oklab, var(--s-a) 70%, transparent);
+  transition-delay: 0s;
+}
+
+.home-stage[data-phase="book"][data-booking] .lumen__booking { opacity: 1; transform: none; }
+.home-stage[data-booking="picked"] .lumen__slot[data-target="slot"] { color: #fff; border-color: transparent; }
+.home-stage[data-booking="picked"] .lumen__slot[data-target="slot"]::before { opacity: 1; }
+.home-stage[data-booking="picked"] .lumen__confirm { opacity: 1; transform: none; }
+
+.home-stage[data-phase="ai"] .lumen__chat { opacity: 1; transform: none; }
+.home-stage[data-phase="ai"][data-ai] .lumen__bubble--q,
+.home-stage[data-phase="ai"]:is([data-ai="wait"], [data-ai="typing"], [data-ai="done"]) .lumen__bubble--a { opacity: 1; transform: none; }
+.home-stage[data-phase="ai"][data-ai="done"] .lumen__source { opacity: 1; transform: none; }
+.home-stage:not([data-ai="wait"]) .lumen__typing { display: none; }
+
+.home-stage[data-phase="mobile"] .lumen { opacity: .4; transform: scale(.97); }
+.home-stage[data-phase="mobile"] .lumen-phone { opacity: 1; transform: none; }
+
+.home-stage[data-cursor] .home-stage__cursor { opacity: 1; }
+.home-stage[data-click] .home-stage__cursor { transform: translate(var(--cx), var(--cy)) scale(.86); transition-duration: .3s, .12s; }
+.home-stage[data-click] .home-stage__ripple { animation: stage-ripple .65s ease-out both; }
+
+.home-stage[data-phase="out"] .home-stage__content { opacity: 0; transition-delay: 0s; }
+.home-stage[data-reset] .home-stage__content * { transition: none !important; }
+
+@keyframes stage-caret { 50% { opacity: 0; } }
+@keyframes lumen-spin { to { transform: rotate(1turn); } }
+@keyframes lumen-dot { 0%, 100% { opacity: .3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-.3cqw); } }
+@keyframes stage-ripple {
+  from { opacity: .9; transform: translate(var(--cx), var(--cy)) scale(.3); }
+  to { opacity: 0; transform: translate(var(--cx), var(--cy)) scale(1.5); }
+}
+
+@media (max-width: 620px) {
+  .home-stage__window { border-radius: 12px; }
+  .home-stage__bar { height: 32px; padding: 0 10px; }
+  .home-stage__dots { gap: 5px; }
+  .home-stage__dots i { width: 7px; height: 7px; }
+  .home-stage__address { font-size: .68rem; padding: 3px 10px; }
+  .home-stage__brief { gap: 8px; }
+  .home-stage__brief-label { font-size: .64rem; }
+  .home-stage__meta { margin-top: 14px; }
+  .home-stage__step { font-size: .74rem; padding-top: 9px; }
+  .home-stage__caption { font-size: .8rem; }
+  .home-stage__ripple { width: 28px; height: 28px; margin: -14px 0 0 -14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-stage__window { transform: none; }
+  .home-stage *,
+  .home-stage *::before { transition: none !important; animation: none !important; }
+}
+</style>
+
+<script>
+const stage = document.querySelector<HTMLElement>('[data-home-stage]');
+
+if (stage) {
+  const viewport = stage.querySelector<HTMLElement>('.home-stage__viewport')!;
+  const steps = [...stage.querySelectorAll<HTMLElement>('.home-stage__step')];
+  const caption = stage.querySelector<HTMLElement>('.home-stage__caption');
+  const typed = stage.querySelector<HTMLElement>('.home-stage__typed');
+  const answer = stage.querySelector<HTMLElement>('.lumen__answer');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  type Phase = { name: string; duration: number; step: number; caption: string; cues?: [number, () => void][] };
+
+  let timers: number[] = [];
+  const later = (ms: number, fn: () => void) => { timers.push(window.setTimeout(fn, ms)); };
+
+  const typeInto = (element: HTMLElement | null, text: string, speed: number, done?: () => void) => {
+    if (!element) return;
+    let length = 0;
+    element.textContent = '';
+    const timer = window.setInterval(() => {
+      length += 1;
+      element.textContent = text.slice(0, length);
+      if (length >= text.length) {
+        window.clearInterval(timer);
+        done?.();
+      }
+    }, speed);
+    timers.push(timer);
+  };
+
+  // Mauszeiger auf ein Element der fiktiven Website setzen.
+  const pointAt = (target: string) => {
+    const element = stage.querySelector<HTMLElement>(`[data-target="${target}"]`);
+    if (!element) return;
+    const box = viewport.getBoundingClientRect();
+    const rect = element.getBoundingClientRect();
+    stage.style.setProperty('--cx', `${rect.left - box.left + rect.width * .55}px`);
+    stage.style.setProperty('--cy', `${rect.top - box.top + rect.height * .6}px`);
+    stage.dataset.cursor = '';
+  };
+
+  const parkCursor = () => {
+    const box = viewport.getBoundingClientRect();
+    stage.style.setProperty('--cx', `${box.width * .96}px`);
+    stage.style.setProperty('--cy', `${box.height * 1.08}px`);
+  };
+
+  const click = () => {
+    stage.dataset.click = '';
+    later(420, () => { delete stage.dataset.click; });
+  };
+
+  const phases: Phase[] = [
+    { name: 'idea', duration: 2700, step: 0, caption: 'Am Anfang steht ein Satz', cues: [[0, () => typeInto(typed, typed?.dataset.text ?? '', 40)]] },
+    { name: 'sketch', duration: 2500, step: 1, caption: 'Struktur, von Hand skizziert' },
+    { name: 'snap', duration: 1300, step: 1, caption: 'Auf ein präzises Raster gebracht' },
+    { name: 'design', duration: 2600, step: 2, caption: 'Typografie, Farbe, Form' },
+    {
+      name: 'book', duration: 3700, step: 3, caption: 'Online-Terminbuchung',
+      cues: [
+        [100, () => pointAt('cta')],
+        [900, () => { stage.dataset.hover = 'cta'; }],
+        [1250, click],
+        [1450, () => { delete stage.dataset.hover; stage.dataset.booking = 'open'; }],
+        [1900, () => pointAt('slot')],
+        [2800, click],
+        [2900, () => { stage.dataset.booking = 'picked'; }],
+      ],
+    },
+    {
+      name: 'ai', duration: 3900, step: 3, caption: 'KI-Antwort mit Quelle',
+      cues: [
+        [0, () => { delete stage.dataset.cursor; parkCursor(); }],
+        [350, () => { stage.dataset.ai = 'wait'; }],
+        [1050, () => {
+          stage.dataset.ai = 'typing';
+          typeInto(answer, answer?.dataset.answer ?? '', 28, () => { stage.dataset.ai = 'done'; });
+        }],
+      ],
+    },
+    { name: 'mobile', duration: 3000, step: 3, caption: 'Auf jedem Gerät' },
+    { name: 'out', duration: 800, step: 3, caption: 'Auf jedem Gerät' },
+  ];
+
+  let index = 0;
+  let loop = 0;
+  let running = false;
+  let visible = false;
+
+  const clearTimers = () => {
+    timers.forEach(timer => { window.clearTimeout(timer); window.clearInterval(timer); });
+    timers = [];
+  };
+
+  const resetFlags = () => {
+    ['hover', 'booking', 'ai', 'click', 'cursor'].forEach(key => delete stage.dataset[key]);
+    if (answer) answer.textContent = '';
+  };
+
+  const show = (phase: Phase) => {
+    stage.dataset.phase = phase.name;
+    steps.forEach((element, i) => element.classList.toggle('is-active', i === phase.step));
+    if (caption) caption.textContent = phase.caption;
+  };
+
+  const run = () => {
+    clearTimers();
+    const phase = phases[index];
+    if (phase.name === 'idea') {
+      // Nach «out» ist der Inhalt unsichtbar: Zustände ohne Übergang zurücksetzen und Stimmung wechseln.
+      stage.dataset.reset = '';
+      resetFlags();
+      parkCursor();
+      stage.dataset.mood = loop % 2 ? 'light' : 'dark';
+      requestAnimationFrame(() => requestAnimationFrame(() => { delete stage.dataset.reset; }));
+    }
+    if (phase.name === 'book') resetFlags();
+    show(phase);
+    phase.cues?.forEach(([ms, fn]) => later(ms, fn));
+    later(phase.duration, () => {
+      index = (index + 1) % phases.length;
+      if (index === 0) loop += 1;
+      run();
+    });
+  };
+
+  const update = () => {
+    if (motion.matches) {
+      running = false;
+      clearTimers();
+      resetFlags();
+      show(phases[3]);
+      return;
+    }
+    const shouldRun = visible && !document.hidden;
+    if (shouldRun && !running) {
+      running = true;
+      run();
+    } else if (!shouldRun && running) {
+      running = false;
+      clearTimers();
+    }
+  };
+
+  parkCursor();
+  if (!motion.matches) show(phases[0]);
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      update();
+    }, { threshold: 0.15 }).observe(stage);
+  } else {
+    visible = true;
+    update();
+  }
+
+  document.addEventListener('visibilitychange', update);
+  motion.addEventListener('change', update);
+
+  // Leichte Neigung, die sich beim Scrollen aufrichtet.
+  const desktop = window.matchMedia('(min-width: 861px)');
+  let frame = 0;
+  const tilt = () => {
+    frame = 0;
+    const angle = motion.matches || !desktop.matches ? 0 : Math.max(0, 1 - window.scrollY / 420) * 9;
+    stage.style.setProperty('--tilt', `${angle.toFixed(2)}deg`);
+  };
+  window.addEventListener('scroll', () => { if (!frame) frame = requestAnimationFrame(tilt); }, { passive: true });
+  desktop.addEventListener('change', tilt);
+  tilt();
+}
+</script>

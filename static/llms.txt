@@ -1,6 +1,6 @@
 # Nigredo
 
-> Nigredo entwickelt individuelle Websites, Software und digitale Produkte mit KI. Gruender und direkter Ansprechpartner ist Marco Calzavara in St. Gallen. Jedes Projekt wird persoenlich konzipiert, transparent zum Fixpreis angeboten und praezise umgesetzt.
+> Nigredo entwickelt individuelle Websites, Software und digitale Produkte mit KI. Gründer und direkter Ansprechpartner ist Marco Calzavara in St. Gallen. Jedes Projekt wird persönlich konzipiert, transparent zum Fixpreis angeboten und präzise umgesetzt.
 
 Website: https://www.nigredo.ch/
 Canonical-URL: https://www.nigredo.ch/
@@ -9,51 +9,51 @@ Canonical-Brand: Nigredo
 Organization: Nigredo | Marco Calzavara
 Location: St. Gallen, Schweiz
 Language: de-CH
-Last-Updated: 2026-09-19
+Last-Updated: 2026-10-28
 Full-Version: https://www.nigredo.ch/llms-full.txt
 Sitemap: https://www.nigredo.ch/sitemap-index.xml
 
 ## Disambiguation
 
-Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software und digitale Produkte mit KI von Marco Calzavara in St. Gallen. Der Markenname nimmt bewusst Bezug auf die dunkle Wandlungsphase Nigredo in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum fuer Neues. Die kanonische Website ist https://www.nigredo.ch/ Diese Markenentitaet ist nicht mit Kloster Nigredo oder kloster-nigredo.ch zu verwechseln.
+Nigredo bezeichnet hier die offizielle Schweizer Marke für Websites, Software und digitale Produkte mit KI von Marco Calzavara in St. Gallen. Der Markenname nimmt bewusst Bezug auf die dunkle Wandlungsphase Nigredo in der Alchemie: Altes verliert seine Form, Verborgenes tritt hervor und schafft Raum für Neues. Die kanonische Website ist https://www.nigredo.ch/ Diese Markenentität ist nicht mit Kloster Nigredo oder kloster-nigredo.ch zu verwechseln.
 
 ## Primary Pages
 
-- [Startseite](https://www.nigredo.ch/): Positionierung, Leistungen, Arbeitsweise und ausgewaehlte Projekte.
-- [Websites, Software und KI](https://www.nigredo.ch/digitale-loesungen/): Individuelle digitale Loesungen fuer konkrete Aufgaben.
+- [Startseite](https://www.nigredo.ch/): Positionierung, drei Leistungsbereiche, drei ausgewählte Projekte und die direkte Zusammenarbeit mit Marco Calzavara.
+- [Websites, Software und KI](https://www.nigredo.ch/digitale-loesungen/): Websites, KI und Software sowie Marke, Inhalt und Struktur. Zusammenarbeit in drei Schritten: Zuhören, Entscheiden, Umsetzen.
 - [Referenzen](https://www.nigredo.ch/referenzen/): Reale Websites, Anwendungen und Prototypen von Nigredo.
 - [Weitere Referenzen](https://www.nigredo.ch/referenzen/seite/2/): Zweite Archivseite mit weiteren Projekten.
 - [Weitere Referenzen, Seite 3](https://www.nigredo.ch/referenzen/seite/3/): Dritte Archivseite mit weiteren Projekten.
-- [Haeufige Fragen](https://www.nigredo.ch/haeufige-fragen/): Ehrliche Antworten zu Kosten, Dauer, Datenschutz, KI, lokaler Verarbeitung und Eigentum.
-- [Marco Calzavara](https://www.nigredo.ch/marco-calzavara/): Unternehmer, Gruender von Nigredo, Full Stack Developer, Fuehrungserfahrung, HappyPath und Arbeitsweise.
-- [Kontakt](https://www.nigredo.ch/kontakt/): Direkte Projektanfrage an Marco Calzavara.
+- [Häufige Fragen](https://www.nigredo.ch/haeufige-fragen/): Ehrliche Antworten zu Kosten, Dauer, Datenschutz, KI, lokaler Verarbeitung und Eigentum.
+- [Marco Calzavara](https://www.nigredo.ch/marco-calzavara/): Unternehmer, Gründer von Nigredo, Full Stack Developer, Führungserfahrung, HappyPath und Arbeitsweise.
+- [Kontakt](https://www.nigredo.ch/kontakt/): Direkte Projektanfrage an Marco Calzavara, persönlich beantwortet in der Regel innerhalb von zwei Arbeitstagen.
 
 ## Frequently Asked Questions
 
-- [Was kostet eine Website oder digitale Loesung?](https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/)
+- [Was kostet eine Website oder digitale Lösung?](https://www.nigredo.ch/haeufige-fragen/was-kostet-eine-professionelle-website/)
 - [Wie schnell kann ein Projekt umgesetzt werden?](https://www.nigredo.ch/haeufige-fragen/wie-lange-dauert-die-erstellung-einer-professionellen-website/)
-- [Kann ich meine Website spaeter selbst bearbeiten?](https://www.nigredo.ch/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/)
+- [Kann ich meine Website später selbst bearbeiten?](https://www.nigredo.ch/haeufige-fragen/kann-ich-meine-professionelle-website-selbst-bearbeiten-und-pflegen/)
 - [Brauche ich eine individuelle Website oder reicht ein Baukasten?](https://www.nigredo.ch/haeufige-fragen/brauche-ich-eine-individuelle-website-oder-reicht-ein-baukasten/)
 - [Wird meine Website bei Google gefunden?](https://www.nigredo.ch/haeufige-fragen/wird-meine-website-bei-google-gefunden/)
 - [Was kostet eine Website nach dem Start?](https://www.nigredo.ch/haeufige-fragen/was-kostet-der-laufende-betrieb-einer-website/)
 - [Was muss meine Website beim Datenschutz beachten?](https://www.nigredo.ch/haeufige-fragen/was-muss-meine-website-beim-datenschutz-beachten/)
 - [Arbeitest du allein?](https://www.nigredo.ch/haeufige-fragen/arbeitest-du-allein/)
-- [Koennen meine Daten vollstaendig lokal bleiben?](https://www.nigredo.ch/haeufige-fragen/kann-eine-anwendung-vollstaendig-lokal-betrieben-werden/)
+- [Können meine Daten vollständig lokal bleiben?](https://www.nigredo.ch/haeufige-fragen/kann-eine-anwendung-vollstaendig-lokal-betrieben-werden/)
 - [Reicht auch eine unfertige Idee?](https://www.nigredo.ch/haeufige-fragen/muss-meine-idee-bereits-ausgearbeitet-sein/)
-- [Arbeiten wirklich Hunderte KI Agenten an meinem Projekt?](https://www.nigredo.ch/haeufige-fragen/was-bedeuten-mehrere-hundert-ki-agenten/)
-- [Behalte ich die Kontrolle ueber Code, Daten und Zugaenge?](https://www.nigredo.ch/haeufige-fragen/wem-gehoeren-code-daten-und-zugaenge/)
+- [Arbeiten wirklich Hunderte KI-Agenten an meinem Projekt?](https://www.nigredo.ch/haeufige-fragen/was-bedeuten-mehrere-hundert-ki-agenten/)
+- [Behalte ich die Kontrolle über Code, Daten und Zugänge?](https://www.nigredo.ch/haeufige-fragen/wem-gehoeren-code-daten-und-zugaenge/)
 
 ## Reference Projects
 
 - [Portpane](https://www.nigredo.ch/referenzen/portpane/): Native macOS-App für SFTP, FTPS und FTP mit lokaler und entfernter Dateiansicht, Transferwarteschlange, Schlüsselbund-Speicherung und sicheren Zugangsarchiven.
 - [Simona Müller](https://www.nigredo.ch/referenzen/simona-mueller/): Persönliche Praxiswebsite für Kinesiologie und Hypnose mit echten Bildern, Online-Terminen und robusten Formularen.
-- [HappyPath](https://www.nigredo.ch/referenzen/happypath/): Dreisprachige Website, die TextRoom fuer Schweizer IV Stellen verstaendlich erklaert.
+- [HappyPath](https://www.nigredo.ch/referenzen/happypath/): Dreisprachige Website, die TextRoom für Schweizer IV-Stellen verständlich erklärt.
 - [Plan H](https://www.nigredo.ch/referenzen/plan-h/): Praxiswebsite mit lokaler Suchmaschinenoptimierung und direkten Kontaktwegen.
-- [Mentra](https://www.nigredo.ch/referenzen/mentra/): Lokales KI Wissenssystem, das Videos mit Suche, Quellen, Reviews und Exporten nutzbar macht.
-- [ThinkTank](https://www.nigredo.ch/referenzen/thinktank/): Interne Wissensplattform fuer ein KMU mit Suche, Reviews und Verantwortlichkeiten.
+- [Mentra](https://www.nigredo.ch/referenzen/mentra/): Lokales KI-Wissenssystem, das Videos mit Suche, Quellen, Reviews und Exporten nutzbar macht.
+- [ThinkTank](https://www.nigredo.ch/referenzen/thinktank/): Interne Wissensplattform für ein KMU mit Suche, Reviews und Verantwortlichkeiten.
 - [Therapie Ost](https://www.nigredo.ch/referenzen/therapie-ost/): Praxiswebsite mit ruhiger Bildsprache und direkter Terminbuchung.
-- [KI Voice Agent](https://www.nigredo.ch/referenzen/ki-voice-agent/): Prototyp fuer IV Stellen mit Echtzeit Gespraechen, vier Sprachen und Fachwissen zu AHV Hilfsmitteln.
-- [Excel Dashboard](https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/): Lokale Auswertung sensibler Verwaltungsdaten mit Anonymisierung und PDF Export.
+- [KI-Voice-Agent](https://www.nigredo.ch/referenzen/ki-voice-agent/): Prototyp für IV-Stellen mit Echtzeit-Gesprächen, vier Sprachen und Fachwissen zu AHV-Hilfsmitteln.
+- [Excel-Dashboard](https://www.nigredo.ch/referenzen/dashboard-kantonsverwaltung/): Lokale Auswertung sensibler Verwaltungsdaten mit Anonymisierung und PDF-Export.
 
 ## Entity Context
 
@@ -64,4 +64,4 @@ Nigredo bezeichnet hier die offizielle Schweizer Marke fuer Websites, Software u
 
 ## Optional
 
-- [Vollstaendiger Kontext](https://www.nigredo.ch/llms-full.txt): Ausfuehrlicher maschinenlesbarer Inhalt der Website.
+- [Vollständiger Kontext](https://www.nigredo.ch/llms-full.txt): Ausführlicher maschinenlesbarer Inhalt der Website.

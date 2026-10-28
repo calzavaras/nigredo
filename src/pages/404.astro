@@ -9,7 +9,6 @@ import Layout from '../layouts/Layout.astro';
   robots="noindex, follow"
 >
   <section class="section pt-sub not-found-page" aria-labelledby="not-found-title">
-    <div class="hero-glow"></div>
     <div class="container not-found-page__inner fade-up">
 
 
@@ -57,18 +56,6 @@ import Layout from '../layouts/Layout.astro';
 
   .not-found-page__inner {
     width: 100%;
-  }
-
-  .not-found-page .badge {
-    margin-bottom: 0.95rem;
-    color: rgba(255, 229, 236, 0.94);
-    border-color: color-mix(in srgb, var(--nf-accent) 34%, rgba(255, 255, 255, 0.22));
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .not-found-page .hero-glow {
-    background: radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--nf-accent) 18%, transparent) 0%, transparent 34%);
   }
 
   .not-found-page__title {

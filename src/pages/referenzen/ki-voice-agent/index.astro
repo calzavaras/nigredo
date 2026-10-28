@@ -1,11 +1,13 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getDetailImageSet } from '../../../data/references';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
 const pageUrl = 'https://www.nigredo.ch/referenzen/ki-voice-agent/';
 const detailImage = '/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-assistent-screenshot-2160.webp';
 const detailImageAvif = '/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-assistent-screenshot-2160.avif';
+const detailImageSet = getDetailImageSet(detailImageAvif);
 const ogImage = 'https://www.nigredo.ch/referenzen/ki-voice-agent/ki-voice-agent-ahv-hilfsmittel-assistent-screenshot-og.jpg';
 const schema = JSON.stringify({
   "@context": "https://schema.org",
@@ -79,8 +81,8 @@ const schema = JSON.stringify({
 ---
 
 <Layout
-  title="KI Voice Agent für IV Stellen | Nigredo"
-  description="KI Voice Agent für Fragen zu AHV Hilfsmitteln: Gespräche in Echtzeit, vier Sprachen und hinterlegtes Fachwissen. Prototyp für IV Stellen."
+  title="KI-Voice-Agent für IV-Stellen | Nigredo"
+  description="KI-Voice-Agent für Fragen zu AHV-Hilfsmitteln: Gespräche in Echtzeit, vier Sprachen und hinterlegtes Fachwissen. Prototyp für IV-Stellen."
   canonical={pageUrl}
   ogTitle="KI Voice Agent für IV Stellen"
   ogDescription="Fachauskunft ohne Warteschleife: ein Prototyp mit Echtzeit Gesprächen, vier Sprachen und Wissen zu AHV Hilfsmitteln."
@@ -93,9 +95,10 @@ const schema = JSON.stringify({
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
+  preloadImageSrcset={detailImageSet.avif}
+  preloadImageSizes={detailImageSet.sizes}
 >
   <section class="section pt-sub case-page case-page--ki" aria-labelledby="ki-voice-agent-title">
-    <div class="hero-glow"></div>
     <div class="container case-page__container">
 
       <Breadcrumb items={[
@@ -128,7 +131,8 @@ const schema = JSON.stringify({
               aria-label="Screenshot vergrössern"
             >
               <picture>
-                <source srcset={detailImageAvif} type="image/avif">
+                <source srcset={detailImageSet.avif} sizes={detailImageSet.sizes} type="image/avif">
+                <source srcset={detailImageSet.webp} sizes={detailImageSet.sizes} type="image/webp">
                 <img
                   src={detailImage}
                   alt="Oberfläche des lokalen KI Voice Agents Lio für Fragen zu AHV-Hilfsmitteln"
@@ -221,7 +225,7 @@ const schema = JSON.stringify({
 
       <!-- Weitere Projekte -->
       <div class="fade-up case-more-section">
-        <span class="case-more-label">Weitere Projekte</span>
+        <h2 class="case-more-label">Weitere Projekte</h2>
         <CaseMoreReferences />
       </div>
 

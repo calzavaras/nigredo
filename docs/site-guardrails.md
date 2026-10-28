@@ -32,8 +32,10 @@ Diese Regeln sichern die technische Qualität der Website ab, ohne das sichtbare
 ## Inhalte und Struktur
 
 - Hauptseiten sollen visuell stabil bleiben.
-- Unterseiten nutzen gemeinsame Hero- und CTA-Muster über `global.css`.
-- Wiederkehrende Kartenstile laufen zentral über `.value-card`.
+- Seitenkopf (`.page-hero`), Abschnittsköpfe (`.home-head`), Projektkarten (`.work-card`),
+  offene Karten (`.open-card`) und der Abschluss (`.section-cta`) kommen zentral aus
+  `src/styles/stil-2026.css`. Neue Seiten nutzen diese Bausteine statt eigener Varianten.
+- Dekorative Grafiken mit Fantasie-Inhalt tragen `aria-hidden` und `data-nosnippet`.
 
 ## Bei Änderungen
 

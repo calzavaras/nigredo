@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getDetailImageSet } from '../../../data/references';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import CaseMoreReferences from '../../../components/CaseMoreReferences.astro';
 
@@ -7,6 +8,7 @@ const liveUrl = 'https://simonamueller.ch';
 const pageUrl = 'https://www.nigredo.ch/referenzen/simona-mueller/';
 const detailImage = '/referenzen/simona-mueller/simona-mueller-kinesiologie-hypnose-website-startseite-screenshot-2160.webp';
 const detailImageAvif = '/referenzen/simona-mueller/simona-mueller-kinesiologie-hypnose-website-startseite-screenshot-2160.avif';
+const detailImageSet = getDetailImageSet(detailImageAvif);
 const ogImage = 'https://www.nigredo.ch/referenzen/simona-mueller/simona-mueller-kinesiologie-hypnose-website-startseite-screenshot-og.jpg';
 
 const schema = JSON.stringify({
@@ -43,7 +45,6 @@ const schema = JSON.stringify({
       author: { '@id': 'https://www.nigredo.ch/#person' },
       publisher: { '@id': 'https://www.nigredo.ch/#organization' },
       maintainer: { '@id': 'https://www.nigredo.ch/#organization' },
-      isPartOf: { '@id': 'https://www.nigredo.ch/referenzen/#webpage' },
       about: {
         '@type': 'ProfessionalService',
         '@id': `${liveUrl}/#practice`,
@@ -115,9 +116,10 @@ const schema = JSON.stringify({
   schema={schema}
   preloadImage={detailImageAvif}
   preloadImageType="image/avif"
+  preloadImageSrcset={detailImageSet.avif}
+  preloadImageSizes={detailImageSet.sizes}
 >
   <section class="section pt-sub case-page case-page--simona-mueller" aria-labelledby="simona-mueller-title">
-    <div class="hero-glow"></div>
     <div class="container case-page__container">
       <Breadcrumb items={[
         { label: 'Start', href: '/' },
@@ -149,7 +151,8 @@ const schema = JSON.stringify({
               aria-label="Website-Vorschau vergrössern"
             >
               <picture>
-                <source srcset={detailImageAvif} type="image/avif">
+                <source srcset={detailImageSet.avif} sizes={detailImageSet.sizes} type="image/avif">
+                <source srcset={detailImageSet.webp} sizes={detailImageSet.sizes} type="image/webp">
                 <img src={detailImage} alt="Startseite der Praxiswebsite von Simona Müller mit persönlicher Kinesiologie-Fotografie und direkter Terminbuchung" width="2160" height="1215" loading="eager" decoding="async" fetchpriority="high">
               </picture>
             </button>
@@ -213,7 +216,7 @@ const schema = JSON.stringify({
       <span class="case-date fade-up">Abgeschlossen: September 2026</span>
 
       <div class="fade-up case-more-section">
-        <span class="case-more-label">Weitere Projekte</span>
+        <h2 class="case-more-label">Weitere Projekte</h2>
         <CaseMoreReferences />
       </div>
 

@@ -1,6 +1,6 @@
 /**
  * www.nigredo.ch - Main Script
- * Handles Navigation, Animations, Lightbox Gallery, and Spam Protection.
+ * Navigation, Einblendungen, Lightbox, Kontaktformular und Analyse.
  */
 
 const TIMING = {
@@ -10,7 +10,6 @@ const TIMING = {
   ANALYTICS_TIMEOUT:   3000,
   ANALYTICS_FALLBACK_DELAY: 1500,
   CLOSE_OVERLAY_DELAY:  300,
-  HERO_GLOW_DELAY:     1000,
   LIGHTBOX_FADE:        150,
   LIGHTBOX_OPEN_DELAY:   10,
   CONTACT_SUCCESS_REDIRECT_DELAY: 4500,
@@ -45,16 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAnchorNavigation();
   initScrollAnimations();
   if (document.getElementById('contact-form')) initContactForm();
-  if (document.querySelector('.accordion-header')) initAccordions();
   if (document.querySelector('.lightbox-trigger')) setTimeout(initLightbox, TIMING.LIGHTBOX_INIT_DELAY);
   runWhenIdle(() => {
     initCardSpotlight();
     initMagneticButtons();
     initAnalytics();
   }, TIMING.IDLE_TIMEOUT);
-  setTimeout(() => {
-    document.querySelectorAll('.hero-glow').forEach(el => el.classList.add('animated'));
-  }, TIMING.HERO_GLOW_DELAY);
 });
 
 function initHeaderScrollState() {
@@ -217,8 +212,6 @@ function initScrollAnimations() {
         !('animate' in Element.prototype)) return;
 
     const targets = [...elements];
-    const artwork = document.querySelector('.home-artwork__surface');
-    if (artwork) targets.push(artwork);
 
     const reveal = (element) => {
       element.animate([{ opacity: 0.55 }, { opacity: 1 }], {
@@ -279,13 +272,8 @@ function initScrollAnimations() {
 }
 
 function initCardSpotlight() {
-  const cards = Array.from(document.querySelectorAll('.card, .case-feature'));
+  const cards = Array.from(document.querySelectorAll('.card'));
   if (cards.length === 0) return;
-
-  cards.forEach((card) => {
-    const randomAngle = `${Math.floor(Math.random() * 360)}deg`;
-    card.style.setProperty('--start-angle', randomAngle);
-  });
 
   const supportsInteractiveSpotlight =
     window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
@@ -457,60 +445,6 @@ function initContactForm() {
     form.querySelector('[name="name"]')?.focus();
   });
 }
-
-function initAccordions() {
-  const accItems = document.querySelectorAll('.accordion-item');
-  const accHeaders = document.querySelectorAll('.accordion-header');
-
-  accItems.forEach(item => {
-    if (!item.classList.contains('active')) return;
-    const content = item.querySelector('.accordion-content');
-    const header = item.querySelector('.accordion-header');
-    if (content) {
-      content.style.maxHeight = `${content.scrollHeight}px`;
-      content.setAttribute('aria-hidden', 'false');
-    }
-    if (header) header.setAttribute('aria-expanded', 'true');
-  });
-
-  accHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-      const item = header.closest('.accordion-item');
-      if (!item) return;
-      const isOpen = item.classList.contains('active');
-      const content = item.querySelector('.accordion-content');
-      const targetHeight = content ? content.scrollHeight : 0; // Read layout before any DOM writes
-      accItems.forEach(otherItem => {
-        if (otherItem !== item) {
-          otherItem.classList.remove('active');
-          const otherContent = otherItem.querySelector('.accordion-content');
-          const otherHeader = otherItem.querySelector('.accordion-header');
-          if (otherContent) {
-            otherContent.style.maxHeight = 0;
-            otherContent.setAttribute('aria-hidden', 'true');
-          }
-          if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
-        }
-      });
-      if (!isOpen) {
-        item.classList.add('active');
-        if (content) {
-          content.style.maxHeight = targetHeight + "px";
-          content.setAttribute('aria-hidden', 'false');
-        }
-        header.setAttribute('aria-expanded', 'true');
-      } else {
-        item.classList.remove('active');
-        if (content) {
-          content.style.maxHeight = 0;
-          content.setAttribute('aria-hidden', 'true');
-        }
-        header.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
-}
-
 
 function initLightbox() {
   const triggers = document.querySelectorAll('.lightbox-trigger');

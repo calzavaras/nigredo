@@ -14,15 +14,15 @@ export default defineConfig({
         const url = item.url;
         if (url === 'https://www.nigredo.ch/') {
           item.priority = 1.0;
-          item.lastmod = new Date('2026-09-19');
+          item.lastmod = new Date('2026-10-28');
         }
         else if (url === 'https://www.nigredo.ch/digitale-loesungen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-09-19');
+          item.lastmod = new Date('2026-10-28');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-09-12');
+          item.lastmod = new Date('2026-10-28');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/portpane/') {
           item.priority = 0.65;
@@ -38,11 +38,11 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/referenzen/seite/2/') {
           item.priority = 0.45;
-          item.lastmod = new Date('2026-09-12');
+          item.lastmod = new Date('2026-10-28');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/seite/3/') {
           item.priority = 0.45;
-          item.lastmod = new Date('2026-09-12');
+          item.lastmod = new Date('2026-10-28');
         }
         else if (url === 'https://www.nigredo.ch/referenzen/ki-voice-agent/') {
           item.priority = 0.65;
@@ -70,11 +70,11 @@ export default defineConfig({
         }
         else if (url === 'https://www.nigredo.ch/marco-calzavara/') {
           item.priority = 0.95;
-          item.lastmod = new Date('2026-08-01');
+          item.lastmod = new Date('2026-10-28');
         }
         else if (url === 'https://www.nigredo.ch/kontakt/') {
           item.priority = 0.93;
-          item.lastmod = new Date('2026-07-31');
+          item.lastmod = new Date('2026-10-28');
         }
         else if (url === 'https://www.nigredo.ch/haeufige-fragen/') {
           item.priority = 0.62;

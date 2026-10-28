@@ -1,0 +1,194 @@
+---
+// Abschluss der Startseite: Gegenstück zur Hero-Bühne. Besucher schreiben ihre eigene Idee,
+// der Satz wird nur im Browser (sessionStorage) an das Kontaktformular übergeben, nie in der URL.
+---
+<section class="home-idea" aria-labelledby="cta-title">
+  <div class="home-idea__glow" aria-hidden="true"></div>
+  <div class="home-idea__inner fade-up">
+    <span class="home-idea__label">Der nächste Schritt</span>
+    <h2 id="cta-title" class="home-idea__title">
+      Was wartet schon zu lange<br>
+      <span>auf die Umsetzung?</span>
+    </h2>
+    <p class="home-idea__lead">Ein Satz, eine Skizze, ein umständlicher Ablauf oder eine Vorstellung davon, was besser werden könnte, genügen. Ich höre zu, denke weiter und sage dir offen, welcher Weg sinnvoll ist.</p>
+
+    <form class="home-idea__form" action="/kontakt/" method="get" data-idea-form>
+      <label for="home-idea-text" class="home-idea__sr">Deine Idee in einem Satz</label>
+      <div class="home-idea__field">
+        <span class="home-idea__field-label" aria-hidden="true">Deine Idee</span>
+        <textarea
+          id="home-idea-text"
+          rows="2"
+          maxlength="600"
+          placeholder="Zum Beispiel: Meine Kundschaft soll online einen Termin buchen können."
+          aria-describedby="home-idea-hint"
+        ></textarea>
+      </div>
+      <div class="home-idea__actions">
+        <button type="submit" class="btn btn-primary">Idee besprechen</button>
+        <a href="/referenzen/" class="section-link">Referenzen ansehen <span aria-hidden="true">→</span></a>
+      </div>
+      <p id="home-idea-hint" class="home-idea__hint">Dein Satz wird nur ins Kontaktformular übernommen. Gesendet wird erst dort.</p>
+    </form>
+  </div>
+</section>
+
+<style>
+.home-idea {
+  position: relative;
+  margin-top: clamp(96px, 12vw, 168px);
+  padding: clamp(96px, 11vw, 150px) 0 clamp(110px, 12vw, 170px);
+  overflow: clip;
+}
+
+.home-idea__glow {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  width: min(900px, 120vw);
+  aspect-ratio: 2 / 1;
+  transform: translateX(-50%);
+  background:
+    radial-gradient(45% 60% at 35% 50%, oklch(62% 0.27 342 / 0.28), transparent 70%),
+    radial-gradient(45% 60% at 65% 50%, oklch(60% 0.22 262 / 0.3), transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.home-idea__inner {
+  position: relative;
+  width: min(760px, calc(100% - (2 * var(--container-gutter))));
+  margin-inline: auto;
+  text-align: center;
+}
+
+.home-idea__label {
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.home-idea__title {
+  margin: 18px 0 0;
+  font-size: clamp(2.4rem, 5.2vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.home-idea__title span {
+  background: var(--page-title-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-idea__lead {
+  max-width: 600px;
+  margin: 26px auto 0;
+  color: var(--text-body);
+  font-size: 1.06rem;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.home-idea__form {
+  margin-top: clamp(36px, 5vw, 52px);
+  text-align: left;
+}
+
+.home-idea__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.home-idea__field {
+  position: relative;
+  padding: 18px 22px 14px;
+  border-radius: 22px;
+  background: rgba(12, 12, 16, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.9);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.home-idea__field:focus-within {
+  border-color: oklch(68% 0.22 300 / 0.8);
+  box-shadow: 0 0 0 4px oklch(68% 0.22 300 / 0.16), 0 30px 80px -40px rgba(0, 0, 0, 0.9);
+}
+
+.home-idea__field-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-faint);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-idea__field textarea {
+  display: block;
+  width: 100%;
+  min-height: 3.4em;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f5f5f7;
+  font: inherit;
+  font-size: clamp(1.08rem, 2vw, 1.3rem);
+  line-height: 1.45;
+  resize: none;
+  field-sizing: content;
+  outline: none;
+}
+
+.home-idea__field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.home-idea__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px 32px;
+  margin-top: 26px;
+}
+
+.home-idea__hint {
+  margin: 18px 0 0;
+  color: var(--text-faint);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+@media (max-width: 620px) {
+  .home-idea__field {
+    padding: 16px 18px 12px;
+  }
+
+  .home-idea__actions {
+    flex-direction: column;
+  }
+}
+</style>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-idea-form]');
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const idea = form.querySelector('textarea')?.value.trim() ?? '';
+    try {
+      if (idea) sessionStorage.setItem('nigredo:idee', idea);
+    } catch {
+      // Ohne Speicher geht es trotzdem zum Formular.
+    }
+    window.location.assign('/kontakt/');
+  });
+</script>

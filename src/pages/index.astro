@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HomeArtwork from '../components/HomeArtwork.astro';
+import HomeStage from '../components/HomeStage.astro';
+import HomeIdea from '../components/HomeIdea.astro';
+import ServiceVisual from '../components/ServiceVisual.astro';
 import ReferenzVisual from '../components/ReferenzVisual.astro';
 import { references } from '../data/references';
 
@@ -15,7 +17,7 @@ const schema = JSON.stringify({
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["WebPage", "HomePage"],
+      "@type": "WebPage",
       "@id": "https://www.nigredo.ch/#webpage",
       "url": "https://www.nigredo.ch/",
       "name": "Nigredo St. Gallen | Websites, KI und digitale Produkte",
@@ -24,7 +26,6 @@ const schema = JSON.stringify({
       "about": { "@id": "https://www.nigredo.ch/#organization" },
       "mainEntity": { "@id": "https://www.nigredo.ch/#organization" },
       "publisher": { "@id": "https://www.nigredo.ch/#organization" },
-      "primaryImageOfPage": "https://www.nigredo.ch/assets/home-digital-craft-1440.jpg",
       "significantLink": [
         "https://www.nigredo.ch/digitale-loesungen/",
         "https://www.nigredo.ch/referenzen/",
@@ -35,36 +36,29 @@ const schema = JSON.stringify({
       ],
       "description": "Nigredo entwickelt individuelle Websites, Software und digitale Produkte mit KI. Persönlich geführt von Marco Calzavara in St. Gallen.",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-09-19T15:56:00+02:00",
+      "dateModified": "2026-10-28T12:00:00+01:00",
       "inLanguage": "de-CH"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.nigredo.ch/#breadcrumb",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://www.nigredo.ch/" }
-      ]
     }
   ]
 });
 
 const services = [
   {
-    number: '01',
+    visual: 'web' as const,
     label: 'Websites',
     title: 'Websites mit einer klaren Aufgabe.',
     text: 'Zum Beispiel eine Praxiswebsite, auf der Besucher das passende Angebot finden und direkt einen Termin buchen können.',
     href: '/digitale-loesungen/#websites',
   },
   {
-    number: '02',
+    visual: 'ki' as const,
     label: 'KI und Software',
     title: 'Werkzeuge für konkrete Arbeit.',
     text: 'Etwa ein lokales Dashboard für sensible Daten oder ein KI-Wissenssystem, das Antworten mit Quellen liefert.',
     href: '/digitale-loesungen/#ki-und-software',
   },
   {
-    number: '03',
+    visual: 'brand' as const,
     label: 'Marke, Inhalt und Struktur',
     title: 'Ein Auftritt mit eigener Stimme.',
     text: 'Namen, Texte, Gestaltung und Inhaltsstruktur machen verständlich, wofür ein Angebot steht und an wen es sich richtet.',
@@ -86,66 +80,64 @@ const services = [
   twitterTitle="Nigredo | Websites, KI und digitale Produkte"
   twitterDescription="Individuelle Websites, Software und digitale Produkte mit KI, persönlich entwickelt in St. Gallen."
   schema={schema}
-  preloadImage="/assets/home-digital-craft-1440.webp"
-  preloadImageType="image/webp"
-  preloadImageSrcset="/assets/home-digital-craft-720.webp 720w, /assets/home-digital-craft-1440.webp 1440w"
-  preloadImageSizes="(max-width: 620px) 100vw, 640px"
 >
   <section class="home-hero" aria-labelledby="hero-title">
-    <div class="container home-hero__inner">
+    <div class="container home-shell home-hero__inner">
       <p class="home-hero__intro fade-up">Digitale Produkte aus St. Gallen</p>
       <h1 id="hero-title" class="home-hero__title fade-up delay-100">
         Ich arbeite weiter,<br>
         <span class="home-gradient-text">wo andere aufhören.</span>
       </h1>
-      <HomeArtwork />
-      <p class="home-hero__lead fade-up delay-200">
-        Ich entwickle individuelle Websites, KI-Lösungen und digitale Werkzeuge für Selbstständige, KMU und Organisationen. Von der ersten Idee bis zur Umsetzung arbeite ich direkt mit dir, bei Bedarf mit meinem Fachnetzwerk.
-      </p>
-      <div class="home-actions fade-up delay-300">
-        <a href="/kontakt/" class="btn btn-primary">Vorhaben besprechen</a>
-        <a href="/referenzen/" class="section-link">Arbeiten ansehen <span aria-hidden="true">→</span></a>
+      <div class="home-hero__row">
+        <p class="home-hero__lead fade-up delay-200">
+          Ich entwickle individuelle Websites, KI-Lösungen und digitale Werkzeuge für Selbstständige, KMU und Organisationen. Von der ersten Idee bis zur Umsetzung arbeite ich direkt mit dir, bei Bedarf mit meinem Fachnetzwerk.
+        </p>
+        <div class="home-actions fade-up delay-300">
+          <a href="/kontakt/" class="btn btn-primary">Vorhaben besprechen</a>
+          <a href="/referenzen/" class="section-link">Arbeiten ansehen <span aria-hidden="true">→</span></a>
+        </div>
       </div>
+    </div>
+    <div class="home-shell home-hero__stage">
+      <HomeStage />
     </div>
   </section>
 
-  <section class="section section--lg home-work" aria-labelledby="work-title">
-    <div class="container">
-      <div class="section-head section-head--split fade-up">
-        <div>
-          <h2 id="work-title" class="section-head__title">Drei Projekte.<br>Keine Trockenübung.</h2>
-          <p class="section-head__lead">Von der nativen macOS-App bis zur Praxiswebsite mit Online-Terminbuchung: Diese drei Arbeiten zeigen, wie unterschiedlich konkrete Aufgaben gelöst werden können.</p>
+  <section class="home-section home-work" aria-labelledby="work-title">
+    <div class="container home-shell">
+      <div class="home-head fade-up">
+        <h2 id="work-title" class="home-head__title">Drei Projekte.<br><span>Keine Trockenübung.</span></h2>
+        <div class="home-head__side">
+          <p class="home-head__lead">Von der nativen macOS-App bis zur Praxiswebsite mit Online-Terminbuchung: Diese drei Arbeiten zeigen, wie unterschiedlich konkrete Aufgaben gelöst werden können.</p>
+          <a href="/referenzen/" class="section-link">Alle Referenzen <span aria-hidden="true">→</span></a>
         </div>
-        <a href="/referenzen/" class="section-link">Alle Referenzen <span aria-hidden="true">→</span></a>
       </div>
 
-      <div class="showcase-grid">
+      <div class="work-grid">
         {showcase.map((reference, index) => (
           <article
-            class={`showcase-card fade-up${index > 0 ? ` delay-${index * 100}` : ''}`}
+            class={`work-card${index === 0 ? ' work-card--lead' : ''} fade-up${index > 0 ? ` delay-${index * 100}` : ''}`}
             style={`--card-accent: ${reference.accent};`}
           >
-            <div class="showcase-card__visual">
+            <div class="work-card__visual">
               <ReferenzVisual
                 reference={reference}
-                sizes="(max-width: 620px) calc(100vw - 40px), (max-width: 860px) 42vw, 300px"
+                sizes={index === 0 ? '(max-width: 860px) calc(100vw - 48px), 640px' : '(max-width: 860px) calc(100vw - 48px), 540px'}
               />
             </div>
-            <div class="showcase-card__body">
-              <div class="showcase-card__meta">
-                <span class="showcase-card__index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-                <span class="showcase-card__type">{reference.badge.text}</span>
-                <span class="showcase-card__year">{reference.year}</span>
-              </div>
-              <h3 class="showcase-card__title">{reference.listTitle}</h3>
-              <p class="showcase-card__sub">{reference.sub}</p>
-              <p class="showcase-card__role"><span>Rolle:</span> {reference.rolle}</p>
-              <div class="showcase-card__footer">
-                <a href={reference.href} class="showcase-card__details" aria-label={reference.ariaLabel}>Projekt ansehen <span aria-hidden="true">→</span></a>
+            <div class="work-card__body">
+              <p class="work-card__meta"><span>{reference.badge.text}</span><span>{reference.year}</span></p>
+              <h3 class="work-card__title">
+                <a href={reference.href} class="work-card__link" aria-label={reference.ariaLabel}>{reference.listTitle}</a>
+              </h3>
+              <p class="work-card__sub">{reference.sub}</p>
+              <p class="work-card__role"><span>Rolle</span> {reference.rolle}</p>
+              <div class="work-card__footer">
+                <span class="work-card__more" aria-hidden="true">Projekt ansehen <span>→</span></span>
                 {reference.liveUrl ? (
-                  <a href={reference.liveUrl} class="showcase-card__live" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website ansehen <span aria-hidden="true">↗</span></a>
+                  <a href={reference.liveUrl} class="work-card__live" target="_blank" rel="noopener" aria-label={`${reference.listTitle} Website in neuem Tab öffnen`}>Website ansehen <span aria-hidden="true">↗</span></a>
                 ) : (
-                  <span class="showcase-card__note">{reference.liveNote}</span>
+                  <span class="work-card__note">{reference.liveNote}</span>
                 )}
               </div>
             </div>
@@ -155,71 +147,62 @@ const services = [
     </div>
   </section>
 
-  <section class="section section--lg home-services" aria-labelledby="services-title">
-    <div class="container">
-      <div class="section-head fade-up">
-        <h2 id="services-title" class="section-head__title">Was ich möglich mache.</h2>
-        <p class="section-head__lead">Drei Bereiche, ein Ansprechpartner: Ich verbinde die passende Lösung mit verständlichen Inhalten und einer klaren Gestaltung.</p>
+  <section class="home-section home-services" aria-labelledby="services-title">
+    <div class="container home-shell">
+      <div class="home-head fade-up">
+        <h2 id="services-title" class="home-head__title">Was ich möglich mache.</h2>
+        <div class="home-head__side">
+          <p class="home-head__lead">Drei Bereiche, ein Ansprechpartner: Ich verbinde die passende Lösung mit verständlichen Inhalten und einer klaren Gestaltung.</p>
+        </div>
       </div>
 
-      <div class="numbered-rows">
+      <div class="service-grid">
         {services.map((service, index) => (
-          <a
-            href={service.href}
-            class={`numbered-row fade-up${index > 0 ? ` delay-${index * 100}` : ''}`}
-          >
-            <span class="numbered-row__num" aria-hidden="true">{service.number}</span>
-            <div>
-              <span class="numbered-row__label">{service.label}</span>
-              <h3 class="numbered-row__title">{service.title}</h3>
+          <a href={service.href} class={`service-card service-card--${service.visual} fade-up${index > 0 ? ` delay-${index * 100}` : ''}`}>
+            <div class="service-card__visual" aria-hidden="true">
+              <ServiceVisual type={service.visual} />
             </div>
-            <p class="numbered-row__text">{service.text}</p>
+            <span class="service-card__label">{service.label}</span>
+            <h3 class="service-card__title">{service.title}</h3>
+            <p class="service-card__text">{service.text}</p>
+            <span class="service-card__arrow" aria-hidden="true">→</span>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <section class="section section--lg home-about" aria-labelledby="about-title">
-    <div class="container about-strip fade-up">
-      <div class="about-strip__identity">
-        <div class="about-strip__portrait">
-          <picture>
-            <source srcset="/assets/marco-calzavara-home-v5-round-500.avif 500w" sizes="(max-width: 620px) 112px, (max-width: 860px) 128px, 140px" type="image/avif">
-            <source srcset="/assets/marco-calzavara-home-v5-round-500.webp 500w" sizes="(max-width: 620px) 112px, (max-width: 860px) 128px, 140px" type="image/webp">
-            <img
-              src="/assets/marco-calzavara-home-v5-round.jpg"
-              alt="Marco Calzavara, Gründer von Nigredo in St. Gallen"
-              width="760"
-              height="760"
-              loading="lazy"
-              decoding="async"
-            >
-          </picture>
-        </div>
-      </div>
-      <div class="about-strip__content">
-        <h2 id="about-title" class="about-strip__title">Direkt mit mir.<br><span>Von der Idee bis zur Umsetzung.</span></h2>
-        <p class="about-strip__lead">Du erklärst mir, was du erreichen möchtest. Ich kläre, was es dafür braucht, setze die passende Lösung um und halte dich verständlich auf dem Laufenden. Wenn zusätzliche Fachleute nötig sind, koordiniere ich sie. Für dich bleibt die Zusammenarbeit einfach.</p>
-        <a href="/marco-calzavara/" class="section-link about-strip__link">Mehr über mich <span aria-hidden="true">→</span></a>
+  <section class="home-section home-about" aria-labelledby="about-title">
+    <div class="container home-shell about-split">
+      <figure class="about-split__portrait fade-up">
+        <picture>
+          <source srcset="/assets/marco-calzavara-home-v5-photo-500.avif 500w, /assets/marco-calzavara-home-v5-photo-750.avif 750w" sizes="(max-width: 860px) 80vw, 420px" type="image/avif">
+          <source srcset="/assets/marco-calzavara-home-v5-photo-500.webp 500w, /assets/marco-calzavara-home-v5-photo-750.webp 750w" sizes="(max-width: 860px) 80vw, 420px" type="image/webp">
+          <img
+            src="/assets/marco-calzavara-home-v5-photo.jpg"
+            alt="Marco Calzavara, Gründer von Nigredo in St. Gallen"
+            width="1000"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          >
+        </picture>
+        <figcaption>Marco Calzavara · Nigredo, St. Gallen</figcaption>
+      </figure>
+      <div class="about-split__content fade-up delay-100">
+        <h2 id="about-title" class="home-head__title">Direkt mit mir.<br><span>Von der Idee bis zur Umsetzung.</span></h2>
+        <ol class="about-steps">
+          <li><span class="about-steps__label">Zuhören</span><p>Du erklärst mir, was du erreichen möchtest.</p></li>
+          <li><span class="about-steps__label">Klären</span><p>Ich kläre, was es dafür braucht.</p></li>
+          <li><span class="about-steps__label">Umsetzen</span><p>Ich setze die passende Lösung um und halte dich verständlich auf dem Laufenden.</p></li>
+        </ol>
+        <p class="about-split__note">Wenn zusätzliche Fachleute nötig sind, koordiniere ich sie. Für dich bleibt die Zusammenarbeit einfach.</p>
+        <a href="/marco-calzavara/" class="section-link">Mehr über mich <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <section class="final-cta-section" aria-labelledby="cta-title">
-    <div class="container final-cta-content final-cta-content--centered fade-up">
-      <span class="cta-label">Der nächste Schritt</span>
-      <h2 id="cta-title">
-        Was wartet schon zu lange<br>
-        <span>auf die Umsetzung?</span>
-      </h2>
-      <p>Ein Satz, eine Skizze, ein umständlicher Ablauf oder eine Vorstellung davon, was besser werden könnte, genügen. Ich höre zu, denke weiter und sage dir offen, welcher Weg sinnvoll ist.</p>
-      <div class="hero-cta-group">
-        <a href="/kontakt/" class="btn btn-primary">Idee besprechen</a>
-        <a href="/referenzen/" class="btn btn-ghost">Referenzen ansehen</a>
-      </div>
-    </div>
-  </section>
+  <HomeIdea />
 </Layout>
 
 <style>
@@ -254,11 +237,8 @@ const services = [
   }
 
   .home-hero {
-    min-height: 790px;
     overflow: clip;
-    display: flex;
-    align-items: center;
-    padding: 154px 0 90px;
+    padding: 136px 0 clamp(80px, 9vw, 128px);
     position: relative;
     box-sizing: border-box;
   }
@@ -275,7 +255,6 @@ const services = [
 
   .home-hero__inner {
     position: relative;
-    width: 100%;
   }
 
   .home-hero__intro {
@@ -298,11 +277,26 @@ const services = [
     letter-spacing: -0.036em;
   }
 
+  .home-hero__row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px 48px;
+    margin-top: clamp(32px, 4.3vw, 48px);
+  }
+
+  .home-hero__stage {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, calc(100% - (2 * var(--container-gutter))));
+    margin: clamp(44px, 5vw, 72px) auto 0;
+  }
+
   .home-hero__lead {
     position: relative;
     z-index: 2;
-    max-width: 460px;
-    margin: clamp(32px, 4.3vw, 48px) 0 0;
+    max-width: 480px;
+    margin: 0;
     color: var(--text-body);
     font-size: 1.08rem;
     line-height: 1.62;
@@ -314,8 +308,8 @@ const services = [
     z-index: 2;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     gap: clamp(22px, 4vw, 38px);
-    margin-top: clamp(32px, 4.3vw, 46px);
   }
 
   @media (max-width: 860px) {
@@ -323,8 +317,12 @@ const services = [
       max-width: 620px;
     }
 
+    .home-hero__row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     .home-hero {
-      min-height: auto;
       padding-top: 156px;
       padding-bottom: 64px;
     }
@@ -356,8 +354,12 @@ const services = [
       letter-spacing: -0.025em;
     }
 
+    .home-hero__row {
+      gap: 28px;
+      margin-top: 18px;
+    }
+
     .home-hero__lead {
-      margin-top: 14px;
       font-size: 1rem;
       line-height: 1.66;
     }
@@ -366,7 +368,10 @@ const services = [
       align-items: flex-start;
       flex-direction: column;
       gap: 16px;
-      margin-top: 28px;
+    }
+
+    .home-hero__stage {
+      margin-top: 44px;
     }
   }
 </style>
