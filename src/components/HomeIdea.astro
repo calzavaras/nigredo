@@ -149,7 +149,8 @@
 }
 
 .home-idea__field textarea::placeholder {
-  color: rgba(255, 255, 255, 0.34);
+  color: var(--text-soft);
+  opacity: 1;
 }
 
 .home-idea__actions {
@@ -186,6 +187,7 @@
     const idea = form.querySelector('textarea')?.value.trim() ?? '';
     try {
       if (idea) sessionStorage.setItem('nigredo:idee', idea);
+      else sessionStorage.removeItem('nigredo:idee');
     } catch {
       // Ohne Speicher geht es trotzdem zum Formular.
     }

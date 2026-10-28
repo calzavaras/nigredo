@@ -6,8 +6,10 @@ Diese Regeln sichern die technische Qualität der Website ab, ohne das sichtbare
 
 - `npm run build` minifiziert zuerst `src/scripts/main.js` nach `static/main.min.js`.
 - Danach baut Astro nach `public/`.
-- Anschliessend validiert `scripts/validate-site.mjs` den generierten Output.
-- Zum Schluss werden die CSP-Hashes in `.htaccess` aktualisiert.
+- Anschliessend ergänzt `scripts/enrich-sitemap.mjs` die Bild-Sitemap.
+- `scripts/update-csp.mjs` aktualisiert die CSP-Hashes in Quell- und Deploy-`.htaccess`.
+- Danach validiert `scripts/validate-site.mjs` den generierten Output.
+- IndexNow bleibt bei lokalen Builds deaktiviert; eine Übermittlung ist nur nach dem Upload sinnvoll.
 
 ## Automatisch geprüfte Regeln
 
@@ -25,6 +27,7 @@ Diese Regeln sichern die technische Qualität der Website ab, ohne das sichtbare
 - Mobile-Menü mit `aria-label`, `aria-controls` und `aria-expanded`
 - vollständige Sitemap-Parität ohne `noindex`- oder verwaiste URLs
 - funktionierende interne Links und mindestens ein interner Verweis auf jede indexierbare Seite
+- CSP-Freigaben für sämtliche Inline-Skripte und identische Quell-/Deploy-`.htaccess`
 - explizite Freigabe der zentralen OpenAI-Crawler in `robots.txt`
 - Verlinkung von `llms.txt` und `llms-full.txt` im Dokumentkopf
 - Trailing-Slash-Konsistenz in `llms.txt` und `llms-full.txt`

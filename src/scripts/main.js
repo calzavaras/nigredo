@@ -12,19 +12,24 @@ const TIMING = {
   CLOSE_OVERLAY_DELAY:  300,
   LIGHTBOX_FADE:        150,
   LIGHTBOX_OPEN_DELAY:   10,
-  CONTACT_SUCCESS_REDIRECT_DELAY: 4500,
 };
 
 // iOS Safari: body.overflow='hidden' verhindert Scrollen nicht zuverlässig.
 // Lock-Depth-Counter hält überlappende Scroll-Sperren stabil.
-// Auf Desktop wird unlockScroll() zu einem No-op, da lockScroll() nie aufgerufen wird.
 let _scrollLockY = 0;
 let _lockDepth = 0;
+let _scrollLockStyles = null;
 function lockScroll() {
   if (_lockDepth === 0) {
     _scrollLockY = window.scrollY;
+    _scrollLockStyles = {
+      position: document.body.style.position,
+      top: document.body.style.top,
+      width: document.body.style.width,
+    };
     document.body.style.position = 'fixed';
     document.body.style.top = `-${_scrollLockY}px`;
+    document.body.style.width = '100%';
   }
   _lockDepth++;
 }
@@ -32,8 +37,10 @@ function unlockScroll() {
   if (_lockDepth <= 0) return;
   _lockDepth--;
   if (_lockDepth === 0) {
-    document.body.style.position = '';
-    document.body.style.top = '';
+    document.body.style.position = _scrollLockStyles.position;
+    document.body.style.top = _scrollLockStyles.top;
+    document.body.style.width = _scrollLockStyles.width;
+    _scrollLockStyles = null;
     window.scrollTo(0, _scrollLockY);
   }
 }
@@ -89,7 +96,13 @@ function initFaqAnchorNavigation() {
   function scrollToHash(hash, updateHistory = false) {
     if (!hash || hash === '#') return;
 
-    const target = document.querySelector(hash);
+    let target;
+    try {
+      target = document.getElementById(decodeURIComponent(hash.slice(1)));
+    } catch {
+      // Ein ungültiges URL-Fragment darf die weitere Initialisierung nicht abbrechen.
+      return;
+    }
     if (!(target instanceof HTMLElement)) return;
 
     const top = Math.max(
@@ -323,7 +336,6 @@ function initContactForm() {
   const intro = document.querySelector('.contact-form-card__intro');
   const divider = document.querySelector('.contact-form-card__divider');
   const resetBtn = document.getElementById('contact-reset');
-  let successRedirectTimer = null;
   if (!form || !submitBtn || !feedback || !success) return;
 
   function showError(msg) {
@@ -349,6 +361,7 @@ function initContactForm() {
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (submitBtn.disabled) return;
 
     feedback.hidden = true;
     clearFieldErrors();
@@ -365,6 +378,7 @@ function initContactForm() {
     });
 
     const emailField = form.querySelector('[name="email"]');
+    emailField.value = emailField.value.trim();
     if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
       markInvalid(emailField);
       if (!firstInvalid) firstInvalid = emailField;
@@ -415,9 +429,6 @@ function initContactForm() {
         if (divider) divider.hidden = true;
         success.hidden = false;
         resetBtn?.focus();
-        successRedirectTimer = window.setTimeout(() => {
-          window.location.assign('/');
-        }, TIMING.CONTACT_SUCCESS_REDIRECT_DELAY);
       } else {
         showError(data.message || 'Fehler beim Senden. Bitte erneut versuchen.');
       }
@@ -432,10 +443,6 @@ function initContactForm() {
   });
 
   resetBtn?.addEventListener('click', () => {
-    if (successRedirectTimer) {
-      window.clearTimeout(successRedirectTimer);
-      successRedirectTimer = null;
-    }
     success.hidden = true;
     if (intro) intro.hidden = false;
     if (divider) divider.hidden = false;
@@ -481,17 +488,26 @@ function initLightbox() {
   counter = document.getElementById('lightbox-counter');
 
   let _lastTrigger = null;
+  let imageTimer = null;
+  let closeTimer = null;
+  let openTimer = null;
+  let isOpen = false;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function updateImage() {
     if (currentGallery.length === 0 || currentIndex < 0 || currentIndex >= currentGallery.length) return;
+    window.clearTimeout(imageTimer);
+    const src = currentGallery[currentIndex];
+    const alt = currentGallery.length > 1
+      ? `Bild ${currentIndex + 1} von ${currentGallery.length} in Grossansicht`
+      : (_lastTrigger?.querySelector('img')?.getAttribute('alt') || _lastTrigger?.getAttribute('alt') || 'Bild in Grossansicht');
     modalImg.style.opacity = 0;
-    setTimeout(() => {
-      modalImg.src = currentGallery[currentIndex];
-      modalImg.alt = currentGallery.length > 1
-        ? `Bild ${currentIndex + 1} von ${currentGallery.length} in Grossansicht`
-        : 'Bild in Grossansicht';
+    imageTimer = window.setTimeout(() => {
+      if (!isOpen) return;
+      modalImg.src = src;
+      modalImg.alt = alt;
       modalImg.style.opacity = 1;
-    }, TIMING.LIGHTBOX_FADE);
+    }, prefersReducedMotion ? 0 : TIMING.LIGHTBOX_FADE);
     if (currentGallery.length > 1) {
       prevBtn.style.display = 'flex';
       nextBtn.style.display = 'flex';
@@ -505,15 +521,21 @@ function initLightbox() {
   }
 
   function closeLightbox() {
+    if (!isOpen) return;
+    isOpen = false;
+    window.clearTimeout(openTimer);
+    window.clearTimeout(imageTimer);
     modal.classList.remove('active');
+    unlockScroll();
     const returnFocus = _lastTrigger;
     _lastTrigger = null;
-    setTimeout(() => {
+    if (returnFocus) returnFocus.focus({ preventScroll: true });
+    closeTimer = window.setTimeout(() => {
       modal.style.display = 'none';
       currentGallery = [];
       currentIndex = 0;
-      if (returnFocus) returnFocus.focus();
-    }, TIMING.CLOSE_OVERLAY_DELAY);
+      modalImg.removeAttribute('src');
+    }, prefersReducedMotion ? 0 : TIMING.CLOSE_OVERLAY_DELAY);
   }
 
   function showNext() {
@@ -535,7 +557,7 @@ function initLightbox() {
     if (trigger.dataset.gallery) {
       try {
         const parsed = JSON.parse(trigger.dataset.gallery);
-        if (Array.isArray(parsed) && parsed.length > 0) {
+        if (Array.isArray(parsed) && parsed.length > 0 && parsed.every(src => typeof src === 'string' && src.length > 0)) {
           currentGallery = parsed;
         } else {
           console.warn('[Lightbox] data-gallery parsed but is empty or not an array:', trigger);
@@ -556,10 +578,15 @@ function initLightbox() {
     }
 
     if (currentGallery.length > 0) {
-      currentIndex = parseInt(trigger.dataset.galleryIndex, 10) || 0;
+      window.clearTimeout(closeTimer);
+      window.clearTimeout(openTimer);
+      _lastTrigger = trigger;
+      currentIndex = Math.max(0, Math.min(currentGallery.length - 1, parseInt(trigger.dataset.galleryIndex, 10) || 0));
+      if (!isOpen) lockScroll();
+      isOpen = true;
       modal.style.display = 'flex';
       updateImage();
-      setTimeout(() => {
+      openTimer = window.setTimeout(() => {
         modal.classList.add('active');
         closeBtn.focus();
       }, TIMING.LIGHTBOX_OPEN_DELAY);
@@ -570,7 +597,6 @@ function initLightbox() {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      _lastTrigger = trigger;
       openLightbox(trigger);
     });
   });
@@ -592,10 +618,27 @@ function initLightbox() {
   });
 
   document.addEventListener('keydown', (e) => {
-    if (modal.classList.contains('active')) {
-      if (e.key === 'Escape') closeLightbox();
+    if (!isOpen) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeLightbox();
+    }
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault();
       if (e.key === 'ArrowRight') showNext();
-      if (e.key === 'ArrowLeft') showPrev();
+      else showPrev();
+    }
+    if (e.key === 'Tab') {
+      const buttons = [closeBtn, prevBtn, nextBtn].filter(button => button.style.display !== 'none');
+      const first = buttons[0];
+      const last = buttons[buttons.length - 1];
+      if (e.shiftKey && (document.activeElement === first || !modal.contains(document.activeElement))) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (document.activeElement === last || !modal.contains(document.activeElement))) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 

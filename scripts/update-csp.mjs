@@ -11,7 +11,8 @@ const HTACCESS_SRC = join(ROOT, 'static', '.htaccess');
 const HTACCESS_OUT = join(ROOT, 'public', '.htaccess');
 
 async function* walkHtml(dir) {
-  const entries = await readdir(dir, { withFileTypes: true });
+  const entries = (await readdir(dir, { withFileTypes: true }))
+    .sort((a, b) => a.name.localeCompare(b.name, 'en'));
   for (const entry of entries) {
     const full = join(dir, entry.name);
     if (entry.isDirectory()) {
@@ -24,10 +25,13 @@ async function* walkHtml(dir) {
 
 function extractInlineScripts(html) {
   const scripts = [];
-  const re = /<script(?:\s[^>]*)?>([^<]+)<\/script>/g;
+  const re = /<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi;
   let m;
   while ((m = re.exec(html)) !== null) {
-    const content = m[1];
+    // Externe Skripte werden über script-src freigegeben. Ein Vergleich wie
+    // `index < length` darf die Erfassung eines Inline-Skripts nicht abbrechen.
+    if (/(?:^|\s)src\s*=/i.test(m[1])) continue;
+    const content = m[2];
     if (content.trim().length > 0) scripts.push(content);
   }
   return scripts;
@@ -46,7 +50,7 @@ async function main() {
     }
   }
 
-  const hashes = [...hashSet].map(h => `'sha256-${h}'`).join(' ');
+  const hashes = [...hashSet].sort().map(h => `'sha256-${h}'`).join(' ');
   const count = hashSet.size;
   console.log(`CSP: ${count} inline script hash(es) found`);
 
@@ -56,6 +60,9 @@ async function main() {
 
   for (const path of [HTACCESS_SRC, HTACCESS_OUT]) {
     let content = await readFile(path, 'utf8');
+    if (!/script-src 'self'[^;]*/.test(content)) {
+      throw new Error(`Missing script-src directive in ${path}`);
+    }
     content = content.replace(/script-src 'self'[^;]*/, replacement);
     await writeFile(path, content, 'utf8');
   }

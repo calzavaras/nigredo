@@ -2,6 +2,7 @@ import { readdir, readFile } from 'fs/promises';
 import { existsSync } from 'fs';
 import { basename, dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -622,6 +623,26 @@ async function validateRobots() {
 
 async function validateServerConfig() {
   const htaccess = await readFile(HTACCESS_PATH, 'utf8');
+  const deployedHtaccess = await readFile(join(PUBLIC_DIR, '.htaccess'), 'utf8');
+  if (htaccess !== deployedHtaccess) {
+    addError('public/.htaccess: deployment configuration differs from static/.htaccess; rebuild before uploading');
+  }
+
+  const csp = deployedHtaccess.match(/Header\s+always\s+set\s+Content-Security-Policy\s+"([^"]+)"/i)?.[1];
+  const scriptSources = csp?.match(/(?:^|;)\s*script-src\s+([^;]+)/i)?.[1] ?? '';
+  if (!scriptSources || /'unsafe-(?:inline|eval)'/.test(scriptSources)) {
+    addError('public/.htaccess: executable scripts require a restrictive hash-based script-src policy');
+  }
+
+  for (const { html, relativePath } of htmlDocuments) {
+    for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)) {
+      if (/(?:^|\s)src\s*=/i.test(match[1]) || !match[2].trim()) continue;
+      const hash = createHash('sha256').update(match[2]).digest('base64');
+      if (!scriptSources.split(/\s+/).includes(`'sha256-${hash}'`)) {
+        addError(`${relativePath}: inline script is missing its CSP hash in public/.htaccess`);
+      }
+    }
+  }
 
   if (!/AddDefaultCharset\s+UTF-8/i.test(htaccess)) {
     addError('static/.htaccess: missing AddDefaultCharset UTF-8');
@@ -632,13 +653,13 @@ async function validateServerConfig() {
   }
 
   if (
-    !/RewriteCond\s+%\{THE_REQUEST\}\s+\\s\/\+index\\\.html\[\\s\?\]\s+\[NC\][\s\S]*RewriteRule\s+\^index\\\.html\$\s+\/\s+\[L,R=301\]/i.test(htaccess) ||
-    !/RewriteCond\s+%\{THE_REQUEST\}\s+\\s\/\+\(\.\+\)\/index\\\.html\[\\s\?\]\s+\[NC\][\s\S]*RewriteRule\s+\^\(\.\+\)\/index\\\.html\$\s+\/\$1\/\s+\[L,R=301\]/i.test(htaccess)
+    !/RewriteCond\s+%\{THE_REQUEST\}\s+\\s\/\+index\\\.html\[\\s\?\]\s+\[NC\][\s\S]*RewriteRule\s+\^index\\\.html\$\s+https:\/\/www\.nigredo\.ch\/\s+\[L,R=301\]/i.test(htaccess) ||
+    !/RewriteCond\s+%\{THE_REQUEST\}\s+\\s\/\+\(\.\+\)\/index\\\.html\[\\s\?\]\s+\[NC\][\s\S]*RewriteRule\s+\^\(\.\+\)\/index\\\.html\$\s+https:\/\/www\.nigredo\.ch\/\$1\/\s+\[L,R=301\]/i.test(htaccess)
   ) {
     addError('static/.htaccess: missing safe canonical index.html redirects');
   }
 
-  if (!/<Files\s+"send-mail\.php">[\s\S]*Header\s+set\s+X-Robots-Tag\s+"noindex,\s*nofollow,\s*noarchive"[\s\S]*<\/Files>/i.test(htaccess)) {
+  if (!/<Files\s+"send-mail\.php">[\s\S]*Header\s+always\s+set\s+X-Robots-Tag\s+"noindex,\s*nofollow,\s*noarchive"[\s\S]*<\/Files>/i.test(htaccess)) {
     addError('static/.htaccess: missing X-Robots-Tag for send-mail.php');
   }
 

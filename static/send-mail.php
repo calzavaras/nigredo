@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
+header('Cache-Control: no-store');
 
 function respond(int $status, array $payload): void
 {
@@ -11,13 +12,21 @@ function respond(int $status, array $payload): void
 
 // Only POST allowed
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Allow: POST');
     respond(405, ['success' => false, 'message' => 'Methode nicht erlaubt.']);
+}
+
+// Array-Felder vor String-Funktionen abweisen, damit kein PHP-8-TypeError entsteht.
+foreach (['_csrf', 'website', 'name', 'email', 'phone', 'subject', 'message'] as $field) {
+    if (isset($_POST[$field]) && !is_string($_POST[$field])) {
+        respond(400, ['success' => false, 'message' => 'Ungültige Anfrage.']);
+    }
 }
 
 // CSRF validation (double-submit cookie pattern)
 $csrfPost   = $_POST['_csrf']   ?? '';
 $csrfCookie = $_COOKIE['_csrf'] ?? '';
-if (empty($csrfPost) || empty($csrfCookie) || !hash_equals($csrfCookie, $csrfPost)) {
+if (!is_string($csrfCookie) || !preg_match('/^[a-f0-9]{32}$/D', $csrfPost) || !hash_equals($csrfCookie, $csrfPost)) {
     respond(403, ['success' => false, 'message' => 'Ungültige Anfrage.']);
 }
 
@@ -94,7 +103,7 @@ if (empty($name) || empty($email) || empty($message)) {
     respond(400, ['success' => false, 'message' => 'Bitte alle Pflichtfelder ausfüllen.']);
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if (strlen($email) > 254 || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     closeRateLimitHandle($rlHandle);
     respond(400, ['success' => false, 'message' => 'Ungültige E-Mail-Adresse.']);
 }
